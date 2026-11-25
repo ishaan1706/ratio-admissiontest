@@ -91,6 +91,7 @@ export interface SectionBEssayRecord {
 }
 
 export type AppView =
+  | 'welcome'
   | 'home'
   | 'practice'
   | 'exam'

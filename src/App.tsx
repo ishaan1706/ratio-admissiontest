@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   ActiveExamConfig,
   AppView,
@@ -10,8 +10,8 @@ import {
 } from './types';
 import { ALL_QUESTIONS, PASSAGES } from './data/passages';
 import { fetchAttempts, fetchEssays, saveAttempt, saveEssay } from './lib/api';
+import { LandingView } from './components/LandingView';
 import { Navbar } from './components/Navbar';
-import { HomeView } from './components/HomeView';
 import { PracticeHub } from './components/PracticeHub';
 import { ExamSimulator } from './components/ExamSimulator';
 import { ResultsView } from './components/ResultsView';
@@ -23,30 +23,18 @@ import { ProgressView } from './components/ProgressView';
 import { PricingView } from './components/PricingView';
 import { CommandPalette } from './components/CommandPalette';
 
-function getDaysUntilNextJan20(): number {
-  const now = new Date();
-  let targetYear = now.getFullYear();
-  const targetThisYear = new Date(targetYear, 0, 20);
-  if (now > targetThisYear) {
-    targetYear += 1;
-  }
-  const target = new Date(targetYear, 0, 20);
-  const diffMs = target.getTime() - now.getTime();
-  return Math.max(0, Math.ceil(diffMs / (1000 * 60 * 60 * 24)));
-}
-
 function getInitialTheme(): 'light' | 'dark' {
   try {
-    const saved = localStorage.getItem('ratio_studio_theme_v1');
+    const saved = localStorage.getItem('ratio_studio_theme_v2');
     if (saved === 'dark' || saved === 'light') return saved;
   } catch {
     // ignore storage errors
   }
-  return 'light';
+  return 'dark';
 }
 
 export const App: React.FC = () => {
-  const [view, setView] = useState<AppView>('home');
+  const [view, setView] = useState<AppView>('welcome');
   const [theme, setTheme] = useState<'light' | 'dark'>(() => getInitialTheme());
   const [paletteOpen, setPaletteOpen] = useState(false);
   const [activeExam, setActiveExam] = useState<ActiveExamConfig | null>(null);
@@ -55,12 +43,10 @@ export const App: React.FC = () => {
   const [attempts, setAttempts] = useState<SectionAAttempt[]>([]);
   const [essays, setEssays] = useState<SectionBEssayRecord[]>([]);
 
-  const daysUntilDeadline = useMemo(() => getDaysUntilNextJan20(), []);
-
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
     try {
-      localStorage.setItem('ratio_studio_theme_v1', theme);
+      localStorage.setItem('ratio_studio_theme_v2', theme);
     } catch {
       // ignore
     }
@@ -83,7 +69,7 @@ export const App: React.FC = () => {
   }, []);
 
   const handleNavigate = (next: AppView) => {
-    setView(next);
+    setView(next === 'home' ? 'practice' : next);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -157,30 +143,30 @@ export const App: React.FC = () => {
     await saveEssay(record);
   };
 
+  if (view === 'welcome') {
+    return (
+      <LandingView
+        onEnterApp={(target = 'practice') => handleNavigate(target)}
+        onStartDiagnostic={handleStartDiagnostic}
+      />
+    );
+  }
+
   return (
-    <div className="min-h-screen flex flex-col bg-[var(--paper)] text-[var(--ink)]">
+    <div className="min-h-screen flex flex-col bg-[var(--bg)] text-[var(--text)]">
       {view !== 'exam' && (
         <Navbar
           view={view}
           onNavigate={handleNavigate}
-          daysUntilDeadline={daysUntilDeadline}
           theme={theme}
           onToggleTheme={() => setTheme((t) => (t === 'light' ? 'dark' : 'light'))}
           onOpenPalette={() => setPaletteOpen(true)}
+          onStartDiagnostic={handleStartDiagnostic}
         />
       )}
 
       <main className="flex-1">
-        {view === 'home' && (
-          <HomeView
-            attempts={attempts}
-            essays={essays}
-            daysUntilDeadline={daysUntilDeadline}
-            onStartDiagnostic={handleStartDiagnostic}
-            onNavigate={handleNavigate}
-          />
-        )}
-        {view === 'practice' && (
+        {(view === 'practice' || view === 'home') && (
           <PracticeHub
             attempts={attempts}
             onStartDiagnostic={handleStartDiagnostic}
@@ -232,16 +218,21 @@ export const App: React.FC = () => {
       </main>
 
       {view !== 'exam' && (
-        <footer className="border-t border-[var(--rule)] py-7 text-xs text-[var(--text-muted)] no-print mb-14 lg:mb-0">
+        <footer className="border-t border-[var(--rule)] py-6 text-xs text-[var(--text-muted)] no-print mb-14 md:mb-0">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-wrap items-center justify-between gap-4">
-            <div className="font-serif-passage text-sm">
-              <strong className="font-sans text-xs uppercase tracking-[0.12em] text-[var(--ink)] mr-2">
-                Ratio
-              </strong>
-              Independent UK Admissions Studio. Not affiliated with LNAT Consortium, Pearson VUE,
-              UCAT, or UAT-UK.
+            <div>
+              <strong className="text-[var(--ink)] mr-2">Ratio</strong>
+              Independent LNAT &amp; UK Admissions Studio. Not affiliated with LNAT Consortium,
+              Pearson VUE, UCAT, or UAT-UK.
             </div>
-            <div className="flex items-center gap-5 uppercase tracking-[0.1em] text-[10px] font-semibold">
+            <div className="flex items-center gap-5">
+              <button
+                type="button"
+                onClick={() => handleNavigate('welcome')}
+                className="hover:text-[var(--ink)] cursor-pointer"
+              >
+                Welcome
+              </button>
               <button
                 type="button"
                 onClick={() => handleNavigate('plan')}
@@ -251,24 +242,10 @@ export const App: React.FC = () => {
               </button>
               <button
                 type="button"
-                onClick={() => handleNavigate('resources')}
-                className="hover:text-[var(--ink)] cursor-pointer"
-              >
-                Official Guide
-              </button>
-              <button
-                type="button"
                 onClick={() => handleNavigate('tests')}
                 className="hover:text-[var(--ink)] cursor-pointer"
               >
                 All Tests
-              </button>
-              <button
-                type="button"
-                onClick={() => handleNavigate('pricing')}
-                className="hover:text-[var(--ink)] cursor-pointer"
-              >
-                Season Pass
               </button>
             </div>
           </div>

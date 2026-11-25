@@ -1,61 +1,25 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #F5F3EE;
-  --paper: #F5F3EE;
-  --surface: #FAF8F4;
-  --surface-subtle: #EAE7DF;
-  --ink: #0F141B;
-  --obsidian: #0F141B;
-  --obsidian-soft: #1B2330;
-  --text: #0F141B;
-  --text-muted: #585B60;
-  --rule: #D6D3CB;
-  --border: #D6D3CB;
-  --border-strong: rgba(15, 20, 27, 0.28);
-  --accent: #1D4ED8;
-  --accent-hover: #1E40AF;
-  --accent-fg: #FFFFFF;
-  --accent-soft: rgba(29, 78, 216, 0.08);
-  --primary-action: #0F141B;
-  --primary-action-fg: #F5F3EE;
-  --ochre: #B45309;
-  --ochre-soft: rgba(180, 83, 9, 0.1);
-  --crimson: #B91C1C;
-  --crimson-soft: rgba(185, 28, 28, 0.09);
-  --emerald: #047857;
-  --emerald-soft: rgba(4, 120, 87, 0.1);
-  --amber: #B45309;
-  --amber-soft: rgba(180, 83, 9, 0.1);
-  --hl-claim: #FEF08A;
-  --hl-evidence: #BFDBFE;
-  --hl-counter: #FBCFE8;
-  --radius: 8px;
-  --font: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-display: 'Instrument Serif', 'Newsreader', Georgia, serif;
-  --font-serif: 'Newsreader', Georgia, Cambria, serif;
-  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
-}
-
-html[data-theme='dark'] {
-  --bg: #0D1014;
-  --paper: #0D1014;
-  --surface: #141920;
-  --surface-subtle: #1A212B;
-  --ink: #F2F0EA;
-  --obsidian: #F2F0EA;
-  --obsidian-soft: #1F2937;
-  --text: #F2F0EA;
-  --text-muted: #9CA3AF;
-  --rule: #262E3A;
-  --border: #262E3A;
-  --border-strong: rgba(242, 240, 234, 0.25);
-  --accent: #60A5FA;
-  --accent-hover: #93C5FD;
-  --accent-fg: #0D1014;
-  --accent-soft: rgba(96, 165, 250, 0.12);
-  --primary-action: #F2F0EA;
-  --primary-action-fg: #0D1014;
+  --bg: #07090F;
+  --paper: #07090F;
+  --surface: #0E121B;
+  --surface-subtle: #141A26;
+  --ink: #F8FAFC;
+  --obsidian: #F8FAFC;
+  --obsidian-soft: #1E293B;
+  --text: #F8FAFC;
+  --text-muted: #94A3B8;
+  --rule: rgba(255, 255, 255, 0.09);
+  --border: rgba(255, 255, 255, 0.09);
+  --border-strong: rgba(255, 255, 255, 0.18);
+  --accent: #10B981;
+  --accent-hover: #34D399;
+  --accent-fg: #03150E;
+  --accent-soft: rgba(16, 185, 129, 0.14);
+  --primary-action: #10B981;
+  --primary-action-fg: #03150E;
+  --gold: #F5D08A;
   --ochre: #F59E0B;
   --ochre-soft: rgba(245, 158, 11, 0.14);
   --crimson: #F87171;
@@ -65,8 +29,46 @@ html[data-theme='dark'] {
   --amber: #FBBF24;
   --amber-soft: rgba(251, 191, 36, 0.14);
   --hl-claim: rgba(250, 204, 21, 0.28);
-  --hl-evidence: rgba(96, 165, 250, 0.28);
+  --hl-evidence: rgba(56, 189, 248, 0.28);
   --hl-counter: rgba(244, 114, 182, 0.28);
+  --radius: 12px;
+  --font: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Instrument Serif', 'Newsreader', Georgia, serif;
+  --font-serif: 'Newsreader', Georgia, Cambria, serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+html[data-theme='light'] {
+  --bg: #F8FAFC;
+  --paper: #F8FAFC;
+  --surface: #FFFFFF;
+  --surface-subtle: #F1F5F9;
+  --ink: #0B1120;
+  --obsidian: #0B1120;
+  --obsidian-soft: #1E293B;
+  --text: #0B1120;
+  --text-muted: #475569;
+  --rule: rgba(15, 23, 42, 0.1);
+  --border: rgba(15, 23, 42, 0.1);
+  --border-strong: rgba(15, 23, 42, 0.22);
+  --accent: #059669;
+  --accent-hover: #047857;
+  --accent-fg: #FFFFFF;
+  --accent-soft: rgba(5, 150, 105, 0.1);
+  --primary-action: #059669;
+  --primary-action-fg: #FFFFFF;
+  --gold: #B45309;
+  --ochre: #D97706;
+  --ochre-soft: rgba(217, 119, 6, 0.1);
+  --crimson: #DC2626;
+  --crimson-soft: rgba(220, 38, 38, 0.1);
+  --emerald: #059669;
+  --emerald-soft: rgba(5, 150, 105, 0.1);
+  --amber: #B45309;
+  --amber-soft: rgba(180, 83, 9, 0.1);
+  --hl-claim: #FEF08A;
+  --hl-evidence: #BAE6FD;
+  --hl-counter: #FBCFE8;
 }
 
 * {
@@ -77,12 +79,12 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--paper);
-  color: var(--ink);
+  background-color: var(--bg);
+  color: var(--text);
   font-family: var(--font);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: background-color 140ms ease, color 140ms ease;
+  transition: background-color 160ms ease, color 160ms ease;
 }
 
 .font-display {
@@ -108,13 +110,13 @@ body {
 }
 
 .studio-section {
-  border-top: 1px solid var(--ink);
-  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+  padding-top: 1.75rem;
 }
 
 .studio-row {
   border-bottom: 1px solid var(--rule);
-  transition: color 140ms ease, border-color 140ms ease;
+  transition: color 140ms ease, border-color 140ms ease, background-color 140ms ease;
 }
 
 .studio-row:hover .studio-row-title {
@@ -130,25 +132,156 @@ body {
   transition: transform 160ms ease, color 140ms ease;
 }
 
+/* React Bits: BlurText entrance */
+@keyframes rb-blur-in {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(14px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+.rb-blur-word {
+  display: inline-block;
+  opacity: 0;
+  animation: rb-blur-in 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* React Bits: ShinyText sweep */
+@keyframes rb-shiny {
+  0% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: -100%;
+  }
+}
+
+.rb-shiny-text {
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.55) 35%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 255, 255, 0.55) 65%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rb-shiny 4.5s linear infinite;
+}
+
+/* React Bits: Aurora subtle drift */
+@keyframes rb-aurora-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(3%, -4%, 0) scale(1.06);
+  }
+}
+
+.rb-aurora-lobe {
+  animation: rb-aurora-drift 14s ease-in-out infinite;
+}
+
+.rb-aurora-lobe-alt {
+  animation: rb-aurora-drift 18s ease-in-out infinite reverse;
+}
+
+/* Sliding Marquee (inspired by recall-politics landing page + React Bits) */
+@keyframes rb-marquee-left {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.rb-marquee-mask {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+}
+
+.rb-marquee-track {
+  display: flex;
+  gap: 12px;
+  width: max-content;
+  animation: rb-marquee-left 42s linear infinite;
+}
+
+.rb-marquee-track.reverse {
+  animation-direction: reverse;
+  animation-duration: 48s;
+}
+
+.rb-marquee-mask:hover .rb-marquee-track {
+  animation-play-state: paused;
+}
+
+/* Architectural subtle dot grid for hero */
+.rb-dot-grid {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* React Bits: SpotlightCard cursor glow */
+.rb-spotlight {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.01));
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  transition: border-color 220ms ease, transform 220ms ease;
+}
+
+.rb-spotlight::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    420px circle at var(--spot-x, 50%) var(--spot-y, 50%),
+    rgba(16, 185, 129, 0.14),
+    transparent 65%
+  );
+  opacity: 0;
+  transition: opacity 260ms ease;
+  pointer-events: none;
+}
+
+.rb-spotlight:hover {
+  border-color: rgba(16, 185, 129, 0.35);
+}
+
+.rb-spotlight:hover::before {
+  opacity: 1;
+}
+
 .hl-claim {
   background-color: var(--hl-claim);
-  border-radius: 2px;
+  border-radius: 3px;
   padding: 0 2px;
 }
 
 .hl-evidence {
   background-color: var(--hl-evidence);
-  border-radius: 2px;
+  border-radius: 3px;
   padding: 0 2px;
 }
 
 .hl-counter {
   background-color: var(--hl-counter);
-  border-radius: 2px;
+  border-radius: 3px;
   padding: 0 2px;
 }
 
-/* Custom subtle scrollbars for split-pane exam simulator */
 .exam-pane::-webkit-scrollbar {
   width: 7px;
 }
@@ -158,6 +291,19 @@ body {
 .exam-pane::-webkit-scrollbar-thumb {
   background-color: var(--rule);
   border-radius: 999px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rb-blur-word,
+  .rb-shiny-text,
+  .rb-aurora-lobe,
+  .rb-aurora-lobe-alt,
+  .rb-marquee-track {
+    animation: none !important;
+    opacity: 1 !important;
+    filter: none !important;
+    transform: none !important;
+  }
 }
 
 @media print {
