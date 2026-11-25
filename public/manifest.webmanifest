@@ -2,19 +2,19 @@
   "name": "Ratio — LNAT Prep",
   "short_name": "Ratio LNAT",
   "description": "Editorially reviewed LNAT Section A & Section B preparation for UK law school applicants.",
-  "start_url": "/",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#FAF9F6",
   "theme_color": "#1B365D",
   "icons": [
     {
-      "src": "/icons/icon-192.png",
+      "src": "./icons/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/icons/icon-512.png",
+      "src": "./icons/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
