@@ -429,7 +429,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
               </div>
               <div className="md:col-span-3 flex items-center gap-3">
                 <span className="studio-row-title font-display text-3xl text-[var(--ink)]">
-                  {exam.shortName}
+                  {exam.name}
                 </span>
                 <span
                   className={`text-[10px] font-semibold uppercase tracking-[0.1em] px-2 py-0.5 rounded-full ${
