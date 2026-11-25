@@ -1,37 +1,72 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #F6F4EF;
-  --surface: #FFFFFF;
-  --surface-subtle: #ECE9E1;
-  --obsidian: #0F172A;
-  --obsidian-soft: #1E293B;
-  --text: #0F172A;
-  --text-muted: #475569;
-  --border: rgba(15, 23, 42, 0.1);
-  --border-strong: rgba(15, 23, 42, 0.2);
-  --accent: #2563EB;
-  --accent-hover: #1D4ED8;
+  --bg: #F5F3EE;
+  --paper: #F5F3EE;
+  --surface: #FAF8F4;
+  --surface-subtle: #EAE7DF;
+  --ink: #0F141B;
+  --obsidian: #0F141B;
+  --obsidian-soft: #1B2330;
+  --text: #0F141B;
+  --text-muted: #585B60;
+  --rule: #D6D3CB;
+  --border: #D6D3CB;
+  --border-strong: rgba(15, 20, 27, 0.28);
+  --accent: #1D4ED8;
+  --accent-hover: #1E40AF;
   --accent-fg: #FFFFFF;
-  --accent-soft: rgba(37, 99, 235, 0.09);
-  --primary-action: #2563EB;
-  --primary-action-fg: #FFFFFF;
-  --ochre: #D97706;
-  --ochre-soft: rgba(217, 119, 6, 0.12);
-  --crimson: #DC2626;
-  --crimson-soft: rgba(220, 38, 38, 0.1);
-  --emerald: #059669;
-  --emerald-soft: rgba(5, 150, 105, 0.11);
+  --accent-soft: rgba(29, 78, 216, 0.08);
+  --primary-action: #0F141B;
+  --primary-action-fg: #F5F3EE;
+  --ochre: #B45309;
+  --ochre-soft: rgba(180, 83, 9, 0.1);
+  --crimson: #B91C1C;
+  --crimson-soft: rgba(185, 28, 28, 0.09);
+  --emerald: #047857;
+  --emerald-soft: rgba(4, 120, 87, 0.1);
   --amber: #B45309;
-  --amber-soft: rgba(180, 83, 9, 0.11);
+  --amber-soft: rgba(180, 83, 9, 0.1);
   --hl-claim: #FEF08A;
   --hl-evidence: #BFDBFE;
   --hl-counter: #FBCFE8;
-  --radius: 10px;
+  --radius: 8px;
   --font: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   --font-display: 'Instrument Serif', 'Newsreader', Georgia, serif;
   --font-serif: 'Newsreader', Georgia, Cambria, serif;
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+html[data-theme='dark'] {
+  --bg: #0D1014;
+  --paper: #0D1014;
+  --surface: #141920;
+  --surface-subtle: #1A212B;
+  --ink: #F2F0EA;
+  --obsidian: #F2F0EA;
+  --obsidian-soft: #1F2937;
+  --text: #F2F0EA;
+  --text-muted: #9CA3AF;
+  --rule: #262E3A;
+  --border: #262E3A;
+  --border-strong: rgba(242, 240, 234, 0.25);
+  --accent: #60A5FA;
+  --accent-hover: #93C5FD;
+  --accent-fg: #0D1014;
+  --accent-soft: rgba(96, 165, 250, 0.12);
+  --primary-action: #F2F0EA;
+  --primary-action-fg: #0D1014;
+  --ochre: #F59E0B;
+  --ochre-soft: rgba(245, 158, 11, 0.14);
+  --crimson: #F87171;
+  --crimson-soft: rgba(248, 113, 113, 0.14);
+  --emerald: #34D399;
+  --emerald-soft: rgba(52, 211, 153, 0.14);
+  --amber: #FBBF24;
+  --amber-soft: rgba(251, 191, 36, 0.14);
+  --hl-claim: rgba(250, 204, 21, 0.28);
+  --hl-evidence: rgba(96, 165, 250, 0.28);
+  --hl-counter: rgba(244, 114, 182, 0.28);
 }
 
 * {
@@ -42,18 +77,19 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--bg);
-  color: var(--text);
+  background-color: var(--paper);
+  color: var(--ink);
   font-family: var(--font);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 140ms ease, color 140ms ease;
 }
 
 .font-display {
   font-family: var(--font-display);
 }
 
-.font-serif-editorial {
+.font-serif-passage {
   font-family: var(--font-serif);
 }
 
@@ -62,42 +98,66 @@ body {
   font-variant-numeric: tabular-nums;
 }
 
-.tabular-nums {
-  font-variant-numeric: tabular-nums;
+.studio-kicker {
+  font-family: var(--font);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
 }
 
-.exam-scroll::-webkit-scrollbar {
-  width: 7px;
-  height: 7px;
+.studio-section {
+  border-top: 1px solid var(--ink);
+  padding-top: 1.5rem;
 }
-.exam-scroll::-webkit-scrollbar-track {
-  background: transparent;
+
+.studio-row {
+  border-bottom: 1px solid var(--rule);
+  transition: color 140ms ease, border-color 140ms ease;
 }
-.exam-scroll::-webkit-scrollbar-thumb {
-  background: rgba(15, 23, 42, 0.16);
-  border-radius: 999px;
+
+.studio-row:hover .studio-row-title {
+  color: var(--accent);
 }
-.exam-scroll::-webkit-scrollbar-thumb:hover {
-  background: rgba(15, 23, 42, 0.3);
+
+.studio-row:hover .studio-row-arrow {
+  color: var(--accent);
+  transform: translate(3px, -3px);
+}
+
+.studio-row-arrow {
+  transition: transform 160ms ease, color 140ms ease;
 }
 
 .hl-claim {
   background-color: var(--hl-claim);
-  color: var(--text);
-  border-radius: 3px;
+  border-radius: 2px;
   padding: 0 2px;
 }
+
 .hl-evidence {
   background-color: var(--hl-evidence);
-  color: var(--text);
-  border-radius: 3px;
+  border-radius: 2px;
   padding: 0 2px;
 }
+
 .hl-counter {
   background-color: var(--hl-counter);
-  color: var(--text);
-  border-radius: 3px;
+  border-radius: 2px;
   padding: 0 2px;
+}
+
+/* Custom subtle scrollbars for split-pane exam simulator */
+.exam-pane::-webkit-scrollbar {
+  width: 7px;
+}
+.exam-pane::-webkit-scrollbar-track {
+  background: transparent;
+}
+.exam-pane::-webkit-scrollbar-thumb {
+  background-color: var(--rule);
+  border-radius: 999px;
 }
 
 @media print {

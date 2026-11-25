@@ -1,147 +1,167 @@
 import React from 'react';
-import { ArrowRight, BookOpen, Clock, Filter, Layers, Sparkles } from 'lucide-react';
-import { ActiveExamConfig, LnatSkill } from '../types';
-import { PASSAGES, ALL_QUESTIONS } from '../data/passages';
+import { ArrowUpRight, Clock, Layers, Target, Zap } from 'lucide-react';
+import { PASSAGES } from '../data/passages';
+import { LnatPassage, SectionAAttempt, SkillTag } from '../types';
 
 interface PracticeHubProps {
-  onStartExam: (config: ActiveExamConfig) => void;
+  onStartDiagnostic: () => void;
+  onStartHalfMock: () => void;
+  onStartPassage: (passage: LnatPassage) => void;
+  onStartSkill: (skill: SkillTag) => void;
+  attempts: SectionAAttempt[];
 }
 
-const SKILLS: LnatSkill[] = [
-  'Main Argument',
-  'Inference',
-  'Assumption & Flaw',
-  'Tone & Attitude',
-  'Structure & Evidence',
+const SKILLS: { tag: SkillTag; desc: string }[] = [
+  { tag: 'Inference', desc: 'What follows necessarily from the text without over-extrapolating.' },
+  { tag: 'Assumption', desc: 'Unstated premises required for the author’s argument to hold.' },
+  { tag: 'Main Argument', desc: 'Central thesis vs. concessions, illustrations, and counter-views.' },
+  { tag: 'Tone & Attitude', desc: 'Register, irony, metaphor, and precise authorial stance.' },
+  { tag: 'Evidence & Structure', desc: 'How examples, studies, and paragraphs function structurally.' },
 ];
 
-export const PracticeHub: React.FC<PracticeHubProps> = ({ onStartExam }) => {
-  const freePassageIds = PASSAGES.filter((p) => p.freeTier).map((p) => p.id);
-  const allPassageIds = PASSAGES.map((p) => p.id);
+export const PracticeHub: React.FC<PracticeHubProps> = ({
+  onStartDiagnostic,
+  onStartHalfMock,
+  onStartPassage,
+  onStartSkill,
+  attempts,
+}) => {
+  const bestForLabel = (label: string) => {
+    const matching = attempts.filter((a) => a.label === label);
+    if (matching.length === 0) return null;
+    return matching.reduce((best, cur) => (cur.score > best.score ? cur : best), matching[0]);
+  };
 
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 space-y-8 pb-24 md:pb-12">
-      <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10 pb-24 space-y-14">
+      {/* Header */}
+      <section>
+        <div className="studio-kicker mb-3">Section A · Multiple-Choice Simulator</div>
+        <h1 className="font-display text-5xl sm:text-6xl leading-[0.95] text-[var(--ink)]">
+          Argumentative passages, <span className="italic text-[var(--accent)]">Pearson VUE pace.</span>
+        </h1>
+        <p className="font-serif-passage text-lg text-[var(--text-muted)] mt-4 max-w-2xl leading-relaxed">
+          Every passage is written and edited to mirror real LNAT prose. Click sentences to highlight
+          Claims, Evidence, or Pivots, strike out distractors, and calibrate your confidence.
+        </p>
+      </section>
+
+      {/* Timed Modes — Ruled 2-Column Strip */}
+      <section className="border-t border-[var(--ink)] border-b border-b-[var(--rule)] grid md:grid-cols-2">
+        <button
+          type="button"
+          onClick={onStartDiagnostic}
+          className="py-7 md:pr-8 text-left group cursor-pointer flex flex-col justify-between gap-4"
+        >
+          <div>
+            <div className="flex items-center justify-between">
+              <span className="studio-kicker text-[var(--accent)] inline-flex items-center gap-1.5">
+                <Zap className="w-3.5 h-3.5" />
+                Free Diagnostic · 15 min
+              </span>
+              <ArrowUpRight className="w-5 h-5 text-[var(--ink)] studio-row-arrow" />
+            </div>
+            <h2 className="font-display text-3xl text-[var(--ink)] group-hover:text-[var(--accent)] transition-colors mt-2">
+              15-Minute Baseline Diagnostic
+            </h2>
+            <p className="font-serif-passage text-sm sm:text-base text-[var(--text-muted)] mt-2 leading-relaxed">
+              2 passages, 8 questions across all five LNAT skills. Outputs a projected score out of
+              42 and a shareable UK law school readiness card.
+            </p>
+          </div>
+          <div className="studio-kicker text-[10px]">
+            Recommended first · 15:00 timer · 8 MCQs
+          </div>
+        </button>
+
+        <button
+          type="button"
+          onClick={onStartHalfMock}
+          className="py-7 md:pl-8 border-t md:border-t-0 md:border-l border-[var(--rule)] text-left group cursor-pointer flex flex-col justify-between gap-4"
+        >
+          <div>
+            <div className="flex items-center justify-between">
+              <span className="studio-kicker inline-flex items-center gap-1.5">
+                <Layers className="w-3.5 h-3.5" />
+                Half-Mock · 48 min
+              </span>
+              <ArrowUpRight className="w-5 h-5 text-[var(--ink)] studio-row-arrow" />
+            </div>
+            <h2 className="font-display text-3xl text-[var(--ink)] group-hover:text-[var(--accent)] transition-colors mt-2">
+              Full 6-Passage Half-Mock
+            </h2>
+            <p className="font-serif-passage text-sm sm:text-base text-[var(--text-muted)] mt-2 leading-relaxed">
+              All 6 curated passages and 22 questions under real LNAT pace (~2m 10s per question)
+              with a full Pearson-style Review Screen before scoring.
+            </p>
+          </div>
+          <div className="studio-kicker text-[10px]">
+            Exam endurance · 48:00 timer · 22 MCQs
+          </div>
+        </button>
+      </section>
+
+      {/* Numbered Passage Index (recall-politics Studio-inspired hairline rows) */}
+      <section className="studio-section">
+        <div className="flex items-end justify-between pb-4 border-b border-[var(--rule)]">
+          <div>
+            <div className="studio-kicker">Passage Bank</div>
+            <h2 className="font-display text-4xl text-[var(--ink)] mt-1">
+              Individual Passage Drills
+            </h2>
+          </div>
+          <span className="studio-kicker hidden sm:inline">
+            {PASSAGES.length} passages · {PASSAGES.reduce((n, p) => n + p.questions.length, 0)} MCQs
+          </span>
+        </div>
+
         <div>
-          <h1 className="font-serif-editorial text-3xl font-medium text-[var(--text)]">
-            Section A · Critical Reading
-          </h1>
-          <p className="text-sm text-[var(--text-muted)] mt-1">
-            Pearson VUE split-screen simulator with passage highlighting, distractor strike-out,
-            and paragraph-anchored explanations.
-          </p>
-        </div>
-        <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-[6px] bg-[var(--emerald-soft)] text-[var(--emerald)] text-xs font-medium shrink-0">
-          <Sparkles className="w-3.5 h-3.5" />
-          Preview mode: all 6 passages unlocked
-        </div>
-      </div>
-
-      {/* Primary Timed Sessions */}
-      <div className="grid md:grid-cols-2 gap-4">
-        <div className="p-6 rounded-[10px] border border-[var(--border)] bg-[var(--surface)] flex flex-col justify-between gap-4">
-          <div className="space-y-2">
-            <div className="flex items-center justify-between">
-              <span className="text-xs font-semibold uppercase tracking-wide text-[var(--accent)]">
-                Recommended start
-              </span>
-              <span className="font-mono-tabular text-xs text-[var(--text-muted)] inline-flex items-center gap-1">
-                <Clock className="w-3.5 h-3.5" /> 15 min · 11 Qs
-              </span>
-            </div>
-            <h2 className="font-serif-editorial text-2xl font-medium text-[var(--text)]">
-              Free LNAT Diagnostic
-            </h2>
-            <p className="text-sm text-[var(--text-muted)] leading-relaxed">
-              3 passages spanning Law &amp; Tech, Constitutional Theory, and Media Privacy. Get a
-              projected score out of 42, skill profile, and shareable university readiness card.
-            </p>
-          </div>
-          <button
-            type="button"
-            onClick={() =>
-              onStartExam({
-                mode: 'diagnostic',
-                label: 'Free LNAT Diagnostic',
-                timeLimitSeconds: 15 * 60,
-                passageIds: freePassageIds,
-              })
-            }
-            className="w-full py-2.5 px-4 rounded-[8px] bg-[var(--primary-action)] hover:bg-[var(--accent-hover)] text-[var(--primary-action-fg)] text-sm font-medium inline-flex items-center justify-center gap-2 transition-colors cursor-pointer"
-          >
-            Start 15-min Diagnostic
-            <ArrowRight className="w-4 h-4" />
-          </button>
-        </div>
-
-        <div className="p-6 rounded-[10px] border border-[var(--border)] bg-[var(--surface)] flex flex-col justify-between gap-4">
-          <div className="space-y-2">
-            <div className="flex items-center justify-between">
-              <span className="text-xs font-semibold uppercase tracking-wide text-[var(--text-muted)]">
-                Endurance mock
-              </span>
-              <span className="font-mono-tabular text-xs text-[var(--text-muted)] inline-flex items-center gap-1">
-                <Clock className="w-3.5 h-3.5" /> 45 min · {ALL_QUESTIONS.length} Qs
-              </span>
-            </div>
-            <h2 className="font-serif-editorial text-2xl font-medium text-[var(--text)]">
-              Full Bank Half-Mock
-            </h2>
-            <p className="text-sm text-[var(--text-muted)] leading-relaxed">
-              All 6 passages back-to-back at authentic Pearson VUE pacing (~2 min per question).
-              Tests reading stamina across law, economics, bioethics, and public philosophy.
-            </p>
-          </div>
-          <button
-            type="button"
-            onClick={() =>
-              onStartExam({
-                mode: 'mock',
-                label: 'Full Bank Half-Mock',
-                timeLimitSeconds: 45 * 60,
-                passageIds: allPassageIds,
-              })
-            }
-            className="w-full py-2.5 px-4 rounded-[8px] border border-[var(--border-strong)] bg-[var(--surface)] hover:bg-[var(--surface-subtle)] text-[var(--text)] text-sm font-medium inline-flex items-center justify-center gap-2 transition-colors cursor-pointer"
-          >
-            Start 45-min Half-Mock
-            <ArrowRight className="w-4 h-4" />
-          </button>
-        </div>
-      </div>
-
-      {/* Targeted Skill Drills */}
-      <section className="space-y-3">
-        <div className="flex items-center gap-2">
-          <Filter className="w-4 h-4 text-[var(--accent)]" />
-          <h2 className="font-semibold text-base text-[var(--text)]">
-            Targeted Reasoning Skill Drills
-          </h2>
-        </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-3">
-          {SKILLS.map((skill) => {
-            const count = ALL_QUESTIONS.filter((q) => q.skill === skill).length;
-            const matchingPassages = Array.from(
-              new Set(ALL_QUESTIONS.filter((q) => q.skill === skill).map((q) => q.passageId))
-            );
+          {PASSAGES.map((passage, idx) => {
+            const best = bestForLabel(passage.title);
             return (
               <button
-                key={skill}
+                key={passage.id}
                 type="button"
-                onClick={() =>
-                  onStartExam({
-                    mode: 'drill',
-                    label: `${skill} Drill`,
-                    timeLimitSeconds: Math.max(8, count * 2) * 60,
-                    passageIds: matchingPassages,
-                    skillFilter: skill,
-                  })
-                }
-                className="text-left p-4 rounded-[8px] border border-[var(--border)] bg-[var(--surface)] hover:border-[var(--accent)] transition-colors space-y-1.5 cursor-pointer"
+                onClick={() => onStartPassage(passage)}
+                className="studio-row w-full py-5 grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-5 items-center text-left cursor-pointer"
               >
-                <div className="text-sm font-medium text-[var(--text)]">{skill}</div>
-                <div className="font-mono-tabular text-xs text-[var(--text-muted)]">
-                  {count} questions · {Math.max(8, count * 2)} min
+                <div className="md:col-span-1 font-mono-tabular text-xs text-[var(--text-muted)]">
+                  N — {String(idx + 1).padStart(2, '0')}
+                </div>
+                <div className="md:col-span-4">
+                  <div className="studio-row-title font-display text-2xl sm:text-[1.75rem] leading-tight text-[var(--ink)]">
+                    {passage.title}
+                  </div>
+                  <div className="studio-kicker text-[10px] mt-1">{passage.domain}</div>
+                </div>
+                <div className="md:col-span-4 font-serif-passage text-sm text-[var(--text-muted)]">
+                  {passage.sourceStyle}
+                </div>
+                <div className="md:col-span-3 flex items-center md:justify-end justify-between gap-4">
+                  <div className="flex items-center gap-3 text-xs font-mono-tabular text-[var(--text-muted)]">
+                    <span className="inline-flex items-center gap-1">
+                      <Clock className="w-3.5 h-3.5" />
+                      {passage.readingMinutes}m
+                    </span>
+                    <span>{passage.questions.length} Qs</span>
+                    <span
+                      className={`text-[10px] uppercase tracking-[0.08em] px-2 py-0.5 rounded-full ${
+                        passage.difficulty === 'Stretch'
+                          ? 'bg-[var(--crimson-soft)] text-[var(--crimson)]'
+                          : passage.difficulty === 'Challenging'
+                          ? 'bg-[var(--amber-soft)] text-[var(--amber)]'
+                          : 'bg-[var(--emerald-soft)] text-[var(--emerald)]'
+                      }`}
+                    >
+                      {passage.difficulty}
+                    </span>
+                    {best && (
+                      <span className="text-[var(--emerald)] font-semibold">
+                        {best.score}/{best.total}
+                      </span>
+                    )}
+                  </div>
+                  <ArrowUpRight className="w-4 h-4 text-[var(--ink)] studio-row-arrow shrink-0" />
                 </div>
               </button>
             );
@@ -149,58 +169,49 @@ export const PracticeHub: React.FC<PracticeHubProps> = ({ onStartExam }) => {
         </div>
       </section>
 
-      {/* Individual Passages */}
-      <section className="space-y-3">
-        <div className="flex items-center gap-2">
-          <Layers className="w-4 h-4 text-[var(--accent)]" />
-          <h2 className="font-semibold text-base text-[var(--text)]">Individual Passages</h2>
-        </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {PASSAGES.map((passage, idx) => (
-            <div
-              key={passage.id}
-              className="p-5 rounded-[10px] border border-[var(--border)] bg-[var(--surface)] flex flex-col justify-between gap-4"
-            >
-              <div className="space-y-2">
-                <div className="flex items-center justify-between gap-2 text-xs">
-                  <span className="font-mono-tabular text-[var(--text-muted)]">
-                    Passage {idx + 1} · {passage.domain}
-                  </span>
-                  <span
-                    className={`px-2 py-0.5 rounded text-[11px] font-medium ${
-                      passage.freeTier
-                        ? 'bg-[var(--emerald-soft)] text-[var(--emerald)]'
-                        : 'bg-[var(--accent-soft)] text-[var(--accent)]'
-                    }`}
-                  >
-                    {passage.freeTier ? 'Free' : 'Season Pass'}
-                  </span>
-                </div>
-                <h3 className="font-serif-editorial text-lg font-medium text-[var(--text)] leading-snug">
-                  {passage.title}
-                </h3>
-                <p className="text-xs text-[var(--text-muted)]">
-                  {passage.sourceStyle} · {passage.wordCount} words · {passage.questions.length}{' '}
-                  MCQs
-                </p>
-              </div>
-              <button
-                type="button"
-                onClick={() =>
-                  onStartExam({
-                    mode: 'drill',
-                    label: passage.title,
-                    timeLimitSeconds: passage.questions.length * 150,
-                    passageIds: [passage.id],
-                  })
-                }
-                className="w-full py-2 px-3 rounded-[6px] border border-[var(--border-strong)] hover:bg-[var(--surface-subtle)] text-xs font-medium text-[var(--text)] inline-flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
-              >
-                <BookOpen className="w-3.5 h-3.5" />
-                Practice passage
-              </button>
+      {/* Skill Drills — Numbered Hairline Rows */}
+      <section className="studio-section">
+        <div className="flex items-end justify-between pb-4 border-b border-[var(--rule)]">
+          <div>
+            <div className="studio-kicker inline-flex items-center gap-1.5">
+              <Target className="w-3.5 h-3.5 text-[var(--accent)]" />
+              Targeted Weak-Skill Drills
             </div>
-          ))}
+            <h2 className="font-display text-4xl text-[var(--ink)] mt-1">Drill by LNAT Skill</h2>
+          </div>
+          <span className="studio-kicker hidden sm:inline">05 core question types</span>
+        </div>
+
+        <div>
+          {SKILLS.map((s, idx) => {
+            const count = PASSAGES.flatMap((p) => p.questions).filter(
+              (q) => q.skill === s.tag
+            ).length;
+            return (
+              <button
+                key={s.tag}
+                type="button"
+                onClick={() => onStartSkill(s.tag)}
+                className="studio-row w-full py-4 grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-5 items-center text-left cursor-pointer"
+              >
+                <div className="md:col-span-1 font-mono-tabular text-xs text-[var(--text-muted)]">
+                  0{idx + 1}
+                </div>
+                <div className="md:col-span-3 studio-row-title text-base font-semibold text-[var(--ink)]">
+                  {s.tag}
+                </div>
+                <div className="md:col-span-6 font-serif-passage text-sm text-[var(--text-muted)]">
+                  {s.desc}
+                </div>
+                <div className="md:col-span-2 flex items-center md:justify-end justify-between gap-3">
+                  <span className="font-mono-tabular text-xs text-[var(--text-muted)]">
+                    {count} Qs
+                  </span>
+                  <ArrowUpRight className="w-4 h-4 text-[var(--ink)] studio-row-arrow shrink-0" />
+                </div>
+              </button>
+            );
+          })}
         </div>
       </section>
     </div>
