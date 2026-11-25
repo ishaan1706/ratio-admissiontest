@@ -1,29 +1,36 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #FAF9F6;
+  --bg: #F6F4EF;
   --surface: #FFFFFF;
-  --surface-subtle: #F3F1EC;
-  --text: #141B29;
-  --text-muted: #525B6C;
-  --border: rgba(20, 27, 41, 0.12);
-  --border-strong: rgba(20, 27, 41, 0.22);
-  --accent: #1B365D;
-  --accent-hover: #132847;
+  --surface-subtle: #ECE9E1;
+  --obsidian: #0F172A;
+  --obsidian-soft: #1E293B;
+  --text: #0F172A;
+  --text-muted: #475569;
+  --border: rgba(15, 23, 42, 0.1);
+  --border-strong: rgba(15, 23, 42, 0.2);
+  --accent: #2563EB;
+  --accent-hover: #1D4ED8;
   --accent-fg: #FFFFFF;
-  --accent-soft: rgba(27, 54, 93, 0.08);
-  --primary-action: #1B365D;
+  --accent-soft: rgba(37, 99, 235, 0.09);
+  --primary-action: #2563EB;
   --primary-action-fg: #FFFFFF;
-  --crimson: #8C2D3A;
-  --crimson-soft: rgba(140, 45, 58, 0.09);
-  --emerald: #1E6B4B;
-  --emerald-soft: rgba(30, 107, 75, 0.1);
-  --amber: #9A6312;
-  --amber-soft: rgba(154, 99, 18, 0.1);
-  --highlight-bg: #FEF08A;
-  --radius: 8px;
-  --font: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-serif: 'Newsreader', Georgia, Cambria, 'Times New Roman', serif;
+  --ochre: #D97706;
+  --ochre-soft: rgba(217, 119, 6, 0.12);
+  --crimson: #DC2626;
+  --crimson-soft: rgba(220, 38, 38, 0.1);
+  --emerald: #059669;
+  --emerald-soft: rgba(5, 150, 105, 0.11);
+  --amber: #B45309;
+  --amber-soft: rgba(180, 83, 9, 0.11);
+  --hl-claim: #FEF08A;
+  --hl-evidence: #BFDBFE;
+  --hl-counter: #FBCFE8;
+  --radius: 10px;
+  --font: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Instrument Serif', 'Newsreader', Georgia, serif;
+  --font-serif: 'Newsreader', Georgia, Cambria, serif;
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
@@ -42,6 +49,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.font-display {
+  font-family: var(--font-display);
+}
+
 .font-serif-editorial {
   font-family: var(--font-serif);
 }
@@ -55,7 +66,6 @@ body {
   font-variant-numeric: tabular-nums;
 }
 
-/* Custom subtle scrollbars for split-screen exam mode */
 .exam-scroll::-webkit-scrollbar {
   width: 7px;
   height: 7px;
@@ -64,17 +74,29 @@ body {
   background: transparent;
 }
 .exam-scroll::-webkit-scrollbar-thumb {
-  background: rgba(20, 27, 41, 0.16);
+  background: rgba(15, 23, 42, 0.16);
   border-radius: 999px;
 }
 .exam-scroll::-webkit-scrollbar-thumb:hover {
-  background: rgba(20, 27, 41, 0.28);
+  background: rgba(15, 23, 42, 0.3);
 }
 
-.passage-highlight {
-  background-color: var(--highlight-bg);
+.hl-claim {
+  background-color: var(--hl-claim);
   color: var(--text);
-  border-radius: 2px;
+  border-radius: 3px;
+  padding: 0 2px;
+}
+.hl-evidence {
+  background-color: var(--hl-evidence);
+  color: var(--text);
+  border-radius: 3px;
+  padding: 0 2px;
+}
+.hl-counter {
+  background-color: var(--hl-counter);
+  color: var(--text);
+  border-radius: 3px;
   padding: 0 2px;
 }
 

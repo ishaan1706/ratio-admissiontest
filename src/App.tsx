@@ -14,6 +14,8 @@ import { PracticeHub } from './components/PracticeHub';
 import { ExamSimulator } from './components/ExamSimulator';
 import { ResultsView } from './components/ResultsView';
 import { EssayStudio } from './components/EssayStudio';
+import { OfficialResourcesView } from './components/OfficialResourcesView';
+import { AllTestsView } from './components/AllTestsView';
 import { ProgressView } from './components/ProgressView';
 import { PricingView } from './components/PricingView';
 
@@ -113,6 +115,10 @@ export const App: React.FC = () => {
         {view === 'essay' && (
           <EssayStudio savedEssays={essays} onSaveEssay={handleSaveEssay} />
         )}
+        {view === 'resources' && (
+          <OfficialResourcesView onStartDiagnostic={handleStartDiagnostic} />
+        )}
+        {view === 'tests' && <AllTestsView onNavigate={setView} />}
         {view === 'progress' && (
           <ProgressView
             attempts={attempts}
@@ -125,11 +131,11 @@ export const App: React.FC = () => {
       </main>
 
       {view !== 'exam' && (
-        <footer className="border-t border-[var(--border)] bg-[var(--surface)] py-5 px-4 sm:px-6 text-xs text-[var(--text-muted)] no-print mb-14 md:mb-0">
+        <footer className="border-t border-[var(--border)] bg-[var(--surface)] py-5 px-4 sm:px-6 text-xs text-[var(--text-muted)] no-print mb-14 lg:mb-0">
           <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
             <div>
-              Ratio LNAT Prep · Independent study tool (not affiliated with LNAT Consortium or
-              Pearson VUE).
+              Ratio Admissions Prep · Independent study platform (not affiliated with LNAT
+              Consortium, Pearson VUE, UCAT, or UAT-UK).
             </div>
             <a
               href="https://app.devin.ai/sessions/24c709ca71aa4f26ba09586a8fcd2554"

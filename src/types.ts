@@ -61,6 +61,8 @@ export interface SkillStat {
   total: number;
 }
 
+export type ConfidenceLevel = 'sure' | 'unsure' | 'guess';
+
 export interface SectionAAttempt {
   id: string;
   mode: 'diagnostic' | 'mock' | 'drill';
@@ -71,6 +73,7 @@ export interface SectionAAttempt {
   duration_seconds: number;
   skill_breakdown: Record<string, SkillStat>;
   answers: Record<string, 'A' | 'B' | 'C' | 'D' | 'E'>;
+  confidence?: Record<string, ConfidenceLevel>;
   created_at: string;
 }
 
@@ -93,6 +96,8 @@ export type AppView =
   | 'exam'
   | 'results'
   | 'essay'
+  | 'resources'
+  | 'tests'
   | 'progress'
   | 'pricing';
 

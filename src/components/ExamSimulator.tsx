@@ -7,12 +7,19 @@ import {
   Highlighter,
   Strikethrough,
   X,
-  AlertCircle,
   CheckCircle2,
   Minus,
   Plus,
+  LayoutGrid,
 } from 'lucide-react';
-import { ActiveExamConfig, LnatPassage, LnatQuestion, SectionAAttempt, SkillStat } from '../types';
+import {
+  ActiveExamConfig,
+  ConfidenceLevel,
+  LnatPassage,
+  LnatQuestion,
+  SectionAAttempt,
+  SkillStat,
+} from '../types';
 import { PASSAGES } from '../data/passages';
 import { getProjectedLnatScore } from '../data/benchmarks';
 
@@ -26,6 +33,8 @@ interface QuestionSlot {
   question: LnatQuestion;
   passage: LnatPassage;
 }
+
+type HighlightType = 'claim' | 'evidence' | 'counter';
 
 function splitSentences(text: string): string[] {
   return text.match(/[^.!?]+[.!?]+(?:\s|$)|[^.!?]+$/g) || [text];
@@ -61,16 +70,18 @@ export const ExamSimulator: React.FC<ExamSimulatorProps> = ({
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, 'A' | 'B' | 'C' | 'D' | 'E'>>({});
+  const [confidence, setConfidence] = useState<Record<string, ConfidenceLevel>>({});
   const [flagged, setFlagged] = useState<Record<string, boolean>>({});
   const [struckOut, setStruckOut] = useState<Record<string, Record<string, boolean>>>({});
-  const [highlights, setHighlights] = useState<Record<string, boolean>>({});
-  const [highlightMode, setHighlightMode] = useState(false);
+  const [highlights, setHighlights] = useState<Record<string, HighlightType>>({});
+  const [activePen, setActivePen] = useState<HighlightType | null>(null);
   const [fontSize, setFontSize] = useState<'sm' | 'base' | 'lg'>('base');
   const [secondsLeft, setSecondsLeft] = useState(config.timeLimitSeconds);
-  const [showConfirmModal, setShowConfirmModal] = useState(false);
+  const [showReviewScreen, setShowReviewScreen] = useState(false);
 
   const currentSlot = slots[currentIndex];
   const answeredCount = Object.keys(answers).length;
+  const flaggedCount = Object.values(flagged).filter(Boolean).length;
 
   useEffect(() => {
     const timer = window.setInterval(() => {
@@ -111,6 +122,7 @@ export const ExamSimulator: React.FC<ExamSimulatorProps> = ({
       duration_seconds: elapsed,
       skill_breakdown: skillBreakdown,
       answers,
+      confidence,
       created_at: new Date().toISOString(),
     };
 
@@ -127,10 +139,9 @@ export const ExamSimulator: React.FC<ExamSimulatorProps> = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [secondsLeft]);
 
-  // Keyboard shortcuts: A-E select, F flag, Left/Right navigate
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
-      if (showConfirmModal || !currentSlot) return;
+      if (showReviewScreen || !currentSlot) return;
       const target = e.target as HTMLElement | null;
       if (target && ['INPUT', 'TEXTAREA'].includes(target.tagName)) return;
 
@@ -153,7 +164,7 @@ export const ExamSimulator: React.FC<ExamSimulatorProps> = ({
     };
     window.addEventListener('keydown', onKeyDown);
     return () => window.removeEventListener('keydown', onKeyDown);
-  }, [currentIndex, currentSlot, showConfirmModal, slots.length]);
+  }, [currentIndex, currentSlot, showReviewScreen, slots.length]);
 
   if (!currentSlot) {
     return (
@@ -187,8 +198,16 @@ export const ExamSimulator: React.FC<ExamSimulatorProps> = ({
   };
 
   const toggleSentenceHighlight = (key: string) => {
-    if (!highlightMode) return;
-    setHighlights((prev) => ({ ...prev, [key]: !prev[key] }));
+    if (!activePen) return;
+    setHighlights((prev) => {
+      const next = { ...prev };
+      if (next[key] === activePen) {
+        delete next[key];
+      } else {
+        next[key] = activePen;
+      }
+      return next;
+    });
   };
 
   const passageFontClass =
@@ -198,11 +217,109 @@ export const ExamSimulator: React.FC<ExamSimulatorProps> = ({
         ? 'text-[19px] leading-[1.8]'
         : 'text-[17px] leading-[1.76]';
 
+  // Official Pearson-style Review Screen
+  if (showReviewScreen) {
+    return (
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 space-y-6 pb-20">
+        <div className="rounded-[14px] border border-[var(--border)] bg-[var(--surface)] overflow-hidden">
+          <div className="bg-[#0F172A] text-white px-6 py-4 flex items-center justify-between">
+            <div>
+              <div className="text-[11px] uppercase tracking-wider text-slate-400">
+                Pearson VUE Style · Section A Review Screen
+              </div>
+              <h2 className="font-display text-2xl mt-0.5">{config.label}</h2>
+            </div>
+            <div className="font-mono-tabular text-sm font-semibold px-3 py-1 rounded bg-white/10">
+              {formatTime(secondsLeft)} left
+            </div>
+          </div>
+
+          <div className="p-6 space-y-5">
+            <div className="flex flex-wrap items-center justify-between gap-3 text-xs">
+              <div className="flex items-center gap-4">
+                <span className="font-semibold text-[var(--emerald)]">
+                  Answered: {answeredCount}/{slots.length}
+                </span>
+                <span className="font-semibold text-[var(--crimson)]">
+                  Flagged: {flaggedCount}
+                </span>
+                <span className="text-[var(--text-muted)]">
+                  Unanswered: {slots.length - answeredCount}
+                </span>
+              </div>
+              <span className="text-[var(--text-muted)]">
+                Click any item below to jump back before ending review.
+              </span>
+            </div>
+
+            {answeredCount < slots.length && (
+              <div className="p-3.5 rounded-[8px] bg-[var(--amber-soft)] text-xs text-[var(--amber)] font-medium">
+                There is no negative marking on the LNAT—consider selecting your best guess on
+                unanswered items before clicking End Review.
+              </div>
+            )}
+
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+              {slots.map((slot, idx) => {
+                const ans = answers[slot.question.id];
+                const flg = Boolean(flagged[slot.question.id]);
+                return (
+                  <button
+                    key={slot.question.id}
+                    type="button"
+                    onClick={() => {
+                      setCurrentIndex(idx);
+                      setShowReviewScreen(false);
+                    }}
+                    className={`p-3 rounded-[9px] border text-left transition-colors cursor-pointer ${
+                      flg
+                        ? 'border-[var(--crimson)] bg-[var(--crimson-soft)]'
+                        : ans
+                          ? 'border-[var(--emerald)]/40 bg-[var(--emerald-soft)]'
+                          : 'border-[var(--border)] bg-[var(--bg)] hover:border-[var(--border-strong)]'
+                    }`}
+                  >
+                    <div className="flex items-center justify-between">
+                      <span className="font-mono-tabular text-xs font-bold text-[var(--text)]">
+                        Q{idx + 1}
+                      </span>
+                      {flg && <Flag className="w-3.5 h-3.5 text-[var(--crimson)]" />}
+                    </div>
+                    <div className="text-[11px] text-[var(--text-muted)] mt-1">
+                      {ans ? `Marked ${ans}` : 'Incomplete'}
+                    </div>
+                  </button>
+                );
+              })}
+            </div>
+
+            <div className="flex items-center justify-between pt-3 border-t border-[var(--border)]">
+              <button
+                type="button"
+                onClick={() => setShowReviewScreen(false)}
+                className="px-4 py-2 rounded-[8px] border border-[var(--border-strong)] text-xs font-semibold text-[var(--text)] hover:bg-[var(--surface-subtle)] cursor-pointer"
+              >
+                Return to Questions
+              </button>
+              <button
+                type="button"
+                onClick={handleSubmit}
+                className="px-5 py-2 rounded-[8px] bg-[var(--primary-action)] hover:bg-[var(--accent-hover)] text-white text-xs font-semibold inline-flex items-center gap-1.5 cursor-pointer"
+              >
+                End Review &amp; Score <CheckCircle2 className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div className="flex flex-col h-[calc(100vh-3.5rem)] bg-[var(--bg)]">
-      {/* Pearson-style exam control bar */}
-      <div className="shrink-0 border-b border-[var(--border)] bg-[var(--surface)] px-4 sm:px-6 h-12 flex items-center justify-between gap-3">
-        <div className="flex items-center gap-3 min-w-0">
+    <div className="flex flex-col h-[calc(100vh-3.75rem)] bg-[var(--bg)]">
+      {/* Exam control bar */}
+      <div className="shrink-0 border-b border-[var(--border)] bg-[var(--surface)] px-4 sm:px-6 h-12 flex items-center justify-between gap-2">
+        <div className="flex items-center gap-2.5 min-w-0">
           <button
             type="button"
             onClick={onExit}
@@ -212,34 +329,47 @@ export const ExamSimulator: React.FC<ExamSimulatorProps> = ({
             <X className="w-4 h-4" />
           </button>
           <div className="truncate">
-            <span className="text-sm font-semibold text-[var(--text)]">{config.label}</span>
-            <span className="hidden sm:inline text-xs text-[var(--text-muted)] ml-2">
-              Question {currentIndex + 1} of {slots.length}
+            <span className="text-xs sm:text-sm font-semibold text-[var(--text)]">
+              {config.label}
+            </span>
+            <span className="hidden md:inline text-xs text-[var(--text-muted)] ml-2">
+              Q{currentIndex + 1} / {slots.length}
             </span>
           </div>
         </div>
 
-        <div className="flex items-center gap-2 sm:gap-3 shrink-0">
-          <button
-            type="button"
-            onClick={() => setHighlightMode((v) => !v)}
-            className={`px-2.5 py-1 rounded-[6px] text-xs font-medium inline-flex items-center gap-1.5 border transition-colors cursor-pointer ${
-              highlightMode
-                ? 'border-[#CA8A04] bg-[#FEF08A] text-[var(--text)]'
-                : 'border-[var(--border)] bg-[var(--bg)] text-[var(--text-muted)] hover:text-[var(--text)]'
-            }`}
-            title="Click sentences in the passage to highlight"
-          >
-            <Highlighter className="w-3.5 h-3.5" />
-            <span className="hidden sm:inline">Highlight</span>
-          </button>
+        {/* Multi-colour Argument Highlighter */}
+        <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
+          <div className="hidden sm:flex items-center gap-1 px-1.5 py-1 rounded-[7px] border border-[var(--border)] bg-[var(--bg)]">
+            <Highlighter className="w-3.5 h-3.5 text-[var(--text-muted)] ml-1" />
+            {(
+              [
+                { id: 'claim', label: 'Claim', cls: 'bg-[#FEF08A]' },
+                { id: 'evidence', label: 'Evidence', cls: 'bg-[#BFDBFE]' },
+                { id: 'counter', label: 'Pivot', cls: 'bg-[#FBCFE8]' },
+              ] as const
+            ).map((pen) => (
+              <button
+                key={pen.id}
+                type="button"
+                onClick={() => setActivePen((p) => (p === pen.id ? null : pen.id))}
+                className={`px-2 py-0.5 rounded text-[11px] font-medium transition-all cursor-pointer ${
+                  activePen === pen.id
+                    ? `${pen.cls} text-[var(--text)] ring-1 ring-[var(--text)]/30`
+                    : 'text-[var(--text-muted)] hover:text-[var(--text)]'
+                }`}
+              >
+                {pen.label}
+              </button>
+            ))}
+          </div>
 
           <button
             type="button"
             onClick={() =>
               setFlagged((prev) => ({ ...prev, [question.id]: !prev[question.id] }))
             }
-            className={`px-2.5 py-1 rounded-[6px] text-xs font-medium inline-flex items-center gap-1.5 border transition-colors cursor-pointer ${
+            className={`px-2.5 py-1 rounded-[6px] text-xs font-medium inline-flex items-center gap-1 border transition-colors cursor-pointer ${
               isFlagged
                 ? 'border-[var(--crimson)] bg-[var(--crimson-soft)] text-[var(--crimson)]'
                 : 'border-[var(--border)] bg-[var(--bg)] text-[var(--text-muted)] hover:text-[var(--text)]'
@@ -263,10 +393,11 @@ export const ExamSimulator: React.FC<ExamSimulatorProps> = ({
 
           <button
             type="button"
-            onClick={() => setShowConfirmModal(true)}
-            className="px-3 py-1 rounded-[6px] bg-[var(--primary-action)] hover:bg-[var(--accent-hover)] text-[var(--primary-action-fg)] text-xs font-medium transition-colors cursor-pointer"
+            onClick={() => setShowReviewScreen(true)}
+            className="px-3 py-1 rounded-[6px] bg-[#0F172A] hover:bg-[#1E293B] text-white text-xs font-semibold inline-flex items-center gap-1.5 cursor-pointer"
           >
-            Finish ({answeredCount}/{slots.length})
+            <LayoutGrid className="w-3.5 h-3.5" />
+            Review ({answeredCount}/{slots.length})
           </button>
         </div>
       </div>
@@ -278,12 +409,10 @@ export const ExamSimulator: React.FC<ExamSimulatorProps> = ({
           <div className="max-w-2xl mx-auto space-y-5">
             <div className="flex items-start justify-between gap-3 border-b border-[var(--border)] pb-4">
               <div>
-                <div className="text-[11px] uppercase tracking-wider font-medium text-[var(--text-muted)]">
+                <div className="text-[11px] uppercase tracking-wider font-semibold text-[var(--accent)]">
                   {passage.domain} · {passage.sourceStyle}
                 </div>
-                <h2 className="font-serif-editorial text-2xl font-medium text-[var(--text)] mt-1">
-                  {passage.title}
-                </h2>
+                <h2 className="font-display text-3xl text-[var(--text)] mt-1">{passage.title}</h2>
               </div>
               <div className="flex items-center gap-1 shrink-0">
                 <button
@@ -309,9 +438,20 @@ export const ExamSimulator: React.FC<ExamSimulatorProps> = ({
               </div>
             </div>
 
-            {highlightMode && (
-              <div className="px-3 py-2 rounded-[6px] bg-[#FEF9C3] border border-[#FDE047] text-xs text-[var(--text)]">
-                Highlight mode on: click any sentence below to highlight or unhighlight it.
+            {activePen && (
+              <div className="px-3 py-2 rounded-[7px] bg-[var(--bg)] border border-[var(--border)] text-xs text-[var(--text)] flex items-center justify-between">
+                <span>
+                  Highlighter active:{' '}
+                  <strong className="capitalize">{activePen}</strong> — click any sentence to mark
+                  or clear it.
+                </span>
+                <button
+                  type="button"
+                  onClick={() => setActivePen(null)}
+                  className="text-[var(--accent)] font-medium cursor-pointer"
+                >
+                  Done
+                </button>
               </div>
             )}
 
@@ -325,13 +465,21 @@ export const ExamSimulator: React.FC<ExamSimulatorProps> = ({
                     </span>
                     {sentences.map((sent, sIdx) => {
                       const key = `${passage.id}-${pIdx}-${sIdx}`;
-                      const isLit = Boolean(highlights[key]);
+                      const hl = highlights[key];
+                      const hlClass =
+                        hl === 'claim'
+                          ? 'hl-claim'
+                          : hl === 'evidence'
+                            ? 'hl-evidence'
+                            : hl === 'counter'
+                              ? 'hl-counter'
+                              : '';
                       return (
                         <span
                           key={key}
                           onClick={() => toggleSentenceHighlight(key)}
-                          className={`${isLit ? 'passage-highlight' : ''} ${
-                            highlightMode ? 'cursor-pointer hover:bg-[#FEF08A]/50 rounded-[2px]' : ''
+                          className={`${hlClass} ${
+                            activePen ? 'cursor-pointer hover:bg-black/5 rounded-[3px]' : ''
                           }`}
                         >
                           {sent}
@@ -349,13 +497,15 @@ export const ExamSimulator: React.FC<ExamSimulatorProps> = ({
         <div className="overflow-y-auto exam-scroll bg-[var(--bg)] px-5 sm:px-8 py-6">
           <div className="max-w-xl mx-auto space-y-5">
             <div className="flex items-center justify-between text-xs text-[var(--text-muted)]">
-              <span className="font-mono-tabular font-medium text-[var(--text)]">
+              <span className="font-mono-tabular font-semibold text-[var(--text)]">
                 Question {currentIndex + 1} of {slots.length}
               </span>
-              <span>{question.difficulty} · {question.skill}</span>
+              <span className="px-2 py-0.5 rounded-full bg-[var(--surface)] border border-[var(--border)] font-medium">
+                {question.difficulty} · {question.skill}
+              </span>
             </div>
 
-            <h3 className="text-base sm:text-lg font-medium text-[var(--text)] leading-snug">
+            <h3 className="text-base sm:text-lg font-semibold text-[var(--text)] leading-snug">
               {question.stem}
             </h3>
 
@@ -370,7 +520,7 @@ export const ExamSimulator: React.FC<ExamSimulatorProps> = ({
                       e.preventDefault();
                       toggleStrike(opt.letter);
                     }}
-                    className={`group flex items-stretch rounded-[8px] border transition-colors ${
+                    className={`group flex items-stretch rounded-[10px] border transition-all ${
                       isSelected
                         ? 'border-[var(--accent)] bg-[var(--accent-soft)]'
                         : 'border-[var(--border)] bg-[var(--surface)] hover:border-[var(--border-strong)]'
@@ -384,9 +534,9 @@ export const ExamSimulator: React.FC<ExamSimulatorProps> = ({
                       className="flex-1 text-left px-4 py-3 flex items-start gap-3 cursor-pointer"
                     >
                       <span
-                        className={`w-6 h-6 rounded-full font-mono-tabular text-xs font-semibold flex items-center justify-center shrink-0 mt-0.5 border ${
+                        className={`w-6 h-6 rounded-full font-mono-tabular text-xs font-bold flex items-center justify-center shrink-0 mt-0.5 border ${
                           isSelected
-                            ? 'bg-[var(--accent)] text-[var(--accent-fg)] border-[var(--accent)]'
+                            ? 'bg-[var(--accent)] text-white border-[var(--accent)]'
                             : 'bg-[var(--bg)] text-[var(--text-muted)] border-[var(--border-strong)]'
                         }`}
                       >
@@ -395,7 +545,7 @@ export const ExamSimulator: React.FC<ExamSimulatorProps> = ({
                       <span
                         className={`text-sm leading-relaxed ${
                           isStruck
-                            ? 'line-through text-[var(--text-muted)]/60'
+                            ? 'line-through text-[var(--text-muted)]/55'
                             : 'text-[var(--text)]'
                         }`}
                       >
@@ -405,7 +555,7 @@ export const ExamSimulator: React.FC<ExamSimulatorProps> = ({
                     <button
                       type="button"
                       onClick={() => toggleStrike(opt.letter)}
-                      title="Cross out option (or right-click)"
+                      title="Cross out distractor (or right-click)"
                       className={`px-2.5 border-l border-[var(--border)] flex items-center justify-center transition-colors cursor-pointer ${
                         isStruck
                           ? 'text-[var(--crimson)] bg-[var(--crimson-soft)]'
@@ -419,8 +569,29 @@ export const ExamSimulator: React.FC<ExamSimulatorProps> = ({
               })}
             </div>
 
+            {/* Confidence calibration pill */}
+            <div className="flex items-center justify-between pt-2 border-t border-[var(--border)] text-xs">
+              <span className="text-[var(--text-muted)] font-medium">Confidence tag:</span>
+              <div className="flex items-center gap-1.5">
+                {(['sure', 'unsure', 'guess'] as ConfidenceLevel[]).map((lvl) => (
+                  <button
+                    key={lvl}
+                    type="button"
+                    onClick={() => setConfidence((prev) => ({ ...prev, [question.id]: lvl }))}
+                    className={`px-2.5 py-1 rounded-full capitalize font-medium border transition-colors cursor-pointer ${
+                      confidence[question.id] === lvl
+                        ? 'border-[var(--accent)] bg-[var(--accent)] text-white'
+                        : 'border-[var(--border)] bg-[var(--surface)] text-[var(--text-muted)] hover:text-[var(--text)]'
+                    }`}
+                  >
+                    {lvl}
+                  </button>
+                ))}
+              </div>
+            </div>
+
             <p className="text-[11px] text-[var(--text-muted)]">
-              Shortcuts: press <kbd className="font-mono-tabular px-1 py-0.5 rounded bg-[var(--surface)] border border-[var(--border)]">A</kbd>–<kbd className="font-mono-tabular px-1 py-0.5 rounded bg-[var(--surface)] border border-[var(--border)]">E</kbd> to answer, <kbd className="font-mono-tabular px-1 py-0.5 rounded bg-[var(--surface)] border border-[var(--border)]">F</kbd> to flag, right-click an option to strike through.
+              Shortcuts: <kbd className="font-mono-tabular px-1 py-0.5 rounded bg-[var(--surface)] border border-[var(--border)]">A</kbd>–<kbd className="font-mono-tabular px-1 py-0.5 rounded bg-[var(--surface)] border border-[var(--border)]">E</kbd> answer · <kbd className="font-mono-tabular px-1 py-0.5 rounded bg-[var(--surface)] border border-[var(--border)]">F</kbd> flag · right-click to cross out.
             </p>
           </div>
         </div>
@@ -432,7 +603,7 @@ export const ExamSimulator: React.FC<ExamSimulatorProps> = ({
           type="button"
           disabled={currentIndex === 0}
           onClick={() => setCurrentIndex((i) => Math.max(0, i - 1))}
-          className="px-3 py-1.5 rounded-[6px] border border-[var(--border)] text-xs font-medium text-[var(--text)] disabled:opacity-40 hover:bg-[var(--surface-subtle)] inline-flex items-center gap-1 cursor-pointer disabled:cursor-not-allowed"
+          className="px-3 py-1.5 rounded-[7px] border border-[var(--border)] text-xs font-medium text-[var(--text)] disabled:opacity-40 hover:bg-[var(--surface-subtle)] inline-flex items-center gap-1 cursor-pointer disabled:cursor-not-allowed"
         >
           <ChevronLeft className="w-4 h-4" /> Prev
         </button>
@@ -447,9 +618,9 @@ export const ExamSimulator: React.FC<ExamSimulatorProps> = ({
                 key={slot.question.id}
                 type="button"
                 onClick={() => setCurrentIndex(idx)}
-                className={`relative w-7 h-7 rounded-[6px] font-mono-tabular text-xs font-medium shrink-0 transition-colors cursor-pointer border ${
+                className={`relative w-7 h-7 rounded-[6px] font-mono-tabular text-xs font-semibold shrink-0 transition-colors cursor-pointer border ${
                   isCurr
-                    ? 'border-[var(--accent)] bg-[var(--accent)] text-[var(--accent-fg)]'
+                    ? 'border-[var(--accent)] bg-[var(--accent)] text-white'
                     : isAns
                       ? 'border-[var(--emerald)]/40 bg-[var(--emerald-soft)] text-[var(--emerald)]'
                       : 'border-[var(--border)] bg-[var(--bg)] text-[var(--text-muted)] hover:text-[var(--text)]'
@@ -468,67 +639,20 @@ export const ExamSimulator: React.FC<ExamSimulatorProps> = ({
           <button
             type="button"
             onClick={() => setCurrentIndex((i) => Math.min(slots.length - 1, i + 1))}
-            className="px-3 py-1.5 rounded-[6px] bg-[var(--primary-action)] hover:bg-[var(--accent-hover)] text-[var(--primary-action-fg)] text-xs font-medium inline-flex items-center gap-1 cursor-pointer"
+            className="px-3.5 py-1.5 rounded-[7px] bg-[var(--primary-action)] hover:bg-[var(--accent-hover)] text-white text-xs font-semibold inline-flex items-center gap-1 cursor-pointer"
           >
             Next <ChevronRight className="w-4 h-4" />
           </button>
         ) : (
           <button
             type="button"
-            onClick={() => setShowConfirmModal(true)}
-            className="px-3 py-1.5 rounded-[6px] bg-[var(--emerald)] hover:opacity-90 text-white text-xs font-medium inline-flex items-center gap-1 cursor-pointer"
+            onClick={() => setShowReviewScreen(true)}
+            className="px-3.5 py-1.5 rounded-[7px] bg-[var(--emerald)] hover:opacity-90 text-white text-xs font-semibold inline-flex items-center gap-1 cursor-pointer"
           >
-            Submit <CheckCircle2 className="w-3.5 h-3.5" />
+            Review &amp; Submit <CheckCircle2 className="w-3.5 h-3.5" />
           </button>
         )}
       </div>
-
-      {/* Submit confirmation modal */}
-      {showConfirmModal && (
-        <div className="fixed inset-0 z-50 bg-black/40 flex items-center justify-center p-4">
-          <div className="w-full max-w-md rounded-[10px] bg-[var(--surface)] border border-[var(--border)] p-6 space-y-4 shadow-lg">
-            <div className="flex items-start gap-3">
-              <AlertCircle className="w-5 h-5 text-[var(--accent)] shrink-0 mt-0.5" />
-              <div>
-                <h3 className="font-semibold text-[var(--text)]">Submit Section A attempt?</h3>
-                <p className="text-sm text-[var(--text-muted)] mt-1">
-                  You have answered{' '}
-                  <span className="font-mono-tabular font-semibold text-[var(--text)]">
-                    {answeredCount} of {slots.length}
-                  </span>{' '}
-                  questions with{' '}
-                  <span className="font-mono-tabular font-semibold text-[var(--text)]">
-                    {formatTime(secondsLeft)}
-                  </span>{' '}
-                  remaining.
-                </p>
-                {answeredCount < slots.length && (
-                  <p className="text-xs text-[var(--crimson)] mt-2">
-                    There is no negative marking on the LNAT—consider guessing unanswered items
-                    before submitting.
-                  </p>
-                )}
-              </div>
-            </div>
-            <div className="flex items-center justify-end gap-2 pt-2">
-              <button
-                type="button"
-                onClick={() => setShowConfirmModal(false)}
-                className="px-3.5 py-2 rounded-[6px] border border-[var(--border-strong)] text-xs font-medium text-[var(--text)] hover:bg-[var(--surface-subtle)] cursor-pointer"
-              >
-                Keep reviewing
-              </button>
-              <button
-                type="button"
-                onClick={handleSubmit}
-                className="px-4 py-2 rounded-[6px] bg-[var(--primary-action)] hover:bg-[var(--accent-hover)] text-[var(--primary-action-fg)] text-xs font-medium cursor-pointer"
-              >
-                Submit &amp; score
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 };

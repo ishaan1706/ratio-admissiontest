@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import {
   Clock,
   CheckCircle2,
@@ -10,6 +10,7 @@ import {
   RotateCcw,
   Save,
   Sparkles,
+  Activity,
 } from 'lucide-react';
 import { ESSAY_RUBRIC, ESSAY_SETS } from '../data/essays';
 import { EssayPrompt, EssaySet, SectionBEssayRecord } from '../types';
@@ -31,6 +32,9 @@ function countWords(text: string): number {
   if (!trimmed) return 0;
   return trimmed.split(/\s+/).length;
 }
+
+const COUNTER_MARKERS =
+  /\b(however|nevertheless|nonetheless|admittedly|critics|opponents|conversely|on the other hand|yet|although|while some argue|objection)\b/i;
 
 export const EssayStudio: React.FC<EssayStudioProps> = ({ savedEssays, onSaveEssay }) => {
   const [selectedSet, setSelectedSet] = useState<EssaySet>(ESSAY_SETS[0]);
@@ -68,6 +72,23 @@ export const EssayStudio: React.FC<EssayStudioProps> = ({ savedEssays, onSaveEss
 
   const wordCount = countWords(essayText);
 
+  const telemetry = useMemo(() => {
+    const paragraphs = essayText
+      .split(/\n\s*\n/)
+      .map((p) => p.trim())
+      .filter(Boolean);
+    const hasCounter = COUNTER_MARKERS.test(essayText);
+    const inSweetSpot = wordCount >= 500 && wordCount <= 650;
+    const overMax = wordCount > 750;
+    return {
+      paragraphCount: paragraphs.length,
+      hasCounter,
+      inSweetSpot,
+      overMax,
+      progressPct: Math.min(100, Math.round((wordCount / 600) * 100)),
+    };
+  }, [essayText, wordCount]);
+
   const startPrompt = (prompt: EssayPrompt) => {
     setActivePrompt(prompt);
     setPlanText('');
@@ -79,7 +100,7 @@ export const EssayStudio: React.FC<EssayStudioProps> = ({ savedEssays, onSaveEss
     setSavedNotice(false);
   };
 
-  const handleFinishAndReview = async () => {
+  const handleFinishAndReview = () => {
     if (!activePrompt) return;
     setTimerRunning(false);
     setSubmitted(true);
@@ -105,25 +126,24 @@ export const EssayStudio: React.FC<EssayStudioProps> = ({ savedEssays, onSaveEss
 
   if (!activePrompt) {
     return (
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 space-y-8 pb-24 md:pb-12">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 space-y-8 pb-24 lg:pb-12">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
           <div>
-            <h1 className="font-serif-editorial text-3xl font-medium text-[var(--text)]">
+            <h1 className="font-display text-4xl text-[var(--text)]">
               Section B · 40-Minute Essay Studio
             </h1>
             <p className="text-sm text-[var(--text-muted)] mt-1">
-              Choose 1 of 3 prompts from an authentic LNAT paper set, write with spellcheck off
-              (just like Pearson VUE), then score against admissions criteria and compare with a
+              Pick 1 of 3 prompts (official LNAT format), write with spellcheck off and live
+              argument telemetry (500–600 word official sweet spot, 750 max), then compare with a
               top-band model outline.
             </p>
           </div>
-          <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-[6px] bg-[var(--emerald-soft)] text-[var(--emerald)] text-xs font-medium shrink-0">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-[7px] bg-[var(--emerald-soft)] text-[var(--emerald)] text-xs font-medium shrink-0">
             <Sparkles className="w-3.5 h-3.5" />
             All 3 paper sets unlocked
           </div>
         </div>
 
-        {/* Paper Set Selector */}
         <div className="flex flex-wrap gap-2">
           {ESSAY_SETS.map((set) => {
             const active = set.id === selectedSet.id;
@@ -132,9 +152,9 @@ export const EssayStudio: React.FC<EssayStudioProps> = ({ savedEssays, onSaveEss
                 key={set.id}
                 type="button"
                 onClick={() => setSelectedSet(set)}
-                className={`px-4 py-2 rounded-[8px] text-sm font-medium border transition-colors cursor-pointer ${
+                className={`px-4 py-2 rounded-[8px] text-xs font-semibold border transition-colors cursor-pointer ${
                   active
-                    ? 'border-[var(--accent)] bg-[var(--accent)] text-[var(--accent-fg)]'
+                    ? 'border-[#0F172A] bg-[#0F172A] text-white'
                     : 'border-[var(--border)] bg-[var(--surface)] text-[var(--text)] hover:border-[var(--border-strong)]'
                 }`}
               >
@@ -144,19 +164,17 @@ export const EssayStudio: React.FC<EssayStudioProps> = ({ savedEssays, onSaveEss
           })}
         </div>
 
-        <div className="rounded-[10px] border border-[var(--border)] bg-[var(--surface)] p-5 sm:p-6 space-y-5">
+        <div className="rounded-[14px] border border-[var(--border)] bg-[var(--surface)] p-5 sm:p-6 space-y-5">
           <div className="border-b border-[var(--border)] pb-3.5">
-            <h2 className="font-serif-editorial text-2xl font-medium text-[var(--text)]">
-              {selectedSet.title}
-            </h2>
-            <p className="text-xs text-[var(--text-muted)] mt-1">{selectedSet.subtitle}</p>
+            <h2 className="font-display text-2xl text-[var(--text)]">{selectedSet.title}</h2>
+            <p className="text-xs text-[var(--text-muted)] mt-0.5">{selectedSet.subtitle}</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-4">
             {selectedSet.prompts.map((prompt, i) => (
               <div
                 key={prompt.id}
-                className="p-5 rounded-[8px] border border-[var(--border)] bg-[var(--bg)] flex flex-col justify-between gap-5"
+                className="p-5 rounded-[10px] border border-[var(--border)] bg-[var(--bg)] flex flex-col justify-between gap-5"
               >
                 <div className="space-y-2.5">
                   <div className="text-[11px] font-mono-tabular uppercase tracking-wide text-[var(--accent)] font-semibold">
@@ -169,7 +187,7 @@ export const EssayStudio: React.FC<EssayStudioProps> = ({ savedEssays, onSaveEss
                 <button
                   type="button"
                   onClick={() => startPrompt(prompt)}
-                  className="w-full py-2 px-3 rounded-[6px] bg-[var(--primary-action)] hover:bg-[var(--accent-hover)] text-[var(--primary-action-fg)] text-xs font-medium inline-flex items-center justify-center gap-1.5 cursor-pointer"
+                  className="w-full py-2.5 px-3 rounded-[8px] bg-[var(--primary-action)] hover:bg-[var(--accent-hover)] text-white text-xs font-semibold inline-flex items-center justify-center gap-1.5 cursor-pointer"
                 >
                   <Play className="w-3.5 h-3.5" /> Start 40-min essay
                 </button>
@@ -178,21 +196,27 @@ export const EssayStudio: React.FC<EssayStudioProps> = ({ savedEssays, onSaveEss
           </div>
         </div>
 
-        {/* Saved essays */}
         {savedEssays.length > 0 && (
           <section className="space-y-3">
             <h2 className="font-semibold text-base text-[var(--text)]">Recent Saved Essays</h2>
-            <div className="divide-y divide-[var(--border)] rounded-[10px] border border-[var(--border)] bg-[var(--surface)]">
+            <div className="divide-y divide-[var(--border)] rounded-[12px] border border-[var(--border)] bg-[var(--surface)]">
               {savedEssays.slice(0, 5).map((e) => {
                 const avgRubric =
                   Object.values(e.rubric_scores).reduce((a, b) => a + b, 0) /
                   Math.max(1, Object.values(e.rubric_scores).length);
                 return (
-                  <div key={e.id} className="p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                  <div
+                    key={e.id}
+                    className="p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2"
+                  >
                     <div className="space-y-0.5">
                       <div className="text-sm font-medium text-[var(--text)]">{e.prompt_text}</div>
                       <div className="text-xs text-[var(--text-muted)]">
-                        {e.set_title} · {new Date(e.created_at).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' })}
+                        {e.set_title} ·{' '}
+                        {new Date(e.created_at).toLocaleDateString('en-GB', {
+                          day: 'numeric',
+                          month: 'short',
+                        })}
                       </div>
                     </div>
                     <div className="flex items-center gap-3 text-xs font-mono-tabular shrink-0">
@@ -214,9 +238,9 @@ export const EssayStudio: React.FC<EssayStudioProps> = ({ savedEssays, onSaveEss
   }
 
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 space-y-6 pb-24 md:pb-12">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 space-y-5 pb-24 lg:pb-12">
       {/* Top toolbar */}
-      <div className="rounded-[10px] border border-[var(--border)] bg-[var(--surface)] px-4 sm:px-5 py-3 flex flex-wrap items-center justify-between gap-3">
+      <div className="rounded-[12px] border border-[var(--border)] bg-[var(--surface)] px-4 sm:px-5 py-3 flex flex-wrap items-center justify-between gap-3">
         <div className="flex items-center gap-3">
           <button
             type="button"
@@ -226,21 +250,21 @@ export const EssayStudio: React.FC<EssayStudioProps> = ({ savedEssays, onSaveEss
             <RotateCcw className="w-3.5 h-3.5" /> Change prompt
           </button>
           <span className="text-xs text-[var(--border-strong)]">|</span>
-          <span className="text-xs font-medium text-[var(--accent)]">{activePrompt.theme}</span>
+          <span className="text-xs font-semibold text-[var(--accent)]">{activePrompt.theme}</span>
         </div>
 
         <div className="flex flex-wrap items-center gap-2.5">
           <button
             type="button"
             onClick={() => setSpellcheckOff((v) => !v)}
-            className="px-2.5 py-1 rounded-[6px] border border-[var(--border)] bg-[var(--bg)] text-xs text-[var(--text-muted)] hover:text-[var(--text)] inline-flex items-center gap-1.5 cursor-pointer"
+            className="px-2.5 py-1 rounded-[7px] border border-[var(--border)] bg-[var(--bg)] text-xs text-[var(--text-muted)] hover:text-[var(--text)] inline-flex items-center gap-1.5 cursor-pointer"
           >
             {spellcheckOff ? <EyeOff className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5" />}
             Spellcheck: {spellcheckOff ? 'Off (Exam)' : 'On'}
           </button>
 
           <div
-            className={`px-2.5 py-1 rounded-[6px] font-mono-tabular text-xs font-semibold border inline-flex items-center gap-1.5 ${
+            className={`px-2.5 py-1 rounded-[7px] font-mono-tabular text-xs font-semibold border inline-flex items-center gap-1.5 ${
               secondsLeft <= 300
                 ? 'border-[var(--crimson)] bg-[var(--crimson-soft)] text-[var(--crimson)]'
                 : 'border-[var(--border)] bg-[var(--bg)] text-[var(--text)]'
@@ -254,7 +278,7 @@ export const EssayStudio: React.FC<EssayStudioProps> = ({ savedEssays, onSaveEss
             <button
               type="button"
               onClick={handleFinishAndReview}
-              className="px-3.5 py-1.5 rounded-[6px] bg-[var(--primary-action)] hover:bg-[var(--accent-hover)] text-[var(--primary-action-fg)] text-xs font-medium cursor-pointer"
+              className="px-3.5 py-1.5 rounded-[7px] bg-[var(--primary-action)] hover:bg-[var(--accent-hover)] text-white text-xs font-semibold cursor-pointer"
             >
               Finish &amp; Self-Assess
             </button>
@@ -263,23 +287,23 @@ export const EssayStudio: React.FC<EssayStudioProps> = ({ savedEssays, onSaveEss
       </div>
 
       {/* Prompt banner */}
-      <div className="rounded-[10px] border border-[var(--border)] bg-[var(--surface)] p-5 space-y-3">
+      <div className="rounded-[12px] border border-[var(--border)] bg-[var(--surface)] p-5 space-y-3">
         <div className="flex items-start justify-between gap-4">
-          <h2 className="font-serif-editorial text-xl sm:text-2xl font-medium text-[var(--text)] leading-snug">
+          <h2 className="font-display text-2xl sm:text-3xl text-[var(--text)] leading-snug">
             {activePrompt.question}
           </h2>
           <button
             type="button"
             onClick={() => setShowHints((v) => !v)}
-            className="px-2.5 py-1.5 rounded-[6px] border border-[var(--border)] bg-[var(--bg)] text-xs font-medium text-[var(--accent)] inline-flex items-center gap-1 shrink-0 cursor-pointer"
+            className="px-3 py-1.5 rounded-[7px] border border-[var(--border)] bg-[var(--bg)] text-xs font-semibold text-[var(--accent)] inline-flex items-center gap-1 shrink-0 cursor-pointer"
           >
             <Lightbulb className="w-3.5 h-3.5" />
-            {showHints ? 'Hide hints' : 'Planning hints'}
+            {showHints ? 'Hide hints' : 'Tutor hints'}
           </button>
         </div>
 
         {showHints && (
-          <div className="p-4 rounded-[8px] bg-[var(--bg)] border border-[var(--border)] space-y-2 text-xs text-[var(--text)]">
+          <div className="p-4 rounded-[9px] bg-[var(--bg)] border border-[var(--border)] space-y-2 text-xs text-[var(--text)]">
             <div className="font-semibold text-[var(--accent)]">Admissions Tutor Angles:</div>
             <ul className="list-disc pl-4 space-y-1 text-[var(--text-muted)]">
               {activePrompt.planningHints.map((h, i) => (
@@ -296,38 +320,95 @@ export const EssayStudio: React.FC<EssayStudioProps> = ({ savedEssays, onSaveEss
         )}
       </div>
 
-      {/* Main Writing Workspace */}
+      {/* Main Writing Workspace with Live Telemetry */}
       <div className="grid lg:grid-cols-12 gap-5">
-        <div className="lg:col-span-4 space-y-2">
-          <label className="text-xs font-semibold text-[var(--text)] flex items-center gap-1.5">
-            <FileText className="w-3.5 h-3.5 text-[var(--accent)]" />
-            5-Minute Plan Scratchpad
-          </label>
-          <textarea
-            value={planText}
-            onChange={(e) => setPlanText(e.target.value)}
-            disabled={submitted}
-            rows={14}
-            placeholder={
-              'Thesis:\n\nPoint 1:\n\nPoint 2:\n\nStrongest Counter-Argument + Rebuttal:\n\nConclusion:'
-            }
-            className="w-full rounded-[8px] border border-[var(--border)] bg-[var(--surface)] p-3.5 text-sm text-[var(--text)] leading-relaxed focus:outline-none focus:border-[var(--accent)] resize-y"
-          />
+        <div className="lg:col-span-4 space-y-4">
+          {/* Live Argument Telemetry */}
+          <div className="rounded-[12px] border border-[var(--border)] bg-[var(--surface)] p-4 space-y-3">
+            <div className="flex items-center justify-between text-xs font-semibold text-[var(--text)]">
+              <span className="inline-flex items-center gap-1.5">
+                <Activity className="w-3.5 h-3.5 text-[var(--accent)]" />
+                Live Essay Telemetry
+              </span>
+              <span
+                className={`font-mono-tabular ${
+                  telemetry.overMax
+                    ? 'text-[var(--crimson)]'
+                    : telemetry.inSweetSpot
+                      ? 'text-[var(--emerald)]'
+                      : 'text-[var(--text-muted)]'
+                }`}
+              >
+                {wordCount} / 600w
+              </span>
+            </div>
+            <div className="h-2 rounded-full bg-[var(--bg)] overflow-hidden border border-[var(--border)]">
+              <div
+                className="h-full rounded-full transition-all"
+                style={{
+                  width: `${telemetry.progressPct}%`,
+                  backgroundColor: telemetry.overMax
+                    ? 'var(--crimson)'
+                    : telemetry.inSweetSpot
+                      ? 'var(--emerald)'
+                      : 'var(--accent)',
+                }}
+              />
+            </div>
+            <div className="space-y-1.5 text-xs">
+              <div className="flex items-center justify-between">
+                <span className="text-[var(--text-muted)]">Paragraph structure</span>
+                <span className="font-mono-tabular font-semibold text-[var(--text)]">
+                  {telemetry.paragraphCount} {telemetry.paragraphCount === 1 ? 'para' : 'paras'}{' '}
+                  (aim 4–5)
+                </span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-[var(--text-muted)]">Counter-argument pivot</span>
+                <span
+                  className={`font-medium ${
+                    telemetry.hasCounter ? 'text-[var(--emerald)]' : 'text-[var(--text-muted)]'
+                  }`}
+                >
+                  {telemetry.hasCounter ? 'Detected' : 'Not yet'}
+                </span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-[var(--text-muted)]">Official LNAT cap</span>
+                <span
+                  className={`font-mono-tabular font-medium ${
+                    telemetry.overMax ? 'text-[var(--crimson)]' : 'text-[var(--emerald)]'
+                  }`}
+                >
+                  {telemetry.overMax ? 'Over 750 max' : 'Within 750 max'}
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div className="space-y-2">
+            <label className="text-xs font-semibold text-[var(--text)] flex items-center gap-1.5">
+              <FileText className="w-3.5 h-3.5 text-[var(--accent)]" />
+              5-Minute Plan Scratchpad
+            </label>
+            <textarea
+              value={planText}
+              onChange={(e) => setPlanText(e.target.value)}
+              disabled={submitted}
+              rows={11}
+              placeholder={
+                'Thesis:\n\nPoint 1:\n\nPoint 2:\n\nStrongest Counter-Argument + Rebuttal:\n\nConclusion:'
+              }
+              className="w-full rounded-[10px] border border-[var(--border)] bg-[var(--surface)] p-3.5 text-sm text-[var(--text)] leading-relaxed focus:outline-none focus:border-[var(--accent)] resize-y"
+            />
+          </div>
         </div>
 
         <div className="lg:col-span-8 space-y-2">
           <div className="flex items-center justify-between text-xs">
             <label className="font-semibold text-[var(--text)]">Essay Response</label>
-            <span
-              className={`font-mono-tabular font-medium ${
-                wordCount >= 500 && wordCount <= 750
-                  ? 'text-[var(--emerald)]'
-                  : wordCount > 750
-                    ? 'text-[var(--amber)]'
-                    : 'text-[var(--text-muted)]'
-              }`}
-            >
-              {wordCount} words (recommended: 500–750)
+            <span className="text-[var(--text-muted)]">
+              Official LNAT guidance: 500–600 words ideal · 750 max
             </span>
           </div>
           <textarea
@@ -335,9 +416,9 @@ export const EssayStudio: React.FC<EssayStudioProps> = ({ savedEssays, onSaveEss
             onChange={(e) => setEssayText(e.target.value)}
             disabled={submitted}
             spellCheck={!spellcheckOff}
-            rows={18}
-            placeholder="Write a clear, structured argument directly answering the question. Aim for an incisive opening thesis, two developed arguments, a steelmanned counter-argument with rebuttal, and a concise conclusion..."
-            className="w-full rounded-[8px] border border-[var(--border)] bg-[var(--surface)] p-4 sm:p-5 font-serif-editorial text-base text-[var(--text)] leading-[1.75] focus:outline-none focus:border-[var(--accent)] resize-y"
+            rows={19}
+            placeholder="Write a clear, economical argument directly answering the question. Open with a sharp thesis, develop two distinct points, steelman and rebut the strongest counter-argument, and close cleanly..."
+            className="w-full rounded-[12px] border border-[var(--border)] bg-[var(--surface)] p-5 font-serif-editorial text-base text-[var(--text)] leading-[1.78] focus:outline-none focus:border-[var(--accent)] resize-y"
           />
         </div>
       </div>
@@ -345,13 +426,12 @@ export const EssayStudio: React.FC<EssayStudioProps> = ({ savedEssays, onSaveEss
       {/* Post-submission Rubric & Model Breakdown */}
       {submitted && (
         <div className="grid lg:grid-cols-2 gap-5 pt-2">
-          {/* Self-Assessment Rubric */}
-          <div className="rounded-[10px] border border-[var(--border)] bg-[var(--surface)] p-5 sm:p-6 space-y-4">
+          <div className="rounded-[12px] border border-[var(--border)] bg-[var(--surface)] p-5 sm:p-6 space-y-4">
             <div className="flex items-center justify-between">
-              <h3 className="font-serif-editorial text-xl font-medium text-[var(--text)]">
+              <h3 className="font-display text-2xl text-[var(--text)]">
                 Admissions Tutor Self-Assessment
               </h3>
-              <span className="font-mono-tabular text-xs font-semibold text-[var(--accent)]">
+              <span className="font-mono-tabular text-xs font-bold text-[var(--accent)]">
                 {(
                   Object.values(rubricScores).reduce((a, b) => a + b, 0) / ESSAY_RUBRIC.length
                 ).toFixed(1)}{' '}
@@ -391,7 +471,7 @@ export const EssayStudio: React.FC<EssayStudioProps> = ({ savedEssays, onSaveEss
             <button
               type="button"
               onClick={handleSaveRecord}
-              className="w-full py-2.5 rounded-[8px] bg-[var(--primary-action)] hover:bg-[var(--accent-hover)] text-[var(--primary-action-fg)] text-xs font-medium inline-flex items-center justify-center gap-1.5 cursor-pointer"
+              className="w-full py-2.5 rounded-[8px] bg-[var(--primary-action)] hover:bg-[var(--accent-hover)] text-white text-xs font-semibold inline-flex items-center justify-center gap-1.5 cursor-pointer"
             >
               {savedNotice ? (
                 <>
@@ -405,11 +485,8 @@ export const EssayStudio: React.FC<EssayStudioProps> = ({ savedEssays, onSaveEss
             </button>
           </div>
 
-          {/* Model Outline */}
-          <div className="rounded-[10px] border border-[var(--border)] bg-[var(--surface)] p-5 sm:p-6 space-y-4">
-            <h3 className="font-serif-editorial text-xl font-medium text-[var(--text)]">
-              Top-Band Model Breakdown
-            </h3>
+          <div className="rounded-[12px] border border-[var(--border)] bg-[var(--surface)] p-5 sm:p-6 space-y-4">
+            <h3 className="font-display text-2xl text-[var(--text)]">Top-Band Model Breakdown</h3>
             <div className="space-y-3 text-sm">
               <div>
                 <div className="text-xs font-semibold uppercase tracking-wide text-[var(--accent)]">
@@ -437,7 +514,7 @@ export const EssayStudio: React.FC<EssayStudioProps> = ({ savedEssays, onSaveEss
                   {activePrompt.modelOutline.counterRebuttal}
                 </p>
               </div>
-              <div className="p-3.5 rounded-[8px] bg-[var(--bg)] border border-[var(--border)]">
+              <div className="p-3.5 rounded-[9px] bg-[var(--bg)] border border-[var(--border)]">
                 <div className="text-[11px] font-semibold uppercase tracking-wide text-[var(--text-muted)] mb-1">
                   Sample First-Class Opening Paragraph
                 </div>
