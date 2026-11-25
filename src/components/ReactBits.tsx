@@ -1,111 +1,67 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { motion } from 'motion/react';
 
 /**
- * React Bits–inspired animated primitives:
- * - AuroraBackground: ambient emerald + indigo mesh glow
- * - BlurText: staggered word-by-word blur-to-sharp reveal
- * - ShinyText: metallic sheen sweep for badges
- * - SpotlightCard: cursor-tracking radial spotlight border & surface glow
- * - SlidingMarquee: smooth infinite horizontal sliding strip (forward or reverse)
- * - CountUp: viewport-triggered animated metric counter
+ * Handcrafted motion primitives (Motion Primitives + React Bits inspired)
+ * sharing one consistent spring/ease curve across the whole app:
+ * - TextScramble: crisp character-resolve reveal for technical/legal specimen labels
+ * - RevealLine: masked baseline slide-up for display headlines (no blurry fadey slop)
+ * - SlidingMarquee: dual opposing infinite horizontal band (recall-politics inspired)
+ * - CountUp: viewport-triggered tabular counter
+ * - GridCrosshairs: subtle architectural drafting corner marks
  */
 
-export const AuroraBackground: React.FC = () => (
-  <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
-    <div
-      className="rb-aurora-lobe absolute -top-40 left-1/2 -translate-x-1/2 w-[920px] h-[520px] rounded-full opacity-35 blur-[110px]"
-      style={{
-        background:
-          'radial-gradient(closest-side, rgba(16, 185, 129, 0.55), rgba(14, 165, 233, 0.2), transparent)',
-      }}
-    />
-    <div
-      className="rb-aurora-lobe-alt absolute top-16 -right-32 w-[560px] h-[440px] rounded-full opacity-25 blur-[110px]"
-      style={{
-        background:
-          'radial-gradient(closest-side, rgba(245, 208, 138, 0.35), rgba(99, 102, 241, 0.2), transparent)',
-      }}
-    />
-  </div>
-);
+const SCRAMBLE_CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/·—';
 
-interface BlurTextProps {
-  text: string;
-  accentWords?: string[];
-  className?: string;
-  delayStepMs?: number;
-}
-
-export const BlurText: React.FC<BlurTextProps> = ({
+export const TextScramble: React.FC<{ text: string; className?: string }> = ({
   text,
-  accentWords = [],
   className = '',
-  delayStepMs = 55,
 }) => {
-  const accentSet = new Set(accentWords.map((w) => w.toLowerCase()));
-  const words = text.split(' ');
-  return (
-    <span className={className}>
-      {words.map((word, idx) => {
-        const clean = word.replace(/[.,!?]/g, '').toLowerCase();
-        const isAccent = accentSet.has(clean);
-        return (
-          <React.Fragment key={`${word}-${idx}`}>
-            <span
-              className={`rb-blur-word ${
-                isAccent
-                  ? 'italic bg-gradient-to-r from-[#34D399] via-[#6EE7B7] to-[#F5D08A] bg-clip-text text-transparent pr-1'
-                  : ''
-              }`}
-              style={{ animationDelay: `${idx * delayStepMs}ms` }}
-            >
-              {word}
-            </span>
-            {idx < words.length - 1 ? ' ' : ''}
-          </React.Fragment>
-        );
-      })}
-    </span>
-  );
+  const [display, setDisplay] = useState(text);
+
+  useEffect(() => {
+    let frame = 0;
+    const totalFrames = 18;
+    const id = window.setInterval(() => {
+      frame += 1;
+      const progress = frame / totalFrames;
+      const lockedCount = Math.floor(progress * text.length);
+      const next = text
+        .split('')
+        .map((ch, idx) => {
+          if (ch === ' ') return ' ';
+          if (idx < lockedCount) return ch;
+          return SCRAMBLE_CHARS[Math.floor(Math.random() * SCRAMBLE_CHARS.length)];
+        })
+        .join('');
+      setDisplay(next);
+      if (frame >= totalFrames) {
+        setDisplay(text);
+        window.clearInterval(id);
+      }
+    }, 28);
+    return () => window.clearInterval(id);
+  }, [text]);
+
+  return <span className={className}>{display}</span>;
 };
 
-export const ShinyText: React.FC<{ children: React.ReactNode; className?: string }> = ({
-  children,
-  className = '',
-}) => <span className={`rb-shiny-text ${className}`}>{children}</span>;
-
-interface SpotlightCardProps {
+export const RevealLine: React.FC<{
   children: React.ReactNode;
+  delay?: number;
   className?: string;
-  onClick?: () => void;
-}
-
-export const SpotlightCard: React.FC<SpotlightCardProps> = ({
-  children,
-  className = '',
-  onClick,
-}) => {
-  const ref = useRef<HTMLDivElement>(null);
-
-  const handleMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const el = ref.current;
-    if (!el) return;
-    const rect = el.getBoundingClientRect();
-    el.style.setProperty('--spot-x', `${e.clientX - rect.left}px`);
-    el.style.setProperty('--spot-y', `${e.clientY - rect.top}px`);
-  };
-
-  return (
-    <div
-      ref={ref}
-      onMouseMove={handleMove}
-      onClick={onClick}
-      className={`rb-spotlight rounded-2xl ${onClick ? 'cursor-pointer' : ''} ${className}`}
+}> = ({ children, delay = 0, className = '' }) => (
+  <span className={`block overflow-hidden ${className}`}>
+    <motion.span
+      className="block"
+      initial={{ y: '105%', opacity: 0 }}
+      animate={{ y: '0%', opacity: 1 }}
+      transition={{ duration: 0.55, delay, ease: [0.22, 1, 0.36, 1] }}
     >
       {children}
-    </div>
-  );
-};
+    </motion.span>
+  </span>
+);
 
 interface SlidingMarqueeProps {
   items: { label: string; tag?: string }[];
@@ -115,18 +71,17 @@ interface SlidingMarqueeProps {
 export const SlidingMarquee: React.FC<SlidingMarqueeProps> = ({ items, reverse = false }) => {
   const doubled = [...items, ...items];
   return (
-    <div className="rb-marquee-mask py-1.5">
+    <div className="rb-marquee-mask py-1">
       <div className={`rb-marquee-track ${reverse ? 'reverse' : ''}`}>
         {doubled.map((item, idx) => (
           <div
             key={`${item.label}-${idx}`}
             aria-hidden={idx >= items.length}
-            className="whitespace-nowrap inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl border border-white/10 bg-[#0E131D]/90 text-sm text-slate-200 shadow-[0_2px_0_rgba(255,255,255,0.04)]"
+            className="whitespace-nowrap inline-flex items-center gap-2.5 px-4 py-2 border border-white/10 bg-[#0B0F17] text-sm text-slate-200"
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-[#10B981]/80 shrink-0" />
-            <span className="font-medium">{item.label}</span>
+            <span className="font-medium tracking-tight">{item.label}</span>
             {item.tag && (
-              <span className="text-[10px] font-mono-tabular uppercase tracking-wider px-1.5 py-0.5 rounded bg-white/6 text-slate-400">
+              <span className="text-[10px] font-mono-tabular uppercase tracking-wider text-slate-500 border-l border-white/10 pl-2.5">
                 {item.tag}
               </span>
             )}
@@ -143,7 +98,7 @@ interface CountUpProps {
   durationMs?: number;
 }
 
-export const CountUp: React.FC<CountUpProps> = ({ to, suffix = '', durationMs = 900 }) => {
+export const CountUp: React.FC<CountUpProps> = ({ to, suffix = '', durationMs = 750 }) => {
   const [val, setVal] = useState(0);
   const ref = useRef<HTMLSpanElement>(null);
   const started = useRef(false);
@@ -175,6 +130,25 @@ export const CountUp: React.FC<CountUpProps> = ({ to, suffix = '', durationMs = 
     <span ref={ref} className="font-mono-tabular">
       {val}
       {suffix}
+    </span>
+  );
+};
+
+export const GridCrosshair: React.FC<{ position: 'tl' | 'tr' | 'bl' | 'br' }> = ({ position }) => {
+  const posClass =
+    position === 'tl'
+      ? '-top-[5px] -left-[5px]'
+      : position === 'tr'
+      ? '-top-[5px] -right-[5px]'
+      : position === 'bl'
+      ? '-bottom-[5px] -left-[5px]'
+      : '-bottom-[5px] -right-[5px]';
+  return (
+    <span
+      aria-hidden="true"
+      className={`pointer-events-none absolute ${posClass} w-[9px] h-[9px] text-white/30 flex items-center justify-center font-mono text-[10px] leading-none select-none`}
+    >
+      +
     </span>
   );
 };
