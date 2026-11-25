@@ -31,18 +31,18 @@ export const Navbar: React.FC<NavbarProps> = ({ view, onNavigate, daysUntilDeadl
     <>
       <header className="sticky top-0 z-30 border-b border-white/10 bg-[#0F172A] text-white no-print">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 h-15 flex items-center justify-between gap-3">
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2.5 shrink-0">
             <button
               type="button"
               onClick={() => onNavigate('home')}
-              className="flex items-center gap-2.5 text-left cursor-pointer group"
+              className="flex items-center gap-2 text-left cursor-pointer group"
             >
               <div className="w-8 h-8 rounded-[8px] bg-[#2563EB] text-white flex items-center justify-center shrink-0">
                 <Scale className="w-4 h-4" />
               </div>
               <div className="leading-tight">
                 <div className="font-display text-xl tracking-tight text-white">Ratio</div>
-                <div className="text-[10px] text-slate-400 -mt-1 tracking-widest uppercase">
+                <div className="text-[9px] text-slate-400 -mt-1 tracking-widest uppercase">
                   Admissions
                 </div>
               </div>
@@ -51,16 +51,15 @@ export const Navbar: React.FC<NavbarProps> = ({ view, onNavigate, daysUntilDeadl
             <button
               type="button"
               onClick={() => onNavigate('tests')}
-              className="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/8 hover:bg-white/14 border border-white/12 text-[11px] font-medium text-slate-200 transition-colors cursor-pointer"
+              className="hidden xl:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/8 hover:bg-white/14 border border-white/12 text-[11px] font-medium text-slate-200 transition-colors cursor-pointer whitespace-nowrap"
               title="Switch or explore UK admissions tests"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-              <span>LNAT</span>
-              <span className="text-slate-400">· +3 tests</span>
+              <span>LNAT · +3 tests</span>
             </button>
           </div>
 
-          <nav className="hidden lg:flex items-center gap-1" aria-label="Main navigation">
+          <nav className="hidden lg:flex items-center gap-0.5 shrink-0" aria-label="Main navigation">
             {navItems.map((item) => {
               const active =
                 view === item.id ||
@@ -70,7 +69,7 @@ export const Navbar: React.FC<NavbarProps> = ({ view, onNavigate, daysUntilDeadl
                   key={item.id}
                   type="button"
                   onClick={() => onNavigate(item.id)}
-                  className={`px-3 py-1.5 rounded-[7px] text-xs font-medium flex items-center gap-1.5 transition-colors cursor-pointer ${
+                  className={`px-2.5 py-1.5 rounded-[7px] text-xs font-medium flex items-center gap-1.5 whitespace-nowrap transition-colors cursor-pointer ${
                     active
                       ? 'bg-white/14 text-white'
                       : 'text-slate-300 hover:text-white hover:bg-white/8'
@@ -83,8 +82,8 @@ export const Navbar: React.FC<NavbarProps> = ({ view, onNavigate, daysUntilDeadl
             })}
           </nav>
 
-          <div className="flex items-center gap-2.5">
-            <div className="hidden md:flex items-center gap-1.5 px-2.5 py-1 rounded-full border border-white/12 bg-white/5 text-[11px] text-slate-300">
+          <div className="flex items-center gap-2 shrink-0">
+            <div className="hidden md:flex items-center gap-1.5 px-2.5 py-1 rounded-full border border-white/12 bg-white/5 text-[11px] text-slate-300 whitespace-nowrap">
               <span className="font-mono-tabular font-semibold text-amber-300">
                 {daysUntilDeadline}d
               </span>
@@ -93,14 +92,14 @@ export const Navbar: React.FC<NavbarProps> = ({ view, onNavigate, daysUntilDeadl
             <button
               type="button"
               onClick={() => onNavigate('pricing')}
-              className="hidden sm:inline-flex text-xs font-medium text-slate-300 hover:text-white px-2 py-1 cursor-pointer"
+              className="hidden sm:inline-flex text-xs font-medium text-slate-300 hover:text-white px-2 py-1 whitespace-nowrap cursor-pointer"
             >
               Pass
             </button>
             <button
               type="button"
               onClick={() => onNavigate('practice')}
-              className="px-3.5 py-1.5 rounded-[7px] bg-[#2563EB] hover:bg-[#1D4ED8] text-white text-xs font-semibold inline-flex items-center gap-1 transition-colors cursor-pointer"
+              className="px-3.5 py-1.5 rounded-[7px] bg-[#2563EB] hover:bg-[#1D4ED8] text-white text-xs font-semibold inline-flex items-center gap-1 whitespace-nowrap transition-colors cursor-pointer"
             >
               Diagnostic
               <ArrowUpRight className="w-3.5 h-3.5" />
