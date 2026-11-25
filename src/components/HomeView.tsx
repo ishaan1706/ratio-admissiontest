@@ -8,11 +8,10 @@ import {
 } from 'lucide-react';
 import { AppView, SectionAAttempt, SectionBEssayRecord } from '../types';
 import { EXAM_TRACKS, OFFICIAL_FOUR_QUESTIONS } from '../data/exams';
-import { UNIVERSITY_BENCHMARKS } from '../data/benchmarks';
+import { UNI_BENCHMARKS } from '../data/benchmarks';
 
 interface HomeViewProps {
   onStartDiagnostic: () => void;
-  onStartHalfMock: () => void;
   onNavigate: (view: AppView) => void;
   attempts: SectionAAttempt[];
   essays: SectionBEssayRecord[];
@@ -47,11 +46,11 @@ export const HomeView: React.FC<HomeViewProps> = ({
   essays,
   daysUntilDeadline,
 }) => {
-  const [selectedUni, setSelectedUni] = useState(UNIVERSITY_BENCHMARKS[0].university);
+  const [selectedUni, setSelectedUni] = useState(UNI_BENCHMARKS[0].shortName);
   const [samplePick, setSamplePick] = useState<string | null>(null);
 
   const uni =
-    UNIVERSITY_BENCHMARKS.find((b) => b.university === selectedUni) || UNIVERSITY_BENCHMARKS[0];
+    UNI_BENCHMARKS.find((b) => b.shortName === selectedUni) || UNI_BENCHMARKS[0];
   const latest = attempts[0];
   const sampleResult = HERO_SAMPLE_OPTIONS.find((o) => o.letter === samplePick);
 
@@ -155,7 +154,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
             </div>
             <div className="font-serif-passage text-sm text-[var(--text-muted)] mt-1">
               {latest
-                ? `Latest projected score: ${latest.projected42}/42 · ${essays.length} saved essay${essays.length === 1 ? '' : 's'}`
+                ? `Latest projected score: ${latest.projected_42}/42 · ${essays.length} saved essay${essays.length === 1 ? '' : 's'}`
                 : 'Oxford/Cambridge sit by 15 Oct · LSE, UCL, KCL, Durham by 20 Jan'}
             </div>
           </div>
@@ -163,20 +162,20 @@ export const HomeView: React.FC<HomeViewProps> = ({
           <div className="pt-4 border-t border-[var(--rule)]">
             <div className="studio-kicker mb-2.5">Target Law School Band</div>
             <div className="flex flex-wrap gap-1.5">
-              {UNIVERSITY_BENCHMARKS.map((b) => {
-                const active = b.university === selectedUni;
+              {UNI_BENCHMARKS.map((b) => {
+                const active = b.shortName === selectedUni;
                 return (
                   <button
-                    key={b.university}
+                    key={b.shortName}
                     type="button"
-                    onClick={() => setSelectedUni(b.university)}
+                    onClick={() => setSelectedUni(b.shortName)}
                     className={`px-2.5 py-1 rounded-full text-[11px] font-medium transition-colors cursor-pointer ${
                       active
                         ? 'bg-[var(--ink)] text-[var(--paper)]'
                         : 'border border-[var(--rule)] text-[var(--text-muted)] hover:text-[var(--ink)]'
                     }`}
                   >
-                    {b.university}
+                    {b.shortName}
                   </button>
                 );
               })}
@@ -184,7 +183,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
             <div className="mt-3 flex items-baseline justify-between text-xs">
               <span className="text-[var(--text-muted)]">Typical shortlisted band</span>
               <span className="font-mono-tabular font-semibold text-base text-[var(--ink)]">
-                {uni.typicalRange}
+                {uni.typicalOfferRange[0]}–{uni.typicalOfferRange[1]}
                 <span className="text-xs font-normal text-[var(--text-muted)]">/42</span>
               </span>
             </div>
@@ -334,14 +333,14 @@ export const HomeView: React.FC<HomeViewProps> = ({
 
             <div className="divide-y divide-[var(--rule)] border-t border-[var(--rule)]">
               {OFFICIAL_FOUR_QUESTIONS.map((q) => (
-                <div key={q.number} className="py-3.5 flex items-start gap-3">
+                <div key={q.step} className="py-3.5 flex items-start gap-3">
                   <span className="font-mono-tabular text-[11px] font-semibold text-[var(--accent)] mt-0.5">
-                    {q.number}
+                    {q.step}
                   </span>
                   <div>
-                    <div className="text-sm font-semibold text-[var(--ink)]">{q.prompt}</div>
+                    <div className="text-sm font-semibold text-[var(--ink)]">{q.question}</div>
                     <p className="font-serif-passage text-xs text-[var(--text-muted)] mt-0.5 leading-relaxed">
-                      {q.whyItMatters}
+                      {q.tip}
                     </p>
                   </div>
                 </div>

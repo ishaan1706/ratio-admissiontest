@@ -1,4 +1,15 @@
 import React, { useEffect, useMemo, useState } from 'react';
+import {
+  ActiveExamConfig,
+  AppView,
+  LnatPassage,
+  LnatQuestion,
+  LnatSkill,
+  SectionAAttempt,
+  SectionBEssayRecord,
+} from './types';
+import { ALL_QUESTIONS, PASSAGES } from './data/passages';
+import { fetchAttempts, fetchEssays, saveAttempt, saveEssay } from './lib/api';
 import { Navbar } from './components/Navbar';
 import { HomeView } from './components/HomeView';
 import { PracticeHub } from './components/PracticeHub';
@@ -11,25 +22,17 @@ import { AllTestsView } from './components/AllTestsView';
 import { ProgressView } from './components/ProgressView';
 import { PricingView } from './components/PricingView';
 import { CommandPalette } from './components/CommandPalette';
-import { PASSAGES } from './data/passages';
-import { fetchAttempts, fetchEssays, saveAttempt, saveEssay } from './lib/api';
-import {
-  AppView,
-  ExamConfig,
-  LnatPassage,
-  SectionAAttempt,
-  SectionBEssayRecord,
-  SkillTag,
-} from './types';
 
-function computeDaysUntilJan20(): number {
+function getDaysUntilNextJan20(): number {
   const now = new Date();
-  const currentYear = now.getFullYear();
-  let target = new Date(currentYear, 0, 20);
-  if (now > target) {
-    target = new Date(currentYear + 1, 0, 20);
+  let targetYear = now.getFullYear();
+  const targetThisYear = new Date(targetYear, 0, 20);
+  if (now > targetThisYear) {
+    targetYear += 1;
   }
-  return Math.max(1, Math.ceil((target.getTime() - now.getTime()) / (1000 * 60 * 60 * 24)));
+  const target = new Date(targetYear, 0, 20);
+  const diffMs = target.getTime() - now.getTime();
+  return Math.max(0, Math.ceil(diffMs / (1000 * 60 * 60 * 24)));
 }
 
 function getInitialTheme(): 'light' | 'dark' {
@@ -42,17 +45,17 @@ function getInitialTheme(): 'light' | 'dark' {
   return 'light';
 }
 
-export function App() {
+export const App: React.FC = () => {
   const [view, setView] = useState<AppView>('home');
   const [theme, setTheme] = useState<'light' | 'dark'>(() => getInitialTheme());
   const [paletteOpen, setPaletteOpen] = useState(false);
+  const [activeExam, setActiveExam] = useState<ActiveExamConfig | null>(null);
+  const [lastAttempt, setLastAttempt] = useState<SectionAAttempt | null>(null);
+  const [lastQuestions, setLastQuestions] = useState<LnatQuestion[]>([]);
   const [attempts, setAttempts] = useState<SectionAAttempt[]>([]);
   const [essays, setEssays] = useState<SectionBEssayRecord[]>([]);
-  const [activeExam, setActiveExam] = useState<ExamConfig | null>(null);
-  const [latestAttempt, setLatestAttempt] = useState<SectionAAttempt | null>(null);
-  const [latestExamPassages, setLatestExamPassages] = useState<LnatPassage[]>(PASSAGES);
 
-  const daysUntilDeadline = useMemo(() => computeDaysUntilJan20(), []);
+  const daysUntilDeadline = useMemo(() => getDaysUntilNextJan20(), []);
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
@@ -79,77 +82,79 @@ export function App() {
     fetchEssays().then(setEssays);
   }, []);
 
-  const handleStartDiagnostic = () => {
-    const diagPassages = PASSAGES.slice(0, 2);
-    setActiveExam({
-      mode: 'diagnostic',
-      label: '15-Minute Free Diagnostic',
-      timeLimitSec: 15 * 60,
-      passages: diagPassages,
-    });
+  const handleNavigate = (next: AppView) => {
+    setView(next);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleStartExam = (config: ActiveExamConfig) => {
+    setActiveExam(config);
     setView('exam');
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleStartDiagnostic = () => {
+    handleStartExam({
+      mode: 'diagnostic',
+      label: 'Free LNAT Diagnostic',
+      timeLimitSeconds: 15 * 60,
+      passageIds: PASSAGES.filter((p) => p.freeTier).map((p) => p.id),
+    });
   };
 
   const handleStartHalfMock = () => {
-    setActiveExam({
-      mode: 'half-mock',
+    handleStartExam({
+      mode: 'mock',
       label: '6-Passage Half-Mock (22 Qs)',
-      timeLimitSec: 48 * 60,
-      passages: PASSAGES,
+      timeLimitSeconds: 48 * 60,
+      passageIds: PASSAGES.map((p) => p.id),
     });
-    setView('exam');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleStartPassage = (passage: LnatPassage) => {
-    setActiveExam({
-      mode: 'passage',
+    handleStartExam({
+      mode: 'drill',
       label: passage.title,
-      timeLimitSec: Math.max(8, passage.questions.length * 2 + 2) * 60,
-      passages: [passage],
+      timeLimitSeconds: Math.max(8, passage.questions.length * 2 + 2) * 60,
+      passageIds: [passage.id],
     });
-    setView('exam');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const handleStartSkill = (skill: SkillTag) => {
-    const relevantPassages = PASSAGES.filter((p) => p.questions.some((q) => q.skill === skill));
-    const questionIds = relevantPassages
-      .flatMap((p) => p.questions)
-      .filter((q) => q.skill === skill)
-      .map((q) => q.id);
-
-    setActiveExam({
-      mode: 'skill',
+  const handleStartSkill = (skill: LnatSkill) => {
+    const relevantIds = PASSAGES.filter((p) => p.questions.some((q) => q.skill === skill)).map(
+      (p) => p.id
+    );
+    const count = ALL_QUESTIONS.filter((q) => q.skill === skill).length;
+    handleStartExam({
+      mode: 'drill',
       label: `Skill Drill: ${skill}`,
-      timeLimitSec: Math.max(10, questionIds.length * 2.5) * 60,
-      passages: relevantPassages,
-      questionIds,
+      timeLimitSeconds: Math.max(10, Math.round(count * 2.5)) * 60,
+      passageIds: relevantIds,
+      skillFilter: skill,
     });
-    setView('exam');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const handleCompleteExam = async (attempt: SectionAAttempt) => {
-    await saveAttempt(attempt);
+  const handleCompleteExam = async (attempt: SectionAAttempt, questions: LnatQuestion[]) => {
+    setLastAttempt(attempt);
+    setLastQuestions(questions);
     setAttempts((prev) => [attempt, ...prev]);
-    setLatestAttempt(attempt);
-    if (activeExam) {
-      setLatestExamPassages(activeExam.passages);
-    }
+    setView('results');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    await saveAttempt(attempt);
+  };
+
+  const handleInspectAttempt = (attempt: SectionAAttempt) => {
+    const answeredIds = new Set(Object.keys(attempt.answers));
+    const matched = ALL_QUESTIONS.filter((q) => answeredIds.has(q.id));
+    setLastAttempt(attempt);
+    setLastQuestions(matched.length > 0 ? matched : ALL_QUESTIONS.slice(0, attempt.total));
     setView('results');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleSaveEssay = async (record: SectionBEssayRecord) => {
-    await saveEssay(record);
     setEssays((prev) => [record, ...prev]);
-  };
-
-  const handleNavigate = (next: AppView) => {
-    setView(next);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    await saveEssay(record);
   };
 
   return (
@@ -168,49 +173,39 @@ export function App() {
       <main className="flex-1">
         {view === 'home' && (
           <HomeView
-            onStartDiagnostic={handleStartDiagnostic}
-            onStartHalfMock={handleStartHalfMock}
-            onNavigate={handleNavigate}
             attempts={attempts}
             essays={essays}
             daysUntilDeadline={daysUntilDeadline}
+            onStartDiagnostic={handleStartDiagnostic}
+            onNavigate={handleNavigate}
           />
         )}
-
         {view === 'practice' && (
           <PracticeHub
+            attempts={attempts}
             onStartDiagnostic={handleStartDiagnostic}
             onStartHalfMock={handleStartHalfMock}
             onStartPassage={handleStartPassage}
             onStartSkill={handleStartSkill}
-            attempts={attempts}
           />
         )}
-
         {view === 'exam' && activeExam && (
           <ExamSimulator
             config={activeExam}
-            onComplete={handleCompleteExam}
             onExit={() => handleNavigate('practice')}
+            onComplete={handleCompleteExam}
           />
         )}
-
-        {view === 'results' && latestAttempt && (
+        {view === 'results' && lastAttempt && (
           <ResultsView
-            attempt={latestAttempt}
-            passages={latestExamPassages}
-            questionIds={activeExam?.questionIds}
-            onRetake={() => {
-              if (activeExam) setView('exam');
-              else handleStartDiagnostic();
-            }}
-            onPracticeMore={() => handleNavigate('practice')}
-            onGoEssay={() => handleNavigate('essay')}
+            attempt={lastAttempt}
+            questions={lastQuestions}
+            onBackToPractice={() => handleNavigate('practice')}
           />
         )}
-
-        {view === 'essay' && <EssayStudio essays={essays} onSaveEssay={handleSaveEssay} />}
-
+        {view === 'essay' && (
+          <EssayStudio savedEssays={essays} onSaveEssay={handleSaveEssay} />
+        )}
         {view === 'plan' && (
           <StudyPlanView
             attempts={attempts}
@@ -221,23 +216,18 @@ export function App() {
             onNavigate={handleNavigate}
           />
         )}
-
         {view === 'resources' && (
           <OfficialResourcesView onStartDiagnostic={handleStartDiagnostic} />
         )}
-
         {view === 'tests' && <AllTestsView onNavigate={handleNavigate} />}
-
         {view === 'progress' && (
           <ProgressView
             attempts={attempts}
             essays={essays}
-            onStartDiagnostic={handleStartDiagnostic}
-            onStartSkill={handleStartSkill}
-            onGoEssay={() => handleNavigate('essay')}
+            onInspectAttempt={handleInspectAttempt}
+            onNavigate={handleNavigate}
           />
         )}
-
         {view === 'pricing' && <PricingView onStartDiagnostic={handleStartDiagnostic} />}
       </main>
 
@@ -295,6 +285,6 @@ export function App() {
       />
     </div>
   );
-}
+};
 
 export default App;

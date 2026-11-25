@@ -1,22 +1,22 @@
 import React from 'react';
 import { ArrowUpRight, Clock, Layers, Target, Zap } from 'lucide-react';
 import { PASSAGES } from '../data/passages';
-import { LnatPassage, SectionAAttempt, SkillTag } from '../types';
+import { LnatPassage, LnatSkill, SectionAAttempt } from '../types';
 
 interface PracticeHubProps {
   onStartDiagnostic: () => void;
   onStartHalfMock: () => void;
   onStartPassage: (passage: LnatPassage) => void;
-  onStartSkill: (skill: SkillTag) => void;
+  onStartSkill: (skill: LnatSkill) => void;
   attempts: SectionAAttempt[];
 }
 
-const SKILLS: { tag: SkillTag; desc: string }[] = [
+const SKILLS: { tag: LnatSkill; desc: string }[] = [
   { tag: 'Inference', desc: 'What follows necessarily from the text without over-extrapolating.' },
-  { tag: 'Assumption', desc: 'Unstated premises required for the author’s argument to hold.' },
+  { tag: 'Assumption & Flaw', desc: 'Unstated premises and logical gaps required for the argument to hold.' },
   { tag: 'Main Argument', desc: 'Central thesis vs. concessions, illustrations, and counter-views.' },
   { tag: 'Tone & Attitude', desc: 'Register, irony, metaphor, and precise authorial stance.' },
-  { tag: 'Evidence & Structure', desc: 'How examples, studies, and paragraphs function structurally.' },
+  { tag: 'Structure & Evidence', desc: 'How examples, studies, and paragraphs function structurally.' },
 ];
 
 export const PracticeHub: React.FC<PracticeHubProps> = ({
@@ -29,7 +29,7 @@ export const PracticeHub: React.FC<PracticeHubProps> = ({
   const bestForLabel = (label: string) => {
     const matching = attempts.filter((a) => a.label === label);
     if (matching.length === 0) return null;
-    return matching.reduce((best, cur) => (cur.score > best.score ? cur : best), matching[0]);
+    return matching.reduce((best, cur) => (cur.correct > best.correct ? cur : best), matching[0]);
   };
 
   return (
@@ -141,23 +141,15 @@ export const PracticeHub: React.FC<PracticeHubProps> = ({
                   <div className="flex items-center gap-3 text-xs font-mono-tabular text-[var(--text-muted)]">
                     <span className="inline-flex items-center gap-1">
                       <Clock className="w-3.5 h-3.5" />
-                      {passage.readingMinutes}m
+                      {Math.max(4, Math.round(passage.wordCount / 140))}m
                     </span>
                     <span>{passage.questions.length} Qs</span>
-                    <span
-                      className={`text-[10px] uppercase tracking-[0.08em] px-2 py-0.5 rounded-full ${
-                        passage.difficulty === 'Stretch'
-                          ? 'bg-[var(--crimson-soft)] text-[var(--crimson)]'
-                          : passage.difficulty === 'Challenging'
-                          ? 'bg-[var(--amber-soft)] text-[var(--amber)]'
-                          : 'bg-[var(--emerald-soft)] text-[var(--emerald)]'
-                      }`}
-                    >
-                      {passage.difficulty}
+                    <span className="text-[10px] uppercase tracking-[0.08em] px-2 py-0.5 rounded-full border border-[var(--rule)] text-[var(--text-muted)]">
+                      {passage.wordCount}w
                     </span>
                     {best && (
                       <span className="text-[var(--emerald)] font-semibold">
-                        {best.score}/{best.total}
+                        {best.correct}/{best.total}
                       </span>
                     )}
                   </div>

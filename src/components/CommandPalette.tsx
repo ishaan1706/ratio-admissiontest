@@ -11,7 +11,7 @@ import {
 } from 'lucide-react';
 import { PASSAGES } from '../data/passages';
 import { ESSAY_SETS } from '../data/essays';
-import { AppView, LnatPassage, SkillTag } from '../types';
+import { AppView, LnatPassage, LnatSkill } from '../types';
 
 interface CommandPaletteProps {
   open: boolean;
@@ -19,7 +19,7 @@ interface CommandPaletteProps {
   onNavigate: (view: AppView) => void;
   onStartDiagnostic: () => void;
   onStartPassage: (passage: LnatPassage) => void;
-  onStartSkill: (skill: SkillTag) => void;
+  onStartSkill: (skill: LnatSkill) => void;
 }
 
 interface CommandItem {
@@ -30,12 +30,12 @@ interface CommandItem {
   action: () => void;
 }
 
-const SKILLS: SkillTag[] = [
+const SKILLS: LnatSkill[] = [
   'Inference',
-  'Assumption',
+  'Assumption & Flaw',
   'Main Argument',
   'Tone & Attitude',
-  'Evidence & Structure',
+  'Structure & Evidence',
 ];
 
 export const CommandPalette: React.FC<CommandPaletteProps> = ({
@@ -133,7 +133,7 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
       id: `p-${p.id}`,
       group: 'Section A Passages',
       title: `${String(idx + 1).padStart(2, '0')} — ${p.title}`,
-      subtitle: `${p.domain} · ${p.difficulty} · ${p.questions.length} MCQs`,
+      subtitle: `${p.domain} · ${p.wordCount}w · ${p.questions.length} MCQs`,
       action: () => {
         onClose();
         onStartPassage(p);

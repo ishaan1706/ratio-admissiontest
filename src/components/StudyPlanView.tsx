@@ -10,15 +10,15 @@ import {
   Target,
 } from 'lucide-react';
 import { PASSAGES } from '../data/passages';
-import { UNIVERSITY_BENCHMARKS } from '../data/benchmarks';
-import { AppView, LnatPassage, SectionAAttempt, SectionBEssayRecord, SkillTag } from '../types';
+import { UNI_BENCHMARKS } from '../data/benchmarks';
+import { AppView, LnatPassage, LnatSkill, SectionAAttempt, SectionBEssayRecord } from '../types';
 
 interface StudyPlanViewProps {
   attempts: SectionAAttempt[];
   essays: SectionBEssayRecord[];
   onStartDiagnostic: () => void;
   onStartPassage: (passage: LnatPassage) => void;
-  onStartSkill: (skill: SkillTag) => void;
+  onStartSkill: (skill: LnatSkill) => void;
   onNavigate: (view: AppView) => void;
 }
 
@@ -28,7 +28,7 @@ interface PlanTask {
   label: string;
   detail: string;
   passageId?: string;
-  skill?: SkillTag;
+  skill?: LnatSkill;
 }
 
 interface PlanDay {
@@ -47,12 +47,12 @@ interface SavedPlanState {
   done: Record<string, boolean>;
 }
 
-const ALL_SKILLS: SkillTag[] = [
+const ALL_SKILLS: LnatSkill[] = [
   'Inference',
-  'Assumption',
+  'Assumption & Flaw',
   'Main Argument',
   'Tone & Attitude',
-  'Evidence & Structure',
+  'Structure & Evidence',
 ];
 
 function defaultTestDate(): string {
@@ -101,7 +101,7 @@ export const StudyPlanView: React.FC<StudyPlanViewProps> = ({
   }, [state]);
 
   const targetBenchmark =
-    UNIVERSITY_BENCHMARKS.find((b) => b.university === state.targetUni) || UNIVERSITY_BENCHMARKS[0];
+    UNI_BENCHMARKS.find((b) => b.shortName === state.targetUni) || UNI_BENCHMARKS[0];
 
   const daysUntilTest = useMemo(() => {
     const now = new Date();
@@ -113,18 +113,18 @@ export const StudyPlanView: React.FC<StudyPlanViewProps> = ({
 
   // Rank skills from weakest to strongest using real attempt history
   const skillStats = useMemo(() => {
-    const agg: Record<SkillTag, { correct: number; total: number }> = {
+    const agg: Record<LnatSkill, { correct: number; total: number }> = {
       Inference: { correct: 0, total: 0 },
-      Assumption: { correct: 0, total: 0 },
+      'Assumption & Flaw': { correct: 0, total: 0 },
       'Main Argument': { correct: 0, total: 0 },
       'Tone & Attitude': { correct: 0, total: 0 },
-      'Evidence & Structure': { correct: 0, total: 0 },
+      'Structure & Evidence': { correct: 0, total: 0 },
     };
     for (const a of attempts) {
-      for (const [k, v] of Object.entries(a.skillBreakdown || {})) {
+      for (const [k, v] of Object.entries(a.skill_breakdown || {})) {
         if (k in agg) {
-          agg[k as SkillTag].correct += v.correct;
-          agg[k as SkillTag].total += v.total;
+          agg[k as LnatSkill].correct += v.correct;
+          agg[k as LnatSkill].total += v.total;
         }
       }
     }
@@ -257,7 +257,7 @@ export const StudyPlanView: React.FC<StudyPlanViewProps> = ({
           id: `d${i}-p-${passage.id}`,
           kind: 'passage',
           label: `Passage: ${passage.title}`,
-          detail: `${passage.domain} · ${passage.difficulty} · ${passage.questions.length} MCQs with Claim/Evidence highlighting.`,
+          detail: `${passage.domain} · ${passage.wordCount}w · ${passage.questions.length} MCQs with Claim/Evidence highlighting.`,
           passageId: passage.id,
         });
       }
@@ -361,8 +361,9 @@ export const StudyPlanView: React.FC<StudyPlanViewProps> = ({
             <span className="studio-kicker">days to your test</span>
           </div>
           <div className="text-xs text-[var(--text-muted)]">
-            Target: <strong className="text-[var(--ink)]">{targetBenchmark.university}</strong> (
-            {targetBenchmark.typicalRange}/42) · {completedTasks}/{totalTasks} tasks ticked
+            Target: <strong className="text-[var(--ink)]">{targetBenchmark.shortName}</strong> (
+            {targetBenchmark.typicalOfferRange[0]}–{targetBenchmark.typicalOfferRange[1]}/42) ·{' '}
+            {completedTasks}/{totalTasks} tasks ticked
           </div>
         </div>
       </section>
@@ -388,20 +389,20 @@ export const StudyPlanView: React.FC<StudyPlanViewProps> = ({
               <Target className="w-3.5 h-3.5 text-[var(--accent)]" />
               Target
             </span>
-            {UNIVERSITY_BENCHMARKS.map((u) => {
-              const active = u.university === state.targetUni;
+            {UNI_BENCHMARKS.map((u) => {
+              const active = u.shortName === state.targetUni;
               return (
                 <button
-                  key={u.university}
+                  key={u.shortName}
                   type="button"
-                  onClick={() => setState((prev) => ({ ...prev, targetUni: u.university }))}
+                  onClick={() => setState((prev) => ({ ...prev, targetUni: u.shortName }))}
                   className={`px-2.5 py-1 rounded-full text-xs font-medium transition-colors cursor-pointer ${
                     active
                       ? 'bg-[var(--ink)] text-[var(--paper)]'
                       : 'border border-[var(--rule)] text-[var(--text-muted)] hover:text-[var(--ink)]'
                   }`}
                 >
-                  {u.university}
+                  {u.shortName}
                 </button>
               );
             })}
