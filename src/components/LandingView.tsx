@@ -12,7 +12,6 @@ import { AppView } from '../types';
 import { UNI_BENCHMARKS } from '../data/benchmarks';
 import { OFFICIAL_FOUR_QUESTIONS } from '../data/exams';
 import {
-  CountUp,
   GridCrosshair,
   RevealLine,
   SlidingMarquee,
@@ -245,15 +244,11 @@ export const LandingView: React.FC<LandingViewProps> = ({ onEnterApp, onStartDia
               {/* Compact Inline Spec Row */}
               <div className="pt-5 border-t border-white/[0.08] grid grid-cols-3 gap-4 text-xs">
                 <div>
-                  <div className="font-mono-tabular text-lg font-semibold text-white">
-                    <CountUp to={95} suffix="m" />
-                  </div>
+                  <div className="font-mono-tabular text-lg font-semibold text-white">95m</div>
                   <div className="text-slate-500 mt-0.5">Section A · 42 MCQs</div>
                 </div>
                 <div>
-                  <div className="font-mono-tabular text-lg font-semibold text-white">
-                    <CountUp to={40} suffix="m" />
-                  </div>
+                  <div className="font-mono-tabular text-lg font-semibold text-white">40m</div>
                   <div className="text-slate-500 mt-0.5">Section B · 1 of 3 essays</div>
                 </div>
                 <div>
