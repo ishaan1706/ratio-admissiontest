@@ -1,0 +1,1126 @@
+{
+ "exam": "ESAT",
+ "version": 1,
+ "cards": [
+  {
+   "id": "esat-fc-mathematics1-001",
+   "module": "Mathematics 1",
+   "topic": "M2",
+   "front": "Rationalise 1/(√5 − 2)",
+   "back": "√5 + 2 (multiply top and bottom by √5 + 2; denominator 5 − 4 = 1)"
+  },
+  {
+   "id": "esat-fc-mathematics1-002",
+   "module": "Mathematics 1",
+   "topic": "M2",
+   "front": "Write 0.3̇6̇ (0.363636…) as a fraction",
+   "back": "36/99 = 4/11"
+  },
+  {
+   "id": "esat-fc-mathematics1-003",
+   "module": "Mathematics 1",
+   "topic": "M2",
+   "front": "8^(−2/3) = ?",
+   "back": "1/4"
+  },
+  {
+   "id": "esat-fc-mathematics1-004",
+   "module": "Mathematics 1",
+   "topic": "M2",
+   "front": "Upper bound of a ÷ b",
+   "back": "upper bound of a ÷ lower bound of b"
+  },
+  {
+   "id": "esat-fc-mathematics1-005",
+   "module": "Mathematics 1",
+   "topic": "M2",
+   "front": "x = 3.7 truncated to 1 d.p.: error interval",
+   "back": "3.7 ≤ x < 3.8"
+  },
+  {
+   "id": "esat-fc-mathematics1-006",
+   "module": "Mathematics 1",
+   "topic": "M2",
+   "front": "HCF × LCM of two numbers equals…",
+   "back": "the product of the two numbers"
+  },
+  {
+   "id": "esat-fc-mathematics1-007",
+   "module": "Mathematics 1",
+   "topic": "M3",
+   "front": "Reverse percentage: £96 after a 20% rise. Original?",
+   "back": "96 ÷ 1.2 = £80"
+  },
+  {
+   "id": "esat-fc-mathematics1-008",
+   "module": "Mathematics 1",
+   "topic": "M3",
+   "front": "y ∝ 1/x². x doubles. y?",
+   "back": "y is divided by 4"
+  },
+  {
+   "id": "esat-fc-mathematics1-009",
+   "module": "Mathematics 1",
+   "topic": "M3",
+   "front": "Similar shapes, length ratio 2 : 3. Volume ratio?",
+   "back": "8 : 27"
+  },
+  {
+   "id": "esat-fc-mathematics1-010",
+   "module": "Mathematics 1",
+   "topic": "M3",
+   "front": "1 m³ in litres",
+   "back": "1000 litres"
+  },
+  {
+   "id": "esat-fc-mathematics1-011",
+   "module": "Mathematics 1",
+   "topic": "M3",
+   "front": "1 km² in m²",
+   "back": "10⁶ m²"
+  },
+  {
+   "id": "esat-fc-mathematics1-012",
+   "module": "Mathematics 1",
+   "topic": "M4",
+   "front": "Complete the square: x² − 10x + 7",
+   "back": "(x − 5)² − 18"
+  },
+  {
+   "id": "esat-fc-mathematics1-013",
+   "module": "Mathematics 1",
+   "topic": "M4",
+   "front": "Perpendicular gradient to m = 3/4",
+   "back": "−4/3"
+  },
+  {
+   "id": "esat-fc-mathematics1-014",
+   "module": "Mathematics 1",
+   "topic": "M4",
+   "front": "nth term of 3, 8, 15, 24, 35",
+   "back": "n² + 2n"
+  },
+  {
+   "id": "esat-fc-mathematics1-015",
+   "module": "Mathematics 1",
+   "topic": "M4",
+   "front": "Dividing an inequality by a negative number…",
+   "back": "reverses the inequality sign"
+  },
+  {
+   "id": "esat-fc-mathematics1-016",
+   "module": "Mathematics 1",
+   "topic": "M5",
+   "front": "Interior angle sum of an n-gon",
+   "back": "(n − 2) × 180°"
+  },
+  {
+   "id": "esat-fc-mathematics1-017",
+   "module": "Mathematics 1",
+   "topic": "M5",
+   "front": "Opposite angles in a cyclic quadrilateral",
+   "back": "sum to 180°"
+  },
+  {
+   "id": "esat-fc-mathematics1-018",
+   "module": "Mathematics 1",
+   "topic": "M5",
+   "front": "Alternate segment theorem",
+   "back": "angle between tangent and chord = angle in the alternate segment"
+  },
+  {
+   "id": "esat-fc-mathematics1-019",
+   "module": "Mathematics 1",
+   "topic": "M5",
+   "front": "Cosine rule",
+   "back": "a² = b² + c² − 2bc cos A"
+  },
+  {
+   "id": "esat-fc-mathematics1-020",
+   "module": "Mathematics 1",
+   "topic": "M5",
+   "front": "Area of triangle with two sides and included angle",
+   "back": "½ab sin C"
+  },
+  {
+   "id": "esat-fc-mathematics1-021",
+   "module": "Mathematics 1",
+   "topic": "M5",
+   "front": "sin 60°, cos 60°, tan 60°",
+   "back": "√3/2, 1/2, √3"
+  },
+  {
+   "id": "esat-fc-mathematics1-022",
+   "module": "Mathematics 1",
+   "topic": "M5",
+   "front": "Volume of a cone; of a sphere",
+   "back": "⅓πr²h; (4/3)πr³"
+  },
+  {
+   "id": "esat-fc-mathematics1-023",
+   "module": "Mathematics 1",
+   "topic": "M5",
+   "front": "Space diagonal of a cube of side s",
+   "back": "s√3"
+  },
+  {
+   "id": "esat-fc-mathematics1-024",
+   "module": "Mathematics 1",
+   "topic": "M6",
+   "front": "Frequency in a histogram bar",
+   "back": "frequency density × class width"
+  },
+  {
+   "id": "esat-fc-mathematics1-025",
+   "module": "Mathematics 1",
+   "topic": "M6",
+   "front": "Strong correlation between two variables proves…",
+   "back": "nothing about causation"
+  },
+  {
+   "id": "esat-fc-mathematics1-026",
+   "module": "Mathematics 1",
+   "topic": "M7",
+   "front": "P(A given B)",
+   "back": "P(A and B) ÷ P(B)"
+  },
+  {
+   "id": "esat-fc-mathematics1-027",
+   "module": "Mathematics 1",
+   "topic": "M7",
+   "front": "Two dice: P(total = 7)",
+   "back": "6/36 = 1/6"
+  },
+  {
+   "id": "esat-fc-mathematics1-028",
+   "module": "Mathematics 1",
+   "topic": "M7",
+   "front": "Number of ways to arrange 5 different books",
+   "back": "5! = 120"
+  },
+  {
+   "id": "esat-fc-mathematics2-001",
+   "module": "Mathematics 2",
+   "topic": "MM1",
+   "front": "Condition for no real roots of ax² + bx + c = 0",
+   "back": "b² − 4ac < 0"
+  },
+  {
+   "id": "esat-fc-mathematics2-002",
+   "module": "Mathematics 2",
+   "topic": "MM1",
+   "front": "Remainder when f(x) is divided by (x − a)",
+   "back": "f(a)"
+  },
+  {
+   "id": "esat-fc-mathematics2-003",
+   "module": "Mathematics 2",
+   "topic": "MM2",
+   "front": "Sum to infinity of a geometric series, and when it exists",
+   "back": "a/(1 − r), only if |r| < 1"
+  },
+  {
+   "id": "esat-fc-mathematics2-004",
+   "module": "Mathematics 2",
+   "topic": "MM2",
+   "front": "Sum of first n terms of an arithmetic series",
+   "back": "n/2 [2a + (n − 1)d]"
+  },
+  {
+   "id": "esat-fc-mathematics2-005",
+   "module": "Mathematics 2",
+   "topic": "MM2",
+   "front": "Σr from r = 1 to n",
+   "back": "n(n + 1)/2"
+  },
+  {
+   "id": "esat-fc-mathematics2-006",
+   "module": "Mathematics 2",
+   "topic": "MM2",
+   "front": "Coefficient of x² in (1 + 2x)⁵",
+   "back": "⁵C₂ × 2² = 40"
+  },
+  {
+   "id": "esat-fc-mathematics2-007",
+   "module": "Mathematics 2",
+   "topic": "MM3",
+   "front": "Centre and radius of x² + y² − 4x + 6y − 3 = 0",
+   "back": "(2, −3), radius 4"
+  },
+  {
+   "id": "esat-fc-mathematics2-008",
+   "module": "Mathematics 2",
+   "topic": "MM3",
+   "front": "A line is a tangent to a circle when…",
+   "back": "the discriminant of the substituted quadratic is 0 (or distance from centre = radius)"
+  },
+  {
+   "id": "esat-fc-mathematics2-009",
+   "module": "Mathematics 2",
+   "topic": "MM4",
+   "front": "Arc length and sector area in radians",
+   "back": "rθ and ½r²θ"
+  },
+  {
+   "id": "esat-fc-mathematics2-010",
+   "module": "Mathematics 2",
+   "topic": "MM4",
+   "front": "Convert 150° to radians",
+   "back": "5π/6"
+  },
+  {
+   "id": "esat-fc-mathematics2-011",
+   "module": "Mathematics 2",
+   "topic": "MM4",
+   "front": "Period of y = tan x; of y = sin 3x",
+   "back": "π; 2π/3"
+  },
+  {
+   "id": "esat-fc-mathematics2-012",
+   "module": "Mathematics 2",
+   "topic": "MM4",
+   "front": "sin²x + cos²x = ?",
+   "back": "1"
+  },
+  {
+   "id": "esat-fc-mathematics2-013",
+   "module": "Mathematics 2",
+   "topic": "MM4",
+   "front": "Why never divide by sin x when solving?",
+   "back": "you lose the solutions where sin x = 0; factorise instead"
+  },
+  {
+   "id": "esat-fc-mathematics2-014",
+   "module": "Mathematics 2",
+   "topic": "MM5",
+   "front": "log a + log b; log aⁿ",
+   "back": "log(ab); n log a"
+  },
+  {
+   "id": "esat-fc-mathematics2-015",
+   "module": "Mathematics 2",
+   "topic": "MM5",
+   "front": "Solve 2ˣ = 32",
+   "back": "x = 5"
+  },
+  {
+   "id": "esat-fc-mathematics2-016",
+   "module": "Mathematics 2",
+   "topic": "MM5",
+   "front": "4ˣ written in terms of y = 2ˣ",
+   "back": "y²"
+  },
+  {
+   "id": "esat-fc-mathematics2-017",
+   "module": "Mathematics 2",
+   "topic": "MM6",
+   "front": "d/dx of 1/x",
+   "back": "−1/x²"
+  },
+  {
+   "id": "esat-fc-mathematics2-018",
+   "module": "Mathematics 2",
+   "topic": "MM6",
+   "front": "d/dx of √x",
+   "back": "1/(2√x)"
+  },
+  {
+   "id": "esat-fc-mathematics2-019",
+   "module": "Mathematics 2",
+   "topic": "MM6",
+   "front": "Nature of a stationary point when d²y/dx² > 0",
+   "back": "minimum"
+  },
+  {
+   "id": "esat-fc-mathematics2-020",
+   "module": "Mathematics 2",
+   "topic": "MM6",
+   "front": "Gradient of the normal if the tangent gradient is m",
+   "back": "−1/m"
+  },
+  {
+   "id": "esat-fc-mathematics2-021",
+   "module": "Mathematics 2",
+   "topic": "MM7",
+   "front": "∫x^(1/2) dx",
+   "back": "(2/3)x^(3/2) + c"
+  },
+  {
+   "id": "esat-fc-mathematics2-022",
+   "module": "Mathematics 2",
+   "topic": "MM7",
+   "front": "Definite integral of a curve below the x-axis is…",
+   "back": "negative; take the modulus for area"
+  },
+  {
+   "id": "esat-fc-mathematics2-023",
+   "module": "Mathematics 2",
+   "topic": "MM8",
+   "front": "y = f(x − 2) compared with y = f(x)",
+   "back": "translated 2 units right"
+  },
+  {
+   "id": "esat-fc-mathematics2-024",
+   "module": "Mathematics 2",
+   "topic": "MM8",
+   "front": "y = f(−x) compared with y = f(x)",
+   "back": "reflected in the y-axis"
+  },
+  {
+   "id": "esat-fc-mathematics2-025",
+   "module": "Mathematics 2",
+   "topic": "MM8",
+   "front": "y = 3f(x) compared with y = f(x)",
+   "back": "stretched vertically by scale factor 3"
+  },
+  {
+   "id": "esat-fc-physics-001",
+   "module": "Physics",
+   "topic": "P1",
+   "front": "Charge equation",
+   "back": "Q = It"
+  },
+  {
+   "id": "esat-fc-physics-002",
+   "module": "Physics",
+   "topic": "P1",
+   "front": "Three forms of electrical power",
+   "back": "P = IV = I²R = V²/R"
+  },
+  {
+   "id": "esat-fc-physics-003",
+   "module": "Physics",
+   "topic": "P1",
+   "front": "Total resistance of 2 Ω, 3 Ω and 6 Ω in parallel",
+   "back": "1 Ω"
+  },
+  {
+   "id": "esat-fc-physics-004",
+   "module": "Physics",
+   "topic": "P1",
+   "front": "NTC thermistor as temperature rises",
+   "back": "resistance falls"
+  },
+  {
+   "id": "esat-fc-physics-005",
+   "module": "Physics",
+   "topic": "P1",
+   "front": "LDR as light intensity rises",
+   "back": "resistance falls"
+  },
+  {
+   "id": "esat-fc-physics-006",
+   "module": "Physics",
+   "topic": "P1",
+   "front": "Shape of a filament lamp's I–V graph and why",
+   "back": "curve; resistance rises as the filament heats"
+  },
+  {
+   "id": "esat-fc-physics-007",
+   "module": "Physics",
+   "topic": "P1",
+   "front": "kWh to joules",
+   "back": "1 kWh = 3.6 × 10⁶ J"
+  },
+  {
+   "id": "esat-fc-physics-008",
+   "module": "Physics",
+   "topic": "P2",
+   "front": "Force on a current-carrying wire",
+   "back": "F = BIL"
+  },
+  {
+   "id": "esat-fc-physics-009",
+   "module": "Physics",
+   "topic": "P2",
+   "front": "Ideal transformer equations",
+   "back": "Vp/Vs = Np/Ns and VpIp = VsIs"
+  },
+  {
+   "id": "esat-fc-physics-010",
+   "module": "Physics",
+   "topic": "P2",
+   "front": "Why transmit at high voltage?",
+   "back": "lower current, so lower I²R losses"
+  },
+  {
+   "id": "esat-fc-physics-011",
+   "module": "Physics",
+   "topic": "P2",
+   "front": "Factors that increase an induced voltage",
+   "back": "faster motion, stronger field, more turns (iron core)"
+  },
+  {
+   "id": "esat-fc-physics-012",
+   "module": "Physics",
+   "topic": "P3",
+   "front": "Equation with no time: SUVAT",
+   "back": "v² = u² + 2as"
+  },
+  {
+   "id": "esat-fc-physics-013",
+   "module": "Physics",
+   "topic": "P3",
+   "front": "Force as rate of change of momentum",
+   "back": "F = Δp/Δt"
+  },
+  {
+   "id": "esat-fc-physics-014",
+   "module": "Physics",
+   "topic": "P3",
+   "front": "Elastic potential energy",
+   "back": "½kx²"
+  },
+  {
+   "id": "esat-fc-physics-015",
+   "module": "Physics",
+   "topic": "P3",
+   "front": "Lift accelerating upwards: tension",
+   "back": "T = m(g + a)"
+  },
+  {
+   "id": "esat-fc-physics-016",
+   "module": "Physics",
+   "topic": "P3",
+   "front": "Terminal velocity means…",
+   "back": "resultant force zero: drag = weight"
+  },
+  {
+   "id": "esat-fc-physics-017",
+   "module": "Physics",
+   "topic": "P3",
+   "front": "Area under a velocity–time graph",
+   "back": "displacement"
+  },
+  {
+   "id": "esat-fc-physics-018",
+   "module": "Physics",
+   "topic": "P3",
+   "front": "In which collisions is momentum conserved?",
+   "back": "all (with no external forces); KE only in elastic ones"
+  },
+  {
+   "id": "esat-fc-physics-019",
+   "module": "Physics",
+   "topic": "P4",
+   "front": "Best emitter and absorber of infrared",
+   "back": "matt black surface"
+  },
+  {
+   "id": "esat-fc-physics-020",
+   "module": "Physics",
+   "topic": "P4",
+   "front": "Specific heat capacity equation",
+   "back": "ΔE = mcΔθ"
+  },
+  {
+   "id": "esat-fc-physics-021",
+   "module": "Physics",
+   "topic": "P5",
+   "front": "Specific latent heat equation",
+   "back": "E = mL"
+  },
+  {
+   "id": "esat-fc-physics-022",
+   "module": "Physics",
+   "topic": "P5",
+   "front": "Pressure at depth h in a fluid",
+   "back": "p = hρg (add atmospheric pressure for the total)"
+  },
+  {
+   "id": "esat-fc-physics-023",
+   "module": "Physics",
+   "topic": "P5",
+   "front": "Boyle's law (constant temperature)",
+   "back": "pV = constant"
+  },
+  {
+   "id": "esat-fc-physics-024",
+   "module": "Physics",
+   "topic": "P5",
+   "front": "Why temperature is constant during boiling",
+   "back": "energy breaks intermolecular forces, increasing potential (not kinetic) energy"
+  },
+  {
+   "id": "esat-fc-physics-025",
+   "module": "Physics",
+   "topic": "P6",
+   "front": "Wave equation",
+   "back": "v = fλ"
+  },
+  {
+   "id": "esat-fc-physics-026",
+   "module": "Physics",
+   "topic": "P6",
+   "front": "What stays constant on refraction?",
+   "back": "frequency"
+  },
+  {
+   "id": "esat-fc-physics-027",
+   "module": "Physics",
+   "topic": "P6",
+   "front": "Source moving towards observer (Doppler)",
+   "back": "higher frequency, shorter wavelength"
+  },
+  {
+   "id": "esat-fc-physics-028",
+   "module": "Physics",
+   "topic": "P6",
+   "front": "Upper limit of human hearing",
+   "back": "about 20 kHz (ultrasound is above this)"
+  },
+  {
+   "id": "esat-fc-physics-029",
+   "module": "Physics",
+   "topic": "P6",
+   "front": "EM wave used to sterilise surgical instruments",
+   "back": "gamma rays"
+  },
+  {
+   "id": "esat-fc-physics-030",
+   "module": "Physics",
+   "topic": "P7",
+   "front": "Alpha decay changes",
+   "back": "mass number −4, atomic number −2"
+  },
+  {
+   "id": "esat-fc-physics-031",
+   "module": "Physics",
+   "topic": "P7",
+   "front": "Beta-minus decay changes",
+   "back": "mass number unchanged, atomic number +1 (neutron → proton + electron)"
+  },
+  {
+   "id": "esat-fc-physics-032",
+   "module": "Physics",
+   "topic": "P7",
+   "front": "Most ionising and least penetrating radiation",
+   "back": "alpha"
+  },
+  {
+   "id": "esat-fc-physics-033",
+   "module": "Physics",
+   "topic": "P7",
+   "front": "Fraction left after 3 half-lives",
+   "back": "1/8"
+  },
+  {
+   "id": "esat-fc-physics-034",
+   "module": "Physics",
+   "topic": "P7",
+   "front": "Which radiation is deflected most in a magnetic field?",
+   "back": "beta (smallest mass); gamma not at all"
+  },
+  {
+   "id": "esat-fc-chemistry-001",
+   "module": "Chemistry",
+   "topic": "C1",
+   "front": "Neutrons in ⁵⁶Fe (Z = 26)",
+   "back": "30"
+  },
+  {
+   "id": "esat-fc-chemistry-002",
+   "module": "Chemistry",
+   "topic": "C1",
+   "front": "Electrons in Al³⁺ (Z = 13)",
+   "back": "10"
+  },
+  {
+   "id": "esat-fc-chemistry-003",
+   "module": "Chemistry",
+   "topic": "C1",
+   "front": "Relative atomic mass from isotopes",
+   "back": "weighted mean of isotope masses by abundance"
+  },
+  {
+   "id": "esat-fc-chemistry-004",
+   "module": "Chemistry",
+   "topic": "C2",
+   "front": "Trend in reactivity down Group 1; down Group 17",
+   "back": "increases; decreases"
+  },
+  {
+   "id": "esat-fc-chemistry-005",
+   "module": "Chemistry",
+   "topic": "C3",
+   "front": "Effect of increasing pressure on an equilibrium",
+   "back": "shifts towards fewer moles of gas"
+  },
+  {
+   "id": "esat-fc-chemistry-006",
+   "module": "Chemistry",
+   "topic": "C4",
+   "front": "Moles from mass",
+   "back": "n = m/Mr"
+  },
+  {
+   "id": "esat-fc-chemistry-007",
+   "module": "Chemistry",
+   "topic": "C4",
+   "front": "Volume of 1 mol of gas at rtp",
+   "back": "24 dm³"
+  },
+  {
+   "id": "esat-fc-chemistry-008",
+   "module": "Chemistry",
+   "topic": "C4",
+   "front": "Concentration",
+   "back": "c = n/V (V in dm³)"
+  },
+  {
+   "id": "esat-fc-chemistry-009",
+   "module": "Chemistry",
+   "topic": "C4",
+   "front": "Steps for an empirical formula",
+   "back": "mass ÷ Ar, divide by smallest, scale to whole numbers"
+  },
+  {
+   "id": "esat-fc-chemistry-010",
+   "module": "Chemistry",
+   "topic": "C4",
+   "front": "Percentage yield",
+   "back": "actual ÷ theoretical × 100"
+  },
+  {
+   "id": "esat-fc-chemistry-011",
+   "module": "Chemistry",
+   "topic": "C4",
+   "front": "Atom economy",
+   "back": "Mr desired product ÷ Mr all reactants × 100"
+  },
+  {
+   "id": "esat-fc-chemistry-012",
+   "module": "Chemistry",
+   "topic": "C5",
+   "front": "OIL RIG",
+   "back": "oxidation is loss, reduction is gain (of electrons)"
+  },
+  {
+   "id": "esat-fc-chemistry-013",
+   "module": "Chemistry",
+   "topic": "C5",
+   "front": "Oxidation state of Mn in MnO₄⁻",
+   "back": "+7"
+  },
+  {
+   "id": "esat-fc-chemistry-014",
+   "module": "Chemistry",
+   "topic": "C5",
+   "front": "Disproportionation",
+   "back": "one element is both oxidised and reduced"
+  },
+  {
+   "id": "esat-fc-chemistry-015",
+   "module": "Chemistry",
+   "topic": "C6",
+   "front": "Properties of giant ionic substances",
+   "back": "high mp; conduct only when molten or dissolved"
+  },
+  {
+   "id": "esat-fc-chemistry-016",
+   "module": "Chemistry",
+   "topic": "C6",
+   "front": "Why graphite conducts",
+   "back": "one delocalised electron per carbon"
+  },
+  {
+   "id": "esat-fc-chemistry-017",
+   "module": "Chemistry",
+   "topic": "C6",
+   "front": "Why alkane boiling points rise with chain length",
+   "back": "stronger intermolecular forces"
+  },
+  {
+   "id": "esat-fc-chemistry-018",
+   "module": "Chemistry",
+   "topic": "C7",
+   "front": "Halogen displacement rule",
+   "back": "a more reactive halogen displaces a less reactive halide"
+  },
+  {
+   "id": "esat-fc-chemistry-019",
+   "module": "Chemistry",
+   "topic": "C8",
+   "front": "Rf value",
+   "back": "distance of spot ÷ distance of solvent front"
+  },
+  {
+   "id": "esat-fc-chemistry-020",
+   "module": "Chemistry",
+   "topic": "C9",
+   "front": "Dilute an acid 100-fold: pH change",
+   "back": "rises by 2"
+  },
+  {
+   "id": "esat-fc-chemistry-021",
+   "module": "Chemistry",
+   "topic": "C9",
+   "front": "Acid + metal carbonate →",
+   "back": "salt + water + carbon dioxide"
+  },
+  {
+   "id": "esat-fc-chemistry-022",
+   "module": "Chemistry",
+   "topic": "C10",
+   "front": "What a catalyst does",
+   "back": "provides a route with lower activation energy; unchanged at the end"
+  },
+  {
+   "id": "esat-fc-chemistry-023",
+   "module": "Chemistry",
+   "topic": "C10",
+   "front": "Four factors that increase rate",
+   "back": "temperature, concentration/pressure, surface area, catalyst"
+  },
+  {
+   "id": "esat-fc-chemistry-024",
+   "module": "Chemistry",
+   "topic": "C11",
+   "front": "Bond energy calculation",
+   "back": "ΔH = bonds broken − bonds made"
+  },
+  {
+   "id": "esat-fc-chemistry-025",
+   "module": "Chemistry",
+   "topic": "C11",
+   "front": "Exothermic: sign of ΔH and temperature change",
+   "back": "negative; surroundings get hotter"
+  },
+  {
+   "id": "esat-fc-chemistry-026",
+   "module": "Chemistry",
+   "topic": "C12",
+   "front": "Aqueous NaCl electrolysis products",
+   "back": "H₂ at cathode, Cl₂ at anode, NaOH left"
+  },
+  {
+   "id": "esat-fc-chemistry-027",
+   "module": "Chemistry",
+   "topic": "C12",
+   "front": "Electroplating: object goes at…",
+   "back": "the cathode"
+  },
+  {
+   "id": "esat-fc-chemistry-028",
+   "module": "Chemistry",
+   "topic": "C13",
+   "front": "General formula of alkenes",
+   "back": "CₙH₂ₙ"
+  },
+  {
+   "id": "esat-fc-chemistry-029",
+   "module": "Chemistry",
+   "topic": "C13",
+   "front": "Test for an alkene",
+   "back": "decolourises bromine water (orange to colourless)"
+  },
+  {
+   "id": "esat-fc-chemistry-030",
+   "module": "Chemistry",
+   "topic": "C13",
+   "front": "Structural isomers of C₅H₁₂",
+   "back": "3"
+  },
+  {
+   "id": "esat-fc-chemistry-031",
+   "module": "Chemistry",
+   "topic": "C13",
+   "front": "Product of alcohol + carboxylic acid",
+   "back": "ester + water"
+  },
+  {
+   "id": "esat-fc-chemistry-032",
+   "module": "Chemistry",
+   "topic": "C13",
+   "front": "Condensation polymerisation releases…",
+   "back": "a small molecule, usually water"
+  },
+  {
+   "id": "esat-fc-chemistry-033",
+   "module": "Chemistry",
+   "topic": "C14",
+   "front": "Metals extracted by electrolysis",
+   "back": "those more reactive than carbon (e.g. Al)"
+  },
+  {
+   "id": "esat-fc-chemistry-034",
+   "module": "Chemistry",
+   "topic": "C16",
+   "front": "Flame colours: Li⁺, Na⁺, K⁺, Ca²⁺, Cu²⁺",
+   "back": "crimson, yellow, lilac, orange-red, green"
+  },
+  {
+   "id": "esat-fc-chemistry-035",
+   "module": "Chemistry",
+   "topic": "C16",
+   "front": "Hydroxide precipitate colours: Cu²⁺, Fe²⁺, Fe³⁺",
+   "back": "blue, green, brown"
+  },
+  {
+   "id": "esat-fc-chemistry-036",
+   "module": "Chemistry",
+   "topic": "C16",
+   "front": "Silver halide precipitates: Cl⁻, Br⁻, I⁻",
+   "back": "white, cream, yellow"
+  },
+  {
+   "id": "esat-fc-chemistry-037",
+   "module": "Chemistry",
+   "topic": "C17",
+   "front": "Main source of nitrogen oxides",
+   "back": "N₂ and O₂ reacting at high temperature in engines"
+  },
+  {
+   "id": "esat-fc-chemistry-038",
+   "module": "Chemistry",
+   "topic": "C17",
+   "front": "Approximate composition of dry air",
+   "back": "78% N₂, 21% O₂, about 1% Ar, 0.04% CO₂"
+  },
+  {
+   "id": "esat-fc-biology-001",
+   "module": "Biology",
+   "topic": "B1",
+   "front": "Structures in prokaryotes but not eukaryotes",
+   "back": "plasmids; loop of DNA free in cytoplasm (no nucleus)"
+  },
+  {
+   "id": "esat-fc-biology-002",
+   "module": "Biology",
+   "topic": "B1",
+   "front": "Magnification",
+   "back": "image size ÷ actual size"
+  },
+  {
+   "id": "esat-fc-biology-003",
+   "module": "Biology",
+   "topic": "B2",
+   "front": "Definition of osmosis",
+   "back": "net movement of water from higher to lower water potential across a partially permeable membrane"
+  },
+  {
+   "id": "esat-fc-biology-004",
+   "module": "Biology",
+   "topic": "B2",
+   "front": "Active transport needs…",
+   "back": "carrier proteins and energy from respiration"
+  },
+  {
+   "id": "esat-fc-biology-005",
+   "module": "Biology",
+   "topic": "B3",
+   "front": "Outcome of mitosis",
+   "back": "2 genetically identical diploid cells"
+  },
+  {
+   "id": "esat-fc-biology-006",
+   "module": "Biology",
+   "topic": "B3",
+   "front": "Outcome of meiosis",
+   "back": "4 genetically different haploid cells"
+  },
+  {
+   "id": "esat-fc-biology-007",
+   "module": "Biology",
+   "topic": "B3",
+   "front": "Who determines the sex of a human child?",
+   "back": "the father (X or Y sperm)"
+  },
+  {
+   "id": "esat-fc-biology-008",
+   "module": "Biology",
+   "topic": "B4",
+   "front": "Aa × Aa phenotype ratio",
+   "back": "3 : 1"
+  },
+  {
+   "id": "esat-fc-biology-009",
+   "module": "Biology",
+   "topic": "B4",
+   "front": "Unaffected child of two carriers: P(carrier)",
+   "back": "2/3"
+  },
+  {
+   "id": "esat-fc-biology-010",
+   "module": "Biology",
+   "topic": "B4",
+   "front": "Homozygous vs heterozygous",
+   "back": "two identical alleles vs two different alleles"
+  },
+  {
+   "id": "esat-fc-biology-011",
+   "module": "Biology",
+   "topic": "B5",
+   "front": "Base pairing rules",
+   "back": "A–T and G–C"
+  },
+  {
+   "id": "esat-fc-biology-012",
+   "module": "Biology",
+   "topic": "B5",
+   "front": "Bases per amino acid",
+   "back": "3 (a triplet/codon)"
+  },
+  {
+   "id": "esat-fc-biology-013",
+   "module": "Biology",
+   "topic": "B5",
+   "front": "Most mutations…",
+   "back": "have no effect on the phenotype"
+  },
+  {
+   "id": "esat-fc-biology-014",
+   "module": "Biology",
+   "topic": "B6",
+   "front": "Enzymes that cut and join DNA",
+   "back": "restriction enzymes; ligase"
+  },
+  {
+   "id": "esat-fc-biology-015",
+   "module": "Biology",
+   "topic": "B6",
+   "front": "Adult stem cells are…",
+   "back": "multipotent"
+  },
+  {
+   "id": "esat-fc-biology-016",
+   "module": "Biology",
+   "topic": "B7",
+   "front": "How antibiotic resistance spreads",
+   "back": "random mutation, selection by antibiotic, survivors reproduce"
+  },
+  {
+   "id": "esat-fc-biology-017",
+   "module": "Biology",
+   "topic": "B7",
+   "front": "Differences between identical twins are due to…",
+   "back": "the environment"
+  },
+  {
+   "id": "esat-fc-biology-018",
+   "module": "Biology",
+   "topic": "B8",
+   "front": "Why enzymes stop working at high temperature",
+   "back": "active site changes shape (denatured)"
+  },
+  {
+   "id": "esat-fc-biology-019",
+   "module": "Biology",
+   "topic": "B8",
+   "front": "Optimum pH of stomach protease",
+   "back": "about 2"
+  },
+  {
+   "id": "esat-fc-biology-020",
+   "module": "Biology",
+   "topic": "B8",
+   "front": "Products of lipase",
+   "back": "fatty acids and glycerol"
+  },
+  {
+   "id": "esat-fc-biology-021",
+   "module": "Biology",
+   "topic": "B9",
+   "front": "Anaerobic respiration in muscles",
+   "back": "glucose → lactic acid"
+  },
+  {
+   "id": "esat-fc-biology-022",
+   "module": "Biology",
+   "topic": "B9",
+   "front": "Reflex arc order",
+   "back": "receptor, sensory, relay, motor, effector"
+  },
+  {
+   "id": "esat-fc-biology-023",
+   "module": "Biology",
+   "topic": "B9",
+   "front": "Blood vessel carrying deoxygenated blood from the heart",
+   "back": "pulmonary artery"
+  },
+  {
+   "id": "esat-fc-biology-024",
+   "module": "Biology",
+   "topic": "B9",
+   "front": "Hormone that lowers blood glucose",
+   "back": "insulin"
+  },
+  {
+   "id": "esat-fc-biology-025",
+   "module": "Biology",
+   "topic": "B9",
+   "front": "ADH effect",
+   "back": "collecting ducts more permeable to water; concentrated urine"
+  },
+  {
+   "id": "esat-fc-biology-026",
+   "module": "Biology",
+   "topic": "B9",
+   "front": "Hormone that triggers ovulation",
+   "back": "LH"
+  },
+  {
+   "id": "esat-fc-biology-027",
+   "module": "Biology",
+   "topic": "B9",
+   "front": "Substance filtered but fully reabsorbed in a healthy kidney",
+   "back": "glucose"
+  },
+  {
+   "id": "esat-fc-biology-028",
+   "module": "Biology",
+   "topic": "B9",
+   "front": "How vaccines work",
+   "back": "inactive antigens trigger antibodies and memory cells"
+  },
+  {
+   "id": "esat-fc-biology-029",
+   "module": "Biology",
+   "topic": "B9",
+   "front": "Cardiac output",
+   "back": "stroke volume × heart rate"
+  },
+  {
+   "id": "esat-fc-biology-030",
+   "module": "Biology",
+   "topic": "B10",
+   "front": "Mark–release–recapture estimate",
+   "back": "N = (first sample × second sample) ÷ marked recaptured"
+  },
+  {
+   "id": "esat-fc-biology-031",
+   "module": "Biology",
+   "topic": "B10",
+   "front": "Eutrophication sequence",
+   "back": "algal bloom, plants die, decomposers use up oxygen, fish die"
+  },
+  {
+   "id": "esat-fc-biology-032",
+   "module": "Biology",
+   "topic": "B10",
+   "front": "Both organisms benefit",
+   "back": "mutualism"
+  },
+  {
+   "id": "esat-fc-biology-033",
+   "module": "Biology",
+   "topic": "B11",
+   "front": "Limiting factors of photosynthesis",
+   "back": "light intensity, CO₂ concentration, temperature"
+  },
+  {
+   "id": "esat-fc-biology-034",
+   "module": "Biology",
+   "topic": "B11",
+   "front": "Xylem vs phloem",
+   "back": "xylem: dead, water up; phloem: living, sugars both ways"
+  },
+  {
+   "id": "esat-fc-biology-035",
+   "module": "Biology",
+   "topic": "B11",
+   "front": "Factors increasing transpiration",
+   "back": "higher light, temperature and wind; lower humidity"
+  }
+ ]
+}

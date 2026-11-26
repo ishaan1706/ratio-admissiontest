@@ -20,6 +20,8 @@ import { EssayStudio } from './components/EssayStudio';
 import { LnatRevisionLab } from './components/LnatRevisionLab';
 import { ProgressView } from './components/ProgressView';
 import { TaraWorkspace } from './components/TaraWorkspace';
+import { EsatWorkspace } from './components/EsatWorkspace';
+import { SatWorkspace } from './components/SatWorkspace';
 import {
   GenericAttempt,
   OfficialResourcesPanel,
@@ -322,6 +324,24 @@ export const App: React.FC = () => {
           <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10">
             <TaraWorkspace
               test={TEST_BY_ID.tara}
+              subTab={subTab}
+              attempts={genericAttempts}
+              onSaveAttempt={handleSaveGenericAttempt}
+            />
+          </div>
+        ) : activeTest === 'esat' ? (
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10">
+            <EsatWorkspace
+              test={TEST_BY_ID.esat}
+              subTab={subTab}
+              attempts={genericAttempts}
+              onSaveAttempt={handleSaveGenericAttempt}
+            />
+          </div>
+        ) : activeTest === 'sat' ? (
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10">
+            <SatWorkspace
+              test={TEST_BY_ID.sat}
               subTab={subTab}
               attempts={genericAttempts}
               onSaveAttempt={handleSaveGenericAttempt}

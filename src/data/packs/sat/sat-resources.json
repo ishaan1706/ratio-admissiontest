@@ -1,0 +1,175 @@
+{
+ "exam": "SAT",
+ "version": 1,
+ "format": {
+  "sections": [
+   {
+    "id": "rw",
+    "name": "Reading and Writing",
+    "modules": 2,
+    "questionsPerModule": 27,
+    "minutesPerModule": 32
+   },
+   {
+    "id": "math",
+    "name": "Math",
+    "modules": 2,
+    "questionsPerModule": 22,
+    "minutesPerModule": 35
+   }
+  ],
+  "breakMinutes": 10,
+  "totalMinutes": 134,
+  "scoreRange": [
+   400,
+   1600
+  ],
+  "sectionScoreRange": [
+   200,
+   800
+  ],
+  "wrongAnswerPenalty": false,
+  "sprRules": "Up to 5 characters (6 with a negative sign); fractions or decimals; no mixed numbers, %, $ or commas."
+ },
+ "resources": [
+  {
+   "category": "practice",
+   "title": "Bluebook full-length practice tests",
+   "url": "https://satsuite.collegeboard.org/practice/practice-tests/bluebook",
+   "description": "Official adaptive practice tests in the real testing app; scored, with My Practice review."
+  },
+  {
+   "category": "practice",
+   "title": "Download Bluebook",
+   "url": "https://bluebook.collegeboard.org/students/download-bluebook",
+   "description": "The official digital SAT app, needed for practice tests and test day."
+  },
+  {
+   "category": "practice",
+   "title": "Student Question Bank (guide)",
+   "url": "https://satsuite.collegeboard.org/practice/student-question-bank",
+   "description": "How to filter official questions by domain, skill and difficulty."
+  },
+  {
+   "category": "practice",
+   "title": "Student Question Bank",
+   "url": "https://mypractice.collegeboard.org/questionbank/search",
+   "description": "Search official practice questions by skill for targeted drilling."
+  },
+  {
+   "category": "practice",
+   "title": "Official SAT Prep on Khan Academy",
+   "url": "https://satsuite.collegeboard.org/practice/khan-academy",
+   "description": "Free lessons and practice for every SAT skill."
+  },
+  {
+   "category": "practice",
+   "title": "My Practice",
+   "url": "https://satsuite.collegeboard.org/practice/my-practice-101",
+   "description": "Review Bluebook practice-test results question by question."
+  },
+  {
+   "category": "practice",
+   "title": "Digital SAT sample questions (PDF)",
+   "url": "https://satsuite.collegeboard.org/media/pdf/digital-sat-sample-questions.pdf",
+   "description": "Official examples of each question type."
+  },
+  {
+   "category": "practice",
+   "title": "Printable (linear) practice tests",
+   "url": "https://satsuite.collegeboard.org/practice/practice-tests/paper",
+   "description": "Paper versions for students who need non-adaptive practice."
+  },
+  {
+   "category": "practice",
+   "title": "SAT Question of the Day",
+   "url": "https://qotd.collegeboard.org/",
+   "description": "One official question a day."
+  },
+  {
+   "category": "practice",
+   "title": "Official practice hub",
+   "url": "https://satsuite.collegeboard.org/practice",
+   "description": "All official College Board practice resources."
+  },
+  {
+   "category": "format",
+   "title": "SAT structure",
+   "url": "https://satsuite.collegeboard.org/sat/whats-on-the-test/structure",
+   "description": "Sections, modules, timing and adaptive design."
+  },
+  {
+   "category": "format",
+   "title": "Reading and Writing section",
+   "url": "https://satsuite.collegeboard.org/sat/whats-on-the-test/reading-writing",
+   "description": "Domains, skills and question types."
+  },
+  {
+   "category": "format",
+   "title": "Math section",
+   "url": "https://satsuite.collegeboard.org/sat/whats-on-the-test/math/overview",
+   "description": "Domains, skills, SPR rules and the calculator."
+  },
+  {
+   "category": "format",
+   "title": "How scores are calculated",
+   "url": "https://satsuite.collegeboard.org/scores/what-scores-mean/how-scores-calculated",
+   "description": "How the 400–1600 score is produced."
+  },
+  {
+   "category": "logistics",
+   "title": "Registration",
+   "url": "https://satsuite.collegeboard.org/sat/registration",
+   "description": "How to register for the SAT."
+  },
+  {
+   "category": "logistics",
+   "title": "Dates and deadlines",
+   "url": "https://satsuite.collegeboard.org/sat/dates-deadlines",
+   "description": "Test dates and registration deadlines."
+  },
+  {
+   "category": "logistics",
+   "title": "Test center search",
+   "url": "https://satsuite.collegeboard.org/sat/test-center-search",
+   "description": "Find a test center."
+  },
+  {
+   "category": "logistics",
+   "title": "International testing",
+   "url": "https://satsuite.collegeboard.org/sat/registration/international-testing",
+   "description": "Registering and testing outside the US."
+  },
+  {
+   "category": "logistics",
+   "title": "International fees",
+   "url": "https://satsuite.collegeboard.org/sat/registration/international-testing/fees",
+   "description": "Fees for international test takers."
+  },
+  {
+   "category": "logistics",
+   "title": "International country policies",
+   "url": "https://satsuite.collegeboard.org/sat/registration/international-testing/policies",
+   "description": "Country-specific rules."
+  },
+  {
+   "category": "logistics",
+   "title": "What to bring and do on test day",
+   "url": "https://satsuite.collegeboard.org/sat/what-to-bring-do",
+   "description": "Official test-day checklist."
+  },
+  {
+   "category": "logistics",
+   "title": "Calculator policy",
+   "url": "https://satsuite.collegeboard.org/sat/what-to-bring-do/calculator-policy",
+   "description": "Approved calculators; Desmos is built into Bluebook."
+  },
+  {
+   "category": "logistics",
+   "title": "Accommodations",
+   "url": "https://accommodations.collegeboard.org/how-accommodations-work/for-each-test/sat",
+   "description": "How to request testing accommodations."
+  }
+ ],
+ "copyright": "Official SAT questions and materials are © College Board and are linked, not reproduced. Ratio questions are original."
+}

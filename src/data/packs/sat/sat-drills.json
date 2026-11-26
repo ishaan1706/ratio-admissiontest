@@ -1,0 +1,2529 @@
+{
+ "exam": "SAT",
+ "version": 1,
+ "drills": [
+  {
+   "id": "drill-math-adv",
+   "section": "math",
+   "domain": "Advanced Math",
+   "questions": [
+    {
+     "id": "dad-01",
+     "section": "math",
+     "domain": "Advanced Math",
+     "skill": "Equivalent expressions",
+     "difficulty": "easy",
+     "type": "mcq",
+     "question": "Which expression is equivalent to (x + 4)(x − 4)?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "x² + 16"
+      },
+      {
+       "letter": "B",
+       "text": "x² − 8x − 16"
+      },
+      {
+       "letter": "C",
+       "text": "x² − 16"
+      },
+      {
+       "letter": "D",
+       "text": "x² − 8"
+      }
+     ],
+     "correct": "C",
+     "explanation": "This is a difference of squares: x² − 4² = x² − 16."
+    },
+    {
+     "id": "dad-02",
+     "section": "math",
+     "domain": "Advanced Math",
+     "skill": "Nonlinear functions",
+     "difficulty": "easy",
+     "type": "spr",
+     "question": "If f(x) = 2x² − 5, what is the value of f(3)?",
+     "acceptedAnswers": [
+      "13"
+     ],
+     "explanation": "f(3) = 2(9) − 5 = 13."
+    },
+    {
+     "id": "dad-03",
+     "section": "math",
+     "domain": "Advanced Math",
+     "skill": "Nonlinear equations in one variable and systems of equations in two variables",
+     "difficulty": "medium",
+     "type": "mcq",
+     "question": "What are the solutions to 2x² − 7x + 3 = 0?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "x = −3 and x = −1/2"
+      },
+      {
+       "letter": "B",
+       "text": "x = 1/2 and x = 3"
+      },
+      {
+       "letter": "C",
+       "text": "x = 1 and x = 3/2"
+      },
+      {
+       "letter": "D",
+       "text": "x = −1/2 and x = 3"
+      }
+     ],
+     "correct": "B",
+     "explanation": "Factor: (2x − 1)(x − 3) = 0, so x = 1/2 or x = 3."
+    },
+    {
+     "id": "dad-04",
+     "section": "math",
+     "domain": "Advanced Math",
+     "skill": "Equivalent expressions",
+     "difficulty": "medium",
+     "type": "mcq",
+     "question": "Which expression is equivalent to x^(3/2) for x > 0?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "∛(x²)"
+      },
+      {
+       "letter": "B",
+       "text": "(3/2)x"
+      },
+      {
+       "letter": "C",
+       "text": "x³/2"
+      },
+      {
+       "letter": "D",
+       "text": "x√x"
+      }
+     ],
+     "correct": "D",
+     "explanation": "x^(3/2) = x¹ · x^(1/2) = x√x. Choice A is x^(2/3)."
+    },
+    {
+     "id": "dad-05",
+     "section": "math",
+     "domain": "Advanced Math",
+     "skill": "Nonlinear functions",
+     "difficulty": "medium",
+     "type": "mcq",
+     "question": "The function f is defined by f(x) = (x − 1)(x + 3)(x − 5). What is the y-intercept of the graph of y = f(x)?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "(0, −15)"
+      },
+      {
+       "letter": "B",
+       "text": "(0, −5)"
+      },
+      {
+       "letter": "C",
+       "text": "(0, 5)"
+      },
+      {
+       "letter": "D",
+       "text": "(0, 15)"
+      }
+     ],
+     "correct": "D",
+     "explanation": "f(0) = (−1)(3)(−5) = 15."
+    },
+    {
+     "id": "dad-06",
+     "section": "math",
+     "domain": "Advanced Math",
+     "skill": "Nonlinear functions",
+     "difficulty": "medium",
+     "type": "mcq",
+     "question": "A sample of a substance has a mass of 80 grams and loses half its mass every 5 days. Which expression gives its mass, in grams, after d days?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "80(0.5)^(5d)"
+      },
+      {
+       "letter": "B",
+       "text": "80(0.5)^(d/5)"
+      },
+      {
+       "letter": "C",
+       "text": "80 − 0.5d"
+      },
+      {
+       "letter": "D",
+       "text": "80(2)^(d/5)"
+      }
+     ],
+     "correct": "B",
+     "explanation": "Halving every 5 days means the number of halvings is d/5, so the mass is 80(0.5)^(d/5)."
+    },
+    {
+     "id": "dad-07",
+     "section": "math",
+     "domain": "Advanced Math",
+     "skill": "Nonlinear equations in one variable and systems of equations in two variables",
+     "difficulty": "hard",
+     "type": "spr",
+     "question": "y = x² − 4x + 7\ny = 3\nHow many points of intersection do the graphs of the equations above have?",
+     "acceptedAnswers": [
+      "1"
+     ],
+     "explanation": "x² − 4x + 7 = 3 gives x² − 4x + 4 = 0, or (x − 2)² = 0. There is one solution, so one point of intersection."
+    },
+    {
+     "id": "dad-08",
+     "section": "math",
+     "domain": "Advanced Math",
+     "skill": "Equivalent expressions",
+     "difficulty": "hard",
+     "type": "mcq",
+     "question": "If x > 0, which expression is equivalent to (x² − 1)/(x² + x)?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "(x − 1)/x"
+      },
+      {
+       "letter": "B",
+       "text": "(x + 1)/x"
+      },
+      {
+       "letter": "C",
+       "text": "−1/x"
+      },
+      {
+       "letter": "D",
+       "text": "x − 1"
+      }
+     ],
+     "correct": "A",
+     "explanation": "Factor: (x − 1)(x + 1) over x(x + 1). Cancel (x + 1) to get (x − 1)/x."
+    },
+    {
+     "id": "dad-09",
+     "section": "math",
+     "domain": "Advanced Math",
+     "skill": "Nonlinear functions",
+     "difficulty": "hard",
+     "type": "mcq",
+     "question": "The graph of y = f(x) is a parabola with vertex (3, −2) that passes through (5, 6). Which equation defines f?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "f(x) = (x − 3)² − 2"
+      },
+      {
+       "letter": "B",
+       "text": "f(x) = 2(x + 3)² − 2"
+      },
+      {
+       "letter": "C",
+       "text": "f(x) = 2(x − 3)² − 2"
+      },
+      {
+       "letter": "D",
+       "text": "f(x) = 4(x − 3)² − 2"
+      }
+     ],
+     "correct": "C",
+     "explanation": "Vertex form gives f(x) = a(x − 3)² − 2. Using (5, 6): 6 = 4a − 2, so a = 2."
+    },
+    {
+     "id": "dad-10",
+     "section": "math",
+     "domain": "Advanced Math",
+     "skill": "Nonlinear equations in one variable and systems of equations in two variables",
+     "difficulty": "hard",
+     "type": "spr",
+     "question": "What is the positive solution to 1/x + 1/(x + 2) = 4/3 ?",
+     "acceptedAnswers": [
+      "1"
+     ],
+     "explanation": "Multiply by 3x(x + 2): 3(x + 2) + 3x = 4x(x + 2), so 6x + 6 = 4x² + 8x, giving 4x² + 2x − 6 = 0, or 2x² + x − 3 = 0 = (2x + 3)(x − 1). The positive solution is x = 1."
+    }
+   ]
+  },
+  {
+   "id": "drill-math-alg",
+   "section": "math",
+   "domain": "Algebra",
+   "questions": [
+    {
+     "id": "dal-01",
+     "section": "math",
+     "domain": "Algebra",
+     "skill": "Linear equations in one variable",
+     "difficulty": "easy",
+     "type": "spr",
+     "question": "If 6x − 4 = 2x + 20, what is the value of x?",
+     "acceptedAnswers": [
+      "6"
+     ],
+     "explanation": "4x = 24, so x = 6."
+    },
+    {
+     "id": "dal-02",
+     "section": "math",
+     "domain": "Algebra",
+     "skill": "Linear equations in two variables",
+     "difficulty": "easy",
+     "type": "mcq",
+     "question": "What is the slope of the line 4x + 2y = 10?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "−2"
+      },
+      {
+       "letter": "B",
+       "text": "−1/2"
+      },
+      {
+       "letter": "C",
+       "text": "2"
+      },
+      {
+       "letter": "D",
+       "text": "5"
+      }
+     ],
+     "correct": "A",
+     "explanation": "Solve for y: 2y = −4x + 10, so y = −2x + 5. The slope is −2."
+    },
+    {
+     "id": "dal-03",
+     "section": "math",
+     "domain": "Algebra",
+     "skill": "Linear functions",
+     "difficulty": "medium",
+     "type": "mcq",
+     "question": "For the linear function f, f(2) = 7 and f(5) = 16. Which equation defines f?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "f(x) = 2x + 3"
+      },
+      {
+       "letter": "B",
+       "text": "f(x) = 3x + 1"
+      },
+      {
+       "letter": "C",
+       "text": "f(x) = 3x + 7"
+      },
+      {
+       "letter": "D",
+       "text": "f(x) = 9x − 11"
+      }
+     ],
+     "correct": "B",
+     "explanation": "Slope = (16 − 7) ÷ (5 − 2) = 3. Then 7 = 3(2) + b, so b = 1."
+    },
+    {
+     "id": "dal-04",
+     "section": "math",
+     "domain": "Algebra",
+     "skill": "Systems of two linear equations in two variables",
+     "difficulty": "medium",
+     "type": "spr",
+     "question": "2x + 3y = 13\n4x − y = 5\nWhat is the value of x + y in the solution to the system above?",
+     "acceptedAnswers": [
+      "5"
+     ],
+     "explanation": "From the second equation, y = 4x − 5. Substitute: 2x + 12x − 15 = 13, so x = 2 and y = 3. x + y = 5."
+    },
+    {
+     "id": "dal-05",
+     "section": "math",
+     "domain": "Algebra",
+     "skill": "Linear inequalities in one or two variables",
+     "difficulty": "medium",
+     "type": "mcq",
+     "question": "A phone plan costs $30 per month plus $0.10 per text message. Maya wants her monthly bill to be no more than $45. What is the greatest number of text messages she can send in a month?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "15"
+      },
+      {
+       "letter": "B",
+       "text": "45"
+      },
+      {
+       "letter": "C",
+       "text": "150"
+      },
+      {
+       "letter": "D",
+       "text": "450"
+      }
+     ],
+     "correct": "C",
+     "explanation": "30 + 0.10t ≤ 45, so 0.10t ≤ 15 and t ≤ 150."
+    },
+    {
+     "id": "dal-06",
+     "section": "math",
+     "domain": "Algebra",
+     "skill": "Linear equations in two variables",
+     "difficulty": "medium",
+     "type": "mcq",
+     "question": "Line k is parallel to y = −3x + 4 and passes through (2, 1). Which equation represents line k?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "y = 3x − 5"
+      },
+      {
+       "letter": "B",
+       "text": "y = −3x + 4"
+      },
+      {
+       "letter": "C",
+       "text": "y = (1/3)x + 1/3"
+      },
+      {
+       "letter": "D",
+       "text": "y = −3x + 7"
+      }
+     ],
+     "correct": "D",
+     "explanation": "Parallel lines have equal slopes, so the slope is −3. Then 1 = −3(2) + b gives b = 7."
+    },
+    {
+     "id": "dal-07",
+     "section": "math",
+     "domain": "Algebra",
+     "skill": "Systems of two linear equations in two variables",
+     "difficulty": "hard",
+     "type": "mcq",
+     "question": "ax + 4y = 9\n3x + 2y = 6\nIn the system above, a is a constant. If the system has no solution, what is the value of a?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "3/2"
+      },
+      {
+       "letter": "B",
+       "text": "3"
+      },
+      {
+       "letter": "C",
+       "text": "6"
+      },
+      {
+       "letter": "D",
+       "text": "12"
+      }
+     ],
+     "correct": "C",
+     "explanation": "Multiply the second equation by 2: 6x + 4y = 12. For no solution, the x- and y-coefficients must match while the constants differ (9 ≠ 12), so a = 6."
+    },
+    {
+     "id": "dal-08",
+     "section": "math",
+     "domain": "Algebra",
+     "skill": "Linear functions",
+     "difficulty": "hard",
+     "type": "mcq",
+     "question": "The cost C, in dollars, to rent a kayak for h hours is given by C = 12h + 15. Which statement best interprets the number 15 in this context?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "The cost per hour of renting the kayak"
+      },
+      {
+       "letter": "B",
+       "text": "A fixed charge that is paid regardless of the number of hours"
+      },
+      {
+       "letter": "C",
+       "text": "The maximum number of hours the kayak can be rented"
+      },
+      {
+       "letter": "D",
+       "text": "The total cost of renting the kayak for 1 hour"
+      }
+     ],
+     "correct": "B",
+     "explanation": "15 is the value of C when h = 0, so it is a fixed charge. The 12 is the hourly rate, and 1 hour costs 27."
+    },
+    {
+     "id": "dal-09",
+     "section": "math",
+     "domain": "Algebra",
+     "skill": "Linear equations in one variable",
+     "difficulty": "hard",
+     "type": "mcq",
+     "question": "For what value of c does the equation 3(x − c) = 3x + 12 have infinitely many solutions?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "−12"
+      },
+      {
+       "letter": "B",
+       "text": "−4"
+      },
+      {
+       "letter": "C",
+       "text": "4"
+      },
+      {
+       "letter": "D",
+       "text": "There is no such value."
+      }
+     ],
+     "correct": "B",
+     "explanation": "3x − 3c = 3x + 12 holds for all x when −3c = 12, so c = −4."
+    },
+    {
+     "id": "dal-10",
+     "section": "math",
+     "domain": "Algebra",
+     "skill": "Linear inequalities in one or two variables",
+     "difficulty": "hard",
+     "type": "spr",
+     "question": "A rectangle's length is 3 more than twice its width, w. If the perimeter must be less than 66 units, what is the greatest possible integer value of w?",
+     "acceptedAnswers": [
+      "9"
+     ],
+     "explanation": "P = 2w + 2(2w + 3) = 6w + 6 < 66, so w < 10. The greatest integer is 9."
+    }
+   ]
+  },
+  {
+   "id": "drill-math-geo",
+   "section": "math",
+   "domain": "Geometry and Trigonometry",
+   "questions": [
+    {
+     "id": "dgt-01",
+     "section": "math",
+     "domain": "Geometry and Trigonometry",
+     "skill": "Area and volume",
+     "difficulty": "easy",
+     "type": "spr",
+     "question": "A triangle has a base of 12 centimeters and a height of 7 centimeters. What is its area, in square centimeters?",
+     "acceptedAnswers": [
+      "42"
+     ],
+     "explanation": "Area = (1/2)(12)(7) = 42."
+    },
+    {
+     "id": "dgt-02",
+     "section": "math",
+     "domain": "Geometry and Trigonometry",
+     "skill": "Lines, angles, and triangles",
+     "difficulty": "easy",
+     "type": "mcq",
+     "question": "Two parallel lines are cut by a transversal. One of the angles formed measures 55°. Which of the following could be the measure of another angle formed?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "35°"
+      },
+      {
+       "letter": "B",
+       "text": "45°"
+      },
+      {
+       "letter": "C",
+       "text": "90°"
+      },
+      {
+       "letter": "D",
+       "text": "125°"
+      }
+     ],
+     "correct": "D",
+     "explanation": "Every angle formed is either 55° or its supplement, 180° − 55° = 125°. Choice A is the complement, which does not appear."
+    },
+    {
+     "id": "dgt-03",
+     "section": "math",
+     "domain": "Geometry and Trigonometry",
+     "skill": "Right triangles and trigonometry",
+     "difficulty": "medium",
+     "type": "mcq",
+     "question": "In right triangle DEF, angle F is the right angle, DF = 9, and EF = 12. What is the value of cos D?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "3/4"
+      },
+      {
+       "letter": "B",
+       "text": "3/5"
+      },
+      {
+       "letter": "C",
+       "text": "4/5"
+      },
+      {
+       "letter": "D",
+       "text": "4/3"
+      }
+     ],
+     "correct": "B",
+     "explanation": "The hypotenuse DE = √(81 + 144) = 15. cos D = adjacent/hypotenuse = DF/DE = 9/15 = 3/5."
+    },
+    {
+     "id": "dgt-04",
+     "section": "math",
+     "domain": "Geometry and Trigonometry",
+     "skill": "Circles",
+     "difficulty": "medium",
+     "type": "mcq",
+     "question": "What is the center of the circle with equation x² + (y − 4)² = 49?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "(0, −4)"
+      },
+      {
+       "letter": "B",
+       "text": "(4, 0)"
+      },
+      {
+       "letter": "C",
+       "text": "(0, 4)"
+      },
+      {
+       "letter": "D",
+       "text": "(7, 4)"
+      }
+     ],
+     "correct": "C",
+     "explanation": "x² = (x − 0)², so the center is (0, 4). The radius is 7."
+    },
+    {
+     "id": "dgt-05",
+     "section": "math",
+     "domain": "Geometry and Trigonometry",
+     "skill": "Area and volume",
+     "difficulty": "medium",
+     "type": "mcq",
+     "question": "A rectangular prism has a volume of 360 cubic feet. Its length is 10 feet and its width is 6 feet. What is its height, in feet?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "4"
+      },
+      {
+       "letter": "B",
+       "text": "6"
+      },
+      {
+       "letter": "C",
+       "text": "12"
+      },
+      {
+       "letter": "D",
+       "text": "36"
+      }
+     ],
+     "correct": "B",
+     "explanation": "360 = 10 × 6 × h, so h = 360 ÷ 60 = 6."
+    },
+    {
+     "id": "dgt-06",
+     "section": "math",
+     "domain": "Geometry and Trigonometry",
+     "skill": "Lines, angles, and triangles",
+     "difficulty": "medium",
+     "type": "spr",
+     "question": "Triangles ABC and DEF are similar, with A corresponding to D, B to E, and C to F. If AB = 6, DE = 15, and BC = 8, what is EF?",
+     "acceptedAnswers": [
+      "20"
+     ],
+     "explanation": "The scale factor is 15/6 = 2.5, so EF = 8 × 2.5 = 20."
+    },
+    {
+     "id": "dgt-07",
+     "section": "math",
+     "domain": "Geometry and Trigonometry",
+     "skill": "Right triangles and trigonometry",
+     "difficulty": "hard",
+     "type": "mcq",
+     "question": "A 20-foot ladder leans against a wall, making a 60° angle with the ground. How high up the wall does the ladder reach, in feet?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "10"
+      },
+      {
+       "letter": "B",
+       "text": "10√2"
+      },
+      {
+       "letter": "C",
+       "text": "10√3"
+      },
+      {
+       "letter": "D",
+       "text": "20√3"
+      }
+     ],
+     "correct": "C",
+     "explanation": "The height is opposite the 60° angle: 20 sin 60° = 20(√3/2) = 10√3."
+    },
+    {
+     "id": "dgt-08",
+     "section": "math",
+     "domain": "Geometry and Trigonometry",
+     "skill": "Circles",
+     "difficulty": "hard",
+     "type": "spr",
+     "question": "In a circle, a central angle of 45° intercepts an arc of length 3π. What is the radius of the circle?",
+     "acceptedAnswers": [
+      "12"
+     ],
+     "explanation": "Arc length = (45/360)(2πr) = πr/4 = 3π, so r = 12."
+    },
+    {
+     "id": "dgt-09",
+     "section": "math",
+     "domain": "Geometry and Trigonometry",
+     "skill": "Right triangles and trigonometry",
+     "difficulty": "hard",
+     "type": "mcq",
+     "question": "What is the measure, in radians, of an angle of 150°?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "3π/4"
+      },
+      {
+       "letter": "B",
+       "text": "5π/6"
+      },
+      {
+       "letter": "C",
+       "text": "5π/3"
+      },
+      {
+       "letter": "D",
+       "text": "150π"
+      }
+     ],
+     "correct": "B",
+     "explanation": "Multiply by π/180: 150 × π/180 = 5π/6."
+    },
+    {
+     "id": "dgt-10",
+     "section": "math",
+     "domain": "Geometry and Trigonometry",
+     "skill": "Area and volume",
+     "difficulty": "hard",
+     "type": "mcq",
+     "question": "A square is inscribed in a circle of radius 5. What is the area of the square?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "25"
+      },
+      {
+       "letter": "B",
+       "text": "50"
+      },
+      {
+       "letter": "C",
+       "text": "25π"
+      },
+      {
+       "letter": "D",
+       "text": "100"
+      }
+     ],
+     "correct": "B",
+     "explanation": "The square's diagonal is the circle's diameter, 10. A square with diagonal d has area d²/2 = 100/2 = 50."
+    }
+   ]
+  },
+  {
+   "id": "drill-math-psda",
+   "section": "math",
+   "domain": "Problem-Solving and Data Analysis",
+   "questions": [
+    {
+     "id": "dps-01",
+     "section": "math",
+     "domain": "Problem-Solving and Data Analysis",
+     "skill": "Percentages",
+     "difficulty": "easy",
+     "type": "mcq",
+     "question": "18 is what percent of 72?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "4%"
+      },
+      {
+       "letter": "B",
+       "text": "25%"
+      },
+      {
+       "letter": "C",
+       "text": "40%"
+      },
+      {
+       "letter": "D",
+       "text": "54%"
+      }
+     ],
+     "correct": "B",
+     "explanation": "18 ÷ 72 = 0.25 = 25%."
+    },
+    {
+     "id": "dps-02",
+     "section": "math",
+     "domain": "Problem-Solving and Data Analysis",
+     "skill": "Ratios, rates, proportional relationships, and units",
+     "difficulty": "easy",
+     "type": "spr",
+     "question": "A runner completes 5 laps in 12 minutes. At this rate, how many minutes will it take to complete 20 laps?",
+     "acceptedAnswers": [
+      "48"
+     ],
+     "explanation": "20 laps is 4 times 5 laps, so the time is 4 × 12 = 48 minutes."
+    },
+    {
+     "id": "dps-03",
+     "section": "math",
+     "domain": "Problem-Solving and Data Analysis",
+     "skill": "One-variable data: Distributions and measures of center and spread",
+     "difficulty": "medium",
+     "type": "mcq",
+     "question": "The list shows the ages of 6 people: 22, 25, 25, 31, 40, 67. Which statement is true?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "The mean is less than the median."
+      },
+      {
+       "letter": "B",
+       "text": "The mean equals the median."
+      },
+      {
+       "letter": "C",
+       "text": "The mean is greater than the median."
+      },
+      {
+       "letter": "D",
+       "text": "The mode is greater than the mean."
+      }
+     ],
+     "correct": "C",
+     "explanation": "The median is (25 + 31) ÷ 2 = 28. The mean is 210 ÷ 6 = 35. The large value 67 pulls the mean above the median."
+    },
+    {
+     "id": "dps-04",
+     "section": "math",
+     "domain": "Problem-Solving and Data Analysis",
+     "skill": "Percentages",
+     "difficulty": "medium",
+     "type": "mcq",
+     "question": "A price of $250 is increased by 10% and then the new price is decreased by 10%. What is the final price?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "$245.00"
+      },
+      {
+       "letter": "B",
+       "text": "$247.50"
+      },
+      {
+       "letter": "C",
+       "text": "$250.00"
+      },
+      {
+       "letter": "D",
+       "text": "$252.50"
+      }
+     ],
+     "correct": "B",
+     "explanation": "250 × 1.10 × 0.90 = 247.50."
+    },
+    {
+     "id": "dps-05",
+     "section": "math",
+     "domain": "Problem-Solving and Data Analysis",
+     "skill": "Ratios, rates, proportional relationships, and units",
+     "difficulty": "medium",
+     "type": "mcq",
+     "question": "A water pump moves 3.6 liters per second. How many liters does it move in one hour?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "216"
+      },
+      {
+       "letter": "B",
+       "text": "360"
+      },
+      {
+       "letter": "C",
+       "text": "3,600"
+      },
+      {
+       "letter": "D",
+       "text": "12,960"
+      }
+     ],
+     "correct": "D",
+     "explanation": "One hour is 3,600 seconds, so 3.6 × 3,600 = 12,960 liters."
+    },
+    {
+     "id": "dps-06",
+     "section": "math",
+     "domain": "Problem-Solving and Data Analysis",
+     "skill": "Probability and conditional probability",
+     "difficulty": "medium",
+     "type": "spr",
+     "question": "If a student who owns a dog is chosen at random, what is the probability that the student is in grade 12? Enter your answer as a fraction or decimal.",
+     "table": {
+      "columns": [
+       "",
+       "Dog",
+       "Cat",
+       "No pet",
+       "Total"
+      ],
+      "rows": [
+       [
+        "Grade 11",
+        "14",
+        "10",
+        "16",
+        "40"
+       ],
+       [
+        "Grade 12",
+        "18",
+        "8",
+        "14",
+        "40"
+       ],
+       [
+        "Total",
+        "32",
+        "18",
+        "30",
+        "80"
+       ]
+      ]
+     },
+     "tableTitle": "Pets Owned by 80 Students",
+     "acceptedAnswers": [
+      "9/16",
+      ".5625"
+     ],
+     "explanation": "Of the 32 dog owners, 18 are in grade 12: 18/32 = 9/16 = 0.5625."
+    },
+    {
+     "id": "dps-07",
+     "section": "math",
+     "domain": "Problem-Solving and Data Analysis",
+     "skill": "Two-variable data: Models and scatterplots",
+     "difficulty": "medium",
+     "type": "mcq",
+     "question": "For a set of data, the line of best fit is y = −1.5x + 40, where x is the number of hours a candle has burned and y is its height in centimeters. Which is the best interpretation of −1.5?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "The candle's starting height is 1.5 centimeters."
+      },
+      {
+       "letter": "B",
+       "text": "The candle's predicted height decreases by 1.5 centimeters per hour."
+      },
+      {
+       "letter": "C",
+       "text": "The candle burns out after 1.5 hours."
+      },
+      {
+       "letter": "D",
+       "text": "The candle's predicted height increases by 1.5 centimeters per hour."
+      }
+     ],
+     "correct": "B",
+     "explanation": "The slope −1.5 is the predicted change in height for each additional hour: a decrease of 1.5 cm."
+    },
+    {
+     "id": "dps-08",
+     "section": "math",
+     "domain": "Problem-Solving and Data Analysis",
+     "skill": "Inference from sample statistics and margin of error",
+     "difficulty": "hard",
+     "type": "mcq",
+     "question": "A random sample of 500 residents of a town found that 38% favor a new park, with a margin of error of 4%. A second random sample of 2,000 residents is planned. Compared with the first sample, the margin of error for the second sample is most likely to be",
+     "options": [
+      {
+       "letter": "A",
+       "text": "larger, because more people will be surveyed"
+      },
+      {
+       "letter": "B",
+       "text": "the same, because both samples are random"
+      },
+      {
+       "letter": "C",
+       "text": "smaller, because the sample is larger"
+      },
+      {
+       "letter": "D",
+       "text": "impossible to predict without knowing the results"
+      }
+     ],
+     "correct": "C",
+     "explanation": "Larger random samples generally produce smaller margins of error, since estimates from more data vary less."
+    },
+    {
+     "id": "dps-09",
+     "section": "math",
+     "domain": "Problem-Solving and Data Analysis",
+     "skill": "Evaluating statistical claims: Observational studies and experiments",
+     "difficulty": "hard",
+     "type": "mcq",
+     "question": "A researcher wants to know whether a new fertilizer increases tomato yield. Which study design would best allow her to conclude that the fertilizer causes higher yields?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "Survey farmers about whether they use the fertilizer and how many tomatoes they grow"
+      },
+      {
+       "letter": "B",
+       "text": "Use the fertilizer on all her plants and compare the yield with last year's"
+      },
+      {
+       "letter": "C",
+       "text": "Compare farms in two different regions, one of which uses the fertilizer"
+      },
+      {
+       "letter": "D",
+       "text": "Randomly assign half of a set of similar plants to receive the fertilizer and half not to, then compare yields"
+      }
+     ],
+     "correct": "D",
+     "explanation": "Only random assignment to treatment and control groups supports a cause-and-effect conclusion; the other designs have confounding factors (farmer choice, weather, region)."
+    },
+    {
+     "id": "dps-10",
+     "section": "math",
+     "domain": "Problem-Solving and Data Analysis",
+     "skill": "One-variable data: Distributions and measures of center and spread",
+     "difficulty": "hard",
+     "type": "spr",
+     "question": "The mean of 8 test scores is 85. If the lowest score, 64, is removed, what is the mean of the remaining 7 scores?",
+     "acceptedAnswers": [
+      "88"
+     ],
+     "explanation": "The total is 8 × 85 = 680. Removing 64 leaves 616, and 616 ÷ 7 = 88."
+    }
+   ]
+  },
+  {
+   "id": "drill-rw-craft",
+   "section": "rw",
+   "domain": "Craft and Structure",
+   "questions": [
+    {
+     "id": "dcs-01",
+     "section": "rw",
+     "domain": "Craft and Structure",
+     "skill": "Words in Context",
+     "difficulty": "easy",
+     "type": "mcq",
+     "passage": "The coach praised her team for being ______ during the long season: even after losing several close games, the players kept practicing hard and never gave up.",
+     "question": "Which choice completes the text with the most logical and precise word or phrase?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "careless",
+       "explanation": "Careless players would not be praised for steady hard work."
+      },
+      {
+       "letter": "B",
+       "text": "resilient",
+       "explanation": "Correct. Recovering from losses and continuing to work hard shows resilience."
+      },
+      {
+       "letter": "C",
+       "text": "reluctant",
+       "explanation": "Reluctant means unwilling, which contradicts \"kept practicing hard.\""
+      },
+      {
+       "letter": "D",
+       "text": "arrogant",
+       "explanation": "Nothing suggests the team was overconfident."
+      }
+     ],
+     "correct": "B",
+     "explanation": "Correct. Recovering from losses and continuing to work hard shows resilience."
+    },
+    {
+     "id": "dcs-02",
+     "section": "rw",
+     "domain": "Craft and Structure",
+     "skill": "Words in Context",
+     "difficulty": "medium",
+     "type": "mcq",
+     "passage": "Although the scientist's early results were promising, she was careful not to ______ her findings, telling reporters that much more testing was needed before anyone could call the treatment effective.",
+     "question": "Which choice completes the text with the most logical and precise word or phrase?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "publish",
+       "explanation": "The text concerns how she described the results, not whether she published them."
+      },
+      {
+       "letter": "B",
+       "text": "exaggerate",
+       "explanation": "Correct. Being careful and saying more testing is needed shows she avoided overstating, or exaggerating, the results."
+      },
+      {
+       "letter": "C",
+       "text": "understand",
+       "explanation": "She clearly understands her findings well enough to explain their limits."
+      },
+      {
+       "letter": "D",
+       "text": "question",
+       "explanation": "She does question her findings' certainty, so \"careful not to question\" contradicts the text."
+      }
+     ],
+     "correct": "B",
+     "explanation": "Correct. Being careful and saying more testing is needed shows she avoided overstating, or exaggerating, the results."
+    },
+    {
+     "id": "dcs-03",
+     "section": "rw",
+     "domain": "Craft and Structure",
+     "skill": "Words in Context",
+     "difficulty": "hard",
+     "type": "mcq",
+     "passage": "Unlike his predecessor, who announced every policy with grand speeches, the new mayor was notably ______: he rarely gave interviews, and residents often learned of his decisions only when the changes took effect.",
+     "question": "Which choice completes the text with the most logical and precise word or phrase?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "reticent",
+       "explanation": "Correct. Rarely speaking publicly and not announcing decisions describes someone reticent, or reserved."
+      },
+      {
+       "letter": "B",
+       "text": "flamboyant",
+       "explanation": "Flamboyant describes the showy predecessor, not the contrasting new mayor."
+      },
+      {
+       "letter": "C",
+       "text": "indecisive",
+       "explanation": "The mayor makes decisions; he simply does not announce them."
+      },
+      {
+       "letter": "D",
+       "text": "vindictive",
+       "explanation": "Vindictive means seeking revenge, which the text does not suggest."
+      }
+     ],
+     "correct": "A",
+     "explanation": "Correct. Rarely speaking publicly and not announcing decisions describes someone reticent, or reserved."
+    },
+    {
+     "id": "dcs-04",
+     "section": "rw",
+     "domain": "Craft and Structure",
+     "skill": "Words in Context",
+     "difficulty": "hard",
+     "type": "mcq",
+     "passage": "The committee rejected the proposal not because its goals were unworthy but because its financial plan was not sound: the budget assumed donations that no one had promised.",
+     "question": "As used in the text, what does the word \"sound\" most nearly mean?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "audible",
+       "explanation": "\"Audible\" refers to noise, which does not apply to a financial plan."
+      },
+      {
+       "letter": "B",
+       "text": "reliable",
+       "explanation": "Correct. A plan based on unpromised donations is not reliable, or well founded."
+      },
+      {
+       "letter": "C",
+       "text": "asleep",
+       "explanation": "\"Sound asleep\" is a different use of the word."
+      },
+      {
+       "letter": "D",
+       "text": "loud",
+       "explanation": "A budget cannot be loud."
+      }
+     ],
+     "correct": "B",
+     "explanation": "Correct. A plan based on unpromised donations is not reliable, or well founded."
+    },
+    {
+     "id": "dcs-05",
+     "section": "rw",
+     "domain": "Craft and Structure",
+     "skill": "Text Structure and Purpose",
+     "difficulty": "medium",
+     "type": "mcq",
+     "passage": "Most maps of the world are drawn with north at the top, a convention so familiar that it can seem natural. But medieval European maps often placed east at the top, toward the rising sun, and some early Islamic maps placed south at the top. The choice of which direction goes \"up\" on a map is a matter of tradition, not geography.",
+     "question": "Which choice best states the main purpose of the text?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "To argue that maps with north at the top are less accurate than other maps",
+       "explanation": "The text does not discuss accuracy."
+      },
+      {
+       "letter": "B",
+       "text": "To explain how medieval Europeans navigated using the sun",
+       "explanation": "The rising sun is mentioned only to explain one map orientation."
+      },
+      {
+       "letter": "C",
+       "text": "To describe how modern mapmakers decide which direction to place at the top",
+       "explanation": "Modern mapmakers' decisions are not described."
+      },
+      {
+       "letter": "D",
+       "text": "To show that the familiar orientation of maps is a convention rather than a necessity",
+       "explanation": "Correct. Historical examples of other orientations support the final claim that \"up\" is a tradition."
+      }
+     ],
+     "correct": "D",
+     "explanation": "Correct. Historical examples of other orientations support the final claim that \"up\" is a tradition."
+    },
+    {
+     "id": "dcs-06",
+     "section": "rw",
+     "domain": "Craft and Structure",
+     "skill": "Text Structure and Purpose",
+     "difficulty": "hard",
+     "type": "mcq",
+     "passage": "Hummingbirds can hover in place, fly backward, and even fly upside down for brief moments. These abilities come at a cost: hovering burns energy faster than almost any other activity in the animal world. To fuel their flight, some hummingbirds visit hundreds of flowers a day and enter a sleeplike state called torpor at night, lowering their body temperature to conserve energy.",
+     "underlined": "These abilities come at a cost: hovering burns energy faster than almost any other activity in the animal world.",
+     "question": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "It introduces a challenge that the following sentence explains how hummingbirds meet.",
+       "explanation": "Correct. The high energy cost is a challenge; the next sentence explains feeding and torpor as responses."
+      },
+      {
+       "letter": "B",
+       "text": "It offers evidence that hummingbirds cannot actually fly backward.",
+       "explanation": "The first sentence states that they can."
+      },
+      {
+       "letter": "C",
+       "text": "It summarizes a scientific debate about how hummingbirds hover.",
+       "explanation": "No debate is described."
+      },
+      {
+       "letter": "D",
+       "text": "It compares hummingbirds with other birds that enter torpor.",
+       "explanation": "No other birds are discussed."
+      }
+     ],
+     "correct": "A",
+     "explanation": "Correct. The high energy cost is a challenge; the next sentence explains feeding and torpor as responses."
+    },
+    {
+     "id": "dcs-07",
+     "section": "rw",
+     "domain": "Craft and Structure",
+     "skill": "Text Structure and Purpose",
+     "difficulty": "hard",
+     "type": "mcq",
+     "passage": "For years, the town's residents assumed the old mill pond was polluted, since its water was often dark brown. When a local science class tested the water, however, the students found that it met every safety standard. The color, they discovered, came from tannins—natural compounds released by fallen leaves—rather than from any contaminant.",
+     "question": "Which choice best describes the overall structure of the text?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "It describes a problem and then proposes several solutions to it.",
+       "explanation": "No solutions are proposed; the \"problem\" turns out not to exist."
+      },
+      {
+       "letter": "B",
+       "text": "It compares two ponds and explains why one is cleaner than the other.",
+       "explanation": "Only one pond is discussed."
+      },
+      {
+       "letter": "C",
+       "text": "It presents a belief, describes an investigation, and reports a finding that corrects the belief.",
+       "explanation": "Correct. The text moves from the residents' assumption to the class's tests to the discovery that the color is natural."
+      },
+      {
+       "letter": "D",
+       "text": "It summarizes a debate between residents and scientists that remains unresolved.",
+       "explanation": "The question is resolved by the students' tests."
+      }
+     ],
+     "correct": "C",
+     "explanation": "Correct. The text moves from the residents' assumption to the class's tests to the discovery that the color is natural."
+    },
+    {
+     "id": "dcs-08",
+     "section": "rw",
+     "domain": "Craft and Structure",
+     "skill": "Cross-Text Connections",
+     "difficulty": "medium",
+     "type": "mcq",
+     "passage": null,
+     "texts": [
+      {
+       "label": "Text 1",
+       "body": "Some nutrition experts recommend eating many small meals throughout the day, arguing that frequent eating keeps metabolism active and helps people control their weight."
+      },
+      {
+       "label": "Text 2",
+       "body": "In a twelve-week study, nutrition researcher Elena Ruiz assigned participants either three meals or six smaller meals a day, with the same total calories. Both groups lost similar amounts of weight. Ruiz concludes that the total number of calories, not how they are divided, is what matters for weight control."
+      }
+     ],
+     "question": "Based on the texts, how would Ruiz (Text 2) most likely respond to the recommendation in Text 1?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "She would argue that people should eat only one meal a day.",
+       "explanation": "Ruiz did not test or recommend a single meal."
+      },
+      {
+       "letter": "B",
+       "text": "She would claim that eating six meals a day causes weight gain.",
+       "explanation": "Her study found similar weight loss in both groups."
+      },
+      {
+       "letter": "C",
+       "text": "She would question the idea that meal frequency by itself helps control weight.",
+       "explanation": "Correct. Her study found that dividing the same calories into more meals made no difference."
+      },
+      {
+       "letter": "D",
+       "text": "She would agree that frequent eating keeps metabolism active.",
+       "explanation": "Her conclusion rejects the idea that meal frequency matters."
+      }
+     ],
+     "correct": "C",
+     "explanation": "Correct. Her study found that dividing the same calories into more meals made no difference."
+    },
+    {
+     "id": "dcs-09",
+     "section": "rw",
+     "domain": "Craft and Structure",
+     "skill": "Cross-Text Connections",
+     "difficulty": "hard",
+     "type": "mcq",
+     "passage": null,
+     "texts": [
+      {
+       "label": "Text 1",
+       "body": "The ancient Greek historian Herodotus is often called the \"Father of History,\" but many modern scholars have dismissed his work as unreliable, pointing to the fantastic stories he included, such as reports of giant gold-digging ants."
+      },
+      {
+       "label": "Text 2",
+       "body": "Historian Jamal Reed argues that Herodotus's reputation deserves reconsideration. Herodotus frequently noted when he doubted a story, Reed observes, and archaeological discoveries have confirmed many of his accounts of distant peoples. Some of his strangest reports may even reflect real observations that were misunderstood: the \"gold-digging ants,\" for instance, may describe marmots in the Himalayas whose burrowing brought gold dust to the surface."
+      }
+     ],
+     "question": "Based on the texts, how would Reed (Text 2) most likely respond to the scholars discussed in Text 1?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "By arguing that their dismissal overlooks evidence that Herodotus was often careful and accurate",
+       "explanation": "Correct. Reed cites Herodotus's noted doubts, archaeological confirmation, and a plausible basis for the ant story."
+      },
+      {
+       "letter": "B",
+       "text": "By agreeing that Herodotus's work should not be used as a historical source",
+       "explanation": "Reed defends Herodotus's reliability."
+      },
+      {
+       "letter": "C",
+       "text": "By claiming that giant gold-digging ants once existed",
+       "explanation": "Reed suggests the story describes marmots, not giant ants."
+      },
+      {
+       "letter": "D",
+       "text": "By arguing that Herodotus should no longer be called the \"Father of History\"",
+       "explanation": "Reed supports Herodotus's reputation rather than rejecting the title."
+      }
+     ],
+     "correct": "A",
+     "explanation": "Correct. Reed cites Herodotus's noted doubts, archaeological confirmation, and a plausible basis for the ant story."
+    },
+    {
+     "id": "dcs-10",
+     "section": "rw",
+     "domain": "Craft and Structure",
+     "skill": "Words in Context",
+     "difficulty": "medium",
+     "type": "mcq",
+     "passage": "The museum's new exhibit is designed to be ______ to visitors of all ages, with simple labels for children, detailed audio guides for adults, and hands-on displays that require no prior knowledge.",
+     "question": "Which choice completes the text with the most logical and precise word or phrase?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "exclusive",
+       "explanation": "Exclusive means limited to a few, the opposite of \"visitors of all ages.\""
+      },
+      {
+       "letter": "B",
+       "text": "obscure",
+       "explanation": "Obscure means hard to understand or little known, contradicting the simple labels."
+      },
+      {
+       "letter": "C",
+       "text": "indifferent",
+       "explanation": "An exhibit cannot be indifferent, and the word does not fit the welcoming design."
+      },
+      {
+       "letter": "D",
+       "text": "accessible",
+       "explanation": "Correct. Features for every age and no required background make the exhibit accessible."
+      }
+     ],
+     "correct": "D",
+     "explanation": "Correct. Features for every age and no required background make the exhibit accessible."
+    }
+   ]
+  },
+  {
+   "id": "drill-rw-expr",
+   "section": "rw",
+   "domain": "Expression of Ideas",
+   "questions": [
+    {
+     "id": "dex-01",
+     "section": "rw",
+     "domain": "Expression of Ideas",
+     "skill": "Transitions",
+     "difficulty": "easy",
+     "type": "mcq",
+     "passage": "Penguins cannot fly. ______ they are excellent swimmers, using their flipper-like wings to reach speeds of up to 35 kilometers per hour underwater.",
+     "question": "Which choice completes the text with the most logical transition?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "However,",
+       "explanation": "Correct. Their swimming ability contrasts with their inability to fly."
+      },
+      {
+       "letter": "B",
+       "text": "Similarly,",
+       "explanation": "Swimming well is not similar to being unable to fly."
+      },
+      {
+       "letter": "C",
+       "text": "For example,",
+       "explanation": "Swimming is not an example of being unable to fly."
+      },
+      {
+       "letter": "D",
+       "text": "Therefore,",
+       "explanation": "Being unable to fly does not cause excellent swimming."
+      }
+     ],
+     "correct": "A",
+     "explanation": "Correct. Their swimming ability contrasts with their inability to fly."
+    },
+    {
+     "id": "dex-02",
+     "section": "rw",
+     "domain": "Expression of Ideas",
+     "skill": "Transitions",
+     "difficulty": "medium",
+     "type": "mcq",
+     "passage": "The city's new bike lanes are separated from traffic by concrete barriers. ______ cyclists report feeling much safer, and the number of people biking to work has nearly doubled.",
+     "question": "Which choice completes the text with the most logical transition?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "Nevertheless,",
+       "explanation": "Nothing in the second sentence contrasts with the first."
+      },
+      {
+       "letter": "B",
+       "text": "As a result,",
+       "explanation": "Correct. Feeling safer and more cycling follow from the protected lanes."
+      },
+      {
+       "letter": "C",
+       "text": "In contrast,",
+       "explanation": "There is no contrast."
+      },
+      {
+       "letter": "D",
+       "text": "Previously,",
+       "explanation": "The changes happened after the lanes were built, not before."
+      }
+     ],
+     "correct": "B",
+     "explanation": "Correct. Feeling safer and more cycling follow from the protected lanes."
+    },
+    {
+     "id": "dex-03",
+     "section": "rw",
+     "domain": "Expression of Ideas",
+     "skill": "Transitions",
+     "difficulty": "medium",
+     "type": "mcq",
+     "passage": "Some mushrooms are prized delicacies. Others, ______ are deadly: the death cap mushroom causes more fatal poisonings than any other species.",
+     "question": "Which choice completes the text with the most logical transition?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "by contrast,",
+       "explanation": "Correct. Deadly mushrooms contrast with prized delicacies."
+      },
+      {
+       "letter": "B",
+       "text": "for instance,",
+       "explanation": "The deadly mushrooms are not an example of delicacies."
+      },
+      {
+       "letter": "C",
+       "text": "moreover,",
+       "explanation": "\"Moreover\" adds a similar point, but this is a contrast."
+      },
+      {
+       "letter": "D",
+       "text": "consequently,",
+       "explanation": "Deadly mushrooms are not a result of others being delicacies."
+      }
+     ],
+     "correct": "A",
+     "explanation": "Correct. Deadly mushrooms contrast with prized delicacies."
+    },
+    {
+     "id": "dex-04",
+     "section": "rw",
+     "domain": "Expression of Ideas",
+     "skill": "Transitions",
+     "difficulty": "hard",
+     "type": "mcq",
+     "passage": "The first draft of the novel was nearly 900 pages long. The author's editor urged her to cut it in half. ______ she removed several subplots and dozens of minor characters, and the published book was just over 400 pages.",
+     "question": "Which choice completes the text with the most logical transition?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "Accordingly,",
+       "explanation": "Correct. The cuts were made in response to the editor's advice."
+      },
+      {
+       "letter": "B",
+       "text": "Instead,",
+       "explanation": "She did what the editor suggested, so \"instead\" is illogical."
+      },
+      {
+       "letter": "C",
+       "text": "Even so,",
+       "explanation": "\"Even so\" suggests she acted despite the advice, but she followed it."
+      },
+      {
+       "letter": "D",
+       "text": "Alternatively,",
+       "explanation": "She did not choose an alternative to the editor's suggestion."
+      }
+     ],
+     "correct": "A",
+     "explanation": "Correct. The cuts were made in response to the editor's advice."
+    },
+    {
+     "id": "dex-05",
+     "section": "rw",
+     "domain": "Expression of Ideas",
+     "skill": "Transitions",
+     "difficulty": "hard",
+     "type": "mcq",
+     "passage": "Many people believe that goldfish have a memory span of only a few seconds. Experiments tell a different story. ______ researchers have trained goldfish to push levers for food and found that the fish remembered the task months later.",
+     "question": "Which choice completes the text with the most logical transition?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "Similarly,",
+       "explanation": "The experiment contradicts the belief; it is not similar to it."
+      },
+      {
+       "letter": "B",
+       "text": "Specifically,",
+       "explanation": "Correct. The sentence gives specific details of the experiments that \"tell a different story.\""
+      },
+      {
+       "letter": "C",
+       "text": "Regardless,",
+       "explanation": "This suggests the experiments are irrelevant, which is not the case."
+      },
+      {
+       "letter": "D",
+       "text": "Meanwhile,",
+       "explanation": "The sentence does not describe something happening at the same time."
+      }
+     ],
+     "correct": "B",
+     "explanation": "Correct. The sentence gives specific details of the experiments that \"tell a different story.\""
+    },
+    {
+     "id": "dex-06",
+     "section": "rw",
+     "domain": "Expression of Ideas",
+     "skill": "Rhetorical Synthesis",
+     "difficulty": "easy",
+     "type": "mcq",
+     "passage": "While researching a topic, a student has taken the following notes:",
+     "notes": [
+      "Mount Kilimanjaro is in Tanzania.",
+      "It is the highest mountain in Africa.",
+      "Its summit is 5,895 meters above sea level.",
+      "Climbers usually take five to nine days to reach the summit."
+     ],
+     "question": "The student wants to state where Mount Kilimanjaro is located. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "Mount Kilimanjaro, the highest mountain in Africa, is 5,895 meters tall.",
+       "explanation": "This gives height, not location."
+      },
+      {
+       "letter": "B",
+       "text": "Climbers usually take five to nine days to reach the summit of Mount Kilimanjaro.",
+       "explanation": "This gives climbing time, not location."
+      },
+      {
+       "letter": "C",
+       "text": "Mount Kilimanjaro is located in Tanzania.",
+       "explanation": "Correct. It directly states the location."
+      },
+      {
+       "letter": "D",
+       "text": "Mount Kilimanjaro's summit is higher than that of any other mountain in Africa.",
+       "explanation": "This compares height, not location."
+      }
+     ],
+     "correct": "C",
+     "explanation": "Correct. It directly states the location."
+    },
+    {
+     "id": "dex-07",
+     "section": "rw",
+     "domain": "Expression of Ideas",
+     "skill": "Rhetorical Synthesis",
+     "difficulty": "medium",
+     "type": "mcq",
+     "passage": "While researching a topic, a student has taken the following notes:",
+     "notes": [
+      "Marie Curie and Dorothy Hodgkin were both chemists.",
+      "Curie won the Nobel Prize in Chemistry in 1911 for discovering radium and polonium.",
+      "Hodgkin won the Nobel Prize in Chemistry in 1964 for determining the structures of important molecules, including vitamin B12.",
+      "Hodgkin used a technique called X-ray crystallography."
+     ],
+     "question": "The student wants to emphasize a similarity between Curie and Hodgkin. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "Curie discovered radium and polonium, while Hodgkin determined the structure of vitamin B12.",
+       "explanation": "This emphasizes their different achievements."
+      },
+      {
+       "letter": "B",
+       "text": "Hodgkin used X-ray crystallography to determine the structures of molecules.",
+       "explanation": "This is only about Hodgkin."
+      },
+      {
+       "letter": "C",
+       "text": "Curie won her Nobel Prize in 1911, more than fifty years before Hodgkin won hers.",
+       "explanation": "This emphasizes a difference in time."
+      },
+      {
+       "letter": "D",
+       "text": "Both Curie and Hodgkin were chemists who won the Nobel Prize in Chemistry.",
+       "explanation": "Correct. It states what they have in common."
+      }
+     ],
+     "correct": "D",
+     "explanation": "Correct. It states what they have in common."
+    },
+    {
+     "id": "dex-08",
+     "section": "rw",
+     "domain": "Expression of Ideas",
+     "skill": "Rhetorical Synthesis",
+     "difficulty": "hard",
+     "type": "mcq",
+     "passage": "While researching a topic, a student has taken the following notes:",
+     "notes": [
+      "Researchers studied two groups of students preparing for an exam.",
+      "Group 1 reread their notes for one hour.",
+      "Group 2 spent one hour testing themselves with practice questions.",
+      "On the exam a week later, Group 2 scored an average of 18 percentage points higher than Group 1.",
+      "This effect is known as the testing effect."
+     ],
+     "question": "The student wants to present the study's finding to an audience unfamiliar with the testing effect. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "The testing effect was observed in a study of students preparing for an exam.",
+       "explanation": "This names the effect without explaining what it is or what was found."
+      },
+      {
+       "letter": "B",
+       "text": "Group 2 scored 18 percentage points higher than Group 1.",
+       "explanation": "Without explaining the groups, this is unclear to a new audience."
+      },
+      {
+       "letter": "C",
+       "text": "In a study, students who spent an hour testing themselves scored 18 points higher a week later than students who spent an hour rereading notes, a pattern called the testing effect.",
+       "explanation": "Correct. It explains the comparison, the result, and the name of the effect for a new audience."
+      },
+      {
+       "letter": "D",
+       "text": "Students in Group 1 reread their notes for one hour.",
+       "explanation": "This describes one group only."
+      }
+     ],
+     "correct": "C",
+     "explanation": "Correct. It explains the comparison, the result, and the name of the effect for a new audience."
+    },
+    {
+     "id": "dex-09",
+     "section": "rw",
+     "domain": "Expression of Ideas",
+     "skill": "Rhetorical Synthesis",
+     "difficulty": "hard",
+     "type": "mcq",
+     "passage": "While researching a topic, a student has taken the following notes:",
+     "notes": [
+      "The Mariana Trench is in the western Pacific Ocean.",
+      "Its deepest point, the Challenger Deep, is about 10,900 meters below sea level.",
+      "Mount Everest is about 8,850 meters above sea level.",
+      "If Everest were placed in the Challenger Deep, its peak would still be about 2,000 meters underwater."
+     ],
+     "question": "The student wants to emphasize how deep the Challenger Deep is using a comparison. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "The Challenger Deep, the deepest point of the Mariana Trench, is in the western Pacific Ocean.",
+       "explanation": "This gives location only, with no comparison."
+      },
+      {
+       "letter": "B",
+       "text": "So deep is the Challenger Deep that if Mount Everest were placed inside it, Everest's peak would still lie about 2,000 meters underwater.",
+       "explanation": "Correct. The Everest comparison vividly emphasizes the depth."
+      },
+      {
+       "letter": "C",
+       "text": "Mount Everest is about 8,850 meters above sea level.",
+       "explanation": "This gives Everest's height without relating it to the trench."
+      },
+      {
+       "letter": "D",
+       "text": "The Mariana Trench's deepest point is about 10,900 meters below sea level.",
+       "explanation": "This states the depth but makes no comparison."
+      }
+     ],
+     "correct": "B",
+     "explanation": "Correct. The Everest comparison vividly emphasizes the depth."
+    },
+    {
+     "id": "dex-10",
+     "section": "rw",
+     "domain": "Expression of Ideas",
+     "skill": "Transitions",
+     "difficulty": "hard",
+     "type": "mcq",
+     "passage": "Early telescopes produced images with colored fringes because their lenses bent different colors of light by different amounts. Isaac Newton tried to solve this problem by designing a telescope that used a curved mirror instead of a lens. ______ mirrors reflect all colors at the same angle, his design produced much sharper images.",
+     "question": "Which choice completes the text with the most logical transition?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "Although",
+       "explanation": "The mirror's property explains, rather than contrasts with, the sharper images."
+      },
+      {
+       "letter": "B",
+       "text": "Unless",
+       "explanation": "\"Unless\" sets a condition that makes no sense here."
+      },
+      {
+       "letter": "C",
+       "text": "Whereas",
+       "explanation": "\"Whereas\" signals contrast, but the clause gives a cause."
+      },
+      {
+       "letter": "D",
+       "text": "Because",
+       "explanation": "Correct. Mirrors reflecting all colors equally is the reason the images were sharper."
+      }
+     ],
+     "correct": "D",
+     "explanation": "Correct. Mirrors reflecting all colors equally is the reason the images were sharper."
+    }
+   ]
+  },
+  {
+   "id": "drill-rw-info",
+   "section": "rw",
+   "domain": "Information and Ideas",
+   "questions": [
+    {
+     "id": "dii-01",
+     "section": "rw",
+     "domain": "Information and Ideas",
+     "skill": "Central Ideas and Details",
+     "difficulty": "easy",
+     "type": "mcq",
+     "passage": "Sea otters often wrap themselves in strands of kelp, a large seaweed, before going to sleep. The kelp keeps the otters from drifting away on ocean currents while they rest. Groups of otters sometimes even hold paws as they float, forming a raft that stays together through the night.",
+     "question": "Which choice best states the main idea of the text?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "Sea otters eat kelp as their main source of food.",
+       "explanation": "The text describes using kelp as an anchor, not as food."
+      },
+      {
+       "letter": "B",
+       "text": "Ocean currents are strongest at night.",
+       "explanation": "The text does not compare currents by time of day."
+      },
+      {
+       "letter": "C",
+       "text": "Sea otters use kelp and one another to avoid drifting while they sleep.",
+       "explanation": "Correct. Both details describe ways otters stay in place while resting."
+      },
+      {
+       "letter": "D",
+       "text": "Sea otters sleep on land to stay safe from predators.",
+       "explanation": "The otters sleep floating in the water."
+      }
+     ],
+     "correct": "C",
+     "explanation": "Correct. Both details describe ways otters stay in place while resting."
+    },
+    {
+     "id": "dii-02",
+     "section": "rw",
+     "domain": "Information and Ideas",
+     "skill": "Central Ideas and Details",
+     "difficulty": "medium",
+     "type": "mcq",
+     "passage": "The following text is from a novel. Hana is waiting for her grandfather at a train station.\nThe train was late. Hana checked the board again, though it had not changed, and smoothed the paper sign she had made with his name in careful letters. She had not seen him in nine years. She wondered whether she would recognize him, and then, with a small jolt, whether he would recognize her.",
+     "question": "Which choice best describes what happens in the text?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "Hana waits anxiously for a relative she has not seen in many years.",
+       "explanation": "Correct. Rechecking the board, smoothing her sign, and wondering about recognition all show nervous anticipation."
+      },
+      {
+       "letter": "B",
+       "text": "Hana decides to leave the station because the train is late.",
+       "explanation": "She keeps waiting."
+      },
+      {
+       "letter": "C",
+       "text": "Hana meets her grandfather and is surprised by how he has changed.",
+       "explanation": "He has not yet arrived."
+      },
+      {
+       "letter": "D",
+       "text": "Hana argues with station staff about the train's delay.",
+       "explanation": "No conversation with staff occurs."
+      }
+     ],
+     "correct": "A",
+     "explanation": "Correct. Rechecking the board, smoothing her sign, and wondering about recognition all show nervous anticipation."
+    },
+    {
+     "id": "dii-03",
+     "section": "rw",
+     "domain": "Information and Ideas",
+     "skill": "Command of Evidence: Textual",
+     "difficulty": "medium",
+     "type": "mcq",
+     "passage": "Botanist Grace Liu hypothesizes that a certain vine climbs toward shade, rather than toward light, when it is young, because shade usually indicates the presence of a tree trunk it can climb.",
+     "question": "Which finding, if true, would most strongly support Liu's hypothesis?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "Mature vines of the species produce flowers only in full sunlight.",
+       "explanation": "This concerns mature vines and flowering, not young vines' direction of growth."
+      },
+      {
+       "letter": "B",
+       "text": "The vine grows faster in warm weather than in cold weather.",
+       "explanation": "Temperature is unrelated to the hypothesis."
+      },
+      {
+       "letter": "C",
+       "text": "Some vines of the species grow along the ground without climbing.",
+       "explanation": "This does not address whether young vines grow toward shade."
+      },
+      {
+       "letter": "D",
+       "text": "Young vines of the species grow toward dark-colored poles placed beside them, even when brighter areas are nearby.",
+       "explanation": "Correct. Growing toward darker objects over brighter areas fits the claim that young vines seek shade to find something to climb."
+      }
+     ],
+     "correct": "D",
+     "explanation": "Correct. Growing toward darker objects over brighter areas fits the claim that young vines seek shade to find something to climb."
+    },
+    {
+     "id": "dii-04",
+     "section": "rw",
+     "domain": "Information and Ideas",
+     "skill": "Command of Evidence: Textual",
+     "difficulty": "hard",
+     "type": "mcq",
+     "passage": "In a novel set in a fishing village, the narrator's mother is described as someone who hides her worry behind practical activity. A critic argues that this trait is most evident when the narrator's father is late returning from sea.",
+     "question": "Which quotation from the novel most effectively illustrates the critic's claim?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "\"Mother said the sea had been calm all week, and that Father would bring home a fine catch.\"",
+       "explanation": "This shows optimism, not worry hidden behind activity."
+      },
+      {
+       "letter": "B",
+       "text": "\"When the boats came in without Father's, Mother scrubbed the already-clean floor twice and then began mending nets that did not need mending.\"",
+       "explanation": "Correct. Unnecessary chores while Father is late show worry expressed through practical activity."
+      },
+      {
+       "letter": "C",
+       "text": "\"Mother had grown up in the village and knew every family by name.\"",
+       "explanation": "This is background, unrelated to worry."
+      },
+      {
+       "letter": "D",
+       "text": "\"Father always said that Mother was the best cook on the coast.\"",
+       "explanation": "This concerns cooking praise, not the father's lateness."
+      }
+     ],
+     "correct": "B",
+     "explanation": "Correct. Unnecessary chores while Father is late show worry expressed through practical activity."
+    },
+    {
+     "id": "dii-05",
+     "section": "rw",
+     "domain": "Information and Ideas",
+     "skill": "Command of Evidence: Quantitative",
+     "difficulty": "medium",
+     "type": "mcq",
+     "passage": "A student claims that City X and City Y have opposite rainy seasons, with one wettest in winter and the other wettest in summer. To support this claim, the student notes that ______",
+     "tableTitle": "Average Monthly Rainfall in Two Cities (millimeters)",
+     "table": {
+      "columns": [
+       "Month",
+       "City X",
+       "City Y"
+      ],
+      "rows": [
+       [
+        "January",
+        "120",
+        "40"
+       ],
+       [
+        "April",
+        "80",
+        "60"
+       ],
+       [
+        "July",
+        "20",
+        "110"
+       ],
+       [
+        "October",
+        "90",
+        "70"
+       ]
+      ]
+     },
+     "question": "Which choice most effectively uses data from the table to complete the statement?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "City X receives 80 mm of rain in April, while City Y receives 60 mm.",
+       "explanation": "April figures are similar and do not show opposite seasons."
+      },
+      {
+       "letter": "B",
+       "text": "City X receives 90 mm of rain in October.",
+       "explanation": "This gives only one city and one month."
+      },
+      {
+       "letter": "C",
+       "text": "Both cities receive some rain in every month shown.",
+       "explanation": "This is a similarity, not a contrast."
+      },
+      {
+       "letter": "D",
+       "text": "City X receives 120 mm in January but only 20 mm in July, while City Y receives 40 mm in January and 110 mm in July.",
+       "explanation": "Correct. These figures show X is wettest in winter and Y in summer."
+      }
+     ],
+     "correct": "D",
+     "explanation": "Correct. These figures show X is wettest in winter and Y in summer."
+    },
+    {
+     "id": "dii-06",
+     "section": "rw",
+     "domain": "Information and Ideas",
+     "skill": "Command of Evidence: Quantitative",
+     "difficulty": "hard",
+     "type": "mcq",
+     "passage": "A researcher concluded that age makes a large difference in how often people use some news sources but little difference for others.",
+     "tableTitle": "Share of Respondents Who Read News from Each Source at Least Weekly",
+     "table": {
+      "columns": [
+       "Source",
+       "Ages 18–29",
+       "Ages 30–49",
+       "Ages 50+"
+      ],
+      "rows": [
+       [
+        "Social media",
+        "72%",
+        "58%",
+        "34%"
+       ],
+       [
+        "News websites",
+        "45%",
+        "52%",
+        "49%"
+       ],
+       [
+        "Printed newspapers",
+        "8%",
+        "15%",
+        "38%"
+       ]
+      ]
+     },
+     "question": "Which choice best describes data from the table that support the researcher's conclusion?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "Printed newspapers are the least-used source among respondents aged 18–29.",
+       "explanation": "This describes one age group and does not compare variation across sources."
+      },
+      {
+       "letter": "B",
+       "text": "More respondents aged 30–49 use news websites than printed newspapers.",
+       "explanation": "This compares sources within one group."
+      },
+      {
+       "letter": "C",
+       "text": "Social media use falls from 72% to 34% across the age groups, while news website use stays between 45% and 52%.",
+       "explanation": "Correct. One source varies greatly by age, and another stays nearly constant, matching \"large difference for some, little for others.\""
+      },
+      {
+       "letter": "D",
+       "text": "Social media is the most-used source for respondents aged 18–29 and 30–49.",
+       "explanation": "This does not show which sources vary little with age."
+      }
+     ],
+     "correct": "C",
+     "explanation": "Correct. One source varies greatly by age, and another stays nearly constant, matching \"large difference for some, little for others.\""
+    },
+    {
+     "id": "dii-07",
+     "section": "rw",
+     "domain": "Information and Ideas",
+     "skill": "Inferences",
+     "difficulty": "medium",
+     "type": "mcq",
+     "passage": "A bakery found that its sales of whole-grain bread rose sharply in the months after it began offering free samples near the entrance. During the same period, sales of its other breads stayed about the same, and the bakery did not change its prices or advertising. This suggests that ______",
+     "question": "Which choice most logically completes the text?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "the free samples likely contributed to the increase in whole-grain bread sales.",
+       "explanation": "Correct. The only change was the samples, and only the sampled bread's sales rose."
+      },
+      {
+       "letter": "B",
+       "text": "customers had stopped buying bread from other bakeries.",
+       "explanation": "There is no information about other bakeries."
+      },
+      {
+       "letter": "C",
+       "text": "the bakery's other breads were too expensive.",
+       "explanation": "Prices did not change, and other sales were steady."
+      },
+      {
+       "letter": "D",
+       "text": "whole-grain bread is the healthiest bread the bakery sells.",
+       "explanation": "Health is not discussed."
+      }
+     ],
+     "correct": "A",
+     "explanation": "Correct. The only change was the samples, and only the sampled bread's sales rose."
+    },
+    {
+     "id": "dii-08",
+     "section": "rw",
+     "domain": "Information and Ideas",
+     "skill": "Inferences",
+     "difficulty": "hard",
+     "type": "mcq",
+     "passage": "Fossilized pollen grains preserved in lake sediments can reveal which plants grew near a lake in the past. In one lake, sediment layers from about 6,000 years ago contain abundant oak and elm pollen, while layers from about 4,000 years ago contain much less tree pollen and large amounts of grass and cereal pollen. Archaeologists working nearby have found that farming settlements appeared in the region about 4,500 years ago. Taken together, these findings suggest that ______",
+     "question": "Which choice most logically completes the text?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "early farmers may have cleared forests near the lake to grow crops.",
+       "explanation": "Correct. The shift from tree pollen to grass and cereal pollen soon after farming began suggests forest clearing for agriculture."
+      },
+      {
+       "letter": "B",
+       "text": "oak and elm trees could not grow near the lake because of changes in climate.",
+       "explanation": "The text gives no climate evidence; the timing points to human activity."
+      },
+      {
+       "letter": "C",
+       "text": "the lake dried up about 4,000 years ago.",
+       "explanation": "Sediment continued to accumulate, so the lake still existed."
+      },
+      {
+       "letter": "D",
+       "text": "cereal crops were first domesticated near this lake.",
+       "explanation": "The findings do not show where cereals were first domesticated."
+      }
+     ],
+     "correct": "A",
+     "explanation": "Correct. The shift from tree pollen to grass and cereal pollen soon after farming began suggests forest clearing for agriculture."
+    },
+    {
+     "id": "dii-09",
+     "section": "rw",
+     "domain": "Information and Ideas",
+     "skill": "Central Ideas and Details",
+     "difficulty": "hard",
+     "type": "mcq",
+     "passage": "Many people assume that animals living in cities are simply tolerating a harsh environment. But researchers increasingly find that urban populations are evolving. City-dwelling lizards in Puerto Rico have developed longer limbs and stickier toe pads that help them grip smooth walls, and some urban plants produce seeds that fall close to the parent rather than drifting onto pavement. Cities, these findings suggest, are not just places where wildlife survives—they are places where wildlife adapts.",
+     "question": "Which choice best states the main idea of the text?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "Urban environments are too harsh for most animals to survive.",
+       "explanation": "The text says animals do survive and even adapt."
+      },
+      {
+       "letter": "B",
+       "text": "Some species are evolving traits that suit them to life in cities.",
+       "explanation": "Correct. The lizard and plant examples support the final point that wildlife adapts to cities."
+      },
+      {
+       "letter": "C",
+       "text": "Lizards in Puerto Rico are better climbers than lizards anywhere else.",
+       "explanation": "The text compares urban and nonurban lizards, not lizards worldwide."
+      },
+      {
+       "letter": "D",
+       "text": "Plants in cities produce fewer seeds than plants in rural areas.",
+       "explanation": "The text concerns where seeds fall, not how many there are."
+      }
+     ],
+     "correct": "B",
+     "explanation": "Correct. The lizard and plant examples support the final point that wildlife adapts to cities."
+    },
+    {
+     "id": "dii-10",
+     "section": "rw",
+     "domain": "Information and Ideas",
+     "skill": "Command of Evidence: Textual",
+     "difficulty": "hard",
+     "type": "mcq",
+     "passage": "Sociologist Omar Haddad claims that people are more likely to recycle when recycling bins are placed right next to trash cans than when the bins are placed elsewhere.",
+     "question": "Which finding, if true, would most directly support Haddad's claim?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "Most people say they believe recycling is important for the environment.",
+       "explanation": "Beliefs are not behavior, and bin placement is not mentioned."
+      },
+      {
+       "letter": "B",
+       "text": "In an office building, the amount of recycled paper rose after recycling bins were moved from a hallway to positions beside each trash can.",
+       "explanation": "Correct. Moving bins next to trash cans increased recycling, directly supporting the claim."
+      },
+      {
+       "letter": "C",
+       "text": "Recycling bins are more expensive to maintain than trash cans.",
+       "explanation": "Cost does not address recycling behavior."
+      },
+      {
+       "letter": "D",
+       "text": "People recycle more plastic bottles than glass bottles.",
+       "explanation": "Material types are unrelated to bin placement."
+      }
+     ],
+     "correct": "B",
+     "explanation": "Correct. Moving bins next to trash cans increased recycling, directly supporting the claim."
+    }
+   ]
+  },
+  {
+   "id": "drill-rw-sec",
+   "section": "rw",
+   "domain": "Standard English Conventions",
+   "questions": [
+    {
+     "id": "dsec-01",
+     "section": "rw",
+     "domain": "Standard English Conventions",
+     "skill": "Boundaries",
+     "difficulty": "easy",
+     "type": "mcq",
+     "passage": "Jupiter is the largest planet in our solar ______ more than 1,300 Earths could fit inside it.",
+     "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "system,",
+       "explanation": "This is a comma splice."
+      },
+      {
+       "letter": "B",
+       "text": "system;",
+       "explanation": "Correct. A semicolon joins two related independent clauses."
+      },
+      {
+       "letter": "C",
+       "text": "system",
+       "explanation": "This creates a run-on."
+      },
+      {
+       "letter": "D",
+       "text": "system, and,",
+       "explanation": "The comma after \"and\" is incorrect."
+      }
+     ],
+     "correct": "B",
+     "explanation": "Correct. A semicolon joins two related independent clauses."
+    },
+    {
+     "id": "dsec-02",
+     "section": "rw",
+     "domain": "Standard English Conventions",
+     "skill": "Boundaries",
+     "difficulty": "medium",
+     "type": "mcq",
+     "passage": "The poet Joy Harjo, who served three terms as US Poet ______ often draws on the traditions of the Muscogee Nation in her work.",
+     "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "Laureate,",
+       "explanation": "Correct. The comma closes the nonessential clause \"who served three terms as US Poet Laureate.\""
+      },
+      {
+       "letter": "B",
+       "text": "Laureate",
+       "explanation": "The nonessential clause opened with a comma must be closed with a comma."
+      },
+      {
+       "letter": "C",
+       "text": "Laureate;",
+       "explanation": "A semicolon cannot separate a subject from its verb."
+      },
+      {
+       "letter": "D",
+       "text": "Laureate—",
+       "explanation": "A dash cannot close a clause opened with a comma."
+      }
+     ],
+     "correct": "A",
+     "explanation": "Correct. The comma closes the nonessential clause \"who served three terms as US Poet Laureate.\""
+    },
+    {
+     "id": "dsec-03",
+     "section": "rw",
+     "domain": "Standard English Conventions",
+     "skill": "Boundaries",
+     "difficulty": "medium",
+     "type": "mcq",
+     "passage": "The recipe calls for only one unusual ______ a teaspoon of smoked paprika.",
+     "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "ingredient;",
+       "explanation": "A semicolon must be followed by an independent clause."
+      },
+      {
+       "letter": "B",
+       "text": "ingredient:",
+       "explanation": "Correct. A colon after a complete clause introduces the item that explains it."
+      },
+      {
+       "letter": "C",
+       "text": "ingredient, which",
+       "explanation": "This turns the phrase into an incomplete relative clause."
+      },
+      {
+       "letter": "D",
+       "text": "ingredient.",
+       "explanation": "This leaves \"A teaspoon of smoked paprika.\" as a fragment."
+      }
+     ],
+     "correct": "B",
+     "explanation": "Correct. A colon after a complete clause introduces the item that explains it."
+    },
+    {
+     "id": "dsec-04",
+     "section": "rw",
+     "domain": "Standard English Conventions",
+     "skill": "Boundaries",
+     "difficulty": "hard",
+     "type": "mcq",
+     "passage": "When the first public libraries opened in the United ______ many readers who could not afford to buy books gained access to them for the first time.",
+     "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "States;",
+       "explanation": "A semicolon cannot follow an introductory dependent clause."
+      },
+      {
+       "letter": "B",
+       "text": "States:",
+       "explanation": "A colon must follow an independent clause."
+      },
+      {
+       "letter": "C",
+       "text": "States.",
+       "explanation": "This leaves the dependent clause as a fragment."
+      },
+      {
+       "letter": "D",
+       "text": "States,",
+       "explanation": "Correct. A comma separates the introductory dependent clause (\"When...States\") from the main clause."
+      }
+     ],
+     "correct": "D",
+     "explanation": "Correct. A comma separates the introductory dependent clause (\"When...States\") from the main clause."
+    },
+    {
+     "id": "dsec-05",
+     "section": "rw",
+     "domain": "Standard English Conventions",
+     "skill": "Boundaries",
+     "difficulty": "hard",
+     "type": "mcq",
+     "passage": "Architect I. M. Pei designed the glass pyramid at the ______ the structure was controversial when it opened in 1989 but is now one of the most recognizable landmarks in Paris.",
+     "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "Louvre;",
+       "explanation": "Correct. A semicolon joins the two independent clauses."
+      },
+      {
+       "letter": "B",
+       "text": "Louvre,",
+       "explanation": "This creates a comma splice."
+      },
+      {
+       "letter": "C",
+       "text": "Louvre",
+       "explanation": "This creates a run-on."
+      },
+      {
+       "letter": "D",
+       "text": "Louvre, which",
+       "explanation": "This makes \"the structure was controversial\" ungrammatical after \"which.\""
+      }
+     ],
+     "correct": "A",
+     "explanation": "Correct. A semicolon joins the two independent clauses."
+    },
+    {
+     "id": "dsec-06",
+     "section": "rw",
+     "domain": "Standard English Conventions",
+     "skill": "Form, Structure, and Sense",
+     "difficulty": "easy",
+     "type": "mcq",
+     "passage": "The team of researchers ______ published its findings in a leading medical journal last month.",
+     "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "have",
+       "explanation": "\"Team\" is singular, so \"have\" does not agree."
+      },
+      {
+       "letter": "B",
+       "text": "were",
+       "explanation": "\"Were\" is plural and does not fit \"published.\""
+      },
+      {
+       "letter": "C",
+       "text": "has",
+       "explanation": "Correct. The singular subject \"team\" takes \"has,\" matching \"its.\""
+      },
+      {
+       "letter": "D",
+       "text": "are",
+       "explanation": "\"Are\" is plural and does not agree with \"team.\""
+      }
+     ],
+     "correct": "C",
+     "explanation": "Correct. The singular subject \"team\" takes \"has,\" matching \"its.\""
+    },
+    {
+     "id": "dsec-07",
+     "section": "rw",
+     "domain": "Standard English Conventions",
+     "skill": "Form, Structure, and Sense",
+     "difficulty": "medium",
+     "type": "mcq",
+     "passage": "By the time the rescue team arrived, the hikers ______ for almost two days without food.",
+     "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "waited",
+       "explanation": "The action continued up to a past moment, which calls for the past perfect progressive."
+      },
+      {
+       "letter": "B",
+       "text": "are waiting",
+       "explanation": "Present tense conflicts with \"arrived.\""
+      },
+      {
+       "letter": "C",
+       "text": "had been waiting",
+       "explanation": "Correct. The past perfect progressive shows an action continuing up to another past event."
+      },
+      {
+       "letter": "D",
+       "text": "will wait",
+       "explanation": "Future tense conflicts with the past context."
+      }
+     ],
+     "correct": "C",
+     "explanation": "Correct. The past perfect progressive shows an action continuing up to another past event."
+    },
+    {
+     "id": "dsec-08",
+     "section": "rw",
+     "domain": "Standard English Conventions",
+     "skill": "Form, Structure, and Sense",
+     "difficulty": "medium",
+     "type": "mcq",
+     "passage": "The novel's two main characters, a lighthouse keeper and a sailor, meet only briefly, but ______ conversation shapes the rest of the story.",
+     "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "their",
+       "explanation": "Correct. \"Their\" refers to the two characters (plural) and shows possession."
+      },
+      {
+       "letter": "B",
+       "text": "its",
+       "explanation": "\"Its\" is singular and cannot refer to two characters."
+      },
+      {
+       "letter": "C",
+       "text": "they're",
+       "explanation": "\"They're\" means \"they are.\""
+      },
+      {
+       "letter": "D",
+       "text": "there",
+       "explanation": "\"There\" indicates a place, not possession."
+      }
+     ],
+     "correct": "A",
+     "explanation": "Correct. \"Their\" refers to the two characters (plural) and shows possession."
+    },
+    {
+     "id": "dsec-09",
+     "section": "rw",
+     "domain": "Standard English Conventions",
+     "skill": "Form, Structure, and Sense",
+     "difficulty": "hard",
+     "type": "mcq",
+     "passage": "Walking through the ancient city of Petra, ______",
+     "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "the rose-colored stone buildings carved into the cliffs amazed the visitors.",
+       "explanation": "The buildings were not walking; the modifier dangles."
+      },
+      {
+       "letter": "B",
+       "text": "amazement at the rose-colored stone buildings carved into the cliffs filled the visitors.",
+       "explanation": "Amazement cannot walk; the modifier dangles."
+      },
+      {
+       "letter": "C",
+       "text": "it was amazing to the visitors to see the rose-colored stone buildings carved into the cliffs.",
+       "explanation": "\"It\" is not the one walking; the modifier dangles."
+      },
+      {
+       "letter": "D",
+       "text": "the visitors were amazed by the rose-colored stone buildings carved into the cliffs.",
+       "explanation": "Correct. \"Walking through... Petra\" correctly describes the visitors."
+      }
+     ],
+     "correct": "D",
+     "explanation": "Correct. \"Walking through... Petra\" correctly describes the visitors."
+    },
+    {
+     "id": "dsec-10",
+     "section": "rw",
+     "domain": "Standard English Conventions",
+     "skill": "Form, Structure, and Sense",
+     "difficulty": "hard",
+     "type": "mcq",
+     "passage": "The findings from the two satellite missions, which measured the ice sheet's thickness over a decade, ______ that the ice is thinning faster than scientists had predicted.",
+     "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+     "options": [
+      {
+       "letter": "A",
+       "text": "suggests",
+       "explanation": "The subject is \"findings,\" which is plural; \"suggests\" is singular."
+      },
+      {
+       "letter": "B",
+       "text": "suggest",
+       "explanation": "Correct. The plural subject \"findings\" takes the plural verb \"suggest\"; the clause between commas does not change the subject."
+      },
+      {
+       "letter": "C",
+       "text": "is suggesting",
+       "explanation": "\"Is\" is singular and does not agree with \"findings.\""
+      },
+      {
+       "letter": "D",
+       "text": "has suggested",
+       "explanation": "\"Has\" is singular and does not agree with \"findings.\""
+      }
+     ],
+     "correct": "B",
+     "explanation": "Correct. The plural subject \"findings\" takes the plural verb \"suggest\"; the clause between commas does not change the subject."
+    }
+   ]
+  }
+ ]
+}
