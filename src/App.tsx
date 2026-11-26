@@ -9,6 +9,7 @@ import {
   SectionBEssayRecord,
 } from './types';
 import { ALL_QUESTIONS, PASSAGES } from './data/passages';
+import { TEST_BY_ID, TestId } from './data/allTests';
 import { fetchAttempts, fetchEssays, saveAttempt, saveEssay } from './lib/api';
 import { LandingView } from './components/LandingView';
 import { Navbar } from './components/Navbar';
@@ -16,12 +17,14 @@ import { PracticeHub } from './components/PracticeHub';
 import { ExamSimulator } from './components/ExamSimulator';
 import { ResultsView } from './components/ResultsView';
 import { EssayStudio } from './components/EssayStudio';
-import { StudyPlanView } from './components/StudyPlanView';
 import { OfficialResourcesView } from './components/OfficialResourcesView';
-import { AllTestsView } from './components/AllTestsView';
 import { ProgressView } from './components/ProgressView';
-import { PricingView } from './components/PricingView';
-import { CommandPalette } from './components/CommandPalette';
+import {
+  GenericAttempt,
+  UniversalTestView,
+  loadGenericAttempts,
+  saveGenericAttempt,
+} from './components/TestWorkspace';
 
 function getInitialTheme(): 'light' | 'dark' {
   try {
@@ -33,15 +36,23 @@ function getInitialTheme(): 'light' | 'dark' {
   return 'dark';
 }
 
+type SubTab = 'practice' | 'resources' | 'progress';
+
 export const App: React.FC = () => {
-  const [view, setView] = useState<AppView>('welcome');
+  const [onWelcome, setOnWelcome] = useState(true);
+  const [activeTest, setActiveTest] = useState<TestId>('lnat');
+  const [subTab, setSubTab] = useState<SubTab>('practice');
+  const [lnatSection, setLnatSection] = useState<'A' | 'B'>('A');
+
   const [theme, setTheme] = useState<'light' | 'dark'>(() => getInitialTheme());
-  const [paletteOpen, setPaletteOpen] = useState(false);
   const [activeExam, setActiveExam] = useState<ActiveExamConfig | null>(null);
   const [lastAttempt, setLastAttempt] = useState<SectionAAttempt | null>(null);
   const [lastQuestions, setLastQuestions] = useState<LnatQuestion[]>([]);
   const [attempts, setAttempts] = useState<SectionAAttempt[]>([]);
   const [essays, setEssays] = useState<SectionBEssayRecord[]>([]);
+  const [genericAttempts, setGenericAttempts] = useState<GenericAttempt[]>(() =>
+    loadGenericAttempts()
+  );
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
@@ -53,36 +64,31 @@ export const App: React.FC = () => {
   }, [theme]);
 
   useEffect(() => {
-    const onKeyDown = (e: KeyboardEvent) => {
-      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
-        e.preventDefault();
-        setPaletteOpen((prev) => !prev);
-      }
-    };
-    window.addEventListener('keydown', onKeyDown);
-    return () => window.removeEventListener('keydown', onKeyDown);
-  }, []);
-
-  useEffect(() => {
     fetchAttempts().then(setAttempts);
     fetchEssays().then(setEssays);
   }, []);
 
-  const handleNavigate = (next: AppView) => {
-    setView(next === 'home' ? 'practice' : next);
+  const handleSelectTest = (testId: TestId) => {
+    setActiveTest(testId);
+    setOnWelcome(false);
+    setActiveExam(null);
+    setLastAttempt(null);
+    setSubTab('practice');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleStartExam = (config: ActiveExamConfig) => {
+    setActiveTest('lnat');
+    setOnWelcome(false);
     setActiveExam(config);
-    setView('exam');
+    setLastAttempt(null);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleStartDiagnostic = () => {
     handleStartExam({
       mode: 'diagnostic',
-      label: 'Free LNAT Diagnostic',
+      label: 'LNAT Diagnostic (8 Qs)',
       timeLimitSeconds: 15 * 60,
       passageIds: PASSAGES.filter((p) => p.freeTier).map((p) => p.id),
     });
@@ -121,10 +127,10 @@ export const App: React.FC = () => {
   };
 
   const handleCompleteExam = async (attempt: SectionAAttempt, questions: LnatQuestion[]) => {
+    setActiveExam(null);
     setLastAttempt(attempt);
     setLastQuestions(questions);
     setAttempts((prev) => [attempt, ...prev]);
-    setView('results');
     window.scrollTo({ top: 0, behavior: 'smooth' });
     await saveAttempt(attempt);
   };
@@ -134,7 +140,6 @@ export const App: React.FC = () => {
     const matched = ALL_QUESTIONS.filter((q) => answeredIds.has(q.id));
     setLastAttempt(attempt);
     setLastQuestions(matched.length > 0 ? matched : ALL_QUESTIONS.slice(0, attempt.total));
-    setView('results');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -143,123 +148,168 @@ export const App: React.FC = () => {
     await saveEssay(record);
   };
 
-  if (view === 'welcome') {
+  const handleSaveGenericAttempt = (attempt: GenericAttempt) => {
+    setGenericAttempts(saveGenericAttempt(attempt));
+  };
+
+  const handleLegacyNavigate = (next: AppView) => {
+    if (next === 'welcome') {
+      setOnWelcome(true);
+      return;
+    }
+    if (next === 'essay') {
+      setActiveTest('lnat');
+      setSubTab('practice');
+      setLnatSection('B');
+      return;
+    }
+    if (next === 'resources') {
+      setSubTab('resources');
+      return;
+    }
+    if (next === 'progress') {
+      setSubTab('progress');
+      return;
+    }
+    setSubTab('practice');
+    setLnatSection('A');
+  };
+
+  if (onWelcome) {
+    return <LandingView onSelectTest={handleSelectTest} />;
+  }
+
+  // Full-screen Pearson VUE simulator for LNAT Section A
+  if (activeExam) {
     return (
-      <LandingView
-        onEnterApp={(target = 'practice') => handleNavigate(target)}
-        onStartDiagnostic={handleStartDiagnostic}
-      />
+      <div className="min-h-screen flex flex-col bg-[var(--bg)] text-[var(--text)]">
+        <ExamSimulator
+          config={activeExam}
+          onExit={() => setActiveExam(null)}
+          onComplete={handleCompleteExam}
+        />
+      </div>
     );
   }
 
   return (
     <div className="min-h-screen flex flex-col bg-[var(--bg)] text-[var(--text)]">
-      {view !== 'exam' && (
-        <Navbar
-          view={view}
-          onNavigate={handleNavigate}
-          theme={theme}
-          onToggleTheme={() => setTheme((t) => (t === 'light' ? 'dark' : 'light'))}
-          onOpenPalette={() => setPaletteOpen(true)}
-          onStartDiagnostic={handleStartDiagnostic}
-        />
-      )}
+      <Navbar
+        activeTest={activeTest}
+        onSelectTest={handleSelectTest}
+        onGoHome={() => setOnWelcome(true)}
+        theme={theme}
+        onToggleTheme={() => setTheme((t) => (t === 'light' ? 'dark' : 'light'))}
+      />
+
+      {/* Simple 3-tab sub-bar */}
+      <div className="border-b border-[var(--rule)] bg-[var(--bg)]">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 flex items-center justify-between gap-4">
+          <div className="flex items-center gap-6">
+            {(['practice', 'resources', 'progress'] as SubTab[]).map((tab) => {
+              const active = subTab === tab && !lastAttempt;
+              const label =
+                tab === 'practice' ? 'Practice' : tab === 'resources' ? 'Official' : 'Progress';
+              return (
+                <button
+                  key={tab}
+                  type="button"
+                  onClick={() => {
+                    setLastAttempt(null);
+                    setSubTab(tab);
+                  }}
+                  className={`py-3 text-xs font-semibold uppercase tracking-[0.1em] border-b-2 transition-colors cursor-pointer ${
+                    active
+                      ? 'border-[var(--accent)] text-[var(--ink)]'
+                      : 'border-transparent text-[var(--text-muted)] hover:text-[var(--ink)]'
+                  }`}
+                >
+                  {label}
+                </button>
+              );
+            })}
+          </div>
+
+          {activeTest === 'lnat' && subTab === 'practice' && !lastAttempt && (
+            <div className="flex items-center gap-1 text-xs">
+              <button
+                type="button"
+                onClick={() => setLnatSection('A')}
+                className={`px-2.5 py-1 border cursor-pointer transition-colors ${
+                  lnatSection === 'A'
+                    ? 'border-[var(--accent)] text-[var(--accent)]'
+                    : 'border-transparent text-[var(--text-muted)] hover:text-[var(--ink)]'
+                }`}
+              >
+                Section A
+              </button>
+              <button
+                type="button"
+                onClick={() => setLnatSection('B')}
+                className={`px-2.5 py-1 border cursor-pointer transition-colors ${
+                  lnatSection === 'B'
+                    ? 'border-[var(--accent)] text-[var(--accent)]'
+                    : 'border-transparent text-[var(--text-muted)] hover:text-[var(--ink)]'
+                }`}
+              >
+                Section B
+              </button>
+            </div>
+          )}
+        </div>
+      </div>
 
       <main className="flex-1">
-        {(view === 'practice' || view === 'home') && (
-          <PracticeHub
-            attempts={attempts}
-            onStartDiagnostic={handleStartDiagnostic}
-            onStartHalfMock={handleStartHalfMock}
-            onStartPassage={handleStartPassage}
-            onStartSkill={handleStartSkill}
-          />
-        )}
-        {view === 'exam' && activeExam && (
-          <ExamSimulator
-            config={activeExam}
-            onExit={() => handleNavigate('practice')}
-            onComplete={handleCompleteExam}
-          />
-        )}
-        {view === 'results' && lastAttempt && (
+        {lastAttempt ? (
           <ResultsView
             attempt={lastAttempt}
             questions={lastQuestions}
-            onBackToPractice={() => handleNavigate('practice')}
+            onBackToPractice={() => setLastAttempt(null)}
           />
+        ) : activeTest === 'lnat' ? (
+          <>
+            {subTab === 'practice' && lnatSection === 'A' && (
+              <PracticeHub
+                attempts={attempts}
+                onStartDiagnostic={handleStartDiagnostic}
+                onStartHalfMock={handleStartHalfMock}
+                onStartPassage={handleStartPassage}
+                onStartSkill={handleStartSkill}
+              />
+            )}
+            {subTab === 'practice' && lnatSection === 'B' && (
+              <EssayStudio savedEssays={essays} onSaveEssay={handleSaveEssay} />
+            )}
+            {subTab === 'resources' && (
+              <OfficialResourcesView onStartDiagnostic={handleStartDiagnostic} />
+            )}
+            {subTab === 'progress' && (
+              <ProgressView
+                attempts={attempts}
+                essays={essays}
+                onInspectAttempt={handleInspectAttempt}
+                onNavigate={handleLegacyNavigate}
+              />
+            )}
+          </>
+        ) : (
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10">
+            <UniversalTestView
+              test={TEST_BY_ID[activeTest]}
+              subTab={subTab}
+              attempts={genericAttempts}
+              onSaveAttempt={handleSaveGenericAttempt}
+            />
+          </div>
         )}
-        {view === 'essay' && (
-          <EssayStudio savedEssays={essays} onSaveEssay={handleSaveEssay} />
-        )}
-        {view === 'plan' && (
-          <StudyPlanView
-            attempts={attempts}
-            essays={essays}
-            onStartDiagnostic={handleStartDiagnostic}
-            onStartPassage={handleStartPassage}
-            onStartSkill={handleStartSkill}
-            onNavigate={handleNavigate}
-          />
-        )}
-        {view === 'resources' && (
-          <OfficialResourcesView onStartDiagnostic={handleStartDiagnostic} />
-        )}
-        {view === 'tests' && <AllTestsView onNavigate={handleNavigate} />}
-        {view === 'progress' && (
-          <ProgressView
-            attempts={attempts}
-            essays={essays}
-            onInspectAttempt={handleInspectAttempt}
-            onNavigate={handleNavigate}
-          />
-        )}
-        {view === 'pricing' && <PricingView onStartDiagnostic={handleStartDiagnostic} />}
       </main>
 
-      {view !== 'exam' && (
-        <footer className="border-t border-[var(--rule)] py-6 text-xs text-[var(--text-muted)] no-print mb-14 md:mb-0">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-wrap items-center justify-between gap-4">
-            <div>
-              <strong className="text-[var(--ink)] mr-2">Ratio</strong>
-              Independent LNAT &amp; UK Admissions Studio. Not affiliated with LNAT Consortium,
-              Pearson VUE, UCAT, or UAT-UK.
-            </div>
-            <div className="flex items-center gap-5">
-              <button
-                type="button"
-                onClick={() => handleNavigate('welcome')}
-                className="hover:text-[var(--ink)] cursor-pointer"
-              >
-                Welcome
-              </button>
-              <button
-                type="button"
-                onClick={() => handleNavigate('plan')}
-                className="hover:text-[var(--ink)] cursor-pointer"
-              >
-                Study Plan
-              </button>
-              <button
-                type="button"
-                onClick={() => handleNavigate('tests')}
-                className="hover:text-[var(--ink)] cursor-pointer"
-              >
-                All Tests
-              </button>
-            </div>
-          </div>
-        </footer>
-      )}
-
-      <CommandPalette
-        open={paletteOpen}
-        onClose={() => setPaletteOpen(false)}
-        onNavigate={handleNavigate}
-        onStartDiagnostic={handleStartDiagnostic}
-        onStartPassage={handleStartPassage}
-        onStartSkill={handleStartSkill}
-      />
+      <footer className="border-t border-[var(--rule)] py-5 text-xs text-[var(--text-muted)] no-print">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 flex flex-wrap items-center justify-between gap-4">
+          <span>Ratio · LNAT, UCAT, TARA, ESAT &amp; SAT</span>
+          <span>Not affiliated with LNAT, UCAT, UAT-UK, or College Board.</span>
+        </div>
+      </footer>
     </div>
   );
 };
