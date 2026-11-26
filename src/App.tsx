@@ -22,6 +22,7 @@ import { ProgressView } from './components/ProgressView';
 import { TaraWorkspace } from './components/TaraWorkspace';
 import { EsatWorkspace } from './components/EsatWorkspace';
 import { SatWorkspace } from './components/SatWorkspace';
+import { UcatWorkspace } from './components/UcatWorkspace';
 import {
   GenericAttempt,
   OfficialResourcesPanel,
@@ -320,6 +321,15 @@ export const App: React.FC = () => {
               />
             )}
           </>
+        ) : activeTest === 'ucat' ? (
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10">
+            <UcatWorkspace
+              test={TEST_BY_ID.ucat}
+              subTab={subTab}
+              attempts={genericAttempts}
+              onSaveAttempt={handleSaveGenericAttempt}
+            />
+          </div>
         ) : activeTest === 'tara' ? (
           <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10">
             <TaraWorkspace

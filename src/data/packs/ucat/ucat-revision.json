@@ -1,0 +1,1106 @@
+{
+  "schemaVersion": 1,
+  "exam": "UCAT UK",
+  "cycle": 2026,
+  "recheck": "Feb–Mar 2027",
+  "disclaimer": "## Exam overview\nThe UK UCAT is a computer-based admissions test normally taken at a Pearson VUE test centre. It has 184 questions in four separately timed sections; Abstract Reasoning is not part of this format. The standard appointment’s timed sections total 117:30 including instructions; with 25% extra test time they total 145:15, before approved rest breaks. There is no negative marking. The three cognitive scores each run from 300 to 900 and sum to 900–2700. SJT is reported separately as Band 1–4, where Band 1 is strongest.",
+  "overview": {
+    "markdown": "The UK UCAT is a computer-based admissions test normally taken at a Pearson VUE test centre. It has 184 questions in four separately timed sections; Abstract Reasoning is not part of this format. The standard appointment’s timed sections total 117:30 including instructions; with 25% extra test time they total 145:15, before approved rest breaks. There is no negative marking. The three cognitive scores each run from 300 to 900 and sum to 900–2700. SJT is reported separately as Band 1–4, where Band 1 is strongest.\n\n| Section | Questions | Instructions | Standard | Extra time +25% | Mean per item (standard / +25%) |\n|---|---:|---:|---:|---:|---:|\n| Verbal Reasoning | 44 | 1:30 | 22:00 | 27:30 | 30s / 38s |\n| Decision Making | 35 | 1:30 | 37:00 | 46:15 | 63s / 79s |\n| Quantitative Reasoning | 36 | 2:00 | 26:00 | 32:30 | 43s / 54s |\n| Situational Judgement | 69 | 1:30 | 26:00 | 32:30 | 23s / 28s |\n\nInstruction timers do not get the extra 25%. Approved breaks are a separate accommodation; the official timings list 20 minutes of pause-the-clock breaks with the standard variant and 25 minutes with UCATSEN with breaks. Practise using your approved arrangement, not the most generous timer by default.",
+    "questions": 184,
+    "totalCognitiveRange": [
+      900,
+      2700
+    ],
+    "sjtBands": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "standardTotalSeconds": 7050,
+    "extraTime25TotalSeconds": 8715,
+    "sections": [
+      {
+        "code": "VR",
+        "name": "Verbal Reasoning",
+        "questionCount": 44,
+        "instructionSeconds": 90,
+        "testSeconds": 1320,
+        "extraTime25Seconds": 1650
+      },
+      {
+        "code": "DM",
+        "name": "Decision Making",
+        "questionCount": 35,
+        "instructionSeconds": 90,
+        "testSeconds": 2220,
+        "extraTime25Seconds": 2775
+      },
+      {
+        "code": "QR",
+        "name": "Quantitative Reasoning",
+        "questionCount": 36,
+        "instructionSeconds": 120,
+        "testSeconds": 1560,
+        "extraTime25Seconds": 1950
+      },
+      {
+        "code": "SJT",
+        "name": "Situational Judgement",
+        "questionCount": 69,
+        "instructionSeconds": 90,
+        "testSeconds": 1560,
+        "extraTime25Seconds": 1950
+      }
+    ]
+  },
+  "studyPath": {
+    "stepsMarkdown": "1. **Plan:** Use the official PDF checklist to book early, confirm ID and access needs, and work backwards from your appointment.\n2. **Tour the tools:** Launch the official Tour Tutorial on desktop. Practise flagging, review navigation, calculator focus and keyboard controls.\n3. **Learn the questions:** Work through General and all four official tutorials. Pause before the worked example’s answer and explain your approach out loud.\n4. **Build fluency:** Use the official untimed banks and Ratio drills by error type. Redo mistakes without looking at the key. Move to the clock only when you can justify the setup.\n5. **Rehearse:** Use official mocks near test day and the Ratio mocks for additional timed practice. Reserve an unused form for your final rehearsal; review errors before taking another.",
+    "plans": {
+      "4": [
+        {
+          "week": 1,
+          "task": "Book/check arrangements; do the Tour and tutorials. Sample each official bank untimed, identify the top two error types per section."
+        },
+        {
+          "week": 2,
+          "task": "Work on those errors with banks and Ratio drills. Add timed sets, then use Ratio Mock 1 as a pacing diagnostic."
+        },
+        {
+          "week": 3,
+          "task": "Sit official A and B on nonconsecutive days. Review fully; use Ratio Mock 2 only if there is time to review it as well."
+        },
+        {
+          "week": 4,
+          "task": "Sit official C and D under your approved timing on separate days, with a review/rest day between. Finish with short recall and test logistics."
+        }
+      ],
+      "6": [
+        {
+          "week": 1,
+          "task": "Plan, Tour, tutorials and one untimed sample from each section."
+        },
+        {
+          "week": 2,
+          "task": "VR evidence and DM diagrams; correct untimed work before repeating it."
+        },
+        {
+          "week": 3,
+          "task": "QR units and SJT distinctions; finish all four sections’ timed mini-sets."
+        },
+        {
+          "week": 4,
+          "task": "Sit Ratio Mock 1 and official A; use the log to choose one pacing and one accuracy intervention."
+        },
+        {
+          "week": 5,
+          "task": "Sit official B and Ratio Mock 2. Retest the two interventions on unfamiliar questions."
+        },
+        {
+          "week": 6,
+          "task": "Sit official C and D, spaced apart; review without cramming and confirm ID, route and start time."
+        }
+      ],
+      "8": [
+        {
+          "week": 1,
+          "task": "Plan and book; Tour, General tutorial and short untimed diagnostic across sections."
+        },
+        {
+          "week": 2,
+          "task": "VR passage maps, evidence boundaries and paraphrase; use official VR tutorials and banks."
+        },
+        {
+          "week": 3,
+          "task": "DM implications, sets, arguments and probability; use official DM tutorials and banks."
+        },
+        {
+          "week": 4,
+          "task": "QR conversions and chart reading, SJT scales and prioritisation; use both tutorials and banks."
+        },
+        {
+          "week": 5,
+          "task": "Timed Ratio drills, then Ratio Mock 1; compare first-pass and review performance in the log."
+        },
+        {
+          "week": 6,
+          "task": "Official A and Ratio Mock 2, with review days. Change one strategy at a time."
+        },
+        {
+          "week": 7,
+          "task": "Official B and C, spaced apart. Revisit the error types that still recur."
+        },
+        {
+          "week": 8,
+          "task": "Official D early in the week; light drills, sleep, logistics and rest before the real sitting."
+        }
+      ]
+    }
+  },
+  "strategies": {
+    "VR": "- **Pace:** 30s/item or about 2:00 per four-question passage. With +25% use 2:30 per passage. At halfway aim to be near question 22; do not let one passage consume the time for two.\n- **Method:** Skim for the topic, author stance and paragraph jobs. Use distinctive nouns and dates to locate evidence; reread one sentence either side. For broad purpose questions, compare passage-wide explanations rather than hunting for a keyword.\n- **True / False / Can’t Tell:** True = entailed; False = contradicted; Can’t Tell = neither established nor contradicted. Treat the passage as the whole evidence set even if you know the topic.\n- **Traps:** A changed proportion is not necessarily a changed count. “Some” does not mean “most”; “can” does not mean “will”. An option repeating the right terms with the wrong relationship is still wrong.\n- **Review:** Underline the minimum evidence that decides your answer. Tag failures as evidence missed, scope, paraphrase or time. For Can’t Tell, name precisely what information is missing.",
+    "DM": "- **Pace:** About 63s/item (79s with +25%). Use less on a direct deduction and save time for reasoning grids and five-statement items. Try to reach the vicinity of item 18 at the half-time mark.\n- **Method:** Diagram constraints and test options against the exact modal word: must, could or cannot. Check each Yes/No conclusion independently. On arguments, choose concrete relevance, causal plausibility and scale, not the side you prefer.\n- **Traps:** Don’t reverse a conditional. Two “some” claims can describe different individuals. Separate disjoint Venn regions; avoid treating replacement and no replacement as interchangeable.\n- **Review:** Construct one valid counterexample to a tempting conclusion. For five-statement questions, log the number of statements wrong, not just item right/wrong. Official single-answer items earn one mark; multiple-statement items earn two full or one partial. Ratio awards one when exactly one statement is wrong.",
+    "QR": "- **Pace:** 43s/item (54s with +25%); about 2:53 per four-item set at standard timing. Read data labels once, then return to them instead of rereading the full chart. At halfway target around item 18.\n- **Method:** Before touching the calculator, write the operation, unit and rough expected magnitude. Use fractions or complements for familiar percentages, and digit entry for lengthy arithmetic.\n- **Traps:** Weighted means need the total count or weight, not the number of groups. Read whether VAT, discounts, fees or rates apply before or after the subtotal. Round for the constraint (ceil to buy enough; floor for complete servings); otherwise round at the end.\n- **Review:** Categorise errors as wrong cell, denominator, operation, unit, rounding or entry. Redo once without a timer, then try a different timed set to test transfer.",
+    "SJT": "- **Pace:** 23s/item (28s with +25%). Read the scenario once, then judge each action on its own. At halfway target roughly item 34–35.\n- **Method:** Identify the role, patient-facing risk, urgency and who can act. Then ask whether the response protects safety, choice, privacy and fairness while staying within competence. Look for clear communication, follow-through and proportionate escalation.\n- **Appropriateness:** Distinguish the ideal action, a useful but incomplete action, an inappropriate action with some merit, and a serious breach or clearly unsafe response. Do not upgrade a poor action based on steps the option never says it will take.\n- **Importance:** Rate the factor’s bearing on the decision, not whether it sounds admirable. A safety or consent prerequisite may be decisive. A practical factor can matter without determining the decision. Personal preference unrelated to care may not matter at all.\n- **Most/least:** Compare the three actions for this scenario; choose distinct most- and least-appropriate options. On review, explain why the middle option is less effective than the best and less harmful than the worst.\n- **Traps:** Waiting politely is not always safe. Going straight to a public forum is not proportionate escalation. A relative or senior colleague’s preference does not substitute for consent. Avoid taking decisions a student is not qualified to take.\n- **Review:** When one category away, name the missing safeguard or the severity cue you underweighted. Official scoring gives partial credit for close answers but does not publish a universal raw-to-Band map. Ratio gives 0.5 for adjacent scale choices or each correct most/least role; these are practice values."
+  },
+  "dmLogicMarkdown": "- **All A are B** → put A inside B. It does not imply any A exists or that all B are A.\n- **No A are B** → sets are disjoint. This excludes overlap in both directions; it does not prove either set exists.\n- **Some A are B** → at least one overlap. It does not imply any A is outside B.\n- **A only if B** → A implies B. The valid reversal with negation is not B implies not A; B alone does not force A.\n- **A if B** → B implies A. “If and only if” supplies both arrows.\n- **A or B** is inclusive unless explicitly exclusive. “A and B only” excludes a third named region.\n- **Not all A are B** → at least one A is not B. It differs from “no A are B.”\n- **Could**: one valid model is sufficient. **Must**: a single valid counterexample defeats the choice. **Cannot**: no valid model can satisfy it.\n- **Sets:** Fill the deepest intersection first. Subtract it from pair totals before filling “exactly two.” A ∪ B = A + B − overlap.\n- **Probability:** P(at least one) = 1 − P(none). Without replacement, update the next denominator and any affected numerator. Add disjoint orders, multiply conditional steps.\n- **Data claims:** Identify the denominator and sample. Association does not establish cause; a larger count need not be a higher rate.\n- **Strongest argument:** Check direct relevance, support and meaningful consequences. Avoid vague appeals or arguments for a different proposal.",
+  "qrMathsMarkdown": "- **Percentage of:** part ÷ whole × 100. **Percentage change:** (new − old) ÷ old × 100. **Percentage-point change:** subtract two percentages directly.\n- **Forward change:** new = old × (1 ± r). **Reverse change:** old = new ÷ (1 ± r). Use r as a decimal; successive changes multiply.\n- **Ratios:** to split total T in a:b, use T/(a+b) for one part. For conversions, align units before interpreting the ratio.\n- **Rate:** quantity ÷ time; speed = distance ÷ time. Overall speed = total distance ÷ total time including stops where requested. 1 h = 60 min; 90 min = 1.5 h.\n- **Weighted mean:** sum(value × frequency) ÷ total frequency. For grouped rates, sum numerators and denominators separately.\n- **Area:** rectangle lw; triangle bh/2; circle πr². **Volume:** cuboid lwh; cylinder πr²h. If a length conversion is ×100, an area conversion is ×10,000 and volume ×1,000,000.\n- **Units:** 1 km = 1,000 m; 1 m = 100 cm; 1 kg = 1,000 g; 1 L = 1,000 mL = 1,000 cm³; 1 m³ = 1,000 L; 1 MWh = 1,000 kWh.\n- **Compound interest:** balance = P(1+r)^n; interest = balance − P. To reverse, divide the balance by the product of the multipliers.\n- **Whole-unit constraints:** round up for vehicles or packs required; round down for complete outputs. Keep unrounded intermediate values unless told otherwise.\n- **Check:** Does the answer exceed a plausible bound? A share cannot exceed 100%; a positive discount cannot raise a price.",
+  "sjtFrameworkMarkdown": "This is a revision framework, not clinical advice or official UCAT marking guidance. Use [GMC Good medical practice](https://www.gmc-uk.org/professional-standards/the-professional-standards/good-medical-practice) and [GMC guidance for medical students](https://www.gmc-uk.org/education/standards-guidance-and-curricula/guidance/student-professionalism-and-ftp) to explore the professional principles behind it.\n1. **Immediate safety and competence:** Identify harm that could occur now. Seek qualified help, act within your role and check that a handover is accepted.\n2. **Autonomy and consent:** Introduce your role, respect refusal and make understanding possible, for example with appropriate interpreter support.\n3. **Benefits and harms:** Compare actual likely benefits and foreseeable harms. Avoid both reckless action and delay that leaves a preventable risk unaddressed.\n4. **Fairness:** Respond to need, not status or a favour. Support accessibility and treat patients and colleagues with respect.\n5. **Integrity and confidentiality:** Document accurately, do not conceal mistakes, share only what is necessary through approved routes, and seek advice after errors.\n6. **Proportionate escalation:** Address the immediate issue respectfully when safe; escalate if urgent, unresolved or unsuitable for direct handling. Support affected people and keep relevant facts clear.",
+  "timeline": {
+    "cycleNote": "2026 cycle, recheck Feb–Mar 2027",
+    "timezone": "Europe/London",
+    "dates": [
+      {
+        "label": "20 May, 14:00 UK time",
+        "event": "Registration, bursary and access-arrangement applications open",
+        "date": "2026-05-20",
+        "ukTime": "14:00"
+      },
+      {
+        "label": "23 June, 14:00 UK time",
+        "event": "Booking opens",
+        "date": "2026-06-23",
+        "ukTime": "14:00"
+      },
+      {
+        "label": "13 July",
+        "event": "Testing starts",
+        "date": "2026-07-13",
+        "ukTime": null
+      },
+      {
+        "label": "10 September, 15:00 UK time",
+        "event": "Access-arrangement application deadline",
+        "date": "2026-09-10",
+        "ukTime": "15:00"
+      },
+      {
+        "label": "16 September, 15:00 UK time",
+        "event": "Registration and booking close",
+        "date": "2026-09-16",
+        "ukTime": "15:00"
+      },
+      {
+        "label": "24 September",
+        "event": "Last test day; bursary applications close at 15:00 UK time",
+        "date": "2026-09-24",
+        "ukTime": "15:00",
+        "ukTimeAppliesTo": "Bursary application deadline only"
+      },
+      {
+        "label": "15 October",
+        "event": "UCAS medicine/dentistry deadline",
+        "date": "2026-10-15",
+        "ukTime": null
+      },
+      {
+        "label": "Early November",
+        "event": "Results sent to universities",
+        "date": null,
+        "ukTime": null
+      }
+    ],
+    "lastTestDay": "2026-09-24",
+    "countdownTarget": "booked-appointment-or-active-cycle-final-test-day",
+    "hideIfExpiredOrUnpublished": true,
+    "markdown": "**2026 cycle, recheck Feb–Mar 2027.** The fixed summer window below is historical context for later cycles. Do not treat a 2026 deadline as a 2027 deadline. Publish a personal countdown to the candidate’s confirmed appointment; if not booked, use the official last test day only for a confirmed active cycle. Show no live countdown for an expired window or a cycle with unpublished dates. The UCAT Consortium says 2027 dates are due by February 2027, with other pages updating around March.\n| 2026 date | Milestone |\n|---|---|\n| 20 May, 14:00 UK time | Registration, bursary and access-arrangement applications open |\n| 23 June, 14:00 UK time | Booking opens |\n| 13 July | Testing starts |\n| 10 September, 15:00 UK time | Access-arrangement application deadline |\n| 16 September, 15:00 UK time | Registration and booking close |\n| 24 September | Last test day; bursary applications close at 15:00 UK time |\n| 15 October | UCAS medicine/dentistry deadline |\n| Early November | Results sent to universities |"
+  },
+  "scores": {
+    "tests": 42359,
+    "meanTotal": 1918,
+    "meanSections": {
+      "VR": 602,
+      "DM": 640,
+      "QR": 675
+    },
+    "sjtBandPercent": [
+      15,
+      40,
+      34,
+      11
+    ],
+    "deciles": [
+      {
+        "decile": 1,
+        "total": 1590,
+        "VR": 500,
+        "DM": 520,
+        "QR": 530
+      },
+      {
+        "decile": 2,
+        "total": 1700,
+        "VR": 540,
+        "DM": 560,
+        "QR": 580
+      },
+      {
+        "decile": 3,
+        "total": 1780,
+        "VR": 560,
+        "DM": 590,
+        "QR": 600
+      },
+      {
+        "decile": 4,
+        "total": 1850,
+        "VR": 580,
+        "DM": 620,
+        "QR": 640
+      },
+      {
+        "decile": 5,
+        "total": 1920,
+        "VR": 600,
+        "DM": 640,
+        "QR": 670
+      },
+      {
+        "decile": 6,
+        "total": 1980,
+        "VR": 620,
+        "DM": 670,
+        "QR": 700
+      },
+      {
+        "decile": 7,
+        "total": 2050,
+        "VR": 640,
+        "DM": 690,
+        "QR": 730
+      },
+      {
+        "decile": 8,
+        "total": 2140,
+        "VR": 670,
+        "DM": 710,
+        "QR": 780
+      },
+      {
+        "decile": 9,
+        "total": 2250,
+        "VR": 710,
+        "DM": 760,
+        "QR": 820
+      }
+    ],
+    "markdown": "In the 2026 UK cohort (42,359 tests), mean total was 1918. Mean subtest scores: VR 602, DM 640, QR 675. Component means are independently rounded. Bands 1–4 were 15%, 40%, 34%, 11% respectively.\n| Decile boundary | Total | VR | DM | QR |\n|---:|---:|---:|---:|---:|\n| 1 | 1590 | 500 | 520 | 530 |\n| 2 | 1700 | 540 | 560 | 580 |\n| 3 | 1780 | 560 | 590 | 600 |\n| 4 | 1850 | 580 | 620 | 640 |\n| 5 | 1920 | 600 | 640 | 670 |\n| 6 | 1980 | 620 | 670 | 700 |\n| 7 | 2050 | 640 | 690 | 730 |\n| 8 | 2140 | 670 | 710 | 780 |\n| 9 | 2250 | 710 | 760 | 820 |\n\nDecile boundaries describe that cohort; they are not guaranteed cut-offs. Do not add the section deciles to infer a total decile. Compare a genuine scaled score using the official percentile lookup for the same cycle. The result is provided at the centre and available in the UCAT account within 24 hours; it is valid for one admissions cycle.\n- Check the official university and course-code list and then the university’s current rules for the exact programme and entry year. Depending on programme, UCAT may screen by threshold, rank interview invitations, be weighted with academic results, have subtest minima, or have a distinct SJT rule.\n- Applicant pools and contextual policies can differ. Last year's threshold is a reference rather than a promise; a national percentile and a university’s own applicant percentile are not interchangeable.\n- Verify how results are used at both interview selection and offer stage. Check eligibility directly before relying on a score to satisfy any other admission requirement."
+  },
+  "logistics": {
+    "currency": "GBP",
+    "ukFee": 70,
+    "internationalFee": 115,
+    "cycleNote": "2026 cycle, recheck Feb–Mar 2027",
+    "markdown": "**Fees: £70 in the UK and £115 outside the UK — 2026 cycle, recheck Feb–Mar 2027.** Eligible UK candidates should check the bursary rules before paying. Apply for access arrangements before booking and confirm the approved variant. Follow the online-specific tools page only if UCAT has approved that delivery arrangement for you.\n- **Before travelling:** Confirm centre address, time, route and approved arrangements. Check the current photo-ID policy and that your ID matches your booking. Arrive 15 minutes early. Check the current rescheduling deadlines if a change is needed.\n- **At the centre:** Check in, store belongings as directed and use only permitted materials. The centre supplies a laminated A4 notebook and pen for working; tell the invigilator before proceeding if approved arrangements or equipment are missing.\n- **Navigation:** Use Next/Previous or the indicated Alt + underlined letter, such as Alt+N for Next. Flag for review but choose a provisional answer first. Use the section review screen to prioritise unanswered items. Do not expect to revisit a finished subtest.\n- **Timer and display:** The test time counts down in the top-right; under five minutes it changes colour. Use the tutorial to practise Ctrl +/− zoom and colour scheme changes. If shortcuts fail, use the on-screen controls.\n- **Calculator:** Basic on-screen calculator in DM and QR only. Practise switching focus; if keys stop responding click back on its window. Re-enter an operation rather than trust a suspicious display. Ask an invigilator about persistent equipment problems.\n- **Wellbeing:** Practise with breaks between sessions and realistic sleep. Use UCAT’s candidate wellbeing and neurodivergent-candidate resources when planning support, and leave buffer for disruptions on the day."
+  },
+  "scoreLog": {
+    "columns": [
+      "Date",
+      "Source/form",
+      "Timing and breaks",
+      "VR raw / max",
+      "DM raw / max",
+      "QR raw / max",
+      "SJT practice raw / max",
+      "Guessed / unfinished",
+      "Main error",
+      "Next action",
+      "Retest date/result"
+    ],
+    "markdown": "Record Pearson feedback before exiting: official launch sessions do not save your practice scores. Use the final review screen and Explain Answer to record marks and patterns without copying copyrighted questions. Compare only similar timings; keep scaled result and raw practice scores separate.\n| Date | Source/form | Timing and breaks | VR raw / max | DM raw / max | QR raw / max | SJT practice raw / max | Guessed / unfinished | Main error | Next action | Retest date/result |\n|---|---|---|---|---|---|---|---|---|---|---|\n| YYYY-MM-DD | Official A or Ratio 1 | Standard / approved variant | — | — | — | — | — | — | — | — |\n\nExample next action: “Draw the three mutually exclusive regions before calculating; repeat four new Venn items without a timer tomorrow, then do the next timed DM drill.” Track setup, execution and time separately. On official practice, where a section mark is not shown, record counts you can verify and label the method."
+  },
+  "flashcards": [
+    {
+      "id": "ucat-card-01",
+      "section": "VR",
+      "front": "When is a claim Can’t Tell?",
+      "back": "When the passage neither entails nor contradicts it."
+    },
+    {
+      "id": "ucat-card-02",
+      "section": "VR",
+      "front": "When is a claim False?",
+      "back": "When the information in the passage contradicts the claim."
+    },
+    {
+      "id": "ucat-card-03",
+      "section": "VR",
+      "front": "What if a statement is true outside the passage?",
+      "back": "Ignore outside knowledge; mark from the passage alone."
+    },
+    {
+      "id": "ucat-card-04",
+      "section": "VR",
+      "front": "Does “some” rule out “all”?",
+      "back": "No. It establishes at least one, not an upper bound."
+    },
+    {
+      "id": "ucat-card-05",
+      "section": "VR",
+      "front": "Does a lower share prove a lower count?",
+      "back": "No; the denominator might have grown."
+    },
+    {
+      "id": "ucat-card-06",
+      "section": "VR",
+      "front": "Which evidence matters for “main purpose”?",
+      "back": "The pattern across the whole passage, not one isolated sentence."
+    },
+    {
+      "id": "ucat-card-07",
+      "section": "VR",
+      "front": "Does “may cause” mean “caused”?",
+      "back": "No; possibility does not establish actual causation."
+    },
+    {
+      "id": "ucat-card-08",
+      "section": "VR",
+      "front": "What cue is useful for locating evidence?",
+      "back": "A distinctive name, number or synonym, followed by reading context."
+    },
+    {
+      "id": "ucat-card-09",
+      "section": "VR",
+      "front": "What is a scope error?",
+      "back": "Changing the group, location, condition or period the passage describes."
+    },
+    {
+      "id": "ucat-card-10",
+      "section": "VR",
+      "front": "What does “can be” establish?",
+      "back": "Possibility, not certainty or inevitability."
+    },
+    {
+      "id": "ucat-card-11",
+      "section": "VR",
+      "front": "For an “except” question, what should you select?",
+      "back": "The one choice that does not meet the requested condition."
+    },
+    {
+      "id": "ucat-card-12",
+      "section": "VR",
+      "front": "What is the standard passage budget for four VR items?",
+      "back": "Two minutes on average, including reading."
+    },
+    {
+      "id": "ucat-card-13",
+      "section": "VR",
+      "front": "How should you review a missed inference?",
+      "back": "Identify the minimum passage evidence and name the unsupported leap."
+    },
+    {
+      "id": "ucat-card-14",
+      "section": "VR",
+      "front": "How do you handle a statement with two claims joined by “and”?",
+      "back": "Both must follow for True; one contradicted claim makes the conjunction False."
+    },
+    {
+      "id": "ucat-card-15",
+      "section": "VR",
+      "front": "Does an example prove an author's general claim?",
+      "back": "No; check whether the example illustrates, limits or actually substantiates the generalisation."
+    },
+    {
+      "id": "ucat-card-16",
+      "section": "DM",
+      "front": "Rewrite “A only if B”.",
+      "back": "A implies B."
+    },
+    {
+      "id": "ucat-card-17",
+      "section": "DM",
+      "front": "Rewrite “A if B”.",
+      "back": "B implies A."
+    },
+    {
+      "id": "ucat-card-18",
+      "section": "DM",
+      "front": "What follows from A → B and not B?",
+      "back": "Not A, by the contrapositive."
+    },
+    {
+      "id": "ucat-card-19",
+      "section": "DM",
+      "front": "What follows from A → B and B alone?",
+      "back": "Nothing definite about whether A holds."
+    },
+    {
+      "id": "ucat-card-20",
+      "section": "DM",
+      "front": "Does “all A are B” establish that A exists?",
+      "back": "No, not on its own."
+    },
+    {
+      "id": "ucat-card-21",
+      "section": "DM",
+      "front": "How do you test “must be true”?",
+      "back": "Try to construct a valid counterexample."
+    },
+    {
+      "id": "ucat-card-22",
+      "section": "DM",
+      "front": "How do you test “could be true”?",
+      "back": "Find one model satisfying all rules and the claim."
+    },
+    {
+      "id": "ucat-card-23",
+      "section": "DM",
+      "front": "What is the two-set union formula?",
+      "back": "A + B − the overlap."
+    },
+    {
+      "id": "ucat-card-24",
+      "section": "DM",
+      "front": "Which regions count for exactly two of three sets?",
+      "back": "The three pair-only regions, excluding the triple."
+    },
+    {
+      "id": "ucat-card-25",
+      "section": "DM",
+      "front": "How does no replacement affect the second draw?",
+      "back": "The total falls by one; the relevant class count may also fall by one."
+    },
+    {
+      "id": "ucat-card-26",
+      "section": "DM",
+      "front": "What is the complement of “at least one success”?",
+      "back": "No successes."
+    },
+    {
+      "id": "ucat-card-27",
+      "section": "DM",
+      "front": "How do you compute exactly one success in two draws?",
+      "back": "Add success-then-failure and failure-then-success."
+    },
+    {
+      "id": "ucat-card-28",
+      "section": "DM",
+      "front": "What makes an argument stronger?",
+      "back": "It has a concrete, relevant consequence tied directly to the proposal."
+    },
+    {
+      "id": "ucat-card-29",
+      "section": "DM",
+      "front": "What is the standard average timing for one DM item?",
+      "back": "About 63 seconds; vary by complexity."
+    },
+    {
+      "id": "ucat-card-30",
+      "section": "DM",
+      "front": "What is full credit for an official five-statement DM item?",
+      "back": "Two marks. Official guidance also states one mark for partial correctness."
+    },
+    {
+      "id": "ucat-card-31",
+      "section": "QR",
+      "front": "Which denominator is used for percentage change?",
+      "back": "The starting value."
+    },
+    {
+      "id": "ucat-card-32",
+      "section": "QR",
+      "front": "What is the percentage-point change from 20% to 25%?",
+      "back": "Five percentage points."
+    },
+    {
+      "id": "ucat-card-33",
+      "section": "QR",
+      "front": "How do you undo a 20% increase?",
+      "back": "Divide the new value by 1.20."
+    },
+    {
+      "id": "ucat-card-34",
+      "section": "QR",
+      "front": "What multiplier represents 10% off then another 10% off?",
+      "back": "0.90 × 0.90 = 0.81."
+    },
+    {
+      "id": "ucat-card-35",
+      "section": "QR",
+      "front": "How do you split 50 in a 2:3 ratio?",
+      "back": "One part is 10, so take 20 and 30."
+    },
+    {
+      "id": "ucat-card-36",
+      "section": "QR",
+      "front": "What is 1 h 24 min in hours?",
+      "back": "1.4 hours."
+    },
+    {
+      "id": "ucat-card-37",
+      "section": "QR",
+      "front": "How do you compute an out-and-back average speed?",
+      "back": "Total distance divided by total elapsed time, not a simple mean of speeds."
+    },
+    {
+      "id": "ucat-card-38",
+      "section": "QR",
+      "front": "What is the volume of a cylinder?",
+      "back": "πr²h."
+    },
+    {
+      "id": "ucat-card-39",
+      "section": "QR",
+      "front": "What is 0.4 m² in cm²?",
+      "back": "4,000 cm²."
+    },
+    {
+      "id": "ucat-card-40",
+      "section": "QR",
+      "front": "What is 2.5 m³ in litres?",
+      "back": "2,500 L."
+    },
+    {
+      "id": "ucat-card-41",
+      "section": "QR",
+      "front": "What is the weighted mean formula?",
+      "back": "Sum of value × weight divided by total weight."
+    },
+    {
+      "id": "ucat-card-42",
+      "section": "QR",
+      "front": "What is the interest earned on P at rate r for n compound periods?",
+      "back": "P(1+r)^n − P."
+    },
+    {
+      "id": "ucat-card-43",
+      "section": "QR",
+      "front": "When should you round upward?",
+      "back": "When a whole-number minimum must meet a requirement, e.g. enough packs."
+    },
+    {
+      "id": "ucat-card-44",
+      "section": "QR",
+      "front": "When should you round downward?",
+      "back": "When counting only complete outputs, e.g. servings."
+    },
+    {
+      "id": "ucat-card-45",
+      "section": "QR",
+      "front": "How much time does a standard four-item QR set average?",
+      "back": "Just under 2 minutes 54 seconds."
+    },
+    {
+      "id": "ucat-card-46",
+      "section": "SJT",
+      "front": "What comes first with an immediate unresolved risk?",
+      "back": "Make the situation as safe as you can and alert someone qualified now."
+    },
+    {
+      "id": "ucat-card-47",
+      "section": "SJT",
+      "front": "Can a student's learning need override refusal of observation?",
+      "back": "No; respect the patient's choice without pressure."
+    },
+    {
+      "id": "ucat-card-48",
+      "section": "SJT",
+      "front": "What if the safest task is beyond your competence?",
+      "back": "Explain the limit and obtain qualified help promptly."
+    },
+    {
+      "id": "ucat-card-49",
+      "section": "SJT",
+      "front": "Why might an unnamed patient still be identifiable?",
+      "back": "A combination of details can identify them."
+    },
+    {
+      "id": "ucat-card-50",
+      "section": "SJT",
+      "front": "What should an accurate record correction preserve?",
+      "back": "An auditable record using the approved amendment method."
+    },
+    {
+      "id": "ucat-card-51",
+      "section": "SJT",
+      "front": "What makes a handover closed-loop?",
+      "back": "An appropriate person accepts responsibility and the key details are clear."
+    },
+    {
+      "id": "ucat-card-52",
+      "section": "SJT",
+      "front": "What distinguishes “appropriate, but not ideal”?",
+      "back": "It is useful and broadly safe but misses a preferable safeguard or follow-up."
+    },
+    {
+      "id": "ucat-card-53",
+      "section": "SJT",
+      "front": "What distinguishes “inappropriate, but not awful”?",
+      "back": "It contains a defensible element but is inadequate or creates avoidable risk."
+    },
+    {
+      "id": "ucat-card-54",
+      "section": "SJT",
+      "front": "How should you rank an importance factor?",
+      "back": "By how much it bears on the actual decision in this scenario."
+    },
+    {
+      "id": "ucat-card-55",
+      "section": "SJT",
+      "front": "What if a direct challenge is unsafe or fails?",
+      "back": "Escalate through an appropriate supervisor or reporting route."
+    },
+    {
+      "id": "ucat-card-56",
+      "section": "SJT",
+      "front": "Is embarrassment a reason to conceal an incident?",
+      "back": "No; be honest and use the relevant process."
+    },
+    {
+      "id": "ucat-card-57",
+      "section": "SJT",
+      "front": "Does patient information being posted publicly authorise clinical confirmation?",
+      "back": "No; do not confirm information obtained confidentially."
+    },
+    {
+      "id": "ucat-card-58",
+      "section": "SJT",
+      "front": "What is the standard average SJT pace?",
+      "back": "About 23 seconds per item including scenario reading."
+    },
+    {
+      "id": "ucat-card-59",
+      "section": "SJT",
+      "front": "What does fairness require when allocating attention?",
+      "back": "Respond to clinical need and access barriers, not influence or personal preference."
+    },
+    {
+      "id": "ucat-card-60",
+      "section": "SJT",
+      "front": "Can a Ratio practice SJT mark be converted directly into a Band?",
+      "back": "No; the practice scoring is not calibrated to official Bands."
+    }
+  ],
+  "resourceGroups": [
+    {
+      "title": "Plan and learn",
+      "links": [
+        {
+          "label": "Preparation resources",
+          "url": "https://www.ucat.ac.uk/prepare/preparation-resources/"
+        },
+        {
+          "label": "Preparation checklist (PDF)",
+          "url": "https://www.ucat.ac.uk/media/1711/prep-plan-5.pdf"
+        },
+        {
+          "label": "Interactive Tour Tutorial",
+          "url": "https://www.ucat.ac.uk/umbraco/surface/pearsonpracticetest/launch/UK_Tour_Tutorial",
+          "openInNewTab": true,
+          "desktopOnly": true,
+          "progressSaved": false
+        },
+        {
+          "label": "Test tools",
+          "url": "https://www.ucat.ac.uk/prepare/test-tools/"
+        },
+        {
+          "label": "Question tutorials",
+          "url": "https://www.ucat.ac.uk/prepare/question-tutorials/"
+        },
+        {
+          "label": "General tutorial",
+          "url": "https://www.canva.com/design/DAHDE-iKrRI/dcG1K6YtYvPU3PHZa_m_Yw/view",
+          "embedUrl": "https://www.canva.com/design/DAHDE-iKrRI/dcG1K6YtYvPU3PHZa_m_Yw/view?embed"
+        },
+        {
+          "label": "Verbal Reasoning tutorial",
+          "url": "https://www.canva.com/design/DAHC6E2KeCk/8h8mjBk-DdnS-koGOM65Eg/view",
+          "embedUrl": "https://www.canva.com/design/DAHC6E2KeCk/8h8mjBk-DdnS-koGOM65Eg/view?embed"
+        },
+        {
+          "label": "Decision Making tutorial",
+          "url": "https://www.canva.com/design/DAHDALnhQkg/1JstNQq3Og2ZtUnslP4Auw/view",
+          "embedUrl": "https://www.canva.com/design/DAHDALnhQkg/1JstNQq3Og2ZtUnslP4Auw/view?embed"
+        },
+        {
+          "label": "Quantitative Reasoning tutorial",
+          "url": "https://www.canva.com/design/DAHDFFTTFCY/V7-u0hGBEY_J9NMBFcRR2w/view",
+          "embedUrl": "https://www.canva.com/design/DAHDFFTTFCY/V7-u0hGBEY_J9NMBFcRR2w/view?embed"
+        },
+        {
+          "label": "Situational Judgement tutorial",
+          "url": "https://www.canva.com/design/DAHDFdmazEE/P7BZgrHEK0shx_SGEOHREA/view",
+          "embedUrl": "https://www.canva.com/design/DAHDFdmazEE/P7BZgrHEK0shx_SGEOHREA/view?embed"
+        },
+        {
+          "label": "Preparation workshop slides",
+          "url": "https://www.canva.com/design/DAHDvYALWXc/3sYObS5mEo7T87WQUaVZWA/view"
+        },
+        {
+          "label": "Get UCAT Ready webinar",
+          "url": "https://youtu.be/oaf5sxfeIMY"
+        },
+        {
+          "label": "UCAT Essentials presentation",
+          "url": "https://www.canva.com/design/DAG_yymY96Y/7ePI59H-bnQGxM_p_PeUOg/view"
+        },
+        {
+          "label": "Teachers and advisers webinar (2026)",
+          "url": "https://youtu.be/slxrLJwpp-w"
+        },
+        {
+          "label": "UCAT on commercial preparation",
+          "url": "https://www.ucat.ac.uk/prepare/commercial"
+        }
+      ]
+    },
+    {
+      "title": "Official question banks (untimed)",
+      "links": [
+        {
+          "label": "VR bank 1",
+          "url": "https://www.ucat.ac.uk/umbraco/surface/pearsonpracticetest/launch/UK_QB_VR_1",
+          "openInNewTab": true,
+          "desktopOnly": true,
+          "progressSaved": false
+        },
+        {
+          "label": "VR bank 2",
+          "url": "https://www.ucat.ac.uk/umbraco/surface/pearsonpracticetest/launch/UK_QB_VR_2",
+          "openInNewTab": true,
+          "desktopOnly": true,
+          "progressSaved": false
+        },
+        {
+          "label": "VR bank 3",
+          "url": "https://www.ucat.ac.uk/umbraco/surface/pearsonpracticetest/launch/UK_QB_VR_3",
+          "openInNewTab": true,
+          "desktopOnly": true,
+          "progressSaved": false
+        },
+        {
+          "label": "VR bank 4",
+          "url": "https://www.ucat.ac.uk/umbraco/surface/pearsonpracticetest/launch/UK_QB_VR_4",
+          "openInNewTab": true,
+          "desktopOnly": true,
+          "progressSaved": false
+        },
+        {
+          "label": "DM bank 1",
+          "url": "https://www.ucat.ac.uk/umbraco/surface/pearsonpracticetest/launch/UK_QB_DM_1",
+          "openInNewTab": true,
+          "desktopOnly": true,
+          "progressSaved": false
+        },
+        {
+          "label": "DM bank 2",
+          "url": "https://www.ucat.ac.uk/umbraco/surface/pearsonpracticetest/launch/UK_QB_DM_2",
+          "openInNewTab": true,
+          "desktopOnly": true,
+          "progressSaved": false
+        },
+        {
+          "label": "DM bank 3",
+          "url": "https://www.ucat.ac.uk/umbraco/surface/pearsonpracticetest/launch/UK_QB_DM_3",
+          "openInNewTab": true,
+          "desktopOnly": true,
+          "progressSaved": false
+        },
+        {
+          "label": "DM bank 4",
+          "url": "https://www.ucat.ac.uk/umbraco/surface/pearsonpracticetest/launch/UK_QB_DM_4",
+          "openInNewTab": true,
+          "desktopOnly": true,
+          "progressSaved": false
+        },
+        {
+          "label": "QR bank 1",
+          "url": "https://www.ucat.ac.uk/umbraco/surface/pearsonpracticetest/launch/UK_QB_QR_1",
+          "openInNewTab": true,
+          "desktopOnly": true,
+          "progressSaved": false
+        },
+        {
+          "label": "QR bank 2",
+          "url": "https://www.ucat.ac.uk/umbraco/surface/pearsonpracticetest/launch/UK_QB_QR_2",
+          "openInNewTab": true,
+          "desktopOnly": true,
+          "progressSaved": false
+        },
+        {
+          "label": "QR bank 3",
+          "url": "https://www.ucat.ac.uk/umbraco/surface/pearsonpracticetest/launch/UK_QB_QR_3",
+          "openInNewTab": true,
+          "desktopOnly": true,
+          "progressSaved": false
+        },
+        {
+          "label": "QR bank 4",
+          "url": "https://www.ucat.ac.uk/umbraco/surface/pearsonpracticetest/launch/UK_QB_QR_4",
+          "openInNewTab": true,
+          "desktopOnly": true,
+          "progressSaved": false
+        },
+        {
+          "label": "SJT bank 1",
+          "url": "https://www.ucat.ac.uk/umbraco/surface/pearsonpracticetest/launch/UK_QB_SJT_1",
+          "openInNewTab": true,
+          "desktopOnly": true,
+          "progressSaved": false
+        },
+        {
+          "label": "SJT bank 2",
+          "url": "https://www.ucat.ac.uk/umbraco/surface/pearsonpracticetest/launch/UK_QB_SJT_2",
+          "openInNewTab": true,
+          "desktopOnly": true,
+          "progressSaved": false
+        },
+        {
+          "label": "SJT bank 3",
+          "url": "https://www.ucat.ac.uk/umbraco/surface/pearsonpracticetest/launch/UK_QB_SJT_3",
+          "openInNewTab": true,
+          "desktopOnly": true,
+          "progressSaved": false
+        }
+      ]
+    },
+    {
+      "title": "Official full practice tests",
+      "links": [
+        {
+          "label": "Practice tests and question banks",
+          "url": "https://www.ucat.ac.uk/prepare/practice-tests/"
+        },
+        {
+          "label": "Test A — standard",
+          "url": "https://www.ucat.ac.uk/umbraco/surface/pearsonpracticetest/launch/UK_PT_A",
+          "openInNewTab": true,
+          "desktopOnly": true,
+          "progressSaved": false
+        },
+        {
+          "label": "Test B — standard",
+          "url": "https://www.ucat.ac.uk/umbraco/surface/pearsonpracticetest/launch/UK_PT_B",
+          "openInNewTab": true,
+          "desktopOnly": true,
+          "progressSaved": false
+        },
+        {
+          "label": "Test C — standard",
+          "url": "https://www.ucat.ac.uk/umbraco/surface/pearsonpracticetest/launch/UK_PT_C",
+          "openInNewTab": true,
+          "desktopOnly": true,
+          "progressSaved": false
+        },
+        {
+          "label": "Test D — standard",
+          "url": "https://www.ucat.ac.uk/umbraco/surface/pearsonpracticetest/launch/UK_PT_D",
+          "openInNewTab": true,
+          "desktopOnly": true,
+          "progressSaved": false
+        },
+        {
+          "label": "Test A — 25% extra time",
+          "url": "https://www.ucat.ac.uk/umbraco/surface/pearsonpracticetest/launch/UK_PT_SEN_A",
+          "openInNewTab": true,
+          "desktopOnly": true,
+          "progressSaved": false
+        },
+        {
+          "label": "Test B — 25% extra time",
+          "url": "https://www.ucat.ac.uk/umbraco/surface/pearsonpracticetest/launch/UK_PT_SEN_B",
+          "openInNewTab": true,
+          "desktopOnly": true,
+          "progressSaved": false
+        },
+        {
+          "label": "Test C — 25% extra time",
+          "url": "https://www.ucat.ac.uk/umbraco/surface/pearsonpracticetest/launch/UK_PT_SEN_C",
+          "openInNewTab": true,
+          "desktopOnly": true,
+          "progressSaved": false
+        },
+        {
+          "label": "Test D — 25% extra time",
+          "url": "https://www.ucat.ac.uk/umbraco/surface/pearsonpracticetest/launch/UK_PT_SEN_D",
+          "openInNewTab": true,
+          "desktopOnly": true,
+          "progressSaved": false
+        },
+        {
+          "label": "Test A — untimed",
+          "url": "https://www.ucat.ac.uk/umbraco/surface/pearsonpracticetest/launch/UK_PT_U_A",
+          "openInNewTab": true,
+          "desktopOnly": true,
+          "progressSaved": false
+        },
+        {
+          "label": "Test B — untimed",
+          "url": "https://www.ucat.ac.uk/umbraco/surface/pearsonpracticetest/launch/UK_PT_U_B",
+          "openInNewTab": true,
+          "desktopOnly": true,
+          "progressSaved": false
+        },
+        {
+          "label": "Test C — untimed",
+          "url": "https://www.ucat.ac.uk/umbraco/surface/pearsonpracticetest/launch/UK_PT_U_C",
+          "openInNewTab": true,
+          "desktopOnly": true,
+          "progressSaved": false
+        },
+        {
+          "label": "Test D — untimed",
+          "url": "https://www.ucat.ac.uk/umbraco/surface/pearsonpracticetest/launch/UK_PT_U_D",
+          "openInNewTab": true,
+          "desktopOnly": true,
+          "progressSaved": false
+        }
+      ]
+    },
+    {
+      "title": "Format, dates and results",
+      "links": [
+        {
+          "label": "UCAT Consortium",
+          "url": "https://www.ucat.ac.uk/"
+        },
+        {
+          "label": "Format and scoring",
+          "url": "https://www.ucat.ac.uk/about-ucat/test-format-and-scoring/"
+        },
+        {
+          "label": "Test timings and rest-break variants",
+          "url": "https://www.ucat.ac.uk/about-ucat/test-format/test-timings/"
+        },
+        {
+          "label": "Test dates",
+          "url": "https://www.ucat.ac.uk/about-ucat/ucat-test-dates/"
+        },
+        {
+          "label": "Key dates poster (PDF)",
+          "url": "https://www.ucat.ac.uk/media/1717/1-2.pdf"
+        },
+        {
+          "label": "Test statistics, historical tables and percentile lookup",
+          "url": "https://www.ucat.ac.uk/results/test-statistics/"
+        },
+        {
+          "label": "Getting your result",
+          "url": "https://www.ucat.ac.uk/results/ucat-results/"
+        }
+      ]
+    },
+    {
+      "title": "University applications",
+      "links": [
+        {
+          "label": "Universities and course codes",
+          "url": "https://www.ucat.ac.uk/about-ucat/universities/"
+        },
+        {
+          "label": "How universities use the UCAT",
+          "url": "https://www.ucat.ac.uk/results/how-universities-use-the-ucat/"
+        },
+        {
+          "label": "Eligibility",
+          "url": "https://www.ucat.ac.uk/about-ucat/eligibility/"
+        }
+      ]
+    },
+    {
+      "title": "Booking, access and test day",
+      "links": [
+        {
+          "label": "FAQs, including fees",
+          "url": "https://www.ucat.ac.uk/faqs/"
+        },
+        {
+          "label": "Bursary scheme",
+          "url": "https://www.ucat.ac.uk/register/bursary-scheme/"
+        },
+        {
+          "label": "Booking",
+          "url": "https://www.ucat.ac.uk/register/booking-your-test/"
+        },
+        {
+          "label": "Rescheduling and cancelling",
+          "url": "https://www.ucat.ac.uk/register/rescheduling-and-cancelling/"
+        },
+        {
+          "label": "Access arrangements",
+          "url": "https://www.ucat.ac.uk/register/access-arrangements/"
+        },
+        {
+          "label": "Test day",
+          "url": "https://www.ucat.ac.uk/sit/test-day/"
+        },
+        {
+          "label": "ID policy",
+          "url": "https://www.ucat.ac.uk/sit/id-policy/"
+        },
+        {
+          "label": "Pearson test centre video tour",
+          "url": "https://vimeo.com/727025370"
+        },
+        {
+          "label": "Pearson centre locator",
+          "url": "https://wsr.pearsonvue.com/ukcat/locate/"
+        },
+        {
+          "label": "OnVUE-specific test tools",
+          "url": "https://www.ucat.ac.uk/prepare/onvue-test-tools/"
+        },
+        {
+          "label": "UCAT Essentials walkthrough",
+          "url": "https://www.ucat.ac.uk/about-ucat/ucat-essentials/"
+        }
+      ]
+    },
+    {
+      "title": "Candidate advice and wellbeing",
+      "links": [
+        {
+          "label": "Advice from previous candidates",
+          "url": "https://www.ucat.ac.uk/candidate-advice/advice-from-past-candidates/"
+        },
+        {
+          "label": "Wellbeing and support",
+          "url": "https://www.ucat.ac.uk/candidate-advice/wellbeing/"
+        },
+        {
+          "label": "Neurodivergent candidates",
+          "url": "https://www.ucat.ac.uk/candidate-advice/neurodivergent-candidates/"
+        },
+        {
+          "label": "Scottish candidates",
+          "url": "https://www.ucat.ac.uk/candidate-advice/scottish-candidates/"
+        }
+      ]
+    },
+    {
+      "title": "Official channels and regional information",
+      "links": [
+        {
+          "label": "Official UCAT YouTube",
+          "url": "https://www.youtube.com/OfficialUCAT"
+        },
+        {
+          "label": "Official UCAT Vimeo",
+          "url": "https://vimeo.com/officialucat"
+        },
+        {
+          "label": "Official UCAT Instagram",
+          "url": "https://www.instagram.com/ucatofficial/"
+        },
+        {
+          "label": "UCAT Australia and New Zealand (different administration)",
+          "url": "https://www.ucat.edu.au"
+        }
+      ]
+    },
+    {
+      "title": "Professional standards for SJT",
+      "links": [
+        {
+          "label": "GMC Good medical practice",
+          "url": "https://www.gmc-uk.org/professional-standards/the-professional-standards/good-medical-practice"
+        },
+        {
+          "label": "GMC guidance for medical students",
+          "url": "https://www.gmc-uk.org/education/standards-guidance-and-curricula/guidance/student-professionalism-and-ftp"
+        }
+      ]
+    }
+  ]
+}

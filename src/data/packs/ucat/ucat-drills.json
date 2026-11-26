@@ -1,0 +1,1117 @@
+{
+  "schemaVersion": 1,
+  "exam": "UCAT UK",
+  "cycle": 2026,
+  "original": true,
+  "scoring": {
+    "singleChoice": {
+      "exact": 1,
+      "otherwise": 0
+    },
+    "yesNo5": {
+      "exact": 2,
+      "oneWrong": 1,
+      "otherwise": 0
+    },
+    "sjtScale": {
+      "exact": 1,
+      "adjacent": 0.5,
+      "otherwise": 0
+    },
+    "sjtMostLeast": {
+      "perCorrectRole": 0.5,
+      "distinctRequired": true
+    },
+    "note": "Ratio practice scoring for SJT; not an official Band conversion. Do not convert raw cognitive marks into scaled scores without calibration."
+  },
+  "drills": [
+    {
+      "id": "ucat-drill-vr-1",
+      "title": "Evidence and scope",
+      "section": {
+        "code": "VR",
+        "questionCount": 4,
+        "instructionSeconds": 0,
+        "testSeconds": 120,
+        "extraTime25Seconds": 150,
+        "groups": [
+          {
+            "title": "Packing for the route",
+            "stimulus": "A greengrocer delivered boxes of produce by bicycle. It switched to a deeper box because that let staff stack more produce in one load, reducing the number of trips on some routes. Frequent bruising was first noticed among plums delivered to shops on a steep street. Staff wondered whether the slope, the new box or a change of supplier explained it. In a small comparison they packed fruit from the same delivery in both shallow and deep boxes and rode both boxes along the same route. More plums were bruised in the deeper box, chiefly at the bottom. They then laid a rigid divider halfway up that box so the top layer rested on the divider rather than on the fruit below. The number damaged fell on the test route, though it was not measured on flatter routes. The manager decided to use divided boxes for plums on steep routes and review results after a month. Leafy vegetables continued to go in undivided boxes, because symptoms had not been reported for them. The manager rejected a proposal to advertise the boxes as damage-proof. The new method still relied on careful loading and drivers were asked to log any route on which they noticed the boxes moving.",
+            "questions": [
+              {
+                "stem": "What did using fruit from the same delivery help control for?",
+                "options": [
+                  "How often drivers noticed boxes moving",
+                  "The effects of using a divider in both boxes",
+                  "Differences in route length across towns",
+                  "Differences between produce suppliers or deliveries"
+                ],
+                "answer": 3,
+                "explanation": "Comparable fruit makes differences in box depth easier to investigate.",
+                "id": "ucat-drill-vr-1-VR-q01",
+                "format": "single-choice"
+              },
+              {
+                "stem": "Where did the test support a change in normal practice?",
+                "options": [
+                  "Using divided boxes for plums on steep routes.",
+                  "Switching to divided shallow boxes on flat streets.",
+                  "Replacing bike deliveries with another vehicle on hills.",
+                  "Using divided boxes for all produce going to any shop."
+                ],
+                "answer": 0,
+                "explanation": "The improvement was observed on the steep test route and was applied to similar deliveries.",
+                "id": "ucat-drill-vr-1-VR-q02",
+                "format": "single-choice"
+              },
+              {
+                "stem": "Why were leafy vegetables exempted from the change?",
+                "options": [
+                  "Staff had not reported damage symptoms for them.",
+                  "Their route was known to be flatter than every plum route.",
+                  "Testing showed a divider caused more damage to leafy vegetables.",
+                  "They were delivered from a different supplier by van."
+                ],
+                "answer": 0,
+                "explanation": "Without the reported problem seen in plums, undivided boxes remained in use for leafy vegetables.",
+                "id": "ucat-drill-vr-1-VR-q03",
+                "format": "single-choice"
+              },
+              {
+                "stem": "Which statement about the divider is best supported?",
+                "options": [
+                  "It directly reduced damage by shortening the route.",
+                  "It reduced damage in the test, but that does not establish that it prevents all damage.",
+                  "It made the deliveries completely damage-free.",
+                  "It was used only in the original shallow boxes."
+                ],
+                "answer": 1,
+                "explanation": "The benefit was observed on one test route, and careful loading was still needed.",
+                "id": "ucat-drill-vr-1-VR-q04",
+                "format": "single-choice"
+              }
+            ],
+            "id": "ucat-drill-vr-1-VR-g01"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ucat-drill-vr-2",
+      "title": "Author purpose and inference",
+      "section": {
+        "code": "VR",
+        "questionCount": 4,
+        "instructionSeconds": 0,
+        "testSeconds": 120,
+        "extraTime25Seconds": 150,
+        "groups": [
+          {
+            "title": "News from the allotments",
+            "stimulus": "The newsletter of an allotment association began publishing a page on what tenants had harvested. Members could submit pictures, crop names and estimated weights. The editor initially ranked crops by total reported weight. One year the newsletter received many photographs of pumpkins and very few of herbs. A reader claimed this showed that herbs were rarely grown. The editor noted that members often picked herbs in handfuls without weighing them and were unlikely to send a photograph each time. She asked whether a simple tick list of crops grown by each responding tenant would be a better measure of prevalence. The committee trialled the list in a short survey and invited nonreaders of the newsletter to respond too. It reminded those completing the form that varieties of a crop should be recorded as one crop, not separate entries. The results put herbs among the most widely listed crops. Pumpkins still had a high reported weight in the newsletter. Rather than discard the original page, the editor retitled it 'Harvest highlights' and explained that its numbers came from volunteered entries. The survey summary gave the number of respondents but not an estimate for all tenants, because there was no record of whether nonrespondents grew the same kinds of crops.",
+            "questions": [
+              {
+                "stem": "Why was crop weight a poor basis for the reader's claim about herbs?",
+                "options": [
+                  "The newsletter counted varieties as separate entries in the survey.",
+                  "Pumpkins were excluded from the list.",
+                  "The editor had already invited nonreaders to photograph each harvest.",
+                  "Reported weight reflected what people submitted, not simply what tenants grew."
+                ],
+                "answer": 3,
+                "explanation": "Herbs were often unweighed or unphotographed, distorting the newsletter measure.",
+                "id": "ucat-drill-vr-2-VR-q01",
+                "format": "single-choice"
+              },
+              {
+                "format": "true-false-cant-tell",
+                "stem": "The original harvest page was discontinued after the survey.",
+                "options": [
+                  "True",
+                  "False",
+                  "Can't Tell"
+                ],
+                "answer": 1,
+                "explanation": "It was retained under a new title with clarification.",
+                "id": "ucat-drill-vr-2-VR-q02"
+              },
+              {
+                "stem": "Which finding is consistent with both measures?",
+                "options": [
+                  "A widely grown crop can have a low reported harvest weight.",
+                  "Every tenant grew herbs.",
+                  "Most pumpkins went unreported.",
+                  "Pumpkins were grown by the fewest tenants."
+                ],
+                "answer": 0,
+                "explanation": "Herbs ranked highly on surveyed prevalence despite little newsletter attention.",
+                "id": "ucat-drill-vr-2-VR-q03",
+                "format": "single-choice"
+              },
+              {
+                "format": "true-false-cant-tell",
+                "stem": "Nonresponding tenants were mostly tenants who did not read the newsletter.",
+                "options": [
+                  "True",
+                  "False",
+                  "Can't Tell"
+                ],
+                "answer": 2,
+                "explanation": "The response-by-readership breakdown is not given.",
+                "id": "ucat-drill-vr-2-VR-q04"
+              }
+            ],
+            "id": "ucat-drill-vr-2-VR-g01"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ucat-drill-vr-3",
+      "title": "Comparison and uncertainty",
+      "section": {
+        "code": "VR",
+        "questionCount": 4,
+        "instructionSeconds": 0,
+        "testSeconds": 120,
+        "extraTime25Seconds": 150,
+        "groups": [
+          {
+            "title": "Evening rehearsal",
+            "stimulus": "A theatre group moved rehearsals to a school hall that could be rented at a lower hourly rate than its usual venue. The school stipulated that rooms must be left clear by nine, not that rehearsal merely had to stop at nine. At the first rehearsal the director ran a scene until the hour, leaving no time to stack chairs or lock cabinets. The group hired the caretaker to stay late, which cancelled out some of the rent saving. After that session it tested a plan allocating ten minutes for clearing. Cast members said the hall took longer to pack up when they used the collapsible stage, but little extra time when they worked on dialogue only. The producer split the timetable accordingly. She also set up a short handover with a teacher on evenings when equipment could be left in a locked storeroom. That arrangement was unavailable on Wednesdays because the storeroom held instruments for a class the next morning. Some members proposed hiring the original venue on Wednesdays. The producer asked them to compare total costs, including any transport for the stage, before making that decision. Her report said the school hire had potential savings but did not show that each rehearsal cost less. It recommended collecting more records after the timetable changed.",
+            "questions": [
+              {
+                "stem": "What caused the unexpected cost at the first school rehearsal?",
+                "options": [
+                  "The booked time ended without allowing for clearing the hall.",
+                  "The school's rate rose at nine o'clock.",
+                  "The cast forgot to book the teacher.",
+                  "The stage was transported to the original venue."
+                ],
+                "answer": 0,
+                "explanation": "The group paid the caretaker after it used the whole slot for rehearsal.",
+                "id": "ucat-drill-vr-3-VR-q01",
+                "format": "single-choice"
+              },
+              {
+                "format": "true-false-cant-tell",
+                "stem": "The school allowed equipment in the storeroom on Wednesdays under the handover plan.",
+                "options": [
+                  "True",
+                  "False",
+                  "Can't Tell"
+                ],
+                "answer": 1,
+                "explanation": "The storeroom needed to hold instruments for a class.",
+                "id": "ucat-drill-vr-3-VR-q02"
+              },
+              {
+                "stem": "Which comparison would best support a Wednesday venue choice?",
+                "options": [
+                  "The number of cast members who attended the very first rehearsal",
+                  "Total costs of either option, including moving the stage if needed",
+                  "The original rent per hour without other costs",
+                  "Dialogue rehearsal duration alone"
+                ],
+                "answer": 1,
+                "explanation": "Hourly hire alone misses related expenses that differ between options.",
+                "id": "ucat-drill-vr-3-VR-q03",
+                "format": "single-choice"
+              },
+              {
+                "format": "true-false-cant-tell",
+                "stem": "After the producer split the timetable, no further caretaker fees were incurred.",
+                "options": [
+                  "True",
+                  "False",
+                  "Can't Tell"
+                ],
+                "answer": 2,
+                "explanation": "No subsequent fees are specified.",
+                "id": "ucat-drill-vr-3-VR-q04"
+              }
+            ],
+            "id": "ucat-drill-vr-3-VR-g01"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ucat-drill-dm-1",
+      "title": "Deduction and probability",
+      "section": {
+        "code": "DM",
+        "questionCount": 4,
+        "instructionSeconds": 0,
+        "testSeconds": 254,
+        "extraTime25Seconds": 318,
+        "groups": [
+          {
+            "questions": [
+              {
+                "stem": "Should a train operator enable passengers to report inaccessible station lifts through its app? Select the strongest argument.",
+                "options": [
+                  "Yes; rapid reports can warn travellers in time to make an alternative plan, if alerts are verified and updated.",
+                  "No; some stations have stairs.",
+                  "Yes; apps usually allow text entry.",
+                  "No; online messages do not repair lifts by themselves."
+                ],
+                "answer": 0,
+                "explanation": "Timely verified information helps travellers manage a real barrier, even though it does not fix the lift.",
+                "id": "ucat-drill-dm-1-DM-q01",
+                "format": "single-choice"
+              }
+            ],
+            "id": "ucat-drill-dm-1-DM-g01"
+          },
+          {
+            "questions": [
+              {
+                "format": "yes-no-5",
+                "stem": "All rooms on the top floor have a skylight. No room with a skylight is used as a darkroom. Some studios are on the top floor. Does each conclusion follow?",
+                "options": [
+                  "Yes",
+                  "No"
+                ],
+                "statements": [
+                  "Some studios are not used as darkrooms.",
+                  "No top-floor room is used as a darkroom.",
+                  "Every studio has a skylight.",
+                  "Some rooms with skylights are studios.",
+                  "Every darkroom is a studio."
+                ],
+                "answer": [
+                  0,
+                  0,
+                  1,
+                  0,
+                  1
+                ],
+                "explanation": "1. The top-floor studios have skylights. 2. The two rules exclude darkroom use. 3. Studios elsewhere are unspecified. 4. The top-floor studios supply examples. 5. No link establishes that.",
+                "maxMarks": 2,
+                "id": "ucat-drill-dm-1-DM-q02"
+              }
+            ],
+            "id": "ucat-drill-dm-1-DM-g02"
+          },
+          {
+            "questions": [
+              {
+                "stem": "Five alerts A–E arrive in separate minutes. D directly follows A. E is third. C precedes B. B is not next to E. Which statement must be true?",
+                "options": [
+                  "C is in position 3.",
+                  "A is in position 2.",
+                  "D is in position 2.",
+                  "B is in position 2."
+                ],
+                "answer": 2,
+                "explanation": "The valid orders are A–D–E–C–B. D is in position 2. This is the only option that holds in all of them.",
+                "id": "ucat-drill-dm-1-DM-q03",
+                "format": "single-choice"
+              }
+            ],
+            "id": "ucat-drill-dm-1-DM-g03"
+          },
+          {
+            "questions": [
+              {
+                "stem": "Eight of 17 bags contain a metal badge. Two different bags are picked uniformly. What is the chance at least one contains a badge?",
+                "options": [
+                  "64/289",
+                  "8/17",
+                  "25/34",
+                  "7/16"
+                ],
+                "answer": 2,
+                "explanation": "Subtract the chance of two failures: 1 − 9/17 × 8/16 = 25/34.",
+                "id": "ucat-drill-dm-1-DM-q04",
+                "format": "single-choice"
+              }
+            ],
+            "id": "ucat-drill-dm-1-DM-g04"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ucat-drill-dm-2",
+      "title": "Arguments and arrangements",
+      "section": {
+        "code": "DM",
+        "questionCount": 4,
+        "instructionSeconds": 0,
+        "testSeconds": 254,
+        "extraTime25Seconds": 318,
+        "groups": [
+          {
+            "venn": {
+              "sets": [
+                "A",
+                "B",
+                "C"
+              ],
+              "regions": {
+                "A": 12,
+                "B": 17,
+                "C": 11,
+                "AB": 4,
+                "AC": 5,
+                "BC": 8,
+                "ABC": 3,
+                "none": 13
+              }
+            },
+            "questions": [
+              {
+                "stem": "Only A: 12; only B: 17; only C: 11; A and B only: 4; A and C only: 5; B and C only: 8; all three: 3; none: 13. How many people belong to at least one group, but not all three?",
+                "options": [
+                  "70",
+                  "57",
+                  "61",
+                  "54"
+                ],
+                "answer": 1,
+                "explanation": "The relevant non-overlapping regions are A, B, C, AB, AC, BC: 12 + 17 + 11 + 4 + 5 + 8 = 57.",
+                "id": "ucat-drill-dm-2-DM-q01",
+                "format": "single-choice"
+              }
+            ],
+            "id": "ucat-drill-dm-2-DM-g01"
+          },
+          {
+            "questions": [
+              {
+                "stem": "Should an exam venue publish a photo guide to accessible entrances? Select the strongest argument.",
+                "options": [
+                  "No; the guide cannot name every building in the area.",
+                  "No; some visitors have previously used the building.",
+                  "Yes; a current guide can reduce uncertainty for visitors who need to choose a step-free route in advance.",
+                  "Yes; posting photos is popular."
+                ],
+                "answer": 2,
+                "explanation": "The benefit follows from the stated guide and concerns the intended users.",
+                "id": "ucat-drill-dm-2-DM-q02",
+                "format": "single-choice"
+              }
+            ],
+            "id": "ucat-drill-dm-2-DM-g02"
+          },
+          {
+            "questions": [
+              {
+                "stem": "Five displays F, G, H, I and Q are installed sequentially. I is second. F directly follows H. G precedes Q. Q is not last. Which statement must be true?",
+                "options": [
+                  "H is in position 3.",
+                  "Q is in position 5.",
+                  "F is in position 5.",
+                  "G is in position 2."
+                ],
+                "answer": 2,
+                "explanation": "The valid orders are G–I–Q–H–F. F is in position 5. This is the only option that holds in all of them.",
+                "id": "ucat-drill-dm-2-DM-q03",
+                "format": "single-choice"
+              }
+            ],
+            "id": "ucat-drill-dm-2-DM-g03"
+          },
+          {
+            "questions": [
+              {
+                "stem": "A clerk must choose two separate files. A and B cannot be chosen together. C can only be chosen with A. D can only be chosen with B. Which pair is allowed?",
+                "options": [
+                  "B and C",
+                  "A and D",
+                  "C and D",
+                  "A and C"
+                ],
+                "answer": 3,
+                "explanation": "Only A with C satisfies both prerequisites and the separation between A and B.",
+                "id": "ucat-drill-dm-2-DM-q04",
+                "format": "single-choice"
+              }
+            ],
+            "id": "ucat-drill-dm-2-DM-g04"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ucat-drill-dm-3",
+      "title": "Set reasoning and evidence",
+      "section": {
+        "code": "DM",
+        "questionCount": 4,
+        "instructionSeconds": 0,
+        "testSeconds": 254,
+        "extraTime25Seconds": 318,
+        "groups": [
+          {
+            "venn": {
+              "sets": [
+                "A",
+                "B",
+                "C"
+              ],
+              "regions": {
+                "A": 15,
+                "B": 19,
+                "C": 16,
+                "AB": 3,
+                "AC": 7,
+                "BC": 9,
+                "ABC": 4,
+                "none": 11
+              }
+            },
+            "questions": [
+              {
+                "stem": "Only A: 15; only B: 19; only C: 16; A and B only: 3; A and C only: 7; B and C only: 9; all three: 4; none: 11. How many people are in exactly two of the three groups?",
+                "options": [
+                  "22",
+                  "19",
+                  "30",
+                  "15"
+                ],
+                "answer": 1,
+                "explanation": "The relevant non-overlapping regions are AB, AC, BC: 3 + 7 + 9 = 19.",
+                "id": "ucat-drill-dm-3-DM-q01",
+                "format": "single-choice"
+              }
+            ],
+            "id": "ucat-drill-dm-3-DM-g01"
+          },
+          {
+            "questions": [
+              {
+                "stem": "A clinic sends reminders to 90 of 150 patients. Eighteen reminded patients miss their appointment. Of all 150 patients, 42 miss their appointment. Which fraction of patients without a reminder missed?",
+                "options": [
+                  "2/5",
+                  "4/15",
+                  "7/25",
+                  "1/5"
+                ],
+                "answer": 0,
+                "explanation": "There are 42 − 18 = 24 misses among 60 unreminded patients; 24/60 = 2/5.",
+                "id": "ucat-drill-dm-3-DM-q02",
+                "format": "single-choice"
+              }
+            ],
+            "id": "ucat-drill-dm-3-DM-g02"
+          },
+          {
+            "questions": [
+              {
+                "format": "yes-no-5",
+                "stem": "All demonstrations need a reservation. No reservation is accepted without an email address. Some staff training sessions are demonstrations. Does each conclusion follow?",
+                "options": [
+                  "Yes",
+                  "No"
+                ],
+                "statements": [
+                  "Some staff training sessions require an email address to book.",
+                  "Every session requiring an email address is a demonstration.",
+                  "No demonstration reservation can be accepted without an email address.",
+                  "All training sessions require reservations.",
+                  "Some training sessions are not demonstrations."
+                ],
+                "answer": [
+                  0,
+                  1,
+                  0,
+                  1,
+                  1
+                ],
+                "explanation": "1. The demonstration sessions require reservations. 2. Other bookings could need one. 3. The reservation policy applies to all demonstrations. 4. Only the demonstration training sessions are covered. 5. No such example is stated.",
+                "maxMarks": 2,
+                "id": "ucat-drill-dm-3-DM-q03"
+              }
+            ],
+            "id": "ucat-drill-dm-3-DM-g03"
+          },
+          {
+            "questions": [
+              {
+                "stem": "Nine of 23 parcels have a tracking label. Two different parcels are drawn uniformly. What is the chance exactly one has a tracking label?",
+                "options": [
+                  "9/23",
+                  "81/529",
+                  "4/11",
+                  "126/253"
+                ],
+                "answer": 3,
+                "explanation": "Either order works: 2 × 9/23 × 14/22 = 126/253.",
+                "id": "ucat-drill-dm-3-DM-q04",
+                "format": "single-choice"
+              }
+            ],
+            "id": "ucat-drill-dm-3-DM-g04"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ucat-drill-qr-1",
+      "title": "Rates and tariffs",
+      "section": {
+        "code": "QR",
+        "questionCount": 4,
+        "instructionSeconds": 0,
+        "testSeconds": 173,
+        "extraTime25Seconds": 216,
+        "groups": [
+          {
+            "title": "Equipment hire",
+            "stimulus": "Hire lasts whole days. The deposit is refunded in full. Each block of five days is charged as four days; leftover days are full rate.",
+            "chart": {
+              "type": "table",
+              "title": "Equipment hire",
+              "labels": [
+                "Tripod",
+                "Projector",
+                "Screen",
+                "Speaker"
+              ],
+              "series": [
+                {
+                  "name": "Daily rate (£)",
+                  "values": [
+                    9,
+                    27,
+                    16,
+                    18
+                  ]
+                },
+                {
+                  "name": "Refundable deposit (£)",
+                  "values": [
+                    24,
+                    90,
+                    40,
+                    50
+                  ]
+                },
+                {
+                  "name": "Setup fee per hire (£)",
+                  "values": [
+                    4,
+                    14,
+                    10,
+                    12
+                  ]
+                }
+              ]
+            },
+            "questions": [
+              {
+                "stem": "What must be paid upfront to hire a projector for 7 days?",
+                "options": [
+                  "£356",
+                  "£86",
+                  "£239",
+                  "£293",
+                  "£266"
+                ],
+                "answer": 4,
+                "explanation": "((27 × 6) + 90) + 14 gives £266.",
+                "id": "ucat-drill-qr-1-QR-q01",
+                "format": "single-choice"
+              },
+              {
+                "stem": "What net cost remains after the deposits are refunded on 10 days of screen hire and 3 days of speaker hire?",
+                "options": [
+                  "£24",
+                  "£294",
+                  "£172",
+                  "£236",
+                  "£204"
+                ],
+                "answer": 4,
+                "explanation": "((16 × 8) + 10) + ((18 × 3) + 12) gives £204.",
+                "id": "ucat-drill-qr-1-QR-q02",
+                "format": "single-choice"
+              },
+              {
+                "stem": "For a six-day tripod hire, what percentage of the upfront amount is refundable, to one decimal place?",
+                "options": [
+                  "37.9%",
+                  "42.9%",
+                  "32.9%",
+                  "27.9%",
+                  "12.9%"
+                ],
+                "answer": 2,
+                "explanation": "(24 ÷ (((9 × 5) + 24) + 4)) × 100 gives 32.9% to the stated precision.",
+                "id": "ucat-drill-qr-1-QR-q03",
+                "format": "single-choice"
+              },
+              {
+                "stem": "Two people need identical projectors consecutively for 4 days each. How much less is the net cost of one 8-day hire than two separate 4-day hires?",
+                "options": [
+                  "£95",
+                  "£41",
+                  "£68",
+                  "£27",
+                  "£55"
+                ],
+                "answer": 1,
+                "explanation": "27 + 14 gives £41.",
+                "id": "ucat-drill-qr-1-QR-q04",
+                "format": "single-choice"
+              }
+            ],
+            "id": "ucat-drill-qr-1-QR-g01"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ucat-drill-qr-2",
+      "title": "Weighted figures and percentages",
+      "section": {
+        "code": "QR",
+        "questionCount": 4,
+        "instructionSeconds": 0,
+        "testSeconds": 173,
+        "extraTime25Seconds": 216,
+        "groups": [
+          {
+            "title": "Music centre membership",
+            "stimulus": "The monthly fee applies to every current member. Fee concessions have already been reflected in the price. Overheads shown are for one month.",
+            "chart": {
+              "type": "table",
+              "title": "Music centre membership",
+              "labels": [
+                "Strings",
+                "Brass",
+                "Keys",
+                "Percussion"
+              ],
+              "series": [
+                {
+                  "name": "Members",
+                  "values": [
+                    47,
+                    32,
+                    56,
+                    35
+                  ]
+                },
+                {
+                  "name": "Monthly price (£)",
+                  "values": [
+                    18,
+                    22,
+                    16,
+                    25
+                  ]
+                },
+                {
+                  "name": "Monthly overhead (£)",
+                  "values": [
+                    500,
+                    432,
+                    620,
+                    475
+                  ]
+                }
+              ]
+            },
+            "questions": [
+              {
+                "stem": "What is the combined monthly surplus from Strings and Brass?",
+                "options": [
+                  "£1050",
+                  "£1482",
+                  "£618",
+                  "£718",
+                  "£518"
+                ],
+                "answer": 2,
+                "explanation": "((47 × 18) − 500) + ((32 × 22) − 432) gives £618.",
+                "id": "ucat-drill-qr-2-QR-q01",
+                "format": "single-choice"
+              },
+              {
+                "stem": "Keys loses 25% of its members. How much is left after overheads that month if the fee is unchanged?",
+                "options": [
+                  "£22",
+                  "£52",
+                  "£82",
+                  "£500",
+                  "£276"
+                ],
+                "answer": 1,
+                "explanation": "((56 × 3/4) × 16) − 620 gives £52.",
+                "id": "ucat-drill-qr-2-QR-q02",
+                "format": "single-choice"
+              },
+              {
+                "stem": "Calculate the mean monthly price per member across Strings and Percussion, to two decimal places.",
+                "options": [
+                  "£21.50",
+                  "£22.48",
+                  "£20.99",
+                  "£18.01",
+                  "£20.48"
+                ],
+                "answer": 2,
+                "explanation": "((47 × 18) + (35 × 25)) ÷ (47 + 35) gives £20.99 to the stated precision.",
+                "id": "ucat-drill-qr-2-QR-q03",
+                "format": "single-choice"
+              },
+              {
+                "stem": "If Percussion overhead rises by 20%, what percentage of fee income will then go on overheads at its existing membership? Give one decimal place.",
+                "options": [
+                  "65.1%",
+                  "81.1%",
+                  "76.0%",
+                  "54.2%",
+                  "33.1%"
+                ],
+                "answer": 0,
+                "explanation": "((475 × 1.2) ÷ (35 × 25)) × 100 gives 65.1% to the stated precision.",
+                "id": "ucat-drill-qr-2-QR-q04",
+                "format": "single-choice"
+              }
+            ],
+            "id": "ucat-drill-qr-2-QR-g01"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ucat-drill-qr-3",
+      "title": "Multi-stage conversions",
+      "section": {
+        "code": "QR",
+        "questionCount": 4,
+        "instructionSeconds": 0,
+        "testSeconds": 173,
+        "extraTime25Seconds": 216,
+        "groups": [
+          {
+            "title": "Drink concentrate",
+            "stimulus": "A syrup-to-water ratio of 1:3 means 1 part syrup and 3 parts water; volumes add exactly. Bottles of syrup must be bought whole.",
+            "chart": {
+              "type": "table",
+              "title": "Drink concentrate",
+              "labels": [
+                "Lime",
+                "Ginger",
+                "Berry",
+                "Orange"
+              ],
+              "series": [
+                {
+                  "name": "Bottle volume (mL)",
+                  "values": [
+                    750,
+                    500,
+                    600,
+                    800
+                  ]
+                },
+                {
+                  "name": "Water parts per part syrup",
+                  "values": [
+                    4,
+                    5,
+                    3,
+                    6
+                  ]
+                },
+                {
+                  "name": "Bottle price (£)",
+                  "values": [
+                    4.8,
+                    3.1,
+                    4.4,
+                    5.2
+                  ]
+                }
+              ]
+            },
+            "questions": [
+              {
+                "stem": "How many litres can be made with all the syrup in 8 Lime bottles?",
+                "options": [
+                  "37.5 L",
+                  "15.0 L",
+                  "36.0 L",
+                  "30.0 L",
+                  "24.0 L"
+                ],
+                "answer": 3,
+                "explanation": "((750 × (4 + 1)) × 8) ÷ 1000 gives 30.0 L to the stated precision.",
+                "id": "ucat-drill-qr-3-QR-q01",
+                "format": "single-choice"
+              },
+              {
+                "stem": "What is the minimum syrup cost to make 22 L of Ginger drink?",
+                "options": [
+                  "£21.70",
+                  "£12.40",
+                  "£31.00",
+                  "£24.80",
+                  "£27.90"
+                ],
+                "answer": 3,
+                "explanation": "(round up to a whole number of ((22 × 1000) ÷ (500 × (5 + 1)))) × 3.1 gives £24.80 to the stated precision.",
+                "id": "ucat-drill-qr-3-QR-q02",
+                "format": "single-choice"
+              },
+              {
+                "stem": "For a 20 L batch of Berry drink, how much water is required?",
+                "options": [
+                  "18.0 L",
+                  "5.0 L",
+                  "12.0 L",
+                  "20.0 L",
+                  "15.0 L"
+                ],
+                "answer": 4,
+                "explanation": "(20 × 3) ÷ (3 + 1) gives 15.0 L to the stated precision.",
+                "id": "ucat-drill-qr-3-QR-q03",
+                "format": "single-choice"
+              },
+              {
+                "stem": "A 300 mL serving of Orange drink sells for £1.50. From one syrup bottle, what revenue do all complete servings earn?",
+                "options": [
+                  "£27.00",
+                  "£28.50",
+                  "£30.00",
+                  "£25.50",
+                  "£21.00"
+                ],
+                "answer": 0,
+                "explanation": "(round down to a whole number of ((800 × (6 + 1)) ÷ 300)) × 1.5 gives £27.00 to the stated precision.",
+                "id": "ucat-drill-qr-3-QR-q04",
+                "format": "single-choice"
+              }
+            ],
+            "id": "ucat-drill-qr-3-QR-g01"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ucat-drill-sjt-1",
+      "title": "Consent and privacy",
+      "section": {
+        "code": "SJT",
+        "questionCount": 4,
+        "instructionSeconds": 0,
+        "testSeconds": 90,
+        "extraTime25Seconds": 112,
+        "groups": [
+          {
+            "title": "Lost study notebook",
+            "stimulus": "Student Dalia realises her placement notebook is missing after leaving a bus. It contains patient initials and two distinctive case details copied for study. There are no patient names.",
+            "questions": [
+              {
+                "format": "importance",
+                "stem": "How important is the following consideration? Whether the combinations of details could reasonably identify someone.",
+                "options": [
+                  "Very important",
+                  "Important",
+                  "Of minor importance",
+                  "Not important at all"
+                ],
+                "answer": 0,
+                "explanation": "Identify the privacy risk even without full names.",
+                "id": "ucat-drill-sjt-1-SJT-q01"
+              },
+              {
+                "format": "appropriateness",
+                "stem": "How appropriate is the following response? Promptly report the loss through the placement's process and describe the details recorded.",
+                "options": [
+                  "A very appropriate thing to do",
+                  "Appropriate, but not ideal",
+                  "Inappropriate, but not awful",
+                  "A very inappropriate thing to do"
+                ],
+                "answer": 0,
+                "explanation": "Combinations can identify people; the incident team needs accurate information.",
+                "id": "ucat-drill-sjt-1-SJT-q02"
+              },
+              {
+                "format": "appropriateness",
+                "stem": "How appropriate is the following response? Wait until she knows someone has read it before telling anyone.",
+                "options": [
+                  "A very appropriate thing to do",
+                  "Appropriate, but not ideal",
+                  "Inappropriate, but not awful",
+                  "A very inappropriate thing to do"
+                ],
+                "answer": 3,
+                "explanation": "Confirmed access is not required to report a potentially identifiable disclosure.",
+                "id": "ucat-drill-sjt-1-SJT-q03"
+              },
+              {
+                "format": "appropriateness",
+                "stem": "How appropriate is the following response? Call the bus operator's lost property desk but do not inform the placement.",
+                "options": [
+                  "A very appropriate thing to do",
+                  "Appropriate, but not ideal",
+                  "Inappropriate, but not awful",
+                  "A very inappropriate thing to do"
+                ],
+                "answer": 2,
+                "explanation": "Recovering it can help, but it does not replace incident reporting.",
+                "id": "ucat-drill-sjt-1-SJT-q04"
+              }
+            ],
+            "id": "ucat-drill-sjt-1-SJT-g01"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ucat-drill-sjt-2",
+      "title": "Escalation and speaking up",
+      "section": {
+        "code": "SJT",
+        "questionCount": 4,
+        "instructionSeconds": 0,
+        "testSeconds": 90,
+        "extraTime25Seconds": 112,
+        "groups": [
+          {
+            "title": "A dismissive reply",
+            "stimulus": "Student Emil tells his supervisor that a patient is becoming increasingly distressed while waiting. The supervisor is distracted and replies 'later' without looking up. There is another qualified member of staff close by.",
+            "questions": [
+              {
+                "format": "appropriateness",
+                "stem": "How appropriate is the following response? Restate the change clearly and, if no response is secured, seek timely help from the available clinician.",
+                "options": [
+                  "A very appropriate thing to do",
+                  "Appropriate, but not ideal",
+                  "Inappropriate, but not awful",
+                  "A very inappropriate thing to do"
+                ],
+                "answer": 0,
+                "explanation": "Escalate a worsening concern until someone appropriate takes responsibility.",
+                "id": "ucat-drill-sjt-2-SJT-q01"
+              },
+              {
+                "format": "appropriateness",
+                "stem": "How appropriate is the following response? Do nothing further because the first response came from a supervisor.",
+                "options": [
+                  "A very appropriate thing to do",
+                  "Appropriate, but not ideal",
+                  "Inappropriate, but not awful",
+                  "A very inappropriate thing to do"
+                ],
+                "answer": 3,
+                "explanation": "Hierarchy does not remove the duty to act on an unresolved safety concern.",
+                "id": "ucat-drill-sjt-2-SJT-q02"
+              },
+              {
+                "format": "most-least",
+                "stem": "Select the most and least appropriate next action if the supervisor remains unavailable.",
+                "options": [
+                  "Stay with the patient while asking a colleague to locate help.",
+                  "Tell the available clinician specifically what has changed.",
+                  "Leave without telling anyone to avoid bothering the team."
+                ],
+                "answer": [
+                  1,
+                  2
+                ],
+                "explanation": "Find a qualified responder now; disappearing without handover leaves the risk unresolved.",
+                "id": "ucat-drill-sjt-2-SJT-q03"
+              },
+              {
+                "format": "appropriateness",
+                "stem": "How appropriate is the following response? Offer reassurance and ask the patient to wait without alerting anyone else.",
+                "options": [
+                  "A very appropriate thing to do",
+                  "Appropriate, but not ideal",
+                  "Inappropriate, but not awful",
+                  "A very inappropriate thing to do"
+                ],
+                "answer": 2,
+                "explanation": "Reassurance is useful but cannot replace review of worsening distress.",
+                "id": "ucat-drill-sjt-2-SJT-q04"
+              }
+            ],
+            "id": "ucat-drill-sjt-2-SJT-g01"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ucat-drill-sjt-3",
+      "title": "Priorities and professional boundaries",
+      "section": {
+        "code": "SJT",
+        "questionCount": 4,
+        "instructionSeconds": 0,
+        "testSeconds": 90,
+        "extraTime25Seconds": 112,
+        "groups": [
+          {
+            "title": "Competing requests",
+            "stimulus": "Student Farah is due to join a tutorial. Before she leaves, a patient who was told not to walk unaided asks for help, and a classmate asks Farah to sign an attendance sheet on their behalf. A member of staff is nearby.",
+            "questions": [
+              {
+                "format": "appropriateness",
+                "stem": "How appropriate is the following response? Sign for the classmate and ask the patient to try walking alone.",
+                "options": [
+                  "A very appropriate thing to do",
+                  "Appropriate, but not ideal",
+                  "Inappropriate, but not awful",
+                  "A very inappropriate thing to do"
+                ],
+                "answer": 3,
+                "explanation": "This combines dishonesty with a foreseeable immediate risk.",
+                "id": "ucat-drill-sjt-3-SJT-q01"
+              },
+              {
+                "format": "appropriateness",
+                "stem": "How appropriate is the following response? Notify the tutor she may be delayed but fail to tell ward staff why she is staying.",
+                "options": [
+                  "A very appropriate thing to do",
+                  "Appropriate, but not ideal",
+                  "Inappropriate, but not awful",
+                  "A very inappropriate thing to do"
+                ],
+                "answer": 2,
+                "explanation": "Notice to the tutor is useful, but the patient still needs qualified assistance.",
+                "id": "ucat-drill-sjt-3-SJT-q02"
+              },
+              {
+                "format": "appropriateness",
+                "stem": "How appropriate is the following response? Alert the staff member to the patient's need, confirm it has been accepted and decline to sign for the classmate.",
+                "options": [
+                  "A very appropriate thing to do",
+                  "Appropriate, but not ideal",
+                  "Inappropriate, but not awful",
+                  "A very inappropriate thing to do"
+                ],
+                "answer": 0,
+                "explanation": "A current safety need comes first, and attendance must be recorded honestly.",
+                "id": "ucat-drill-sjt-3-SJT-q03"
+              },
+              {
+                "format": "importance",
+                "stem": "How important is the following consideration? Whether the patient may mobilise before help arrives.",
+                "options": [
+                  "Very important",
+                  "Important",
+                  "Of minor importance",
+                  "Not important at all"
+                ],
+                "answer": 0,
+                "explanation": "An immediate fall risk outweighs ordinary scheduling concerns.",
+                "id": "ucat-drill-sjt-3-SJT-q04"
+              }
+            ],
+            "id": "ucat-drill-sjt-3-SJT-g01"
+          }
+        ]
+      }
+    }
+  ]
+}
