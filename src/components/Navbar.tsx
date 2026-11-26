@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Moon, Scale, Sun } from 'lucide-react';
+import { Moon, Sun } from 'lucide-react';
 import { ADMISSIONS_TESTS, TestId } from '../data/allTests';
 
 interface NavbarProps {
@@ -21,22 +21,17 @@ export const Navbar: React.FC<NavbarProps> = ({
   return (
     <header className="sticky top-0 z-30 border-b border-[var(--rule)] bg-[var(--bg)]/94 backdrop-blur-md text-[var(--text)] no-print">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between gap-4">
-        {/* Brand -> Welcome */}
+        {/* Clean editorial wordmark (no icon-in-box badge) */}
         <button
           type="button"
           onClick={onGoHome}
-          className="flex items-center gap-2 text-left cursor-pointer shrink-0"
+          className="font-display text-2xl tracking-tight text-[var(--ink)] leading-none cursor-pointer shrink-0"
           title="Back to Welcome"
         >
-          <div className="w-7 h-7 rounded-[6px] bg-[var(--accent)] text-[var(--accent-fg)] flex items-center justify-center">
-            <Scale className="w-3.5 h-3.5" />
-          </div>
-          <span className="font-display text-2xl tracking-tight text-[var(--ink)] leading-none">
-            Ratio
-          </span>
+          Ratio
         </button>
 
-        {/* Clean 5-Test Switcher with spring sliding highlight */}
+        {/* Clean 5-Test Switcher with Motion spring sliding highlight */}
         <nav
           className="flex items-center gap-0.5 p-1 border border-[var(--rule)] bg-[var(--surface)] overflow-x-auto"
           aria-label="Admissions tests"
@@ -58,7 +53,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   <motion.span
                     layoutId="ratio-active-test"
                     transition={{ type: 'spring', stiffness: 480, damping: 36 }}
-                    className="absolute inset-0 bg-[var(--accent)]"
+                    className="absolute inset-0 bg-[var(--ink)]"
                   />
                 )}
                 <span className="relative z-10">{test.code}</span>
@@ -67,7 +62,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           })}
         </nav>
 
-        {/* Theme toggle only */}
+        {/* Theme toggle */}
         <button
           type="button"
           onClick={onToggleTheme}

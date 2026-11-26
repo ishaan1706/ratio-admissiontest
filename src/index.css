@@ -1,24 +1,24 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #07090F;
-  --paper: #07090F;
-  --surface: #0E121B;
-  --surface-subtle: #141A26;
-  --ink: #F8FAFC;
-  --obsidian: #F8FAFC;
-  --obsidian-soft: #1E293B;
-  --text: #F8FAFC;
-  --text-muted: #94A3B8;
-  --rule: rgba(255, 255, 255, 0.09);
-  --border: rgba(255, 255, 255, 0.09);
+  --bg: #09090B;
+  --paper: #09090B;
+  --surface: #111114;
+  --surface-subtle: #18181B;
+  --ink: #F4F4F5;
+  --obsidian: #F4F4F5;
+  --obsidian-soft: #27272A;
+  --text: #F4F4F5;
+  --text-muted: #A1A1AA;
+  --rule: rgba(255, 255, 255, 0.08);
+  --border: rgba(255, 255, 255, 0.08);
   --border-strong: rgba(255, 255, 255, 0.18);
   --accent: #10B981;
   --accent-hover: #34D399;
-  --accent-fg: #03150E;
-  --accent-soft: rgba(16, 185, 129, 0.14);
+  --accent-fg: #09090B;
+  --accent-soft: rgba(16, 185, 129, 0.12);
   --primary-action: #10B981;
-  --primary-action-fg: #03150E;
+  --primary-action-fg: #09090B;
   --gold: #F5D08A;
   --ochre: #F59E0B;
   --ochre-soft: rgba(245, 158, 11, 0.14);

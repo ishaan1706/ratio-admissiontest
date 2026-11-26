@@ -13,7 +13,13 @@ export interface PracticeQuestion {
 export interface OfficialLink {
   label: string;
   url: string;
+  category: 'Practice Tests' | 'Past Papers' | 'Guide' | 'Spec' | 'Portal';
   note: string;
+}
+
+export interface PastPaperRow {
+  year: string;
+  items: { label: string; url: string }[];
 }
 
 export interface AdmissionsTest {
@@ -26,7 +32,10 @@ export interface AdmissionsTest {
   duration: string;
   scoreScale: string;
   officialSite: string;
+  officialAdvice: string[];
   officialLinks: OfficialLink[];
+  pastPapersTitle?: string;
+  pastPapers?: PastPaperRow[];
   questions: PracticeQuestion[];
   writingPrompts?: string[];
 }
@@ -37,16 +46,98 @@ export const ADMISSIONS_TESTS: AdmissionsTest[] = [
     code: 'LNAT',
     name: 'National Admissions Test for Law',
     subject: 'Law',
-    universities: 'Oxford, Cambridge, LSE, UCL, KCL, Durham, Bristol',
-    format: 'Section A: 42 MCQs (12 passages) · Section B: 1 Essay',
+    universities: 'Oxford, Cambridge, LSE, UCL, KCL, Durham, Bristol, Glasgow, SOAS, SUSS, IE',
+    format: 'Section A: 42 MCQs (12 passages, 95m) · Section B: 1 of 3 Essays (40m)',
     duration: '135 mins',
-    scoreScale: '0–42 (Section A)',
+    scoreScale: '0–42 (Section A) · Essay sent to universities',
     officialSite: 'https://lnat.ac.uk/',
+    officialAdvice: [
+      'Section A: 95 min, 42 MCQs across 12 passages (no negative marking). Once Section B begins you cannot return to Section A.',
+      'Section B: 40 min, 1 of 3 prompts. Aim for 500–600 words (recommended max 750 words); defend a clear position with plain, economical prose.',
+      'Fee: £75 UK/EU (£120 outside EU); full £75 bursary available for eligible UK/EU candidates. Sat once per admissions cycle.',
+      'Read daily quality newspapers (Economist, FT, Guardian, Times, NYT) and test assumptions, evidence, and counter-arguments.',
+    ],
     officialLinks: [
-      { label: 'Official LNAT Website', url: 'https://lnat.ac.uk/', note: 'Registration, test centres, and dates' },
-      { label: 'Pearson VUE LNAT Tutorial', url: 'https://lnat.ac.uk/lnat-tutorial', note: 'Exact on-screen exam interface' },
-      { label: 'Official Practice Tests', url: 'https://lnat.ac.uk/how-to-prepare/practice-test/', note: 'Free official past passages and simulator' },
-      { label: 'Official Sample Essays', url: 'https://lnat.ac.uk/how-to-prepare/sample-essays/', note: 'Annotated Section B scripts' },
+      {
+        label: 'Official On-Screen Sample Test Simulator',
+        url: 'https://lnat.ac.uk/lnat-Sample-Test',
+        category: 'Practice Tests',
+        note: 'Unlimited attempts mirroring the Pearson VUE test centre interface',
+      },
+      {
+        label: 'Pearson VUE Online Tutorial (2026 Controls)',
+        url: 'https://lnat.ac.uk/lnat-tutorial',
+        category: 'Guide',
+        note: 'Walkthrough of on-screen highlighting, flagging, and Pause the Clock controls',
+      },
+      {
+        label: 'Official Practice Tests Hub',
+        url: 'https://lnat.ac.uk/how-to-prepare/practice-test/',
+        category: 'Practice Tests',
+        note: 'Official PDF and RTF practice papers plus simulator links',
+      },
+      {
+        label: 'Your Guide to Preparing for the LNAT (PDF)',
+        url: 'https://lnat.ac.uk/wp-content/uploads/2014/05/Your-Guide-To-Preparing-For-The-LNAT.pdf',
+        category: 'Guide',
+        note: 'Official LNAT Consortium preparation handbook with worked MCQ rationales',
+      },
+      {
+        label: 'Official Sample Essays & Examiner Scripts',
+        url: 'https://lnat.ac.uk/how-to-prepare/sample-essays/',
+        category: 'Guide',
+        note: '9 official prompts plus annotated sample answers (arts, species, political correctness)',
+      },
+      {
+        label: 'Official Hints & Tips',
+        url: 'https://lnat.ac.uk/how-to-prepare/hints-and-tips/',
+        category: 'Guide',
+        note: 'MCQ and essay strategy direct from LNAT Consortium',
+      },
+      {
+        label: 'Test Format & Results',
+        url: 'https://lnat.ac.uk/what-is-lnat/test-format/',
+        category: 'Spec',
+        note: 'Exact timing, scoring, and mid-Feb / mid-Aug score release schedule',
+      },
+      {
+        label: '2026–27 Dates, Deadlines & Registration',
+        url: 'https://lnat.ac.uk/registration/dates-and-deadlines/',
+        category: 'Portal',
+        note: 'Oxbridge (15 Oct), KCL/LSE/UCL (31 Dec), Bristol/Durham (13 Jan), others (25 Jan)',
+      },
+      {
+        label: 'Bursary & Access Arrangements',
+        url: 'https://lnat.ac.uk/registration/bursary/',
+        category: 'Portal',
+        note: '£75 fee waiver and up to 25% extra time / rest-break applications',
+      },
+      {
+        label: 'On Test Day & ID Rules',
+        url: 'https://lnat.ac.uk/on-test-day/',
+        category: 'Portal',
+        note: 'What to bring and Pearson VUE centre check-in requirements',
+      },
+    ],
+    pastPapersTitle: 'Official LNAT Downloadable Papers & Sample Answers (PDF)',
+    pastPapers: [
+      {
+        year: 'Papers',
+        items: [
+          { label: 'Practice Paper 1', url: 'https://lnat.ac.uk/wp-content/uploads/2014/05/Practice-Test-2010-paper-1.pdf' },
+          { label: 'Practice Paper 2', url: 'https://lnat.ac.uk/wp-content/uploads/2014/05/Practice-Test-2010-paper-2.pdf' },
+          { label: 'Mark Scheme', url: 'https://lnat.ac.uk/wp-content/uploads/2014/05/Practice-Tests-2010-mark-scheme.pdf' },
+          { label: 'Examiner Commentary', url: 'https://lnat.ac.uk/wp-content/uploads/2014/05/Practice-Tests-2010-Commentary.pdf' },
+        ],
+      },
+      {
+        year: 'Essays',
+        items: [
+          { label: 'Arts Funding Sample', url: 'https://lnat.ac.uk/wp-content/uploads/2014/04/sample_arts.pdf' },
+          { label: 'Species Extinction Sample', url: 'https://lnat.ac.uk/wp-content/uploads/2014/04/sample_species.pdf' },
+          { label: 'Political Correctness Sample', url: 'https://lnat.ac.uk/wp-content/uploads/2014/04/sample_political.pdf' },
+        ],
+      },
     ],
     questions: [],
   },
@@ -56,14 +147,91 @@ export const ADMISSIONS_TESTS: AdmissionsTest[] = [
     name: 'University Clinical Aptitude Test',
     subject: 'Medicine & Dentistry',
     universities: 'Oxford, Cambridge, Imperial, UCL, KCL, Edinburgh + 30 UK medical schools',
-    format: 'Verbal Reasoning · Decision Making · Quantitative Reasoning · SJT',
+    format: 'VR (44 Qs, 22m) · DM (35 Qs, 37m) · QR (36 Qs, 26m) · SJT (69 Qs, 26m)',
     duration: '120 mins',
-    scoreScale: '1200–2700 + SJT Band 1–4',
+    scoreScale: '900–2700 (300–900 × 3) + SJT Band 1–4',
     officialSite: 'https://www.ucat.ac.uk/',
+    officialAdvice: [
+      'Official 5-step path: (1) Prep checklist → (2) Tour Tutorial → (3) Question Tutorials → (4) Official Question Banks → (5) Timed Mocks A–D in the final week.',
+      'No negative marking; 2026 mean total was 1918 (8th decile 2140, 9th decile 2250). Fee: £70 UK (£115 outside UK); UK bursary available.',
+      'Pearson VUE practice tests are desktop-only and do not save scores — log your mock scores in Ratio to track progress.',
+    ],
     officialLinks: [
-      { label: 'Official UCAT Portal', url: 'https://www.ucat.ac.uk/', note: 'Booking, bursaries, and test format' },
-      { label: 'UCAT Official Practice Tests', url: 'https://www.ucat.ac.uk/prepare/practice-tests/', note: 'Four full official timed mocks' },
-      { label: 'UCAT Question Banks', url: 'https://www.ucat.ac.uk/prepare/question-banks/', note: 'Subtest drills in Pearson VUE layout' },
+      {
+        label: 'Official Pearson VUE Tour Tutorial',
+        url: 'https://www.ucat.ac.uk/umbraco/surface/pearsonpracticetest/launch/UK_Tour_Tutorial',
+        category: 'Practice Tests',
+        note: 'Learn the on-screen calculator, flagging, and Alt+letter keyboard shortcuts',
+      },
+      {
+        label: 'Official Practice Tests & Question Banks',
+        url: 'https://www.ucat.ac.uk/prepare/practice-tests/',
+        category: 'Practice Tests',
+        note: '4 full mocks (A–D, standard / 25% extra / untimed) + all 4 subtest banks',
+      },
+      {
+        label: 'Official Question Tutorials (Strategy Decks)',
+        url: 'https://www.ucat.ac.uk/prepare/question-tutorials/',
+        category: 'Guide',
+        note: 'Worked examples for VR, DM, QR, and SJT direct from UCAT Consortium',
+      },
+      {
+        label: 'Official Preparation Checklist (PDF)',
+        url: 'https://www.ucat.ac.uk/media/1711/prep-plan-5.pdf',
+        category: 'Guide',
+        note: 'UCAT’s 5-step study roadmap',
+      },
+      {
+        label: 'Test Format & Scoring',
+        url: 'https://www.ucat.ac.uk/about-ucat/test-format-and-scoring/',
+        category: 'Spec',
+        note: 'Subtest timings, partial marking on DM/SJT, and 900–2700 scaling',
+      },
+      {
+        label: 'Official Test Statistics & Decile Lookup',
+        url: 'https://www.ucat.ac.uk/results/test-statistics/',
+        category: 'Spec',
+        note: '2026 deciles (mean 1918, 9th decile 2250) and percentile tool',
+      },
+      {
+        label: 'How Universities Use the UCAT',
+        url: 'https://www.ucat.ac.uk/results/how-universities-use-the-ucat/',
+        category: 'Portal',
+        note: 'Thresholds, subtest cut-offs, and weighting by UK medical school',
+      },
+      {
+        label: 'Advice from Top-3% Past Candidates',
+        url: 'https://www.ucat.ac.uk/candidate-advice/advice-from-past-candidates/',
+        category: 'Guide',
+        note: 'Strategies from high scorers who relied solely on free official materials',
+      },
+      {
+        label: 'UCAT Essentials, Dates, Booking & Bursaries',
+        url: 'https://www.ucat.ac.uk/about-ucat/ucat-essentials/',
+        category: 'Portal',
+        note: 'Registration, test dates, access arrangements, and test-day ID rules',
+      },
+    ],
+    pastPapersTitle: 'Direct Pearson VUE Official Mock Launchers (Desktop)',
+    pastPapers: [
+      {
+        year: 'Mocks',
+        items: [
+          { label: 'Practice Test A', url: 'https://www.ucat.ac.uk/umbraco/surface/pearsonpracticetest/launch/UK_PT_A' },
+          { label: 'Practice Test B', url: 'https://www.ucat.ac.uk/umbraco/surface/pearsonpracticetest/launch/UK_PT_B' },
+          { label: 'Practice Test C', url: 'https://www.ucat.ac.uk/umbraco/surface/pearsonpracticetest/launch/UK_PT_C' },
+          { label: 'Practice Test D', url: 'https://www.ucat.ac.uk/umbraco/surface/pearsonpracticetest/launch/UK_PT_D' },
+        ],
+      },
+      {
+        year: 'Banks',
+        items: [
+          { label: 'VR Bank 1', url: 'https://www.ucat.ac.uk/umbraco/surface/pearsonpracticetest/launch/UK_QB_VR_1' },
+          { label: 'DM Bank 1', url: 'https://www.ucat.ac.uk/umbraco/surface/pearsonpracticetest/launch/UK_QB_DM_1' },
+          { label: 'QR Bank 1', url: 'https://www.ucat.ac.uk/umbraco/surface/pearsonpracticetest/launch/UK_QB_QR_1' },
+          { label: 'SJT Bank 1', url: 'https://www.ucat.ac.uk/umbraco/surface/pearsonpracticetest/launch/UK_QB_SJT_1' },
+        ],
+      },
     ],
     questions: [
       {
@@ -127,15 +295,110 @@ export const ADMISSIONS_TESTS: AdmissionsTest[] = [
     id: 'tara',
     code: 'TARA',
     name: 'Test of Academic Reasoning for Admissions',
-    subject: 'Academic Reasoning (Oxford & UCL)',
-    universities: 'University of Oxford, UCL (selected courses)',
-    format: 'Critical Thinking (22 Qs) · Problem Solving (22 Qs) · Writing Task (1 of 3)',
-    duration: '120 mins (3 × 40m)',
-    scoreScale: '1.0–9.0 per MCQ module',
+    subject: 'Academic Reasoning',
+    universities: 'Oxford (PPE, E&M, Psych, History & Politics) · UCL (CS, Mech Eng, Robotics)',
+    format: 'Critical Thinking (22 Qs, 40m) · Problem Solving (22 Qs, 40m) · Writing Task (40m, max 750w)',
+    duration: '120 mins',
+    scoreScale: '1.0–9.0 per MCQ module · Writing sent to universities',
     officialSite: 'https://esat-tmua.ac.uk/about-the-tests/tara/',
+    officialAdvice: [
+      'Three separately timed 40-minute modules (no time carry-over, no going back, no calculator or dictionary, no negative marking).',
+      '2027 entry sittings: 12–16 Oct 2026 (all Oxford applicants) and 4–8 Jan 2027 (UCL). Fee: £78 UK/Ireland (£133 elsewhere); UK bursaries available.',
+      'UAT-UK provides official Pearson VUE Specimen & Sample tests plus historic TSA Section 1 and BMAT Section 1 papers for extra CT/PS practice.',
+    ],
     officialLinks: [
-      { label: 'Official TARA Overview (UAT-UK)', url: 'https://esat-tmua.ac.uk/about-the-tests/tara/', note: 'Modules, scoring, and sitting dates' },
-      { label: 'TARA Preparation Materials', url: 'https://esat-tmua.ac.uk/tara-preparation-materials/', note: 'Official specification and Pearson VUE practice tests' },
+      {
+        label: 'Official TARA Overview (UAT-UK)',
+        url: 'https://esat-tmua.ac.uk/about-the-tests/tara/',
+        category: 'Portal',
+        note: 'Format, sitting dates, fees, and scoring',
+      },
+      {
+        label: 'TARA Content Specification (PDF)',
+        url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/08142350/TARA_Content_Specification.pdf',
+        category: 'Spec',
+        note: 'Full syllabus for Critical Thinking, Problem Solving, and Writing Task',
+      },
+      {
+        label: 'TARA Question Guide (PDF)',
+        url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/08142344/TARA_Question_Guide.pdf',
+        category: 'Guide',
+        note: 'Worked examples of all 7 CT types, 3 PS types, and Writing Task rubric',
+      },
+      {
+        label: 'Pearson VUE UAT-UK Portal',
+        url: 'https://www.pearsonvue.com/us/en/uatuk.html',
+        category: 'Practice Tests',
+        note: 'Booking and official online specimen/sample test player',
+      },
+      {
+        label: 'TARA Preparation Materials (Full TSA & BMAT Archive)',
+        url: 'https://esat-tmua.ac.uk/tara-preparation-materials/',
+        category: 'Past Papers',
+        note: 'Full 2008–2023 TSA S1 and 2003–2023 BMAT S1 past papers on UAT-UK',
+      },
+      {
+        label: '2027 Entry Course List (PDF)',
+        url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/04/01172717/Course_List_2027_Entry_Final.pdf',
+        category: 'Spec',
+        note: 'Exact Oxford and UCL courses requiring TARA',
+      },
+      {
+        label: 'Test Admission & ID Policy 2027 (PDF)',
+        url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/04/01120017/UAT-UK-Test-Admission-and-ID-Policy-2027-Entry.pdf',
+        category: 'Portal',
+        note: 'Official Pearson VUE test-day ID rules',
+      },
+    ],
+    pastPapersTitle: 'Official Pearson VUE TARA Tests & Recent TSA / BMAT Papers',
+    pastPapers: [
+      {
+        year: 'Pearson',
+        items: [
+          { label: 'CT Specimen', url: 'https://www.pearsonvue.com/us/en/redirects/uatuk/tara-ct-s.html' },
+          { label: 'CT Sample', url: 'https://www.pearsonvue.com/us/en/redirects/uatuk/tara-ct-p.html' },
+          { label: 'PS Specimen', url: 'https://www.pearsonvue.com/us/en/redirects/uatuk/tara-ps-s.html' },
+          { label: 'PS Sample', url: 'https://www.pearsonvue.com/us/en/redirects/uatuk/tara-ps-p.html' },
+          { label: 'Writing Specimen', url: 'https://www.pearsonvue.com/us/en/redirects/uatuk/tara-wt-s.html' },
+          { label: 'Writing Sample', url: 'https://www.pearsonvue.com/us/en/redirects/uatuk/tara-wt-p.html' },
+        ],
+      },
+      {
+        year: '2023',
+        items: [
+          { label: 'TSA S1 Paper', url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01154243/TSA-2023-Section-1-Question-Paper.pdf' },
+          { label: 'TSA S1 Key', url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01154237/TSA-2023-Section-1-Answer-Key.pdf' },
+          { label: 'BMAT S1 Paper', url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104326/BMAT-2023-Section-1-Question-Paper.pdf' },
+          { label: 'BMAT S1 Key', url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104323/BMAT-2023-Section-1-Answer-Key.pdf' },
+        ],
+      },
+      {
+        year: '2022',
+        items: [
+          { label: 'TSA S1 Paper', url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01154234/TSA-2022-Section-1-Question-Paper.pdf' },
+          { label: 'TSA S1 Key', url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01154228/TSA-2022-Section-1-Answer-Key.pdf' },
+          { label: 'BMAT S1 Paper', url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104321/BMAT-2022-Section-1-Question-Paper.pdf' },
+          { label: 'BMAT S1 Key', url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104317/BMAT-2022-Section-1-Answer-Key.pdf' },
+        ],
+      },
+      {
+        year: '2021',
+        items: [
+          { label: 'TSA S1 Paper', url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01154225/TSA-2021-Section-1-Question-Paper.pdf' },
+          { label: 'TSA S1 Key', url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01154220/TSA-2021-Section-1-Answer-Key.pdf' },
+          { label: 'BMAT S1 Paper', url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104316/BMAT-2021-Section-1-Question-Paper.pdf' },
+          { label: 'BMAT S1 Key', url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104313/BMAT-2021-Section-1-Answer-Key.pdf' },
+        ],
+      },
+      {
+        year: '2020',
+        items: [
+          { label: 'TSA S1 Paper', url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01154218/TSA-2020-Section-1-Question-Paper.pdf' },
+          { label: 'TSA Explained', url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01154212/TSA-2020-Section-1-Explained-Answers.pdf' },
+          { label: 'BMAT S1 Paper', url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104312/BMAT-2020-Section-1-Question-Paper.pdf' },
+          { label: 'BMAT S1 Key', url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104308/BMAT-2020-Section-1-Answer-Key.pdf' },
+        ],
+      },
     ],
     questions: [
       {
@@ -199,15 +462,166 @@ export const ADMISSIONS_TESTS: AdmissionsTest[] = [
     id: 'esat',
     code: 'ESAT',
     name: 'Engineering and Science Admissions Test',
-    subject: 'Engineering & Natural Sciences',
+    subject: 'Engineering & Science',
     universities: 'Cambridge, Imperial College London, UCL',
-    format: 'Mathematics 1 (compulsory) + 2 chosen from Maths 2, Physics, Chemistry, Biology',
-    duration: '120 mins (3 × 40m)',
-    scoreScale: '1.0–9.0 per module',
-    officialSite: 'https://esat-tmua.ac.uk/',
+    format: 'Mathematics 1 (compulsory, 27 Qs, 40m) + 2 chosen from Maths 2, Physics, Chemistry, Biology (27 Qs, 40m each)',
+    duration: '120 mins',
+    scoreScale: '1.0–9.0 per module (median 4.5, 90th pct 7.0)',
+    officialSite: 'https://esat-tmua.ac.uk/about-the-tests/esat-test/',
+    officialAdvice: [
+      'Each module has 27 multiple-choice questions in 40 minutes, with no calculator, no dictionary, and no negative marking.',
+      'Score scale is 1.0–9.0 per module (cohort median 4.5, 90th percentile 7.0). Fee: £78 UK/Ireland (£133 elsewhere); UK bursaries available.',
+      '2027 entry sittings: 12–16 Oct 2026 (required for Oxford/Cambridge) and 4–8 Jan 2027. One sitting per cycle.',
+      'UAT-UK provides every preparation guide, Pearson VUE specimen/practice test, and annotated ENGAA/NSAA past paper free of charge.',
+    ],
     officialLinks: [
-      { label: 'Official ESAT Portal (UAT-UK)', url: 'https://esat-tmua.ac.uk/', note: 'Registration, dates, and module requirements' },
-      { label: 'ESAT Preparation Materials', url: 'https://esat-tmua.ac.uk/esat-preparation-materials/', note: 'Official specifications and practice papers' },
+      {
+        label: 'Official ESAT Overview (UAT-UK)',
+        url: 'https://esat-tmua.ac.uk/about-the-tests/esat-test/',
+        category: 'Portal',
+        note: 'Sitting dates, required modules by course, and registration',
+      },
+      {
+        label: 'Register & Pearson VUE Specimen / Practice Tests',
+        url: 'https://www.pearsonvue.com/us/en/uatuk.html',
+        category: 'Practice Tests',
+        note: 'Official Pearson VUE booking portal and timed on-screen sample tests',
+      },
+      {
+        label: 'ESAT Preparation Materials Hub',
+        url: 'https://esat-tmua.ac.uk/esat-preparation-materials/',
+        category: 'Guide',
+        note: 'All official ESAT subject guides and historic paper links',
+      },
+      {
+        label: 'ESAT Content Specification (PDF)',
+        url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/03165424/ESAT_Content_Specification.pdf',
+        category: 'Spec',
+        note: 'Full syllabus for Maths 1, Maths 2, Physics, Chemistry, and Biology',
+      },
+      {
+        label: 'ESAT Guide — Mathematics 1 (PDF)',
+        url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/30103534/ESAT_Guide_Mathematics_1.pdf',
+        category: 'Guide',
+        note: 'Official compulsory Mathematics 1 study notes',
+      },
+      {
+        label: 'ESAT Guide — Mathematics 2 (PDF)',
+        url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/30103537/Notes_on_Mathematics_-for_TMUA_and_ESAT_M2.pdf',
+        category: 'Guide',
+        note: 'Official Notes on Mathematics for TMUA and ESAT M2',
+      },
+      {
+        label: 'ESAT Guide — Physics (PDF)',
+        url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/30103558/ESAT_Guide_Physics.pdf',
+        category: 'Guide',
+        note: 'Official Physics module guide',
+      },
+      {
+        label: 'ESAT Guide — Chemistry (PDF)',
+        url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/06/25103142/ESAT_GUIDE_Chemistry_June2025.pdf',
+        category: 'Guide',
+        note: 'Official Chemistry module guide',
+      },
+      {
+        label: 'ESAT Guide — Biology (PDF)',
+        url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/07/06120052/ESAT_Guide_Biology_June_2025.pdf',
+        category: 'Guide',
+        note: 'Official Biology module guide',
+      },
+      {
+        label: 'Course List 2027 Entry (PDF)',
+        url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/04/01172717/Course_List_2027_Entry_Final.pdf',
+        category: 'Spec',
+        note: 'Which university courses require ESAT and which modules they mandate',
+      },
+      {
+        label: 'Candidate Handbook 2027 Entry (PDF)',
+        url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/26111813/Candidate-Handbook-2027-Entry.pdf',
+        category: 'Guide',
+        note: 'Complete official candidate rules and procedures',
+      },
+      {
+        label: 'Key Dates, Scoring, Bursaries & Access Arrangements',
+        url: 'https://esat-tmua.ac.uk/deadlines/',
+        category: 'Portal',
+        note: 'Booking deadlines (Oct 2026 & Jan 2027), bursaries, and test-day ID rules',
+      },
+    ],
+    pastPapersTitle: 'Official ENGAA & NSAA Section 1 Archive (2016–2023)',
+    pastPapers: [
+      {
+        year: '2023',
+        items: [
+          { label: 'ENGAA Paper', url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07115605/ENGAA_2023_S1_QuestionPaper.pdf' },
+          { label: 'ENGAA Key', url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07115610/ENGAA_2023_S1_AnswerKey.pdf' },
+          { label: 'NSAA Paper', url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07120523/NSAA_2023_S1_QuestionPaper.pdf' },
+          { label: 'NSAA Key', url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07120531/NSAA_2023_S1_AnswerKey.pdf' },
+        ],
+      },
+      {
+        year: '2022',
+        items: [
+          { label: 'ENGAA Paper', url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07115611/ENGAA_2022_S1_QuestionPaper.pdf' },
+          { label: 'ENGAA Key', url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07115612/ENGAA_2022_S1_AnswerKey.pdf' },
+          { label: 'NSAA Paper', url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07120525/NSAA_2022_S1_QuestionPaper.pdf' },
+          { label: 'NSAA Key', url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07120531/NSAA_2022_S1_AnswerKey.pdf' },
+        ],
+      },
+      {
+        year: '2021',
+        items: [
+          { label: 'ENGAA Paper', url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07115611/ENGAA_2021_S1_QuestionPaper.pdf' },
+          { label: 'ENGAA Key', url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07115613/ENGAA_2021_S1_AnswerKey.pdf' },
+          { label: 'NSAA Paper', url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07120532/NSAA_2021_S1_QuestionPaper.pdf' },
+          { label: 'NSAA Key', url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07120532/NSAA_2021_S1_AnswerKey.pdf' },
+        ],
+      },
+      {
+        year: '2020',
+        items: [
+          { label: 'ENGAA Paper', url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07115613/ENGAA_2020_S1_QuestionPaper.pdf' },
+          { label: 'ENGAA Key', url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07115614/ENGAA_2020_S1_AnswerKey.pdf' },
+          { label: 'NSAA Paper', url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07120533/NSAA_2020_S1_QuestionPaper.pdf' },
+          { label: 'NSAA Key', url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07120535/NSAA_2020_S1_AnswerKey.pdf' },
+        ],
+      },
+      {
+        year: '2019',
+        items: [
+          { label: 'ENGAA Paper', url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07115511/ENGAA_2019_S1_QuestionPaper.pdf' },
+          { label: 'ENGAA Key', url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07115515/ENGAA_2019_S1_AnswerKey.pdf' },
+          { label: 'NSAA Paper', url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07120534/NSAA_2019_S1_QuestionPaper.pdf' },
+          { label: 'NSAA Key', url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07120535/NSAA_2019_S1_AnswerKey.pdf' },
+        ],
+      },
+      {
+        year: '2018',
+        items: [
+          { label: 'ENGAA Paper', url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07113017/ENGAA_2018_S1_QuestionPaper.pdf' },
+          { label: 'ENGAA Key', url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07113023/ENGAA_2018_S1_AnswerKey.pdf' },
+          { label: 'NSAA Paper', url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07120537/NSAA_2018_S1_QuestionPaper.pdf' },
+          { label: 'NSAA Key', url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07120537/NSAA_2018_S1_AnswerKey.pdf' },
+        ],
+      },
+      {
+        year: '2017',
+        items: [
+          { label: 'ENGAA Paper', url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07112231/ENGAA_2017_S1_QuestionPaper.pdf' },
+          { label: 'ENGAA Key', url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07112228/ENGAA_2017_S1_AnswerKey.pdf' },
+          { label: 'NSAA Paper', url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07120538/NSAA_2017_S1_QuestionPaper.pdf' },
+          { label: 'NSAA Key', url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07120538/NSAA_2017_S1_AnswerKey.pdf' },
+        ],
+      },
+      {
+        year: '2016',
+        items: [
+          { label: 'ENGAA Paper', url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07112055/ENGAA_2016_S1_QuestionPaper.pdf' },
+          { label: 'ENGAA Key', url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07112109/ENGAA_2016_S1_AnswerKey.pdf' },
+          { label: 'NSAA Paper', url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07120539/NSAA_2016_S1_QuestionPaper.pdf' },
+          { label: 'NSAA Key', url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07120540/NSAA_2016_S1_AnswerKey.pdf' },
+        ],
+      },
     ],
     questions: [
       {
@@ -252,15 +666,77 @@ export const ADMISSIONS_TESTS: AdmissionsTest[] = [
     code: 'SAT',
     name: 'Digital SAT',
     subject: 'US & Global Undergraduate',
-    universities: 'US Ivy League, MIT, Stanford, and global universities',
-    format: 'Reading & Writing (64m, 54 Qs) · Math (70m, 44 Qs)',
+    universities: 'Ivy League, MIT, Stanford, and global universities',
+    format: 'Reading & Writing (54 Qs, 64m, 2 adaptive modules) · Math (44 Qs, 70m, 2 adaptive modules)',
     duration: '134 mins',
-    scoreScale: '400–1600',
+    scoreScale: '400–1600 (adaptive)',
     officialSite: 'https://satsuite.collegeboard.org/sat',
+    officialAdvice: [
+      'Take full-length adaptive practice tests in College Board’s free Bluebook app — module 2 difficulty adapts to your module 1 performance.',
+      'Drill specific domains and skills in the official Student Question Bank and Khan Academy partner course.',
+      'Review Bluebook results in My Practice to unlock explanations and tailored follow-up practice.',
+    ],
     officialLinks: [
-      { label: 'College Board Digital SAT', url: 'https://satsuite.collegeboard.org/sat', note: 'Test dates, registration, and scoring' },
-      { label: 'Bluebook Official Practice', url: 'https://satsuite.collegeboard.org/practice/practice-tests/bluebook', note: 'Full-length adaptive digital practice tests' },
-      { label: 'Khan Academy Official SAT Prep', url: 'https://www.khanacademy.org/digital-sat', note: 'Free official College Board partner drills' },
+      {
+        label: 'Bluebook Full-Length Adaptive Practice Tests',
+        url: 'https://satsuite.collegeboard.org/practice/practice-tests/bluebook',
+        category: 'Practice Tests',
+        note: 'Free timed, scored adaptive full-length tests + interface preview',
+      },
+      {
+        label: 'Download Bluebook App',
+        url: 'https://bluebook.collegeboard.org/students/download-bluebook',
+        category: 'Practice Tests',
+        note: 'Official College Board testing app for desktop and tablet',
+      },
+      {
+        label: 'Official Student Question Bank',
+        url: 'https://satsuite.collegeboard.org/practice/student-question-bank',
+        category: 'Practice Tests',
+        note: 'Filter official questions by section, domain, skill, and difficulty',
+      },
+      {
+        label: 'Official SAT Prep on Khan Academy',
+        url: 'https://satsuite.collegeboard.org/practice/khan-academy',
+        category: 'Guide',
+        note: 'Free official College Board partner lessons and worked examples',
+      },
+      {
+        label: 'My Practice (Score Review & Explanations)',
+        url: 'https://satsuite.collegeboard.org/practice/my-practice-101',
+        category: 'Portal',
+        note: 'Review Bluebook answers, rationales, and tailored practice sets',
+      },
+      {
+        label: 'Digital SAT Sample Questions & Explanations (PDF)',
+        url: 'https://satsuite.collegeboard.org/media/pdf/digital-sat-sample-questions.pdf',
+        category: 'Past Papers',
+        note: 'Public, no-sign-in official sample pack for Reading & Writing and Math',
+      },
+      {
+        label: 'Printable Full-Length Practice Tests (PDF)',
+        url: 'https://satsuite.collegeboard.org/practice/practice-tests/paper',
+        category: 'Past Papers',
+        note: 'Non-adaptive PDF practice tests, scoring guides, and explanations',
+      },
+      {
+        label: 'Question of the Day & Prep Hub',
+        url: 'https://qotd.collegeboard.org/',
+        category: 'Practice Tests',
+        note: 'Daily official question from College Board',
+      },
+      {
+        label: 'How the SAT Is Structured & Scored',
+        url: 'https://satsuite.collegeboard.org/sat/whats-on-the-test/structure',
+        category: 'Spec',
+        note: '2h 14m total, adaptive modules, and 400–1600 scoring breakdown',
+      },
+      {
+        label: 'Registration, Dates, Test Centers & International Rules',
+        url: 'https://satsuite.collegeboard.org/sat/registration',
+        category: 'Portal',
+        note: 'Booking, international fees, calculator policy (built-in Desmos), and accommodations',
+      },
     ],
     questions: [
       {

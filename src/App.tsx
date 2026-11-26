@@ -17,10 +17,10 @@ import { PracticeHub } from './components/PracticeHub';
 import { ExamSimulator } from './components/ExamSimulator';
 import { ResultsView } from './components/ResultsView';
 import { EssayStudio } from './components/EssayStudio';
-import { OfficialResourcesView } from './components/OfficialResourcesView';
 import { ProgressView } from './components/ProgressView';
 import {
   GenericAttempt,
+  OfficialResourcesPanel,
   UniversalTestView,
   loadGenericAttempts,
   saveGenericAttempt,
@@ -281,7 +281,9 @@ export const App: React.FC = () => {
               <EssayStudio savedEssays={essays} onSaveEssay={handleSaveEssay} />
             )}
             {subTab === 'resources' && (
-              <OfficialResourcesView onStartDiagnostic={handleStartDiagnostic} />
+              <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10">
+                <OfficialResourcesPanel test={TEST_BY_ID.lnat} />
+              </div>
             )}
             {subTab === 'progress' && (
               <ProgressView

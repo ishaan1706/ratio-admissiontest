@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import {
   ArrowRight,
+  ArrowUpRight,
   Check,
   Clock,
   ExternalLink,
@@ -39,6 +40,120 @@ export function saveGenericAttempt(attempt: GenericAttempt): GenericAttempt[] {
   return next;
 }
 
+/**
+ * Clean, unified Official Resources panel shared across ALL 5 exams
+ * (LNAT, UCAT, TARA, ESAT, SAT) — plain outbound links, zero clutter.
+ */
+export const OfficialResourcesPanel: React.FC<{ test: AdmissionsTest }> = ({ test }) => {
+  return (
+    <div className="space-y-10">
+      <div className="flex flex-wrap items-end justify-between gap-4 border-b border-[var(--rule)] pb-6">
+        <div>
+          <div className="text-xs font-mono-tabular uppercase tracking-wider text-[var(--accent)]">
+            OFFICIAL RESOURCES · {test.code}
+          </div>
+          <h2 className="font-display text-3xl sm:text-4xl text-[var(--ink)] mt-1">
+            {test.name}
+          </h2>
+          <p className="text-sm text-[var(--text-muted)] mt-1">{test.format}</p>
+        </div>
+        <a
+          href={test.officialSite}
+          target="_blank"
+          rel="noreferrer"
+          className="px-4 py-2 border border-[var(--rule)] hover:border-[var(--border-strong)] text-xs font-medium text-[var(--ink)] inline-flex items-center gap-1.5 transition-colors"
+        >
+          Official site
+          <ArrowUpRight className="w-3.5 h-3.5" />
+        </a>
+      </div>
+
+      {/* Key Official Facts */}
+      {test.officialAdvice.length > 0 && (
+        <div className="space-y-2.5">
+          <div className="text-xs font-mono-tabular uppercase tracking-wider text-[var(--text-muted)]">
+            Key facts
+          </div>
+          <ul className="space-y-2 text-sm text-[var(--text)] leading-relaxed">
+            {test.officialAdvice.map((tip) => (
+              <li key={tip} className="flex items-start gap-2.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)] mt-2 shrink-0" />
+                <span>{tip}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* Outbound Official Links */}
+      <div className="space-y-3">
+        <div className="text-xs font-mono-tabular uppercase tracking-wider text-[var(--text-muted)]">
+          Official pages, practice &amp; specifications ({test.officialLinks.length})
+        </div>
+        <div className="border-t border-[var(--rule)] divide-y divide-[var(--rule)]">
+          {test.officialLinks.map((link) => (
+            <a
+              key={link.url}
+              href={link.url}
+              target="_blank"
+              rel="noreferrer"
+              className="py-3.5 flex items-center justify-between gap-4 hover:text-[var(--accent)] transition-colors group"
+            >
+              <div className="min-w-0">
+                <div className="flex flex-wrap items-center gap-2.5">
+                  <span className="text-sm sm:text-base font-medium text-[var(--ink)] group-hover:text-[var(--accent)] transition-colors">
+                    {link.label}
+                  </span>
+                  <span className="text-[10px] font-mono-tabular uppercase tracking-wider px-2 py-0.5 border border-[var(--rule)] text-[var(--text-muted)]">
+                    {link.category}
+                  </span>
+                </div>
+                <div className="text-xs text-[var(--text-muted)] mt-0.5">{link.note}</div>
+              </div>
+              <ExternalLink className="w-4 h-4 text-[var(--text-muted)] group-hover:text-[var(--accent)] shrink-0" />
+            </a>
+          ))}
+        </div>
+      </div>
+
+      {/* Optional Past Papers / Direct Launchers Table */}
+      {test.pastPapers && test.pastPapers.length > 0 && (
+        <div className="space-y-3">
+          <div className="text-xs font-mono-tabular uppercase tracking-wider text-[var(--text-muted)]">
+            {test.pastPapersTitle || 'Official Past Papers'}
+          </div>
+          <div className="border border-[var(--rule)] divide-y divide-[var(--rule)]">
+            {test.pastPapers.map((row) => (
+              <div
+                key={row.year}
+                className="px-4 py-3 flex flex-wrap items-center justify-between gap-3 text-xs"
+              >
+                <span className="font-mono-tabular font-semibold text-[var(--ink)] w-16 shrink-0">
+                  {row.year}
+                </span>
+                <div className="flex flex-wrap items-center gap-x-5 gap-y-1.5 flex-1">
+                  {row.items.map((item) => (
+                    <a
+                      key={item.url}
+                      href={item.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-[var(--text-muted)] hover:text-[var(--accent)] inline-flex items-center gap-1 transition-colors"
+                    >
+                      {item.label}
+                      <ArrowUpRight className="w-3 h-3 opacity-70" />
+                    </a>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
 interface UniversalTestViewProps {
   test: AdmissionsTest;
   subTab: 'practice' | 'resources' | 'progress';
@@ -62,7 +177,6 @@ export const UniversalTestView: React.FC<UniversalTestViewProps> = ({
   const [selectedPrompt, setSelectedPrompt] = useState(0);
   const [writingDraft, setWritingDraft] = useState('');
 
-  // Reset drill state whenever user switches exam
   useEffect(() => {
     setDrilling(false);
     setFinished(false);
@@ -111,36 +225,7 @@ export const UniversalTestView: React.FC<UniversalTestViewProps> = ({
   const testAttempts = attempts.filter((a) => a.testId === test.id);
 
   if (subTab === 'resources') {
-    return (
-      <div className="space-y-6">
-        <div>
-          <h2 className="font-display text-3xl text-[var(--ink)]">{test.code} Official Resources</h2>
-          <p className="text-sm text-[var(--text-muted)] mt-1">
-            Direct links to the official {test.code} portal, past papers, and test specifications.
-          </p>
-        </div>
-
-        <div className="border-t border-[var(--rule)] divide-y divide-[var(--rule)]">
-          {test.officialLinks.map((link) => (
-            <a
-              key={link.url}
-              href={link.url}
-              target="_blank"
-              rel="noreferrer"
-              className="py-4 flex items-center justify-between gap-4 hover:text-[var(--accent)] transition-colors group"
-            >
-              <div>
-                <div className="text-base font-medium text-[var(--ink)] group-hover:text-[var(--accent)]">
-                  {link.label}
-                </div>
-                <div className="text-xs text-[var(--text-muted)] mt-0.5">{link.note}</div>
-              </div>
-              <ExternalLink className="w-4 h-4 text-[var(--text-muted)] shrink-0" />
-            </a>
-          ))}
-        </div>
-      </div>
-    );
+    return <OfficialResourcesPanel test={test} />;
   }
 
   if (subTab === 'progress') {
@@ -161,7 +246,7 @@ export const UniversalTestView: React.FC<UniversalTestViewProps> = ({
             <button
               type="button"
               onClick={startDrill}
-              className="px-4 py-2 bg-[var(--accent)] text-[var(--accent-fg)] text-xs font-semibold cursor-pointer"
+              className="px-4 py-2 bg-[var(--ink)] text-[var(--bg)] text-xs font-semibold cursor-pointer"
             >
               Start {test.code} Practice
             </button>
@@ -170,9 +255,7 @@ export const UniversalTestView: React.FC<UniversalTestViewProps> = ({
           <div className="border-t border-[var(--rule)] divide-y divide-[var(--rule)]">
             {testAttempts.map((a) => (
               <div key={a.id} className="py-3.5 flex items-center justify-between text-sm">
-                <div className="font-medium text-[var(--ink)]">
-                  {a.testCode} Timed Set
-                </div>
+                <div className="font-medium text-[var(--ink)]">{a.testCode} Timed Set</div>
                 <div className="flex items-center gap-6 font-mono-tabular">
                   <span className="text-[var(--accent)] font-semibold">
                     {a.correct} / {a.total} ({Math.round((a.correct / a.total) * 100)}%)
@@ -189,7 +272,6 @@ export const UniversalTestView: React.FC<UniversalTestViewProps> = ({
     );
   }
 
-  // Active timed drill runner
   if (drilling) {
     if (finished) {
       const correct = test.questions.filter((q) => answers[q.id] === q.correctIndex).length;
@@ -216,19 +298,19 @@ export const UniversalTestView: React.FC<UniversalTestViewProps> = ({
               <button
                 type="button"
                 onClick={() => setDrilling(false)}
-                className="px-4 py-2 bg-[var(--accent)] text-[var(--accent-fg)] text-xs font-semibold cursor-pointer"
+                className="px-4 py-2 bg-[var(--ink)] text-[var(--bg)] text-xs font-semibold cursor-pointer"
               >
                 Done
               </button>
             </div>
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-4">
             {test.questions.map((q, idx) => {
               const picked = answers[q.id];
               const isRight = picked === q.correctIndex;
               return (
-                <div key={q.id} className="border border-[var(--rule)] p-5 space-y-3">
+                <div key={q.id} className="border border-[var(--rule)] p-5 space-y-2.5">
                   <div className="flex items-center justify-between text-xs font-mono-tabular">
                     <span className="text-[var(--text-muted)]">
                       Q{idx + 1} · {q.section}
@@ -318,7 +400,7 @@ export const UniversalTestView: React.FC<UniversalTestViewProps> = ({
             <button
               type="button"
               onClick={() => setQIdx((i) => i + 1)}
-              className="px-5 py-2 bg-[var(--accent)] text-[var(--accent-fg)] text-xs font-semibold inline-flex items-center gap-1.5 cursor-pointer"
+              className="px-5 py-2 bg-[var(--ink)] text-[var(--bg)] text-xs font-semibold inline-flex items-center gap-1.5 cursor-pointer"
             >
               Next
               <ArrowRight className="w-3.5 h-3.5" />
@@ -338,7 +420,6 @@ export const UniversalTestView: React.FC<UniversalTestViewProps> = ({
     );
   }
 
-  // Clean, simple overview for UCAT / TARA / ESAT / SAT
   const wordCount = writingDraft.trim() ? writingDraft.trim().split(/\s+/).length : 0;
 
   return (
@@ -354,31 +435,31 @@ export const UniversalTestView: React.FC<UniversalTestViewProps> = ({
         <button
           type="button"
           onClick={startDrill}
-          className="px-5 py-3 bg-[var(--accent)] hover:bg-[var(--accent-hover)] text-[var(--accent-fg)] text-sm font-semibold inline-flex items-center gap-2 shrink-0 cursor-pointer"
+          className="px-5 py-3 bg-[var(--ink)] hover:bg-white text-[var(--bg)] text-sm font-semibold inline-flex items-center gap-2 shrink-0 cursor-pointer transition-colors"
         >
           Start Timed Set ({test.questions.length} Qs)
           <ArrowRight className="w-4 h-4" />
         </button>
       </div>
 
-      <div className="grid sm:grid-cols-3 gap-4 text-sm">
-        <div className="border border-[var(--rule)] p-4">
+      <div className="grid sm:grid-cols-3 border border-[var(--rule)] divide-y sm:divide-y-0 sm:divide-x divide-[var(--rule)] text-sm">
+        <div className="p-4">
           <div className="text-xs text-[var(--text-muted)]">Used by</div>
           <div className="text-[var(--ink)] font-medium mt-1">{test.universities}</div>
         </div>
-        <div className="border border-[var(--rule)] p-4">
+        <div className="p-4">
           <div className="text-xs text-[var(--text-muted)]">Scoring</div>
           <div className="text-[var(--ink)] font-medium mt-1">{test.scoreScale}</div>
         </div>
-        <div className="border border-[var(--rule)] p-4">
-          <div className="text-xs text-[var(--text-muted)]">Official Site</div>
+        <div className="p-4">
+          <div className="text-xs text-[var(--text-muted)]">Official Portal</div>
           <a
             href={test.officialSite}
             target="_blank"
             rel="noreferrer"
             className="text-[var(--accent)] hover:underline font-medium mt-1 inline-flex items-center gap-1"
           >
-            Visit {test.code} portal
+            Open {test.code} website
             <ExternalLink className="w-3.5 h-3.5" />
           </a>
         </div>
@@ -390,14 +471,14 @@ export const UniversalTestView: React.FC<UniversalTestViewProps> = ({
           <div className="flex flex-wrap items-center justify-between gap-2">
             <div>
               <div className="text-xs font-mono-tabular uppercase tracking-wider text-[var(--gold)]">
-                TARA WRITING TASK · 40 MINS
+                TARA WRITING TASK · 40 MINS · MAX 750 WORDS
               </div>
               <h3 className="font-display text-2xl text-[var(--ink)] mt-0.5">
                 Choose 1 of 3 prompts
               </h3>
             </div>
             <span className="font-mono-tabular text-xs text-[var(--text-muted)]">
-              {wordCount} words
+              {wordCount} / 750 words
             </span>
           </div>
 
