@@ -19,6 +19,7 @@ import { ResultsView } from './components/ResultsView';
 import { EssayStudio } from './components/EssayStudio';
 import { LnatRevisionLab } from './components/LnatRevisionLab';
 import { ProgressView } from './components/ProgressView';
+import { TaraWorkspace } from './components/TaraWorkspace';
 import {
   GenericAttempt,
   OfficialResourcesPanel,
@@ -317,6 +318,15 @@ export const App: React.FC = () => {
               />
             )}
           </>
+        ) : activeTest === 'tara' ? (
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10">
+            <TaraWorkspace
+              test={TEST_BY_ID.tara}
+              subTab={subTab}
+              attempts={genericAttempts}
+              onSaveAttempt={handleSaveGenericAttempt}
+            />
+          </div>
         ) : (
           <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10">
             <UniversalTestView

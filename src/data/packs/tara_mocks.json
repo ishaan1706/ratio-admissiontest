@@ -1,0 +1,2031 @@
+{
+  "schemaVersion": 1,
+  "exam": "TARA",
+  "examName": "Test of Academic Reasoning for Admissions",
+  "calculatorAllowed": false,
+  "dictionaryAllowed": false,
+  "mocks": [
+    {
+      "id": "tara-01",
+      "title": "TARA Mock 1",
+      "modules": [
+        {
+          "id": "tara-01-ct",
+          "type": "critical-thinking",
+          "title": "Critical Thinking",
+          "durationMinutes": 40,
+          "marksPerCorrectAnswer": 1,
+          "marksPerIncorrectAnswer": 0,
+          "questions": [
+            {
+              "id": "tara-01-ct-01",
+              "type": "main-conclusion",
+              "stem": "The council should let residents borrow basic tools from its library. A drill is often bought for a single job and then left unused for years. A lending scheme would spread the cost of each drill across many households. The library already has a system for tracking loans.\n\nWhich statement best expresses the main conclusion of the argument?",
+              "options": {
+                "A": "A lending scheme could share purchase costs.",
+                "B": "The council should lend tools only to people who already use the library.",
+                "C": "Drills often go unused after a single job.",
+                "D": "The council should run a tool-lending scheme through its library.",
+                "E": "Libraries already track the items they lend."
+              },
+              "answer": "D",
+              "explanation": "The examples about use and costs, plus the lending infrastructure, support the proposal in the first sentence. They are reasons for the scheme, not its main conclusion."
+            },
+            {
+              "id": "tara-01-ct-02",
+              "type": "drawing-conclusion",
+              "stem": "Every restoration grant on the shortlist went to a building open to visitors. No building closed for structural repairs is open to visitors. Which conclusion follows?",
+              "options": {
+                "A": "Some buildings not receiving shortlisted grants are open to visitors.",
+                "B": "Every building open to visitors received a shortlisted restoration grant.",
+                "C": "Every building closed to visitors is undergoing structural repairs.",
+                "D": "No building closed for structural repairs received a shortlisted restoration grant.",
+                "E": "Some shortlisted grants went to buildings awaiting structural repairs."
+              },
+              "answer": "D",
+              "explanation": "The recipients are a subset of visitor-open buildings and those closed for structural repairs cannot belong to that subset. The facts do not establish which other buildings exist."
+            },
+            {
+              "id": "tara-01-ct-03",
+              "type": "assumption",
+              "stem": "Advance tickets for the town's annual lantern walk sold out this year. The organiser reasons that moving to a route twice as wide would therefore allow the event to sell more advance tickets, without changing the price or promoting it to anyone new. Which assumption is required?",
+              "options": {
+                "A": "The town has more than one route twice as wide as the current route.",
+                "B": "Each ticket holder walks at roughly the same speed.",
+                "C": "Some potential buyers who would pay the current price could not get tickets this year.",
+                "D": "The wider route costs less to steward.",
+                "E": "Most ticket holders attended last year's walk."
+              },
+              "answer": "C",
+              "explanation": "A sell-out could mean demand exactly matched supply. Without at least some unmet demand among the same audience at the same price, additional capacity would not yield additional sales on this reasoning."
+            },
+            {
+              "id": "tara-01-ct-04",
+              "type": "strengthen",
+              "stem": "A sixth-form college argues that opening a quiet study room at lunchtime will help more students finish assignments before leaving campus, because the crowded common room makes concentration difficult. Which evidence most strengthens the argument?",
+              "options": {
+                "A": "Most unfinished assignments are marked on the same day.",
+                "B": "In a trial with comparable groups, more students assigned to the quiet room finished before leaving than those assigned to the common room.",
+                "C": "Other colleges call their quiet rooms libraries.",
+                "D": "Students with no assignments often eat in the common room.",
+                "E": "The quiet room has space for fewer students than the common room."
+              },
+              "answer": "B",
+              "explanation": "The comparison directly measures assignment completion under the proposed change. Names and unrelated common-room users say little about the effect; capacity could limit it."
+            },
+            {
+              "id": "tara-01-ct-05",
+              "type": "flaw",
+              "stem": "Whenever the old signal box loses power, trains are routed through Platform 2. Trains are being routed through Platform 2 this afternoon, so the signal box must have lost power. What is the reasoning error?",
+              "options": {
+                "A": "It confuses events at two different stations.",
+                "B": "It treats one sufficient reason for the rerouting as its only possible reason.",
+                "C": "It relies on an opinion about driver preferences.",
+                "D": "It argues that losing power prevents use of Platform 2.",
+                "E": "It assumes trains on Platform 2 never lose power."
+              },
+              "answer": "B",
+              "explanation": "The stated implication runs from power loss to rerouting. Engineering work or another cause could also trigger rerouting, so the reverse implication does not follow."
+            },
+            {
+              "id": "tara-01-ct-06",
+              "type": "parallel-reasoning",
+              "stem": "A stallholder must bring either a gazebo or a waterproof cover. Pia has no gazebo with her. Therefore, if she meets the requirement, she has a waterproof cover with her. Which argument follows the same pattern?",
+              "options": {
+                "A": "Each trip leader must have a radio or a charged phone. Kim has no radio. If Kim meets the rule, Kim has a charged phone.",
+                "B": "Each trip leader needs a radio and a phone. Kim has a phone. Therefore Kim meets the rule.",
+                "C": "A trip leader with a radio need not have a phone. Kim has no radio. Therefore Kim cannot have a phone.",
+                "D": "Some trip leaders carry radios instead of phones. Kim has a phone. Therefore Kim is a trip leader.",
+                "E": "Each trip leader can have both a radio and a phone. Kim has a radio. Therefore Kim has a phone."
+              },
+              "answer": "A",
+              "explanation": "A rule requires at least one of two alternatives. Ruling out the first leaves the second necessary for compliance; the other options change the rule or the direction of inference."
+            },
+            {
+              "id": "tara-01-ct-07",
+              "type": "principle",
+              "stem": "The museum should refund the cost of its astronomy talk: it relocated the talk after selling tickets and the new site could not be reached by several customers under the advertised access arrangements. Which decision best applies the same principle?",
+              "options": {
+                "A": "A museum refunds members who dislike a speaker's voice.",
+                "B": "A theatre refunds patrons who cannot reach a replacement venue after it changes to a site without the promised step-free access.",
+                "C": "A theatre refunds patrons who booked for the wrong date.",
+                "D": "A festival lowers its booking charge to match a rival's charge.",
+                "E": "A train operator upgrades regular customers before announcing new fares."
+              },
+              "answer": "B",
+              "explanation": "The principle is to remedy loss when the organiser changes arrangements on which customers reasonably relied, not to refund for any disappointment."
+            },
+            {
+              "id": "tara-01-ct-08",
+              "type": "weaken",
+              "stem": "After a council painted lines separating pedestrians and cyclists on a riverside path, reported collisions fell by a third. The council concludes that the lines made each journey safer. Which finding most weakens this conclusion?",
+              "options": {
+                "A": "The council painted the lines in early September.",
+                "B": "The number of journeys on the path fell by half over the same period after a connecting bridge closed.",
+                "C": "The lines were the same colour as markings on another path.",
+                "D": "Most cyclists enter at the northern gate.",
+                "E": "The path is resurfaced every six years."
+              },
+              "answer": "B",
+              "explanation": "With two-thirds as many reports on only half as many journeys, the reported collision rate per journey rose, not fell. The other facts do not explain a change in the exposure denominator."
+            },
+            {
+              "id": "tara-01-ct-09",
+              "type": "main-conclusion",
+              "stem": "Some local history files are so fragile that every handling damages them. Scanning these files would make copies available to readers without repeated handling. Although scanning requires a one-off expense, fewer repairs would be needed. The archive should therefore scan its most fragile files first.\n\nWhich statement best expresses the main conclusion of the argument?",
+              "options": {
+                "A": "Digital copies can reduce handling.",
+                "B": "Some files deteriorate each time they are handled.",
+                "C": "Scanning entails a one-off expense.",
+                "D": "The archive should give the most fragile files priority for scanning.",
+                "E": "Scanning all records would eliminate repair costs."
+              },
+              "answer": "D",
+              "explanation": "The claims about damage, access and repair costs support the proposed priority. The argument does not promise to eliminate repair costs."
+            },
+            {
+              "id": "tara-01-ct-10",
+              "type": "assumption",
+              "stem": "Replacing single-use cups with a deposit cup scheme will cut the number of new cups the market needs next summer. The reusable cups will be collected at exits and can be washed overnight. Which assumption does this argument depend on?",
+              "options": {
+                "A": "The market will accept deposits only in cash.",
+                "B": "All shoppers will attend the market more than once.",
+                "C": "Washing will cost less than buying a single-use cup.",
+                "D": "The deposit will exactly equal the cost of manufacturing each cup.",
+                "E": "Enough reusable cups will be returned and reused to reduce how many new cups must be brought in overall."
+              },
+              "answer": "E",
+              "explanation": "Washability alone does not reduce purchasing if cups are not returned in sufficient numbers. Costs and cash procedures are not needed for the stated claim about quantity."
+            },
+            {
+              "id": "tara-01-ct-11",
+              "type": "drawing-conclusion",
+              "stem": "Of the four workshops offered on Saturday, two need pre-booking and three are free. Which conclusion follows?",
+              "options": {
+                "A": "No paid workshop needs pre-booking.",
+                "B": "At least one free workshop needs pre-booking.",
+                "C": "Exactly two free workshops need pre-booking.",
+                "D": "Every workshop that needs pre-booking is free.",
+                "E": "Every free workshop needs pre-booking."
+              },
+              "answer": "B",
+              "explanation": "There is only one non-free workshop, so the two pre-booked workshops cannot both be non-free. The second pre-booked workshop might be free or paid."
+            },
+            {
+              "id": "tara-01-ct-12",
+              "type": "flaw",
+              "stem": "The station survey asked passengers on the 09:15 weekday service whether a later departure would suit them. Most said no. The operator concludes that most passengers across all its services oppose moving any departure later. What is the main flaw?",
+              "options": {
+                "A": "It generalises from users of a single departure to a much wider set of users and timetable changes.",
+                "B": "It offers two options when only one exists.",
+                "C": "It assumes the operator cannot change its timetable.",
+                "D": "It mistakes later departures for longer journeys.",
+                "E": "It counts passengers who travel at weekends twice."
+              },
+              "answer": "A",
+              "explanation": "A sample of current users of one weekday departure need not represent people using other departures. Nothing says passengers were double-counted or that duration was measured."
+            },
+            {
+              "id": "tara-01-ct-13",
+              "type": "parallel-reasoning",
+              "stem": "If the printer's paper tray is empty, a warning appears. No warning has appeared. Therefore the tray is not empty. Which argument has the same structure?",
+              "options": {
+                "A": "If the door is unlatched, the indicator glows. The door is latched, so the indicator is dark.",
+                "B": "If the door is unlatched, the indicator glows. It glows, so the door is unlatched.",
+                "C": "If the door is unlatched, the indicator glows. The door is unlatched, so it glows.",
+                "D": "The indicator glows only when the door is unlatched. It is dark, so the door is latched.",
+                "E": "If the door is unlatched, the indicator glows. The indicator is dark, so the door is not unlatched."
+              },
+              "answer": "E",
+              "explanation": "The form is P implies Q; not Q; therefore not P. In the final option, “only when” reverses the conditional, so absence of light does not establish that the door is latched."
+            },
+            {
+              "id": "tara-01-ct-14",
+              "type": "principle",
+              "stem": "The residents' association should not publish private complaints when it can explain its decision fully using anonymous summaries. Publishing names in this situation exposes people without improving accountability. Which decision best reflects the underlying principle?",
+              "options": {
+                "A": "A club names contest winners after obtaining consent because the winners want recognition.",
+                "B": "A school releases anonymous feedback figures rather than naming pupils where the names would add nothing to the explanation.",
+                "C": "A newspaper releases named allegations to demonstrate a conflict of interest.",
+                "D": "A school withholds all information on a decision because some staff oppose it.",
+                "E": "A shop posts its opening hours but keeps supplier prices private to protect its margins."
+              },
+              "answer": "B",
+              "explanation": "The argument opposes unnecessary disclosure of personal information while preserving transparency. The alternatives either permit useful disclosure or withhold information for a different reason."
+            },
+            {
+              "id": "tara-01-ct-15",
+              "type": "strengthen",
+              "stem": "A community garden proposes using the empty west plot rather than the shared courtyard for its compost bins, arguing that the west plot will generate fewer odour complaints from neighbouring homes. Which evidence is most supportive?",
+              "options": {
+                "A": "Temporary bins with identical contents prompted fewer complaints at the west plot than at the courtyard during comparable weather.",
+                "B": "Both sites can take bins of the same volume.",
+                "C": "The west plot is closer to the gardener's tool cupboard.",
+                "D": "The courtyard currently has brighter lighting.",
+                "E": "Several residents already compost at home."
+              },
+              "answer": "A",
+              "explanation": "Holding the compost and weather comparable helps isolate the choice of site, and the trial measures the outcome predicted. Equal capacity alone does not bear on complaints."
+            },
+            {
+              "id": "tara-01-ct-16",
+              "type": "weaken",
+              "stem": "A theatre advertised its autumn shows with posters inside buses and sold more tickets that season than last autumn. It concludes that the posters were chiefly responsible for the increase. Which evidence most weakens the claim?",
+              "options": {
+                "A": "The theatre kept records of group sales separately.",
+                "B": "The theatre changed the poster design halfway through the season.",
+                "C": "The entire increase came from large group bookings that had already been made before the posters went up.",
+                "D": "Some bus routes pass close to the theatre.",
+                "E": "Last autumn's shows were also advertised online."
+              },
+              "answer": "C",
+              "explanation": "The sales that account for the increase preceded the campaign and therefore cannot be attributed to exposure to the posters. Separate record keeping does not undermine the causal claim."
+            },
+            {
+              "id": "tara-01-ct-17",
+              "type": "main-conclusion",
+              "stem": "It is tempting to replace the old town-hall clock whenever it breaks. But most breakdowns in recent years were caused by a worn part that can be replaced cheaply. Keeping a spare of that part would shorten repairs too. The council ought to stock the spare rather than buy a new clock now.\n\nWhich statement best expresses the main conclusion of the argument?",
+              "options": {
+                "A": "The council should stock a spare part instead of buying a new clock now.",
+                "B": "Replacing the old clock is tempting after a breakdown.",
+                "C": "A cheaper part would stop all future breakdowns.",
+                "D": "A worn part caused most recent breakdowns.",
+                "E": "Stocking the spare would shorten repairs."
+              },
+              "answer": "A",
+              "explanation": "The repair history and reduced delay justify the final recommendation. They do not imply prevention of every breakdown."
+            },
+            {
+              "id": "tara-01-ct-18",
+              "type": "assumption",
+              "stem": "A bakery bakes a fixed number of loaves each day and is not changing its opening hours or displayed prices. It argues that taking card payments as well as cash will increase its revenue because it will no longer turn away people carrying only cards. Which assumption is necessary?",
+              "options": {
+                "A": "At least some loaves otherwise left unsold will be bought when card payments become available.",
+                "B": "Card customers will shop in the morning rather than the afternoon.",
+                "C": "No current customer will switch from cash to card.",
+                "D": "Customers who carry cards normally buy at least three loaves each.",
+                "E": "The bakery can negotiate the same fees as a supermarket."
+              },
+              "answer": "A",
+              "explanation": "At fixed prices and with fixed stock, merely changing how existing sales are paid does not raise revenue. The stated mechanism requires extra sales from otherwise unsold stock."
+            },
+            {
+              "id": "tara-01-ct-19",
+              "type": "drawing-conclusion",
+              "stem": "The council inspects each food stall every Monday. A stall assessed as high risk is also inspected every Thursday. No stall with a current hygiene award is assessed as high risk. What follows?",
+              "options": {
+                "A": "Every stall without an award is inspected on Thursdays.",
+                "B": "No stall with a current hygiene award is required by these rules to be inspected on Thursdays.",
+                "C": "Some stalls are exempt from Monday inspections.",
+                "D": "No stall with a current hygiene award can ever be inspected on a Thursday.",
+                "E": "Every stall with an award was once high risk."
+              },
+              "answer": "B",
+              "explanation": "All stalls must get Monday inspections; only the high-risk rule creates a Thursday requirement. That does not prohibit optional visits or classify all non-award stalls."
+            },
+            {
+              "id": "tara-01-ct-20",
+              "type": "flaw",
+              "stem": "A coffee kiosk's owner reports that the average value of a transaction rose from £4 to £5. She claims this proves that the day's total revenue increased. What is the error?",
+              "options": {
+                "A": "It overlooks that sales cannot be expressed in pounds.",
+                "B": "It ignores that a fall in the number of transactions could outweigh the higher average spend.",
+                "C": "It assumes every buyer paid £5 rather than £4.",
+                "D": "It reasons that total revenue is unrelated to prices.",
+                "E": "It treats the average transaction as the most frequent order."
+              },
+              "answer": "B",
+              "explanation": "Total revenue equals average transaction value times the number of transactions. For example, 100 at £4 is more than 70 at £5."
+            },
+            {
+              "id": "tara-01-ct-21",
+              "type": "parallel-reasoning",
+              "stem": "Everyone on the repair rota holds a depot key. No one without a safety briefing holds a depot key. So everyone on the repair rota has had a safety briefing. Which argument matches?",
+              "options": {
+                "A": "All survey captains have a permit. Only trained people have permits. So all survey captains are trained.",
+                "B": "All survey captains have a permit. All trainees have permits. So all survey captains are trainees.",
+                "C": "Some survey captains have a permit. Only trained people have permits. So all survey captains are trained.",
+                "D": "All survey captains are trained. No permit holders are untrained. So all survey captains have permits.",
+                "E": "Only survey captains have a permit. All permit holders are trained. So all trained people are survey captains."
+              },
+              "answer": "A",
+              "explanation": "The chain is rota implies key implies briefing. “Only trained people have permits” means permit implies training, which supplies the equivalent second link."
+            },
+            {
+              "id": "tara-01-ct-22",
+              "type": "principle",
+              "stem": "A food bank should offer first choice of delivery slots to people whose immobility prevents collection. The purpose of priority is to overcome a barrier to access, not to reward loyalty. Which case applies the same principle?",
+              "options": {
+                "A": "An adviser sees clients in order of application.",
+                "B": "A club gives more places to the teams that won most points last year.",
+                "C": "A training centre reserves its remote places first for applicants unable to travel to the venue.",
+                "D": "A training centre reserves its best seats for former students.",
+                "E": "A course provider reserves places for people who pay a surcharge."
+              },
+              "answer": "C",
+              "explanation": "Priority is justified by a barrier that the accommodation addresses. The other systems prioritise loyalty, arrival order, performance or payment."
+            }
+          ]
+        },
+        {
+          "id": "tara-01-ps",
+          "type": "problem-solving",
+          "title": "Problem Solving",
+          "durationMinutes": 40,
+          "marksPerCorrectAnswer": 1,
+          "marksPerIncorrectAnswer": 0,
+          "questions": [
+            {
+              "id": "tara-01-ps-01",
+              "type": "relevant-selection",
+              "stem": "A lido offers 96 morning places, 80 afternoon places and 32 evening places. The afternoon session has 54 paid bookings and 9 complimentary bookings. Six of its paid bookings are cancelled before opening. Each live booking takes one place. How many afternoon places are available at opening?",
+              "options": {
+                "A": "29",
+                "B": "17",
+                "C": "23",
+                "D": "39",
+                "E": "41"
+              },
+              "answer": "C",
+              "explanation": "Use only afternoon figures. There are 54 − 6 + 9 = 57 live bookings, so 80 − 57 = 23 places remain."
+            },
+            {
+              "id": "tara-01-ps-02",
+              "type": "finding-procedures",
+              "stem": "A community centre needs 58 identical pens. Pack X contains 12 for £5; pack Y contains 7 for £3. Packs cannot be split. What is the least cost?",
+              "options": {
+                "A": "£27",
+                "B": "£24",
+                "C": "£26",
+                "D": "£25",
+                "E": "£28"
+              },
+              "answer": "D",
+              "explanation": "Five X give 60 pens for £25. At £24 or less, the best counts for 0–4 X are respectively 56, 54, 52, 57 and 55 pens. Five X already cost more than £24."
+            },
+            {
+              "id": "tara-01-ps-03",
+              "type": "identifying-similarity",
+              "stem": "A bike hire charge goes up by £4 per additional hour for the first three hours, then by £2 per additional hour thereafter. Each list gives the total charge at the ends of hours 1, 2, 3, 4 and 5. Which has the same charging pattern?",
+              "options": {
+                "A": "£7, £11, £13, £15, £19",
+                "B": "£7, £11, £15, £19, £21",
+                "C": "£7, £10, £13, £16, £19",
+                "D": "£7, £9, £11, £15, £19",
+                "E": "£7, £11, £15, £17, £19"
+              },
+              "answer": "E",
+              "explanation": "The intervals ending at hours 2 and 3 add £4, and those ending at hours 4 and 5 add £2. The starting total does not determine the pattern."
+            },
+            {
+              "id": "tara-01-ps-04",
+              "type": "relevant-selection",
+              "stem": "A delivery bike must leave the depot no earlier than 09:12. It takes 11 minutes to reach the bakery and 6 more to get from the bakery to the gallery. Loading at the bakery takes 8 minutes and must finish before the bike leaves for the gallery. The gallery opens at 09:30, and receiving the parcel there takes 4 minutes. What is the earliest the gallery can finish receiving it?",
+              "options": {
+                "A": "09:46",
+                "B": "09:41",
+                "C": "09:42",
+                "D": "09:34",
+                "E": "09:37"
+              },
+              "answer": "B",
+              "explanation": "Arrival at the gallery is 09:12 + 11 + 8 + 6 = 09:37, after opening; receiving ends four minutes later."
+            },
+            {
+              "id": "tara-01-ps-05",
+              "type": "finding-procedures",
+              "stem": "A rectangular courtyard is 14 m by 10 m. A strip 2 m wide runs around the inside of all four sides. How many 1 m² paving slabs are required to cover the strip without overlaps?",
+              "options": {
+                "A": "96",
+                "B": "116",
+                "C": "80",
+                "D": "72",
+                "E": "88"
+              },
+              "answer": "C",
+              "explanation": "Subtract the central 10 m by 6 m rectangle from the 140 m² courtyard. This counts the corners once only."
+            },
+            {
+              "id": "tara-01-ps-06",
+              "type": "relevant-selection",
+              "stem": "A chart gives the number of cargo-bike journeys for March – June. March: 120 booked, 90 completed. April: 130 booked, 104 completed. May: 160 booked, 112 completed. June: 150 booked, 105 completed. Across which consecutive pair of months were there the fewest booked journeys that did not finish?",
+              "options": {
+                "A": "March and May",
+                "B": "April and June",
+                "C": "March and April",
+                "D": "May and June",
+                "E": "April and May"
+              },
+              "answer": "C",
+              "explanation": "The unfinished counts are 30, 26, 48 and 45. Consecutive totals are 56, 74 and 93, so the first pair is lowest."
+            },
+            {
+              "id": "tara-01-ps-07",
+              "type": "finding-procedures",
+              "stem": "A canteen sold 46 soup portions over three days. It sold twice as many on Wednesday as on Monday and six more on Tuesday than on Monday. How many did it sell on Wednesday?",
+              "options": {
+                "A": "21",
+                "B": "24",
+                "C": "20",
+                "D": "22",
+                "E": "18"
+              },
+              "answer": "C",
+              "explanation": "Let Monday be m. Then m + (m + 6) + 2m = 46, giving m = 10 and Wednesday = 20."
+            },
+            {
+              "id": "tara-01-ps-08",
+              "type": "identifying-similarity",
+              "stem": "In a library challenge, one reader's tally goes from 12 to 18 to 27 over three weeks, multiplying by the same factor each time. Which other tally uses the same factor at both steps?",
+              "options": {
+                "A": "16, 20, 25",
+                "B": "8, 12, 18",
+                "C": "10, 16, 22",
+                "D": "6, 12, 18",
+                "E": "12, 16, 24"
+              },
+              "answer": "B",
+              "explanation": "Both original steps multiply by 3/2. Only 8 to 12 to 18 uses that multiplier twice."
+            },
+            {
+              "id": "tara-01-ps-09",
+              "type": "finding-procedures",
+              "stem": "From (1, 2) a surveyor walks four units east, two north, one west and five south. East increases the first coordinate and north increases the second. What are the final coordinates?",
+              "options": {
+                "A": "(6, −1)",
+                "B": "(4, 1)",
+                "C": "(3, −1)",
+                "D": "(4, −1)",
+                "E": "(4, −3)"
+              },
+              "answer": "D",
+              "explanation": "The net changes are +3 east and −3 north. Apply both to the starting location, not to the origin."
+            },
+            {
+              "id": "tara-01-ps-10",
+              "type": "relevant-selection",
+              "stem": "A minibus has room for 11 passengers. Cohort A has 28 pupils, including 5 who are staying at school. Cohort B has 19 pupils, including 4 staying at school. There will be 3 adult passengers and one driver who does not count as a passenger. If each minibus can make only one trip, how many are needed?",
+              "options": {
+                "A": "3",
+                "B": "4",
+                "C": "7",
+                "D": "6",
+                "E": "5"
+              },
+              "answer": "B",
+              "explanation": "The passenger count is 23 + 15 + 3 = 41. Three minibuses take only 33; four take 44."
+            },
+            {
+              "id": "tara-01-ps-11",
+              "type": "finding-procedures",
+              "stem": "At a repair café, tickets cost £9 at the door or £6 in advance. A group can buy one advance bundle of four for £20 instead of buying those four advance tickets separately. There is a single £3 fee for an online order; all advance tickets must go on that order. For seven people, what is the lowest total cost?",
+              "options": {
+                "A": "£47",
+                "B": "£42",
+                "C": "£41",
+                "D": "£38",
+                "E": "£45"
+              },
+              "answer": "C",
+              "explanation": "The bundle saves £4 against four separate advance tickets. Once the order is placed, the other three cost £6 each, less than at the door. The total is 20 + 18 + 3."
+            },
+            {
+              "id": "tara-01-ps-12",
+              "type": "identifying-similarity",
+              "stem": "A tile has a dot in the top-left corner and a stripe in the bottom-left corner. It is rotated 90° clockwise and then reflected in a vertical mirror line through its centre. Where are the dot and stripe now?",
+              "options": {
+                "A": "Dot bottom-right; stripe bottom-left",
+                "B": "Dot top-left; stripe bottom-left",
+                "C": "Dot top-right; stripe top-left",
+                "D": "Dot top-left; stripe top-right",
+                "E": "Dot bottom-left; stripe bottom-right"
+              },
+              "answer": "D",
+              "explanation": "A clockwise turn sends top-left to top-right and bottom-left to top-left. The vertical reflection swaps the two top corners."
+            },
+            {
+              "id": "tara-01-ps-13",
+              "type": "relevant-selection",
+              "stem": "A lift may carry at most 480 kg. It already holds passengers of 76 kg, 88 kg and 71 kg, and a trolley of 29 kg. Each sealed crate weighs 38 kg including its 4 kg packaging. What is the maximum number of crates that can be added?",
+              "options": {
+                "A": "7",
+                "B": "8",
+                "C": "5",
+                "D": "4",
+                "E": "6"
+              },
+              "answer": "C",
+              "explanation": "Existing load is 264 kg, leaving 216 kg. Five crates weigh 190 kg whereas six weigh 228 kg. Packaging is already included."
+            },
+            {
+              "id": "tara-01-ps-14",
+              "type": "finding-procedures",
+              "stem": "Three paths from a gate to a pond are 360 m, 420 m and 480 m. Lee walks to the pond by the 360 m path at 90 m per minute. Lee returns by a different path at 70 m per minute. The round trip takes under 11 minutes without stops. How far is the round trip if Lee chooses the longest return path allowed?",
+              "options": {
+                "A": "480 m",
+                "B": "780 m",
+                "C": "900 m",
+                "D": "720 m",
+                "E": "840 m"
+              },
+              "answer": "E",
+              "explanation": "The outward trip takes 4 minutes. The 480 m route takes less than 7 minutes at 70 m/min since 480 < 490, and is the longest available."
+            },
+            {
+              "id": "tara-01-ps-15",
+              "type": "relevant-selection",
+              "stem": "A bakery's tray display shows these totals: plain rolls baked 84 and sold 75; seeded rolls baked 96 and sold 80; cheese rolls baked 65 and sold 52. The manager gives away 6 unsold seeded rolls and 4 unsold cheese rolls, but no plain rolls. How many rolls are still unsold and not given away?",
+              "options": {
+                "A": "25",
+                "B": "32",
+                "C": "28",
+                "D": "34",
+                "E": "38"
+              },
+              "answer": "C",
+              "explanation": "Start with the per-type differences 9, 16 and 13. Their sum is 38, and ten are given away."
+            },
+            {
+              "id": "tara-01-ps-16",
+              "type": "finding-procedures",
+              "stem": "A 24-litre container is initially one quarter full. An inlet adds 5 litres per minute while a drain removes 2 litres per minute. Both start at the same time. How long before the container is first full?",
+              "options": {
+                "A": "6 minutes",
+                "B": "8 minutes",
+                "C": "5 minutes",
+                "D": "4 minutes",
+                "E": "9 minutes"
+              },
+              "answer": "A",
+              "explanation": "There are 6 litres initially and 18 still needed. The net rate is 3 litres per minute, so filling takes six minutes."
+            },
+            {
+              "id": "tara-01-ps-17",
+              "type": "identifying-similarity",
+              "stem": "A strip of eight squares reads black, white, white, black, black, black, white, white from left to right. Which strip has the same lengths of colour runs in reverse order? The first colour may differ.",
+              "options": {
+                "A": "White, white, black, black, black, white, white, black",
+                "B": "Black, black, white, white, black, black, black, white",
+                "C": "White, white, white, black, black, white, white, black",
+                "D": "Black, white, white, white, black, black, white, white",
+                "E": "White, black, black, white, white, white, black, black"
+              },
+              "answer": "A",
+              "explanation": "The original runs have lengths 1, 2, 3, 2; reversed these are 2, 3, 2, 1. The matching strip starts with two white squares."
+            },
+            {
+              "id": "tara-01-ps-18",
+              "type": "finding-procedures",
+              "stem": "Forty people attend a language exchange. Twenty-three speak French, eighteen speak Spanish and eight speak neither. How many speak both French and Spanish?",
+              "options": {
+                "A": "1",
+                "B": "8",
+                "C": "9",
+                "D": "10",
+                "E": "17"
+              },
+              "answer": "C",
+              "explanation": "Thirty-two people speak at least one language. The two counts total 41 because people speaking both are counted twice. The difference is nine."
+            },
+            {
+              "id": "tara-01-ps-19",
+              "type": "relevant-selection",
+              "stem": "A store discounts a £60 coat by 25% and an £18 scarf by one third. A voucher takes a further £5 off only if the total after both item discounts is at least £55. What is the final total for one of each?",
+              "options": {
+                "A": "£55",
+                "B": "£52",
+                "C": "£58",
+                "D": "£57",
+                "E": "£62"
+              },
+              "answer": "B",
+              "explanation": "The coat costs £45 and the scarf £12. Their £57 total qualifies for the voucher, giving £52."
+            },
+            {
+              "id": "tara-01-ps-20",
+              "type": "finding-procedures",
+              "stem": "A rowing club stores identical rectangular boxes measuring 60 cm by 40 cm by 30 cm. A cupboard is 120 cm wide, 80 cm deep and 90 cm high inside. Boxes may turn, but must remain aligned with the cupboard. What is the greatest number that fit?",
+              "options": {
+                "A": "8",
+                "B": "12",
+                "C": "14",
+                "D": "16",
+                "E": "10"
+              },
+              "answer": "B",
+              "explanation": "Put 2 along the width, 2 along the depth and 3 high. This fills the entire volume, so no arrangement can fit more."
+            },
+            {
+              "id": "tara-01-ps-21",
+              "type": "identifying-similarity",
+              "stem": "A depot tags crates in a repeating five-day cycle: red, red, blue, green, blue. A second depot uses white for red, black for blue, and orange for green. Its first day is the first depot's fourth day. What are its first five tags?",
+              "options": {
+                "A": "Black, orange, black, white, white",
+                "B": "White, white, black, orange, black",
+                "C": "Orange, white, black, white, black",
+                "D": "Orange, black, white, white, black",
+                "E": "Orange, black, white, black, white"
+              },
+              "answer": "D",
+              "explanation": "Start at green, then blue, then wrap to red, red, blue. Substitute the second depot's colours."
+            },
+            {
+              "id": "tara-01-ps-22",
+              "type": "finding-procedures",
+              "stem": "A charity matches the first £80 that a team collects with an equal amount, and matches any further collections at half their value. The amount raised including the match is £220. How much did the team collect before matching?",
+              "options": {
+                "A": "£120",
+                "B": "£110",
+                "C": "£130",
+                "D": "£140",
+                "E": "£100"
+              },
+              "answer": "A",
+              "explanation": "The first £80 becomes £160. The remaining £60 including match represents £40 collected plus £20 matched. Total collections were £120."
+            }
+          ]
+        },
+        {
+          "id": "tara-01-wt",
+          "type": "writing-task",
+          "title": "Writing Task",
+          "durationMinutes": 40,
+          "answerCount": 1,
+          "wordLimit": 750,
+          "scored": false,
+          "prompts": [
+            {
+              "id": "tara-01-wt-01",
+              "type": "writing-task",
+              "statement": "Public libraries should spend more of their budget on services for people who rarely visit than on services for their regular users.",
+              "stem": "Public libraries should spend more of their budget on services for people who rarely visit than on services for their regular users.\n\nExplain what the statement means. Give a reasoned argument against it. Discuss the extent to which you agree.",
+              "planningGuidance": "Clarify whether the claim is about outreach, new services or both. Argue that regular use can signal genuine public value, then consider when barriers to entry justify redirecting funds."
+            },
+            {
+              "id": "tara-01-wt-02",
+              "type": "writing-task",
+              "statement": "A decision made openly is better than a decision made quickly.",
+              "stem": "A decision made openly is better than a decision made quickly.\n\nExplain what the statement means. Give a reasoned argument against it. Discuss the extent to which you agree.",
+              "planningGuidance": "Define what openness and speed mean in a real decision. Test the claim using an urgent case, then say when scrutiny is worth the delay."
+            },
+            {
+              "id": "tara-01-wt-03",
+              "type": "writing-task",
+              "statement": "Schools should give students more opportunities to revise work than to produce new work.",
+              "stem": "Schools should give students more opportunities to revise work than to produce new work.\n\nExplain what the statement means. Give a reasoned argument against it. Discuss the extent to which you agree.",
+              "planningGuidance": "Distinguish improving an existing attempt from applying learning to another task. Explain where excessive repetition could hurt learning, then set conditions for the balance you favour."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tara-02",
+      "title": "TARA Mock 2",
+      "modules": [
+        {
+          "id": "tara-02-ct",
+          "type": "critical-thinking",
+          "title": "Critical Thinking",
+          "durationMinutes": 40,
+          "marksPerCorrectAnswer": 1,
+          "marksPerIncorrectAnswer": 0,
+          "questions": [
+            {
+              "id": "tara-02-ct-01",
+              "type": "main-conclusion",
+              "stem": "A local station loses many passengers to the bus when its ticket office is closed, because several fares cannot be purchased at the machine. Making every fare available at the machine would remove that obstacle. It is better to update the machine than to extend ticket-office hours, since the former has lower operating costs.\n\nWhich statement best expresses the main conclusion of the argument?",
+              "options": {
+                "A": "An update would remove a purchase obstacle.",
+                "B": "The station should permanently close its ticket office.",
+                "C": "Several fares cannot be bought at the machine.",
+                "D": "A closed office can cost the station passengers.",
+                "E": "The station should update its machine rather than extend ticket-office hours."
+              },
+              "answer": "E",
+              "explanation": "The earlier claims explain why action is needed; the comparison of operating costs supports the specific choice of update over longer hours."
+            },
+            {
+              "id": "tara-02-ct-02",
+              "type": "drawing-conclusion",
+              "stem": "Each play in the festival is performed at exactly one venue. No play at the hall has an afternoon performance. Two plays have both afternoon and evening performances. Which conclusion follows?",
+              "options": {
+                "A": "At least one play takes place at the hall.",
+                "B": "Exactly two plays are performed away from the hall.",
+                "C": "All evening performances take place at the hall.",
+                "D": "No afternoon performance is paired with an evening one.",
+                "E": "At least two plays are performed away from the hall."
+              },
+              "answer": "E",
+              "explanation": "Both plays with afternoon performances are excluded from the hall. Nothing limits the total elsewhere or establishes that any play uses the hall."
+            },
+            {
+              "id": "tara-02-ct-03",
+              "type": "assumption",
+              "stem": "A co-operative plans to cut its energy bill by moving packaging to the evening. Its machines use the same amount of power to package the same goods regardless of time, and its tariff is cheaper in the evening. What is assumed?",
+              "options": {
+                "A": "The machines can work only in the evening.",
+                "B": "Its packaging staff will be paid the same hourly rate.",
+                "C": "All customers collect their orders before midday.",
+                "D": "Any additional energy costs created by moving the work do not cancel the tariff saving.",
+                "E": "The co-operative has no electricity meter."
+              },
+              "answer": "D",
+              "explanation": "The same packaging costs less under the evening tariff, but new energy use such as lighting might offset that gain. Wages are not part of the energy bill."
+            },
+            {
+              "id": "tara-02-ct-04",
+              "type": "strengthen",
+              "stem": "A college proposes releasing worked feedback a week after students submit an exercise, rather than a month later. It argues that quicker feedback will let students correct their misconceptions before the next exercise. What most strengthens this claim?",
+              "options": {
+                "A": "Students prefer feedback with blue headings.",
+                "B": "The college sets exercises in many subjects.",
+                "C": "Staff took the same time to write each version of the feedback.",
+                "D": "On alternating comparable exercises, more students corrected recurring errors on their next submission when feedback arrived after a week.",
+                "E": "Some students complete the first exercise early."
+              },
+              "answer": "D",
+              "explanation": "The comparison links the changed timing to fewer repeat errors. Equal staff effort concerns feasibility rather than whether students correct misconceptions."
+            },
+            {
+              "id": "tara-02-ct-05",
+              "type": "weaken",
+              "stem": "A sports club reports that complaints about a leaking roof stopped after it put buckets along the edge of the court. It argues the buckets solved the leak problem. Which finding most weakens this claim?",
+              "options": {
+                "A": "The court was shut to visitors from the day the buckets were installed and water still dripped onto the playing area on wet days.",
+                "B": "The roof was built before the club bought the court.",
+                "C": "Some buckets have handles.",
+                "D": "The club usually records complaints by email.",
+                "E": "The buckets came from the club's kitchen."
+              },
+              "answer": "A",
+              "explanation": "The absence of visitors explains the absence of complaints, while continuing drips show the problem was not resolved."
+            },
+            {
+              "id": "tara-02-ct-06",
+              "type": "flaw",
+              "stem": "The local newspaper's gardening columnist correctly predicted two late frosts. She says a new cycle route will reduce congestion by a quarter. The council argues that her forecasting record makes that estimate reliable. What is the flaw?",
+              "options": {
+                "A": "It concludes that congestion cannot ever fall.",
+                "B": "It uses an estimate rather than a date for the project.",
+                "C": "It treats success predicting one kind of event as evidence of expertise in a different kind.",
+                "D": "It assumes late frosts only occur when traffic is heavy.",
+                "E": "It assumes the columnist wants to stop writing about gardening."
+              },
+              "answer": "C",
+              "explanation": "Frost forecasting does not establish an ability to model transport. The error is not merely allowing an estimate."
+            },
+            {
+              "id": "tara-02-ct-07",
+              "type": "parallel-reasoning",
+              "stem": "If the committee accepts the amendment, the deadline moves. If the deadline moves, the printing slot is lost. The committee accepts the amendment, so the printing slot is lost. Which argument has the same structure?",
+              "options": {
+                "A": "If the choir adds a song, rehearsal runs late. It does not add a song, so rehearsal ends on time.",
+                "B": "If the choir adds a song, rehearsal runs late. It runs late, so the choir adds a song.",
+                "C": "If the choir adds a song, the rehearsal runs late. A late rehearsal misses the last bus. The choir adds a song, so it misses the last bus.",
+                "D": "Either the choir adds a song or rehearsal ends on time. It adds a song, so the bus was missed.",
+                "E": "If the choir adds a song, rehearsal runs late. If it runs late, the choir misses the bus. The bus was missed, so the choir added a song."
+              },
+              "answer": "C",
+              "explanation": "Two forward implications are chained, and the first condition is affirmed. Reversing either condition cannot match this structure."
+            },
+            {
+              "id": "tara-02-ct-08",
+              "type": "principle",
+              "stem": "A council contractor should repair the damage it caused to a garden while fixing a pavement even though the owner was not a party to its contract. It is responsible because its own work caused the loss. Which case applies the principle?",
+              "options": {
+                "A": "A window cleaner replaces a customer's planter that was already cracked.",
+                "B": "A shop pays for unrelated new planters as a charitable gift.",
+                "C": "A window cleaner pays to replace a neighbour's planter broken by the cleaner's ladder during a paid job next door.",
+                "D": "A courier refunds a fee because a customer cancelled in time.",
+                "E": "A neighbour pays for storm damage because the garden is closest to their house."
+              },
+              "answer": "C",
+              "explanation": "The contractor owes a remedy to a third party harmed by its work; the window cleaner is similarly the cause of the neighbour's loss."
+            },
+            {
+              "id": "tara-02-ct-09",
+              "type": "main-conclusion",
+              "stem": "The town has enough money to restore a playground or put new paving outside the civic centre. The current paving is sound, whereas some playground equipment has been closed for months. Restoring the playground is the better use of the available money.\n\nWhich statement best expresses the main conclusion of the argument?",
+              "options": {
+                "A": "Some playground equipment has been closed for months.",
+                "B": "The town cannot fund both projects from this budget.",
+                "C": "The current paving is sound.",
+                "D": "The civic centre should never be repaved.",
+                "E": "The money should go to the playground rather than to new paving."
+              },
+              "answer": "E",
+              "explanation": "The condition and budget claims give reasons to choose the playground now; they do not prohibit repaving in future."
+            },
+            {
+              "id": "tara-02-ct-10",
+              "type": "drawing-conclusion",
+              "stem": "Five councillors voted for a motion and four against it. Three of the five councillors who voted for it do not sit on the planning committee. Exactly five of the nine voters sit on that committee. What follows?",
+              "options": {
+                "A": "All councillors outside the committee voted for the motion.",
+                "B": "Exactly two committee members voted against the motion.",
+                "C": "More committee members supported the motion than opposed it.",
+                "D": "All four votes against were cast by committee members.",
+                "E": "Exactly three committee members voted against the motion."
+              },
+              "answer": "E",
+              "explanation": "Two of the five supporters are committee members, leaving three of the five committee seats among opponents."
+            },
+            {
+              "id": "tara-02-ct-11",
+              "type": "assumption",
+              "stem": "A library proposes shifting one staffed enquiry desk from a morning slot to an evening slot. It argues the total number of enquiries answered will rise because evening queues are currently longer. What does this rely on?",
+              "options": {
+                "A": "The desk has more chairs than any other desk.",
+                "B": "All evening enquiries are about one topic.",
+                "C": "The extra enquiries the desk would handle in the evening exceed the enquiries it would no longer answer in the morning.",
+                "D": "The desk has always been open seven days a week.",
+                "E": "Evening patrons never visit in the morning."
+              },
+              "answer": "C",
+              "explanation": "The change substitutes one slot for another. Longer queues support a possible evening gain but do not by themselves establish a net gain."
+            },
+            {
+              "id": "tara-02-ct-12",
+              "type": "strengthen",
+              "stem": "A produce market wants independent labels showing the unit price of food sold loose. Its case is that labels will let shoppers identify the cheapest option by weight more reliably. Which evidence gives the best support?",
+              "options": {
+                "A": "Market traders usually make their own signs.",
+                "B": "Some shoppers buy the same fruit every week.",
+                "C": "The proposed label printer is fast.",
+                "D": "One stall already rounds its prices to the nearest penny.",
+                "E": "In a shopping task with otherwise identical displays, more shoppers identified the lowest price per kilogram when it was printed on the labels."
+              },
+              "answer": "E",
+              "explanation": "The shopping task isolates the label and tests correct unit-price comparisons, rather than convenience or habits."
+            },
+            {
+              "id": "tara-02-ct-13",
+              "type": "weaken",
+              "stem": "A park put new signs beside its spring flowers and recorded fewer damaged plants this April than last April. The manager claims the signs made visitors less likely to step on flowers during a visit. Which finding most weakens that inference?",
+              "options": {
+                "A": "The signs can also be read in rain.",
+                "B": "The staff count damage at the same time each week.",
+                "C": "The areas containing flowers were fenced off for most of this April, unlike last April.",
+                "D": "The park has two entrances.",
+                "E": "The signs list the flowers' common names."
+              },
+              "answer": "C",
+              "explanation": "Fencing prevents access independently of what visitors learn from signs, so the lower damage need not reflect changed visitor choices."
+            },
+            {
+              "id": "tara-02-ct-14",
+              "type": "flaw",
+              "stem": "Either the swimming gala is moved indoors or it is cancelled, says an organiser, because rain is expected. Moving it indoors costs too much, so it must be cancelled. What is the weakness?",
+              "options": {
+                "A": "It treats the options as exhaustive without ruling out an outdoor gala or a change of date.",
+                "B": "It assumes the swimmers cannot compete indoors.",
+                "C": "It ignores that an indoor gala can cost more to run.",
+                "D": "It infers the weather forecast from the cost of hiring the venue.",
+                "E": "It relies on poll results rather than a forecast."
+              },
+              "answer": "A",
+              "explanation": "The conclusion depends on the presented alternatives exhausting the possibilities. Rejecting the indoor venue does not establish cancellation if there are other workable arrangements."
+            },
+            {
+              "id": "tara-02-ct-15",
+              "type": "parallel-reasoning",
+              "stem": "No sculpture made of unfired clay is suitable for this outdoor display. Some of the donated sculptures are made of unfired clay. It follows that some donated sculptures are unsuitable. Which has the same structure?",
+              "options": {
+                "A": "All donated coats are suitable for rain. Some are paper, so all paper coats are suitable.",
+                "B": "No coat made of untreated paper is suitable for rain. Some coats are unsuitable, so some are untreated paper.",
+                "C": "Some untreated paper coats are unsuitable. Some coats are donated, so some donated coats are unsuitable.",
+                "D": "No untreated paper coat is suitable for rain. Some donated coats are untreated paper, so no donated coat is suitable.",
+                "E": "No coat made of untreated paper is suitable for the rain. Some donated coats are untreated paper, so some donated coats are unsuitable for the rain."
+              },
+              "answer": "E",
+              "explanation": "The witnesses in the overlap of donated and unfired objects are necessarily excluded by the universal rule. The other statements reverse, broaden, or fail to connect the relevant groups."
+            },
+            {
+              "id": "tara-02-ct-16",
+              "type": "principle",
+              "stem": "The school should tell families before it changes the weekly finish time, because families have made regular childcare arrangements based on the timetable. Which decision best uses the same principle?",
+              "options": {
+                "A": "A library publicises a new service to attract members.",
+                "B": "A shop displays yesterday's closing time on a noticeboard.",
+                "C": "A cinema announces the name of an actor hidden in its trailer.",
+                "D": "A café apologises at closing time for an unexpected power cut.",
+                "E": "A bus operator gives advance notice of an altered last departure because shift workers arrange lifts around the published service."
+              },
+              "answer": "E",
+              "explanation": "The obligation to give advance notice arises because people reasonably plan other commitments around a schedule."
+            },
+            {
+              "id": "tara-02-ct-17",
+              "type": "main-conclusion",
+              "stem": "Volunteer moderators at a local forum answer the same questions repeatedly. A pinned guide would let newcomers find the answers without posting, freeing volunteers to tackle unusual problems. The forum should publish a pinned guide, even though updating it will take some time.\n\nWhich statement best expresses the main conclusion of the argument?",
+              "options": {
+                "A": "Guides can free volunteers to tackle unusual issues.",
+                "B": "Moderators answer some questions repeatedly.",
+                "C": "Updating a guide takes time.",
+                "D": "The forum should prevent novices from posting any questions.",
+                "E": "The forum should publish a pinned guide."
+              },
+              "answer": "E",
+              "explanation": "Repeated questions and freed moderation time support publishing; the update time is a concession, not the claim the passage seeks to establish."
+            },
+            {
+              "id": "tara-02-ct-18",
+              "type": "drawing-conclusion",
+              "stem": "Every visitor who booked a guided museum tour received a printed map or a map by email, but not both. Of the 30 visitors who booked, 19 received a map by email. Four of those 19 arrived after the tour began. Which conclusion follows?",
+              "options": {
+                "A": "Exactly 11 booked visitors received a printed map.",
+                "B": "Exactly four of all booked visitors arrived late.",
+                "C": "All booked visitors with a printed map arrived before the tour began.",
+                "D": "No late visitor had a printed map.",
+                "E": "Exactly 15 booked visitors received a printed map."
+              },
+              "answer": "A",
+              "explanation": "The exclusive categories partition the 30 visitors, so printed equals 30 minus 19. Late arrival among printed-map holders is unspecified."
+            },
+            {
+              "id": "tara-02-ct-19",
+              "type": "assumption",
+              "stem": "The art centre plans to switch to email announcements and stop physically posting them, predicting that everyone on its announcement list will still receive at least one announcement per month. It will send one email per month to every address it holds. What does the prediction require?",
+              "options": {
+                "A": "Every announcement contains a picture.",
+                "B": "Posting letters costs more than sending email.",
+                "C": "Most members open their email each morning.",
+                "D": "Each listed person can receive the monthly email at an address the centre holds.",
+                "E": "Some readers regularly forward messages to colleagues."
+              },
+              "answer": "D",
+              "explanation": "In the absence of another delivery route, sending to recorded addresses will not preserve universal receipt unless the list covers each person with a usable email address."
+            },
+            {
+              "id": "tara-02-ct-20",
+              "type": "flaw",
+              "stem": "Shop owners who offer home delivery say it is popular. A trade association concludes that offering delivery makes every shop profitable. What is the flaw?",
+              "options": {
+                "A": "Shop owners have no way to know whether customers use delivery.",
+                "B": "Popularity with customers does not establish that delivery income covers costs or makes all shops profitable.",
+                "C": "The argument establishes that delivery is unpopular but concludes it is popular.",
+                "D": "Popularity is meaningful only in towns, not cities.",
+                "E": "Profit is necessarily higher for shops without delivery."
+              },
+              "answer": "B",
+              "explanation": "Popularity says nothing decisive about net return, and evidence from some shops cannot guarantee profitability across all shops."
+            },
+            {
+              "id": "tara-02-ct-21",
+              "type": "parallel-reasoning",
+              "stem": "A display may use emergency power only if its cabinet is locked. The display is using emergency power, so its cabinet is locked. Which argument matches?",
+              "options": {
+                "A": "If a rider wears a helmet, the rider can enter. A rider entered, so the rider wore a helmet.",
+                "B": "A rider can enter only if wearing a helmet. A rider wears one, so the rider has entered.",
+                "C": "A rider can enter the arena only if wearing a helmet. A rider has entered, so the rider is wearing a helmet.",
+                "D": "If a rider enters, a helmet is required. A rider did not enter, so the rider did not wear one.",
+                "E": "A rider may enter whether or not wearing a helmet. A rider entered, so the rider wore one."
+              },
+              "answer": "C",
+              "explanation": "“P only if Q” means P requires Q. Observing P establishes Q, not the reverse."
+            },
+            {
+              "id": "tara-02-ct-22",
+              "type": "principle",
+              "stem": "A town should not award a recycling contract to any bidder whose bid was scored by its own employee, even if the price is attractive. Applicants should not participate in evaluating their own applications. Which case applies that principle?",
+              "options": {
+                "A": "A grant panel reruns the scoring after learning an assessor works for one of the applicants.",
+                "B": "A contest gives judges more time to read every entry.",
+                "C": "A club publishes separate figures for its income and expenditure.",
+                "D": "A school awards a prize to the pupil nominated by the most classmates.",
+                "E": "A grant panel favours applicants working locally."
+              },
+              "answer": "A",
+              "explanation": "The employee connection makes evaluation non-independent. Rerunning the grant scoring addresses the equivalent conflict; the other choices deal with different procedural issues."
+            }
+          ]
+        },
+        {
+          "id": "tara-02-ps",
+          "type": "problem-solving",
+          "title": "Problem Solving",
+          "durationMinutes": 40,
+          "marksPerCorrectAnswer": 1,
+          "marksPerIncorrectAnswer": 0,
+          "questions": [
+            {
+              "id": "tara-02-ps-01",
+              "type": "relevant-selection",
+              "stem": "A ferry sells 38 adult returns at £14, 25 child returns at £8 and 16 adult singles at £9. Of the adult returns, six are fully refunded. What is the revenue from returns only?",
+              "options": {
+                "A": "£776",
+                "B": "£732",
+                "C": "£792",
+                "D": "£592",
+                "E": "£648"
+              },
+              "answer": "E",
+              "explanation": "Take the 32 remaining adult returns and all 25 child returns: 32 × £14 + 25 × £8 = £648. Single fares are irrelevant."
+            },
+            {
+              "id": "tara-02-ps-02",
+              "type": "finding-procedures",
+              "stem": "A council's badge printer can print 19 badges every 5 minutes. Printing is continuous at a constant rate. A box is filled and sealed whenever it receives 12 badges. How many full boxes can be sealed in 35 minutes?",
+              "options": {
+                "A": "10",
+                "B": "13",
+                "C": "11",
+                "D": "12",
+                "E": "14"
+              },
+              "answer": "C",
+              "explanation": "Seven five-minute periods give 133 badges. Eleven boxes use 132; the last badge cannot fill a box."
+            },
+            {
+              "id": "tara-02-ps-03",
+              "type": "identifying-similarity",
+              "stem": "An evening train's cumulative distance from departure at minutes 0, 5, 10, 15 and 20 is 0, 4, 4, 10, 12 km. Which sequence of cumulative distances at the same times represents a train covering exactly twice as much distance as this train in every five-minute interval?",
+              "options": {
+                "A": "0, 4, 4, 16, 24",
+                "B": "0, 8, 8, 20, 24",
+                "C": "0, 6, 6, 18, 22",
+                "D": "0, 8, 16, 20, 24",
+                "E": "0, 8, 8, 18, 24"
+              },
+              "answer": "B",
+              "explanation": "Original interval distances are 4, 0, 6 and 2 km. Doubling gives 8, 0, 12 and 4, whose cumulative distances are 0, 8, 8, 20 and 24."
+            },
+            {
+              "id": "tara-02-ps-04",
+              "type": "relevant-selection",
+              "stem": "A venue lists room capacity, morning fee and evening fee: Elm (52, £90, £120); Ash (60, £145, £105); Oak (47, £80, £95); Lime (48, £110, £150); Yew (55, £120, £140). Which room is cheapest to book in the evening for 50 attendees?",
+              "options": {
+                "A": "Yew",
+                "B": "Elm",
+                "C": "Lime",
+                "D": "Ash",
+                "E": "Oak"
+              },
+              "answer": "D",
+              "explanation": "Elm, Ash and Yew meet capacity. Their evening charges are £120, £105 and £140, so Ash is cheapest."
+            },
+            {
+              "id": "tara-02-ps-05",
+              "type": "finding-procedures",
+              "stem": "A park has a 1.8 km loop. Starting at the same gate at the same time, Mo cycles clockwise at 240 m/min and Eli cycles anticlockwise at 210 m/min. After how long do they first meet again?",
+              "options": {
+                "A": "4 minutes",
+                "B": "5 minutes",
+                "C": "8 minutes",
+                "D": "7.5 minutes",
+                "E": "6 minutes"
+              },
+              "answer": "A",
+              "explanation": "Travelling in opposite directions they close the 1,800 m gap at 450 m per minute. It takes 4 minutes."
+            },
+            {
+              "id": "tara-02-ps-06",
+              "type": "relevant-selection",
+              "stem": "A solar dashboard gives generation and on-site use, in units: Mon (40, 24), Tue (54, 42), Wed (45, 26), Thu (35, 30), Fri (62, 47). Unused generation is exported. Which day exported the greatest number of units?",
+              "options": {
+                "A": "Friday",
+                "B": "Tuesday",
+                "C": "Thursday",
+                "D": "Monday",
+                "E": "Wednesday"
+              },
+              "answer": "E",
+              "explanation": "Subtract on-site use from generation: 16, 12, 19, 5 and 15. Wednesday exported 19."
+            },
+            {
+              "id": "tara-02-ps-07",
+              "type": "finding-procedures",
+              "stem": "A square patch has area 81 m². It is widened by 3 m and shortened by 2 m to make a rectangle. How does its perimeter change?",
+              "options": {
+                "A": "Stays the same",
+                "B": "Increases by 10 m",
+                "C": "Decreases by 2 m",
+                "D": "Increases by 2 m",
+                "E": "Increases by 1 m"
+              },
+              "answer": "D",
+              "explanation": "Originally the perimeter is 36 m. The new 12 m by 7 m rectangle has perimeter 38 m. The net change is +2 m."
+            },
+            {
+              "id": "tara-02-ps-08",
+              "type": "identifying-similarity",
+              "stem": "A committee moves from 24 members with 6 under 25 to 30 members with 9 under 25. Which group has exactly the same fractions of under-25s before and after? Entries show under-25s/total.",
+              "options": {
+                "A": "8/32 to 12/40",
+                "B": "10/32 to 13/40",
+                "C": "10/40 to 12/48",
+                "D": "8/32 to 10/40",
+                "E": "6/30 to 12/40"
+              },
+              "answer": "A",
+              "explanation": "The original shares are 1/4 then 3/10. Only 8/32 and 12/40 match in that order."
+            },
+            {
+              "id": "tara-02-ps-09",
+              "type": "finding-procedures",
+              "stem": "Four interview slots run consecutively from 13:00, starting 15 minutes apart. Anya takes the slot immediately before Basil. Dee takes neither the first nor last slot. Callum takes a slot earlier than Dee. When does Basil start?",
+              "options": {
+                "A": "It cannot be determined",
+                "B": "13:15",
+                "C": "13:00",
+                "D": "13:30",
+                "E": "13:45"
+              },
+              "answer": "E",
+              "explanation": "Dee must be second or third. If third, the remaining slots 1, 2 and 4 force Anya and Basil into 1 and 2, leaving Callum too late. So Dee is second, Callum first and Basil fourth."
+            },
+            {
+              "id": "tara-02-ps-10",
+              "type": "relevant-selection",
+              "stem": "A grant body funds equipment but not labour or training. It pays half the eligible equipment cost, to a maximum grant of £600. A youth club lists equipment £1,460, labour £310 and training £200. How much does the club itself pay towards the whole project?",
+              "options": {
+                "A": "£1,460",
+                "B": "£1,970",
+                "C": "£860",
+                "D": "£1,240",
+                "E": "£1,370"
+              },
+              "answer": "E",
+              "explanation": "Half the eligible £1,460 is £730, so the grant is capped at £600. Subtract it from the full £1,970 cost."
+            },
+            {
+              "id": "tara-02-ps-11",
+              "type": "finding-procedures",
+              "stem": "An empty 3 kg sack is filled with equal-weight bags of sand. When it holds five bags it weighs 23 kg. Another identical sack holds nine such bags. What does the second filled sack weigh?",
+              "options": {
+                "A": "39 kg",
+                "B": "40 kg",
+                "C": "43 kg",
+                "D": "41 kg",
+                "E": "36 kg"
+              },
+              "answer": "A",
+              "explanation": "The five bags contribute 20 kg, or 4 kg each. Nine contribute 36 kg, plus 3 kg for the sack."
+            },
+            {
+              "id": "tara-02-ps-12",
+              "type": "identifying-similarity",
+              "stem": "A diagonal walk crosses a grid from (0, 0) to (6, 4) in a straight line. Which straight walk has the same direction, although its length may differ? Increasing x means east and increasing y means north.",
+              "options": {
+                "A": "(2, 1) to (11, 7)",
+                "B": "(2, 1) to (8, 10)",
+                "C": "(2, 1) to (11, 5)",
+                "D": "(2, 1) to (8, 4)",
+                "E": "(11, 7) to (2, 1)"
+              },
+              "answer": "A",
+              "explanation": "The original advances 3 east for every 2 north. The matching walk advances 9 east and 6 north. The reverse walk has the right slope but the wrong direction."
+            },
+            {
+              "id": "tara-02-ps-13",
+              "type": "relevant-selection",
+              "stem": "A school lists workshop places in this order: all places, already reserved by Year 12, already reserved by Year 13. Clay (36, 12, 15), Print (40, 16, 9), Textiles (30, 8, 10), Metal (28, 7, 8), Glass (33, 9, 11). No one else has reserved a place. How many workshops can still take at least 13 more pupils?",
+              "options": {
+                "A": "5",
+                "B": "3",
+                "C": "2",
+                "D": "1",
+                "E": "4"
+              },
+              "answer": "B",
+              "explanation": "Unreserved counts are 9, 15, 12, 13 and 13. Three reach the inclusive threshold of 13."
+            },
+            {
+              "id": "tara-02-ps-14",
+              "type": "finding-procedures",
+              "stem": "Two suppliers quote for identical chairs. A charges £25 delivery plus £18 per chair. B charges £10 delivery plus £21 per chair. What is the smallest whole number of chairs for which A is strictly cheaper?",
+              "options": {
+                "A": "7",
+                "B": "6",
+                "C": "5",
+                "D": "8",
+                "E": "4"
+              },
+              "answer": "B",
+              "explanation": "A's delivery costs £15 more but it saves £3 per chair. Five chairs merely tie; six make A cheaper."
+            },
+            {
+              "id": "tara-02-ps-15",
+              "type": "relevant-selection",
+              "stem": "A bus served 180, 200 and 240 people on Friday, Saturday and Sunday. Eighty on Friday, 130 on Saturday and 100 on Sunday paid contactlessly. The weekend in this report includes Saturday and Sunday only. What fraction of weekend passengers paid contactlessly?",
+              "options": {
+                "A": "23/42",
+                "B": "31/62",
+                "C": "13/20",
+                "D": "21/44",
+                "E": "23/44"
+              },
+              "answer": "E",
+              "explanation": "Weekend contactless payments total 230 and weekend passengers total 440. The fraction simplifies to 23/44."
+            },
+            {
+              "id": "tara-02-ps-16",
+              "type": "finding-procedures",
+              "stem": "A stall uses a 36-bead loop with numbered positions 1 to 36. Starting at position 34, it moves a marker five positions forward per turn, wrapping from 36 to 1. After seven turns, which position is marked?",
+              "options": {
+                "A": "35",
+                "B": "31",
+                "C": "34",
+                "D": "33",
+                "E": "32"
+              },
+              "answer": "D",
+              "explanation": "Seven turns advance 35 positions, one short of a full circuit. That puts the marker one place before 34."
+            },
+            {
+              "id": "tara-02-ps-17",
+              "type": "identifying-similarity",
+              "stem": "A sequence begins 30, 27, 21, 18, 12. Its rule alternates two subtractions. Which sequence starts at a different number and uses exactly the same rule starting with the same subtraction?",
+              "options": {
+                "A": "40, 37, 31, 25, 22",
+                "B": "40, 37, 31, 28, 22",
+                "C": "40, 34, 31, 25, 22",
+                "D": "40, 38, 32, 30, 24",
+                "E": "40, 37, 34, 28, 22"
+              },
+              "answer": "B",
+              "explanation": "The decreases in the source are 3, 6, 3, 6. The match repeats that order, not just the same overall decrease."
+            },
+            {
+              "id": "tara-02-ps-18",
+              "type": "finding-procedures",
+              "stem": "A shop paid £180 for 24 identical lamps. It sold 18 for £10 each. The remaining lamps must all be sold at the same price. What price for each would give a total profit of £42?",
+              "options": {
+                "A": "£7",
+                "B": "£4",
+                "C": "£8",
+                "D": "£10",
+                "E": "£6"
+              },
+              "answer": "A",
+              "explanation": "The sales target is £222. The first 18 bring in £180, leaving £42 to be earned from six lamps, £7 each."
+            },
+            {
+              "id": "tara-02-ps-19",
+              "type": "relevant-selection",
+              "stem": "An online store lists 64 items at the start of a week. It adds 13 on Tuesday, removes 8 on Wednesday, adds 5 on Thursday, then removes 11 on Friday. Items added cannot be listed twice. What is the difference between the greatest and least listed totals reached from the start through the end of the week?",
+              "options": {
+                "A": "13",
+                "B": "14",
+                "C": "21",
+                "D": "19",
+                "E": "18"
+              },
+              "answer": "B",
+              "explanation": "The running totals are 64, 77, 69, 74 and 63. Their range is 77 − 63 = 14."
+            },
+            {
+              "id": "tara-02-ps-20",
+              "type": "finding-procedures",
+              "stem": "A walking group buys 9 tickets in total. An adult ticket costs £8 and a child ticket costs £5. The group pays £60. How many child tickets did the group buy?",
+              "options": {
+                "A": "3",
+                "B": "7",
+                "C": "6",
+                "D": "4",
+                "E": "5"
+              },
+              "answer": "D",
+              "explanation": "Nine adult tickets would cost £72. Each substitution of a child ticket saves £3. Saving £12 therefore requires four substitutions."
+            },
+            {
+              "id": "tara-02-ps-21",
+              "type": "identifying-similarity",
+              "stem": "A fair allocates 50% of its stalls to food, 30% to crafts and 20% to charity. Which plan keeps these same proportions when stall counts are listed in the order charity, food, crafts?",
+              "options": {
+                "A": "8, 20, 12",
+                "B": "8, 12, 20",
+                "C": "10, 20, 10",
+                "D": "12, 20, 8",
+                "E": "20, 12, 8"
+              },
+              "answer": "A",
+              "explanation": "All options total 40. The right order is 20%, 50%, 30%, so the counts are 8, 20 and 12."
+            },
+            {
+              "id": "tara-02-ps-22",
+              "type": "finding-procedures",
+              "stem": "A small pool is filled by a pump in 18 minutes at its normal rate. For the first six minutes it ran at half that rate, then it switched to its normal rate. How long did filling take from the start?",
+              "options": {
+                "A": "18 minutes",
+                "B": "15 minutes",
+                "C": "21 minutes",
+                "D": "24 minutes",
+                "E": "27 minutes"
+              },
+              "answer": "C",
+              "explanation": "The first six minutes do the work of three normal-rate minutes. Fifteen further normal-rate minutes are required, so the elapsed time is 21 minutes."
+            }
+          ]
+        },
+        {
+          "id": "tara-02-wt",
+          "type": "writing-task",
+          "title": "Writing Task",
+          "durationMinutes": 40,
+          "answerCount": 1,
+          "wordLimit": 750,
+          "scored": false,
+          "prompts": [
+            {
+              "id": "tara-02-wt-01",
+              "type": "writing-task",
+              "statement": "Communities should preserve familiar public spaces even when they could make more money by selling them.",
+              "stem": "Communities should preserve familiar public spaces even when they could make more money by selling them.\n\nExplain what the statement means. Give a reasoned argument against it. Discuss the extent to which you agree.",
+              "planningGuidance": "Explain what counts as preservation and who benefits. Set out the case for selling a site to meet urgent local needs, then distinguish replaceable uses from losses that cannot readily be undone."
+            },
+            {
+              "id": "tara-02-wt-02",
+              "type": "writing-task",
+              "statement": "People should be judged more by how they respond to mistakes than by how often they make them.",
+              "stem": "People should be judged more by how they respond to mistakes than by how often they make them.\n\nExplain what the statement means. Give a reasoned argument against it. Discuss the extent to which you agree.",
+              "planningGuidance": "Distinguish learning from repair. Offer a counterexample involving repeated costly errors, then explain how your judgement changes with stakes and opportunity to learn."
+            },
+            {
+              "id": "tara-02-wt-03",
+              "type": "writing-task",
+              "statement": "New public services should be designed around those who find existing services hardest to use.",
+              "stem": "New public services should be designed around those who find existing services hardest to use.\n\nExplain what the statement means. Give a reasoned argument against it. Discuss the extent to which you agree.",
+              "planningGuidance": "Explain whether this is a design priority or an absolute rule. Develop a counterargument about limited budgets or competing needs, then explain when inclusive design benefits a wider group."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tara-03",
+      "title": "TARA Mock 3",
+      "modules": [
+        {
+          "id": "tara-03-ct",
+          "type": "critical-thinking",
+          "title": "Critical Thinking",
+          "durationMinutes": 40,
+          "marksPerCorrectAnswer": 1,
+          "marksPerIncorrectAnswer": 0,
+          "questions": [
+            {
+              "id": "tara-03-ct-01",
+              "type": "main-conclusion",
+              "stem": "The public should be able to view council meeting papers before votes are taken. Otherwise residents cannot point out relevant local facts in time to influence decisions. Publishing the papers online in advance could let the council catch errors before deciding.\n\nWhich statement best expresses the main conclusion of the argument?",
+              "options": {
+                "A": "Councillors should let residents vote on every proposal.",
+                "B": "Late access prevents some contributions from influencing a vote.",
+                "C": "Publishing papers online can uncover errors.",
+                "D": "Council meeting papers should be public before votes take place.",
+                "E": "Residents sometimes know relevant local facts."
+              },
+              "answer": "D",
+              "explanation": "Earlier scrutiny and timely local input support the initial transparency recommendation. The argument does not transfer voting power."
+            },
+            {
+              "id": "tara-03-ct-02",
+              "type": "drawing-conclusion",
+              "stem": "A community radio station airs interviews in six slots. Exactly four slots are live, and exactly four feature bands. A slot can have both features. What must be true?",
+              "options": {
+                "A": "Exactly two slots feature bands live.",
+                "B": "Every band slot is live.",
+                "C": "At least two slots are neither live nor feature bands.",
+                "D": "All non-live slots feature bands.",
+                "E": "At least two slots feature bands live."
+              },
+              "answer": "E",
+              "explanation": "Four band slots cannot fit into the two non-live slots; at least two must be live. The overlap could be larger."
+            },
+            {
+              "id": "tara-03-ct-03",
+              "type": "assumption",
+              "stem": "A station intends to cut the number of missed connections by printing bay numbers beside departure times on the interchange map. Staff say many delayed passengers know the departure time but go to the wrong bay. What is assumed?",
+              "options": {
+                "A": "The interchange must be rebuilt before bay numbers change.",
+                "B": "At least some passengers who would otherwise miss a connection due to the wrong bay will use the map in time.",
+                "C": "The station has no electronic departure board.",
+                "D": "The map will show fares for every route.",
+                "E": "Every bay is equally far from the entrance."
+              },
+              "answer": "B",
+              "explanation": "Printing the numbers will reduce misses only if it changes the journeys of some affected passengers before departure. Other navigation aids may coexist with the map."
+            },
+            {
+              "id": "tara-03-ct-04",
+              "type": "strengthen",
+              "stem": "A school argues that allowing pupils to practise short presentations in pairs before speaking to the class will increase the number willing to give a solo presentation. Which finding provides the strongest support?",
+              "options": {
+                "A": "Many pupils pick their own partners for sports.",
+                "B": "In comparable classes offered the same solo task, willingness rose in the group assigned pair practice compared with the group assigned silent preparation.",
+                "C": "Teachers already mark presentations using a rubric.",
+                "D": "The school needs new seating for some classes.",
+                "E": "Two pupils can often read a handout more quickly than one."
+              },
+              "answer": "B",
+              "explanation": "The comparison tests the proposed preparation against an alternative and measures willingness to do the solo task itself."
+            },
+            {
+              "id": "tara-03-ct-05",
+              "type": "weaken",
+              "stem": "After a bookshop moved its children's section next to the entrance, purchases of children's books rose. The owner concludes the move brought in more customers who bought children's books. Which finding most weakens that conclusion?",
+              "options": {
+                "A": "People can enter the shop from two streets.",
+                "B": "The number of customers buying children's books fell, but those who bought them purchased more copies each.",
+                "C": "The new shelves are painted yellow.",
+                "D": "The shop sells books in several languages.",
+                "E": "Many customers pay electronically."
+              },
+              "answer": "B",
+              "explanation": "Copies sold can rise while the count of purchasing customers falls. The observed increase therefore does not demonstrate the claimed rise in customer numbers."
+            },
+            {
+              "id": "tara-03-ct-06",
+              "type": "flaw",
+              "stem": "The allotment secretary argues that the waiting list cannot be long, because all the applicants she knows were offered plots quickly. She knows only applicants who have already accepted plots. What is the flaw?",
+              "options": {
+                "A": "It doubts the accuracy of the applicants' names.",
+                "B": "It assumes there are no empty plots.",
+                "C": "It assumes a plot may be shared by several applicants.",
+                "D": "It mistakes the number of plots for their sizes.",
+                "E": "The evidence excludes people still waiting and may therefore understate waiting times."
+              },
+              "answer": "E",
+              "explanation": "Selecting only successful applicants misses people whose waits are ongoing. Their experience cannot be inferred from those already allocated plots."
+            },
+            {
+              "id": "tara-03-ct-07",
+              "type": "parallel-reasoning",
+              "stem": "If the branch stays open late, two staff must be on duty. It will not stay open late, so two staff need not be on duty. Which option uses the same pattern, whether or not the inference is valid?",
+              "options": {
+                "A": "If the hall is used for a concert, a technician must attend. There is a concert, so a technician must attend.",
+                "B": "The hall can be used for a concert or a lecture. There is no concert, so it will be used for a lecture.",
+                "C": "If the hall is used for a concert, a technician must attend. It will not be used for a concert, so a technician need not attend.",
+                "D": "If the hall is used for a concert, a technician must attend. No technician can attend, so there can be no concert.",
+                "E": "Only if the hall is used for a concert must a technician attend. A technician must attend, so there is a concert."
+              },
+              "answer": "C",
+              "explanation": "Both dismiss the requirement after ruling out one trigger for it. Under the premises as stated, other triggers could still create the requirement."
+            },
+            {
+              "id": "tara-03-ct-08",
+              "type": "principle",
+              "stem": "A heritage trail should use a replica bell for hands-on demonstrations. People can learn just as much from using it, without wearing out an object that cannot be replaced. Which decision best applies the principle?",
+              "options": {
+                "A": "A collector seals duplicate prints away solely to raise their price.",
+                "B": "A music school buys cheaper chairs even though the expensive ones are more durable.",
+                "C": "A library lends original manuscripts because copies are unavailable.",
+                "D": "A textile museum lets pupils handle convincing copies where passing around an irreplaceable fabric would teach them nothing extra.",
+                "E": "A workshop uses replacement tools because the originals have been lost."
+              },
+              "answer": "D",
+              "explanation": "The principle is to substitute a comparably effective replica to protect an irreplaceable original, not merely to reduce cost."
+            },
+            {
+              "id": "tara-03-ct-09",
+              "type": "main-conclusion",
+              "stem": "Online booking has reduced the phone queue, which is welcome. Nevertheless, some residents cannot book online and depend on staff to make appointments. Since an appointment is the only way to see an adviser, the service ought to keep a phone booking option.\n\nWhich statement best expresses the main conclusion of the argument?",
+              "options": {
+                "A": "The service should replace online booking with telephone booking.",
+                "B": "Some residents cannot book online.",
+                "C": "An appointment is required to see an adviser.",
+                "D": "The service should retain telephone booking.",
+                "E": "Online booking has reduced the phone queue."
+              },
+              "answer": "D",
+              "explanation": "The argument accepts the gain from online booking but gives reasons to retain an alternative, not to remove online booking."
+            },
+            {
+              "id": "tara-03-ct-10",
+              "type": "drawing-conclusion",
+              "stem": "Ten bikes are in a store. Exactly six have working lights and exactly seven have working locks. A bike is ready to lend exactly when both work. What is guaranteed?",
+              "options": {
+                "A": "At least seven bikes are ready to lend.",
+                "B": "Exactly six bikes are ready to lend.",
+                "C": "Exactly three bikes are ready to lend.",
+                "D": "At least three bikes are ready to lend.",
+                "E": "Every bike with working lights has a working lock."
+              },
+              "answer": "D",
+              "explanation": "Only three bikes have non-working locks, so at most three of the six with lights lack working locks. The overlap could be larger than three."
+            },
+            {
+              "id": "tara-03-ct-11",
+              "type": "assumption",
+              "stem": "The arts centre wants to save storage space by replacing its paper booking records with scans. It needs to be able to consult every record throughout the next five years. It proposes destroying all the paper copies immediately after scanning. What does the argument require?",
+              "options": {
+                "A": "No booking will be made in the next five years.",
+                "B": "Each required record will remain accessible from the digital copies over the five years.",
+                "C": "The original records were typed rather than handwritten.",
+                "D": "The freed storage could be rented to another organisation.",
+                "E": "Scanning can be completed by volunteers."
+              },
+              "answer": "B",
+              "explanation": "The proposed destruction removes the fallback. It meets both aims only if the digital records remain available, whether through the original system or backups."
+            },
+            {
+              "id": "tara-03-ct-12",
+              "type": "strengthen",
+              "stem": "A community centre wants to hold its advice evening at a new site near two bus routes. It claims the move would increase attendance specifically among people without a car. Which evidence provides the best support?",
+              "options": {
+                "A": "Some people with cars also use buses.",
+                "B": "Records from comparable sessions show more attendees without a car at the new site when time, capacity and publicity were held constant.",
+                "C": "The old site has a large free car park.",
+                "D": "The new site can be locked more quickly.",
+                "E": "The new site is painted a lighter colour."
+              },
+              "answer": "B",
+              "explanation": "The comparison measures the target group and holds plausible alternative drivers constant. General facts about motorists do not establish the effect on non-drivers."
+            },
+            {
+              "id": "tara-03-ct-13",
+              "type": "weaken",
+              "stem": "A delivery co-operative says app-based ordering has shortened wait times for the same deliveries because the mean wait fell after it introduced the app. Which evidence most weakens the comparison?",
+              "options": {
+                "A": "The co-operative charges by distance.",
+                "B": "The co-operative publishes its average each month.",
+                "C": "The co-operative simultaneously stopped serving distant villages, and the mean wait for deliveries to still-served addresses did not fall.",
+                "D": "App and phone orders are recorded in the same database.",
+                "E": "Some members use the app every week."
+              },
+              "answer": "C",
+              "explanation": "Removing long waits can improve the overall mean even when continuing journeys are no faster. The same-address evidence directly undermines the stated improvement."
+            },
+            {
+              "id": "tara-03-ct-14",
+              "type": "flaw",
+              "stem": "A task group says all successful high streets have cafés. Its chair concludes that adding a café will be enough to make an unsuccessful high street successful. What is wrong with that reasoning?",
+              "options": {
+                "A": "It defines success solely as the price of coffee.",
+                "B": "It concludes that unsuccessful high streets can never change.",
+                "C": "It assumes there are no cafés anywhere.",
+                "D": "It provides evidence that all high streets with cafés are successful, but draws the opposite conclusion.",
+                "E": "It treats a feature found in every successful case as sufficient for success."
+              },
+              "answer": "E",
+              "explanation": "From success implies cafés, one cannot infer cafés imply success. The argument reverses the direction, regardless of whether cafés can sometimes help."
+            },
+            {
+              "id": "tara-03-ct-15",
+              "type": "parallel-reasoning",
+              "stem": "Either the store's main lock is faulty or the caretaker took the wrong key. A spare key opened the lock without trouble, so the fault possibility is ruled out. Therefore the caretaker took the wrong key. Which mirrors the reasoning?",
+              "options": {
+                "A": "Either a poster was printed late or it was delivered to the wrong hall. It was printed late, so it was also delivered to the wrong hall.",
+                "B": "A poster must be printed and delivered. It was printed, so it was necessarily delivered.",
+                "C": "If a poster went to the wrong hall, it arrived late. It did not arrive late, so it did not go to the wrong hall.",
+                "D": "Either a poster was printed late or it was delivered to the wrong hall. A receipt rules out late printing, so it was delivered to the wrong hall.",
+                "E": "If a poster was printed late, it went to the wrong hall. It went to the wrong hall, so it was printed late."
+              },
+              "answer": "D",
+              "explanation": "Both present a disjunction, eliminate the first possibility and infer the second. The last option is instead a single conditional and its contrapositive."
+            },
+            {
+              "id": "tara-03-ct-16",
+              "type": "principle",
+              "stem": "A gallery should make a new exhibition caption legible to visitors with poor sight if a larger typeface would do so without reducing its usefulness to anyone else. Which decision best applies the same reasoning?",
+              "options": {
+                "A": "An office locks its front door to improve its security at the cost of longer queues.",
+                "B": "A lecture venue adds a well-positioned induction loop to make speech accessible without changing what other listeners hear.",
+                "C": "A café swaps its one vegetarian dish for a cheaper meat dish.",
+                "D": "A railway introduces a luxury lounge for passengers who purchase first-class tickets.",
+                "E": "A theatre cancels a matinee that some patrons rely on to add an evening show."
+              },
+              "answer": "B",
+              "explanation": "The justification is a practical access improvement without sacrificing usefulness for others. The other cases involve a trade-off or a different purpose."
+            },
+            {
+              "id": "tara-03-ct-17",
+              "type": "main-conclusion",
+              "stem": "The council cannot tell which streets most need bicycle stands from the number of bikes currently locked to its stands alone. Streets without stands might still have high demand that is not recorded. The council should count bikes locked to railings as well before it chooses sites.\n\nWhich statement best expresses the main conclusion of the argument?",
+              "options": {
+                "A": "Current stand use alone can miss demand.",
+                "B": "Some streets lack stands.",
+                "C": "Some bikes are locked to railings.",
+                "D": "Before choosing sites for stands, the council should also count bikes attached to railings.",
+                "E": "The council should remove its existing stands before taking any counts."
+              },
+              "answer": "D",
+              "explanation": "The limits of the existing count support collecting additional evidence before choosing sites. They do not imply removing current stands."
+            },
+            {
+              "id": "tara-03-ct-18",
+              "type": "drawing-conclusion",
+              "stem": "Visitors to a science fair are admitted through one entrance each. Anyone using the east entrance receives a blue badge. No one receiving a blue badge is allowed to enter the laboratory. A visitor called Ren entered the laboratory. What follows?",
+              "options": {
+                "A": "Everyone avoiding the east entrance enters the laboratory.",
+                "B": "Ren received a badge of a different colour.",
+                "C": "Ren arrived before every visitor with a blue badge.",
+                "D": "Ren did not use the east entrance.",
+                "E": "The east entrance was closed when Ren arrived."
+              },
+              "answer": "D",
+              "explanation": "Laboratory access excludes a blue badge, which in turn excludes entry through the east gate. The premises require no badge of another colour."
+            },
+            {
+              "id": "tara-03-ct-19",
+              "type": "assumption",
+              "stem": "A primary school proposes a central collection point for reusable uniforms and predicts the number of uniforms thrown away by families will fall. Families can already donate garments directly to one another. Which assumption is required?",
+              "options": {
+                "A": "The school can stop families from donating directly.",
+                "B": "All donated uniforms look new.",
+                "C": "Families purchase all of their uniforms in one shop.",
+                "D": "Some uniforms that would otherwise be discarded will instead be donated and reused through the collection point, enough to produce a net fall.",
+                "E": "Each family pays the same price for new clothes."
+              },
+              "answer": "D",
+              "explanation": "Rerouting donations that already occur would not itself divert items from waste. A reduction requires a net switch away from discarding."
+            },
+            {
+              "id": "tara-03-ct-20",
+              "type": "flaw",
+              "stem": "The library increased the proportion of its spending devoted to new books this year, from 20% to 25%. A councillor concludes that it spent more pounds on new books. What is the main flaw?",
+              "options": {
+                "A": "The argument assumes books can only be bought in shops.",
+                "B": "A percentage can never be used to express how money is spent.",
+                "C": "The total budget may have fallen enough for a larger share to be worth less in pounds.",
+                "D": "It confuses the proportion of spending with the number of book titles, which it claims fell.",
+                "E": "It assumes the library has changed the price of each book."
+              },
+              "answer": "C",
+              "explanation": "A share must be multiplied by its base. For example, 25% of £800 is £200, less than 20% of £1,100."
+            },
+            {
+              "id": "tara-03-ct-21",
+              "type": "parallel-reasoning",
+              "stem": "Some stalls sell repaired appliances. All stalls selling repaired appliances must give a receipt. Therefore some stalls must give a receipt. Which argument matches?",
+              "options": {
+                "A": "Some boats carry passengers. Every boat carrying passengers must display a notice. So some boats must display a notice.",
+                "B": "No boat carrying passengers may display a notice. Some boats carry passengers, so some must display a notice.",
+                "C": "All boats carrying passengers must display a notice. This boat displays a notice. So this boat carries passengers.",
+                "D": "Some boats carry passengers. Some boats display a notice. So some passenger boats must display one.",
+                "E": "Some boats carry passengers. Every boat carrying passengers must display a notice. So every boat must display one."
+              },
+              "answer": "A",
+              "explanation": "Some members of a category are governed by a rule applying to every member with a given feature. Hence at least those members are subject to the requirement."
+            },
+            {
+              "id": "tara-03-ct-22",
+              "type": "principle",
+              "stem": "A review board should correct a factual error in a published report just as prominently as it publicised the error. Otherwise people who relied on the original are unlikely to encounter the correction. Which case follows the same principle?",
+              "options": {
+                "A": "A cinema announces a price rise on a site it has never used before.",
+                "B": "A newspaper silently fixes a typo in a draft not yet published.",
+                "C": "A bus operator puts a corrected fare on the same front-page notice that announced the wrong fare.",
+                "D": "A sports club puts new fixtures on its noticeboard for the first time.",
+                "E": "A museum displays a visitor's comment without editing it."
+              },
+              "answer": "C",
+              "explanation": "The same audience that saw the mistake should have a comparable chance to see the correction. New announcements and private draft edits do not address that obligation."
+            }
+          ]
+        },
+        {
+          "id": "tara-03-ps",
+          "type": "problem-solving",
+          "title": "Problem Solving",
+          "durationMinutes": 40,
+          "marksPerCorrectAnswer": 1,
+          "marksPerIncorrectAnswer": 0,
+          "questions": [
+            {
+              "id": "tara-03-ps-01",
+              "type": "relevant-selection",
+              "stem": "A charity shop reports 240 donations on Monday, 180 on Tuesday and 210 on Wednesday. The numbers of damaged donations were 24, 27 and 21 respectively. Only usable donations count toward a target of 370 for Monday and Tuesday combined. By how many donations was the target exceeded or missed?",
+              "options": {
+                "A": "Missed by 1",
+                "B": "Exceeded by 9",
+                "C": "Missed by 11",
+                "D": "Exceeded by 1",
+                "E": "Exceeded by 188"
+              },
+              "answer": "A",
+              "explanation": "Monday and Tuesday produced 216 and 153 usable donations, respectively. Together that is 369. Wednesday is outside the target period."
+            },
+            {
+              "id": "tara-03-ps-02",
+              "type": "finding-procedures",
+              "stem": "A keypad code has three distinct digits taken from 1, 2, 3, 4 and 5. The second digit is twice the first, and the sum of all three digits is 11. What is the code?",
+              "options": {
+                "A": "245",
+                "B": "425",
+                "C": "235",
+                "D": "244",
+                "E": "128"
+              },
+              "answer": "A",
+              "explanation": "The first digit is 1 or 2. Starting 1,2 would require 8, outside the permitted set. Starting 2,4 requires 5, giving 245."
+            },
+            {
+              "id": "tara-03-ps-03",
+              "type": "identifying-similarity",
+              "stem": "Six log entries have the following status pattern: late, on time, on time, late, unrecorded, on time. A device replaces each of those three statuses with a different number. Which output could be the result?",
+              "options": {
+                "A": "4, 7, 4, 7, 2, 7",
+                "B": "4, 7, 7, 4, 4, 7",
+                "C": "4, 7, 7, 2, 4, 7",
+                "D": "4, 7, 7, 4, 2, 7",
+                "E": "4, 7, 7, 4, 2, 4"
+              },
+              "answer": "D",
+              "explanation": "Positions 1 and 4 must match; 2, 3 and 6 must match each other; 5 needs a third value."
+            },
+            {
+              "id": "tara-03-ps-04",
+              "type": "relevant-selection",
+              "stem": "A warehouse order states 26 cartons of regular tiles and 18 of large tiles. Regular cartons contain 12 tiles each and large cartons contain 8. Four regular cartons were damaged and rejected unopened, and nine loose large tiles were also returned from the remaining delivery. How many tiles were kept?",
+              "options": {
+                "A": "351",
+                "B": "399",
+                "C": "495",
+                "D": "408",
+                "E": "447"
+              },
+              "answer": "B",
+              "explanation": "The sound regular cartons contribute 22 × 12 = 264 tiles. The large cartons contribute 18 × 8 − 9 = 135. Total kept: 399."
+            },
+            {
+              "id": "tara-03-ps-05",
+              "type": "finding-procedures",
+              "stem": "A tram departs Central every 12 minutes from 08:00 onward. An express bus departs Central every 18 minutes from 08:06 onward. When do they next depart together after 08:30?",
+              "options": {
+                "A": "08:36",
+                "B": "08:54",
+                "C": "08:42",
+                "D": "08:48",
+                "E": "09:00"
+              },
+              "answer": "E",
+              "explanation": "The 08:24 departures coincide. Subsequent coincidences are 36 minutes apart, so the next after 08:30 is 09:00."
+            },
+            {
+              "id": "tara-03-ps-06",
+              "type": "relevant-selection",
+              "stem": "A café records transactions and sales: morning 30 transactions, £120; midday 50 transactions, £250; afternoon 20 transactions, £130. The same café made £420 in 100 transactions yesterday. What was today's average sale per transaction?",
+              "options": {
+                "A": "£4.20",
+                "B": "£5.17",
+                "C": "£6.50",
+                "D": "£5",
+                "E": "£5.50"
+              },
+              "answer": "D",
+              "explanation": "Today has £500 in sales and 100 transactions. Divide those totals rather than averaging the three session means."
+            },
+            {
+              "id": "tara-03-ps-07",
+              "type": "finding-procedures",
+              "stem": "A path passes round a rectangular green, 21 m by 15 m. The green is enclosed by fencing on all four sides except for a 3 m opening for a gate and a separate 2 m opening for a path. Fencing is sold in 4 m rolls and may be cut. Offcuts may be reused. How many rolls are needed?",
+              "options": {
+                "A": "17",
+                "B": "16",
+                "C": "18",
+                "D": "19",
+                "E": "20"
+              },
+              "answer": "A",
+              "explanation": "Perimeter is 72 m. Removing both openings leaves 67 m; sixteen rolls give 64 m and seventeen give 68 m."
+            },
+            {
+              "id": "tara-03-ps-08",
+              "type": "identifying-similarity",
+              "stem": "A chart shows the cumulative number of people through a gate at 09:00, 09:15, 09:30 and 09:45: 0, 12, 30, 38. Which chart has the same ranking of arrivals in the three intervals, from busiest to quietest, with no ties?",
+              "options": {
+                "A": "0, 6, 20, 29",
+                "B": "0, 9, 18, 27",
+                "C": "0, 14, 23, 29",
+                "D": "0, 9, 15, 29",
+                "E": "0, 9, 23, 29"
+              },
+              "answer": "E",
+              "explanation": "Arrivals are 12, 18 and 8, so interval 2 is busiest, then 1, then 3. Only 9, 14 and 6 preserve that order."
+            },
+            {
+              "id": "tara-03-ps-09",
+              "type": "finding-procedures",
+              "stem": "An indoor climbing centre offers a pass that costs £36 and reduces the price of each visit from £11 to £7. A different pass costs £60 and makes each visit £5. For 14 visits, how much less does the cheapest option cost than the most expensive option?",
+              "options": {
+                "A": "£26",
+                "B": "£30",
+                "C": "£22",
+                "D": "£24",
+                "E": "£20"
+              },
+              "answer": "D",
+              "explanation": "Fourteen visits cost £154 without a pass, £134 with the £36 pass and £130 with the £60 pass. The difference between £154 and £130 is £24."
+            },
+            {
+              "id": "tara-03-ps-10",
+              "type": "relevant-selection",
+              "stem": "A walking map gives all route lengths: car park to mill 650 m; mill to wood 1.1 km; mill to pond 0.8 km; wood to pond 450 m; pond to car park 900 m. A walk goes car park → mill → wood → pond → car park. What is its length?",
+              "options": {
+                "A": "3.90 km",
+                "B": "3.45 km",
+                "C": "2.80 km",
+                "D": "2.65 km",
+                "E": "3.10 km"
+              },
+              "answer": "E",
+              "explanation": "Follow the stated route; do not use the direct mill-to-pond leg. In metres the sum is 650 + 1,100 + 450 + 900 = 3,100."
+            },
+            {
+              "id": "tara-03-ps-11",
+              "type": "finding-procedures",
+              "stem": "A rectangular rain tank has base dimensions 80 cm by 50 cm and is 60 cm tall. It starts with water 8 cm deep. It receives 120 litres, with no leaks. One litre occupies 1,000 cm³. How deep is the water then?",
+              "options": {
+                "A": "32 cm",
+                "B": "38 cm",
+                "C": "30 cm",
+                "D": "48 cm",
+                "E": "40 cm"
+              },
+              "answer": "B",
+              "explanation": "Base area is 4,000 cm². The extra 120,000 cm³ adds 30 cm, taking the depth to 38 cm, below the rim."
+            },
+            {
+              "id": "tara-03-ps-12",
+              "type": "identifying-similarity",
+              "stem": "Four stops A, B, C and D have direct two-way links A–B, A–C, A–D and B–C. Which other set of four stops has the same pattern of direct connections if names may change?",
+              "options": {
+                "A": "W–X, W–Y and X–Y",
+                "B": "W–X, X–Y, Y–Z and Z–W",
+                "C": "W–X, W–Y and W–Z",
+                "D": "W–X, W–Y, X–Y, Y–Z and W–Z",
+                "E": "W–X, W–Y, W–Z and X–Z"
+              },
+              "answer": "E",
+              "explanation": "The pattern is a triangle plus a fourth stop attached to exactly one corner of it. Only W–X–Z gives a triangle with an extra link from W to Y."
+            },
+            {
+              "id": "tara-03-ps-13",
+              "type": "relevant-selection",
+              "stem": "A recycling report gives bins collected and bins rejected respectively: glass (95, 8), card (110, 19), metal (60, 6), plastic (115, 23), food (105, 11). Which category had the second-highest acceptance rate?",
+              "options": {
+                "A": "Food",
+                "B": "Card",
+                "C": "Metal",
+                "D": "Glass",
+                "E": "Plastic"
+              },
+              "answer": "C",
+              "explanation": "Compare rejection fractions to rank acceptance: glass 8/95 is below 10%, metal is 10%, and food 11/105 plus card and plastic are above 10%. Metal is second."
+            },
+            {
+              "id": "tara-03-ps-14",
+              "type": "finding-procedures",
+              "stem": "A coach takes 56 travellers. Each of three other vehicles takes either 6 or 14 travellers. All four vehicles are full and there are 90 travellers. How many of the other vehicles take 14?",
+              "options": {
+                "A": "It is impossible",
+                "B": "3",
+                "C": "0",
+                "D": "2",
+                "E": "1"
+              },
+              "answer": "D",
+              "explanation": "The other vehicles hold 34 travellers. Three small vehicles hold 18; each replacement with a larger one adds 8, so two must be large."
+            },
+            {
+              "id": "tara-03-ps-15",
+              "type": "relevant-selection",
+              "stem": "A depot's daily totals of orders received are 82, 67, 94 and 77 on Monday through Thursday. It dispatched 80, 71, 83 and 82 orders respectively. It started Monday with eight undispatched orders. On which evening was its backlog greatest?",
+              "options": {
+                "A": "Tuesday and Thursday tied for greatest",
+                "B": "Monday",
+                "C": "Thursday",
+                "D": "Tuesday",
+                "E": "Wednesday"
+              },
+              "answer": "E",
+              "explanation": "Start at eight, then add receipts minus dispatches each day. Evening backlogs are 10, 6, 17 and 12. Wednesday is greatest."
+            },
+            {
+              "id": "tara-03-ps-16",
+              "type": "finding-procedures",
+              "stem": "A clock that loses exactly two minutes per hour is set correctly at 10:00. Later the same day it displays 14:50. What is the actual time then?",
+              "options": {
+                "A": "15:05",
+                "B": "15:00",
+                "C": "14:58",
+                "D": "15:10",
+                "E": "14:56"
+              },
+              "answer": "B",
+              "explanation": "For every true hour its display advances 58 minutes. The displayed advance of 290 minutes is five lots of 58, so five true hours have passed."
+            },
+            {
+              "id": "tara-03-ps-17",
+              "type": "identifying-similarity",
+              "stem": "A floor-tile design uses the following two rows, left to right: row 1: red, red, blue; row 2: green, blue, green. Which design has the same pattern after a left-to-right reflection plus a consistent relabelling of the three colours?",
+              "options": {
+                "A": "Row 1: yellow, white, white; row 2: black, white, black",
+                "B": "Row 1: yellow, white, white; row 2: black, yellow, black",
+                "C": "Row 1: yellow, white, white; row 2: yellow, black, black",
+                "D": "Row 1: white, white, yellow; row 2: black, yellow, black",
+                "E": "Row 1: white, yellow, white; row 2: black, white, black"
+              },
+              "answer": "B",
+              "explanation": "Reflect each row to obtain blue, red, red and green, blue, green. Map blue to yellow, red to white and green to black."
+            },
+            {
+              "id": "tara-03-ps-18",
+              "type": "finding-procedures",
+              "stem": "A quiz awards 4 points for a correct answer and deducts 1 point for an incorrect one. A team answered all 16 questions and scored 34 points. How many answers were correct?",
+              "options": {
+                "A": "9",
+                "B": "8",
+                "C": "12",
+                "D": "10",
+                "E": "11"
+              },
+              "answer": "D",
+              "explanation": "All wrong would score −16. Each conversion to correct adds 5 points. A rise of 50 points takes ten corrections."
+            },
+            {
+              "id": "tara-03-ps-19",
+              "type": "relevant-selection",
+              "stem": "A museum counted party bookings, rather than people. On Saturday it recorded 25 solo bookings, 30 pair bookings and 12 bookings for four people. Sunday had more bookings overall. On Saturday, seven of the pair bookings were cancelled, and the rest arrived in full. How many people arrived on Saturday?",
+              "options": {
+                "A": "119",
+                "B": "133",
+                "C": "112",
+                "D": "126",
+                "E": "95"
+              },
+              "answer": "A",
+              "explanation": "Count people, not bookings: 25 + 2 × 23 + 4 × 12 = 119. Sunday's total is not needed."
+            },
+            {
+              "id": "tara-03-ps-20",
+              "type": "finding-procedures",
+              "stem": "A festival stacks chairs in rows. The first row contains 14 chairs, and each successive row contains three more than the preceding row. How many chairs are there in six rows?",
+              "options": {
+                "A": "120",
+                "B": "144",
+                "C": "132",
+                "D": "129",
+                "E": "114"
+              },
+              "answer": "D",
+              "explanation": "The first and last rows have 14 and 29. Each of the three pairs of rows equally far from the ends totals 43, giving 129."
+            },
+            {
+              "id": "tara-03-ps-21",
+              "type": "identifying-similarity",
+              "stem": "A printer shrinks a rectangular sign from 30 cm by 18 cm to 20 cm by 12 cm without changing its shape. Which other size change uses the same scale factor in both dimensions?",
+              "options": {
+                "A": "24 cm by 15 cm to 12 cm by 7.5 cm",
+                "B": "24 cm by 15 cm to 16 cm by 9 cm",
+                "C": "24 cm by 15 cm to 18 cm by 10 cm",
+                "D": "24 cm by 15 cm to 15 cm by 6 cm",
+                "E": "24 cm by 15 cm to 16 cm by 10 cm"
+              },
+              "answer": "E",
+              "explanation": "The factor is 2/3 in each dimension. Applying it to 24 and 15 gives 16 and 10."
+            },
+            {
+              "id": "tara-03-ps-22",
+              "type": "finding-procedures",
+              "stem": "A charity packs notebooks in boxes of 12 and boxes of 16. It uses exactly seven boxes, all full, with at least one box of each size. The total number of notebooks is a multiple of 10. What is the total?",
+              "options": {
+                "A": "110",
+                "B": "90",
+                "C": "96",
+                "D": "100",
+                "E": "84"
+              },
+              "answer": "D",
+              "explanation": "Seven small boxes would give 84. Changing one to a larger box adds four. The possible mixed totals are 88, 92, 96, 100, 104 and 108; only 100 is a multiple of 10."
+            }
+          ]
+        },
+        {
+          "id": "tara-03-wt",
+          "type": "writing-task",
+          "title": "Writing Task",
+          "durationMinutes": 40,
+          "answerCount": 1,
+          "wordLimit": 750,
+          "scored": false,
+          "prompts": [
+            {
+              "id": "tara-03-wt-01",
+              "type": "writing-task",
+              "statement": "A team should reward useful disagreement as much as successful agreement.",
+              "stem": "A team should reward useful disagreement as much as successful agreement.\n\nExplain what the statement means. Give a reasoned argument against it. Discuss the extent to which you agree.",
+              "planningGuidance": "Define useful disagreement independently of whether the dissenter wins. Explain the costs of rewarding obstruction, then identify when disagreement genuinely improves a decision."
+            },
+            {
+              "id": "tara-03-wt-02",
+              "type": "writing-task",
+              "statement": "The best way to learn a new skill is to teach part of it to someone else.",
+              "stem": "The best way to learn a new skill is to teach part of it to someone else.\n\nExplain what the statement means. Give a reasoned argument against it. Discuss the extent to which you agree.",
+              "planningGuidance": "Explain how teaching can expose gaps in understanding. Argue that beginners may first need reliable models or supervised practice, then judge when teaching becomes a strong learning tool."
+            },
+            {
+              "id": "tara-03-wt-03",
+              "type": "writing-task",
+              "statement": "Public institutions should fix small problems early rather than wait to make larger improvements.",
+              "stem": "Public institutions should fix small problems early rather than wait to make larger improvements.\n\nExplain what the statement means. Give a reasoned argument against it. Discuss the extent to which you agree.",
+              "planningGuidance": "Distinguish early maintenance from short-term fixes. Show when repeated minor spending could delay a durable solution, then propose a test based on uncertainty, cost and the harm of waiting."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,818 @@
+{
+  "schemaVersion": 1,
+  "exam": "TARA",
+  "title": "TARA revision guide",
+  "sections": [
+    {
+      "id": "test-format",
+      "title": "Know the test",
+      "body": [
+        "You take Critical Thinking, Problem Solving and Writing Task in that order. Each gets its own 40 minutes. Finishing early does not carry time forward, and you cannot return to an earlier module. Practise without a calculator or dictionary.",
+        "Each MCQ module contains 22 questions, each with five options and one correct answer. Correct answers earn one mark; wrong answers earn no marks but incur no penalty. UAT-UK reports Critical Thinking and Problem Solving separately on a 1.0–9.0 scale. Use the mocks’ separate raw scores out of 22 for diagnosis, not as predicted scaled scores."
+      ]
+    },
+    {
+      "id": "timing",
+      "title": "Pace yourself across 22 questions",
+      "body": [
+        "Forty minutes for 22 questions is about 1 minute 49 seconds per question, not a quota for every question. Try reaching question 11 by about minute 18 and completing a first pass by minute 35 so you have around five minutes left.",
+        "If you have read carefully but still have no usable method after roughly 90 seconds, make a provisional choice, flag the item if possible and move on. On the return pass, start with flagged items where one missing step will finish the work. Fill every blank before time expires."
+      ]
+    },
+    {
+      "id": "main-conclusion",
+      "title": "Critical Thinking: identify the main conclusion",
+      "skill": "main-conclusion",
+      "example": {
+        "stem": "“The reading room should open earlier. Students with morning placements cannot use its present hours, and an earlier start need not mean a longer shift if it closes earlier.” What is the main conclusion?",
+        "answer": "Open the reading room earlier.",
+        "explanation": "Access and shift length support the proposal; closing earlier is one possible way to implement it."
+      },
+      "body": [
+        "Ask what the writer wants you to accept, and which claims are offered in support. A concession acknowledges a drawback; an intermediate conclusion is itself used to support a further claim. The main conclusion can be at the start, middle or end.",
+        "Test your choice by placing “so” before it after the other key claims. Reject options that make a narrower recommendation absolute, or that simply repeat a striking detail."
+      ]
+    },
+    {
+      "id": "drawing-conclusion",
+      "title": "Critical Thinking: draw a conclusion",
+      "skill": "drawing-conclusion",
+      "example": {
+        "stem": "Six of eight exhibits are interactive; five are outdoors. What minimum number are both?",
+        "answer": "Three.",
+        "explanation": "At most two outdoor exhibits can be among the two non-interactive exhibits. The other three must be interactive; a larger overlap is possible."
+      },
+      "body": [
+        "Treat the stated facts as given. Unlike a main-conclusion question, the answer adds a supported inference rather than restating the passage’s final claim. For “must follow”, find a possible case where each tempting alternative fails.",
+        "Translate “only” carefully: “Only registered people may enter” means entry implies registration, not registration implies entry. Compare minimum overlap with exact overlap."
+      ]
+    },
+    {
+      "id": "assumption",
+      "title": "Critical Thinking: identify an assumption",
+      "skill": "assumption",
+      "example": {
+        "stem": "A college says it will reduce paper use by making notes downloadable, because students can now read them on screens. What does that depend on?",
+        "answer": "Enough students switch from printing to reading on screens to reduce overall paper use.",
+        "explanation": "If nobody who would have used printed notes changes behaviour, the fact that screens are available does not deliver the stated reduction."
+      },
+      "body": [
+        "Underline the conclusion and state the gap between its evidence and its claim. Negate an option exactly: “at least some do” becomes “none do”. A required assumption is one whose denial breaks the stated line of reasoning, not merely a helpful fact.",
+        "For claims about a proposed change, check who can respond to it and whether losses or substitutes cancel the claimed gain."
+      ]
+    },
+    {
+      "id": "strengthen",
+      "title": "Critical Thinking: strengthen an argument",
+      "skill": "strengthen",
+      "example": {
+        "stem": "A café argues a revised menu will reduce ordering mistakes. Would larger lettering or a controlled trial showing fewer wrong orders be the stronger evidence?",
+        "answer": "The trial showing fewer wrong orders.",
+        "explanation": "It measures the specified outcome with a comparison. Larger lettering is a possible mechanism, not proof of fewer mistakes."
+      },
+      "body": [
+        "Hold the exact conclusion fixed before testing new evidence. Strong support bears on its outcome, target group and comparison. If the claim is causal, ask whether the evidence isolates the proposed cause.",
+        "Do not confuse popularity, low cost or convenience with evidence that the change produces the result claimed."
+      ]
+    },
+    {
+      "id": "weaken",
+      "title": "Critical Thinking: weaken an argument",
+      "skill": "weaken",
+      "example": {
+        "stem": "A workshop says safety improved because accidents fell from six to four after a new sign went up. Which new fact weakens the claim that the accident rate per shift fell?",
+        "answer": "The number of shifts fell from 120 to 60.",
+        "explanation": "The rates move from 6/120 to 4/60, an increase. A lower count does not establish a lower rate."
+      },
+      "body": [
+        "Identify the step the writer must take from evidence to conclusion. New evidence can reveal an alternative cause, reverse the timing, change the denominator or show that the outcome was measured in the wrong group.",
+        "An option need not disprove the whole claim; choose the one that most undermines the intended inference. An irrelevant criticism is still irrelevant even if true."
+      ]
+    },
+    {
+      "id": "flaw",
+      "title": "Critical Thinking: detect a reasoning error",
+      "skill": "flaw",
+      "example": {
+        "stem": "“Every premium pass includes a guidebook. Sam has a guidebook, so Sam has a premium pass.” What is flawed?",
+        "answer": "The argument mistakes a sufficient condition for a necessary one.",
+        "explanation": "A premium pass guarantees a book, but a visitor could have bought one separately. The implication cannot be reversed."
+      },
+      "body": [
+        "Describe the exact invalid move, not just a broad label. Can the premises be true while the conclusion is false? Try sampling only one group, changing the total behind a percentage or giving the stated effect a second cause.",
+        "Distinguish a flaw already in the passage from additional evidence that would weaken it. An answer that misdescribes a premise is not rescued by naming a real fallacy."
+      ]
+    },
+    {
+      "id": "parallel-reasoning",
+      "title": "Critical Thinking: match reasoning patterns",
+      "skill": "parallel-reasoning",
+      "example": {
+        "stem": "“If a room is reserved, its light is on. Its light is off, so the room is not reserved.” Match this using an alarm and sensor.",
+        "answer": "If the sensor is active, the alarm sounds. The alarm is silent, so the sensor is not active.",
+        "explanation": "Both use P implies Q, not Q, therefore not P. Observing Q and concluding P would be a different pattern."
+      },
+      "body": [
+        "Strip away the topic and label the statements P, Q and R. Keep quantifiers such as “some” and “every”, and preserve direction and negation. An invalid argument can be the correct match for another invalid argument.",
+        "Compare the premises with each other and then with the conclusion; the sentences may be in a different order."
+      ]
+    },
+    {
+      "id": "principle",
+      "title": "Critical Thinking: apply a principle",
+      "skill": "principle",
+      "example": {
+        "stem": "A choir should tell singers before changing rehearsal time because they arranged travel around the old timetable. Does a clinic follow the same rule by warning patients before changing booked appointments?",
+        "answer": "Yes, if the notice lets patients adjust plans made in reliance on the published time.",
+        "explanation": "Both cases justify notice by prior reliance, rather than by a general rule that publicity is always desirable."
+      },
+      "body": [
+        "Rewrite the passage’s justification as a general if–then rule. Preserve any important condition, such as lack of consent, a prior commitment or absence of harm. Choose a different case that satisfies the rule for the same reason.",
+        "Shared subject matter is often a distractor. Test the general rule on the option without copying concrete details from the passage."
+      ]
+    },
+    {
+      "id": "relevant-selection",
+      "title": "Problem Solving: select relevant information",
+      "skill": "relevant-selection",
+      "example": {
+        "stem": "A stall has 50 adult bookings on Saturday, of which 8 cancel; 20 children are also booked. On Sunday there are 34 adult bookings. What share of the Saturday adult bookings remain?",
+        "answer": "42/50, or 84%.",
+        "explanation": "Only Saturday adult bookings matter. Subtract their cancellations and divide by their original total."
+      },
+      "body": [
+        "Read the question’s target, period and units first. For tables, mark the relevant row and column, then separate totals, subsets and exceptions. For charts, work out whether a value is cumulative, a category count or a rate before subtracting or dividing.",
+        "Combine counts before calculating a combined rate. Do not average category percentages unless the category sizes are equal."
+      ]
+    },
+    {
+      "id": "finding-procedures",
+      "title": "Problem Solving: find a procedure",
+      "skill": "finding-procedures",
+      "example": {
+        "stem": "A 12 m by 9 m lawn has a 1 m border inside each edge. How much area does the border take?",
+        "answer": "38 m².",
+        "explanation": "Subtract the interior 10 × 7 from 12 × 9. Multiplying the original perimeter by the width would count each corner twice."
+      },
+      "body": [
+        "Write an equation, running total or small state table. Use options to bound a search when convenient, but verify all constraints. For time, put everything in minutes. For packing, ask whether to round down to what fits or up to meet a minimum.",
+        "For spatial questions, sketch a labelled diagram. Area has square units and volume has cubic units; a border calculation often works by subtracting the interior."
+      ]
+    },
+    {
+      "id": "identifying-similarity",
+      "title": "Problem Solving: identify similarity",
+      "skill": "identifying-similarity",
+      "example": {
+        "stem": "Cumulative entries at three checkpoints are 5, 11, 15. Which shows the same increases: 2, 8, 12 or 2, 7, 12?",
+        "answer": "2, 8, 12.",
+        "explanation": "The original increases are 6 and 4. The first option keeps both; the second uses 5 and 5."
+      },
+      "body": [
+        "Identify what must stay the same: differences, ratios, interval ranking, positions after transformation, or relationships among parts. Compare that feature rather than absolute numbers or appearance.",
+        "For a cumulative chart compare successive differences. For a diagram, track two distinctive features through each rotation or reflection rather than guessing the whole result."
+      ]
+    },
+    {
+      "id": "writing-task",
+      "title": "Writing Task: turn the prompt into an argument",
+      "skill": "writing-task",
+      "example": {
+        "stem": "Example statement: “Local services should always give priority to people who have waited longest.” Outline a response.",
+        "answer": "Explain the case for predictable queueing; challenge “always” with an urgent building safety report; end by favouring time waited as the default, with transparent urgency exceptions.",
+        "explanation": "The objection targets the absolute word “always”, rather than caricaturing fairness. The final distinction resolves a tension between equal treatment and preventing greater harm."
+      },
+      "body": [
+        "Choose one of the three prompts. You have 40 minutes and a 750-word maximum. This is not marked centrally, but your response is shared with the participating universities you applied to. The practice prompts ask you to explain the claim, make a reasoned case against it, and judge how far you agree.",
+        "Try 7 minutes to choose and plan, 28 to draft and 5 to review. Pick the statement for which you can develop a strong objection, not the one on which you have the strongest immediate opinion. Define what makes it controversial; use a concrete example for each major point. Make the final position conditional if the strength of the case varies with the circumstances."
+      ]
+    },
+    {
+      "id": "revision-cycle",
+      "title": "A revision routine you can repeat",
+      "body": [
+        "Start by reading the official specification and Question Guide. Try the Pearson specimen modules for the on-screen experience. Then take Mock 1 under timed conditions. Record a raw score for each MCQ module and tag misses as interpretation, method, arithmetic, reasoning or timing. Also tag correct guesses.",
+        "Drill your weakest two skills with the worked examples and selected legacy TSA or BMAT Section 1 items. Attempt those questions before opening the matching answer key; try the TSA 2020 Explained Answers for additional reasoning practice. Legacy papers are not full TARA simulations.",
+        "Before Mock 2, redo missed questions untimed without looking at the solutions. Use Mock 3 and the remaining official Pearson practice modules on different days as dress rehearsals. For each essay, check that all three parts are answered, the objection is developed, the judgement is specific, and the response is within 750 words."
+      ]
+    }
+  ],
+  "officialResources": [
+    {
+      "title": "TARA overview",
+      "url": "https://esat-tmua.ac.uk/about-the-tests/tara/",
+      "description": "Check the format, test-day rules and scoring.",
+      "group": "current",
+      "httpStatus": 200
+    },
+    {
+      "title": "Official course list",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/04/01172717/Course_List_2027_Entry_Final.pdf",
+      "description": "Check the entry year on the document and verify your chosen course’s requirements.",
+      "group": "current",
+      "httpStatus": 200
+    },
+    {
+      "title": "UAT-UK Prepare",
+      "url": "https://esat-tmua.ac.uk/prepare/",
+      "description": "Start here for official preparation guidance.",
+      "group": "current",
+      "httpStatus": 200
+    },
+    {
+      "title": "TARA Specification",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/08142350/TARA_Content_Specification.pdf",
+      "description": "Consult the official skills, format and examples.",
+      "group": "current",
+      "httpStatus": 200
+    },
+    {
+      "title": "TARA Question Guide",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/08142344/TARA_Question_Guide.pdf",
+      "description": "Study the official worked examples and explanations.",
+      "group": "current",
+      "httpStatus": 200
+    },
+    {
+      "title": "UAT-UK TARA preparation archive",
+      "url": "https://esat-tmua.ac.uk/tara-preparation-materials/",
+      "description": "Legacy BMAT and TSA practice, not current TARA papers.",
+      "group": "current",
+      "httpStatus": 200
+    },
+    {
+      "title": "2003 BMAT Section 1 Question Paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104328/BMAT-2003-Section-1-Question-Paper.pdf",
+      "description": "Use to drill transferable reasoning skills; do not treat it as a TARA-length paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2003 BMAT Section 1 Answer Key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104327/BMAT-2003-Section-1-Answer-Key.pdf",
+      "description": "Mark the matching legacy paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2004 BMAT Section 1 Question Paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104330/BMAT-2004-Section-1-Question-Paper.pdf",
+      "description": "Use to drill transferable reasoning skills; do not treat it as a TARA-length paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2004 BMAT Section 1 Answer Key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104329/BMAT-2004-Section-1-Answer-Key.pdf",
+      "description": "Mark the matching legacy paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2005 BMAT Section 1 Question Paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104332/BMAT-2005-Section-1-Question-Paper.pdf",
+      "description": "Use to drill transferable reasoning skills; do not treat it as a TARA-length paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2005 BMAT Section 1 Answer Key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104331/BMAT-2005-Section-1-Answer-Key.pdf",
+      "description": "Mark the matching legacy paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2006 BMAT Section 1 Question Paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104335/BMAT-2006-Section-1-Question-Paper.pdf",
+      "description": "Use to drill transferable reasoning skills; do not treat it as a TARA-length paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2006 BMAT Section 1 Answer Key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104333/BMAT-2006-Section-1-Answer-Key.pdf",
+      "description": "Mark the matching legacy paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2007 BMAT Section 1 Question Paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104337/BMAT-2007-Section-1-Question-Paper.pdf",
+      "description": "Use to drill transferable reasoning skills; do not treat it as a TARA-length paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2007 BMAT Section 1 Answer Key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104336/BMAT-2007-Section-1-Answer-Key.pdf",
+      "description": "Mark the matching legacy paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2008 BMAT Section 1 Question Paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104340/BMAT-2008-Section-1-Question-Paper.pdf",
+      "description": "Use to drill transferable reasoning skills; do not treat it as a TARA-length paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2008 BMAT Section 1 Answer Key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104338/BMAT-2008-Section-1-Answer-Key.pdf",
+      "description": "Mark the matching legacy paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2009 BMAT Section 1 Question Paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104342/BMAT-2009-Section-1-Question-Paper.pdf",
+      "description": "Use to drill transferable reasoning skills; do not treat it as a TARA-length paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2009 BMAT Section 1 Answer Key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104341/BMAT-2009-Section-1-Answer-Key.pdf",
+      "description": "Mark the matching legacy paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2010 BMAT Section 1 Question Paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104346/BMAT-2010-Section-1-Question-Paper.pdf",
+      "description": "Use to drill transferable reasoning skills; do not treat it as a TARA-length paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2010 BMAT Section 1 Answer Key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104343/BMAT-2010-Section-1-Answer-Key.pdf",
+      "description": "Mark the matching legacy paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2011 BMAT Section 1 Question Paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104349/BMAT-2011-Section-1-Question-Paper.pdf",
+      "description": "Use to drill transferable reasoning skills; do not treat it as a TARA-length paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2011 BMAT Section 1 Answer Key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104347/BMAT-2011-Section-1-Answer-Key.pdf",
+      "description": "Mark the matching legacy paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2012 BMAT Section 1 Question Paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104352/BMAT-2012-Section-1-Question-Paper.pdf",
+      "description": "Use to drill transferable reasoning skills; do not treat it as a TARA-length paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2012 BMAT Section 1 Answer Key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104350/BMAT-2012-Section-1-Answer-Key.pdf",
+      "description": "Mark the matching legacy paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2013 BMAT Section 1 Question Paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104355/BMAT-2013-Section-1-Question-Paper.pdf",
+      "description": "Use to drill transferable reasoning skills; do not treat it as a TARA-length paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2013 BMAT Section 1 Answer Key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104353/BMAT-2013-Section-1-Answer-Key.pdf",
+      "description": "Mark the matching legacy paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2014 BMAT Section 1 Question Paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104358/BMAT-2014-Section-1-Question-Paper.pdf",
+      "description": "Use to drill transferable reasoning skills; do not treat it as a TARA-length paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2014 BMAT Section 1 Answer Key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104356/BMAT-2014-Section-1-Answer-Key.pdf",
+      "description": "Mark the matching legacy paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2015 BMAT Section 1 Question Paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104400/BMAT-2015-Section-1-Question-Paper.pdf",
+      "description": "Use to drill transferable reasoning skills; do not treat it as a TARA-length paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2015 BMAT Section 1 Answer Key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104359/BMAT-2015-Section-1-Answer-Key.pdf",
+      "description": "Mark the matching legacy paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2016 BMAT Section 1 Question Paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104405/BMAT-2016-Section-1-Question-Paper.pdf",
+      "description": "Use to drill transferable reasoning skills; do not treat it as a TARA-length paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2016 BMAT Section 1 Answer Key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104402/BMAT-2016-Section-1-Answer-Key.pdf",
+      "description": "Mark the matching legacy paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2017 BMAT Section 1 Question Paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104407/BMAT-2017-Section-1-Question-Paper.pdf",
+      "description": "Use to drill transferable reasoning skills; do not treat it as a TARA-length paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2017 BMAT Section 1 Answer Key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104406/BMAT-2017-Section-1-Answer-Key.pdf",
+      "description": "Mark the matching legacy paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2018 BMAT Section 1 Question Paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104301/BMAT-2018-Section-1-Question-Paper.pdf",
+      "description": "Use to drill transferable reasoning skills; do not treat it as a TARA-length paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2018 BMAT Section 1 Answer Key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104259/BMAT-2018-Section-1-Answer-Key.pdf",
+      "description": "Mark the matching legacy paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2019 BMAT Section 1 Question Paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104306/BMAT-2019-Section-1-Question-Paper.pdf",
+      "description": "Use to drill transferable reasoning skills; do not treat it as a TARA-length paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2019 BMAT Section 1 Answer Key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104303/BMAT-2019-Section-1-Answer-Key.pdf",
+      "description": "Mark the matching legacy paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2020 BMAT Section 1 Question Paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104312/BMAT-2020-Section-1-Question-Paper.pdf",
+      "description": "Use to drill transferable reasoning skills; do not treat it as a TARA-length paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2020 BMAT Section 1 Answer Key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104308/BMAT-2020-Section-1-Answer-Key.pdf",
+      "description": "Mark the matching legacy paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2021 BMAT Section 1 Question Paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104316/BMAT-2021-Section-1-Question-Paper.pdf",
+      "description": "Use to drill transferable reasoning skills; do not treat it as a TARA-length paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2021 BMAT Section 1 Answer Key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104313/BMAT-2021-Section-1-Answer-Key.pdf",
+      "description": "Mark the matching legacy paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2022 BMAT Section 1 Question Paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104321/BMAT-2022-Section-1-Question-Paper.pdf",
+      "description": "Use to drill transferable reasoning skills; do not treat it as a TARA-length paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2022 BMAT Section 1 Answer Key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104317/BMAT-2022-Section-1-Answer-Key.pdf",
+      "description": "Mark the matching legacy paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2023 BMAT Section 1 Question Paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104326/BMAT-2023-Section-1-Question-Paper.pdf",
+      "description": "Use to drill transferable reasoning skills; do not treat it as a TARA-length paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2023 BMAT Section 1 Answer Key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104323/BMAT-2023-Section-1-Answer-Key.pdf",
+      "description": "Mark the matching legacy paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2008 TSA Section 1 Question Paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01172310/TSA-2008-Section-1-Question-Paper.pdf",
+      "description": "Use to drill transferable reasoning skills; do not treat it as a TARA-length paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2008 TSA Section 1 Answer Key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01172307/TSA-2008-Section-1-Answer-Key.pdf",
+      "description": "Mark the matching legacy paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2009 TSA Section 1 Question Paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01172315/TSA-2009-Section-1-Question-Paper.pdf",
+      "description": "Use to drill transferable reasoning skills; do not treat it as a TARA-length paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2009 TSA Section 1 Answer Key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01172311/TSA-2009-Section-1-Answer-Key.pdf",
+      "description": "Mark the matching legacy paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2010 TSA Section 1 Question Paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01172318/TSA-2010-Section-1-Question-Paper.pdf",
+      "description": "Use to drill transferable reasoning skills; do not treat it as a TARA-length paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2010 TSA Section 1 Answer Key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01172317/TSA-2010-Section-1-Answer-Key.pdf",
+      "description": "Mark the matching legacy paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2011 TSA Section 1 Question Paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01172322/TSA-2011-Section-1-Question-Paper.pdf",
+      "description": "Use to drill transferable reasoning skills; do not treat it as a TARA-length paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2011 TSA Section 1 Answer Key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01172320/TSA-2011-Section-1-Answer-Key.pdf",
+      "description": "Mark the matching legacy paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2012 TSA Section 1 Question Paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01172326/TSA-2012-Section-1-Question-Paper.pdf",
+      "description": "Use to drill transferable reasoning skills; do not treat it as a TARA-length paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2012 TSA Section 1 Answer Key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01172323/TSA-2012-Section-1-Answer-Key.pdf",
+      "description": "Mark the matching legacy paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2013 TSA Section 1 Question Paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01172331/TSA-2013-Section-1-Question-Paper.pdf",
+      "description": "Use to drill transferable reasoning skills; do not treat it as a TARA-length paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2013 TSA Section 1 Answer Key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01172328/TSA-2013-Section-1-Answer-Key.pdf",
+      "description": "Mark the matching legacy paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2014 TSA Section 1 Question Paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01172341/TSA-2014-Section-1-Question-Paper.pdf",
+      "description": "Use to drill transferable reasoning skills; do not treat it as a TARA-length paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2014 TSA Section 1 Answer Key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01172333/TSA-2014-Section-1-Answer-Key.pdf",
+      "description": "Mark the matching legacy paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2015 TSA Section 1 Question Paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01154311/TSA-2015-Section-1-Question-Paper.pdf",
+      "description": "Use to drill transferable reasoning skills; do not treat it as a TARA-length paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2015 TSA Section 1 Answer Key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01154305/TSA-2015-Section-1-Answer-Key.pdf",
+      "description": "Mark the matching legacy paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2016 TSA Section 1 Question Paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01154322/TSA-2016-Section-1-Question-Paper.pdf",
+      "description": "Use to drill transferable reasoning skills; do not treat it as a TARA-length paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2016 TSA Section 1 Answer Key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01154313/TSA-2016-Section-1-Answer-Key.pdf",
+      "description": "Mark the matching legacy paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2017 TSA Section 1 Question Paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01154327/TSA-2017-Section-1-Question-Paper.pdf",
+      "description": "Use to drill transferable reasoning skills; do not treat it as a TARA-length paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2017 TSA Section 1 Answer Key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01154324/TSA-2017-Section-1-Answer-Key.pdf",
+      "description": "Mark the matching legacy paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2018 TSA Section 1 Question Paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01154334/TSA-2018-Section-1-Question-Paper.pdf",
+      "description": "Use to drill transferable reasoning skills; do not treat it as a TARA-length paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2018 TSA Section 1 Answer Key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01154329/TSA-2018-Section-1-Answer-Key.pdf",
+      "description": "Mark the matching legacy paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2019 TSA Section 1 Question Paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01154343/TSA-2019-Section-1-Question-Paper.pdf",
+      "description": "Use to drill transferable reasoning skills; do not treat it as a TARA-length paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2019 TSA Section 1 Answer Key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01154336/TSA-2019-Section-1-Answer-Key.pdf",
+      "description": "Mark the matching legacy paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2020 TSA Section 1 Question Paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01154218/TSA-2020-Section-1-Question-Paper.pdf",
+      "description": "Use to drill transferable reasoning skills; do not treat it as a TARA-length paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2020 TSA Section 1 Explained Answers",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01154212/TSA-2020-Section-1-Explained-Answers.pdf",
+      "description": "Review the reasoning after attempting the matching legacy paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2020 TSA Section 1 Answer Key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01154203/TSA-2020-Section-1-Answer-Key.pdf",
+      "description": "Mark the matching legacy paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2021 TSA Section 1 Question Paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01154225/TSA-2021-Section-1-Question-Paper.pdf",
+      "description": "Use to drill transferable reasoning skills; do not treat it as a TARA-length paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2021 TSA Section 1 Answer Key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01154220/TSA-2021-Section-1-Answer-Key.pdf",
+      "description": "Mark the matching legacy paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2022 TSA Section 1 Question Paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01154234/TSA-2022-Section-1-Question-Paper.pdf",
+      "description": "Use to drill transferable reasoning skills; do not treat it as a TARA-length paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2022 TSA Section 1 Answer Key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01154228/TSA-2022-Section-1-Answer-Key.pdf",
+      "description": "Mark the matching legacy paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2023 TSA Section 1 Question Paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01154243/TSA-2023-Section-1-Question-Paper.pdf",
+      "description": "Use to drill transferable reasoning skills; do not treat it as a TARA-length paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "2023 TSA Section 1 Answer Key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01154237/TSA-2023-Section-1-Answer-Key.pdf",
+      "description": "Mark the matching legacy paper.",
+      "group": "legacy",
+      "httpStatus": 200
+    },
+    {
+      "title": "Pearson VUE UAT-UK hub",
+      "url": "https://www.pearsonvue.com/us/en/uatuk.html",
+      "description": "Launch official specimen and practice modules and check the test interface.",
+      "group": "current",
+      "httpStatus": 200
+    },
+    {
+      "title": "TARA Critical Thinking — specimen",
+      "url": "https://www.pearsonvue.com/us/en/redirects/uatuk/tara-ct-s.html",
+      "description": "Run this official module in the Pearson test interface.",
+      "group": "current",
+      "httpStatus": 200
+    },
+    {
+      "title": "TARA Problem Solving — specimen",
+      "url": "https://www.pearsonvue.com/us/en/redirects/uatuk/tara-ps-s.html",
+      "description": "Run this official module in the Pearson test interface.",
+      "group": "current",
+      "httpStatus": 200
+    },
+    {
+      "title": "TARA Writing Task — specimen",
+      "url": "https://www.pearsonvue.com/us/en/redirects/uatuk/tara-wt-s.html",
+      "description": "Run this official module in the Pearson test interface.",
+      "group": "current",
+      "httpStatus": 200
+    },
+    {
+      "title": "TARA Critical Thinking — practice",
+      "url": "https://www.pearsonvue.com/us/en/redirects/uatuk/tara-ct-p.html",
+      "description": "Run this official module in the Pearson test interface.",
+      "group": "current",
+      "httpStatus": 200
+    },
+    {
+      "title": "TARA Problem Solving — practice",
+      "url": "https://www.pearsonvue.com/us/en/redirects/uatuk/tara-ps-p.html",
+      "description": "Run this official module in the Pearson test interface.",
+      "group": "current",
+      "httpStatus": 200
+    },
+    {
+      "title": "TARA Writing — practice",
+      "url": "https://www.pearsonvue.com/us/en/redirects/uatuk/tara-wt-p.html",
+      "description": "Run this official module in the Pearson test interface.",
+      "group": "current",
+      "httpStatus": 200
+    }
+  ]
+}
