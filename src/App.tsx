@@ -17,6 +17,7 @@ import { PracticeHub } from './components/PracticeHub';
 import { ExamSimulator } from './components/ExamSimulator';
 import { ResultsView } from './components/ResultsView';
 import { EssayStudio } from './components/EssayStudio';
+import { LnatRevisionLab } from './components/LnatRevisionLab';
 import { ProgressView } from './components/ProgressView';
 import {
   GenericAttempt,
@@ -42,7 +43,7 @@ export const App: React.FC = () => {
   const [onWelcome, setOnWelcome] = useState(true);
   const [activeTest, setActiveTest] = useState<TestId>('lnat');
   const [subTab, setSubTab] = useState<SubTab>('practice');
-  const [lnatSection, setLnatSection] = useState<'A' | 'B'>('A');
+  const [lnatSection, setLnatSection] = useState<'A' | 'B' | 'lab'>('A');
 
   const [theme, setTheme] = useState<'light' | 'dark'>(() => getInitialTheme());
   const [activeExam, setActiveExam] = useState<ActiveExamConfig | null>(null);
@@ -90,7 +91,7 @@ export const App: React.FC = () => {
       mode: 'diagnostic',
       label: 'LNAT Diagnostic (8 Qs)',
       timeLimitSeconds: 15 * 60,
-      passageIds: PASSAGES.filter((p) => p.freeTier).map((p) => p.id),
+      passageIds: PASSAGES.slice(0, 2).map((p) => p.id),
     });
   };
 
@@ -99,6 +100,15 @@ export const App: React.FC = () => {
       mode: 'mock',
       label: '6-Passage Half-Mock (22 Qs)',
       timeLimitSeconds: 48 * 60,
+      passageIds: PASSAGES.slice(0, 6).map((p) => p.id),
+    });
+  };
+
+  const handleStartFullMock = () => {
+    handleStartExam({
+      mode: 'mock',
+      label: 'Full 12-Passage LNAT Mock (42 Qs)',
+      timeLimitSeconds: 95 * 60,
       passageIds: PASSAGES.map((p) => p.id),
     });
   };
@@ -254,6 +264,17 @@ export const App: React.FC = () => {
               >
                 Section B
               </button>
+              <button
+                type="button"
+                onClick={() => setLnatSection('lab')}
+                className={`px-2.5 py-1 border cursor-pointer transition-colors ${
+                  lnatSection === 'lab'
+                    ? 'border-[var(--accent)] text-[var(--accent)]'
+                    : 'border-transparent text-[var(--text-muted)] hover:text-[var(--ink)]'
+                }`}
+              >
+                Revision Lab
+              </button>
             </div>
           )}
         </div>
@@ -273,6 +294,7 @@ export const App: React.FC = () => {
                 attempts={attempts}
                 onStartDiagnostic={handleStartDiagnostic}
                 onStartHalfMock={handleStartHalfMock}
+                onStartFullMock={handleStartFullMock}
                 onStartPassage={handleStartPassage}
                 onStartSkill={handleStartSkill}
               />
@@ -280,6 +302,7 @@ export const App: React.FC = () => {
             {subTab === 'practice' && lnatSection === 'B' && (
               <EssayStudio savedEssays={essays} onSaveEssay={handleSaveEssay} />
             )}
+            {subTab === 'practice' && lnatSection === 'lab' && <LnatRevisionLab />}
             {subTab === 'resources' && (
               <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10">
                 <OfficialResourcesPanel test={TEST_BY_ID.lnat} />

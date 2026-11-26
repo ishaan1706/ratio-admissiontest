@@ -1,6 +1,7 @@
 import { LnatPassage } from '../types';
+import { EXTRA_PASSAGES } from './passagesExtra';
 
-export const PASSAGES: LnatPassage[] = [
+const CORE_PASSAGES: LnatPassage[] = [
   {
     id: 'p1-algorithmic-sentencing',
     title: 'The Illusion of Mechanical Mercy',
@@ -934,5 +935,7 @@ export const PASSAGES: LnatPassage[] = [
     ]
   }
 ];
+
+export const PASSAGES: LnatPassage[] = [...CORE_PASSAGES, ...EXTRA_PASSAGES];
 
 export const ALL_QUESTIONS = PASSAGES.flatMap((p) => p.questions);

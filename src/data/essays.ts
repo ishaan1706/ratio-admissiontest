@@ -267,6 +267,184 @@ export const ESSAY_SETS: EssaySet[] = [
         }
       }
     ]
+  },
+  {
+    id: 'set-4',
+    title: 'Paper Set IV · Constitutional Power, Privacy & Speech',
+    subtitle: 'Choose 1 of 3 prompts · 40 minutes · Target 500–750 words',
+    freeTier: true,
+    prompts: [
+      {
+        id: 'e4-1',
+        theme: 'Constitutional Law',
+        question: 'Should the United Kingdom adopt a codified, entrenched constitution?',
+        planningHints: [
+          'Contrast the flexibility and parliamentary accountability of the UK’s uncodified constitution with the clarity and rights-protection of a codified text.',
+          'Examine who gains power under codification: does entrenching rights shift contentious political choices from Parliament to unelected judges?',
+          'Distinguish between codifying existing conventions (greater transparency) and making them judicially supreme over Parliament.'
+        ],
+        counterArguments: [
+          'Uncodified conventions rely on "good chaps" norms that break down under polarised politics.',
+          'Entrenched constitutions can become outdated and extraordinarily difficult to amend (e.g. US Second Amendment).'
+        ],
+        modelOutline: {
+          thesis:
+            'The United Kingdom should consolidate its core constitutional statutes and conventions into a clearer written framework, but should stop short of granting courts American-style power to strike down Acts of Parliament.',
+          points: [
+            'Recent constitutional clashes over prorogation and devolution exposed how fragile unwritten conventions are when executive restraint weakens.',
+            'Yet full judicial supremacy carries a democratic cost, turning moral and social debates into permanent litigation over centuries-old wording.',
+            'A "soft codification"—setting out executive limits, devolution guarantees, and supermajority rules for constitutional statutes—captures clarity without abandoning parliamentary democracy.'
+          ],
+          counterRebuttal:
+            'Proponents of full entrenchment argue that without judicial strike-down, a determined majority can still erode minority rights. Requiring supermajorities or referendum locks for designated constitutional statutes offers a democratic brake without transferring sovereignty to the courts.',
+          sampleOpening:
+            'Defenders of Britain’s uncodified constitution have long praised its adaptability, yet adaptability looks suspiciously like ambiguity whenever a government tests the outer edges of its power. The real choice is not between unwritten drift and American-style judicial supremacy, but whether Parliament can bind its own procedures clearly enough to protect citizens without surrendering democratic self-rule.'
+        }
+      },
+      {
+        id: 'e4-2',
+        theme: 'Criminal Justice & Technology',
+        question: '“Live facial recognition technology in public spaces is incompatible with a free society.” Discuss.',
+        planningHints: [
+          'Weigh targeted public-safety gains (locating wanted violent offenders or missing persons) against the chilling effect of mass biometric scanning.',
+          'Highlight the difference between suspect-led policing and treating every passer-by as a biometric subject without consent.',
+          'Consider whether strict statutory safeguards (warrants, instant deletion of non-matches, accuracy audits) can resolve the objection, or whether the surveillance architecture itself is the problem.'
+        ],
+        counterArguments: [
+          'Public streets are already covered by CCTV; facial recognition merely automates what human officers do visually.',
+          'Automating identification at scale creates a qualitative shift in state power, enabling effortless tracking of political protests.'
+        ],
+        modelOutline: {
+          thesis:
+            'Routine, warrantless deployment of live facial recognition in public streets is incompatible with a free society, though narrowly authorised, court-warranted use for serious imminent threats could be defensible under strict statutory limits.',
+          points: [
+            'Freedom in public spaces depends on practical anonymity; indiscriminate biometric scanning chills lawful protest and association.',
+            'Empirical error disparities across demographic groups compound the risk of wrongful stops and erosion of policing by consent.',
+            'Unlike passive CCTV reviewed after a crime, live biometric screening reverses the presumption of innocence by checking every citizen in real time.'
+          ],
+          counterRebuttal:
+            'Supporters argue that instant deletion of non-matching scans removes privacy harm. Even with deletion, however, the state still exercises real-time biometric checkpoint power over lawful citizens without reasonable suspicion.',
+          sampleOpening:
+            'A free society does not guarantee invisibility on a crowded high street, yet it has always depended on practical anonymity—the freedom to walk to a clinic, a meeting, or a demonstration without presenting papers to the state. Live facial recognition quietly abolishes that boundary by turning every passer-by’s face into a machine-readable identity card.'
+        }
+      },
+      {
+        id: 'e4-3',
+        theme: 'Media & Public Interest',
+        question: 'Should public figures retain the same legal right to privacy as private citizens?',
+        planningHints: [
+          'Define "public figure" carefully: distinguish elected officials exercising public power from celebrities, athletes, or victims thrust into the news.',
+          'Separate genuine public interest (hypocrisy, corruption, fitness for office) from what merely interests the public (gossip).',
+          'Consider the chilling effect on public service if entering politics means forfeiting all family and personal privacy.'
+        ],
+        counterArguments: [
+          'Those who voluntarily seek publicity and profit from public attention cannot complain when scrutiny turns unflattering.',
+          'Even public figures have families and inner lives unrelated to their public duties.'
+        ],
+        modelOutline: {
+          thesis:
+            'Public figures should start from the same baseline legal right to privacy as private citizens, with intrusions permitted only where disclosure serves a demonstrable public interest rather than commercial curiosity.',
+          points: [
+            'Treating fame as a blanket waiver of privacy confuses "what interests the public" with the legitimate public interest.',
+            'Where a politician’s private conduct directly contradicts their public mandate or reveals abuse of power, a public-interest defence properly overrides privacy.',
+            'Preserving baseline privacy for non-political aspects of life—especially involving children and medical records—prevents a tabloid culture that deters capable citizens from public office.'
+          ],
+          counterRebuttal:
+            'Press-freedom advocates warn that strict privacy law lets powerful people hide behind injunctions. Requiring courts to weigh press freedom and public-interest scrutiny equally against Article 8 privacy rights prevents abuse on both sides.',
+          sampleOpening:
+            'Every democracy needs a fearless press willing to expose hypocrisy in high office, yet the argument that public figures forfeit privacy altogether rests on a dangerous slide between accountability and voyeurism. The law should protect the person first and carve out narrow, principled exceptions where the public genuinely needs to know.'
+        }
+      }
+    ]
+  },
+  {
+    id: 'set-5',
+    title: 'Paper Set V · Law, Markets & Environment',
+    subtitle: 'Choose 1 of 3 prompts · 40 minutes · Target 500–750 words',
+    freeTier: true,
+    prompts: [
+      {
+        id: 'e5-1',
+        theme: 'Environmental Law & Ethics',
+        question: 'Should rivers, forests, and ecosystems be granted legal personhood with standing to sue in court?',
+        planningHints: [
+          'Explain what legal personhood actually does (corporations and ships already hold legal personality as a legal fiction to enable standing and remedies).',
+          'Evaluate the practical benefit: guardianship models (e.g. New Zealand’s Whanganui River) allow damages to fund restoration directly.',
+          'Critique the ambiguity: who decides what a river "wants", and how do courts balance ecological rights against housing, farming, or flood defence?'
+        ],
+        counterArguments: [
+          'Stronger statutory regulation and properly funded environmental agencies may be clearer and more democratically accountable than symbolic personhood.',
+          'Personhood creates enduring legal guardianship that survives shifts in short-term ministerial priorities.'
+        ],
+        modelOutline: {
+          thesis:
+            'Granting targeted legal personality and statutory guardianship to threatened ecosystems is a defensible and pragmatic legal tool, provided Parliament defines clear stewardship duties rather than leaving courts to invent ecological priorities.',
+          points: [
+            'Legal personhood is a procedural device, not a claim of consciousness; law has long granted it to companies and trusts to protect enduring interests.',
+            'Existing regulatory regimes frequently fail because enforcement depends on underfunded ministries subject to short-term political pressure.',
+            'Statutory guardians with standing to seek restoration orders ensure polluters internalise ecological damage, while clear legislative criteria prevent endless litigation.'
+          ],
+          counterRebuttal:
+            'Sceptics rightly note that a river cannot instruct counsel, inviting disputes among rival human guardians. Appointing statutorily defined local and scientific boards—as in the Whanganui River settlement—anchors representation in accountable governance.',
+          sampleOpening:
+            'The proposal to grant legal personhood to a river often attracts easy ridicule, as though lawyers expect trout to file witness statements. Yet legal personality has never required human consciousness; modern commerce rests on treating corporations as legal persons precisely so enduring interests can be represented in court.'
+        }
+      },
+      {
+        id: 'e5-2',
+        theme: 'Public Health & Liberty',
+        question: 'Is it ever justified for the state to ban legal products solely to protect adults from harming themselves?',
+        planningHints: [
+          'Start with Mill’s Harm Principle: state coercion is normally justified to prevent harm to others, not pure paternalism.',
+          'Test the boundary: in a country with publicly funded healthcare (like the NHS), is self-harm ever purely self-regarding?',
+          'Compare outright bans with softer paternalism (taxation, age limits, plain packaging, generational phase-outs).'
+        ],
+        counterArguments: [
+          'Outright prohibition often fuels illicit black markets without eliminating consumption.',
+          'Addictive products engineered to impair free choice challenge the assumption of fully autonomous adult consent.'
+        ],
+        modelOutline: {
+          thesis:
+            'Pure paternalism alone rarely justifies banning a product for consenting adults, yet bans can be defensible in narrow cases where products are deliberately engineered to create severe addiction and impose heavy third-party health costs.',
+          points: [
+            'Adult autonomy includes the right to make imprudent choices; stretching "NHS cost" arguments too far would justify banning mountaineering, sugar, and alcohol.',
+            'However, Mill’s assumption of rational autonomy breaks down where commercial products (such as high-nicotine tobacco) hook users in adolescence and impair future free choice.',
+            'Even then, proportionate measures—excise taxes, marketing bans, and regulation—should be preferred over criminalising possession, which shifts harm into unregulated black markets.'
+          ],
+          counterRebuttal:
+            'Critics argue that gradual sales bans (such as rising-age tobacco laws) still infringe adult liberty. Yet restricting commercial sale rather than criminalising users targets corporate profit from addiction while minimising coercive policing.',
+          sampleOpening:
+            'A liberal state is rightly sceptical of saving consenting adults from their own bad habits, for once public health becomes a licence to prohibit every risk, personal autonomy shrinks to whatever the government deems sensible. Yet the neat line between self-harm and harm to others blurs when an industry profits by engineering addiction.'
+        }
+      },
+      {
+        id: 'e5-3',
+        theme: 'Law & International Order',
+        question: '“International law is merely a tool of the powerful and lacks real authority.” Do you agree?',
+        planningHints: [
+          'Acknowledge the realist critique: great powers routinely ignore UN rulings or veto Security Council resolutions when vital interests clash.',
+          'Look beyond headline wars to the vast everyday architecture of international law: trade arbitration, aviation, maritime boundaries, extradition, and diplomatic immunity.',
+          'Assess why even powerful states spend enormous effort claiming their actions comply with international law.'
+        ],
+        counterArguments: [
+          'Without a global police force or compulsory supreme court, enforcement remains asymmetric and selective.',
+          'Domestic law also suffers imperfect enforcement, yet we do not conclude it has no authority.'
+        ],
+        modelOutline: {
+          thesis:
+            'While enforcement in high-stakes geopolitics is undeniably selective, dismissing international law as mere window-dressing for the powerful ignores both its near-universal daily compliance and its power to shape diplomatic legitimacy and coalitions.',
+          points: [
+            'Realist sceptics rightly point to selective enforcement and Security Council vetoes when permanent members breach the UN Charter.',
+            'Yet the vast majority of international law—governing maritime trade, aviation, treaties, and diplomatic immunity—is obeyed routinely because reciprocity benefits strong and weak states alike.',
+            'Even when powerful states violate norms, legal rulings impose real reputational, economic, and coalition-building costs that constrain future behaviour.'
+          ],
+          counterRebuttal:
+            'Critics object that law obeyed only when convenient is not true law. Yet international law operates through horizontal reciprocity, sanctions, and domestic court incorporation rather than a world sovereign—making it weaker than domestic criminal law, but far from powerless.',
+          sampleOpening:
+            'Whenever a great power defies a United Nations resolution without facing an international police force, sceptics pronounce international law dead. That verdict mistakes the loudest failures of global politics for the whole of the legal order that keeps ships moving, treaties binding, and diplomats protected every day.'
+        }
+      }
+    ]
   }
 ];
 

@@ -6,6 +6,7 @@ import { LnatPassage, LnatSkill, SectionAAttempt } from '../types';
 interface PracticeHubProps {
   onStartDiagnostic: () => void;
   onStartHalfMock: () => void;
+  onStartFullMock: () => void;
   onStartPassage: (passage: LnatPassage) => void;
   onStartSkill: (skill: LnatSkill) => void;
   attempts: SectionAAttempt[];
@@ -22,6 +23,7 @@ const SKILLS: { tag: LnatSkill; desc: string }[] = [
 export const PracticeHub: React.FC<PracticeHubProps> = ({
   onStartDiagnostic,
   onStartHalfMock,
+  onStartFullMock,
   onStartPassage,
   onStartSkill,
   attempts,
@@ -46,38 +48,38 @@ export const PracticeHub: React.FC<PracticeHubProps> = ({
         </p>
       </section>
 
-      {/* Timed Modes — Ruled 2-Column Strip */}
-      <section className="border-t border-[var(--ink)] border-b border-b-[var(--rule)] grid md:grid-cols-2">
+      {/* Timed Modes — Ruled 3-Column Strip */}
+      <section className="border-t border-[var(--ink)] border-b border-b-[var(--rule)] grid md:grid-cols-3">
         <button
           type="button"
-          onClick={onStartDiagnostic}
-          className="py-7 md:pr-8 text-left group cursor-pointer flex flex-col justify-between gap-4"
+          onClick={onStartFullMock}
+          className="py-7 md:pr-7 text-left group cursor-pointer flex flex-col justify-between gap-4"
         >
           <div>
             <div className="flex items-center justify-between">
               <span className="studio-kicker text-[var(--accent)] inline-flex items-center gap-1.5">
-                <Zap className="w-3.5 h-3.5" />
-                Free Diagnostic · 15 min
+                <Clock className="w-3.5 h-3.5" />
+                Full Mock · 95 min
               </span>
               <ArrowUpRight className="w-5 h-5 text-[var(--ink)] studio-row-arrow" />
             </div>
-            <h2 className="font-display text-3xl text-[var(--ink)] group-hover:text-[var(--accent)] transition-colors mt-2">
-              15-Minute Baseline Diagnostic
+            <h2 className="font-display text-2xl sm:text-3xl text-[var(--ink)] group-hover:text-[var(--accent)] transition-colors mt-2">
+              Full 12-Passage LNAT Mock
             </h2>
-            <p className="font-serif-passage text-sm sm:text-base text-[var(--text-muted)] mt-2 leading-relaxed">
-              2 passages, 8 questions across all five LNAT skills. Outputs a projected score out of
-              42 and a shareable UK law school readiness card.
+            <p className="font-serif-passage text-sm text-[var(--text-muted)] mt-2 leading-relaxed">
+              Exact official Pearson VUE length: 12 argumentative passages and 42 five-option MCQs
+              under 95-minute exam timing with Review Screen.
             </p>
           </div>
           <div className="studio-kicker text-[10px]">
-            Recommended first · 15:00 timer · 8 MCQs
+            Official length · 95:00 timer · 42 MCQs
           </div>
         </button>
 
         <button
           type="button"
           onClick={onStartHalfMock}
-          className="py-7 md:pl-8 border-t md:border-t-0 md:border-l border-[var(--rule)] text-left group cursor-pointer flex flex-col justify-between gap-4"
+          className="py-7 md:px-7 border-t md:border-t-0 md:border-l border-[var(--rule)] text-left group cursor-pointer flex flex-col justify-between gap-4"
         >
           <div>
             <div className="flex items-center justify-between">
@@ -87,16 +89,42 @@ export const PracticeHub: React.FC<PracticeHubProps> = ({
               </span>
               <ArrowUpRight className="w-5 h-5 text-[var(--ink)] studio-row-arrow" />
             </div>
-            <h2 className="font-display text-3xl text-[var(--ink)] group-hover:text-[var(--accent)] transition-colors mt-2">
-              Full 6-Passage Half-Mock
+            <h2 className="font-display text-2xl sm:text-3xl text-[var(--ink)] group-hover:text-[var(--accent)] transition-colors mt-2">
+              6-Passage Half-Mock
             </h2>
-            <p className="font-serif-passage text-sm sm:text-base text-[var(--text-muted)] mt-2 leading-relaxed">
-              All 6 curated passages and 22 questions under real LNAT pace (~2m 10s per question)
-              with a full Pearson-style Review Screen before scoring.
+            <p className="font-serif-passage text-sm text-[var(--text-muted)] mt-2 leading-relaxed">
+              6 passages and 22 questions at exact LNAT pace (~2m 10s per question) for mid-week
+              stamina practice.
             </p>
           </div>
           <div className="studio-kicker text-[10px]">
-            Exam endurance · 48:00 timer · 22 MCQs
+            Half sitting · 48:00 timer · 22 MCQs
+          </div>
+        </button>
+
+        <button
+          type="button"
+          onClick={onStartDiagnostic}
+          className="py-7 md:pl-7 border-t md:border-t-0 md:border-l border-[var(--rule)] text-left group cursor-pointer flex flex-col justify-between gap-4"
+        >
+          <div>
+            <div className="flex items-center justify-between">
+              <span className="studio-kicker inline-flex items-center gap-1.5">
+                <Zap className="w-3.5 h-3.5" />
+                Diagnostic · 15 min
+              </span>
+              <ArrowUpRight className="w-5 h-5 text-[var(--ink)] studio-row-arrow" />
+            </div>
+            <h2 className="font-display text-2xl sm:text-3xl text-[var(--ink)] group-hover:text-[var(--accent)] transition-colors mt-2">
+              Baseline Diagnostic
+            </h2>
+            <p className="font-serif-passage text-sm text-[var(--text-muted)] mt-2 leading-relaxed">
+              2 passages, 8 questions across all five LNAT skills with a projected /42 score and UK
+              law school readiness card.
+            </p>
+          </div>
+          <div className="studio-kicker text-[10px]">
+            Quick check · 15:00 timer · 8 MCQs
           </div>
         </button>
       </section>

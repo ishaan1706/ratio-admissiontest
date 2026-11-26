@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import {
   ArrowRight,
   ArrowUpRight,
+  Calculator,
   Check,
   Clock,
   ExternalLink,
@@ -9,6 +10,7 @@ import {
   X,
 } from 'lucide-react';
 import { AdmissionsTest, PracticeQuestion } from '../data/allTests';
+import { ExamRevisionTools, UcatBasicCalculator } from './ExamRevisionTools';
 
 export interface GenericAttempt {
   id: string;
@@ -168,6 +170,8 @@ export const UniversalTestView: React.FC<UniversalTestViewProps> = ({
   onSaveAttempt,
 }) => {
   const [drilling, setDrilling] = useState(false);
+  const [practiceMode, setPracticeMode] = useState<'mocks' | 'revision'>('mocks');
+  const [showCalc, setShowCalc] = useState(false);
   const [qIdx, setQIdx] = useState(0);
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [finished, setFinished] = useState(false);
@@ -179,6 +183,8 @@ export const UniversalTestView: React.FC<UniversalTestViewProps> = ({
 
   useEffect(() => {
     setDrilling(false);
+    setPracticeMode('mocks');
+    setShowCalc(false);
     setFinished(false);
     setQIdx(0);
     setAnswers({});
@@ -341,6 +347,20 @@ export const UniversalTestView: React.FC<UniversalTestViewProps> = ({
             {test.code} · Question {qIdx + 1} of {test.questions.length} · {q.section}
           </span>
           <div className="flex items-center gap-4">
+            {test.id === 'ucat' && (
+              <button
+                type="button"
+                onClick={() => setShowCalc((c) => !c)}
+                className={`inline-flex items-center gap-1.5 px-2.5 py-1 border cursor-pointer transition-colors ${
+                  showCalc
+                    ? 'border-[var(--accent)] text-[var(--accent)]'
+                    : 'border-[var(--rule)] text-[var(--text-muted)] hover:text-[var(--ink)]'
+                }`}
+              >
+                <Calculator className="w-3.5 h-3.5" />
+                Calc
+              </button>
+            )}
             <span className="inline-flex items-center gap-1.5 text-[var(--ink)]">
               <Clock className="w-3.5 h-3.5 text-[var(--accent)]" />
               {formatTime(secondsLeft)}
@@ -354,6 +374,12 @@ export const UniversalTestView: React.FC<UniversalTestViewProps> = ({
             </button>
           </div>
         </div>
+
+        {test.id === 'ucat' && showCalc && (
+          <div className="flex justify-end">
+            <UcatBasicCalculator />
+          </div>
+        )}
 
         {q.passage && (
           <p className="font-serif-passage text-base leading-relaxed text-[var(--ink)] border-l-2 border-[var(--accent)] pl-4 py-1">
@@ -424,23 +450,61 @@ export const UniversalTestView: React.FC<UniversalTestViewProps> = ({
 
   return (
     <div className="space-y-8">
-      <div className="border border-[var(--rule)] p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
-        <div className="space-y-1.5">
+      <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[var(--rule)] pb-4">
+        <div>
           <div className="text-xs font-mono-tabular uppercase tracking-wider text-[var(--accent)]">
             {test.subject} · {test.duration}
           </div>
-          <h2 className="font-display text-3xl sm:text-4xl text-[var(--ink)]">{test.name}</h2>
-          <p className="text-sm text-[var(--text-muted)]">{test.format}</p>
+          <h2 className="font-display text-3xl sm:text-4xl text-[var(--ink)] mt-0.5">
+            {test.name}
+          </h2>
         </div>
-        <button
-          type="button"
-          onClick={startDrill}
-          className="px-5 py-3 bg-[var(--ink)] hover:bg-white text-[var(--bg)] text-sm font-semibold inline-flex items-center gap-2 shrink-0 cursor-pointer transition-colors"
-        >
-          Start Timed Set ({test.questions.length} Qs)
-          <ArrowRight className="w-4 h-4" />
-        </button>
+        <div className="flex items-center gap-1 text-xs">
+          <button
+            type="button"
+            onClick={() => setPracticeMode('mocks')}
+            className={`px-3 py-1.5 border cursor-pointer transition-colors ${
+              practiceMode === 'mocks'
+                ? 'border-[var(--accent)] text-[var(--accent)]'
+                : 'border-[var(--rule)] text-[var(--text-muted)] hover:text-[var(--ink)]'
+            }`}
+          >
+            Mocks &amp; Drills
+          </button>
+          <button
+            type="button"
+            onClick={() => setPracticeMode('revision')}
+            className={`px-3 py-1.5 border cursor-pointer transition-colors ${
+              practiceMode === 'revision'
+                ? 'border-[var(--accent)] text-[var(--accent)]'
+                : 'border-[var(--rule)] text-[var(--text-muted)] hover:text-[var(--ink)]'
+            }`}
+          >
+            {test.code} Revision Tools
+          </button>
+        </div>
       </div>
+
+      {practiceMode === 'revision' ? (
+        <ExamRevisionTools testId={test.id} />
+      ) : (
+        <>
+          <div className="border border-[var(--rule)] p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+            <div className="space-y-1.5">
+              <div className="text-xs font-mono-tabular uppercase tracking-wider text-[var(--text-muted)]">
+                TIMED PRACTICE SET
+              </div>
+              <p className="text-sm text-[var(--text)]">{test.format}</p>
+            </div>
+            <button
+              type="button"
+              onClick={startDrill}
+              className="px-5 py-3 bg-[var(--ink)] hover:bg-white text-[var(--bg)] text-sm font-semibold inline-flex items-center gap-2 shrink-0 cursor-pointer transition-colors"
+            >
+              Start Timed Set ({test.questions.length} Qs)
+              <ArrowRight className="w-4 h-4" />
+            </button>
+          </div>
 
       <div className="grid sm:grid-cols-3 border border-[var(--rule)] divide-y sm:divide-y-0 sm:divide-x divide-[var(--rule)] text-sm">
         <div className="p-4">
@@ -519,6 +583,8 @@ export const UniversalTestView: React.FC<UniversalTestViewProps> = ({
             </button>
           )}
         </div>
+      )}
+        </>
       )}
     </div>
   );
