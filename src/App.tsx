@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { Suspense, lazy, useEffect, useState } from 'react';
+import { Sparkles } from 'lucide-react';
 import {
   ActiveExamConfig,
-  AppView,
   LnatPassage,
   LnatQuestion,
   LnatSkill,
@@ -11,6 +11,7 @@ import {
 import { ALL_QUESTIONS, PASSAGES } from './data/passages';
 import { TEST_BY_ID, TestId } from './data/allTests';
 import { fetchAttempts, fetchEssays, saveAttempt, saveEssay } from './lib/api';
+import { RatioUser, fetchSession, getLocalPro, setLocalPro } from './lib/account';
 import { LandingView } from './components/LandingView';
 import { Navbar } from './components/Navbar';
 import { PracticeHub } from './components/PracticeHub';
@@ -19,10 +20,9 @@ import { ResultsView } from './components/ResultsView';
 import { EssayStudio } from './components/EssayStudio';
 import { LnatRevisionLab } from './components/LnatRevisionLab';
 import { ProgressView } from './components/ProgressView';
-import { TaraWorkspace } from './components/TaraWorkspace';
-import { EsatWorkspace } from './components/EsatWorkspace';
-import { SatWorkspace } from './components/SatWorkspace';
-import { UcatWorkspace } from './components/UcatWorkspace';
+import { AccountModal } from './components/AccountModal';
+import { PaywallModal } from './components/PaywallModal';
+import { LegalDoc, LegalModal } from './components/LegalModal';
 import {
   GenericAttempt,
   OfficialResourcesPanel,
@@ -30,6 +30,19 @@ import {
   loadGenericAttempts,
   saveGenericAttempt,
 } from './components/TestWorkspace';
+
+const TaraWorkspace = lazy(() =>
+  import('./components/TaraWorkspace').then((m) => ({ default: m.TaraWorkspace }))
+);
+const EsatWorkspace = lazy(() =>
+  import('./components/EsatWorkspace').then((m) => ({ default: m.EsatWorkspace }))
+);
+const SatWorkspace = lazy(() =>
+  import('./components/SatWorkspace').then((m) => ({ default: m.SatWorkspace }))
+);
+const UcatWorkspace = lazy(() =>
+  import('./components/UcatWorkspace').then((m) => ({ default: m.UcatWorkspace }))
+);
 
 function getInitialTheme(): 'light' | 'dark' {
   try {
@@ -59,6 +72,15 @@ export const App: React.FC = () => {
     loadGenericAttempts()
   );
 
+  // Commercial state: Account, Pro entitlement, Stripe readiness, Legal modals
+  const [user, setUser] = useState<RatioUser | null>(null);
+  const [isPro, setIsPro] = useState<boolean>(() => getLocalPro());
+  const [stripeConfigured, setStripeConfigured] = useState(false);
+  const [accountOpen, setAccountOpen] = useState(false);
+  const [pricingOpen, setPricingOpen] = useState(false);
+  const [pricingReason, setPricingReason] = useState<string | null>(null);
+  const [legalDoc, setLegalDoc] = useState<LegalDoc>(null);
+
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
     try {
@@ -71,7 +93,20 @@ export const App: React.FC = () => {
   useEffect(() => {
     fetchAttempts().then(setAttempts);
     fetchEssays().then(setEssays);
+    fetchSession().then(({ user: u, stripeConfigured: sc }) => {
+      setUser(u);
+      setStripeConfigured(sc);
+      if (u?.plan === 'pro') {
+        setIsPro(true);
+        setLocalPro(true);
+      }
+    });
   }, []);
+
+  const openPricing = (reason?: string) => {
+    setPricingReason(reason || null);
+    setPricingOpen(true);
+  };
 
   const handleSelectTest = (testId: TestId) => {
     setActiveTest(testId);
@@ -149,213 +184,262 @@ export const App: React.FC = () => {
     await saveAttempt(attempt);
   };
 
-  const handleInspectAttempt = (attempt: SectionAAttempt) => {
-    const answeredIds = new Set(Object.keys(attempt.answers));
-    const matched = ALL_QUESTIONS.filter((q) => answeredIds.has(q.id));
-    setLastAttempt(attempt);
-    setLastQuestions(matched.length > 0 ? matched : ALL_QUESTIONS.slice(0, attempt.total));
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   const handleSaveEssay = async (record: SectionBEssayRecord) => {
     setEssays((prev) => [record, ...prev]);
     await saveEssay(record);
   };
 
   const handleSaveGenericAttempt = (attempt: GenericAttempt) => {
-    setGenericAttempts(saveGenericAttempt(attempt));
+    saveGenericAttempt(attempt);
+    setGenericAttempts(loadGenericAttempts());
   };
 
-  const handleLegacyNavigate = (next: AppView) => {
-    if (next === 'welcome') {
-      setOnWelcome(true);
-      return;
-    }
-    if (next === 'essay') {
-      setActiveTest('lnat');
-      setSubTab('practice');
-      setLnatSection('B');
-      return;
-    }
-    if (next === 'resources') {
-      setSubTab('resources');
-      return;
-    }
-    if (next === 'progress') {
-      setSubTab('progress');
-      return;
-    }
-    setSubTab('practice');
-    setLnatSection('A');
-  };
+  const modals = (
+    <>
+      <AccountModal
+        open={accountOpen}
+        onClose={() => setAccountOpen(false)}
+        user={user}
+        isPro={isPro}
+        onAuthChange={(u) => {
+          setUser(u);
+          if (u?.plan === 'pro') setIsPro(true);
+        }}
+        onOpenUpgrade={() => openPricing()}
+      />
+      <PaywallModal
+        open={pricingOpen}
+        onClose={() => setPricingOpen(false)}
+        isPro={isPro}
+        stripeConfigured={stripeConfigured}
+        onProChange={(pro) => setIsPro(pro)}
+        reason={pricingReason}
+      />
+      <LegalModal doc={legalDoc} onClose={() => setLegalDoc(null)} />
+    </>
+  );
 
   if (onWelcome) {
-    return <LandingView onSelectTest={handleSelectTest} />;
-  }
-
-  // Full-screen Pearson VUE simulator for LNAT Section A
-  if (activeExam) {
     return (
-      <div className="min-h-screen flex flex-col bg-[var(--bg)] text-[var(--text)]">
-        <ExamSimulator
-          config={activeExam}
-          onExit={() => setActiveExam(null)}
-          onComplete={handleCompleteExam}
+      <>
+        <LandingView
+          onSelectTest={handleSelectTest}
+          user={user}
+          isPro={isPro}
+          onOpenAccount={() => setAccountOpen(true)}
+          onOpenPricing={openPricing}
+          onOpenLegal={setLegalDoc}
         />
-      </div>
+        {modals}
+      </>
     );
   }
 
+  const workspaceFallback = (
+    <div className="py-16 text-center text-xs font-mono-tabular text-[var(--text-muted)]">
+      Loading exam studio…
+    </div>
+  );
+
   return (
     <div className="min-h-screen flex flex-col bg-[var(--bg)] text-[var(--text)]">
-      <Navbar
-        activeTest={activeTest}
-        onSelectTest={handleSelectTest}
-        onGoHome={() => setOnWelcome(true)}
-        theme={theme}
-        onToggleTheme={() => setTheme((t) => (t === 'light' ? 'dark' : 'light'))}
-      />
+      {!activeExam && (
+        <Navbar
+          activeTest={activeTest}
+          onSelectTest={handleSelectTest}
+          onGoHome={() => {
+            setOnWelcome(true);
+            setLastAttempt(null);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
+          theme={theme}
+          onToggleTheme={() => setTheme((t) => (t === 'dark' ? 'light' : 'dark'))}
+          user={user}
+          isPro={isPro}
+          onOpenAccount={() => setAccountOpen(true)}
+          onOpenPricing={() => openPricing()}
+        />
+      )}
 
-      {/* Simple 3-tab sub-bar */}
-      <div className="border-b border-[var(--rule)] bg-[var(--bg)]">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 flex items-center justify-between gap-4">
-          <div className="flex items-center gap-6">
-            {(['practice', 'resources', 'progress'] as SubTab[]).map((tab) => {
-              const active = subTab === tab && !lastAttempt;
-              const label =
-                tab === 'practice' ? 'Practice' : tab === 'resources' ? 'Official' : 'Progress';
-              return (
+      {/* Clean 3-tab subbar inside every test */}
+      {!activeExam && !lastAttempt && (
+        <div className="border-b border-[var(--rule)] bg-[var(--bg)] no-print">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 flex items-center justify-between gap-4">
+            <div className="flex items-center gap-6">
+              {(
+                [
+                  ['practice', 'Practice'],
+                  ['resources', 'Official'],
+                  ['progress', 'Progress'],
+                ] as const
+              ).map(([id, label]) => (
                 <button
-                  key={tab}
+                  key={id}
                   type="button"
-                  onClick={() => {
-                    setLastAttempt(null);
-                    setSubTab(tab);
-                  }}
-                  className={`py-3 text-xs font-semibold uppercase tracking-[0.1em] border-b-2 transition-colors cursor-pointer ${
-                    active
+                  onClick={() => setSubTab(id)}
+                  className={`py-3 text-xs font-medium border-b-2 transition-colors cursor-pointer ${
+                    subTab === id
                       ? 'border-[var(--accent)] text-[var(--ink)]'
                       : 'border-transparent text-[var(--text-muted)] hover:text-[var(--ink)]'
                   }`}
                 >
                   {label}
                 </button>
-              );
-            })}
-          </div>
-
-          {activeTest === 'lnat' && subTab === 'practice' && !lastAttempt && (
-            <div className="flex items-center gap-1 text-xs">
-              <button
-                type="button"
-                onClick={() => setLnatSection('A')}
-                className={`px-2.5 py-1 border cursor-pointer transition-colors ${
-                  lnatSection === 'A'
-                    ? 'border-[var(--accent)] text-[var(--accent)]'
-                    : 'border-transparent text-[var(--text-muted)] hover:text-[var(--ink)]'
-                }`}
-              >
-                Section A
-              </button>
-              <button
-                type="button"
-                onClick={() => setLnatSection('B')}
-                className={`px-2.5 py-1 border cursor-pointer transition-colors ${
-                  lnatSection === 'B'
-                    ? 'border-[var(--accent)] text-[var(--accent)]'
-                    : 'border-transparent text-[var(--text-muted)] hover:text-[var(--ink)]'
-                }`}
-              >
-                Section B
-              </button>
-              <button
-                type="button"
-                onClick={() => setLnatSection('lab')}
-                className={`px-2.5 py-1 border cursor-pointer transition-colors ${
-                  lnatSection === 'lab'
-                    ? 'border-[var(--accent)] text-[var(--accent)]'
-                    : 'border-transparent text-[var(--text-muted)] hover:text-[var(--ink)]'
-                }`}
-              >
-                Revision Lab
-              </button>
+              ))}
             </div>
-          )}
+
+            {!isPro && (
+              <button
+                type="button"
+                onClick={() => openPricing()}
+                className="hidden sm:inline-flex items-center gap-1.5 text-[11px] font-mono-tabular text-[var(--accent)] hover:underline cursor-pointer"
+              >
+                <Sparkles className="w-3 h-3" /> Unlock all 5 exams (£39 Season Pass)
+              </button>
+            )}
+          </div>
         </div>
-      </div>
+      )}
 
       <main className="flex-1">
-        {lastAttempt ? (
+        {activeExam ? (
+          <ExamSimulator
+            config={activeExam}
+            onExit={() => setActiveExam(null)}
+            onComplete={handleCompleteExam}
+          />
+        ) : lastAttempt ? (
           <ResultsView
             attempt={lastAttempt}
             questions={lastQuestions}
             onBackToPractice={() => setLastAttempt(null)}
           />
         ) : activeTest === 'lnat' ? (
-          <>
-            {subTab === 'practice' && lnatSection === 'A' && (
-              <PracticeHub
-                attempts={attempts}
-                onStartDiagnostic={handleStartDiagnostic}
-                onStartHalfMock={handleStartHalfMock}
-                onStartFullMock={handleStartFullMock}
-                onStartPassage={handleStartPassage}
-                onStartSkill={handleStartSkill}
-              />
-            )}
-            {subTab === 'practice' && lnatSection === 'B' && (
-              <EssayStudio savedEssays={essays} onSaveEssay={handleSaveEssay} />
-            )}
-            {subTab === 'practice' && lnatSection === 'lab' && <LnatRevisionLab />}
-            {subTab === 'resources' && (
-              <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10">
-                <OfficialResourcesPanel test={TEST_BY_ID.lnat} />
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10">
+            {subTab === 'practice' && (
+              <div className="space-y-8">
+                <div className="flex items-center gap-2 border-b border-[var(--rule)] pb-4">
+                  <button
+                    type="button"
+                    onClick={() => setLnatSection('A')}
+                    className={`px-3.5 py-1.5 rounded-lg text-xs font-medium border cursor-pointer transition-colors ${
+                      lnatSection === 'A'
+                        ? 'border-[var(--accent)] text-[var(--accent)] bg-[var(--accent-soft)]'
+                        : 'border-[var(--rule)] text-[var(--text-muted)] hover:text-[var(--ink)]'
+                    }`}
+                  >
+                    Section A · Multiple Choice
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setLnatSection('B')}
+                    className={`px-3.5 py-1.5 rounded-lg text-xs font-medium border cursor-pointer transition-colors ${
+                      lnatSection === 'B'
+                        ? 'border-[var(--accent)] text-[var(--accent)] bg-[var(--accent-soft)]'
+                        : 'border-[var(--rule)] text-[var(--text-muted)] hover:text-[var(--ink)]'
+                    }`}
+                  >
+                    Section B · Essay (40 min)
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setLnatSection('lab')}
+                    className={`px-3.5 py-1.5 rounded-lg text-xs font-medium border cursor-pointer transition-colors ${
+                      lnatSection === 'lab'
+                        ? 'border-[var(--accent)] text-[var(--accent)] bg-[var(--accent-soft)]'
+                        : 'border-[var(--rule)] text-[var(--text-muted)] hover:text-[var(--ink)]'
+                    }`}
+                  >
+                    Revision Lab
+                  </button>
+                </div>
+
+                {lnatSection === 'A' ? (
+                  <PracticeHub
+                    attempts={attempts}
+                    onStartDiagnostic={handleStartDiagnostic}
+                    onStartHalfMock={handleStartHalfMock}
+                    onStartFullMock={handleStartFullMock}
+                    onStartPassage={handleStartPassage}
+                    onStartSkill={handleStartSkill}
+                  />
+                ) : lnatSection === 'B' ? (
+                  <EssayStudio onSaveEssay={handleSaveEssay} savedEssays={essays} />
+                ) : (
+                  <LnatRevisionLab />
+                )}
               </div>
             )}
+
+            {subTab === 'resources' && <OfficialResourcesPanel test={TEST_BY_ID.lnat} />}
+
             {subTab === 'progress' && (
               <ProgressView
                 attempts={attempts}
                 essays={essays}
-                onInspectAttempt={handleInspectAttempt}
-                onNavigate={handleLegacyNavigate}
+                onInspectAttempt={(attempt) => {
+                  const answeredIds = new Set(Object.keys(attempt.answers));
+                  const qs = ALL_QUESTIONS.filter((q) => answeredIds.has(q.id));
+                  setLastAttempt(attempt);
+                  setLastQuestions(qs.length > 0 ? qs : ALL_QUESTIONS.slice(0, attempt.total));
+                }}
+                onNavigate={(view) => {
+                  if (view === 'essay') {
+                    setLnatSection('B');
+                    setSubTab('practice');
+                  } else if (view === 'resources') {
+                    setSubTab('resources');
+                  } else {
+                    setLnatSection('A');
+                    setSubTab('practice');
+                  }
+                }}
               />
             )}
-          </>
+          </div>
         ) : activeTest === 'ucat' ? (
           <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10">
-            <UcatWorkspace
-              test={TEST_BY_ID.ucat}
-              subTab={subTab}
-              attempts={genericAttempts}
-              onSaveAttempt={handleSaveGenericAttempt}
-            />
+            <Suspense fallback={workspaceFallback}>
+              <UcatWorkspace
+                test={TEST_BY_ID.ucat}
+                subTab={subTab}
+                attempts={genericAttempts}
+                onSaveAttempt={handleSaveGenericAttempt}
+              />
+            </Suspense>
           </div>
         ) : activeTest === 'tara' ? (
           <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10">
-            <TaraWorkspace
-              test={TEST_BY_ID.tara}
-              subTab={subTab}
-              attempts={genericAttempts}
-              onSaveAttempt={handleSaveGenericAttempt}
-            />
+            <Suspense fallback={workspaceFallback}>
+              <TaraWorkspace
+                test={TEST_BY_ID.tara}
+                subTab={subTab}
+                attempts={genericAttempts}
+                onSaveAttempt={handleSaveGenericAttempt}
+              />
+            </Suspense>
           </div>
         ) : activeTest === 'esat' ? (
           <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10">
-            <EsatWorkspace
-              test={TEST_BY_ID.esat}
-              subTab={subTab}
-              attempts={genericAttempts}
-              onSaveAttempt={handleSaveGenericAttempt}
-            />
+            <Suspense fallback={workspaceFallback}>
+              <EsatWorkspace
+                test={TEST_BY_ID.esat}
+                subTab={subTab}
+                attempts={genericAttempts}
+                onSaveAttempt={handleSaveGenericAttempt}
+              />
+            </Suspense>
           </div>
         ) : activeTest === 'sat' ? (
           <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10">
-            <SatWorkspace
-              test={TEST_BY_ID.sat}
-              subTab={subTab}
-              attempts={genericAttempts}
-              onSaveAttempt={handleSaveGenericAttempt}
-            />
+            <Suspense fallback={workspaceFallback}>
+              <SatWorkspace
+                test={TEST_BY_ID.sat}
+                subTab={subTab}
+                attempts={genericAttempts}
+                onSaveAttempt={handleSaveGenericAttempt}
+              />
+            </Suspense>
           </div>
         ) : (
           <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10">
@@ -369,12 +453,39 @@ export const App: React.FC = () => {
         )}
       </main>
 
-      <footer className="border-t border-[var(--rule)] py-5 text-xs text-[var(--text-muted)] no-print">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 flex flex-wrap items-center justify-between gap-4">
-          <span>Ratio · LNAT, UCAT, TARA, ESAT &amp; SAT</span>
-          <span>Not affiliated with LNAT, UCAT, UAT-UK, or College Board.</span>
-        </div>
-      </footer>
+      {!activeExam && (
+        <footer className="border-t border-[var(--rule)] py-6 px-4 sm:px-6 text-xs text-[var(--text-muted)] no-print">
+          <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div className="flex flex-wrap items-center gap-4">
+              <span>Ratio · Admissions Test Studio</span>
+              <button
+                type="button"
+                onClick={() => setLegalDoc('terms')}
+                className="hover:text-[var(--ink)] cursor-pointer"
+              >
+                Terms
+              </button>
+              <button
+                type="button"
+                onClick={() => setLegalDoc('privacy')}
+                className="hover:text-[var(--ink)] cursor-pointer"
+              >
+                Privacy
+              </button>
+              <button
+                type="button"
+                onClick={() => setLegalDoc('refunds')}
+                className="hover:text-[var(--ink)] cursor-pointer"
+              >
+                Refunds
+              </button>
+            </div>
+            <span>Not affiliated with LNAT, UCAT, UAT-UK, or College Board.</span>
+          </div>
+        </footer>
+      )}
+
+      {modals}
     </div>
   );
 };
