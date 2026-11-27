@@ -22,6 +22,7 @@ import {
 } from 'lucide-react';
 import esatPracticeRaw from '../data/packs/esat-practice/esat-practice.json';
 import esatMocksRaw from '../data/packs/esat/esat-mocks.json';
+import { EsatAdaptiveRunner, loadPersistedAdaptive } from './EsatAdaptiveRunner';
 
 export interface EsatPracticeOption {
   label: string;
@@ -287,7 +288,15 @@ export const EsatPracticeSuite: React.FC<EsatPracticeSuiteProps> = ({
   onStartLeastPractisedMock,
   onSaveAttemptSummary,
 }) => {
-  const [subView, setSubView] = useState<'daily' | 'sets' | 'custom' | 'review' | 'stats'>('daily');
+  const [subView, setSubView] = useState<'adaptive' | 'daily' | 'sets' | 'custom' | 'review' | 'stats'>('adaptive');
+  const [activeAdaptive, setActiveAdaptive] = useState<{
+    storageKey: string;
+    title: string;
+    subtitle: string;
+    bank: EsatPracticeQuestion[];
+    runLength: number;
+    isDaily?: boolean;
+  } | null>(null);
   const [showModulePicker, setShowModulePicker] = useState(!configured);
   const [draftModules, setDraftModules] = useState<EsatModuleKey[]>(chosenModules);
   const [activeModuleFilter, setActiveModuleFilter] = useState<EsatModuleKey | 'all'>('all');
@@ -331,7 +340,50 @@ export const EsatPracticeSuite: React.FC<EsatPracticeSuiteProps> = ({
   }, [chosenModules, today, history]);
 
   const todayDoneIds = dailyLog[today] || [];
-  const todayDailyDoneCount = dailyQuestions.filter((q) => todayDoneIds.includes(q.id)).length;
+  const dailyStorageKey = `ratio_esat_adaptive_daily_${today}_${[...chosenModules].sort().join('_')}`;
+  const savedDailyAdaptive = loadPersistedAdaptive(dailyStorageKey);
+  const todayDailyDoneCount = Math.min(
+    5,
+    Math.max(todayDoneIds.length, savedDailyAdaptive?.history.length || 0)
+  );
+
+  const handleDailyAttempt = (qId: string) => {
+    setDailyLog((prev) => {
+      const list = prev[today] || [];
+      if (list.includes(qId)) return prev;
+      const next = { ...prev, [today]: [...list, qId] };
+      saveDailyCompleted(next);
+      return next;
+    });
+  };
+
+  const startAdaptiveModuleRun = (modKey: EsatModuleKey) => {
+    const meta = ESAT_MODULES_META.find((m) => m.key === modKey)!;
+    const bank = ALL_PRACTICE_QUESTIONS.filter((q) => q.moduleKey === modKey);
+    setActiveAdaptive({
+      storageKey: `ratio_esat_adaptive_27_${modKey}_v1`,
+      title: `${meta.name} · Adaptive 27-Q Run`,
+      subtitle: 'Starts Level 3 · steps up/down (1–5) · 1:30/Q pace',
+      bank,
+      runLength: 27,
+    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const startAdaptiveDailyRun = () => {
+    const bank = ALL_PRACTICE_QUESTIONS.filter((q) =>
+      chosenModules.includes(q.moduleKey as EsatModuleKey)
+    );
+    setActiveAdaptive({
+      storageKey: dailyStorageKey,
+      title: `Daily 5 Adaptive (${today})`,
+      subtitle: '5 adaptive questions · 1:30/Q pace · saved by date',
+      bank,
+      runLength: 5,
+      isDaily: true,
+    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   // 28-day calendar + streak
   const calendarDays = useMemo(() => {
@@ -575,6 +627,26 @@ export const EsatPracticeSuite: React.FC<EsatPracticeSuiteProps> = ({
     return Array.from(map.values()).sort((a, b) => a.topic.localeCompare(b.topic));
   }, [chosenModules, history]);
 
+  // ── ACTIVE ADAPTIVE RUNNER (27-Q Module or Adaptive Daily 5) ──
+  if (activeAdaptive) {
+    return (
+      <EsatAdaptiveRunner
+        storageKey={activeAdaptive.storageKey}
+        title={activeAdaptive.title}
+        subtitle={activeAdaptive.subtitle}
+        bank={activeAdaptive.bank}
+        runLength={activeAdaptive.runLength}
+        isDaily={activeAdaptive.isDaily}
+        globalHistory={history}
+        onRecordAnswer={onRecordAnswer}
+        onToggleFlag={onToggleFlag}
+        onDailyAttempt={handleDailyAttempt}
+        onSaveAttemptSummary={onSaveAttemptSummary}
+        onExit={() => setActiveAdaptive(null)}
+      />
+    );
+  }
+
   // ── ACTIVE QUESTION RUNNER ──
   if (session) {
     const q = session.questions[idx];
@@ -661,7 +733,7 @@ export const EsatPracticeSuite: React.FC<EsatPracticeSuiteProps> = ({
               {session.title} · Q{idx + 1} / {session.questions.length}
             </div>
             <div className="text-xs text-zinc-400">
-              {q.moduleName} · Spec {q.topic} · Difficulty {q.difficulty}/3 · No calculator
+              {q.moduleName} · Spec {q.topic} · Level {q.difficulty}/5 · No calculator
             </div>
           </div>
 
@@ -1016,6 +1088,7 @@ export const EsatPracticeSuite: React.FC<EsatPracticeSuiteProps> = ({
       {/* Sub-navigation */}
       <div className="flex flex-wrap items-center gap-2">
         {[
+          { id: 'adaptive', label: 'Adaptive 27-Q Run', icon: Sparkles },
           { id: 'daily', label: `Daily 5 (${todayDailyDoneCount}/5)`, icon: Flame },
           { id: 'sets', label: `Topic Sets (${chosenSets.length * 10} Qs)`, icon: Target },
           { id: 'custom', label: 'Custom Set', icon: SlidersHorizontal },
@@ -1042,6 +1115,76 @@ export const EsatPracticeSuite: React.FC<EsatPracticeSuiteProps> = ({
         })}
       </div>
 
+      {/* 0. ADAPTIVE 27-QUESTION RUN PER MODULE (800-MCQ BANK, LEVELS 1–5) */}
+      {subView === 'adaptive' && (
+        <div className="space-y-5">
+          <div className="rounded-2xl border border-white/[0.08] bg-[#111114] p-6 space-y-4">
+            <div className="flex flex-wrap items-start justify-between gap-3">
+              <div>
+                <div className="text-[11px] font-mono-tabular uppercase tracking-wider text-emerald-400">
+                  Adaptive ESAT Practice · 160 Qs per module · Difficulty Levels 1–5
+                </div>
+                <h3 className="font-display text-2xl sm:text-3xl text-white mt-1">
+                  27-Question Adaptive Module Run
+                </h3>
+                <p className="text-xs text-zinc-400 mt-1.5 max-w-2xl leading-relaxed">
+                  Starts at Level 3 and adapts after every answer: +1 level on correct (+2 if answered
+                  in ≤60s), −1 on wrong, capped at real ESAT Level 5. Prefers unseen questions,
+                  rotates spec sections, tracks 1:30/Q pace, and saves mid-run so resuming keeps your
+                  exact question.
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={startAdaptiveDailyRun}
+                className="px-4 py-2 rounded-xl border border-amber-500/35 bg-amber-500/10 hover:bg-amber-500/20 text-amber-200 text-xs font-semibold inline-flex items-center gap-1.5 cursor-pointer"
+              >
+                <Flame className="w-3.5 h-3.5" /> Adaptive Daily 5 ({todayDailyDoneCount}/5)
+              </button>
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
+              {chosenModules.map((k) => {
+                const meta = ESAT_MODULES_META.find((m) => m.key === k)!;
+                const modQs = ALL_PRACTICE_QUESTIONS.filter((q) => q.moduleKey === k);
+                const hardCount = modQs.filter((q) => q.difficulty >= 4).length;
+                const saved = loadPersistedAdaptive(`ratio_esat_adaptive_27_${k}_v1`);
+                const inProgress = saved && !saved.finished && saved.history.length > 0;
+                return (
+                  <div
+                    key={k}
+                    className="rounded-xl border border-white/[0.08] bg-[#09090B] p-4 flex flex-col justify-between gap-4"
+                  >
+                    <div className="space-y-1.5">
+                      <div className="flex items-center justify-between text-[11px] font-mono-tabular">
+                        <span className="text-emerald-400 uppercase">{meta.short}</span>
+                        <span className="text-zinc-500">
+                          {modQs.length} Qs · {hardCount} L4–L5
+                        </span>
+                      </div>
+                      <div className="text-base font-semibold text-white">{meta.name}</div>
+                      <p className="text-xs text-zinc-400">
+                        {inProgress
+                          ? `In progress: ${saved.history.length}/27 answered`
+                          : '27 adaptive MCQs · 40:30 target pace (1:30/Q)'}
+                      </p>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => startAdaptiveModuleRun(k)}
+                      className="w-full py-2.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-[#09090B] text-xs font-semibold inline-flex items-center justify-center gap-1.5 cursor-pointer"
+                    >
+                      {inProgress ? `Resume Run (${saved.history.length}/27)` : 'Start 27-Q Adaptive Run'}
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* 1. DAILY 5 + STREAK + 28-DAY CALENDAR + LEAST-PRACTISED MOCK */}
       {subView === 'daily' && (
         <div className="grid lg:grid-cols-12 gap-5">
@@ -1055,7 +1198,8 @@ export const EsatPracticeSuite: React.FC<EsatPracticeSuiteProps> = ({
                   Today’s 5 ESAT Questions
                 </h3>
                 <p className="text-xs text-zinc-400 mt-1">
-                  Drawn from your chosen modules, unseen questions first, locked for today. Target pace: 1:30 per question (7:30 total).
+                  5 adaptive questions from your chosen modules, starting at Level 3 and adjusting after
+                  each answer. Saved by date so resuming keeps your current question. Target pace: 1:30/Q (7:30 total).
                 </p>
               </div>
               <div className="px-3 py-1.5 rounded-xl border border-amber-500/30 bg-amber-500/10 text-amber-300 text-xs font-mono-tabular font-semibold inline-flex items-center gap-1.5 shrink-0">
@@ -1076,7 +1220,7 @@ export const EsatPracticeSuite: React.FC<EsatPracticeSuiteProps> = ({
                       {q.moduleName} · Spec {q.topic}
                     </span>
                     <span className={done ? 'text-emerald-400 font-semibold' : 'text-zinc-500'}>
-                      {done ? 'Done' : `Diff ${q.difficulty}/3`}
+                      {done ? 'Done' : `Level ${q.difficulty}/5`}
                     </span>
                   </div>
                 );
@@ -1085,19 +1229,14 @@ export const EsatPracticeSuite: React.FC<EsatPracticeSuiteProps> = ({
 
             <button
               type="button"
-              onClick={() =>
-                startSession({
-                  title: `Daily 5 (${today})`,
-                  subtitle: 'Seeded daily set at 1:30/Q pace',
-                  questions: dailyQuestions,
-                  timed: true,
-                  revealMode: 'immediate',
-                  isDaily: true,
-                })
-              }
+              onClick={startAdaptiveDailyRun}
               className="w-full py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-[#09090B] text-sm font-semibold inline-flex items-center justify-center gap-2 cursor-pointer"
             >
-              {todayDailyDoneCount >= 5 ? 'Review Today’s 5 Questions' : 'Start Today’s 5 Questions (7:30 pace)'}
+              {todayDailyDoneCount >= 5
+                ? 'Review Today’s Adaptive Daily 5'
+                : todayDailyDoneCount > 0
+                  ? `Resume Adaptive Daily 5 (${todayDailyDoneCount}/5)`
+                  : 'Start Adaptive Daily 5 (7:30 pace)'}
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>

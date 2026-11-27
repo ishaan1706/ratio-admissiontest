@@ -400,7 +400,7 @@ export const EsatWorkspace: React.FC<EsatWorkspaceProps> = ({
       <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[var(--rule)] pb-4">
         <div>
           <div className="text-xs font-mono-tabular uppercase tracking-wider text-[var(--accent)]">
-            ESAT · 670 ORIGINAL MCQS · 5 MODULES · 1:30/Q PACE TRACKER
+            ESAT · 1,070 ORIGINAL MCQS · 5 MODULES · ADAPTIVE 1–5 &amp; 1:30/Q PACE
           </div>
           <h2 className="font-display text-3xl sm:text-4xl text-[var(--ink)] mt-0.5">
             {test.name}
@@ -409,7 +409,7 @@ export const EsatWorkspace: React.FC<EsatWorkspaceProps> = ({
         <div className="flex flex-wrap items-center gap-1 text-xs">
           {(
             [
-              ['practice', 'Practice & Daily 5 (400 Qs)'],
+              ['practice', 'Adaptive & Practice (800 Qs)'],
               ['mocks', '40-Min Mocks (270 Qs)'],
               ['sheets', 'Formulas & Plan'],
             ] as const

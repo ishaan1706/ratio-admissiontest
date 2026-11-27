@@ -48,8 +48,8 @@ const EXAM_STATS: Record<
     universities: 'Oxford · UCL · Warwick',
   },
   esat: {
-    mocks: '400-Q Practice + 2 Mocks',
-    extras: 'Daily 5 · 1:30/Q Pace · Mistake Queue',
+    mocks: '800-Q Adaptive Bank + 2 Mocks',
+    extras: '160/Module · Levels 1–5 · 1:30/Q Pace',
     interfaceLabel: 'UAT-UK exam screen',
     universities: 'Cambridge · Imperial · UCL',
   },
@@ -242,7 +242,7 @@ export const LandingView: React.FC<LandingViewProps> = ({
                 {/* Compact Metric Bar directly integrated into hero */}
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-5 pt-7 border-t border-white/[0.08]">
                   {[
-                    { value: '2,770+', label: 'Original Qs' },
+                    { value: '3,170+', label: 'Original Qs' },
                     { value: '13', label: 'Full mocks' },
                     { value: '470+', label: 'Vocab & cards' },
                     { value: '54', label: 'Official links' },
@@ -439,7 +439,7 @@ export const LandingView: React.FC<LandingViewProps> = ({
                   icon: Target,
                   title: 'Paced practice & mistake banks',
                   body: 'Build speed with ESAT’s 1:30/question pace timer and Daily 5, drill all 30 Digital SAT skills with Common Trap notes, and automatically resurface missed questions until mastered.',
-                  tag: '2,770+ original questions',
+                  tag: '3,170+ original questions',
                 },
                 {
                   icon: Layers,
@@ -579,7 +579,7 @@ export const LandingView: React.FC<LandingViewProps> = ({
                 <ul className="mt-5 space-y-2.5 text-xs text-zinc-200">
                   {[
                     'LNAT + UCAT + TARA + ESAT + TMUA + SAT',
-                    'All 2,770+ original questions & 13 full mocks',
+                    'All 3,170+ original questions & 13 full mocks',
                     '14-day no-questions-asked refund guarantee',
                     'All future mock & question additions included',
                   ].map((f) => (
