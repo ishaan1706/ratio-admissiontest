@@ -185,7 +185,7 @@ export const LandingView: React.FC<LandingViewProps> = ({
               onClick={() => onSelectTest('lnat')}
               className="px-4 py-1.5 rounded-lg bg-[#F4F4F5] hover:bg-white text-[#09090B] text-xs font-semibold inline-flex items-center gap-1.5 transition-colors cursor-pointer"
             >
-              Start Free
+              {isPro ? 'Open Studio' : 'Start Free'}
               <ArrowUpRight className="w-3.5 h-3.5" />
             </button>
           </div>
@@ -230,7 +230,7 @@ export const LandingView: React.FC<LandingViewProps> = ({
                   onClick={() => onSelectTest('lnat')}
                   className="px-5 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-[#09090B] text-sm font-semibold inline-flex items-center gap-2 transition-colors cursor-pointer"
                 >
-                  Start practicing free
+                  {isPro ? 'Continue practicing' : 'Start practicing free'}
                   <ArrowRight className="w-4 h-4" />
                 </button>
                 <a
@@ -241,14 +241,16 @@ export const LandingView: React.FC<LandingViewProps> = ({
                 </a>
               </div>
 
-              <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-zinc-500 pt-1">
-                <span className="inline-flex items-center gap-1.5">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" /> No card required to try
-                </span>
-                <span className="inline-flex items-center gap-1.5">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" /> 14-day refund guarantee
-                </span>
-              </div>
+              {!isPro && (
+                <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-zinc-500 pt-1">
+                  <span className="inline-flex items-center gap-1.5">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" /> No card required to try
+                  </span>
+                  <span className="inline-flex items-center gap-1.5">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" /> 14-day refund guarantee
+                  </span>
+                </div>
+              )}
             </div>
 
             {/* Live Interactive Question Specimen (Try Before Signing Up) */}
@@ -453,7 +455,7 @@ export const LandingView: React.FC<LandingViewProps> = ({
                 onClick={() => onSelectTest('lnat')}
                 className="w-full py-2.5 rounded-xl border border-white/15 hover:border-white/30 text-xs font-semibold text-white cursor-pointer transition-colors"
               >
-                Start Free Now
+                {isPro ? 'Open Studio' : 'Start Free Now'}
               </button>
             </div>
 
