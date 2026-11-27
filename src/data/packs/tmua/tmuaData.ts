@@ -1,3 +1,5 @@
+import { TMUA_PACK_MOCKS } from '../tmua-practice';
+
 export interface TmuaQuestion {
   id: string;
   topic: string;
@@ -494,6 +496,7 @@ export const TMUA_MOCKS: TmuaMock[] = [
       },
     ],
   },
+  ...TMUA_PACK_MOCKS,
 ];
 
 export const TMUA_FLASHCARDS: TmuaFlashcard[] = [

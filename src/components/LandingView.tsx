@@ -68,8 +68,8 @@ const EXAM_STATS: Record<
     tag: 'Engineering & Science',
   },
   tmua: {
-    mocks: 'Full Mock (Paper 1 & 2 · 40 Qs)',
-    extras: 'Logic & Proof Guide · Flashcards',
+    mocks: '3 Full Mocks (Paper 1 & 2 · 120 Qs)',
+    extras: '460 Drills · Daily 5 · Logic Primer',
     interfaceLabel: 'UAT-UK exam screen',
     universities: 'Cambridge · Imperial · LSE · Warwick',
     tag: 'Mathematics',
@@ -528,8 +528,8 @@ export const LandingView: React.FC<LandingViewProps> = ({
         <section className="border-y border-white/[0.08] bg-gradient-to-r from-transparent via-white/[0.035] to-transparent">
           <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-5 divide-y md:divide-y-0 md:divide-x divide-white/[0.08]">
             {[
-              ['3,375+', 'Original questions', 'Written to real exam-board specs'],
-              ['13', 'Full-length mocks', 'Timed under official conditions'],
+              ['3,915+', 'Original questions', 'Written to real exam-board specs'],
+              ['15', 'Full-length mocks', 'Timed under official conditions'],
               ['6', 'Exam screens', 'Pearson VUE, UAT-UK & Bluebook'],
               ['470+', 'Vocab & flashcards', 'SAT themes, UCAT & TMUA logic'],
               ['54', 'Official board links', 'Direct past papers & specimens'],
@@ -952,7 +952,7 @@ export const LandingView: React.FC<LandingViewProps> = ({
                 <ul className="mt-5 space-y-2.5 text-xs text-zinc-200">
                   {[
                     'LNAT + UCAT + TARA + ESAT + TMUA + SAT',
-                    'All 3,375+ original questions & 13 full mocks',
+                    'All 3,915+ original questions & 15 full mocks',
                     '14-day no-questions-asked refund guarantee',
                     'All future mock & question additions included',
                   ].map((f) => (

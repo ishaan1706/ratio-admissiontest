@@ -819,10 +819,10 @@ export const ADMISSIONS_TESTS: AdmissionsTest[] = [
         note: 'All official past papers, worked answers, and specimen papers',
       },
       {
-        label: 'Pearson VUE UAT-UK Registration & Booking',
+        label: 'Pearson VUE UAT-UK Booking, Specimen & Sample Tests',
         url: 'https://www.pearsonvue.com/us/en/uatuk.html',
         category: 'Portal',
-        note: 'Create your UAT-UK account and book your TMUA sitting',
+        note: 'Book your TMUA sitting and rehearse official specimen & sample tests in the Pearson VUE player',
       },
       {
         label: 'Official UAT-UK Course List (2027 Entry PDF)',

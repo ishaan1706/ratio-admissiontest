@@ -1,15 +1,40 @@
-import React, { useEffect, useMemo, useState } from 'react';
-import { ArrowRight, Eye, EyeOff, RotateCcw, Shuffle } from 'lucide-react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
+import {
+  ArrowRight,
+  ExternalLink,
+  Eye,
+  EyeOff,
+  RotateCcw,
+  Shuffle,
+} from 'lucide-react';
 import {
   TMUA_FLASHCARDS,
   TMUA_LOGIC_GUIDE,
   TMUA_MOCKS,
   TmuaPaper,
 } from '../data/packs/tmua/tmuaData';
+import {
+  TMUA_DRILL_PACK,
+  TMUA_LOGIC_PRIMER_MD,
+  TMUA_PACK_MOCK_QUESTIONS,
+  TMUA_PRIMER_SECTIONS,
+} from '../data/packs/tmua-practice';
+import {
+  bankQuestions,
+  firstAttemptStats,
+  listReview,
+  recordResult,
+  TmuaDrillHistory,
+} from '../data/packs/tmua-practice/tmua_practice.mjs';
 import { AdmissionsTest } from '../data/allTests';
 import { GenericAttempt, OfficialResourcesPanel } from './TestWorkspace';
 import { MarkdownRenderer } from './MarkdownRenderer';
 import { PearsonVueShell } from './OfficialExamChrome';
+import {
+  loadTmuaHistory,
+  saveTmuaHistory,
+  TmuaPracticeSuite,
+} from './TmuaPracticeSuite';
 
 interface TmuaWorkspaceProps {
   test: AdmissionsTest;
@@ -18,13 +43,48 @@ interface TmuaWorkspaceProps {
   onSaveAttempt: (attempt: GenericAttempt) => void;
 }
 
+const RESOURCE_CATEGORY_LABEL: Record<string, { label: string; cls: string }> = {
+  official: {
+    label: 'Current Official',
+    cls: 'border-emerald-500/40 text-emerald-400 bg-emerald-500/10',
+  },
+  'official-legacy': {
+    label: 'Official Archive',
+    cls: 'border-sky-500/40 text-sky-400 bg-sky-500/10',
+  },
+  university: {
+    label: 'University Walkthrough',
+    cls: 'border-violet-500/40 text-violet-300 bg-violet-500/10',
+  },
+  'third-party': {
+    label: 'Third-Party',
+    cls: 'border-amber-500/40 text-amber-300 bg-amber-500/10',
+  },
+};
+
 export const TmuaWorkspace: React.FC<TmuaWorkspaceProps> = ({
   test,
   subTab,
   attempts,
   onSaveAttempt,
 }) => {
-  const [mode, setMode] = useState<'mocks' | 'flashcards' | 'logic'>('mocks');
+  const drillQuestions = useMemo(() => bankQuestions(TMUA_DRILL_PACK), []);
+  const allKnownQuestions = useMemo(
+    () => [...drillQuestions, ...TMUA_PACK_MOCK_QUESTIONS],
+    [drillQuestions]
+  );
+  const packMockQuestionIds = useMemo(
+    () => new Set(TMUA_PACK_MOCK_QUESTIONS.map((q) => q.id)),
+    []
+  );
+
+  const [history, setHistory] = useState<TmuaDrillHistory>(() =>
+    loadTmuaHistory(allKnownQuestions)
+  );
+  const [mode, setMode] = useState<'skills' | 'review' | 'mocks' | 'flashcards' | 'logic'>('skills');
+  const [activePrimerAnchor, setActivePrimerAnchor] = useState<string | null>(null);
+  const primerContainerRef = useRef<HTMLDivElement | null>(null);
+
   const [activePaper, setActivePaper] = useState<{ mockTitle: string; paper: TmuaPaper } | null>(
     null
   );
@@ -33,11 +93,31 @@ export const TmuaWorkspace: React.FC<TmuaWorkspaceProps> = ({
   const [flagged, setFlagged] = useState<Record<string, boolean>>({});
   const [finished, setFinished] = useState(false);
   const [secondsLeft, setSecondsLeft] = useState(75 * 60);
+  const [queuedFromMock, setQueuedFromMock] = useState(false);
 
   const [fcFilter, setFcFilter] = useState<'All' | 'Paper 1' | 'Paper 2'>('All');
   const [fcIdx, setFcIdx] = useState(0);
   const [fcRevealed, setFcRevealed] = useState(false);
   const [fcSeed, setFcSeed] = useState(0);
+
+  const reviewQueueCount = useMemo(
+    () => listReview(allKnownQuestions, history).length,
+    [allKnownQuestions, history]
+  );
+
+  const drillStats = useMemo(
+    () => firstAttemptStats(drillQuestions, history),
+    [drillQuestions, history]
+  );
+
+  const deduplicatedPackResources = useMemo(() => {
+    const existingUrls = new Set(
+      test.officialLinks.map((l) => l.url.replace(/\/+$/, '').toLowerCase())
+    );
+    return TMUA_DRILL_PACK.resourceLinks.filter(
+      (r) => !existingUrls.has(r.url.replace(/\/+$/, '').toLowerCase())
+    );
+  }, [test.officialLinks]);
 
   useEffect(() => {
     if (!activePaper || finished) return;
@@ -46,6 +126,20 @@ export const TmuaWorkspace: React.FC<TmuaWorkspaceProps> = ({
     }, 1000);
     return () => window.clearInterval(id);
   }, [activePaper, finished]);
+
+  // Scroll to primer heading when jumping from a Paper 2 filter
+  useEffect(() => {
+    if (mode !== 'logic' || !activePrimerAnchor) return;
+    const targetHeading = TMUA_PRIMER_SECTIONS[activePrimerAnchor]?.heading;
+    if (!targetHeading || !primerContainerRef.current) return;
+    const headings = Array.from(primerContainerRef.current.querySelectorAll('h2'));
+    const match = headings.find(
+      (h) => (h.textContent || '').trim().toLowerCase() === targetHeading.toLowerCase()
+    );
+    if (match) {
+      match.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, [mode, activePrimerAnchor]);
 
   const cards = useMemo(() => {
     const base =
@@ -69,12 +163,13 @@ export const TmuaWorkspace: React.FC<TmuaWorkspaceProps> = ({
     setAnswers({});
     setFlagged({});
     setFinished(false);
+    setQueuedFromMock(false);
     setSecondsLeft(paper.minutes * 60);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const finishPaper = () => {
-    if (!activePaper) return;
+    if (!activePaper || finished) return;
     const correct = activePaper.paper.questions.filter((q) => answers[q.id] === q.answer).length;
     onSaveAttempt({
       id: `tmua-${Date.now()}`,
@@ -88,42 +183,143 @@ export const TmuaWorkspace: React.FC<TmuaWorkspaceProps> = ({
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  // Auto-submit active mock paper on timeout
+  useEffect(() => {
+    if (activePaper && !finished && secondsLeft === 0) {
+      finishPaper();
+    }
+  }, [activePaper, finished, secondsLeft]);
+
+  const openPrimerAt = (lessonId: string) => {
+    setActivePrimerAnchor(lessonId);
+    setMode('logic');
+  };
+
   if (subTab === 'resources') {
-    return <OfficialResourcesPanel test={test} />;
+    return (
+      <div className="space-y-8">
+        <OfficialResourcesPanel test={test} />
+        {deduplicatedPackResources.length > 0 && (
+          <div className="border border-[var(--rule)] bg-[var(--surface)] p-5 sm:p-6 space-y-4">
+            <div>
+              <div className="text-xs font-mono-tabular uppercase tracking-wider text-[var(--accent)]">
+                Curated TMUA Study &amp; Walkthrough Links
+              </div>
+              <p className="text-xs text-[var(--text-muted)] mt-1">
+                Categorised by source — current official specs, official archives, university
+                walkthroughs, and third-party indexes.
+              </p>
+            </div>
+            <div className="grid sm:grid-cols-2 gap-3">
+              {deduplicatedPackResources.map((link) => {
+                const badge = RESOURCE_CATEGORY_LABEL[link.category] ?? {
+                  label: link.category,
+                  cls: 'border-[var(--rule)] text-[var(--text-muted)]',
+                };
+                return (
+                  <a
+                    key={link.id}
+                    href={link.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="border border-[var(--rule)] bg-[var(--bg)] hover:border-[var(--accent)] p-4 flex flex-col justify-between gap-2.5 transition-colors"
+                  >
+                    <div className="space-y-1.5">
+                      <div className="flex items-center justify-between gap-2">
+                        <span
+                          className={`text-[10px] font-mono-tabular uppercase tracking-wider px-2 py-0.5 border ${badge.cls}`}
+                        >
+                          {badge.label}
+                        </span>
+                        <ExternalLink className="w-3.5 h-3.5 text-[var(--text-muted)]" />
+                      </div>
+                      <div className="text-sm font-semibold text-[var(--ink)]">{link.title}</div>
+                      <p className="text-xs text-[var(--text-muted)] leading-relaxed">
+                        {link.description}
+                      </p>
+                    </div>
+                  </a>
+                );
+              })}
+            </div>
+          </div>
+        )}
+      </div>
+    );
   }
 
   if (subTab === 'progress') {
     const tmuaAttempts = attempts.filter((a) => a.testId === 'tmua');
+    const drillTried = Object.values(drillStats).reduce((s, v) => s + v.total, 0);
+    const drillCorrect = Object.values(drillStats).reduce((s, v) => s + v.correct, 0);
+    const drillSecure = Object.values(drillStats).reduce((s, v) => s + v.secure, 0);
+
     return (
-      <div className="space-y-6">
+      <div className="space-y-8">
         <div>
           <h2 className="font-display text-3xl text-[var(--ink)]">TMUA Progress</h2>
           <p className="text-sm text-[var(--text-muted)] mt-1">
-            Raw Paper 1 &amp; Paper 2 scores out of 20 (official UAT-UK 1.0–9.0 grades are scaled
-            each sitting across both papers combined).
+            Mock paper raw scores (out of 20) and first-attempt drill accuracy are tracked
+            separately. Official UAT-UK 1.0–9.0 grades are scaled each sitting across both papers
+            and are not predicted here.
           </p>
         </div>
-        {tmuaAttempts.length === 0 ? (
-          <div className="border border-[var(--rule)] p-6 text-sm text-[var(--text-muted)]">
-            No TMUA papers completed yet.
+
+        <div className="border border-[var(--rule)] bg-[var(--surface)] p-5 grid sm:grid-cols-4 gap-4">
+          <div>
+            <div className="text-[11px] font-mono-tabular uppercase text-[var(--text-muted)]">
+              Drills First-Attempted
+            </div>
+            <div className="font-display text-3xl text-[var(--ink)] mt-1">{drillTried} / 460</div>
           </div>
-        ) : (
-          <div className="border-t border-[var(--rule)] divide-y divide-[var(--rule)]">
-            {tmuaAttempts.map((a) => (
-              <div key={a.id} className="py-3.5 flex items-center justify-between text-sm">
-                <div className="font-medium text-[var(--ink)]">{a.testCode}</div>
-                <div className="flex items-center gap-5 font-mono-tabular">
-                  <span className="text-[var(--accent)] font-semibold">
-                    {a.correct} / {a.total} ({Math.round((a.correct / Math.max(1, a.total)) * 100)}%)
-                  </span>
-                  <span className="text-xs text-[var(--text-muted)]">
-                    {new Date(a.createdAt).toLocaleDateString()}
-                  </span>
+          <div>
+            <div className="text-[11px] font-mono-tabular uppercase text-[var(--text-muted)]">
+              First-Attempt Correct
+            </div>
+            <div className="font-display text-3xl text-[var(--accent)] mt-1">
+              {drillTried > 0 ? `${Math.round((drillCorrect / drillTried) * 100)}%` : '—'}
+            </div>
+          </div>
+          <div>
+            <div className="text-[11px] font-mono-tabular uppercase text-[var(--text-muted)]">
+              Secure (Unassisted, Non-Guess)
+            </div>
+            <div className="font-display text-3xl text-[var(--ink)] mt-1">
+              {drillTried > 0 ? `${Math.round((drillSecure / drillTried) * 100)}%` : '—'}
+            </div>
+          </div>
+          <div>
+            <div className="text-[11px] font-mono-tabular uppercase text-[var(--text-muted)]">
+              Mistake Review Queue
+            </div>
+            <div className="font-display text-3xl text-[var(--ink)] mt-1">{reviewQueueCount}</div>
+          </div>
+        </div>
+
+        <div className="space-y-3">
+          <h3 className="font-display text-xl text-[var(--ink)]">Mock Paper Attempts</h3>
+          {tmuaAttempts.length === 0 ? (
+            <div className="border border-[var(--rule)] p-6 text-sm text-[var(--text-muted)]">
+              No TMUA mock papers completed yet.
+            </div>
+          ) : (
+            <div className="border-t border-[var(--rule)] divide-y divide-[var(--rule)]">
+              {tmuaAttempts.map((a) => (
+                <div key={a.id} className="py-3.5 flex items-center justify-between text-sm">
+                  <div className="font-medium text-[var(--ink)]">{a.testCode}</div>
+                  <div className="flex items-center gap-5 font-mono-tabular">
+                    <span className="text-[var(--accent)] font-semibold">
+                      {a.correct} / {a.total} ({Math.round((a.correct / Math.max(1, a.total)) * 100)}%)
+                    </span>
+                    <span className="text-xs text-[var(--text-muted)]">
+                      {new Date(a.createdAt).toLocaleDateString()}
+                    </span>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
-        )}
+              ))}
+            </div>
+          )}
+        </div>
       </div>
     );
   }
@@ -141,6 +337,27 @@ export const TmuaWorkspace: React.FC<TmuaWorkspaceProps> = ({
         byTopic[q.topic].total += 1;
         if (answers[q.id] === q.answer) byTopic[q.topic].ok += 1;
       }
+      const missedPackQs = qs.filter(
+        (q) => packMockQuestionIds.has(q.id) && answers[q.id] !== q.answer
+      );
+
+      const sendMissedToReview = () => {
+        const at = new Date().toISOString();
+        let nextHist = history;
+        for (const q of missedPackQs) {
+          nextHist = recordResult(nextHist, q, {
+            selected: answers[q.id] ?? null,
+            guessed: false,
+            assisted: false,
+            at,
+            reason: null,
+            note: `From ${mockTitle} · Paper ${paper.paperNumber}`,
+          });
+        }
+        setHistory(nextHist);
+        saveTmuaHistory(nextHist);
+        setQueuedFromMock(true);
+      };
 
       return (
         <div className="space-y-8">
@@ -156,7 +373,19 @@ export const TmuaWorkspace: React.FC<TmuaWorkspaceProps> = ({
                 Raw practice score out of 20 (no negative marking, no calculator).
               </p>
             </div>
-            <div className="flex items-center gap-3">
+            <div className="flex flex-wrap items-center gap-3">
+              {missedPackQs.length > 0 && (
+                <button
+                  type="button"
+                  disabled={queuedFromMock}
+                  onClick={sendMissedToReview}
+                  className="px-4 py-2 border border-[var(--accent)] text-[var(--accent)] text-xs font-medium cursor-pointer disabled:opacity-50"
+                >
+                  {queuedFromMock
+                    ? `Added ${missedPackQs.length} to Mistake Review`
+                    : `Add ${missedPackQs.length} missed to Mistake Review`}
+                </button>
+              )}
               <button
                 type="button"
                 onClick={() => startPaper(mockTitle, paper)}
@@ -202,13 +431,13 @@ export const TmuaWorkspace: React.FC<TmuaWorkspaceProps> = ({
                       {ok ? 'Correct' : picked === undefined ? 'Unanswered' : 'Incorrect'}
                     </span>
                   </div>
-                  <div className="text-sm text-[var(--ink)] font-medium whitespace-pre-line">
+                  <div className="text-sm text-[var(--ink)] font-medium whitespace-pre-line break-words">
                     {q.stem}
                   </div>
-                  <div className="text-xs text-[var(--accent)]">
+                  <div className="text-xs text-[var(--accent)] break-words">
                     Answer: {String.fromCharCode(65 + q.answer)} — {q.options[q.answer]}
                   </div>
-                  <p className="text-xs text-[var(--text-muted)] leading-relaxed">
+                  <p className="text-xs text-[var(--text-muted)] leading-relaxed whitespace-pre-line">
                     {q.explanation}
                   </p>
                 </div>
@@ -248,11 +477,11 @@ export const TmuaWorkspace: React.FC<TmuaWorkspaceProps> = ({
           </span>
         }
       >
-        <div className="max-w-3xl mx-auto px-6 py-8 space-y-6">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 py-8 space-y-6">
           <div className="text-xs font-semibold uppercase tracking-wider text-[#0B4F6C]">
             {q.topic}
           </div>
-          <div className="text-[15px] text-[#111827] leading-relaxed whitespace-pre-line">
+          <div className="text-[15px] text-[#111827] leading-relaxed whitespace-pre-line break-words">
             {q.stem}
           </div>
 
@@ -280,7 +509,9 @@ export const TmuaWorkspace: React.FC<TmuaWorkspaceProps> = ({
                   >
                     {letter}
                   </span>
-                  <span className="text-sm leading-relaxed">{opt}</span>
+                  <span className="text-sm leading-relaxed whitespace-pre-line break-words">
+                    {opt}
+                  </span>
                 </button>
               );
             })}
@@ -298,7 +529,7 @@ export const TmuaWorkspace: React.FC<TmuaWorkspaceProps> = ({
       <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[var(--rule)] pb-4">
         <div>
           <div className="text-xs font-mono-tabular uppercase tracking-wider text-[var(--accent)]">
-            TMUA · PAPER 1 (75 MIN) &amp; PAPER 2 (75 MIN) · NO CALCULATOR
+            TMUA · PAPER 1 (75 MIN) &amp; PAPER 2 (75 MIN) · NO CALCULATOR · 460 DRILLS + 3 FULL MOCKS
           </div>
           <h2 className="font-display text-3xl sm:text-4xl text-[var(--ink)] mt-0.5">
             {test.name}
@@ -307,9 +538,11 @@ export const TmuaWorkspace: React.FC<TmuaWorkspaceProps> = ({
         <div className="flex flex-wrap items-center gap-1 text-xs">
           {(
             [
-              ['mocks', 'Full Mock (P1 & P2)'],
+              ['skills', 'Skills Practice'],
+              ['review', `Mistake Review${reviewQueueCount > 0 ? ` (${reviewQueueCount})` : ''}`],
+              ['mocks', `Full Mocks (${TMUA_MOCKS.length})`],
               ['flashcards', 'Logic & Formula Cards'],
-              ['logic', 'Paper 2 Logic Guide'],
+              ['logic', 'Paper 2 Logic Primer'],
             ] as const
           ).map(([id, label]) => (
             <button
@@ -318,7 +551,7 @@ export const TmuaWorkspace: React.FC<TmuaWorkspaceProps> = ({
               onClick={() => setMode(id)}
               className={`px-3 py-1.5 border cursor-pointer transition-colors ${
                 mode === id
-                  ? 'border-[var(--accent)] text-[var(--accent)]'
+                  ? 'border-[var(--accent)] text-[var(--accent)] bg-[var(--accent)]/10'
                   : 'border-[var(--rule)] text-[var(--text-muted)] hover:text-[var(--ink)]'
               }`}
             >
@@ -328,11 +561,21 @@ export const TmuaWorkspace: React.FC<TmuaWorkspaceProps> = ({
         </div>
       </div>
 
+      {(mode === 'skills' || mode === 'review') && (
+        <TmuaPracticeSuite
+          view={mode}
+          history={history}
+          onUpdateHistory={setHistory}
+          onOpenPrimer={openPrimerAt}
+        />
+      )}
+
       {mode === 'mocks' && (
         <div className="space-y-5">
           <p className="text-sm text-[var(--text-muted)]">
             Exact UAT-UK format: two separate 75-minute, 20-question papers with no calculator, no
-            formula sheet, and no negative marking.
+            formula sheet, and no negative marking. Original practice mocks (not normed official
+            equivalents).
           </p>
           {TMUA_MOCKS.map((mock) => (
             <div
@@ -460,8 +703,38 @@ export const TmuaWorkspace: React.FC<TmuaWorkspaceProps> = ({
       )}
 
       {mode === 'logic' && (
-        <div className="rounded-2xl border border-[var(--rule)] bg-[var(--surface)] p-6 sm:p-8">
-          <MarkdownRenderer content={TMUA_LOGIC_GUIDE} />
+        <div className="space-y-6">
+          {/* Quick-jump Paper 2 skill anchors */}
+          <div className="flex flex-wrap items-center gap-1.5 text-xs">
+            <span className="text-[var(--text-muted)] font-mono-tabular uppercase tracking-wider mr-1">
+              Jump to section:
+            </span>
+            {Object.entries(TMUA_PRIMER_SECTIONS).map(([id, sec]) => (
+              <button
+                key={id}
+                type="button"
+                onClick={() => setActivePrimerAnchor(id)}
+                className={`px-2.5 py-1 border cursor-pointer transition-colors ${
+                  activePrimerAnchor === id
+                    ? 'border-[var(--accent)] text-[var(--accent)] bg-[var(--accent)]/10'
+                    : 'border-[var(--rule)] text-[var(--text-muted)] hover:text-[var(--ink)]'
+                }`}
+              >
+                {sec.title}
+              </button>
+            ))}
+          </div>
+
+          <div
+            ref={primerContainerRef}
+            className="rounded-2xl border border-[var(--rule)] bg-[var(--surface)] p-6 sm:p-8"
+          >
+            <MarkdownRenderer content={TMUA_LOGIC_PRIMER_MD} />
+          </div>
+
+          <div className="rounded-2xl border border-[var(--rule)] bg-[var(--surface)] p-6 sm:p-8">
+            <MarkdownRenderer content={TMUA_LOGIC_GUIDE} />
+          </div>
         </div>
       )}
     </div>
