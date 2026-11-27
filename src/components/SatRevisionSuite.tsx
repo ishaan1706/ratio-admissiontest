@@ -6,6 +6,7 @@ import {
   BookOpen,
   Calculator,
   Check,
+  ExternalLink,
   Filter,
   RotateCcw,
   Shuffle,
@@ -14,13 +15,47 @@ import {
 } from 'lucide-react';
 import satBankRaw from '../data/packs/sat-suite/sat-question-bank.json';
 import satVocabRaw from '../data/packs/sat-suite/sat-vocab.json';
+import officialResourcesRaw from '../data/packs/sat-suite/official-resources-map.json';
 import skillLessonsMd from '../data/packs/sat-suite/skill-lessons.md?raw';
 import desmosGuideMd from '../data/packs/sat-suite/desmos-guide.md?raw';
 import formulaSheetMd from '../data/packs/sat-suite/formula-sheet.md?raw';
 import grammarGuideMd from '../data/packs/sat-suite/grammar-and-transitions.md?raw';
 import studyPlansMd from '../data/packs/sat-suite/study-plans.md?raw';
+import collegeBoardAlignmentMd from '../data/packs/sat-suite/college-board-alignment.md?raw';
 import satRevisionGuideMd from '../data/packs/sat/sat-revision-guide.md?raw';
 import { MarkdownRenderer } from './MarkdownRenderer';
+
+interface OfficialSkillResource {
+  id: string;
+  ratioSkill: string;
+  officialSkill: string;
+  section: 'rw' | 'math';
+  officialDomain: string;
+  approxDomainShare: number;
+  questionBank: {
+    studentUrl: string;
+    educatorUrl: string;
+    assessment: string;
+    section: string;
+    domain: string;
+    skill: string;
+  };
+  khanUnitUrl: string;
+  bluebookUrl: string;
+  skillsInsightUrl: string;
+  progress?: {
+    foundation: string;
+    stretch: string;
+  };
+}
+
+const OFFICIAL_SKILL_RESOURCES = (
+  officialResourcesRaw as { skills: OfficialSkillResource[] }
+).skills;
+
+export const SAT_BANK_TOTAL = (
+  satBankRaw as { drills: { questions: unknown[] }[] }
+).drills.reduce((sum, d) => sum + d.questions.length, 0);
 
 export interface BankOption {
   letter: string;
@@ -48,6 +83,7 @@ export interface BankQuestion {
   explanation: string;
   commonTrap?: string;
   desmosFriendly?: boolean;
+  practiceBand?: number;
 }
 
 interface BankDrillWrapper {
@@ -556,6 +592,14 @@ export const SatQuestionBankView: React.FC<{
               <span className="px-2 py-0.5 rounded bg-[var(--bg)] border border-[var(--rule)] uppercase text-[var(--text-muted)]">
                 {q.difficulty}
               </span>
+              {typeof q.practiceBand === 'number' && (
+                <span
+                  title="Ratio practice band (not a score)"
+                  className="px-2 py-0.5 rounded bg-[var(--bg)] border border-[var(--rule)] text-[var(--text-muted)]"
+                >
+                  Ratio practice band (not a score): {q.practiceBand}/7
+                </span>
+              )}
               {q.desmosFriendly && (
                 <span className="px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 inline-flex items-center gap-1">
                   <Calculator className="w-3 h-3" /> Desmos-friendly
@@ -856,9 +900,82 @@ export const SatSkillLessonsView: React.FC<{
                 onClick={() => onPracticeSkill(active.skill)}
                 className="px-4 py-2 rounded-xl bg-[var(--accent)] text-[var(--accent-fg)] text-xs font-semibold inline-flex items-center gap-1.5 cursor-pointer"
               >
-                Practice 20 Qs on this skill <ArrowRight className="w-3.5 h-3.5" />
+                Practice Qs on this skill <ArrowRight className="w-3.5 h-3.5" />
               </button>
             </div>
+            {(() => {
+              const res = OFFICIAL_SKILL_RESOURCES.find(
+                (r) => r.ratioSkill.toLowerCase() === active.skill.toLowerCase()
+              );
+              if (!res) return null;
+              return (
+                <div className="rounded-xl border border-[var(--rule)] bg-[var(--bg)] p-4 space-y-2.5 text-xs">
+                  <div className="flex flex-wrap items-center justify-between gap-2">
+                    <span className="font-mono-tabular uppercase tracking-wider text-[11px] text-[var(--accent)]">
+                      Official College Board &amp; Khan Links · ~{res.approxDomainShare}% domain share
+                    </span>
+                    <span className="text-[11px] text-[var(--text-muted)]">
+                      Filter: {res.questionBank.section} → {res.questionBank.domain} →{' '}
+                      {res.questionBank.skill}
+                    </span>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    <a
+                      href={res.questionBank.studentUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="px-2.5 py-1 rounded-lg border border-[var(--rule)] hover:border-[var(--accent)] text-[var(--ink)] inline-flex items-center gap-1"
+                    >
+                      MyPractice Bank <ExternalLink className="w-3 h-3" />
+                    </a>
+                    <a
+                      href={res.questionBank.educatorUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="px-2.5 py-1 rounded-lg border border-[var(--rule)] hover:border-[var(--accent)] text-[var(--ink)] inline-flex items-center gap-1"
+                    >
+                      Educator Bank <ExternalLink className="w-3 h-3" />
+                    </a>
+                    <a
+                      href={res.khanUnitUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="px-2.5 py-1 rounded-lg border border-[var(--rule)] hover:border-[var(--accent)] text-[var(--ink)] inline-flex items-center gap-1"
+                    >
+                      Khan Academy Unit <ExternalLink className="w-3 h-3" />
+                    </a>
+                    <a
+                      href={res.bluebookUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="px-2.5 py-1 rounded-lg border border-[var(--rule)] hover:border-[var(--accent)] text-[var(--ink)] inline-flex items-center gap-1"
+                    >
+                      Bluebook Tests <ExternalLink className="w-3 h-3" />
+                    </a>
+                    <a
+                      href={res.skillsInsightUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="px-2.5 py-1 rounded-lg border border-[var(--rule)] hover:border-[var(--accent)] text-[var(--ink)] inline-flex items-center gap-1"
+                    >
+                      Skills Insight <ExternalLink className="w-3 h-3" />
+                    </a>
+                  </div>
+                  {res.progress && (
+                    <div className="text-[11px] text-[var(--text-muted)] pt-1 border-t border-[var(--rule)] grid sm:grid-cols-2 gap-2">
+                      <div>
+                        <strong className="text-[var(--ink)]">Foundation:</strong>{' '}
+                        {res.progress.foundation}
+                      </div>
+                      <div>
+                        <strong className="text-[var(--ink)]">Stretch:</strong>{' '}
+                        {res.progress.stretch}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              );
+            })()}
             <MarkdownRenderer content={active.body} />
           </>
         ) : (
@@ -1106,7 +1223,9 @@ export const SatVocabView: React.FC = () => {
 
 /* ── 4. Reference Guides, 4 Study Plans & Illustrative Score Estimator ─── */
 export const SatGuidesAndPlansView: React.FC = () => {
-  const [sub, setSub] = useState<'desmos' | 'formulas' | 'grammar' | 'plans' | 'guide' | 'estimator'>('desmos');
+  const [sub, setSub] = useState<
+    'alignment' | 'desmos' | 'formulas' | 'grammar' | 'plans' | 'guide' | 'estimator'
+  >('alignment');
   const [rwRaw, setRwRaw] = useState(40);
   const [mathRaw, setMathRaw] = useState(34);
 
@@ -1120,6 +1239,7 @@ export const SatGuidesAndPlansView: React.FC = () => {
       <div className="flex flex-wrap gap-2">
         {(
           [
+            ['alignment', 'College Board Alignment'],
             ['desmos', 'Desmos Guide'],
             ['formulas', 'Formula Sheet'],
             ['grammar', 'Grammar & Transitions'],
@@ -1222,15 +1342,17 @@ export const SatGuidesAndPlansView: React.FC = () => {
         <div className="rounded-2xl border border-[var(--rule)] bg-[var(--surface)] p-6 sm:p-8">
           <MarkdownRenderer
             content={
-              sub === 'desmos'
-                ? desmosGuideMd
-                : sub === 'formulas'
-                  ? formulaSheetMd
-                  : sub === 'grammar'
-                    ? grammarGuideMd
-                    : sub === 'plans'
-                      ? studyPlansMd
-                      : satRevisionGuideMd
+              sub === 'alignment'
+                ? collegeBoardAlignmentMd
+                : sub === 'desmos'
+                  ? desmosGuideMd
+                  : sub === 'formulas'
+                    ? formulaSheetMd
+                    : sub === 'grammar'
+                      ? grammarGuideMd
+                      : sub === 'plans'
+                        ? studyPlansMd
+                        : satRevisionGuideMd
             }
           />
         </div>

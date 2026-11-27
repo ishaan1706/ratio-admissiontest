@@ -13,11 +13,12 @@ Original Ratio revision notes for the **digital SAT** (taken in the Bluebook app
 | Math | 2 × 22 | 44 | 2 × 35 min = 70 min | ~95 s |
 | **Total** | 4 | **98** | **2 h 14 min** + break | |
 
-- **Adaptive by section.** Module 1 has a mix of easy, medium and hard questions. How you do in Module 1 decides whether Module 2 is the easier or the harder version. Only the harder Module 2 gives access to the top of the score range, so **Module 1 accuracy matters most**.
+- **Adaptive by section.** Module 1 has a mix of easy, medium and hard questions. How you do in Module 1 decides whether Module 2 is the easier or the harder version. Both versions contain a mix of difficulties. The official section score uses operational performance in both modules and item characteristics; do your best in each module.
+- **Delivered vs. scored.** Each R&W module contains 25 scored items and 2 unscored items; each Math module contains 20 scored items and 2 unscored items. The unscored positions are not labeled during the test.
 - **Scores.** Each section is scored 200–800; the total is 400–1600. There is **no penalty for wrong answers**: never leave a question blank.
-- **Within a module** you can move back and forth, flag questions to revisit, and use the answer eliminator. Once a module's time ends, you cannot go back to it.
-- **Built-in tools:** a countdown timer, the Desmos graphing calculator (Math), the reference sheet (Math), highlighting and annotation (Reading and Writing).
-- **Question types:** every Reading and Writing question is 4-option multiple choice with its own short passage (25–150 words). About 75% of Math questions are multiple choice; the rest are **student-produced responses (SPR)**, where you type the answer.
+- **Within a module** you can move back and forth, flag questions to revisit, and use the answer eliminator. After you submit a module or its time expires, you cannot go back to it.
+- **Built-in tools:** a countdown timer, scientific and graphing Desmos calculators (Math), the reference sheet (Math), highlighting and annotation (Reading and Writing).
+- **Question types:** every Reading and Writing question is 4-option multiple choice with its own short stimulus (typically a 25–150 word passage or passage pair; some items use notes or data). About 75% of Math questions are multiple choice; the rest are **student-produced responses (SPR)**, where you type the answer.
 
 Official: [Test structure](https://satsuite.collegeboard.org/sat/whats-on-the-test/structure) · [How scores are calculated](https://satsuite.collegeboard.org/scores/what-scores-mean/how-scores-calculated)
 
@@ -25,7 +26,7 @@ Official: [Test structure](https://satsuite.collegeboard.org/sat/whats-on-the-te
 
 ## 2. Reading and Writing
 
-Questions in each module appear in domain order: Craft and Structure → Information and Ideas → Standard English Conventions → Expression of Ideas. Within each group they go roughly from easier to harder.
+The SAT groups similar Reading and Writing skills and broadly moves from easier to harder within a group. The shares below are approximate proportions of operational questions across both modules.
 
 | Domain | Share | Skills |
 |---|---|---|
@@ -102,6 +103,8 @@ Official: [Reading and Writing overview](https://satsuite.collegeboard.org/sat/w
 
 ## 3. Math
 
+The shares below are approximate proportions of scored questions across both modules.
+
 | Domain | Share | Main topics |
 |---|---|---|
 | Algebra | ~35% (13–15 Qs) | Linear equations in 1 and 2 variables, linear functions, systems of 2 linear equations, linear inequalities |
@@ -109,7 +112,7 @@ Official: [Reading and Writing overview](https://satsuite.collegeboard.org/sat/w
 | Problem-Solving and Data Analysis | ~15% (5–7 Qs) | Ratios, rates, units, percentages, one- and two-variable data, probability, sample statistics and margin of error, studies and experiments |
 | Geometry and Trigonometry | ~15% (5–7 Qs) | Area and volume, lines and angles, triangles and similarity, right-triangle trigonometry, circles |
 
-A calculator is allowed on **every** Math question. Official: [Math overview](https://satsuite.collegeboard.org/sat/whats-on-the-test/math/overview) · [Calculator policy](https://satsuite.collegeboard.org/sat/what-to-bring-do/calculator-policy)
+A calculator is allowed on **every** Math question. Bluebook supplies Desmos; check the live policy before choosing a personal non-CAS calculator. Official: [Math overview](https://satsuite.collegeboard.org/sat/whats-on-the-test/math/overview) · [Calculator policy](https://satsuite.collegeboard.org/sat/what-to-bring-do/calculator-policy)
 
 ### 3.1 Student-produced responses (SPR)
 - Up to **5 characters** for a positive answer, **6** with a negative sign (the minus sign does not count toward the 5).
@@ -130,7 +133,7 @@ A calculator is allowed on **every** Math question. Official: [Math overview](ht
 - Factoring patterns: a² − b² = (a + b)(a − b); (a ± b)² = a² ± 2ab + b².
 - Quadratic formula: x = [−b ± √(b² − 4ac)] / 2a. **Discriminant** b² − 4ac: > 0 two real solutions, = 0 one, < 0 none.
 - Sum of roots = −b/a; product of roots = c/a.
-- Vertex form y = a(x − h)² + k: vertex (h, k); a > 0 opens up (minimum k), a < 0 opens down (maximum k). Vertex x = −b/2a. The vertex lies midway between the x-intercepts.
+- Vertex form y = a(x − h)² + k: vertex (h, k); a > 0 opens up (minimum k), a < 0 opens down (maximum k). Vertex x = −b/2a. When there are two real x-intercepts, their midpoint gives the vertex’s x-coordinate.
 - Factored form y = a(x − p)(x − q): x-intercepts p and q.
 - Exponential: y = a(1 + r)^t (growth), y = a(1 − r)^t (decay). "Doubles every k years" → a · 2^(t/k). The base shows the percent change: 0.85 means −15% per period.
 - Exponent rules: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x^(m/n) = ⁿ√(xᵐ); x⁻ⁿ = 1/xⁿ.

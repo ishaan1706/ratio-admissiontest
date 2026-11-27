@@ -60,8 +60,8 @@ const EXAM_STATS: Record<
     universities: 'Cambridge · Imperial · LSE · Warwick',
   },
   sat: {
-    mocks: '600-Q Bank + 2 Full Mocks',
-    extras: '30 Skill Lessons · 400 Vocab',
+    mocks: '1,000-Q Bank + 4 Full Mocks',
+    extras: 'Adaptive M2 · 30 Lessons · 400 Vocab',
     interfaceLabel: 'Bluebook screen',
     universities: 'US Ivy League · MIT · Stanford',
   },
@@ -242,8 +242,8 @@ export const LandingView: React.FC<LandingViewProps> = ({
                 {/* Compact Metric Bar directly integrated into hero */}
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-5 pt-7 border-t border-white/[0.08]">
                   {[
-                    { value: '2,080+', label: 'Original Qs' },
-                    { value: '11', label: 'Full mocks' },
+                    { value: '2,770+', label: 'Original Qs' },
+                    { value: '13', label: 'Full mocks' },
                     { value: '470+', label: 'Vocab & cards' },
                     { value: '54', label: 'Official links' },
                   ].map((stat) => (
@@ -439,7 +439,7 @@ export const LandingView: React.FC<LandingViewProps> = ({
                   icon: Target,
                   title: 'Paced practice & mistake banks',
                   body: 'Build speed with ESAT’s 1:30/question pace timer and Daily 5, drill all 30 Digital SAT skills with Common Trap notes, and automatically resurface missed questions until mastered.',
-                  tag: '2,080+ original questions',
+                  tag: '2,770+ original questions',
                 },
                 {
                   icon: Layers,
@@ -579,7 +579,7 @@ export const LandingView: React.FC<LandingViewProps> = ({
                 <ul className="mt-5 space-y-2.5 text-xs text-zinc-200">
                   {[
                     'LNAT + UCAT + TARA + ESAT + TMUA + SAT',
-                    'All 2,080+ original questions & 11 full mocks',
+                    'All 2,770+ original questions & 13 full mocks',
                     '14-day no-questions-asked refund guarantee',
                     'All future mock & question additions included',
                   ].map((f) => (

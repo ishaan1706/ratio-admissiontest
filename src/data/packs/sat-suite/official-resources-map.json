@@ -1,0 +1,758 @@
+{
+  "exam": "SAT",
+  "version": 1,
+  "scoreBands": {
+    "rw": [
+      [
+        200,
+        360
+      ],
+      [
+        370,
+        410
+      ],
+      [
+        420,
+        480
+      ],
+      [
+        490,
+        540
+      ],
+      [
+        550,
+        600
+      ],
+      [
+        610,
+        670
+      ],
+      [
+        680,
+        800
+      ]
+    ],
+    "math": [
+      [
+        200,
+        360
+      ],
+      [
+        370,
+        410
+      ],
+      [
+        420,
+        460
+      ],
+      [
+        470,
+        540
+      ],
+      [
+        550,
+        600
+      ],
+      [
+        610,
+        670
+      ],
+      [
+        680,
+        800
+      ]
+    ]
+  },
+  "skills": [
+    {
+      "id": "rs3-link-central",
+      "ratioSkill": "Central Ideas and Details",
+      "officialSkill": "Central Ideas and Details",
+      "section": "rw",
+      "officialDomain": "Information and Ideas",
+      "approxDomainShare": 26,
+      "questionBank": {
+        "studentUrl": "https://mypractice.collegeboard.org/questionbank/search",
+        "educatorUrl": "https://satsuitequestionbank.collegeboard.org/",
+        "assessment": "SAT",
+        "section": "Reading and Writing",
+        "domain": "Information and Ideas",
+        "skill": "Central Ideas and Details"
+      },
+      "khanUnitUrl": "https://www.khanacademy.org/test-prep/sat-reading-and-writing/x0d47bcec73eb6c4b:foundations-information-and-ideas",
+      "bluebookUrl": "https://satsuite.collegeboard.org/practice/practice-tests/bluebook",
+      "skillsInsightUrl": "https://satsuite.collegeboard.org/skills-insight",
+      "progress": {
+        "foundation": "Identify the stated subject or detail.",
+        "stretch": "Combine the result with the passage’s main limit."
+      }
+    },
+    {
+      "id": "rs3-link-evidence",
+      "ratioSkill": "Command of Evidence: Textual",
+      "officialSkill": "Command of Evidence (Textual)",
+      "section": "rw",
+      "officialDomain": "Information and Ideas",
+      "approxDomainShare": 26,
+      "questionBank": {
+        "studentUrl": "https://mypractice.collegeboard.org/questionbank/search",
+        "educatorUrl": "https://satsuitequestionbank.collegeboard.org/",
+        "assessment": "SAT",
+        "section": "Reading and Writing",
+        "domain": "Information and Ideas",
+        "skill": "Command of Evidence (Textual)"
+      },
+      "khanUnitUrl": "https://www.khanacademy.org/test-prep/sat-reading-and-writing/x0d47bcec73eb6c4b:foundations-information-and-ideas",
+      "bluebookUrl": "https://satsuite.collegeboard.org/practice/practice-tests/bluebook",
+      "skillsInsightUrl": "https://satsuite.collegeboard.org/skills-insight",
+      "progress": {
+        "foundation": "Identify a sentence that directly supports a small claim.",
+        "stretch": "Choose the observation that supports two parts of a qualified claim without overstating cause."
+      }
+    },
+    {
+      "id": "rs3-link-quant",
+      "ratioSkill": "Command of Evidence: Quantitative",
+      "officialSkill": "Command of Evidence (Quantitative)",
+      "section": "rw",
+      "officialDomain": "Information and Ideas",
+      "approxDomainShare": 26,
+      "questionBank": {
+        "studentUrl": "https://mypractice.collegeboard.org/questionbank/search",
+        "educatorUrl": "https://satsuitequestionbank.collegeboard.org/",
+        "assessment": "SAT",
+        "section": "Reading and Writing",
+        "domain": "Information and Ideas",
+        "skill": "Command of Evidence (Quantitative)"
+      },
+      "khanUnitUrl": "https://www.khanacademy.org/test-prep/sat-reading-and-writing/x0d47bcec73eb6c4b:foundations-information-and-ideas",
+      "bluebookUrl": "https://satsuite.collegeboard.org/practice/practice-tests/bluebook",
+      "skillsInsightUrl": "https://satsuite.collegeboard.org/skills-insight",
+      "progress": {
+        "foundation": "Read one labeled cell.",
+        "stretch": "Compare changes or sums across multiple categories using the requested denominator or units."
+      }
+    },
+    {
+      "id": "rs3-link-infer",
+      "ratioSkill": "Inferences",
+      "officialSkill": "Inferences",
+      "section": "rw",
+      "officialDomain": "Information and Ideas",
+      "approxDomainShare": 26,
+      "questionBank": {
+        "studentUrl": "https://mypractice.collegeboard.org/questionbank/search",
+        "educatorUrl": "https://satsuitequestionbank.collegeboard.org/",
+        "assessment": "SAT",
+        "section": "Reading and Writing",
+        "domain": "Information and Ideas",
+        "skill": "Inferences"
+      },
+      "khanUnitUrl": "https://www.khanacademy.org/test-prep/sat-reading-and-writing/x0d47bcec73eb6c4b:foundations-information-and-ideas",
+      "bluebookUrl": "https://satsuite.collegeboard.org/practice/practice-tests/bluebook",
+      "skillsInsightUrl": "https://satsuite.collegeboard.org/skills-insight",
+      "progress": {
+        "foundation": "Extend explicit clues by one supported step.",
+        "stretch": "Choose a narrowly framed inference that survives competing explanations or missing information."
+      }
+    },
+    {
+      "id": "rs3-link-words",
+      "ratioSkill": "Words in Context",
+      "officialSkill": "Words in Context",
+      "section": "rw",
+      "officialDomain": "Craft and Structure",
+      "approxDomainShare": 28,
+      "questionBank": {
+        "studentUrl": "https://mypractice.collegeboard.org/questionbank/search",
+        "educatorUrl": "https://satsuitequestionbank.collegeboard.org/",
+        "assessment": "SAT",
+        "section": "Reading and Writing",
+        "domain": "Craft and Structure",
+        "skill": "Words in Context"
+      },
+      "khanUnitUrl": "https://www.khanacademy.org/test-prep/sat-reading-and-writing/x0d47bcec73eb6c4b:foundations-craft-and-structure",
+      "bluebookUrl": "https://satsuite.collegeboard.org/practice/practice-tests/bluebook",
+      "skillsInsightUrl": "https://satsuite.collegeboard.org/skills-insight",
+      "progress": {
+        "foundation": "Use a nearby definition or contrast.",
+        "stretch": "Resolve the precise sense of a word or phrase using several clues or the writer’s attitude."
+      }
+    },
+    {
+      "id": "rs3-link-purpose",
+      "ratioSkill": "Text Structure and Purpose",
+      "officialSkill": "Text Structure and Purpose",
+      "section": "rw",
+      "officialDomain": "Craft and Structure",
+      "approxDomainShare": 28,
+      "questionBank": {
+        "studentUrl": "https://mypractice.collegeboard.org/questionbank/search",
+        "educatorUrl": "https://satsuitequestionbank.collegeboard.org/",
+        "assessment": "SAT",
+        "section": "Reading and Writing",
+        "domain": "Craft and Structure",
+        "skill": "Text Structure and Purpose"
+      },
+      "khanUnitUrl": "https://www.khanacademy.org/test-prep/sat-reading-and-writing/x0d47bcec73eb6c4b:foundations-craft-and-structure",
+      "bluebookUrl": "https://satsuite.collegeboard.org/practice/practice-tests/bluebook",
+      "skillsInsightUrl": "https://satsuite.collegeboard.org/skills-insight",
+      "progress": {
+        "foundation": "Identify the job of a conspicuous example or result.",
+        "stretch": "Explain how a sentence limits or interprets evidence in a larger argument."
+      }
+    },
+    {
+      "id": "rs3-link-cross",
+      "ratioSkill": "Cross-Text Connections",
+      "officialSkill": "Cross-Text Connections",
+      "section": "rw",
+      "officialDomain": "Craft and Structure",
+      "approxDomainShare": 28,
+      "questionBank": {
+        "studentUrl": "https://mypractice.collegeboard.org/questionbank/search",
+        "educatorUrl": "https://satsuitequestionbank.collegeboard.org/",
+        "assessment": "SAT",
+        "section": "Reading and Writing",
+        "domain": "Craft and Structure",
+        "skill": "Cross-Text Connections"
+      },
+      "khanUnitUrl": "https://www.khanacademy.org/test-prep/sat-reading-and-writing/x0d47bcec73eb6c4b:foundations-craft-and-structure",
+      "bluebookUrl": "https://satsuite.collegeboard.org/practice/practice-tests/bluebook",
+      "skillsInsightUrl": "https://satsuite.collegeboard.org/skills-insight",
+      "progress": {
+        "foundation": "Recognize the shared topic or a clear agreement.",
+        "stretch": "Distinguish disagreement about evidence, scope, or interpretation."
+      }
+    },
+    {
+      "id": "rs3-link-synthesis",
+      "ratioSkill": "Rhetorical Synthesis",
+      "officialSkill": "Rhetorical Synthesis",
+      "section": "rw",
+      "officialDomain": "Expression of Ideas",
+      "approxDomainShare": 20,
+      "questionBank": {
+        "studentUrl": "https://mypractice.collegeboard.org/questionbank/search",
+        "educatorUrl": "https://satsuitequestionbank.collegeboard.org/",
+        "assessment": "SAT",
+        "section": "Reading and Writing",
+        "domain": "Expression of Ideas",
+        "skill": "Rhetorical Synthesis"
+      },
+      "khanUnitUrl": "https://www.khanacademy.org/test-prep/sat-reading-and-writing/x0d47bcec73eb6c4b:foundations-expression-of-ideas-and-standard-english-conventions",
+      "bluebookUrl": "https://satsuite.collegeboard.org/practice/practice-tests/bluebook",
+      "skillsInsightUrl": "https://satsuite.collegeboard.org/skills-insight",
+      "progress": {
+        "foundation": "Select the note that directly meets a simple aim.",
+        "stretch": "Combine selected details to satisfy a comparison, audience, or emphasis while omitting extraneous notes."
+      }
+    },
+    {
+      "id": "rs3-link-transition",
+      "ratioSkill": "Transitions",
+      "officialSkill": "Transitions",
+      "section": "rw",
+      "officialDomain": "Expression of Ideas",
+      "approxDomainShare": 20,
+      "questionBank": {
+        "studentUrl": "https://mypractice.collegeboard.org/questionbank/search",
+        "educatorUrl": "https://satsuitequestionbank.collegeboard.org/",
+        "assessment": "SAT",
+        "section": "Reading and Writing",
+        "domain": "Expression of Ideas",
+        "skill": "Transitions"
+      },
+      "khanUnitUrl": "https://www.khanacademy.org/test-prep/sat-reading-and-writing/x0d47bcec73eb6c4b:foundations-expression-of-ideas-and-standard-english-conventions",
+      "bluebookUrl": "https://satsuite.collegeboard.org/practice/practice-tests/bluebook",
+      "skillsInsightUrl": "https://satsuite.collegeboard.org/skills-insight",
+      "progress": {
+        "foundation": "Identify simple time order, addition, or contrast.",
+        "stretch": "Choose the exact relation between qualified claims or competing explanations."
+      }
+    },
+    {
+      "id": "rs3-link-boundary",
+      "ratioSkill": "Boundaries",
+      "officialSkill": "Boundaries",
+      "section": "rw",
+      "officialDomain": "Standard English Conventions",
+      "approxDomainShare": 26,
+      "questionBank": {
+        "studentUrl": "https://mypractice.collegeboard.org/questionbank/search",
+        "educatorUrl": "https://satsuitequestionbank.collegeboard.org/",
+        "assessment": "SAT",
+        "section": "Reading and Writing",
+        "domain": "Standard English Conventions",
+        "skill": "Boundaries"
+      },
+      "khanUnitUrl": "https://www.khanacademy.org/test-prep/sat-reading-and-writing/x0d47bcec73eb6c4b:foundations-expression-of-ideas-and-standard-english-conventions",
+      "bluebookUrl": "https://satsuite.collegeboard.org/practice/practice-tests/bluebook",
+      "skillsInsightUrl": "https://satsuite.collegeboard.org/skills-insight",
+      "progress": {
+        "foundation": "Separate two complete sentences or mark a clear list.",
+        "stretch": "Place matching punctuation around interruptions and preserve clause and phrase boundaries."
+      }
+    },
+    {
+      "id": "rs3-link-form",
+      "ratioSkill": "Form, Structure, and Sense",
+      "officialSkill": "Form, Structure, and Sense",
+      "section": "rw",
+      "officialDomain": "Standard English Conventions",
+      "approxDomainShare": 26,
+      "questionBank": {
+        "studentUrl": "https://mypractice.collegeboard.org/questionbank/search",
+        "educatorUrl": "https://satsuitequestionbank.collegeboard.org/",
+        "assessment": "SAT",
+        "section": "Reading and Writing",
+        "domain": "Standard English Conventions",
+        "skill": "Form, Structure, and Sense"
+      },
+      "khanUnitUrl": "https://www.khanacademy.org/test-prep/sat-reading-and-writing/x0d47bcec73eb6c4b:foundations-expression-of-ideas-and-standard-english-conventions",
+      "bluebookUrl": "https://satsuite.collegeboard.org/practice/practice-tests/bluebook",
+      "skillsInsightUrl": "https://satsuite.collegeboard.org/skills-insight",
+      "progress": {
+        "foundation": "Match an obvious subject and verb or select a clear tense.",
+        "stretch": "Resolve agreement across long subjects, attached clauses, and parallel or modifying constructions."
+      }
+    },
+    {
+      "id": "rs3-link-equation",
+      "ratioSkill": "Linear equations in one variable",
+      "officialSkill": "Linear equations in one variable",
+      "section": "math",
+      "officialDomain": "Algebra",
+      "approxDomainShare": 35,
+      "questionBank": {
+        "studentUrl": "https://mypractice.collegeboard.org/questionbank/search",
+        "educatorUrl": "https://satsuitequestionbank.collegeboard.org/",
+        "assessment": "SAT",
+        "section": "Math",
+        "domain": "Algebra",
+        "skill": "Linear equations in one variable"
+      },
+      "khanUnitUrl": "https://www.khanacademy.org/test-prep/v2-sat-math/x0fcc98a58ba3bea7:algebra-easier",
+      "bluebookUrl": "https://satsuite.collegeboard.org/practice/practice-tests/bluebook",
+      "skillsInsightUrl": "https://satsuite.collegeboard.org/skills-insight",
+      "progress": {
+        "foundation": "Isolate a variable in a short equation.",
+        "stretch": "Use structure to determine when a parameter gives one, zero, or infinitely many solutions."
+      }
+    },
+    {
+      "id": "rs3-link-line",
+      "ratioSkill": "Linear equations in two variables",
+      "officialSkill": "Linear equations in two variables",
+      "section": "math",
+      "officialDomain": "Algebra",
+      "approxDomainShare": 35,
+      "questionBank": {
+        "studentUrl": "https://mypractice.collegeboard.org/questionbank/search",
+        "educatorUrl": "https://satsuitequestionbank.collegeboard.org/",
+        "assessment": "SAT",
+        "section": "Math",
+        "domain": "Algebra",
+        "skill": "Linear equations in two variables"
+      },
+      "khanUnitUrl": "https://www.khanacademy.org/test-prep/v2-sat-math/x0fcc98a58ba3bea7:algebra-easier",
+      "bluebookUrl": "https://satsuite.collegeboard.org/practice/practice-tests/bluebook",
+      "skillsInsightUrl": "https://satsuite.collegeboard.org/skills-insight",
+      "progress": {
+        "foundation": "Use a point or intercept in a given line.",
+        "stretch": "Infer a relationship between slope, intercept, and a second line after translating form."
+      }
+    },
+    {
+      "id": "rs3-link-linear",
+      "ratioSkill": "Linear functions",
+      "officialSkill": "Linear functions",
+      "section": "math",
+      "officialDomain": "Algebra",
+      "approxDomainShare": 35,
+      "questionBank": {
+        "studentUrl": "https://mypractice.collegeboard.org/questionbank/search",
+        "educatorUrl": "https://satsuitequestionbank.collegeboard.org/",
+        "assessment": "SAT",
+        "section": "Math",
+        "domain": "Algebra",
+        "skill": "Linear functions"
+      },
+      "khanUnitUrl": "https://www.khanacademy.org/test-prep/v2-sat-math/x0fcc98a58ba3bea7:algebra-easier",
+      "bluebookUrl": "https://satsuite.collegeboard.org/practice/practice-tests/bluebook",
+      "skillsInsightUrl": "https://satsuite.collegeboard.org/skills-insight",
+      "progress": {
+        "foundation": "Evaluate a given rule or read a rate.",
+        "stretch": "Reconstruct a model from several observations or change the input origin and interpretation."
+      }
+    },
+    {
+      "id": "rs3-link-system",
+      "ratioSkill": "Systems of two linear equations in two variables",
+      "officialSkill": "Systems of two linear equations in two variables",
+      "section": "math",
+      "officialDomain": "Algebra",
+      "approxDomainShare": 35,
+      "questionBank": {
+        "studentUrl": "https://mypractice.collegeboard.org/questionbank/search",
+        "educatorUrl": "https://satsuitequestionbank.collegeboard.org/",
+        "assessment": "SAT",
+        "section": "Math",
+        "domain": "Algebra",
+        "skill": "Systems of two linear equations in two variables"
+      },
+      "khanUnitUrl": "https://www.khanacademy.org/test-prep/v2-sat-math/x0fcc98a58ba3bea7:algebra-easier",
+      "bluebookUrl": "https://satsuite.collegeboard.org/practice/practice-tests/bluebook",
+      "skillsInsightUrl": "https://satsuite.collegeboard.org/skills-insight",
+      "progress": {
+        "foundation": "Solve a straightforward pair by elimination.",
+        "stretch": "Build a contextual system or use its coefficients to reason about the number of solutions."
+      }
+    },
+    {
+      "id": "rs3-link-inequality",
+      "ratioSkill": "Linear inequalities in one or two variables",
+      "officialSkill": "Linear inequalities in one or two variables",
+      "section": "math",
+      "officialDomain": "Algebra",
+      "approxDomainShare": 35,
+      "questionBank": {
+        "studentUrl": "https://mypractice.collegeboard.org/questionbank/search",
+        "educatorUrl": "https://satsuitequestionbank.collegeboard.org/",
+        "assessment": "SAT",
+        "section": "Math",
+        "domain": "Algebra",
+        "skill": "Linear inequalities in one or two variables"
+      },
+      "khanUnitUrl": "https://www.khanacademy.org/test-prep/v2-sat-math/x0fcc98a58ba3bea7:algebra-easier",
+      "bluebookUrl": "https://satsuite.collegeboard.org/practice/practice-tests/bluebook",
+      "skillsInsightUrl": "https://satsuite.collegeboard.org/skills-insight",
+      "progress": {
+        "foundation": "Recognize an allowed value.",
+        "stretch": "Combine constraints, apply a sign reversal, and count admissible integers without including a strict endpoint."
+      }
+    },
+    {
+      "id": "rs3-link-equivalent",
+      "ratioSkill": "Equivalent expressions",
+      "officialSkill": "Equivalent expressions",
+      "section": "math",
+      "officialDomain": "Advanced Math",
+      "approxDomainShare": 35,
+      "questionBank": {
+        "studentUrl": "https://mypractice.collegeboard.org/questionbank/search",
+        "educatorUrl": "https://satsuitequestionbank.collegeboard.org/",
+        "assessment": "SAT",
+        "section": "Math",
+        "domain": "Advanced Math",
+        "skill": "Equivalent expressions"
+      },
+      "khanUnitUrl": "https://www.khanacademy.org/test-prep/v2-sat-math/x0fcc98a58ba3bea7:advanced-math-easier",
+      "bluebookUrl": "https://satsuite.collegeboard.org/practice/practice-tests/bluebook",
+      "skillsInsightUrl": "https://satsuite.collegeboard.org/skills-insight",
+      "progress": {
+        "foundation": "Combine terms or apply one distribution.",
+        "stretch": "Factor, simplify or compare expressions without introducing domain errors."
+      }
+    },
+    {
+      "id": "rs3-link-nonlinear",
+      "ratioSkill": "Nonlinear equations in one variable and systems of equations in two variables",
+      "officialSkill": "Nonlinear equations in one variable and systems of equations in two variables",
+      "section": "math",
+      "officialDomain": "Advanced Math",
+      "approxDomainShare": 35,
+      "questionBank": {
+        "studentUrl": "https://mypractice.collegeboard.org/questionbank/search",
+        "educatorUrl": "https://satsuitequestionbank.collegeboard.org/",
+        "assessment": "SAT",
+        "section": "Math",
+        "domain": "Advanced Math",
+        "skill": "Nonlinear equations in one variable and systems of equations in two variables"
+      },
+      "khanUnitUrl": "https://www.khanacademy.org/test-prep/v2-sat-math/x0fcc98a58ba3bea7:advanced-math-easier",
+      "bluebookUrl": "https://satsuite.collegeboard.org/practice/practice-tests/bluebook",
+      "skillsInsightUrl": "https://satsuite.collegeboard.org/skills-insight",
+      "progress": {
+        "foundation": "Solve a simple quadratic with a clear sign restriction.",
+        "stretch": "Find admissible solutions in nonlinear comparisons or transformed equations."
+      }
+    },
+    {
+      "id": "rs3-link-function",
+      "ratioSkill": "Nonlinear functions",
+      "officialSkill": "Nonlinear functions",
+      "section": "math",
+      "officialDomain": "Advanced Math",
+      "approxDomainShare": 35,
+      "questionBank": {
+        "studentUrl": "https://mypractice.collegeboard.org/questionbank/search",
+        "educatorUrl": "https://satsuitequestionbank.collegeboard.org/",
+        "assessment": "SAT",
+        "section": "Math",
+        "domain": "Advanced Math",
+        "skill": "Nonlinear functions"
+      },
+      "khanUnitUrl": "https://www.khanacademy.org/test-prep/v2-sat-math/x0fcc98a58ba3bea7:advanced-math-easier",
+      "bluebookUrl": "https://satsuite.collegeboard.org/practice/practice-tests/bluebook",
+      "skillsInsightUrl": "https://satsuite.collegeboard.org/skills-insight",
+      "progress": {
+        "foundation": "Evaluate a nonlinear rule at a stated input.",
+        "stretch": "Connect zeros, symmetry, growth, or transformations to a requested output."
+      }
+    },
+    {
+      "id": "rs3-link-ratio",
+      "ratioSkill": "Ratios, rates, proportional relationships, and units",
+      "officialSkill": "Ratios, rates, proportional relationships, and units",
+      "section": "math",
+      "officialDomain": "Problem-Solving and Data Analysis",
+      "approxDomainShare": 15,
+      "questionBank": {
+        "studentUrl": "https://mypractice.collegeboard.org/questionbank/search",
+        "educatorUrl": "https://satsuitequestionbank.collegeboard.org/",
+        "assessment": "SAT",
+        "section": "Math",
+        "domain": "Problem-Solving and Data Analysis",
+        "skill": "Ratios, rates, proportional relationships, and units"
+      },
+      "khanUnitUrl": "https://www.khanacademy.org/test-prep/v2-sat-math/x0fcc98a58ba3bea7:problem-solving-and-data-analysis-easier",
+      "bluebookUrl": "https://satsuite.collegeboard.org/practice/practice-tests/bluebook",
+      "skillsInsightUrl": "https://satsuite.collegeboard.org/skills-insight",
+      "progress": {
+        "foundation": "Find a per-unit rate.",
+        "stretch": "Track compounded scale changes and units in a model."
+      }
+    },
+    {
+      "id": "rs3-link-percent",
+      "ratioSkill": "Percentages",
+      "officialSkill": "Percentages",
+      "section": "math",
+      "officialDomain": "Problem-Solving and Data Analysis",
+      "approxDomainShare": 15,
+      "questionBank": {
+        "studentUrl": "https://mypractice.collegeboard.org/questionbank/search",
+        "educatorUrl": "https://satsuitequestionbank.collegeboard.org/",
+        "assessment": "SAT",
+        "section": "Math",
+        "domain": "Problem-Solving and Data Analysis",
+        "skill": "Percentages"
+      },
+      "khanUnitUrl": "https://www.khanacademy.org/test-prep/v2-sat-math/x0fcc98a58ba3bea7:problem-solving-and-data-analysis-easier",
+      "bluebookUrl": "https://satsuite.collegeboard.org/practice/practice-tests/bluebook",
+      "skillsInsightUrl": "https://satsuite.collegeboard.org/skills-insight",
+      "progress": {
+        "foundation": "Take a simple percent of a known base.",
+        "stretch": "Reverse or combine percentage changes when the base changes."
+      }
+    },
+    {
+      "id": "rs3-link-probability",
+      "ratioSkill": "Probability and conditional probability",
+      "officialSkill": "Probability and conditional probability",
+      "section": "math",
+      "officialDomain": "Problem-Solving and Data Analysis",
+      "approxDomainShare": 15,
+      "questionBank": {
+        "studentUrl": "https://mypractice.collegeboard.org/questionbank/search",
+        "educatorUrl": "https://satsuitequestionbank.collegeboard.org/",
+        "assessment": "SAT",
+        "section": "Math",
+        "domain": "Problem-Solving and Data Analysis",
+        "skill": "Probability and conditional probability"
+      },
+      "khanUnitUrl": "https://www.khanacademy.org/test-prep/v2-sat-math/x0fcc98a58ba3bea7:problem-solving-and-data-analysis-easier",
+      "bluebookUrl": "https://satsuite.collegeboard.org/practice/practice-tests/bluebook",
+      "skillsInsightUrl": "https://satsuite.collegeboard.org/skills-insight",
+      "progress": {
+        "foundation": "Count favorable and total equally likely cases.",
+        "stretch": "Restrict a sample space or account for successive dependent selections."
+      }
+    },
+    {
+      "id": "rs3-link-onedata",
+      "ratioSkill": "One-variable data: Distributions and measures of center and spread",
+      "officialSkill": "One-variable data: Distributions and measures of center and spread",
+      "section": "math",
+      "officialDomain": "Problem-Solving and Data Analysis",
+      "approxDomainShare": 15,
+      "questionBank": {
+        "studentUrl": "https://mypractice.collegeboard.org/questionbank/search",
+        "educatorUrl": "https://satsuitequestionbank.collegeboard.org/",
+        "assessment": "SAT",
+        "section": "Math",
+        "domain": "Problem-Solving and Data Analysis",
+        "skill": "One-variable data: Distributions and measures of center and spread"
+      },
+      "khanUnitUrl": "https://www.khanacademy.org/test-prep/v2-sat-math/x0fcc98a58ba3bea7:problem-solving-and-data-analysis-easier",
+      "bluebookUrl": "https://satsuite.collegeboard.org/practice/practice-tests/bluebook",
+      "skillsInsightUrl": "https://satsuite.collegeboard.org/skills-insight",
+      "progress": {
+        "foundation": "Identify a center or range in a short data set.",
+        "stretch": "Reason about an altered or weighted distribution without treating its groups equally."
+      }
+    },
+    {
+      "id": "rs3-link-twodata",
+      "ratioSkill": "Two-variable data: Models and scatterplots",
+      "officialSkill": "Two-variable data: Models and scatterplots",
+      "section": "math",
+      "officialDomain": "Problem-Solving and Data Analysis",
+      "approxDomainShare": 15,
+      "questionBank": {
+        "studentUrl": "https://mypractice.collegeboard.org/questionbank/search",
+        "educatorUrl": "https://satsuitequestionbank.collegeboard.org/",
+        "assessment": "SAT",
+        "section": "Math",
+        "domain": "Problem-Solving and Data Analysis",
+        "skill": "Two-variable data: Models and scatterplots"
+      },
+      "khanUnitUrl": "https://www.khanacademy.org/test-prep/v2-sat-math/x0fcc98a58ba3bea7:problem-solving-and-data-analysis-easier",
+      "bluebookUrl": "https://satsuite.collegeboard.org/practice/practice-tests/bluebook",
+      "skillsInsightUrl": "https://satsuite.collegeboard.org/skills-insight",
+      "progress": {
+        "foundation": "Read a prediction, observation, or slope.",
+        "stretch": "Interpret residuals and transform units while preserving the model’s meaning."
+      }
+    },
+    {
+      "id": "rs3-link-margin",
+      "ratioSkill": "Inference from sample statistics and margin of error",
+      "officialSkill": "Inference from sample statistics and margin of error",
+      "section": "math",
+      "officialDomain": "Problem-Solving and Data Analysis",
+      "approxDomainShare": 15,
+      "questionBank": {
+        "studentUrl": "https://mypractice.collegeboard.org/questionbank/search",
+        "educatorUrl": "https://satsuitequestionbank.collegeboard.org/",
+        "assessment": "SAT",
+        "section": "Math",
+        "domain": "Problem-Solving and Data Analysis",
+        "skill": "Inference from sample statistics and margin of error"
+      },
+      "khanUnitUrl": "https://www.khanacademy.org/test-prep/v2-sat-math/x0fcc98a58ba3bea7:problem-solving-and-data-analysis-easier",
+      "bluebookUrl": "https://satsuite.collegeboard.org/practice/practice-tests/bluebook",
+      "skillsInsightUrl": "https://satsuite.collegeboard.org/skills-insight",
+      "progress": {
+        "foundation": "Identify an endpoint from a reported margin.",
+        "stretch": "Compare intervals or connect an endpoint to a population estimate."
+      }
+    },
+    {
+      "id": "rs3-link-study",
+      "ratioSkill": "Evaluating statistical claims: Observational studies and experiments",
+      "officialSkill": "Evaluating statistical claims: Observational studies and experiments",
+      "section": "math",
+      "officialDomain": "Problem-Solving and Data Analysis",
+      "approxDomainShare": 15,
+      "questionBank": {
+        "studentUrl": "https://mypractice.collegeboard.org/questionbank/search",
+        "educatorUrl": "https://satsuitequestionbank.collegeboard.org/",
+        "assessment": "SAT",
+        "section": "Math",
+        "domain": "Problem-Solving and Data Analysis",
+        "skill": "Evaluating statistical claims: Observational studies and experiments"
+      },
+      "khanUnitUrl": "https://www.khanacademy.org/test-prep/v2-sat-math/x0fcc98a58ba3bea7:problem-solving-and-data-analysis-easier",
+      "bluebookUrl": "https://satsuite.collegeboard.org/practice/practice-tests/bluebook",
+      "skillsInsightUrl": "https://satsuite.collegeboard.org/skills-insight",
+      "progress": {
+        "foundation": "Recognize when a study records instead of assigning.",
+        "stretch": "Separate the populations and causal claims supported by selection and allocation."
+      }
+    },
+    {
+      "id": "rs3-link-area",
+      "ratioSkill": "Area and volume",
+      "officialSkill": "Area and volume",
+      "section": "math",
+      "officialDomain": "Geometry and Trigonometry",
+      "approxDomainShare": 15,
+      "questionBank": {
+        "studentUrl": "https://mypractice.collegeboard.org/questionbank/search",
+        "educatorUrl": "https://satsuitequestionbank.collegeboard.org/",
+        "assessment": "SAT",
+        "section": "Math",
+        "domain": "Geometry and Trigonometry",
+        "skill": "Area and volume"
+      },
+      "khanUnitUrl": "https://www.khanacademy.org/test-prep/v2-sat-math/x0fcc98a58ba3bea7:geometry-and-trigonometry-easier",
+      "bluebookUrl": "https://satsuite.collegeboard.org/practice/practice-tests/bluebook",
+      "skillsInsightUrl": "https://satsuite.collegeboard.org/skills-insight",
+      "progress": {
+        "foundation": "Select a supplied formula and identify a dimension.",
+        "stretch": "Use similarity or several dimensions at once and preserve units."
+      }
+    },
+    {
+      "id": "rs3-link-triangle",
+      "ratioSkill": "Lines, angles, and triangles",
+      "officialSkill": "Lines, angles, and triangles",
+      "section": "math",
+      "officialDomain": "Geometry and Trigonometry",
+      "approxDomainShare": 15,
+      "questionBank": {
+        "studentUrl": "https://mypractice.collegeboard.org/questionbank/search",
+        "educatorUrl": "https://satsuitequestionbank.collegeboard.org/",
+        "assessment": "SAT",
+        "section": "Math",
+        "domain": "Geometry and Trigonometry",
+        "skill": "Lines, angles, and triangles"
+      },
+      "khanUnitUrl": "https://www.khanacademy.org/test-prep/v2-sat-math/x0fcc98a58ba3bea7:geometry-and-trigonometry-easier",
+      "bluebookUrl": "https://satsuite.collegeboard.org/practice/practice-tests/bluebook",
+      "skillsInsightUrl": "https://satsuite.collegeboard.org/skills-insight",
+      "progress": {
+        "foundation": "Use basic angle relationships.",
+        "stretch": "Match corresponding sides and infer a missing length from similarity and a total."
+      }
+    },
+    {
+      "id": "rs3-link-trig",
+      "ratioSkill": "Right triangles and trigonometry",
+      "officialSkill": "Right triangles and trigonometry",
+      "section": "math",
+      "officialDomain": "Geometry and Trigonometry",
+      "approxDomainShare": 15,
+      "questionBank": {
+        "studentUrl": "https://mypractice.collegeboard.org/questionbank/search",
+        "educatorUrl": "https://satsuitequestionbank.collegeboard.org/",
+        "assessment": "SAT",
+        "section": "Math",
+        "domain": "Geometry and Trigonometry",
+        "skill": "Right triangles and trigonometry"
+      },
+      "khanUnitUrl": "https://www.khanacademy.org/test-prep/v2-sat-math/x0fcc98a58ba3bea7:geometry-and-trigonometry-easier",
+      "bluebookUrl": "https://satsuite.collegeboard.org/practice/practice-tests/bluebook",
+      "skillsInsightUrl": "https://satsuite.collegeboard.org/skills-insight",
+      "progress": {
+        "foundation": "Identify a leg or hypotenuse in a known setup.",
+        "stretch": "Recover a length or difference from a ratio and a second constraint."
+      }
+    },
+    {
+      "id": "rs3-link-circle",
+      "ratioSkill": "Circles",
+      "officialSkill": "Circles",
+      "section": "math",
+      "officialDomain": "Geometry and Trigonometry",
+      "approxDomainShare": 15,
+      "questionBank": {
+        "studentUrl": "https://mypractice.collegeboard.org/questionbank/search",
+        "educatorUrl": "https://satsuitequestionbank.collegeboard.org/",
+        "assessment": "SAT",
+        "section": "Math",
+        "domain": "Geometry and Trigonometry",
+        "skill": "Circles"
+      },
+      "khanUnitUrl": "https://www.khanacademy.org/test-prep/v2-sat-math/x0fcc98a58ba3bea7:geometry-and-trigonometry-easier",
+      "bluebookUrl": "https://satsuite.collegeboard.org/practice/practice-tests/bluebook",
+      "skillsInsightUrl": "https://satsuite.collegeboard.org/skills-insight",
+      "progress": {
+        "foundation": "Use radius, diameter, or a simple equation form.",
+        "stretch": "Translate between a coordinate or arc constraint and the requested circle feature."
+      }
+    }
+  ]
+}

@@ -12,6 +12,7 @@ import { GenericAttempt, OfficialResourcesPanel } from './TestWorkspace';
 import { BluebookShell } from './OfficialExamChrome';
 import {
   BankQuestion,
+  SAT_BANK_TOTAL,
   SatGuidesAndPlansView,
   SatQuestionBankView,
   SatSkillLessonsView,
@@ -45,6 +46,8 @@ interface SatQuestion {
   explanation: string;
   commonTrap?: string;
   desmosFriendly?: boolean;
+  practiceBand?: number;
+  isPretest?: boolean;
 }
 
 interface SatModule {
@@ -57,6 +60,17 @@ interface SatModule {
   questions: SatQuestion[];
 }
 
+interface SatAdaptiveMeta {
+  operationalOnly?: boolean;
+  sectionOrder: ('rw' | 'math')[];
+  breakAfterSection?: 'rw' | 'math';
+  minimumCorrectForHarder: {
+    rw: number;
+    math: number;
+  };
+  alternateModules: SatModule[];
+}
+
 interface SatMock {
   id: string;
   title: string;
@@ -64,6 +78,7 @@ interface SatMock {
   breakAfterModule?: string;
   breakMinutes?: number;
   modules: SatModule[];
+  adaptive?: SatAdaptiveMeta;
 }
 
 interface SatDrill {
@@ -130,6 +145,21 @@ interface ActiveSatRun {
   questions: SatQuestion[];
 }
 
+interface CompletedAdaptiveModule {
+  module: SatModule;
+  answers: Record<string, string>;
+  operationalCorrect: number;
+  operationalTotal: number;
+}
+
+interface AdaptiveFormState {
+  mock: SatMock;
+  stage: 'rw-m1' | 'rw-m2' | 'break' | 'math-m1' | 'math-m2' | 'complete';
+  rwRoute?: 'harder' | 'easier';
+  mathRoute?: 'harder' | 'easier';
+  completed: CompletedAdaptiveModule[];
+}
+
 interface SatWorkspaceProps {
   test: AdmissionsTest;
   subTab: 'practice' | 'resources' | 'progress';
@@ -146,6 +176,7 @@ export const SatWorkspace: React.FC<SatWorkspaceProps> = ({
   const [mode, setMode] = useState<'bank' | 'mocks' | 'drills' | 'lessons' | 'vocab' | 'guide'>('bank');
   const [linkedSkill, setLinkedSkill] = useState<string | null>(null);
   const [activeRun, setActiveRun] = useState<ActiveSatRun | null>(null);
+  const [adaptiveForm, setAdaptiveForm] = useState<AdaptiveFormState | null>(null);
   const [qIdx, setQIdx] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [flagged, setFlagged] = useState<Record<string, boolean>>({});
@@ -154,14 +185,17 @@ export const SatWorkspace: React.FC<SatWorkspaceProps> = ({
   const [showRefSheet, setShowRefSheet] = useState(false);
 
   useEffect(() => {
-    if (!activeRun || finished) return;
+    const runningTimer =
+      (activeRun && !finished) || (adaptiveForm && adaptiveForm.stage === 'break');
+    if (!runningTimer) return;
     const id = window.setInterval(() => {
       setSecondsLeft((s) => (s > 0 ? s - 1 : 0));
     }, 1000);
     return () => window.clearInterval(id);
-  }, [activeRun, finished]);
+  }, [activeRun, finished, adaptiveForm]);
 
-  const startRun = (run: ActiveSatRun) => {
+  const startRun = (run: ActiveSatRun, keepAdaptive = false) => {
+    if (!keepAdaptive) setAdaptiveForm(null);
     setActiveRun(run);
     setQIdx(0);
     setAnswers({});
@@ -172,17 +206,179 @@ export const SatWorkspace: React.FC<SatWorkspaceProps> = ({
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const startAdaptiveMock = (mock: SatMock) => {
+    if (!mock.adaptive) return;
+    const rwM1 = mock.modules.find((m) => m.section === 'rw' && m.route === 'standard');
+    if (!rwM1) return;
+    setAdaptiveForm({
+      mock,
+      stage: 'rw-m1',
+      completed: [],
+    });
+    startRun(
+      {
+        title: `${mock.title} · ${rwM1.title}`,
+        section: 'rw',
+        minutes: rwM1.minutes,
+        questions: rwM1.questions,
+      },
+      true
+    );
+  };
+
+  const startMathModule1AfterBreak = () => {
+    if (!adaptiveForm) return;
+    const mathM1 = adaptiveForm.mock.modules.find(
+      (m) => m.section === 'math' && m.route === 'standard'
+    );
+    if (!mathM1) return;
+    setAdaptiveForm((prev) => (prev ? { ...prev, stage: 'math-m1' } : null));
+    startRun(
+      {
+        title: `${adaptiveForm.mock.title} · ${mathM1.title}`,
+        section: 'math',
+        minutes: mathM1.minutes,
+        questions: mathM1.questions,
+      },
+      true
+    );
+  };
+
   const finishRun = () => {
     if (!activeRun) return;
-    const correct = activeRun.questions.filter((q) =>
-      isSatAnswerCorrect(q, answers[q.id])
-    ).length;
+
+    // Full adaptive 4-module Bluebook form progression
+    if (adaptiveForm && adaptiveForm.mock.adaptive) {
+      const { mock, stage, completed } = adaptiveForm;
+      const ad = mock.adaptive!;
+      const currentMod =
+        stage === 'rw-m1'
+          ? mock.modules.find((m) => m.section === 'rw' && m.route === 'standard')
+          : stage === 'rw-m2'
+            ? adaptiveForm.rwRoute === 'easier'
+              ? ad.alternateModules.find((m) => m.section === 'rw')
+              : mock.modules.find((m) => m.section === 'rw' && m.route === 'harder')
+            : stage === 'math-m1'
+              ? mock.modules.find((m) => m.section === 'math' && m.route === 'standard')
+              : adaptiveForm.mathRoute === 'easier'
+                ? ad.alternateModules.find((m) => m.section === 'math')
+                : mock.modules.find((m) => m.section === 'math' && m.route === 'harder');
+
+      if (currentMod) {
+        const operationalQs = currentMod.questions.filter((q) => !q.isPretest);
+        const opCorrect = operationalQs.filter((q) =>
+          isSatAnswerCorrect(q, answers[q.id])
+        ).length;
+        const nextCompleted: CompletedAdaptiveModule[] = [
+          ...completed,
+          {
+            module: currentMod,
+            answers: { ...answers },
+            operationalCorrect: opCorrect,
+            operationalTotal: operationalQs.length,
+          },
+        ];
+
+        if (stage === 'rw-m1') {
+          const route: 'harder' | 'easier' =
+            opCorrect >= ad.minimumCorrectForHarder.rw ? 'harder' : 'easier';
+          const rwM2 =
+            route === 'harder'
+              ? mock.modules.find((m) => m.section === 'rw' && m.route === 'harder')
+              : ad.alternateModules.find((m) => m.section === 'rw');
+          if (rwM2) {
+            setAdaptiveForm({
+              ...adaptiveForm,
+              stage: 'rw-m2',
+              rwRoute: route,
+              completed: nextCompleted,
+            });
+            startRun(
+              {
+                title: `${mock.title} · Reading and Writing · Module 2`,
+                section: 'rw',
+                minutes: rwM2.minutes,
+                questions: rwM2.questions,
+              },
+              true
+            );
+            return;
+          }
+        }
+
+        if (stage === 'rw-m2') {
+          setAdaptiveForm({
+            ...adaptiveForm,
+            stage: 'break',
+            completed: nextCompleted,
+          });
+          setActiveRun(null);
+          setSecondsLeft((mock.breakMinutes ?? 10) * 60);
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+          return;
+        }
+
+        if (stage === 'math-m1') {
+          const route: 'harder' | 'easier' =
+            opCorrect >= ad.minimumCorrectForHarder.math ? 'harder' : 'easier';
+          const mathM2 =
+            route === 'harder'
+              ? mock.modules.find((m) => m.section === 'math' && m.route === 'harder')
+              : ad.alternateModules.find((m) => m.section === 'math');
+          if (mathM2) {
+            setAdaptiveForm({
+              ...adaptiveForm,
+              stage: 'math-m2',
+              mathRoute: route,
+              completed: nextCompleted,
+            });
+            startRun(
+              {
+                title: `${mock.title} · Math · Module 2`,
+                section: 'math',
+                minutes: mathM2.minutes,
+                questions: mathM2.questions,
+              },
+              true
+            );
+            return;
+          }
+        }
+
+        if (stage === 'math-m2') {
+          const totalOpCorrect = nextCompleted.reduce((s, c) => s + c.operationalCorrect, 0);
+          const totalOp = nextCompleted.reduce((s, c) => s + c.operationalTotal, 0);
+          onSaveAttempt({
+            id: `sat-${Date.now()}`,
+            testId: 'sat',
+            testCode: `${mock.title} (Adaptive Operational)`,
+            correct: totalOpCorrect,
+            total: totalOp,
+            createdAt: new Date().toISOString(),
+          });
+          setAdaptiveForm({
+            ...adaptiveForm,
+            stage: 'complete',
+            completed: nextCompleted,
+          });
+          setActiveRun(null);
+          setFinished(true);
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+          return;
+        }
+      }
+    }
+
+    const operationalQs = activeRun.questions.filter((q) => !q.isPretest);
+    const hasPretest = operationalQs.length < activeRun.questions.length;
+    const scoredQs = hasPretest ? operationalQs : activeRun.questions;
+    const correct = scoredQs.filter((q) => isSatAnswerCorrect(q, answers[q.id])).length;
     onSaveAttempt({
       id: `sat-${Date.now()}`,
       testId: 'sat',
       testCode: activeRun.title,
       correct,
-      total: activeRun.questions.length,
+      total: scoredQs.length,
       createdAt: new Date().toISOString(),
     });
     setFinished(true);
@@ -237,6 +433,160 @@ export const SatWorkspace: React.FC<SatWorkspaceProps> = ({
             ))}
           </div>
         )}
+      </div>
+    );
+  }
+
+  /* ── Adaptive 10-Minute Break Screen (Between R&W M2 and Math M1) ─────── */
+  if (adaptiveForm && adaptiveForm.stage === 'break') {
+    const mins = Math.floor(secondsLeft / 60);
+    const secs = secondsLeft % 60;
+    return (
+      <div className="fixed inset-0 z-50 bg-[#0F172A] text-white flex flex-col items-center justify-center p-6 text-center space-y-6">
+        <div className="text-xs font-mono-tabular uppercase tracking-widest text-blue-300">
+          {adaptiveForm.mock.title} · Section Break
+        </div>
+        <h2 className="font-display text-4xl sm:text-5xl">Take a 10-Minute Break</h2>
+        <div className="font-mono-tabular text-6xl font-bold tracking-tight text-white">
+          {String(mins).padStart(2, '0')}:{String(secs).padStart(2, '0')}
+        </div>
+        <p className="text-sm text-slate-300 max-w-md leading-relaxed">
+          Reading &amp; Writing Modules 1 and 2 are locked. Math Module 1 starts fresh and routes
+          independently based on your Math Module 1 operational score.
+        </p>
+        <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
+          <button
+            type="button"
+            onClick={startMathModule1AfterBreak}
+            className="px-6 py-3 rounded-full bg-[#1D4ED8] hover:bg-[#1E40AF] text-white text-sm font-bold inline-flex items-center gap-2 cursor-pointer"
+          >
+            Begin Math Module 1 <ArrowRight className="w-4 h-4" />
+          </button>
+          <button
+            type="button"
+            onClick={() => setAdaptiveForm(null)}
+            className="px-4 py-3 rounded-full border border-white/20 text-xs text-slate-300 hover:text-white cursor-pointer"
+          >
+            Exit to SAT Hub
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  /* ── Full Adaptive 4-Module Form Review (Operational /50 R&W · /40 Math) ─ */
+  if (adaptiveForm && adaptiveForm.stage === 'complete') {
+    const rwMods = adaptiveForm.completed.filter((c) => c.module.section === 'rw');
+    const mathMods = adaptiveForm.completed.filter((c) => c.module.section === 'math');
+    const rwCorrect = rwMods.reduce((s, c) => s + c.operationalCorrect, 0);
+    const rwTotal = rwMods.reduce((s, c) => s + c.operationalTotal, 0);
+    const mathCorrect = mathMods.reduce((s, c) => s + c.operationalCorrect, 0);
+    const mathTotal = mathMods.reduce((s, c) => s + c.operationalTotal, 0);
+
+    return (
+      <div className="space-y-8">
+        <div className="border border-[var(--rule)] bg-[var(--surface)] p-6 space-y-5">
+          <div className="flex flex-wrap items-start justify-between gap-4">
+            <div>
+              <div className="text-xs font-mono-tabular uppercase tracking-wider text-[var(--accent)]">
+                {adaptiveForm.mock.title} · Full Adaptive Review
+              </div>
+              <h2 className="font-display text-3xl sm:text-4xl text-[var(--ink)] mt-1">
+                R&amp;W {rwCorrect}/{rwTotal} · Math {mathCorrect}/{mathTotal}
+              </h2>
+              <p className="text-xs text-[var(--text-muted)] mt-1.5 max-w-2xl leading-relaxed">
+                Operational raw scores exclude 2 unscored pretest items per module (8 total across
+                the 98-question form). Routing used Ratio practice thresholds (R&amp;W ≥16/25 →{' '}
+                <strong>{adaptiveForm.rwRoute}</strong> M2; Math ≥13/20 →{' '}
+                <strong>{adaptiveForm.mathRoute}</strong> M2) — not College Board equating or
+                200–800 scaled scores.
+              </p>
+            </div>
+            <div className="flex items-center gap-2.5">
+              <button
+                type="button"
+                onClick={() => startAdaptiveMock(adaptiveForm.mock)}
+                className="px-4 py-2 border border-[var(--rule)] text-xs font-medium text-[var(--ink)] inline-flex items-center gap-1.5 cursor-pointer"
+              >
+                <RotateCcw className="w-3.5 h-3.5" /> Retake Full Mock
+              </button>
+              <button
+                type="button"
+                onClick={() => setAdaptiveForm(null)}
+                className="px-4 py-2 bg-[var(--ink)] text-[var(--bg)] text-xs font-semibold cursor-pointer"
+              >
+                Back to SAT Hub
+              </button>
+            </div>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+            {adaptiveForm.completed.map((c) => (
+              <div
+                key={c.module.id}
+                className="border border-[var(--rule)] bg-[var(--bg)] p-3.5 text-xs space-y-1"
+              >
+                <div className="text-[11px] font-mono-tabular uppercase text-[var(--accent)]">
+                  {c.module.route} route
+                </div>
+                <div className="font-semibold text-[var(--ink)]">{c.module.title}</div>
+                <div className="font-mono-tabular text-[var(--text-muted)]">
+                  Operational:{' '}
+                  <strong className="text-[var(--ink)]">
+                    {c.operationalCorrect}/{c.operationalTotal}
+                  </strong>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {adaptiveForm.completed.map((c) => (
+          <div key={c.module.id} className="space-y-3">
+            <h3 className="font-display text-2xl text-[var(--ink)] border-b border-[var(--rule)] pb-2">
+              {c.module.title} ({c.operationalCorrect}/{c.operationalTotal} operational)
+            </h3>
+            <div className="space-y-3">
+              {c.module.questions.map((q, idx) => {
+                const ok = isSatAnswerCorrect(q, c.answers[q.id]);
+                return (
+                  <div
+                    key={q.id}
+                    className="border border-[var(--rule)] bg-[var(--surface)] p-4 space-y-2 text-xs"
+                  >
+                    <div className="flex flex-wrap items-center justify-between gap-2 font-mono-tabular">
+                      <span className="text-[var(--text-muted)]">
+                        Q{idx + 1} · {q.domain} · {q.skill}
+                      </span>
+                      <div className="flex items-center gap-2">
+                        {q.isPretest && (
+                          <span className="px-2 py-0.5 rounded bg-[var(--bg)] border border-[var(--rule)] text-[var(--text-muted)]">
+                            Pretest (unscored)
+                          </span>
+                        )}
+                        <span
+                          className={
+                            ok
+                              ? 'text-[var(--accent)] font-semibold'
+                              : 'text-[var(--danger)] font-semibold'
+                          }
+                        >
+                          {ok
+                            ? 'Correct'
+                            : `Your answer: ${c.answers[q.id] || 'Blank'} · Key: ${
+                                q.type === 'mcq' ? q.correct : (q.acceptedAnswers ?? []).join(' / ')
+                              }`}
+                        </span>
+                      </div>
+                    </div>
+                    <div className="text-sm text-[var(--ink)] font-medium">{q.question}</div>
+                    <p className="text-[var(--text-muted)] leading-relaxed">{q.explanation}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        ))}
       </div>
     );
   }
@@ -532,7 +882,7 @@ export const SatWorkspace: React.FC<SatWorkspaceProps> = ({
       <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[var(--rule)] pb-4">
         <div>
           <div className="text-xs font-mono-tabular uppercase tracking-wider text-[var(--accent)]">
-            DIGITAL SAT · 600-Q FILTERABLE BANK · 2 FULL MOCKS · 30 SKILL LESSONS · 400 VOCAB
+            DIGITAL SAT · {SAT_BANK_TOTAL.toLocaleString()}-Q FILTERABLE BANK · {SAT_MOCKS.length} FULL MOCKS · 30 SKILL LESSONS · 400 VOCAB
           </div>
           <h2 className="font-display text-3xl sm:text-4xl text-[var(--ink)] mt-0.5">
             {test.name}
@@ -541,8 +891,8 @@ export const SatWorkspace: React.FC<SatWorkspaceProps> = ({
         <div className="flex flex-wrap items-center gap-1.5 text-xs">
           {(
             [
-              ['bank', 'Question Bank (600)'],
-              ['mocks', '2 Full Mocks'],
+              ['bank', `Question Bank (${SAT_BANK_TOTAL.toLocaleString()})`],
+              ['mocks', `${SAT_MOCKS.length} Full Mocks`],
               ['drills', '8 Drills'],
               ['lessons', '30 Lessons'],
               ['vocab', '400 Vocab'],
@@ -586,55 +936,91 @@ export const SatWorkspace: React.FC<SatWorkspaceProps> = ({
       {mode === 'mocks' && (
         <div className="space-y-6">
           <p className="text-sm text-[var(--text-muted)]">
-            Two original full-length Digital SAT practice tests. Each Module 2 uses the harder route
-            so you practise at top-band difficulty. Take a 10-minute break between Reading &amp;
-            Writing Module 2 and Math Module 1.
+            {SAT_MOCKS.length} original full-length Digital SAT practice tests in Bluebook format.
+            Mocks 3 &amp; 4 support full 4-module adaptive routing (excluding 2 unscored pretest
+            items per module, with a 10-minute section break); Mocks 1 &amp; 2 are fixed-route
+            practice. Raw operational scores are practice metrics, not official 200–800 College
+            Board scaled scores.
           </p>
-          {SAT_MOCKS.map((mock) => (
-            <div
-              key={mock.id}
-              className="border border-[var(--rule)] bg-[var(--surface)] p-5 space-y-4"
-            >
-              <div className="flex flex-wrap items-center justify-between gap-2">
-                <h3 className="font-display text-2xl text-[var(--ink)]">{mock.title}</h3>
-                <span className="text-xs font-mono-tabular text-[var(--text-muted)]">
-                  4 modules · 98 questions · 134 mins
-                </span>
-              </div>
-              <div className="grid sm:grid-cols-2 gap-3">
-                {mock.modules.map((mod) => (
-                  <button
-                    key={mod.id}
-                    type="button"
-                    onClick={() =>
-                      startRun({
-                        title: `${mock.title} · ${mod.title}`,
-                        section: mod.section,
-                        minutes: mod.minutes,
-                        questions: mod.questions,
-                      })
-                    }
-                    className="p-4 border border-[var(--rule)] hover:border-[var(--accent)] bg-[var(--bg)] text-left transition-colors cursor-pointer group flex flex-col justify-between gap-3"
-                  >
-                    <div>
-                      <div className="flex items-center justify-between text-[11px] font-mono-tabular">
-                        <span className="text-[var(--accent)]">
-                          {mod.minutes} min · {mod.questionCount} Qs
-                        </span>
-                        <span className="text-[var(--text-muted)] uppercase">{mod.route}</span>
-                      </div>
-                      <div className="text-sm font-semibold text-[var(--ink)] group-hover:text-[var(--accent)] mt-1">
-                        {mod.title}
-                      </div>
+          {SAT_MOCKS.map((mock) => {
+            const isAdaptive = Boolean(mock.adaptive);
+            return (
+              <div
+                key={mock.id}
+                className="border border-[var(--rule)] bg-[var(--surface)] p-5 space-y-4"
+              >
+                <div className="flex flex-wrap items-start justify-between gap-3">
+                  <div className="space-y-1">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <h3 className="font-display text-2xl text-[var(--ink)]">{mock.title}</h3>
+                      <span
+                        className={`text-[10px] font-mono-tabular uppercase tracking-wider px-2 py-0.5 rounded border ${
+                          isAdaptive
+                            ? 'border-[var(--accent)] bg-[var(--accent-soft)] text-[var(--accent)]'
+                            : 'border-[var(--rule)] text-[var(--text-muted)]'
+                        }`}
+                      >
+                        {isAdaptive ? 'Adaptive 4-Module Form' : 'Fixed-Route Practice'}
+                      </span>
                     </div>
-                    <div className="text-xs font-medium text-[var(--ink)] inline-flex items-center gap-1">
-                      Start module <ArrowRight className="w-3.5 h-3.5" />
-                    </div>
-                  </button>
-                ))}
+                    {mock.description && (
+                      <p className="text-xs text-[var(--text-muted)] max-w-2xl">
+                        {mock.description}
+                      </p>
+                    )}
+                  </div>
+                  <div className="flex flex-wrap items-center gap-2.5">
+                    <span className="text-xs font-mono-tabular text-[var(--text-muted)]">
+                      4 modules · 98 questions · 134 mins
+                    </span>
+                    {isAdaptive && (
+                      <button
+                        type="button"
+                        onClick={() => startAdaptiveMock(mock)}
+                        className="px-4 py-2 rounded-lg bg-[var(--accent)] text-[var(--accent-fg)] text-xs font-semibold inline-flex items-center gap-1.5 cursor-pointer"
+                      >
+                        Start Full Adaptive Mock <ArrowRight className="w-3.5 h-3.5" />
+                      </button>
+                    )}
+                  </div>
+                </div>
+                <div className="grid sm:grid-cols-2 gap-3">
+                  {mock.modules.map((mod) => (
+                    <button
+                      key={mod.id}
+                      type="button"
+                      onClick={() =>
+                        startRun({
+                          title: `${mock.title} · ${mod.title}`,
+                          section: mod.section,
+                          minutes: mod.minutes,
+                          questions: mod.questions,
+                        })
+                      }
+                      className="p-4 border border-[var(--rule)] hover:border-[var(--accent)] bg-[var(--bg)] text-left transition-colors cursor-pointer group flex flex-col justify-between gap-3"
+                    >
+                      <div>
+                        <div className="flex items-center justify-between text-[11px] font-mono-tabular">
+                          <span className="text-[var(--accent)]">
+                            {mod.minutes} min · {mod.questionCount} Qs
+                          </span>
+                          <span className="text-[var(--text-muted)] uppercase">
+                            {isAdaptive ? `${mod.route} · single module` : `${mod.route} · fixed`}
+                          </span>
+                        </div>
+                        <div className="text-sm font-semibold text-[var(--ink)] group-hover:text-[var(--accent)] mt-1">
+                          {mod.title}
+                        </div>
+                      </div>
+                      <div className="text-xs font-medium text-[var(--ink)] inline-flex items-center gap-1">
+                        Practice module <ArrowRight className="w-3.5 h-3.5" />
+                      </div>
+                    </button>
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       )}
 
