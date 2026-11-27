@@ -1,0 +1,3386 @@
+{
+  "schemaVersion": 1,
+  "exam": "TARA",
+  "title": "TARA Skills Practice",
+  "paceSeconds": 109,
+  "dailyQuestionCount": 5,
+  "difficultyLabels": {
+    "1": "Foundation",
+    "2": "Developing",
+    "3": "Standard",
+    "4": "Stretch",
+    "5": "Challenge"
+  },
+  "mistakeReasons": [
+    {
+      "id": "read",
+      "label": "Misread a qualifier or target"
+    },
+    {
+      "id": "reasoning",
+      "label": "Reasoning or assumption error"
+    },
+    {
+      "id": "method",
+      "label": "Chose the wrong method"
+    },
+    {
+      "id": "execution",
+      "label": "Arithmetic, units or execution slip"
+    },
+    {
+      "id": "time",
+      "label": "Ran out of time"
+    },
+    {
+      "id": "guess",
+      "label": "Guessed or unsure"
+    }
+  ],
+  "modules": [
+    {
+      "type": "critical-thinking",
+      "title": "Critical Thinking",
+      "questions": [
+        {
+          "id": "tara-drill-ct-main-conclusion-01",
+          "type": "main-conclusion",
+          "stem": "The swimming pool should list its lane closures on the booking page. People decide whether to travel based on the lanes they can use, and the existing notice is visible only inside the pool.\n\nWhich statement best expresses the main conclusion?",
+          "options": {
+            "A": "The pool should never close a lane.",
+            "B": "People decide whether it is worth travelling.",
+            "C": "The pool already displays a notice indoors.",
+            "D": "Some people travel to use specific lanes.",
+            "E": "Lane closures should appear on the pool’s booking page."
+          },
+          "answer": "E",
+          "explanation": "The first sentence makes the proposal; the rest explains why current notices arrive too late.",
+          "difficulty": 1
+        },
+        {
+          "id": "tara-drill-ct-main-conclusion-02",
+          "type": "main-conclusion",
+          "stem": "Potted plants in the waiting room need water every week. Because the caretaker already visits on Mondays, the surgery should ask the caretaker to water them then.\n\nWhich statement best expresses the main conclusion?",
+          "options": {
+            "A": "The plants need watering weekly.",
+            "B": "The surgery should ask the caretaker to water the plants on Mondays.",
+            "C": "The waiting room contains potted plants.",
+            "D": "The caretaker visits on Mondays.",
+            "E": "The surgery should employ another caretaker."
+          },
+          "answer": "B",
+          "explanation": "The visit and watering frequency are premises used to justify assigning the task.",
+          "difficulty": 1
+        },
+        {
+          "id": "tara-drill-ct-main-conclusion-03",
+          "type": "main-conclusion",
+          "stem": "The village should trial a later Friday bus. Several residents finish work after the last departure. A permanent extension might be expensive, but a six-week trial would show whether the service draws enough passengers.\n\nWhich statement best expresses the main conclusion?",
+          "options": {
+            "A": "The village should permanently add late buses every weekday.",
+            "B": "A six-week trial would reveal some demand.",
+            "C": "A permanent extension could cost a great deal.",
+            "D": "Several residents finish work after the last bus.",
+            "E": "The village should try a later Friday bus temporarily."
+          },
+          "answer": "E",
+          "explanation": "The argument justifies a trial, not a permanent extension.",
+          "difficulty": 2
+        },
+        {
+          "id": "tara-drill-ct-main-conclusion-04",
+          "type": "main-conclusion",
+          "stem": "Two sports clubs need an evening pitch. If both book the same evening, one has to travel farther. The pitch is empty on Thursdays, and one club has said Thursday would work. The booking office ought to offer that club Thursday first.\n\nWhich statement best expresses the main conclusion?",
+          "options": {
+            "A": "One team has to travel farther when the clubs clash.",
+            "B": "One club is willing to play on Thursdays.",
+            "C": "The pitch is empty on Thursdays.",
+            "D": "The office should split every evening equally between both clubs.",
+            "E": "The office should first offer Thursday to the club that can use it."
+          },
+          "answer": "E",
+          "explanation": "The open slot and willingness support the specific booking proposal.",
+          "difficulty": 2
+        },
+        {
+          "id": "tara-drill-ct-main-conclusion-05",
+          "type": "main-conclusion",
+          "stem": "Witness statements written straight after an incident are usually more detailed than accounts collected a week later. More detail can help investigators spot disagreements while the people involved still remember what happened. Investigators should therefore collect initial statements promptly, even if they will need to ask follow-up questions.\n\nWhich statement best expresses the main conclusion?",
+          "options": {
+            "A": "Investigators should collect initial accounts promptly.",
+            "B": "Early statements are usually more detailed.",
+            "C": "More detail can reveal disagreements.",
+            "D": "Investigators may need to ask follow-up questions.",
+            "E": "Investigators should treat early statements as unquestionably accurate."
+          },
+          "answer": "A",
+          "explanation": "Detail and timeliness are reasons; the recommendation is about collection, not automatic trust.",
+          "difficulty": 3
+        },
+        {
+          "id": "tara-drill-ct-main-conclusion-06",
+          "type": "main-conclusion",
+          "stem": "Closing the hall for the whole winter might cut the heating bill, but it would leave two groups without a venue. The store room could instead be shut off during events; that would save some heat without cancelling bookings. The trust should start with that narrower change.\n\nWhich statement best expresses the main conclusion?",
+          "options": {
+            "A": "Closing the entire hall could reduce heating costs.",
+            "B": "Two groups would lose their venue if the hall closed.",
+            "C": "Shutting off the store room would save some heat.",
+            "D": "Trustees should guarantee that the hall will never close.",
+            "E": "The trust should first reduce heating to unused space rather than close the hall."
+          },
+          "answer": "E",
+          "explanation": "The proposal is the narrower energy saving; the earlier details weigh it against closure.",
+          "difficulty": 3
+        },
+        {
+          "id": "tara-drill-ct-main-conclusion-07",
+          "type": "main-conclusion",
+          "stem": "A public map that labels every bench is not necessary for most people, but it is valuable to walkers who need regular rests. Printing a separate map every season is expensive. Because the council already maintains a digital map, it should add bench locations to that map first.\n\nWhich statement best expresses the main conclusion?",
+          "options": {
+            "A": "New printed maps would cost money.",
+            "B": "The council should add bench locations to its digital map first.",
+            "C": "The council should replace every printed map with an app.",
+            "D": "Most people do not need every bench labelled.",
+            "E": "Some walkers need regular places to rest."
+          },
+          "answer": "B",
+          "explanation": "The benefit and cost comparison justify a particular first step.",
+          "difficulty": 3
+        },
+        {
+          "id": "tara-drill-ct-main-conclusion-08",
+          "type": "main-conclusion",
+          "stem": "The housing office says its latest appointments are underused, so it has proposed removing them. Yet they are the only slots outside many tenants’ working hours. If tenants cannot leave work they may miss appointments even when daytime slots are free. The office should keep at least some late slots unless it can offer another workable option outside those hours.\n\nWhich statement best expresses the main conclusion?",
+          "options": {
+            "A": "The office should retain some late appointments unless it can provide a workable alternative outside the same tenants’ working hours.",
+            "B": "The office should keep all its late slots whatever alternative is available.",
+            "C": "Free slots do not always mean every tenant can book a usable time.",
+            "D": "The latest appointments are taken less often than other slots.",
+            "E": "Some tenants cannot attend in ordinary working hours."
+          },
+          "answer": "A",
+          "explanation": "The reasons qualify the recommendation: maintain access, not every slot under all circumstances.",
+          "difficulty": 4
+        },
+        {
+          "id": "tara-drill-ct-main-conclusion-09",
+          "type": "main-conclusion",
+          "stem": "Switching tutors mid-term caused confusion in last year’s programme. That does not by itself show that the tutor should never change. The confusion occurred when the incoming tutor had no record of what pupils had covered. Where a switch is needed, the programme should therefore arrange a handover before lessons resume.\n\nWhich statement best expresses the main conclusion?",
+          "options": {
+            "A": "The incoming tutor lacked information about prior lessons.",
+            "B": "A substitute tutor is preferable whenever the current tutor lacks records.",
+            "C": "Last year’s tutor changes caused confusion.",
+            "D": "When a switch is needed, the programme should arrange a handover before teaching resumes.",
+            "E": "A prohibition on all tutor changes is not justified by the observation alone."
+          },
+          "answer": "D",
+          "explanation": "The rejection of a ban clears the way for the specific recommendation; it is not the end of the argument.",
+          "difficulty": 4
+        },
+        {
+          "id": "tara-drill-ct-main-conclusion-10",
+          "type": "main-conclusion",
+          "stem": "A proposed tax on empty commercial units might encourage renovation. But officials could currently identify some empty shops only after a tenant complained, and renovated shops are not necessarily occupied. The council should begin by recording how long units stay empty and why, rather than commit to the tax now. Collecting better records would make it easier to distinguish landlords waiting for repairs from those merely waiting for higher rents.\n\nWhich statement best expresses the main conclusion?",
+          "options": {
+            "A": "A tax could provide an incentive to renovate empty premises.",
+            "B": "Better records could distinguish reasons for leaving shops empty.",
+            "C": "Some empty units are hard for officials to identify.",
+            "D": "The council should first track the duration and causes of vacancies rather than adopt the tax immediately.",
+            "E": "The proposed tax should be ruled out permanently."
+          },
+          "answer": "D",
+          "explanation": "The evidence and the final explanation both support delaying commitment while improving records. The argument does not reject taxation forever.",
+          "difficulty": 5
+        },
+        {
+          "id": "tara-drill-ct-drawing-conclusion-01",
+          "type": "drawing-conclusion",
+          "stem": "Every boat in the harbour has a mooring permit. The Cedar is in the harbour.\n\nWhich statement must follow from the information above?",
+          "options": {
+            "A": "The Cedar is the newest boat.",
+            "B": "The Cedar has a mooring permit.",
+            "C": "Every permit holder is in the harbour.",
+            "D": "Only the Cedar has a mooring permit.",
+            "E": "All boats outside the harbour lack permits."
+          },
+          "answer": "B",
+          "explanation": "Apply the rule to Cedar; the rule says nothing about boats elsewhere.",
+          "difficulty": 1
+        },
+        {
+          "id": "tara-drill-ct-drawing-conclusion-02",
+          "type": "drawing-conclusion",
+          "stem": "None of the sealed parcels contains glass. The parcel marked King Street is sealed.\n\nWhich statement must follow from the information above?",
+          "options": {
+            "A": "All unsealed parcels contain glass.",
+            "B": "The King Street parcel does not contain glass.",
+            "C": "The King Street parcel is the only sealed parcel.",
+            "D": "The King Street parcel contains plastic.",
+            "E": "No parcel is fragile."
+          },
+          "answer": "B",
+          "explanation": "King Street belongs to the class explicitly excluded from containing glass.",
+          "difficulty": 1
+        },
+        {
+          "id": "tara-drill-ct-drawing-conclusion-03",
+          "type": "drawing-conclusion",
+          "stem": "Every audition on Wednesday was for a speaking role. None of the auditions for speaking roles was held outside.\n\nWhich statement must follow from the information above?",
+          "options": {
+            "A": "No Wednesday audition was held outside.",
+            "B": "All auditions took place on Wednesday.",
+            "C": "All indoor auditions were for speaking roles.",
+            "D": "Some Wednesday auditions were held outside.",
+            "E": "All non-speaking auditions were outside."
+          },
+          "answer": "A",
+          "explanation": "Wednesday implies speaking role; a speaking role rules out an outdoor audition.",
+          "difficulty": 2
+        },
+        {
+          "id": "tara-drill-ct-drawing-conclusion-04",
+          "type": "drawing-conclusion",
+          "stem": "Eight people sat on a panel. Exactly three represented local businesses and all the others represented voluntary groups. Two of the business representatives left early.\n\nWhich statement must follow from the information above?",
+          "options": {
+            "A": "Exactly five members stayed to the end.",
+            "B": "The two who left early represented different businesses.",
+            "C": "No volunteer representative left early.",
+            "D": "Exactly five panel members represented voluntary groups.",
+            "E": "Exactly six people heard every item."
+          },
+          "answer": "D",
+          "explanation": "The membership is split into two exclusive groups. Leaving early does not change the original split.",
+          "difficulty": 2
+        },
+        {
+          "id": "tara-drill-ct-drawing-conclusion-05",
+          "type": "drawing-conclusion",
+          "stem": "Four of seven local playgrounds have seats and five have a covered area. Having seats and having a covered area are independent design choices, and a playground can have both.\n\nWhich statement must follow from the information above?",
+          "options": {
+            "A": "At least two playgrounds have both features.",
+            "B": "At least one playground has neither feature.",
+            "C": "Exactly two playgrounds have both features.",
+            "D": "There are exactly two playgrounds with neither feature.",
+            "E": "All four playgrounds with seats have covers."
+          },
+          "answer": "A",
+          "explanation": "The two feature counts total nine across seven spaces, so at least two overlap. No exact overlap follows.",
+          "difficulty": 3
+        },
+        {
+          "id": "tara-drill-ct-drawing-conclusion-06",
+          "type": "drawing-conclusion",
+          "stem": "None of the manuscripts on loan is kept in a glass case. The library exhibits every one of its oldest manuscripts, and only exhibits books in glass cases.\n\nWhich statement must follow from the information above?",
+          "options": {
+            "A": "Some of the oldest manuscripts were returned yesterday.",
+            "B": "None of the books in the library is on loan.",
+            "C": "None of the library’s oldest manuscripts is on loan.",
+            "D": "Every manuscript not on loan is exhibited.",
+            "E": "All manuscripts in cases are among the oldest."
+          },
+          "answer": "C",
+          "explanation": "Oldest manuscripts are exhibited, exhibited books are protected by glass cases, and being on loan excludes that setting.",
+          "difficulty": 3
+        },
+        {
+          "id": "tara-drill-ct-drawing-conclusion-07",
+          "type": "drawing-conclusion",
+          "stem": "A venue may hold a concert only if its exit lights pass inspection. No venue in the old market currently has exit lights that pass. A concert this evening is taking place at a venue that complies with this rule.\n\nWhich statement must follow from the information above?",
+          "options": {
+            "A": "Every venue outside the old market can hold a concert.",
+            "B": "The concert is at the only venue with working lights.",
+            "C": "The old market has no exit lights installed.",
+            "D": "The concert is not taking place in the old market.",
+            "E": "The concert must be outdoors."
+          },
+          "answer": "D",
+          "explanation": "An allowed concert requires lights that passed; the old market cannot supply a qualifying venue.",
+          "difficulty": 3
+        },
+        {
+          "id": "tara-drill-ct-drawing-conclusion-08",
+          "type": "drawing-conclusion",
+          "stem": "Exactly six of ten student delegates support a proposal. Exactly seven delegates will attend the vote. Only attendees can vote. Every attendee will vote as they currently say they intend, and every attending supporter currently intends to vote for the proposal.\n\nWhich statement must follow from the information above?",
+          "options": {
+            "A": "Exactly three supporters will be absent.",
+            "B": "Exactly six delegates will vote for the proposal.",
+            "C": "At least three delegates will vote for the proposal.",
+            "D": "The proposal is guaranteed to receive a majority of the seven votes.",
+            "E": "At least four delegates will vote against the proposal."
+          },
+          "answer": "C",
+          "explanation": "Only three delegates are absent, so at least three of six supporters must attend. That minimum is not a majority of seven.",
+          "difficulty": 4
+        },
+        {
+          "id": "tara-drill-ct-drawing-conclusion-09",
+          "type": "drawing-conclusion",
+          "stem": "Nobody aged under 16 can enter the evening session without an adult. A party of five entered with exactly two adults. The definition of adult here is age 18 or older.\n\nWhich statement must follow from the information above?",
+          "options": {
+            "A": "Anybody older than 16 entered without an adult.",
+            "B": "The party included at least one 16-year-old.",
+            "C": "All three non-adults were under 16.",
+            "D": "Each adult was responsible for a different child.",
+            "E": "At least three of the party were under 18."
+          },
+          "answer": "E",
+          "explanation": "Two adults in a party of five leaves three under 18; the entry rule does not determine which are under 16.",
+          "difficulty": 4
+        },
+        {
+          "id": "tara-drill-ct-drawing-conclusion-10",
+          "type": "drawing-conclusion",
+          "stem": "A school offered ten talks. Exactly six were recorded, exactly five had slides, and exactly four were recorded talks with slides. No unrecorded talk had both slides and a handout. Which of the following has to be true?",
+          "options": {
+            "A": "All four talks with a recording and slides had handouts.",
+            "B": "At least five talks had neither a recording nor slides.",
+            "C": "At least three talks had neither a recording nor slides.",
+            "D": "Exactly one unrecorded talk had a handout.",
+            "E": "Exactly three talks had no handout."
+          },
+          "answer": "C",
+          "explanation": "The union has six plus five minus four, or seven talks, leaving three with neither. The rule about handouts does not assign them to other talks.",
+          "difficulty": 5
+        },
+        {
+          "id": "tara-drill-ct-assumption-01",
+          "type": "assumption",
+          "stem": "The clinic is replacing text reminders with automated calls to the same mobile numbers. It expects patients to hear their appointment details without additional contact.\n\nWhich assumption does the reasoning depend on?",
+          "options": {
+            "A": "Patients can receive those calls at the numbers the clinic holds.",
+            "B": "Patients prefer calls to texts.",
+            "C": "No patient will ask for a reminder.",
+            "D": "Calls always cost less than texts.",
+            "E": "The clinic can rearrange every appointment."
+          },
+          "answer": "A",
+          "explanation": "If recipients cannot be reached on the numbers held, changing the medium cannot deliver the details as claimed.",
+          "difficulty": 1
+        },
+        {
+          "id": "tara-drill-ct-assumption-02",
+          "type": "assumption",
+          "stem": "The orchard plans to stock more picking baskets so more visitors can pick fruit at the same time. It will not expand the picking area.\n\nWhich assumption does the reasoning depend on?",
+          "options": {
+            "A": "Baskets are cheaper than widening the paths.",
+            "B": "Every visitor will buy a basket at the end.",
+            "C": "A shortage of baskets now limits how many visitors can pick at once.",
+            "D": "The new baskets are identical in colour.",
+            "E": "All visitors pick the same type of fruit."
+          },
+          "answer": "C",
+          "explanation": "A restriction that is not limiting current capacity cannot be relaxed to raise that capacity.",
+          "difficulty": 1
+        },
+        {
+          "id": "tara-drill-ct-assumption-03",
+          "type": "assumption",
+          "stem": "A council proposes digital notices to save printing costs. Every notice distributed digitally could replace one printed notice. It plans to keep the same number of notices overall.\n\nWhich assumption does the reasoning depend on?",
+          "options": {
+            "A": "Digital notices are easier to read.",
+            "B": "Residents prefer notices of equal length.",
+            "C": "The print supplier will lower prices.",
+            "D": "It will distribute at least some notices digitally in place of printed ones.",
+            "E": "The council will charge businesses for an advert."
+          },
+          "answer": "D",
+          "explanation": "The saving depends on substitution, not just introducing a second format in addition to the first.",
+          "difficulty": 2
+        },
+        {
+          "id": "tara-drill-ct-assumption-04",
+          "type": "assumption",
+          "stem": "The history club says lowering its admission fee will attract more participants to its only room on Thursday. It has never sold out online.\n\nWhich assumption does the reasoning depend on?",
+          "options": {
+            "A": "At least some prospective attendees deterred by price can attend on Thursday if the fee falls.",
+            "B": "Everyone who attends will change their mind about the club.",
+            "C": "The room fee depends on attendance.",
+            "D": "Advertising costs will also fall.",
+            "E": "The club has previously charged no admission fee."
+          },
+          "answer": "A",
+          "explanation": "The stated mechanism requires a price-sensitive audience that can actually attend.",
+          "difficulty": 2
+        },
+        {
+          "id": "tara-drill-ct-assumption-05",
+          "type": "assumption",
+          "stem": "Fitting soundproof panels to one wall will stop the meeting room’s noise from interrupting adjacent classes. Measurements show almost all the noise currently crosses that particular wall.\n\nWhich assumption does the reasoning depend on?",
+          "options": {
+            "A": "The wall is older than the rest of the building.",
+            "B": "The panels will cost less than moving meetings.",
+            "C": "The meeting room can also be fitted with new carpet.",
+            "D": "Classes always begin before meetings.",
+            "E": "Noise reaching the classrooms by the other routes will not itself be enough to interrupt them."
+          },
+          "answer": "E",
+          "explanation": "Even a small remaining share may be disruptive. Treating the main path does not ensure the other paths are quiet enough.",
+          "difficulty": 3
+        },
+        {
+          "id": "tara-drill-ct-assumption-06",
+          "type": "assumption",
+          "stem": "The club should store its annual contacts spreadsheet on a private shared drive, rather than on the treasurer’s laptop, so a successor can access it after a handover.\n\nWhich assumption does the reasoning depend on?",
+          "options": {
+            "A": "The shared drive will be run by volunteers.",
+            "B": "The club has never lost an old list.",
+            "C": "The current laptop is older than the new treasurer’s.",
+            "D": "A successor can be given the necessary permission and credentials for the drive.",
+            "E": "A successor will enter contact details in the same order."
+          },
+          "answer": "D",
+          "explanation": "Shared storage delivers continuity only if the next person can actually get to the files.",
+          "difficulty": 3
+        },
+        {
+          "id": "tara-drill-ct-assumption-07",
+          "type": "assumption",
+          "stem": "A train operator proposes adding a midday service to reduce average passenger waiting time for people who arrive without checking the timetable. It plans to move some staff from the late afternoon timetable to provide the new service.\n\nWhich assumption does the reasoning depend on?",
+          "options": {
+            "A": "Midday trains carry more luggage than afternoon trains.",
+            "B": "Every late afternoon service is profitable.",
+            "C": "Any extra waiting caused by redeploying staff does not outweigh the saving from the midday service for that group.",
+            "D": "The operator will run the new service every day.",
+            "E": "All passengers like the same timetable."
+          },
+          "answer": "C",
+          "explanation": "The proposed effect is an average across the affected group. Disruption elsewhere could offset the benefit.",
+          "difficulty": 3
+        },
+        {
+          "id": "tara-drill-ct-assumption-08",
+          "type": "assumption",
+          "stem": "Changing the application form so reference letters are optional will shorten the time it takes this organisation to make decisions. Its staff will no longer have to chase missing letters.\n\nWhich assumption does the reasoning depend on?",
+          "options": {
+            "A": "Applicants who submit letters will always be rejected.",
+            "B": "Applications will be advertised in fewer places.",
+            "C": "References are currently read in the order in which they arrive.",
+            "D": "Staff will delete every letter already on file.",
+            "E": "Any added time spent assessing applications without letters will not erase the time saved by not chasing them."
+          },
+          "answer": "E",
+          "explanation": "Less chasing establishes only one component of decision time; assessment might take longer without information.",
+          "difficulty": 4
+        },
+        {
+          "id": "tara-drill-ct-assumption-09",
+          "type": "assumption",
+          "stem": "The trust wants to keep its small concert free to attend while reducing the requests for refunds of travel expenses. It plans to stream the concert live, arguing that people submitting those requests will no longer need to travel.\n\nWhich assumption does the reasoning depend on?",
+          "options": {
+            "A": "The stream will be watched by more people than the concert.",
+            "B": "The travel reimbursements cost more than streaming kit.",
+            "C": "The audience finds audio quality unimportant.",
+            "D": "All current attendees live outside the town.",
+            "E": "Enough attendees who would request travel refunds will choose the stream instead to reduce the number of requests."
+          },
+          "answer": "E",
+          "explanation": "A stream adds an option but does not change the refund count unless some of the relevant users actually switch.",
+          "difficulty": 4
+        },
+        {
+          "id": "tara-drill-ct-assumption-10",
+          "type": "assumption",
+          "stem": "During exams the library’s waiting list is longest at 16:00, so moving the same number of reserved desks from 14:00 to 16:00 will reduce the daily number of students turned away. Desks are released only at the start of each time block.\n\nWhich assumption does the reasoning depend on?",
+          "options": {
+            "A": "No student will move to another library.",
+            "B": "Students in the two slots take the same subjects.",
+            "C": "The same students use a reserved desk every day.",
+            "D": "All students currently waiting at 16:00 also queue at 14:00.",
+            "E": "The extra students accommodated at 16:00 will outnumber the students newly turned away at 14:00."
+          },
+          "answer": "E",
+          "explanation": "The question is the net daily effect. Long queues at one time do not establish that the gains exceed displacements at the other.",
+          "difficulty": 5
+        },
+        {
+          "id": "tara-drill-ct-strengthen-01",
+          "type": "strengthen",
+          "stem": "A theatre thinks large route arrows will help first-time visitors find their seats.\n\nWhich finding, if true, most strengthens the claim?",
+          "options": {
+            "A": "The theatre was built decades ago.",
+            "B": "Some visitors are experienced theatre-goers.",
+            "C": "An arrow costs less than a map.",
+            "D": "First-time visitors in a trial reached their seats with fewer wrong turns after the arrows were added.",
+            "E": "The arrows come in six colours."
+          },
+          "answer": "D",
+          "explanation": "The trial directly checks wrong turns among the group the proposal targets.",
+          "difficulty": 1
+        },
+        {
+          "id": "tara-drill-ct-strengthen-02",
+          "type": "strengthen",
+          "stem": "The café proposes putting the ingredients on the front of its sandwich labels so customers can identify vegetarian sandwiches more quickly.\n\nWhich finding, if true, most strengthens the claim?",
+          "options": {
+            "A": "Some customers buy two sandwiches.",
+            "B": "In a comparison with the old labels, customers picked out vegetarian sandwiches faster using the new labels.",
+            "C": "The labels will use recycled paper.",
+            "D": "The café sells soup as well.",
+            "E": "Staff like the font on the new labels."
+          },
+          "answer": "B",
+          "explanation": "The timed comparison measures the claimed benefit rather than attractiveness or cost.",
+          "difficulty": 1
+        },
+        {
+          "id": "tara-drill-ct-strengthen-03",
+          "type": "strengthen",
+          "stem": "An estate plans to move its food-waste bins from the car park to the entrance because it expects residents to put less food waste in general rubbish.\n\nWhich finding, if true, most strengthens the claim?",
+          "options": {
+            "A": "Food waste bins are painted brown.",
+            "B": "Surveys show residents recognise the recycling logo.",
+            "C": "The entrance already has bright lighting.",
+            "D": "A larger van could collect the food-waste bins.",
+            "E": "During a trial with unchanged collection days, the share of food in general rubbish fell in blocks whose bins moved but not in blocks whose bins stayed put."
+          },
+          "answer": "E",
+          "explanation": "The comparison checks the intended outcome while holding collection arrangements constant.",
+          "difficulty": 2
+        },
+        {
+          "id": "tara-drill-ct-strengthen-04",
+          "type": "strengthen",
+          "stem": "A parent group argues that a later start would reduce pupil lateness because the existing start clashes with a congested local bus journey.\n\nWhich finding, if true, most strengthens the claim?",
+          "options": {
+            "A": "Pupils generally find the new bell easy to hear.",
+            "B": "With the same class and bus route, fewer pupils arrived late on otherwise comparable days when school opened twenty minutes later.",
+            "C": "There are no lessons on bank holidays.",
+            "D": "The school recently changed its website.",
+            "E": "Some parents commute by train."
+          },
+          "answer": "B",
+          "explanation": "The matched comparison directly supports fewer late arrivals.",
+          "difficulty": 2
+        },
+        {
+          "id": "tara-drill-ct-strengthen-05",
+          "type": "strengthen",
+          "stem": "The apprentices’ workshop argues that showing new starters a brief demonstration would reduce the number of tools they damage in their first month.\n\nWhich finding, if true, most strengthens the claim?",
+          "options": {
+            "A": "New starters assigned a demonstration damage fewer tools than those given the same instructions in writing, with comparable jobs and hours.",
+            "B": "Some damaged tools are inexpensive to replace.",
+            "C": "The demonstration took only five minutes to film.",
+            "D": "Returning apprentices prefer to skip the video.",
+            "E": "The workshop employs more apprentices than last year."
+          },
+          "answer": "A",
+          "explanation": "Holding tasks and hours comparable helps attribute the difference to the demonstration.",
+          "difficulty": 3
+        },
+        {
+          "id": "tara-drill-ct-strengthen-06",
+          "type": "strengthen",
+          "stem": "The walking festival argues that charging for registrations will reduce no-shows without reducing the number who actually join the walks.\n\nWhich finding, if true, most strengthens the claim?",
+          "options": {
+            "A": "A different festival charges for transport.",
+            "B": "One free walk took place in heavy rain.",
+            "C": "Regular walkers said they liked the festival poster.",
+            "D": "The organisers can process refunds easily.",
+            "E": "In otherwise similar trial sessions, charged walks lost unused reservations but had at least as many people show up."
+          },
+          "answer": "E",
+          "explanation": "The trial supports both claims: fewer no-shows and no loss of actual participants.",
+          "difficulty": 3
+        },
+        {
+          "id": "tara-drill-ct-strengthen-07",
+          "type": "strengthen",
+          "stem": "A gallery argues that hanging a short introductory note next to the door will help visitors describe the exhibition’s central theme after their visit.\n\nWhich finding, if true, most strengthens the claim?",
+          "options": {
+            "A": "Publication cost is covered by a grant.",
+            "B": "Blind-marked exit responses were more accurate for visitors randomly assigned to see the note than for visitors assigned to see the same exhibition without it.",
+            "C": "Some visitors were already gallery members.",
+            "D": "The note is short enough to fit on one sheet.",
+            "E": "The note was written by the curator."
+          },
+          "answer": "B",
+          "explanation": "Random assignment and blind marking make this a direct and fair test of understanding.",
+          "difficulty": 3
+        },
+        {
+          "id": "tara-drill-ct-strengthen-08",
+          "type": "strengthen",
+          "stem": "A toll-free trial for one bridge was followed by fewer drivers cutting through a nearby village. The council argues the toll removal, rather than changes to the village road, caused the drop.\n\nWhich finding, if true, most strengthens the claim?",
+          "options": {
+            "A": "On days the toll was briefly restored during the trial, village cut-through traffic returned to its previous level without a road change.",
+            "B": "The bridge carries walkers as well as motorists.",
+            "C": "Village roads were resurfaced five years earlier.",
+            "D": "Deliveries to the village post office fell slightly.",
+            "E": "Residents dislike traffic noise."
+          },
+          "answer": "A",
+          "explanation": "Reversing the change temporarily reproduces the earlier behaviour, helping isolate the toll.",
+          "difficulty": 4
+        },
+        {
+          "id": "tara-drill-ct-strengthen-09",
+          "type": "strengthen",
+          "stem": "A college claims its new email headings help students act on deadline changes rather than merely making emails more likely to be opened.\n\nWhich finding, if true, most strengthens the claim?",
+          "options": {
+            "A": "Students assigned the new headings missed fewer revised deadlines even when compared only with students who opened their respective email.",
+            "B": "Some deadlines are also shown on posters.",
+            "C": "Most other colleges use different mailing software.",
+            "D": "More students opened the new emails in a pilot.",
+            "E": "The heading is limited to eight words."
+          },
+          "answer": "A",
+          "explanation": "The claim specifically goes beyond opens. Fewer missed deadlines among email openers supports that additional benefit.",
+          "difficulty": 4
+        },
+        {
+          "id": "tara-drill-ct-strengthen-10",
+          "type": "strengthen",
+          "stem": "A cycling group says lowering the price of secure bike storage will increase cycling by people who currently commute by car, not just shift existing cyclists from free racks into the store.\n\nWhich finding, if true, most strengthens the claim?",
+          "options": {
+            "A": "In a trial using travel diaries checked against parking records, most added weekday store users had previously commuted by car and now cycled.",
+            "B": "Paid storage became busier after the price cut.",
+            "C": "Cyclists who used the store previously welcomed the change.",
+            "D": "Users of free racks say secure storage is attractive.",
+            "E": "Car commuters spend more on parking than bike commuters."
+          },
+          "answer": "A",
+          "explanation": "Extra storage use alone would be ambiguous. Tracking previous mode shows the switch the group claims.",
+          "difficulty": 5
+        },
+        {
+          "id": "tara-drill-ct-weaken-01",
+          "type": "weaken",
+          "stem": "A tennis club says a new sign reduced the number of balls hit into the car park because there were fewer reports last week.\n\nWhich finding, if true, most weakens the claim?",
+          "options": {
+            "A": "The courts were closed all last week.",
+            "B": "The car park was built first.",
+            "C": "Reports can be made by telephone.",
+            "D": "The club has four courts.",
+            "E": "The sign was painted blue."
+          },
+          "answer": "A",
+          "explanation": "Closure explains a drop in reports without the sign having any effect.",
+          "difficulty": 1
+        },
+        {
+          "id": "tara-drill-ct-weaken-02",
+          "type": "weaken",
+          "stem": "A village shop says adding cashless payment made customers spend more each, because revenue rose during the first week.\n\nWhich finding, if true, most weakens the claim?",
+          "options": {
+            "A": "There were many more customers in the first week, and average spending per customer fell.",
+            "B": "One nearby shop still accepts cash.",
+            "C": "Many customers know the shopkeeper.",
+            "D": "The shop has a till with a screen.",
+            "E": "Cashless transactions are recorded electronically."
+          },
+          "answer": "A",
+          "explanation": "The conclusion is about spending per customer. The direct figure went down even though revenue rose.",
+          "difficulty": 1
+        },
+        {
+          "id": "tara-drill-ct-weaken-03",
+          "type": "weaken",
+          "stem": "A headteacher claims a new school map reduced how often new pupils got lost because requests for directions fell.\n\nWhich finding, if true, most weakens the claim?",
+          "options": {
+            "A": "During the same period older pupils were assigned to escort all new pupils between classes.",
+            "B": "The map was printed on A4 paper.",
+            "C": "Teachers use the map occasionally.",
+            "D": "The school is arranged around two courtyards.",
+            "E": "The map shows the main reception desk."
+          },
+          "answer": "A",
+          "explanation": "The escort programme explains why the new pupils no longer need to ask independently.",
+          "difficulty": 2
+        },
+        {
+          "id": "tara-drill-ct-weaken-04",
+          "type": "weaken",
+          "stem": "A station claims a new barrier speeds up entry because entries per hour increased after installation.\n\nWhich finding, if true, most weakens the claim?",
+          "options": {
+            "A": "The station has a clock above the entrance.",
+            "B": "One commuter frequently buys a monthly ticket.",
+            "C": "Two other entrances that had been closed for months reopened when the barrier was installed.",
+            "D": "The new barrier was delivered in a lorry.",
+            "E": "The barrier can accept several kinds of ticket."
+          },
+          "answer": "C",
+          "explanation": "Higher aggregate flow can come from restored parallel entrances rather than this barrier processing people faster.",
+          "difficulty": 2
+        },
+        {
+          "id": "tara-drill-ct-weaken-05",
+          "type": "weaken",
+          "stem": "A museum concludes that shortening its exhibits makes visitors more likely to complete the circuit. Its completion rate was higher this half-term than last.\n\nWhich finding, if true, most weakens the claim?",
+          "options": {
+            "A": "Admission was free in both periods.",
+            "B": "Some labels were reprinted using the same text.",
+            "C": "This half-term school tours formed most visits and followed a compulsory complete circuit, whereas such tours were rare last half-term.",
+            "D": "The circuit still goes past the café.",
+            "E": "The museum asked visitors about the circuit at the exit."
+          },
+          "answer": "C",
+          "explanation": "The change in visitor mix supplies an alternative explanation for the higher rate.",
+          "difficulty": 3
+        },
+        {
+          "id": "tara-drill-ct-weaken-06",
+          "type": "weaken",
+          "stem": "A council claims the launch of an online repair form cut waiting times. The average over all completed repairs fell in the following month.\n\nWhich finding, if true, most weakens the claim?",
+          "options": {
+            "A": "The online form has a confirmation page.",
+            "B": "A new policy in the same month stopped recording difficult jobs as repairs, although those jobs still took just as long.",
+            "C": "Residents can still call the council.",
+            "D": "Some residents submitted jobs at weekends.",
+            "E": "The repair team holds morning briefings."
+          },
+          "answer": "B",
+          "explanation": "Changing the measured set can lower its average independently of service speed.",
+          "difficulty": 3
+        },
+        {
+          "id": "tara-drill-ct-weaken-07",
+          "type": "weaken",
+          "stem": "A primary school argues that a puzzle club improved attendance because pupils enrolled in the club missed fewer days than pupils who did not enrol.\n\nWhich finding, if true, most weakens the claim?",
+          "options": {
+            "A": "The club meets in a different classroom.",
+            "B": "Attendance is collected automatically.",
+            "C": "The club does not meet on Fridays.",
+            "D": "Some members prefer number puzzles.",
+            "E": "Before the club began, the future members already missed fewer days, by about the same margin."
+          },
+          "answer": "E",
+          "explanation": "An existing difference of the same size undermines the inference that the club caused it.",
+          "difficulty": 3
+        },
+        {
+          "id": "tara-drill-ct-weaken-08",
+          "type": "weaken",
+          "stem": "A parcel firm says lighter packaging must have reduced fuel use for an unchanged volume of deliveries because the fleet burned less fuel.\n\nWhich finding, if true, most weakens the claim?",
+          "options": {
+            "A": "Some parcels have more than one address label.",
+            "B": "Cardboard can be recycled after use.",
+            "C": "Some drivers prefer delivering in town.",
+            "D": "A depot boundary was redrawn at the same time, and a contractor not counted in the fleet took over the longest deliveries.",
+            "E": "One van in the fleet was sold last winter."
+          },
+          "answer": "D",
+          "explanation": "Moving the longest routes out of the measured fleet can reduce reported fuel use without a packaging effect.",
+          "difficulty": 4
+        },
+        {
+          "id": "tara-drill-ct-weaken-09",
+          "type": "weaken",
+          "stem": "A council says its new feedback portal has increased the share of residents who report park problems because reports doubled.\n\nWhich finding, if true, most weakens the claim?",
+          "options": {
+            "A": "An audit finds the same number of distinct residents reported problems, but the new form logged each issue as a separate report instead of grouping issues from one person.",
+            "B": "Reports are now easier for staff to export.",
+            "C": "The portal supports two languages.",
+            "D": "People can attach photos to the portal.",
+            "E": "The council announced the portal at a public meeting."
+          },
+          "answer": "A",
+          "explanation": "The reporting unit changed; more reports are not more individuals reporting.",
+          "difficulty": 4
+        },
+        {
+          "id": "tara-drill-ct-weaken-10",
+          "type": "weaken",
+          "stem": "A translation service says a new matching system makes translators finish faster because fewer of its jobs breached their deadlines.\n\nWhich finding, if true, most weakens the claim?",
+          "options": {
+            "A": "A few clients opted out of email reminders.",
+            "B": "The firm lengthened deadlines for the hardest jobs and completion times did not fall when compared between jobs of similar type and size.",
+            "C": "Some translators work in the evening.",
+            "D": "The system has fewer drop-down menus.",
+            "E": "Many clients requested the service twice."
+          },
+          "answer": "B",
+          "explanation": "Fewer breaches may reflect greater permitted time, and like-for-like completion times directly counter the speed claim.",
+          "difficulty": 5
+        },
+        {
+          "id": "tara-drill-ct-flaw-01",
+          "type": "flaw",
+          "stem": "Everyone on the rowing team can swim. Elin can swim, so Elin is on the rowing team.\n\nWhich option identifies the main flaw in this argument?",
+          "options": {
+            "A": "It assumes nobody can swim.",
+            "B": "It uses an example that contradicts the stated rule.",
+            "C": "It reasons from polls of several teams.",
+            "D": "It treats a requirement for joining the team as proof of membership.",
+            "E": "It concludes Elin cannot row."
+          },
+          "answer": "D",
+          "explanation": "Swimming is necessary for team members but non-members may swim too.",
+          "difficulty": 1
+        },
+        {
+          "id": "tara-drill-ct-flaw-02",
+          "type": "flaw",
+          "stem": "The shop sold 100 more tickets than yesterday. It must have made more profit on tickets.\n\nWhich option identifies the main flaw in this argument?",
+          "options": {
+            "A": "It ignores that costs or the margin per ticket could have changed.",
+            "B": "It implies the shop cannot make a loss.",
+            "C": "It assumes every ticket was paid for twice.",
+            "D": "It claims costs equal revenue in all cases.",
+            "E": "It confuses yesterday with next week."
+          },
+          "answer": "A",
+          "explanation": "A higher sales count alone does not establish higher net earnings.",
+          "difficulty": 1
+        },
+        {
+          "id": "tara-drill-ct-flaw-03",
+          "type": "flaw",
+          "stem": "A ranger asked people waiting to hire bicycles how they preferred to travel. Most chose cycling. She concludes that most park visitors prefer cycling.\n\nWhich option identifies the main flaw in this argument?",
+          "options": {
+            "A": "It takes the number of paths as the number of cyclists.",
+            "B": "The conclusion contradicts the reported answers.",
+            "C": "The ranger asked the same people about walking twice.",
+            "D": "The ranger counted weekdays as weekends.",
+            "E": "The people asked are not a representative sample of all park visitors."
+          },
+          "answer": "E",
+          "explanation": "Visitors already queuing for bike hire are likely to favour cycling more than visitors in general.",
+          "difficulty": 2
+        },
+        {
+          "id": "tara-drill-ct-flaw-04",
+          "type": "flaw",
+          "stem": "The town has two large car parks. One is nearly full, so both must be nearly full.\n\nWhich option identifies the main flaw in this argument?",
+          "options": {
+            "A": "It assumes every car is parked illegally.",
+            "B": "It infers the occupancy of the other car park without evidence about it.",
+            "C": "It confuses total spaces with floor area.",
+            "D": "It uses an estimate where exact arithmetic would give the result.",
+            "E": "It confuses two parking charges."
+          },
+          "answer": "B",
+          "explanation": "One car park’s occupancy does not determine the other’s, even if both are large.",
+          "difficulty": 2
+        },
+        {
+          "id": "tara-drill-ct-flaw-05",
+          "type": "flaw",
+          "stem": "Several schools had higher attendance after their uniform rules changed. Therefore the rules must have caused attendance to rise, because the rise came afterwards.\n\nWhich option identifies the main flaw in this argument?",
+          "options": {
+            "A": "It treats sequence alone as enough to identify the cause of the increase.",
+            "B": "It states the attendance improvement happened before the rule change.",
+            "C": "It bases the conclusion on no observed change of any kind.",
+            "D": "It assumes changing uniform rules is impossible.",
+            "E": "It assumes higher attendance causes the uniform rules."
+          },
+          "answer": "A",
+          "explanation": "Being earlier is consistent with causing an effect, but other changes could explain the outcome.",
+          "difficulty": 3
+        },
+        {
+          "id": "tara-drill-ct-flaw-06",
+          "type": "flaw",
+          "stem": "Every shop on the square would benefit if each shop kept its entrance clear. Therefore any one shop that keeps its entrance clear will get all those benefits even if the others do nothing.\n\nWhich option identifies the main flaw in this argument?",
+          "options": {
+            "A": "It applies an individual intention to the wrong shop by name.",
+            "B": "It says clearing an entrance cannot help that individual shop at all.",
+            "C": "It assumes businesses on the square have no customers.",
+            "D": "It attributes the clearing of entrances to an event in the future.",
+            "E": "It assumes acting alone has the same outcome as everyone doing the same thing."
+          },
+          "answer": "E",
+          "explanation": "The premise describes collective action. A single shop’s action need not produce all the same benefits.",
+          "difficulty": 3
+        },
+        {
+          "id": "tara-drill-ct-flaw-07",
+          "type": "flaw",
+          "stem": "The consultant says the advice line should close. The shopkeeper agrees with the consultant, and the consultant thinks the shopkeeper is right, so together their views provide two independent reasons to close the line.\n\nWhich option identifies the main flaw in this argument?",
+          "options": {
+            "A": "The conclusion contradicts both speakers’ views.",
+            "B": "Agreement and mutual approval do not by themselves supply independent grounds for closure.",
+            "C": "The consultant must have disagreed first.",
+            "D": "It assumes the speakers were asked different questions.",
+            "E": "The argument mistakes a shopkeeper for a customer."
+          },
+          "answer": "B",
+          "explanation": "Neither speaker supplies evidence for closing it. Repeating a judgement does not establish independent support.",
+          "difficulty": 3
+        },
+        {
+          "id": "tara-drill-ct-flaw-08",
+          "type": "flaw",
+          "stem": "All applications shortlisted last year were complete on the filing date. The clerk concludes that if an application was not shortlisted, it must have been incomplete on that date.\n\nWhich option identifies the main flaw in this argument?",
+          "options": {
+            "A": "It infers an application was filed at the wrong office.",
+            "B": "It doubts that any completed application was ever shortlisted.",
+            "C": "It assumes completion guarantees shortlisting when the evidence establishes only that shortlisting required completion.",
+            "D": "It assumes applications cannot be updated after submission.",
+            "E": "It ignores applications that have already been found incomplete."
+          },
+          "answer": "C",
+          "explanation": "Complete applications could be rejected for other reasons. From shortlist implies complete, not shortlisted does not imply incomplete.",
+          "difficulty": 4
+        },
+        {
+          "id": "tara-drill-ct-flaw-09",
+          "type": "flaw",
+          "stem": "The principal argues that switching to a longer teaching day improved learning. Test averages rose, but that year only pupils with the highest practice marks were entered for the tests, unlike the previous year.\n\nWhich option identifies the main flaw in this argument?",
+          "options": {
+            "A": "It assumes the earlier tests all had tougher questions.",
+            "B": "It treats the registration deadline as part of the school day.",
+            "C": "It mistakenly treats attendance as test performance.",
+            "D": "It infers everyone’s individual score from a detailed record of every pupil.",
+            "E": "It ignores that changing who is tested can raise the average without improving learning."
+          },
+          "answer": "E",
+          "explanation": "The group included in the mean was selected differently; the scores are not comparable evidence of a learning gain.",
+          "difficulty": 4
+        },
+        {
+          "id": "tara-drill-ct-flaw-10",
+          "type": "flaw",
+          "stem": "In March, 60% of a club’s missed bookings were evening bookings. In April, 30% of its missed bookings were evening bookings. The club says an evening booking was therefore less likely to be missed in April.\n\nWhich option identifies the main flaw in this argument?",
+          "options": {
+            "A": "It ignores that April comes after March.",
+            "B": "It assumes an evening booking cannot be missed.",
+            "C": "It excludes evening bookings from its miss counts.",
+            "D": "It relies on percentage points when it should compare the price of evening bookings.",
+            "E": "It mistakes the share of misses occurring in the evening for the chance that an evening booking is missed."
+          },
+          "answer": "E",
+          "explanation": "The observed denominator is all missed bookings; the claimed probability uses all evening bookings. Neither the number of evening bookings nor their miss rate follows.",
+          "difficulty": 5
+        },
+        {
+          "id": "tara-drill-ct-parallel-reasoning-01",
+          "type": "parallel-reasoning",
+          "stem": "Every van owned by the depot carries a red decal. This van belongs to the depot, so it has a red decal.\n\nWhich option has the same pattern of reasoning?",
+          "options": {
+            "A": "Every canoe owned by the centre has a number. This canoe belongs to the centre, so it has a number.",
+            "B": "Only some centre canoes are numbered. This canoe is the longest, so it is numbered.",
+            "C": "Every centre canoe is numbered. This canoe is numbered, so it belongs to the centre.",
+            "D": "Every numbered canoe belongs to the centre. This canoe belongs to the centre, so it has a number.",
+            "E": "This canoe is not numbered, so the centre has no canoes."
+          },
+          "answer": "A",
+          "explanation": "Apply a universal rule from membership to the feature, not the other way round.",
+          "difficulty": 1
+        },
+        {
+          "id": "tara-drill-ct-parallel-reasoning-02",
+          "type": "parallel-reasoning",
+          "stem": "The group must camp at Alder or Beck. It cannot camp at Alder, so it must camp at Beck.\n\nWhich option has the same pattern of reasoning?",
+          "options": {
+            "A": "Rail is faster than road. It must therefore go by road.",
+            "B": "The parcel can travel by rail and road. It goes by rail, so no road is needed.",
+            "C": "The parcel must go by rail or road. It cannot go by rail, so it must go by road.",
+            "D": "Rail requires packaging. There is no packaging, so the parcel weighs less.",
+            "E": "The parcel may go by rail. It is heavy, so it cannot go by road."
+          },
+          "answer": "C",
+          "explanation": "Eliminate one option from two exhaustive alternatives and infer the remaining option.",
+          "difficulty": 1
+        },
+        {
+          "id": "tara-drill-ct-parallel-reasoning-03",
+          "type": "parallel-reasoning",
+          "stem": "If a page is missing, the archive flags the file. This file was flagged, so a page is missing.\n\nWhich option has the same pattern of reasoning?",
+          "options": {
+            "A": "If the alarm sounds, the chip overheats. The alarm sounded, so the chip overheated.",
+            "B": "If the chip overheats, the alarm sounds. The chip did not overheat, so no alarm sounded.",
+            "C": "If a chip overheats, an alarm sounds. The chip overheated, so the alarm sounded.",
+            "D": "If a chip overheats, an alarm sounds. The alarm sounded, so the chip overheated.",
+            "E": "If a chip overheats, an alarm sounds. No alarm sounded, so the chip did not overheat."
+          },
+          "answer": "D",
+          "explanation": "Both infer the trigger from the effect, affirming the consequent of a conditional.",
+          "difficulty": 2
+        },
+        {
+          "id": "tara-drill-ct-parallel-reasoning-04",
+          "type": "parallel-reasoning",
+          "stem": "If the parcel left by noon it was scanned. It was not scanned, so it did not leave by noon.\n\nWhich option has the same pattern of reasoning?",
+          "options": {
+            "A": "If the heater runs, the light glows. The light glowed, so the heater ran.",
+            "B": "If the light glows, the heater must run. It did not glow, so the heater did not run.",
+            "C": "If the heater runs, the light glows. The light did not glow, so the heater did not run.",
+            "D": "If the heater runs, the light glows. The heater did not run, so the light did not glow.",
+            "E": "If the heater runs, the light glows. The heater ran, so the light glowed."
+          },
+          "answer": "C",
+          "explanation": "Both reason from the absence of a necessary consequence to the absence of its trigger.",
+          "difficulty": 2
+        },
+        {
+          "id": "tara-drill-ct-parallel-reasoning-05",
+          "type": "parallel-reasoning",
+          "stem": "Some trained marshals work at fairs. Everyone working at a fair receives a pass. Therefore some trained marshals receive a pass.\n\nWhich option has the same pattern of reasoning?",
+          "options": {
+            "A": "No volunteer works nights. Everyone who works nights gets a torch, so no volunteer gets a torch.",
+            "B": "Some volunteers work nights. Everyone who gets a torch works nights. So some volunteers get a torch.",
+            "C": "Some volunteers work nights. Everyone working nights gets a torch. So some volunteers get a torch.",
+            "D": "All volunteers work nights, and everyone working nights gets a torch. So all volunteers get a torch.",
+            "E": "Some volunteers work nights. Some night workers get a torch. So some volunteers get a torch."
+          },
+          "answer": "C",
+          "explanation": "The existing members in both initial groups have the feature guaranteed for the second group.",
+          "difficulty": 3
+        },
+        {
+          "id": "tara-drill-ct-parallel-reasoning-06",
+          "type": "parallel-reasoning",
+          "stem": "Only a person with a town card can reserve the court. May has no card, so May cannot reserve the court.\n\nWhich option has the same pattern of reasoning?",
+          "options": {
+            "A": "Only a trained rider may lead the trip. Ash is trained, so Ash is leading it.",
+            "B": "A rider can lead or follow. Ash is following, so Ash may also lead.",
+            "C": "Every trained rider may lead the trip. Ash is not trained, so Ash may not lead it.",
+            "D": "A trained rider led yesterday. Ash led yesterday, so Ash has always been trained.",
+            "E": "Only a trained rider may lead the trip. Ash is not trained, so Ash may not lead it."
+          },
+          "answer": "E",
+          "explanation": "Court reservation implies having a card; leading implies being trained. Each denies the required condition.",
+          "difficulty": 3
+        },
+        {
+          "id": "tara-drill-ct-parallel-reasoning-07",
+          "type": "parallel-reasoning",
+          "stem": "The office will either relocate or close, but it cannot do both. It will relocate, so it will not close.\n\nWhich option has the same pattern of reasoning?",
+          "options": {
+            "A": "The recording will be shown at noon or at six, but not both. It will be shown at noon, so there will be no six o’clock showing.",
+            "B": "The recording will be shown at noon or at six. It will not be shown at noon, so it will be shown at six.",
+            "C": "The recording must be shown at noon and at six. It is shown at noon, so it will be shown at six.",
+            "D": "It might be shown at noon or six. It will be shown at noon, so it will also be shown at six.",
+            "E": "If shown at noon it may also be shown at six. It is shown at noon, so it must be shown at six."
+          },
+          "answer": "A",
+          "explanation": "The original uses exclusivity to reject the second option once the first is confirmed. The last option instead uses exhaustiveness to infer the second once the first is denied.",
+          "difficulty": 3
+        },
+        {
+          "id": "tara-drill-ct-parallel-reasoning-08",
+          "type": "parallel-reasoning",
+          "stem": "Every temporary worker has a badge. Anyone with a badge can open the gate. Noor can open the gate, so Noor is a temporary worker.\n\nWhich option has the same pattern of reasoning?",
+          "options": {
+            "A": "Some rehearsal captains have a score. Jules has a score, so Jules is a captain.",
+            "B": "Everyone who can request a stand has a score and every score holder is a captain. Jules can request a stand, so Jules is a captain.",
+            "C": "Every rehearsal captain has a score. Anyone with a score can request a stand. Jules can request a stand, so Jules is a rehearsal captain.",
+            "D": "Every rehearsal captain has a score. Anyone with a score can request a stand. Jules is a captain, so Jules can request a stand.",
+            "E": "Every rehearsal captain has a score. Nobody with a score can request a stand. Jules can request a stand, so Jules is not a captain."
+          },
+          "answer": "C",
+          "explanation": "The original chains two implications and then reverses the entire chain. In the correct option neither step is guaranteed in reverse, unlike the last option.",
+          "difficulty": 4
+        },
+        {
+          "id": "tara-drill-ct-parallel-reasoning-09",
+          "type": "parallel-reasoning",
+          "stem": "The committee allows a motion if either it was filed on time or it obtained special permission. This motion is not allowed, so it was not filed on time and did not obtain permission.\n\nWhich option has the same pattern of reasoning?",
+          "options": {
+            "A": "The venue admits a group if it has both a booking and an invitation. This group is not admitted, so it has neither.",
+            "B": "The venue admits a group if it has a booking or is invited. This group is not admitted, so it has neither a booking nor an invitation.",
+            "C": "The venue admits a group only if it has a booking or is invited. This group is not admitted, so it has neither.",
+            "D": "The venue admits a group if it has a booking or is invited. The group is admitted, so it has both.",
+            "E": "The venue admits a group if it has a booking or is invited. This group has a booking, so it is not invited."
+          },
+          "answer": "B",
+          "explanation": "Each possible condition would suffice. Denying the result rules out both; making the conditions merely necessary would not match.",
+          "difficulty": 4
+        },
+        {
+          "id": "tara-drill-ct-parallel-reasoning-10",
+          "type": "parallel-reasoning",
+          "stem": "Some long journeys are made after dark. No journey made after dark uses the wooded road. So some long journeys do not use the wooded road.\n\nWhich option has the same pattern of reasoning?",
+          "options": {
+            "A": "Some hand-delivered packages are fragile. No fragile package goes in the chute. So some hand-delivered packages do not go in the chute.",
+            "B": "Some hand-delivered packages avoid the chute. No fragile package goes in the chute. So some hand-delivered packages are fragile.",
+            "C": "Some hand-delivered packages are fragile. No fragile package goes in the chute. So no hand-delivered package goes in the chute.",
+            "D": "All hand-delivered packages are fragile. No fragile package goes in the chute. So all hand-delivered packages avoid the chute.",
+            "E": "Some fragile packages are hand-delivered. Some packages avoid the chute. So some fragile packages avoid the chute."
+          },
+          "answer": "A",
+          "explanation": "A known overlap provides at least one example falling under a universal exclusion. It does not exclude the whole first group.",
+          "difficulty": 5
+        },
+        {
+          "id": "tara-drill-ct-principle-01",
+          "type": "principle",
+          "stem": "A public notice should use familiar words where they convey the same information as jargon. More people can understand the wording without losing detail.\n\nWhich option best applies the same principle?",
+          "options": {
+            "A": "A clinic removes an important warning to save space.",
+            "B": "A shop puts its prices online but not in the window.",
+            "C": "A school writes an exam question in harder language to test vocabulary.",
+            "D": "A clinic replaces “nil by mouth” with equally precise plain-language instructions before a procedure.",
+            "E": "A café uses smaller print to fit more products on a menu."
+          },
+          "answer": "D",
+          "explanation": "The rule favours greater comprehension without sacrificing information.",
+          "difficulty": 1
+        },
+        {
+          "id": "tara-drill-ct-principle-02",
+          "type": "principle",
+          "stem": "The repair group should return a borrowed tool in the condition in which it received it. It should replace the tool if its own use damaged it.\n\nWhich option best applies the same principle?",
+          "options": {
+            "A": "A neighbour buys a saucepan for a friend’s birthday.",
+            "B": "A neighbour replaces a saucepan they bought themselves.",
+            "C": "A renter buys a better pan without borrowing anyone else’s.",
+            "D": "A neighbour replaces a borrowed saucepan after burning a hole in it.",
+            "E": "A shop replaces a pan because the buyer changed their mind."
+          },
+          "answer": "D",
+          "explanation": "Responsibility comes from damaging something while borrowing it.",
+          "difficulty": 1
+        },
+        {
+          "id": "tara-drill-ct-principle-03",
+          "type": "principle",
+          "stem": "A charity should offer spare winter coats to people who need warm clothing before offering them to volunteers as rewards. Its donations are meant to meet need.\n\nWhich option best applies the same principle?",
+          "options": {
+            "A": "A store reserves its discounted coats for employees first.",
+            "B": "A club awards unused tickets to the longest-serving member.",
+            "C": "A café sells leftover bread at the going price.",
+            "D": "A food project gives donated meal kits to households without enough groceries before giving them as staff perks.",
+            "E": "A race gives its fastest runner first choice of prizes."
+          },
+          "answer": "D",
+          "explanation": "Both prioritise need over reward when allocating donated goods intended to address that need.",
+          "difficulty": 2
+        },
+        {
+          "id": "tara-drill-ct-principle-04",
+          "type": "principle",
+          "stem": "A reporter should ask before quoting from a private group discussion. Agreeing to speak to a closed group does not mean agreeing to public attribution.\n\nWhich option best applies the same principle?",
+          "options": {
+            "A": "A speaker reads a public quotation from an elected official.",
+            "B": "An organiser asks workshop participants before publishing their named private written comments.",
+            "C": "A shop asks before changing its wholesale supplier.",
+            "D": "A club names its chair after the chair issues a public statement.",
+            "E": "A station broadcasts its public timetable without asking passengers."
+          },
+          "answer": "B",
+          "explanation": "Consent to a limited audience does not automatically extend to a public one.",
+          "difficulty": 2
+        },
+        {
+          "id": "tara-drill-ct-principle-05",
+          "type": "principle",
+          "stem": "A department should not treat a student’s support request as evidence of weak work. Asking for help is not the same as producing a poor result; judge the resulting work on its merits.\n\nWhich option best applies the same principle?",
+          "options": {
+            "A": "An employer awards points for agreeing to work longer hours.",
+            "B": "An examiner gives identical results to all candidates regardless of their answers.",
+            "C": "A coach removes everyone who misses a competition.",
+            "D": "An employer evaluates a work sample without treating a request for accessible instructions as evidence that the sample is poor.",
+            "E": "A publisher rejects every unedited draft."
+          },
+          "answer": "D",
+          "explanation": "The principle separates support sought from the quality of the performance being evaluated.",
+          "difficulty": 3
+        },
+        {
+          "id": "tara-drill-ct-principle-06",
+          "type": "principle",
+          "stem": "A local paper should check a startling claim by seeking an independent source. Reprints from the same press release are not additional evidence.\n\nWhich option best applies the same principle?",
+          "options": {
+            "A": "A council asks the same officer for a statement twice.",
+            "B": "A newspaper corrects a spelling error without contacting the author.",
+            "C": "A buyer verifies a used bike’s service history with the mechanic rather than relying on several listings copied from its owner.",
+            "D": "A museum trusts two copies of the same label as independent evidence.",
+            "E": "A buyer chooses the most frequently repeated advert without checking it."
+          },
+          "answer": "C",
+          "explanation": "Different copies from one source do not corroborate the claim; asking an independent record-holder can.",
+          "difficulty": 3
+        },
+        {
+          "id": "tara-drill-ct-principle-07",
+          "type": "principle",
+          "stem": "The team should pick a reversible pilot before committing to permanent changes when evidence is uncertain and the pilot can reveal whether a change works.\n\nWhich option best applies the same principle?",
+          "options": {
+            "A": "A hall permanently removes its stage because two regulars suggested it.",
+            "B": "A club delays an emergency repair until members take a vote next year.",
+            "C": "A shop tests a new logo only after replacing signage on every branch.",
+            "D": "A bakery keeps one experimental recipe after customers say they cannot taste a difference between it and the usual one.",
+            "E": "A market trials temporary loading bays with cones before excavating the street, so it can study deliveries while the layout remains reversible."
+          },
+          "answer": "E",
+          "explanation": "The pilot limits irreversible cost while gathering evidence relevant to the full decision.",
+          "difficulty": 3
+        },
+        {
+          "id": "tara-drill-ct-principle-08",
+          "type": "principle",
+          "stem": "The arts fund should publish why a project was denied but omit the applicant’s medical details if the reasons can be understood without them.\n\nWhich option best applies the same principle?",
+          "options": {
+            "A": "A school publishes anonymous grades but not any account of its decisions.",
+            "B": "A firm removes figures that are essential to explaining its decision.",
+            "C": "A selection panel publishes its reasoning using necessary eligibility facts only, leaving out unrelated personal histories.",
+            "D": "A press office withholds all reasons so nobody can criticise its judgement.",
+            "E": "A committee publishes every detail to ensure the minutes are exhaustive."
+          },
+          "answer": "C",
+          "explanation": "The principle preserves the explanation and withholds only sensitive details unneeded for understanding it.",
+          "difficulty": 4
+        },
+        {
+          "id": "tara-drill-ct-principle-09",
+          "type": "principle",
+          "stem": "The water board should compensate residents forced to buy bottled water after an avoidable outage. They had no realistic substitute and should not bear a cost caused by its failure.\n\nWhich option best applies the same principle?",
+          "options": {
+            "A": "A courier reimburses the unavoidable rebooking fee a customer incurred after the courier failed to collect a parcel at the agreed time.",
+            "B": "A venue refunds a customer simply because they would rather attend a different event.",
+            "C": "A café pays a customer for choosing a more expensive dessert even though the agreed order was available.",
+            "D": "A shop hands out general discounts to attract new customers.",
+            "E": "A train operator pays for a taxi a traveller chose despite a free replacement bus meeting their needs."
+          },
+          "answer": "A",
+          "explanation": "The comparable case combines a service failure with an unavoidable extra cost caused by it.",
+          "difficulty": 4
+        },
+        {
+          "id": "tara-drill-ct-principle-10",
+          "type": "principle",
+          "stem": "A city should extend a low-cost transport concession to carers who must accompany disabled passengers. Otherwise the extra fare can defeat the concession’s goal of making travel affordable for the passenger.\n\nWhich option best applies the same principle?",
+          "options": {
+            "A": "A ferry makes a voluntary premium upgrade free for all who qualify for basic travel.",
+            "B": "An attraction waives a necessary interpreter’s fee where charging for the interpreter would make an otherwise affordable tour inaccessible to the intended visitor.",
+            "C": "An attraction offers a discount to every employee’s relatives as a reward.",
+            "D": "A park makes its already free paths wider to accommodate a new maintenance vehicle.",
+            "E": "A tour offers a publicity discount to visitors who need no travel assistance."
+          },
+          "answer": "B",
+          "explanation": "Apply an accommodation to a necessary companion when excluding that companion would undermine the intended beneficiary’s access.",
+          "difficulty": 5
+        }
+      ],
+      "skills": [
+        {
+          "id": "main-conclusion",
+          "title": "Identify the main conclusion",
+          "lessonId": "main-conclusion"
+        },
+        {
+          "id": "drawing-conclusion",
+          "title": "Draw a conclusion",
+          "lessonId": "drawing-conclusion"
+        },
+        {
+          "id": "assumption",
+          "title": "Identify an assumption",
+          "lessonId": "assumption"
+        },
+        {
+          "id": "strengthen",
+          "title": "Strengthen an argument",
+          "lessonId": "strengthen"
+        },
+        {
+          "id": "weaken",
+          "title": "Weaken an argument",
+          "lessonId": "weaken"
+        },
+        {
+          "id": "flaw",
+          "title": "Detect a reasoning error",
+          "lessonId": "flaw"
+        },
+        {
+          "id": "parallel-reasoning",
+          "title": "Match arguments",
+          "lessonId": "parallel-reasoning"
+        },
+        {
+          "id": "principle",
+          "title": "Apply a principle",
+          "lessonId": "principle"
+        }
+      ]
+    },
+    {
+      "type": "problem-solving",
+      "title": "Problem Solving",
+      "questions": [
+        {
+          "id": "tara-drill-ps-capacity-01",
+          "type": "relevant-selection",
+          "stem": "The cinema balcony has 84 places. 57 were reserved, but 8 of these reservations were cancelled. Staff then allocated 14 of the vacant places to a school group. How many places remain free?",
+          "options": {
+            "A": "29",
+            "B": "27",
+            "C": "35",
+            "D": "70",
+            "E": "21"
+          },
+          "answer": "E",
+          "explanation": "Cancel the reservations before adding the group: 57 − 8 + 14 = 63 taken. Subtract from 84.",
+          "difficulty": 1,
+          "family": "capacity"
+        },
+        {
+          "id": "tara-drill-ps-capacity-02",
+          "type": "relevant-selection",
+          "stem": "The museum matinee has 70 places. 48 were reserved, but 6 of these reservations were cancelled. Staff then allocated 9 of the vacant places to a school group. How many places remain free?",
+          "options": {
+            "A": "61",
+            "B": "28",
+            "C": "19",
+            "D": "25",
+            "E": "22"
+          },
+          "answer": "C",
+          "explanation": "Cancel the reservations before adding the group: 48 − 6 + 9 = 51 taken. Subtract from 70.",
+          "difficulty": 1,
+          "family": "capacity"
+        },
+        {
+          "id": "tara-drill-ps-capacity-03",
+          "type": "relevant-selection",
+          "stem": "The folk concert has 96 places. 71 were reserved, but 13 of these reservations were cancelled. Staff then allocated 12 of the vacant places to a school group. How many places remain free?",
+          "options": {
+            "A": "39",
+            "B": "26",
+            "C": "84",
+            "D": "25",
+            "E": "38"
+          },
+          "answer": "B",
+          "explanation": "Cancel the reservations before adding the group: 71 − 13 + 12 = 70 taken. Subtract from 96.",
+          "difficulty": 1,
+          "family": "capacity"
+        },
+        {
+          "id": "tara-drill-ps-capacity-04",
+          "type": "relevant-selection",
+          "stem": "The school play has 88 places. 70 were reserved, but 5 of these reservations were cancelled. Staff then allocated 17 of the vacant places to a school group. How many places remain free?",
+          "options": {
+            "A": "11",
+            "B": "6",
+            "C": "18",
+            "D": "71",
+            "E": "23"
+          },
+          "answer": "B",
+          "explanation": "Cancel the reservations before adding the group: 70 − 5 + 17 = 82 taken. Subtract from 88.",
+          "difficulty": 1,
+          "family": "capacity"
+        },
+        {
+          "id": "tara-drill-ps-capacity-05",
+          "type": "relevant-selection",
+          "stem": "The dance recital has 105 places. 83 were reserved, but 11 of these reservations were cancelled. Staff then allocated 16 of the vacant places to a school group. How many places remain free?",
+          "options": {
+            "A": "28",
+            "B": "22",
+            "C": "33",
+            "D": "17",
+            "E": "89"
+          },
+          "answer": "D",
+          "explanation": "Cancel the reservations before adding the group: 83 − 11 + 16 = 88 taken. Subtract from 105.",
+          "difficulty": 1,
+          "family": "capacity"
+        },
+        {
+          "id": "tara-drill-ps-rates-01",
+          "type": "relevant-selection",
+          "stem": "A recording studio records paid and total visits, respectively, in weekday order from Monday to Friday: 21 paid out of 32; 25 paid out of 35; 30 paid out of 38; 19 paid out of 25; 23 paid out of 31. Consider only days with at least 22 paid visits. On which eligible day was the percentage of paid visits highest?",
+          "options": {
+            "A": "Monday",
+            "B": "Friday",
+            "C": "Thursday",
+            "D": "Wednesday",
+            "E": "Tuesday"
+          },
+          "answer": "D",
+          "explanation": "First exclude days with too few paid visits. The remaining fractions are Tuesday 25/35, Wednesday 30/38, Friday 23/31. Comparing those fractions, Wednesday is highest; the largest numerator alone is not enough.",
+          "difficulty": 4,
+          "family": "rates"
+        },
+        {
+          "id": "tara-drill-ps-rates-02",
+          "type": "relevant-selection",
+          "stem": "A workshop records paid and total visits, respectively, in weekday order from Monday to Friday: 30 paid out of 42; 40 paid out of 48; 33 paid out of 51; 25 paid out of 41; 38 paid out of 47. Consider only days with at least 31 paid visits. On which eligible day was the percentage of paid visits highest?",
+          "options": {
+            "A": "Thursday",
+            "B": "Tuesday",
+            "C": "Monday",
+            "D": "Wednesday",
+            "E": "Friday"
+          },
+          "answer": "B",
+          "explanation": "First exclude days with too few paid visits. The remaining fractions are Tuesday 40/48, Wednesday 33/51, Friday 38/47. Comparing those fractions, Tuesday is highest; the largest numerator alone is not enough.",
+          "difficulty": 4,
+          "family": "rates"
+        },
+        {
+          "id": "tara-drill-ps-rates-03",
+          "type": "relevant-selection",
+          "stem": "An indoor market records paid and total visits, respectively, in weekday order from Monday to Friday: 81 paid out of 100; 75 paid out of 125; 93 paid out of 113; 74 paid out of 85; 88 paid out of 121. Consider only days with at least 78 paid visits. On which eligible day was the percentage of paid visits highest?",
+          "options": {
+            "A": "Monday",
+            "B": "Tuesday",
+            "C": "Thursday",
+            "D": "Friday",
+            "E": "Wednesday"
+          },
+          "answer": "E",
+          "explanation": "First exclude days with too few paid visits. The remaining fractions are Monday 81/100, Wednesday 93/113, Friday 88/121. Comparing those fractions, Wednesday is highest; the largest numerator alone is not enough.",
+          "difficulty": 4,
+          "family": "rates"
+        },
+        {
+          "id": "tara-drill-ps-rates-04",
+          "type": "relevant-selection",
+          "stem": "A community hub records paid and total visits, respectively, in weekday order from Monday to Friday: 14 paid out of 23; 18 paid out of 24; 21 paid out of 32; 17 paid out of 21; 22 paid out of 27. Consider only days with at least 17 paid visits. On which eligible day was the percentage of paid visits highest?",
+          "options": {
+            "A": "Thursday",
+            "B": "Tuesday",
+            "C": "Wednesday",
+            "D": "Friday",
+            "E": "Monday"
+          },
+          "answer": "D",
+          "explanation": "First exclude days with too few paid visits. The remaining fractions are Tuesday 18/24, Wednesday 21/32, Thursday 17/21, Friday 22/27. Comparing those fractions, Friday is highest; the largest numerator alone is not enough.",
+          "difficulty": 4,
+          "family": "rates"
+        },
+        {
+          "id": "tara-drill-ps-rates-05",
+          "type": "relevant-selection",
+          "stem": "An arts centre records paid and total visits, respectively, in weekday order from Monday to Friday: 84 paid out of 104; 90 paid out of 115; 73 paid out of 102; 91 paid out of 103; 76 paid out of 110. Consider only days with at least 80 paid visits. On which eligible day was the percentage of paid visits highest?",
+          "options": {
+            "A": "Friday",
+            "B": "Wednesday",
+            "C": "Monday",
+            "D": "Tuesday",
+            "E": "Thursday"
+          },
+          "answer": "E",
+          "explanation": "First exclude days with too few paid visits. The remaining fractions are Monday 84/104, Tuesday 90/115, Thursday 91/103. Comparing those fractions, Thursday is highest; the largest numerator alone is not enough.",
+          "difficulty": 4,
+          "family": "rates"
+        },
+        {
+          "id": "tara-drill-ps-running-totals-01",
+          "type": "relevant-selection",
+          "stem": "A team tracks library returns. At the start 8 books are waiting. For weeks 1–4, the numbers arriving and completed respectively are: 36, 21; 19, 24; 27, 22; 31, 33. All unfinished books carry over. What was the highest number waiting at any of the four week ends?",
+          "options": {
+            "A": "31",
+            "B": "23",
+            "C": "21",
+            "D": "22",
+            "E": "18"
+          },
+          "answer": "B",
+          "explanation": "Add arrivals and subtract completions from the previous balance. End-of-week balances are 23, 18, 23, 21, so the highest is 23.",
+          "difficulty": 3,
+          "family": "running-totals"
+        },
+        {
+          "id": "tara-drill-ps-running-totals-02",
+          "type": "relevant-selection",
+          "stem": "A team tracks repairs. At the start 7 jobs are waiting. For weeks 1–4, the numbers arriving and completed respectively are: 20, 24; 33, 18; 19, 25; 26, 25. All unfinished jobs carry over. What was the highest number waiting at any of the four week ends?",
+          "options": {
+            "A": "12",
+            "B": "18",
+            "C": "13",
+            "D": "3",
+            "E": "25"
+          },
+          "answer": "B",
+          "explanation": "Add arrivals and subtract completions from the previous balance. End-of-week balances are 3, 18, 12, 13, so the highest is 18.",
+          "difficulty": 3,
+          "family": "running-totals"
+        },
+        {
+          "id": "tara-drill-ps-running-totals-03",
+          "type": "relevant-selection",
+          "stem": "A team tracks clothing alterations. At the start 5 garments are waiting. For weeks 1–4, the numbers arriving and completed respectively are: 29, 21; 21, 17; 23, 19; 15, 29. All unfinished garments carry over. What was the highest number waiting at any of the four week ends?",
+          "options": {
+            "A": "7",
+            "B": "26",
+            "C": "13",
+            "D": "17",
+            "E": "21"
+          },
+          "answer": "E",
+          "explanation": "Add arrivals and subtract completions from the previous balance. End-of-week balances are 13, 17, 21, 7, so the highest is 21.",
+          "difficulty": 3,
+          "family": "running-totals"
+        },
+        {
+          "id": "tara-drill-ps-running-totals-04",
+          "type": "relevant-selection",
+          "stem": "A team tracks records being scanned. At the start 11 files are waiting. For weeks 1–4, the numbers arriving and completed respectively are: 44, 30; 36, 41; 27, 17; 30, 44. All unfinished files carry over. What was the highest number waiting at any of the four week ends?",
+          "options": {
+            "A": "30",
+            "B": "16",
+            "C": "41",
+            "D": "20",
+            "E": "25"
+          },
+          "answer": "A",
+          "explanation": "Add arrivals and subtract completions from the previous balance. End-of-week balances are 25, 20, 30, 16, so the highest is 30.",
+          "difficulty": 3,
+          "family": "running-totals"
+        },
+        {
+          "id": "tara-drill-ps-running-totals-05",
+          "type": "relevant-selection",
+          "stem": "A team tracks print requests. At the start 3 orders are waiting. For weeks 1–4, the numbers arriving and completed respectively are: 44, 28; 24, 35; 39, 27; 29, 38. All unfinished orders carry over. What was the highest number waiting at any of the four week ends?",
+          "options": {
+            "A": "8",
+            "B": "20",
+            "C": "11",
+            "D": "23",
+            "E": "19"
+          },
+          "answer": "B",
+          "explanation": "Add arrivals and subtract completions from the previous balance. End-of-week balances are 19, 8, 20, 11, so the highest is 20.",
+          "difficulty": 3,
+          "family": "running-totals"
+        },
+        {
+          "id": "tara-drill-ps-filtering-table-01",
+          "type": "relevant-selection",
+          "stem": "A hiking group must carry at least 6 kg of water. Its kit must weigh no more than 18 kg once the water is included. The table lists complete offers as (water kg, price, other kit kg): 4 kg, £8, 7 kg; 7 kg, £10, 15 kg; 5 kg, £12, 9 kg; 6 kg, £6, 5 kg. It buys one complete offer and cannot remove any kit. What is the lowest feasible price?",
+          "options": {
+            "A": "£10",
+            "B": "£6",
+            "C": "£8",
+            "D": "£9",
+            "E": "£12"
+          },
+          "answer": "B",
+          "explanation": "Filter on both water and combined weight. The feasible prices are £6. The smallest is £6.",
+          "difficulty": 2,
+          "family": "filtering-table"
+        },
+        {
+          "id": "tara-drill-ps-filtering-table-02",
+          "type": "relevant-selection",
+          "stem": "A camp crew must carry at least 7 kg of water. Its kit must weigh no more than 17 kg once the water is included. The table lists complete offers as (water kg, price, other kit kg): 9 kg, £4, 6 kg; 7 kg, £8, 4 kg; 8 kg, £9, 8 kg; 4 kg, £11, 5 kg. It buys one complete offer and cannot remove any kit. What is the lowest feasible price?",
+          "options": {
+            "A": "£4",
+            "B": "£11",
+            "C": "£8",
+            "D": "£6",
+            "E": "£9"
+          },
+          "answer": "A",
+          "explanation": "Filter on both water and combined weight. The feasible prices are £4, £8, £9. The smallest is £4.",
+          "difficulty": 2,
+          "family": "filtering-table"
+        },
+        {
+          "id": "tara-drill-ps-filtering-table-03",
+          "type": "relevant-selection",
+          "stem": "A rowing team must carry at least 7 kg of water. Its kit must weigh no more than 16 kg once the water is included. The table lists complete offers as (water kg, price, other kit kg): 8 kg, £8, 14 kg; 9 kg, £9, 19 kg; 6 kg, £7, 8 kg; 7 kg, £6, 9 kg. It buys one complete offer and cannot remove any kit. What is the lowest feasible price?",
+          "options": {
+            "A": "£5",
+            "B": "£6",
+            "C": "£7",
+            "D": "£9",
+            "E": "£8"
+          },
+          "answer": "B",
+          "explanation": "Filter on both water and combined weight. The feasible prices are £6. The smallest is £6.",
+          "difficulty": 2,
+          "family": "filtering-table"
+        },
+        {
+          "id": "tara-drill-ps-filtering-table-04",
+          "type": "relevant-selection",
+          "stem": "A scout group must carry at least 6 kg of water. Its kit must weigh no more than 16 kg once the water is included. The table lists complete offers as (water kg, price, other kit kg): 8 kg, £9, 3 kg; 5 kg, £12, 6 kg; 9 kg, £6, 5 kg; 7 kg, £7, 3 kg. It buys one complete offer and cannot remove any kit. What is the lowest feasible price?",
+          "options": {
+            "A": "£7",
+            "B": "£9",
+            "C": "£12",
+            "D": "£8",
+            "E": "£6"
+          },
+          "answer": "E",
+          "explanation": "Filter on both water and combined weight. The feasible prices are £9, £6, £7. The smallest is £6.",
+          "difficulty": 2,
+          "family": "filtering-table"
+        },
+        {
+          "id": "tara-drill-ps-filtering-table-05",
+          "type": "relevant-selection",
+          "stem": "A trail crew must carry at least 7 kg of water. Its kit must weigh no more than 18 kg once the water is included. The table lists complete offers as (water kg, price, other kit kg): 6 kg, £8, 10 kg; 5 kg, £10, 8 kg; 7 kg, £8, 11 kg; 4 kg, £12, 7 kg. It buys one complete offer and cannot remove any kit. What is the lowest feasible price?",
+          "options": {
+            "A": "£7",
+            "B": "£12",
+            "C": "£8",
+            "D": "£11",
+            "E": "£10"
+          },
+          "answer": "C",
+          "explanation": "Filter on both water and combined weight. The feasible prices are £8. The smallest is £8.",
+          "difficulty": 2,
+          "family": "filtering-table"
+        },
+        {
+          "id": "tara-drill-ps-cumulative-chart-01",
+          "type": "relevant-selection",
+          "stem": "A museum displays cumulative entries at 09:00, 10:00, 11:00, 12:00, 13:00 and 14:00: 0, 6, 20, 32, 37, 45. How many entries occurred between 10:00 and 13:00? All entries are counted once.",
+          "options": {
+            "A": "17",
+            "B": "43",
+            "C": "31",
+            "D": "37",
+            "E": "26"
+          },
+          "answer": "C",
+          "explanation": "A cumulative count includes earlier visits. Subtract 6 from 37 to isolate the window.",
+          "difficulty": 2,
+          "family": "cumulative-chart"
+        },
+        {
+          "id": "tara-drill-ps-cumulative-chart-02",
+          "type": "relevant-selection",
+          "stem": "A pool displays cumulative entries at 09:00, 10:00, 11:00, 12:00, 13:00 and 14:00: 0, 9, 24, 32, 39, 50. How many entries occurred between 09:00 and 12:00? All entries are counted once.",
+          "options": {
+            "A": "24",
+            "B": "33",
+            "C": "37",
+            "D": "32",
+            "E": "23"
+          },
+          "answer": "D",
+          "explanation": "A cumulative count includes earlier visits. Subtract 0 from 32 to isolate the window.",
+          "difficulty": 2,
+          "family": "cumulative-chart"
+        },
+        {
+          "id": "tara-drill-ps-cumulative-chart-03",
+          "type": "relevant-selection",
+          "stem": "A food hall displays cumulative entries at 09:00, 10:00, 11:00, 12:00, 13:00 and 14:00: 0, 12, 25, 34, 50, 60. How many entries occurred between 11:00 and 14:00? All entries are counted once.",
+          "options": {
+            "A": "85",
+            "B": "60",
+            "C": "35",
+            "D": "26",
+            "E": "25"
+          },
+          "answer": "C",
+          "explanation": "A cumulative count includes earlier visits. Subtract 25 from 60 to isolate the window.",
+          "difficulty": 2,
+          "family": "cumulative-chart"
+        },
+        {
+          "id": "tara-drill-ps-cumulative-chart-04",
+          "type": "relevant-selection",
+          "stem": "A stadium displays cumulative entries at 09:00, 10:00, 11:00, 12:00, 13:00 and 14:00: 0, 7, 15, 26, 45, 59. How many entries occurred between 10:00 and 14:00? All entries are counted once.",
+          "options": {
+            "A": "59",
+            "B": "66",
+            "C": "38",
+            "D": "44",
+            "E": "52"
+          },
+          "answer": "E",
+          "explanation": "A cumulative count includes earlier visits. Subtract 7 from 59 to isolate the window.",
+          "difficulty": 2,
+          "family": "cumulative-chart"
+        },
+        {
+          "id": "tara-drill-ps-cumulative-chart-05",
+          "type": "relevant-selection",
+          "stem": "A botanical garden displays cumulative entries at 09:00, 10:00, 11:00, 12:00, 13:00 and 14:00: 0, 10, 27, 40, 49, 61. How many entries occurred between 09:00 and 13:00? All entries are counted once.",
+          "options": {
+            "A": "50",
+            "B": "40",
+            "C": "54",
+            "D": "49",
+            "E": "39"
+          },
+          "answer": "D",
+          "explanation": "A cumulative count includes earlier visits. Subtract 0 from 49 to isolate the window.",
+          "difficulty": 2,
+          "family": "cumulative-chart"
+        },
+        {
+          "id": "tara-drill-ps-revenue-versus-cost-01",
+          "type": "relevant-selection",
+          "stem": "A stall sells packed lunches. Its three days are listed as (units sold, price per sale, units bought, price per unit bought): 30, £3, 18, £5; 25, £4, 21, £3; 32, £4, 16, £5. With no other costs or income, what is the highest one-day difference between sales revenue and expenditure on stock?",
+          "options": {
+            "A": "£128",
+            "B": "£37",
+            "C": "£85",
+            "D": "£48",
+            "E": "£0"
+          },
+          "answer": "D",
+          "explanation": "Compute units sold × price, then subtract units bought × cost separately for each day: £0, £37, £48. The maximum is £48.",
+          "difficulty": 3,
+          "family": "revenue-versus-cost"
+        },
+        {
+          "id": "tara-drill-ps-revenue-versus-cost-02",
+          "type": "relevant-selection",
+          "stem": "A stall sells plants. Its three days are listed as (units sold, price per sale, units bought, price per unit bought): 23, £5, 21, £3; 28, £4, 25, £2; 32, £3, 19, £4. With no other costs or income, what is the highest one-day difference between sales revenue and expenditure on stock?",
+          "options": {
+            "A": "£52",
+            "B": "£115",
+            "C": "£134",
+            "D": "£62",
+            "E": "£20"
+          },
+          "answer": "D",
+          "explanation": "Compute units sold × price, then subtract units bought × cost separately for each day: £52, £62, £20. The maximum is £62.",
+          "difficulty": 3,
+          "family": "revenue-versus-cost"
+        },
+        {
+          "id": "tara-drill-ps-revenue-versus-cost-03",
+          "type": "relevant-selection",
+          "stem": "A stall sells museum passes. Its three days are listed as (units sold, price per sale, units bought, price per unit bought): 18, £8, 22, £6; 22, £7, 25, £5; 19, £9, 20, £5. With no other costs or income, what is the highest one-day difference between sales revenue and expenditure on stock?",
+          "options": {
+            "A": "£112",
+            "B": "£71",
+            "C": "£171",
+            "D": "£12",
+            "E": "£29"
+          },
+          "answer": "B",
+          "explanation": "Compute units sold × price, then subtract units bought × cost separately for each day: £12, £29, £71. The maximum is £71.",
+          "difficulty": 3,
+          "family": "revenue-versus-cost"
+        },
+        {
+          "id": "tara-drill-ps-revenue-versus-cost-04",
+          "type": "relevant-selection",
+          "stem": "A stall sells seed boxes. Its three days are listed as (units sold, price per sale, units bought, price per unit bought): 20, £5, 16, £7; 23, £4, 13, £8; 25, £5, 18, £5. With no other costs or income, what is the highest one-day difference between sales revenue and expenditure on stock?",
+          "options": {
+            "A": "£35",
+            "B": "£11",
+            "C": "£40",
+            "D": "£-12",
+            "E": "£125"
+          },
+          "answer": "A",
+          "explanation": "Compute units sold × price, then subtract units bought × cost separately for each day: £-12, £-12, £35. The maximum is £35.",
+          "difficulty": 3,
+          "family": "revenue-versus-cost"
+        },
+        {
+          "id": "tara-drill-ps-revenue-versus-cost-05",
+          "type": "relevant-selection",
+          "stem": "A stall sells ceramics. Its three days are listed as (units sold, price per sale, units bought, price per unit bought): 17, £8, 15, £11; 16, £9, 13, £10; 19, £7, 11, £12. With no other costs or income, what is the highest one-day difference between sales revenue and expenditure on stock?",
+          "options": {
+            "A": "£14",
+            "B": "£144",
+            "C": "£-29",
+            "D": "£-14",
+            "E": "£1"
+          },
+          "answer": "A",
+          "explanation": "Compute units sold × price, then subtract units bought × cost separately for each day: £-29, £14, £1. The maximum is £14.",
+          "difficulty": 3,
+          "family": "revenue-versus-cost"
+        },
+        {
+          "id": "tara-drill-ps-unit-conversion-01",
+          "type": "relevant-selection",
+          "stem": "The canal trail has stops A through E joined in line. The leg lengths are A–B 400 m, B–C 0.75 km, C–D 275 m, D–E 0.9 km. A shortcut runs directly from A to E and is 1.1 km. A walker takes the trail, not the shortcut, from A to C. How many metres do they walk?",
+          "options": {
+            "A": "1,100 m",
+            "B": "1,250 m",
+            "C": "1,050 m",
+            "D": "1,150 m",
+            "E": "2,325 m"
+          },
+          "answer": "D",
+          "explanation": "Follow only the requested trail legs. With kilometres converted to metres they are 400, 750; add them to get 1150 m.",
+          "difficulty": 2,
+          "family": "unit-conversion"
+        },
+        {
+          "id": "tara-drill-ps-unit-conversion-02",
+          "type": "relevant-selection",
+          "stem": "The college trail has stops A through E joined in line. The leg lengths are A–B 850 m, B–C 0.45 km, C–D 500 m, D–E 0.725 km. A shortcut runs directly from A to E and is 1.1 km. A walker takes the trail, not the shortcut, from B to D. How many metres do they walk?",
+          "options": {
+            "A": "2,525 m",
+            "B": "1,050 m",
+            "C": "1,100 m",
+            "D": "850 m",
+            "E": "950 m"
+          },
+          "answer": "E",
+          "explanation": "Follow only the requested trail legs. With kilometres converted to metres they are 450, 500; add them to get 950 m.",
+          "difficulty": 2,
+          "family": "unit-conversion"
+        },
+        {
+          "id": "tara-drill-ps-unit-conversion-03",
+          "type": "relevant-selection",
+          "stem": "The garden trail has stops A through E joined in line. The leg lengths are A–B 325 m, B–C 0.375 km, C–D 650 m, D–E 0.475 km. A shortcut runs directly from A to E and is 1.1 km. A walker takes the trail, not the shortcut, from A to D. How many metres do they walk?",
+          "options": {
+            "A": "1,825 m",
+            "B": "1,450 m",
+            "C": "1,350 m",
+            "D": "1,100 m",
+            "E": "1,250 m"
+          },
+          "answer": "C",
+          "explanation": "Follow only the requested trail legs. With kilometres converted to metres they are 325, 375, 650; add them to get 1350 m.",
+          "difficulty": 2,
+          "family": "unit-conversion"
+        },
+        {
+          "id": "tara-drill-ps-unit-conversion-04",
+          "type": "relevant-selection",
+          "stem": "The river trail has stops A through E joined in line. The leg lengths are A–B 700 m, B–C 0.15 km, C–D 950 m, D–E 0.4 km. A shortcut runs directly from A to E and is 1.1 km. A walker takes the trail, not the shortcut, from B to E. How many metres do they walk?",
+          "options": {
+            "A": "1,600 m",
+            "B": "1,100 m",
+            "C": "1,500 m",
+            "D": "1,400 m",
+            "E": "2,200 m"
+          },
+          "answer": "C",
+          "explanation": "Follow only the requested trail legs. With kilometres converted to metres they are 150, 950, 400; add them to get 1500 m.",
+          "difficulty": 2,
+          "family": "unit-conversion"
+        },
+        {
+          "id": "tara-drill-ps-unit-conversion-05",
+          "type": "relevant-selection",
+          "stem": "The estate trail has stops A through E joined in line. The leg lengths are A–B 425 m, B–C 0.325 km, C–D 775 m, D–E 0.6 km. A shortcut runs directly from A to E and is 1.1 km. A walker takes the trail, not the shortcut, from A to E. How many metres do they walk?",
+          "options": {
+            "A": "1,100 m",
+            "B": "2,225 m",
+            "C": "2,725 m",
+            "D": "2,125 m",
+            "E": "2,025 m"
+          },
+          "answer": "D",
+          "explanation": "Follow only the requested trail legs. With kilometres converted to metres they are 425, 325, 775, 600; add them to get 2125 m.",
+          "difficulty": 2,
+          "family": "unit-conversion"
+        },
+        {
+          "id": "tara-drill-ps-minimum-combination-01",
+          "type": "relevant-selection",
+          "stem": "Four school clubs have 8, 11, 13, 15 members respectively. An organiser must invite exactly two whole groups, with at least 23 people in total. What is the smallest feasible total?",
+          "options": {
+            "A": "19",
+            "B": "24",
+            "C": "21",
+            "D": "23",
+            "E": "26"
+          },
+          "answer": "D",
+          "explanation": "List the sums of two different groups and discard sums below 23. The smallest remaining sum is 23.",
+          "difficulty": 3,
+          "family": "minimum-combination"
+        },
+        {
+          "id": "tara-drill-ps-minimum-combination-02",
+          "type": "relevant-selection",
+          "stem": "Four choirs have 7, 10, 18, 19 members respectively. An organiser must invite exactly two whole groups, with at least 26 people in total. What is the smallest feasible total?",
+          "options": {
+            "A": "25",
+            "B": "26",
+            "C": "17",
+            "D": "29",
+            "E": "28"
+          },
+          "answer": "B",
+          "explanation": "List the sums of two different groups and discard sums below 26. The smallest remaining sum is 26.",
+          "difficulty": 3,
+          "family": "minimum-combination"
+        },
+        {
+          "id": "tara-drill-ps-minimum-combination-03",
+          "type": "relevant-selection",
+          "stem": "Four scout packs have 8, 12, 15, 17 members respectively. An organiser must invite exactly two whole groups, with at least 28 people in total. What is the smallest feasible total?",
+          "options": {
+            "A": "25",
+            "B": "23",
+            "C": "20",
+            "D": "29",
+            "E": "27"
+          },
+          "answer": "D",
+          "explanation": "List the sums of two different groups and discard sums below 28. The smallest remaining sum is 29.",
+          "difficulty": 3,
+          "family": "minimum-combination"
+        },
+        {
+          "id": "tara-drill-ps-minimum-combination-04",
+          "type": "relevant-selection",
+          "stem": "Four football squads have 5, 9, 14, 18 members respectively. An organiser must invite exactly two whole groups, with at least 21 people in total. What is the smallest feasible total?",
+          "options": {
+            "A": "23",
+            "B": "32",
+            "C": "19",
+            "D": "14",
+            "E": "27"
+          },
+          "answer": "A",
+          "explanation": "List the sums of two different groups and discard sums below 21. The smallest remaining sum is 23.",
+          "difficulty": 3,
+          "family": "minimum-combination"
+        },
+        {
+          "id": "tara-drill-ps-minimum-combination-05",
+          "type": "relevant-selection",
+          "stem": "Four dance groups have 6, 13, 16, 20 members respectively. An organiser must invite exactly two whole groups, with at least 30 people in total. What is the smallest feasible total?",
+          "options": {
+            "A": "29",
+            "B": "19",
+            "C": "22",
+            "D": "33",
+            "E": "26"
+          },
+          "answer": "D",
+          "explanation": "List the sums of two different groups and discard sums below 30. The smallest remaining sum is 33.",
+          "difficulty": 3,
+          "family": "minimum-combination"
+        },
+        {
+          "id": "tara-drill-ps-bundles-01",
+          "type": "finding-procedures",
+          "stem": "An event needs at least 67 leaflets. Singles cost £2 each. Bundles of 12 cost £17 each. A single flat fee of £5 applies if any bundle is ordered. Singles and bundles can be combined and surpluses kept. What is the least total cost?",
+          "options": {
+            "A": "£109",
+            "B": "£104",
+            "C": "£134",
+            "D": "£99",
+            "E": "£107"
+          },
+          "answer": "B",
+          "explanation": "For each possible bundle count, buy only enough singles to reach 67. Include the flat fee once. Costs in ascending bundle-count order (including all singles) are £134, £132, £125, £118, £111, £104, £107; the lowest is £104.",
+          "difficulty": 4,
+          "family": "bundles"
+        },
+        {
+          "id": "tara-drill-ps-bundles-02",
+          "type": "finding-procedures",
+          "stem": "An event needs at least 84 badge blanks. Singles cost £3 each. Bundles of 9 cost £20 each. A single flat fee of £6 applies if any bundle is ordered. Singles and bundles can be combined and surpluses kept. What is the least total cost?",
+          "options": {
+            "A": "£189",
+            "B": "£195",
+            "C": "£252",
+            "D": "£206",
+            "E": "£201"
+          },
+          "answer": "B",
+          "explanation": "For each possible bundle count, buy only enough singles to reach 84. Include the flat fee once. Costs in ascending bundle-count order (including all singles) are £252, £251, £244, £237, £230, £223, £216, £209, £202, £195, £206; the lowest is £195.",
+          "difficulty": 4,
+          "family": "bundles"
+        },
+        {
+          "id": "tara-drill-ps-bundles-03",
+          "type": "finding-procedures",
+          "stem": "An event needs at least 33 clipboards. Singles cost £5 each. Bundles of 7 cost £24 each. A single flat fee of £9 applies if any bundle is ordered. Singles and bundles can be combined and surpluses kept. What is the least total cost?",
+          "options": {
+            "A": "£130",
+            "B": "£138",
+            "C": "£129",
+            "D": "£120",
+            "E": "£165"
+          },
+          "answer": "C",
+          "explanation": "For each possible bundle count, buy only enough singles to reach 33. Include the flat fee once. Costs in ascending bundle-count order (including all singles) are £165, £163, £152, £141, £130, £129; the lowest is £129.",
+          "difficulty": 4,
+          "family": "bundles"
+        },
+        {
+          "id": "tara-drill-ps-bundles-04",
+          "type": "finding-procedures",
+          "stem": "An event needs at least 51 seed trays. Singles cost £4 each. Bundles of 8 cost £27 each. A single flat fee of £6 applies if any bundle is ordered. Singles and bundles can be combined and surpluses kept. What is the least total cost?",
+          "options": {
+            "A": "£180",
+            "B": "£204",
+            "C": "£186",
+            "D": "£195",
+            "E": "£174"
+          },
+          "answer": "A",
+          "explanation": "For each possible bundle count, buy only enough singles to reach 51. Include the flat fee once. Costs in ascending bundle-count order (including all singles) are £204, £205, £200, £195, £190, £185, £180, £195; the lowest is £180.",
+          "difficulty": 4,
+          "family": "bundles"
+        },
+        {
+          "id": "tara-drill-ps-bundles-05",
+          "type": "finding-procedures",
+          "stem": "An event needs at least 118 race bibs. Singles cost £2 each. Bundles of 15 cost £23 each. A single flat fee of £7 applies if any bundle is ordered. Singles and bundles can be combined and surpluses kept. What is the least total cost?",
+          "options": {
+            "A": "£191",
+            "B": "£184",
+            "C": "£194",
+            "D": "£236",
+            "E": "£198"
+          },
+          "answer": "A",
+          "explanation": "For each possible bundle count, buy only enough singles to reach 118. Include the flat fee once. Costs in ascending bundle-count order (including all singles) are £236, £236, £229, £222, £215, £208, £201, £194, £191; the lowest is £191.",
+          "difficulty": 4,
+          "family": "bundles"
+        },
+        {
+          "id": "tara-drill-ps-sequencing-01",
+          "type": "finding-procedures",
+          "stem": "Four rehearsal slots start at 13:30, with the next slot starting every 15 minutes. Jo, Dara, Ivo, Mei each take one slot. Jo must be immediately before Dara. Ivo cannot be first or last. Mei must be before Ivo. When does Dara start?",
+          "options": {
+            "A": "13:30",
+            "B": "The slot cannot be determined",
+            "C": "14:00",
+            "D": "13:45",
+            "E": "14:15"
+          },
+          "answer": "E",
+          "explanation": "If Ivo were third, Jo and Dara would use slots 1 and 2, leaving Mei too late. So Mei and Ivo go first and second. Dara is in slot 4, which starts at 14:15.",
+          "difficulty": 4,
+          "family": "sequencing"
+        },
+        {
+          "id": "tara-drill-ps-sequencing-02",
+          "type": "finding-procedures",
+          "stem": "Four rehearsal slots start at 14:00, with the next slot starting every 10 minutes. Ana, Ben, Chi, Dev each take one slot. Ana must be immediately after Ben. Chi starts two slots after Ben. Dev must be before Ben. When does Ben start?",
+          "options": {
+            "A": "14:20",
+            "B": "14:00",
+            "C": "14:30",
+            "D": "14:10",
+            "E": "The slot cannot be determined"
+          },
+          "answer": "D",
+          "explanation": "Dev must precede the consecutive block Ben, Ana, Chi; that puts Ben second. Ben is in slot 2, which starts at 14:10.",
+          "difficulty": 4,
+          "family": "sequencing"
+        },
+        {
+          "id": "tara-drill-ps-sequencing-03",
+          "type": "finding-procedures",
+          "stem": "Four rehearsal slots start at 09:30, with the next slot starting every 20 minutes. Nia, Oli, Pia, Rui each take one slot. Nia must be immediately before Oli. Pia must be exactly two slots before Oli. Rui must be first. When does Oli start?",
+          "options": {
+            "A": "10:30",
+            "B": "09:30",
+            "C": "09:50",
+            "D": "The slot cannot be determined",
+            "E": "10:10"
+          },
+          "answer": "A",
+          "explanation": "The first slot belongs to Rui. The other three must be Pia, Nia, Oli in order. Oli is in slot 4, which starts at 10:30.",
+          "difficulty": 4,
+          "family": "sequencing"
+        },
+        {
+          "id": "tara-drill-ps-sequencing-04",
+          "type": "finding-procedures",
+          "stem": "Four rehearsal slots start at 12:00, with the next slot starting every 15 minutes. Els, Wen, Cal, Gus each take one slot. Els must be before both Wen and Cal. Cal is immediately before Gus. Wen cannot be last. When does Wen start?",
+          "options": {
+            "A": "12:45",
+            "B": "The slot cannot be determined",
+            "C": "12:00",
+            "D": "12:15",
+            "E": "12:30"
+          },
+          "answer": "D",
+          "explanation": "Els must be first. Cal and Gus cannot be second and third, since that forces Wen into the last slot. Wen is in slot 2, which starts at 12:15.",
+          "difficulty": 4,
+          "family": "sequencing"
+        },
+        {
+          "id": "tara-drill-ps-sequencing-05",
+          "type": "finding-procedures",
+          "stem": "Four rehearsal slots start at 15:15, with the next slot starting every 10 minutes. Huw, Uma, Zoe, Kim each take one slot. Huw must go immediately before Uma. Kim must go immediately before Zoe. Zoe is before Huw. When does Uma start?",
+          "options": {
+            "A": "15:25",
+            "B": "15:45",
+            "C": "15:15",
+            "D": "The slot cannot be determined",
+            "E": "15:35"
+          },
+          "answer": "B",
+          "explanation": "The slots contain two adjacent pairs, with Kim–Zoe first. Uma is in slot 4, which starts at 15:45.",
+          "difficulty": 4,
+          "family": "sequencing"
+        },
+        {
+          "id": "tara-drill-ps-inside-border-01",
+          "type": "finding-procedures",
+          "stem": "A rectangular courtyard measures 18 m by 14 m. A band 2 m wide runs inside its edge on all four sides. How many square metres are in the band?",
+          "options": {
+            "A": "60 m²",
+            "B": "112 m²",
+            "C": "140 m²",
+            "D": "64 m²",
+            "E": "128 m²"
+          },
+          "answer": "B",
+          "explanation": "Subtract the centre 14 × 10 from the whole 18 × 14. Multiplying the outer perimeter by the width would count corners twice.",
+          "difficulty": 2,
+          "family": "inside-border"
+        },
+        {
+          "id": "tara-drill-ps-inside-border-02",
+          "type": "finding-procedures",
+          "stem": "A rectangular terrace measures 15 m by 9 m. A band 1 m wide runs inside its edge on all four sides. How many square metres are in the band?",
+          "options": {
+            "A": "24 m²",
+            "B": "91 m²",
+            "C": "48 m²",
+            "D": "23 m²",
+            "E": "44 m²"
+          },
+          "answer": "E",
+          "explanation": "Subtract the centre 13 × 7 from the whole 15 × 9. Multiplying the outer perimeter by the width would count corners twice.",
+          "difficulty": 2,
+          "family": "inside-border"
+        },
+        {
+          "id": "tara-drill-ps-inside-border-03",
+          "type": "finding-procedures",
+          "stem": "A rectangular yard measures 22 m by 16 m. A band 3 m wide runs inside its edge on all four sides. How many square metres are in the band?",
+          "options": {
+            "A": "228 m²",
+            "B": "192 m²",
+            "C": "114 m²",
+            "D": "160 m²",
+            "E": "105 m²"
+          },
+          "answer": "B",
+          "explanation": "Subtract the centre 16 × 10 from the whole 22 × 16. Multiplying the outer perimeter by the width would count corners twice.",
+          "difficulty": 2,
+          "family": "inside-border"
+        },
+        {
+          "id": "tara-drill-ps-inside-border-04",
+          "type": "finding-procedures",
+          "stem": "A rectangular display measures 13 m by 11 m. A band 2 m wide runs inside its edge on all four sides. How many square metres are in the band?",
+          "options": {
+            "A": "48 m²",
+            "B": "96 m²",
+            "C": "80 m²",
+            "D": "63 m²",
+            "E": "44 m²"
+          },
+          "answer": "C",
+          "explanation": "Subtract the centre 9 × 7 from the whole 13 × 11. Multiplying the outer perimeter by the width would count corners twice.",
+          "difficulty": 2,
+          "family": "inside-border"
+        },
+        {
+          "id": "tara-drill-ps-inside-border-05",
+          "type": "finding-procedures",
+          "stem": "A rectangular lawn measures 25 m by 17 m. A band 3 m wide runs inside its edge on all four sides. How many square metres are in the band?",
+          "options": {
+            "A": "252 m²",
+            "B": "216 m²",
+            "C": "117 m²",
+            "D": "126 m²",
+            "E": "209 m²"
+          },
+          "answer": "B",
+          "explanation": "Subtract the centre 19 × 11 from the whole 25 × 17. Multiplying the outer perimeter by the width would count corners twice.",
+          "difficulty": 2,
+          "family": "inside-border"
+        },
+        {
+          "id": "tara-drill-ps-overlap-01",
+          "type": "finding-procedures",
+          "stem": "A survey of 40 pupils choosing art and music records 24 in the first category, 19 in the second and 5 in neither. Categories may overlap. How many people were counted in both?",
+          "options": {
+            "A": "11",
+            "B": "16",
+            "C": "3",
+            "D": "8",
+            "E": "35"
+          },
+          "answer": "D",
+          "explanation": "There are 35 people in at least one category. The two counts add to 43 because each overlap is counted twice. The difference is 8.",
+          "difficulty": 3,
+          "family": "overlap"
+        },
+        {
+          "id": "tara-drill-ps-overlap-02",
+          "type": "finding-procedures",
+          "stem": "A survey of 46 volunteers trained in two roles records 26 in the first category, 28 in the second and 6 in neither. Categories may overlap. How many people were counted in both?",
+          "options": {
+            "A": "40",
+            "B": "8",
+            "C": "12",
+            "D": "20",
+            "E": "14"
+          },
+          "answer": "E",
+          "explanation": "There are 40 people in at least one category. The two counts add to 54 because each overlap is counted twice. The difference is 14.",
+          "difficulty": 3,
+          "family": "overlap"
+        },
+        {
+          "id": "tara-drill-ps-overlap-03",
+          "type": "finding-procedures",
+          "stem": "A survey of 50 shoppers choosing tea and coffee records 29 in the first category, 27 in the second and 8 in neither. Categories may overlap. How many people were counted in both?",
+          "options": {
+            "A": "42",
+            "B": "6",
+            "C": "13",
+            "D": "15",
+            "E": "14"
+          },
+          "answer": "E",
+          "explanation": "There are 42 people in at least one category. The two counts add to 56 because each overlap is counted twice. The difference is 14.",
+          "difficulty": 3,
+          "family": "overlap"
+        },
+        {
+          "id": "tara-drill-ps-overlap-04",
+          "type": "finding-procedures",
+          "stem": "A survey of 55 members with two passes records 32 in the first category, 35 in the second and 4 in neither. Categories may overlap. How many people were counted in both?",
+          "options": {
+            "A": "20",
+            "B": "19",
+            "C": "51",
+            "D": "12",
+            "E": "16"
+          },
+          "answer": "E",
+          "explanation": "There are 51 people in at least one category. The two counts add to 67 because each overlap is counted twice. The difference is 16.",
+          "difficulty": 3,
+          "family": "overlap"
+        },
+        {
+          "id": "tara-drill-ps-overlap-05",
+          "type": "finding-procedures",
+          "stem": "A survey of 72 residents using two bus routes records 39 in the first category, 45 in the second and 10 in neither. Categories may overlap. How many people were counted in both?",
+          "options": {
+            "A": "62",
+            "B": "17",
+            "C": "22",
+            "D": "23",
+            "E": "12"
+          },
+          "answer": "C",
+          "explanation": "There are 62 people in at least one category. The two counts add to 84 because each overlap is counted twice. The difference is 22.",
+          "difficulty": 3,
+          "family": "overlap"
+        },
+        {
+          "id": "tara-drill-ps-two-stage-rates-01",
+          "type": "finding-procedures",
+          "stem": "A water butt holds 45 litres and starts with 5 litres inside. It fills at 3 litres a minute for the first 5 minutes and then at 5 litres a minute until full. How many minutes does it take in total?",
+          "options": {
+            "A": "8 minutes",
+            "B": "12 minutes",
+            "C": "5 minutes",
+            "D": "14 minutes",
+            "E": "10 minutes"
+          },
+          "answer": "E",
+          "explanation": "After 5 minutes it holds 20 L. The remaining 25 L takes 5 minutes at the second rate, giving 10 in total.",
+          "difficulty": 3,
+          "family": "two-stage-rates"
+        },
+        {
+          "id": "tara-drill-ps-two-stage-rates-02",
+          "type": "finding-procedures",
+          "stem": "A storage vat holds 78 litres and starts with 6 litres inside. It fills at 4 litres a minute for the first 6 minutes and then at 6 litres a minute until full. How many minutes does it take in total?",
+          "options": {
+            "A": "14 minutes",
+            "B": "16 minutes",
+            "C": "12 minutes",
+            "D": "8 minutes",
+            "E": "18 minutes"
+          },
+          "answer": "A",
+          "explanation": "After 6 minutes it holds 30 L. The remaining 48 L takes 8 minutes at the second rate, giving 14 in total.",
+          "difficulty": 3,
+          "family": "two-stage-rates"
+        },
+        {
+          "id": "tara-drill-ps-two-stage-rates-03",
+          "type": "finding-procedures",
+          "stem": "A reservoir model holds 47 litres and starts with 7 litres inside. It fills at 4 litres a minute for the first 5 minutes and then at 5 litres a minute until full. How many minutes does it take in total?",
+          "options": {
+            "A": "10 minutes",
+            "B": "11 minutes",
+            "C": "8 minutes",
+            "D": "4 minutes",
+            "E": "9 minutes"
+          },
+          "answer": "E",
+          "explanation": "After 5 minutes it holds 27 L. The remaining 20 L takes 4 minutes at the second rate, giving 9 in total.",
+          "difficulty": 3,
+          "family": "two-stage-rates"
+        },
+        {
+          "id": "tara-drill-ps-two-stage-rates-04",
+          "type": "finding-procedures",
+          "stem": "A basin holds 64 litres and starts with 4 litres inside. It fills at 5 litres a minute for the first 4 minutes and then at 5 litres a minute until full. How many minutes does it take in total?",
+          "options": {
+            "A": "8 minutes",
+            "B": "14 minutes",
+            "C": "11 minutes",
+            "D": "12 minutes",
+            "E": "13 minutes"
+          },
+          "answer": "D",
+          "explanation": "After 4 minutes it holds 24 L. The remaining 40 L takes 8 minutes at the second rate, giving 12 in total.",
+          "difficulty": 3,
+          "family": "two-stage-rates"
+        },
+        {
+          "id": "tara-drill-ps-two-stage-rates-05",
+          "type": "finding-procedures",
+          "stem": "A irrigation drum holds 82 litres and starts with 10 litres inside. It fills at 6 litres a minute for the first 6 minutes and then at 4 litres a minute until full. How many minutes does it take in total?",
+          "options": {
+            "A": "15 minutes",
+            "B": "18 minutes",
+            "C": "12 minutes",
+            "D": "9 minutes",
+            "E": "17 minutes"
+          },
+          "answer": "A",
+          "explanation": "After 6 minutes it holds 46 L. The remaining 36 L takes 9 minutes at the second rate, giving 15 in total.",
+          "difficulty": 3,
+          "family": "two-stage-rates"
+        },
+        {
+          "id": "tara-drill-ps-periodic-events-01",
+          "type": "finding-procedures",
+          "stem": "Two series of ferries start from the same point. Series A starts at 08:00 and recurs every 8 minutes; series B starts at 08:04 and recurs every 12 minutes. At what time do the series coincide for the second time?",
+          "options": {
+            "A": "08:44",
+            "B": "08:40",
+            "C": "08:24",
+            "D": "08:28",
+            "E": "08:16"
+          },
+          "answer": "B",
+          "explanation": "List A's times and keep those also in B. The first match is 08:16 and the next is 08:40. The second series does not start at the same time as the first.",
+          "difficulty": 4,
+          "family": "periodic-events"
+        },
+        {
+          "id": "tara-drill-ps-periodic-events-02",
+          "type": "finding-procedures",
+          "stem": "Two series of courier vans start from the same point. Series A starts at 09:00 and recurs every 9 minutes; series B starts at 09:03 and recurs every 15 minutes. At what time do the series coincide for the second time?",
+          "options": {
+            "A": "09:18",
+            "B": "09:33",
+            "C": "09:27",
+            "D": "10:06",
+            "E": "10:03"
+          },
+          "answer": "E",
+          "explanation": "List A's times and keep those also in B. The first match is 09:18 and the next is 10:03. The second series does not start at the same time as the first.",
+          "difficulty": 4,
+          "family": "periodic-events"
+        },
+        {
+          "id": "tara-drill-ps-periodic-events-03",
+          "type": "finding-procedures",
+          "stem": "Two series of trams start from the same point. Series A starts at 07:30 and recurs every 10 minutes; series B starts at 07:36 and recurs every 16 minutes. At what time do the series coincide for the second time?",
+          "options": {
+            "A": "10:06",
+            "B": "10:00",
+            "C": "08:50",
+            "D": "08:56",
+            "E": "08:40"
+          },
+          "answer": "B",
+          "explanation": "List A's times and keep those also in B. The first match is 08:40 and the next is 10:00. The second series does not start at the same time as the first.",
+          "difficulty": 4,
+          "family": "periodic-events"
+        },
+        {
+          "id": "tara-drill-ps-periodic-events-04",
+          "type": "finding-procedures",
+          "stem": "Two series of shuttles start from the same point. Series A starts at 10:00 and recurs every 14 minutes; series B starts at 10:07 and recurs every 21 minutes. At what time do the series coincide for the second time?",
+          "options": {
+            "A": "11:10",
+            "B": "10:42",
+            "C": "10:28",
+            "D": "11:17",
+            "E": "10:49"
+          },
+          "answer": "A",
+          "explanation": "List A's times and keep those also in B. The first match is 10:28 and the next is 11:10. The second series does not start at the same time as the first.",
+          "difficulty": 4,
+          "family": "periodic-events"
+        },
+        {
+          "id": "tara-drill-ps-periodic-events-05",
+          "type": "finding-procedures",
+          "stem": "Two series of safety checks start from the same point. Series A starts at 08:20 and recurs every 15 minutes; series B starts at 08:25 and recurs every 20 minutes. At what time do the series coincide for the second time?",
+          "options": {
+            "A": "09:05",
+            "B": "09:25",
+            "C": "09:20",
+            "D": "10:05",
+            "E": "10:10"
+          },
+          "answer": "D",
+          "explanation": "List A's times and keep those also in B. The first match is 09:05 and the next is 10:05. The second series does not start at the same time as the first.",
+          "difficulty": 4,
+          "family": "periodic-events"
+        },
+        {
+          "id": "tara-drill-ps-break-even-01",
+          "type": "finding-procedures",
+          "stem": "One supplier charges £33 delivery plus £7 for each of its folding chairs. Another charges £13 delivery plus £10 for each. A club may order up to 16. What is the smallest order for which the first supplier costs strictly less?",
+          "options": {
+            "A": "6",
+            "B": "20",
+            "C": "8",
+            "D": "7",
+            "E": "9"
+          },
+          "answer": "D",
+          "explanation": "The first supplier starts £20 dearer and saves £3 per item. The added savings must exceed the delivery gap, not just match it. That first happens at 7.",
+          "difficulty": 3,
+          "family": "break-even"
+        },
+        {
+          "id": "tara-drill-ps-break-even-02",
+          "type": "finding-procedures",
+          "stem": "One supplier charges £43 delivery plus £5 for each of its easel stands. Another charges £25 delivery plus £7 for each. A club may order up to 21. What is the smallest order for which the first supplier costs strictly less?",
+          "options": {
+            "A": "10",
+            "B": "18",
+            "C": "9",
+            "D": "11",
+            "E": "12"
+          },
+          "answer": "A",
+          "explanation": "The first supplier starts £18 dearer and saves £2 per item. The added savings must exceed the delivery gap, not just match it. That first happens at 10.",
+          "difficulty": 3,
+          "family": "break-even"
+        },
+        {
+          "id": "tara-drill-ps-break-even-03",
+          "type": "finding-procedures",
+          "stem": "One supplier charges £36 delivery plus £4 for each of its mic stands. Another charges £10 delivery plus £6 for each. A club may order up to 19. What is the smallest order for which the first supplier costs strictly less?",
+          "options": {
+            "A": "13",
+            "B": "16",
+            "C": "14",
+            "D": "15",
+            "E": "26"
+          },
+          "answer": "C",
+          "explanation": "The first supplier starts £26 dearer and saves £2 per item. The added savings must exceed the delivery gap, not just match it. That first happens at 14.",
+          "difficulty": 3,
+          "family": "break-even"
+        },
+        {
+          "id": "tara-drill-ps-break-even-04",
+          "type": "finding-procedures",
+          "stem": "One supplier charges £38 delivery plus £8 for each of its gazebo weights. Another charges £14 delivery plus £11 for each. A club may order up to 18. What is the smallest order for which the first supplier costs strictly less?",
+          "options": {
+            "A": "11",
+            "B": "9",
+            "C": "8",
+            "D": "10",
+            "E": "24"
+          },
+          "answer": "B",
+          "explanation": "The first supplier starts £24 dearer and saves £3 per item. The added savings must exceed the delivery gap, not just match it. That first happens at 9.",
+          "difficulty": 3,
+          "family": "break-even"
+        },
+        {
+          "id": "tara-drill-ps-break-even-05",
+          "type": "finding-procedures",
+          "stem": "One supplier charges £65 delivery plus £14 for each of its folding tables. Another charges £25 delivery plus £18 for each. A club may order up to 14. What is the smallest order for which the first supplier costs strictly less?",
+          "options": {
+            "A": "11",
+            "B": "10",
+            "C": "13",
+            "D": "12",
+            "E": "40"
+          },
+          "answer": "A",
+          "explanation": "The first supplier starts £40 dearer and saves £4 per item. The added savings must exceed the delivery gap, not just match it. That first happens at 11.",
+          "difficulty": 3,
+          "family": "break-even"
+        },
+        {
+          "id": "tara-drill-ps-ticket-mix-01",
+          "type": "finding-procedures",
+          "stem": "A group buys 20 tickets for a choir concert. Adult tickets cost £10 and child tickets cost £6. There are no other fees. The group pays £172. How many child tickets are there?",
+          "options": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "7",
+            "E": "13"
+          },
+          "answer": "D",
+          "explanation": "All adult tickets would cost £200. Each child ticket reduces that by £4. The £28 difference therefore represents 7 child tickets.",
+          "difficulty": 2,
+          "family": "ticket-mix"
+        },
+        {
+          "id": "tara-drill-ps-ticket-mix-02",
+          "type": "finding-procedures",
+          "stem": "A group buys 15 tickets for a ice show. Adult tickets cost £14 and child tickets cost £8. There are no other fees. The group pays £174. How many child tickets are there?",
+          "options": {
+            "A": "5",
+            "B": "7",
+            "C": "8",
+            "D": "9",
+            "E": "6"
+          },
+          "answer": "E",
+          "explanation": "All adult tickets would cost £210. Each child ticket reduces that by £6. The £36 difference therefore represents 6 child tickets.",
+          "difficulty": 2,
+          "family": "ticket-mix"
+        },
+        {
+          "id": "tara-drill-ps-ticket-mix-03",
+          "type": "finding-procedures",
+          "stem": "A group buys 23 tickets for a plant fair. Adult tickets cost £9 and child tickets cost £5. There are no other fees. The group pays £159. How many child tickets are there?",
+          "options": {
+            "A": "11",
+            "B": "14",
+            "C": "12",
+            "D": "23",
+            "E": "13"
+          },
+          "answer": "C",
+          "explanation": "All adult tickets would cost £207. Each child ticket reduces that by £4. The £48 difference therefore represents 12 child tickets.",
+          "difficulty": 2,
+          "family": "ticket-mix"
+        },
+        {
+          "id": "tara-drill-ps-ticket-mix-04",
+          "type": "finding-procedures",
+          "stem": "A group buys 12 tickets for a heritage railway. Adult tickets cost £17 and child tickets cost £11. There are no other fees. The group pays £174. How many child tickets are there?",
+          "options": {
+            "A": "7",
+            "B": "4",
+            "C": "12",
+            "D": "6",
+            "E": "5"
+          },
+          "answer": "E",
+          "explanation": "All adult tickets would cost £204. Each child ticket reduces that by £6. The £30 difference therefore represents 5 child tickets.",
+          "difficulty": 2,
+          "family": "ticket-mix"
+        },
+        {
+          "id": "tara-drill-ps-ticket-mix-05",
+          "type": "finding-procedures",
+          "stem": "A group buys 25 tickets for a city walk. Adult tickets cost £8 and child tickets cost £3. There are no other fees. The group pays £160. How many child tickets are there?",
+          "options": {
+            "A": "8",
+            "B": "17",
+            "C": "7",
+            "D": "10",
+            "E": "9"
+          },
+          "answer": "A",
+          "explanation": "All adult tickets would cost £200. Each child ticket reduces that by £5. The £40 difference therefore represents 8 child tickets.",
+          "difficulty": 2,
+          "family": "ticket-mix"
+        },
+        {
+          "id": "tara-drill-ps-two-shift-budget-01",
+          "type": "finding-procedures",
+          "stem": "A committee must restore a footpath across two shifts. It hires one team per shift, and may rehire the same team. Rates are in tens of pounds. Team A costs 4 and completes 9 units per shift; B costs 7 and completes 12; C costs 9 and completes 15. What is the lowest total price in pounds that delivers at least 26 units?",
+          "options": {
+            "A": "£110",
+            "B": "£140",
+            "C": "£80",
+            "D": "£160",
+            "E": "£130"
+          },
+          "answer": "D",
+          "explanation": "Consider the six possible pairs including repeats. In price order, their (price, work) totals are (£80, 18), (£110, 21), (£130, 24), (£140, 24), (£160, 27), (£180, 30). The first reaching 26 costs £160.",
+          "difficulty": 4,
+          "family": "two-shift-budget"
+        },
+        {
+          "id": "tara-drill-ps-two-shift-budget-02",
+          "type": "finding-procedures",
+          "stem": "A committee must run a food stall across two shifts. It hires one team per shift, and may rehire the same team. Rates are in tens of pounds. Team A costs 3 and completes 8 units per shift; B costs 5 and completes 12; C costs 8 and completes 15. What is the lowest total price in pounds that delivers at least 22 units?",
+          "options": {
+            "A": "£110",
+            "B": "£60",
+            "C": "£130",
+            "D": "£100",
+            "E": "£80"
+          },
+          "answer": "D",
+          "explanation": "Consider the six possible pairs including repeats. In price order, their (price, work) totals are (£60, 16), (£80, 20), (£100, 24), (£110, 23), (£130, 27), (£160, 30). The first reaching 22 costs £100.",
+          "difficulty": 4,
+          "family": "two-shift-budget"
+        },
+        {
+          "id": "tara-drill-ps-two-shift-budget-03",
+          "type": "finding-procedures",
+          "stem": "A committee must mount an exhibition across two shifts. It hires one team per shift, and may rehire the same team. Rates are in tens of pounds. Team A costs 5 and completes 7 units per shift; B costs 8 and completes 11; C costs 10 and completes 16. What is the lowest total price in pounds that delivers at least 24 units?",
+          "options": {
+            "A": "£180",
+            "B": "£100",
+            "C": "£150",
+            "D": "£160",
+            "E": "£130"
+          },
+          "answer": "A",
+          "explanation": "Consider the six possible pairs including repeats. In price order, their (price, work) totals are (£100, 14), (£130, 18), (£150, 23), (£160, 22), (£180, 27), (£200, 32). The first reaching 24 costs £180.",
+          "difficulty": 4,
+          "family": "two-shift-budget"
+        },
+        {
+          "id": "tara-drill-ps-two-shift-budget-04",
+          "type": "finding-procedures",
+          "stem": "A committee must set up a festival stage across two shifts. It hires one team per shift, and may rehire the same team. Rates are in tens of pounds. Team A costs 6 and completes 9 units per shift; B costs 7 and completes 13; C costs 11 and completes 17. What is the lowest total price in pounds that delivers at least 25 units?",
+          "options": {
+            "A": "£180",
+            "B": "£120",
+            "C": "£140",
+            "D": "£170",
+            "E": "£130"
+          },
+          "answer": "C",
+          "explanation": "Consider the six possible pairs including repeats. In price order, their (price, work) totals are (£120, 18), (£130, 22), (£140, 26), (£170, 26), (£180, 30), (£220, 34). The first reaching 25 costs £140.",
+          "difficulty": 4,
+          "family": "two-shift-budget"
+        },
+        {
+          "id": "tara-drill-ps-two-shift-budget-05",
+          "type": "finding-procedures",
+          "stem": "A committee must lead an open evening across two shifts. It hires one team per shift, and may rehire the same team. Rates are in tens of pounds. Team A costs 4 and completes 8 units per shift; B costs 8 and completes 13; C costs 11 and completes 16. What is the lowest total price in pounds that delivers at least 28 units?",
+          "options": {
+            "A": "£160",
+            "B": "£80",
+            "C": "£190",
+            "D": "£150",
+            "E": "£120"
+          },
+          "answer": "C",
+          "explanation": "Consider the six possible pairs including repeats. In price order, their (price, work) totals are (£80, 16), (£120, 21), (£150, 24), (£160, 26), (£190, 29), (£220, 32). The first reaching 28 costs £190.",
+          "difficulty": 4,
+          "family": "two-shift-budget"
+        },
+        {
+          "id": "tara-drill-ps-net-benefit-01",
+          "type": "finding-procedures",
+          "stem": "At Canal Junction, a depot considers three equipment plans. Plan A costs £28 upfront and saves £19 a week; B costs £31 and saves £21; C costs £22 and saves £17. Savings accrue at the end of each week. After 7 full weeks, which single plan gives the greatest net saving?",
+          "options": {
+            "A": "Plan B",
+            "B": "Plan A",
+            "C": "No plan gives a positive saving",
+            "D": "All three give the same saving",
+            "E": "Plan C"
+          },
+          "answer": "A",
+          "explanation": "Subtract each upfront cost from its full period savings: Plan A: £105, Plan B: £116, Plan C: £97. Plan B is highest.",
+          "difficulty": 3,
+          "family": "net-benefit"
+        },
+        {
+          "id": "tara-drill-ps-net-benefit-02",
+          "type": "finding-procedures",
+          "stem": "At Mill Lane, a depot considers three equipment plans. Plan A costs £21 upfront and saves £14 a week; B costs £36 and saves £21; C costs £27 and saves £18. Savings accrue at the end of each week. After 7 full weeks, which single plan gives the greatest net saving?",
+          "options": {
+            "A": "All three give the same saving",
+            "B": "Plan C",
+            "C": "Plan B",
+            "D": "No plan gives a positive saving",
+            "E": "Plan A"
+          },
+          "answer": "C",
+          "explanation": "Subtract each upfront cost from its full period savings: Plan A: £77, Plan B: £111, Plan C: £99. Plan B is highest.",
+          "difficulty": 3,
+          "family": "net-benefit"
+        },
+        {
+          "id": "tara-drill-ps-net-benefit-03",
+          "type": "finding-procedures",
+          "stem": "At East Quay, a depot considers three equipment plans. Plan A costs £24 upfront and saves £15 a week; B costs £37 and saves £31; C costs £34 and saves £14. Savings accrue at the end of each week. After 8 full weeks, which single plan gives the greatest net saving?",
+          "options": {
+            "A": "Plan C",
+            "B": "No plan gives a positive saving",
+            "C": "Plan B",
+            "D": "Plan A",
+            "E": "All three give the same saving"
+          },
+          "answer": "C",
+          "explanation": "Subtract each upfront cost from its full period savings: Plan A: £96, Plan B: £211, Plan C: £78. Plan B is highest.",
+          "difficulty": 3,
+          "family": "net-benefit"
+        },
+        {
+          "id": "tara-drill-ps-net-benefit-04",
+          "type": "finding-procedures",
+          "stem": "At Dean Gate, a depot considers three equipment plans. Plan A costs £18 upfront and saves £14 a week; B costs £31 and saves £22; C costs £32 and saves £15. Savings accrue at the end of each week. After 7 full weeks, which single plan gives the greatest net saving?",
+          "options": {
+            "A": "All three give the same saving",
+            "B": "Plan A",
+            "C": "Plan B",
+            "D": "No plan gives a positive saving",
+            "E": "Plan C"
+          },
+          "answer": "C",
+          "explanation": "Subtract each upfront cost from its full period savings: Plan A: £80, Plan B: £123, Plan C: £73. Plan B is highest.",
+          "difficulty": 3,
+          "family": "net-benefit"
+        },
+        {
+          "id": "tara-drill-ps-net-benefit-05",
+          "type": "finding-procedures",
+          "stem": "At Old Market, a depot considers three equipment plans. Plan A costs £26 upfront and saves £16 a week; B costs £35 and saves £24; C costs £28 and saves £14. Savings accrue at the end of each week. After 8 full weeks, which single plan gives the greatest net saving?",
+          "options": {
+            "A": "Plan B",
+            "B": "No plan gives a positive saving",
+            "C": "Plan A",
+            "D": "Plan C",
+            "E": "All three give the same saving"
+          },
+          "answer": "A",
+          "explanation": "Subtract each upfront cost from its full period savings: Plan A: £102, Plan B: £157, Plan C: £84. Plan B is highest.",
+          "difficulty": 3,
+          "family": "net-benefit"
+        },
+        {
+          "id": "tara-drill-ps-alternating-differences-01",
+          "type": "identifying-similarity",
+          "stem": "The price of folding bike hire in pounds for packages 1–4 is 6, 9, 10, 13. A second supplier charges £20 for package 1 and varies its prices by exactly the same differences in the same order. Which is the second price list?",
+          "options": {
+            "A": "20, 23, 24, 27",
+            "B": "20, 21, 24, 25",
+            "C": "20, 23, 24, 25",
+            "D": "20, 23, 26, 29",
+            "E": "20, 24, 24, 27"
+          },
+          "answer": "A",
+          "explanation": "The successive changes are +3, +1, +3. Start from 20 and preserve that order.",
+          "difficulty": 2,
+          "family": "alternating-differences"
+        },
+        {
+          "id": "tara-drill-ps-alternating-differences-02",
+          "type": "identifying-similarity",
+          "stem": "The price of canoe storage in pounds for packages 1–4 is 10, 14, 16, 20. A second supplier charges £24 for package 1 and varies its prices by exactly the same differences in the same order. Which is the second price list?",
+          "options": {
+            "A": "24, 28, 32, 36",
+            "B": "24, 28, 30, 34",
+            "C": "24, 29, 30, 34",
+            "D": "24, 28, 30, 32",
+            "E": "24, 26, 30, 32"
+          },
+          "answer": "B",
+          "explanation": "The successive changes are +4, +2, +4. Start from 24 and preserve that order.",
+          "difficulty": 2,
+          "family": "alternating-differences"
+        },
+        {
+          "id": "tara-drill-ps-alternating-differences-03",
+          "type": "identifying-similarity",
+          "stem": "The price of pop-up stall fees in pounds for packages 1–4 is 15, 20, 22, 27. A second supplier charges £27 for package 1 and varies its prices by exactly the same differences in the same order. Which is the second price list?",
+          "options": {
+            "A": "27, 29, 34, 36",
+            "B": "27, 32, 34, 36",
+            "C": "27, 32, 37, 42",
+            "D": "27, 33, 34, 39",
+            "E": "27, 32, 34, 39"
+          },
+          "answer": "E",
+          "explanation": "The successive changes are +5, +2, +5. Start from 27 and preserve that order.",
+          "difficulty": 2,
+          "family": "alternating-differences"
+        },
+        {
+          "id": "tara-drill-ps-alternating-differences-04",
+          "type": "identifying-similarity",
+          "stem": "The price of studio bookings in pounds for packages 1–4 is 19, 25, 28, 34. A second supplier charges £34 for package 1 and varies its prices by exactly the same differences in the same order. Which is the second price list?",
+          "options": {
+            "A": "34, 40, 43, 46",
+            "B": "34, 41, 43, 49",
+            "C": "34, 40, 43, 49",
+            "D": "34, 40, 46, 52",
+            "E": "34, 37, 43, 46"
+          },
+          "answer": "C",
+          "explanation": "The successive changes are +6, +3, +6. Start from 34 and preserve that order.",
+          "difficulty": 2,
+          "family": "alternating-differences"
+        },
+        {
+          "id": "tara-drill-ps-alternating-differences-05",
+          "type": "identifying-similarity",
+          "stem": "The price of locker rental in pounds for packages 1–4 is 4, 6, 7, 9. A second supplier charges £12 for package 1 and varies its prices by exactly the same differences in the same order. Which is the second price list?",
+          "options": {
+            "A": "12, 13, 15, 16",
+            "B": "12, 14, 15, 16",
+            "C": "12, 14, 16, 18",
+            "D": "12, 15, 15, 17",
+            "E": "12, 14, 15, 17"
+          },
+          "answer": "E",
+          "explanation": "The successive changes are +2, +1, +2. Start from 12 and preserve that order.",
+          "difficulty": 2,
+          "family": "alternating-differences"
+        },
+        {
+          "id": "tara-drill-ps-equivalent-ratios-01",
+          "type": "identifying-similarity",
+          "stem": "A first shipment of bookmarks has 2 small, 3 medium and 5 large. A second has 6 small and uses exactly the same proportions. Which option lists the counts in order small, medium, large?",
+          "options": {
+            "A": "6, 15, 9",
+            "B": "6, 9, 15",
+            "C": "5, 10, 15",
+            "D": "7, 9, 14",
+            "E": "6, 10, 14"
+          },
+          "answer": "B",
+          "explanation": "The small count is multiplied by 3. The same factor takes medium to 9 and large to 15.",
+          "difficulty": 2,
+          "family": "equivalent-ratios"
+        },
+        {
+          "id": "tara-drill-ps-equivalent-ratios-02",
+          "type": "identifying-similarity",
+          "stem": "A first shipment of planters has 3 small, 4 medium and 5 large. A second has 12 small and uses exactly the same proportions. Which option lists the counts in order small, medium, large?",
+          "options": {
+            "A": "12, 16, 20",
+            "B": "12, 20, 16",
+            "C": "13, 16, 19",
+            "D": "12, 17, 19",
+            "E": "11, 17, 20"
+          },
+          "answer": "A",
+          "explanation": "The small count is multiplied by 4. The same factor takes medium to 16 and large to 20.",
+          "difficulty": 2,
+          "family": "equivalent-ratios"
+        },
+        {
+          "id": "tara-drill-ps-equivalent-ratios-03",
+          "type": "identifying-similarity",
+          "stem": "A first shipment of art packs has 1 small, 3 medium and 4 large. A second has 5 small and uses exactly the same proportions. Which option lists the counts in order small, medium, large?",
+          "options": {
+            "A": "4, 16, 20",
+            "B": "5, 15, 20",
+            "C": "5, 20, 15",
+            "D": "5, 16, 19",
+            "E": "6, 15, 19"
+          },
+          "answer": "B",
+          "explanation": "The small count is multiplied by 5. The same factor takes medium to 15 and large to 20.",
+          "difficulty": 2,
+          "family": "equivalent-ratios"
+        },
+        {
+          "id": "tara-drill-ps-equivalent-ratios-04",
+          "type": "identifying-similarity",
+          "stem": "A first shipment of tote bags has 4 small, 5 medium and 6 large. A second has 8 small and uses exactly the same proportions. Which option lists the counts in order small, medium, large?",
+          "options": {
+            "A": "9, 10, 11",
+            "B": "8, 10, 12",
+            "C": "8, 11, 11",
+            "D": "7, 11, 12",
+            "E": "8, 12, 10"
+          },
+          "answer": "B",
+          "explanation": "The small count is multiplied by 2. The same factor takes medium to 10 and large to 12.",
+          "difficulty": 2,
+          "family": "equivalent-ratios"
+        },
+        {
+          "id": "tara-drill-ps-equivalent-ratios-05",
+          "type": "identifying-similarity",
+          "stem": "A first shipment of notebooks has 3 small, 5 medium and 8 large. A second has 9 small and uses exactly the same proportions. Which option lists the counts in order small, medium, large?",
+          "options": {
+            "A": "9, 24, 15",
+            "B": "9, 15, 24",
+            "C": "9, 16, 23",
+            "D": "8, 16, 24",
+            "E": "10, 15, 23"
+          },
+          "answer": "B",
+          "explanation": "The small count is multiplied by 3. The same factor takes medium to 15 and large to 24.",
+          "difficulty": 2,
+          "family": "equivalent-ratios"
+        },
+        {
+          "id": "tara-drill-ps-symbol-pattern-01",
+          "type": "identifying-similarity",
+          "stem": "A stall order uses six labels in this order: A, A, B, A, C, B. Each letter is to be replaced consistently by a different number, chosen from 2, 5 and 8. Which list could be the result?",
+          "options": {
+            "A": "2, 5, 5, 2, 8, 5",
+            "B": "2, 2, 5, 2, 8, 5",
+            "C": "2, 2, 8, 2, 8, 5",
+            "D": "2, 2, 5, 5, 8, 5",
+            "E": "5, 2, 5, 2, 8, 5"
+          },
+          "answer": "B",
+          "explanation": "Equal letters must have equal replacements and different letters must have different replacements. With A = 2, B = 5 and C = 8 this gives 2, 2, 5, 2, 8, 5.",
+          "difficulty": 2,
+          "family": "symbol-pattern"
+        },
+        {
+          "id": "tara-drill-ps-symbol-pattern-02",
+          "type": "identifying-similarity",
+          "stem": "A gallery queue uses six labels in this order: A, B, B, C, C, A. Each letter is to be replaced consistently by a different number, chosen from 2, 5 and 8. Which list could be the result?",
+          "options": {
+            "A": "2, 5, 8, 8, 8, 2",
+            "B": "2, 5, 5, 8, 8, 2",
+            "C": "2, 5, 5, 2, 8, 2",
+            "D": "5, 5, 5, 8, 8, 2",
+            "E": "2, 8, 5, 8, 8, 2"
+          },
+          "answer": "B",
+          "explanation": "Equal letters must have equal replacements and different letters must have different replacements. With A = 2, B = 5 and C = 8 this gives 2, 5, 5, 8, 8, 2.",
+          "difficulty": 2,
+          "family": "symbol-pattern"
+        },
+        {
+          "id": "tara-drill-ps-symbol-pattern-03",
+          "type": "identifying-similarity",
+          "stem": "A ferry rota uses six labels in this order: A, B, A, C, B, C. Each letter is to be replaced consistently by a different number, chosen from 2, 5 and 8. Which list could be the result?",
+          "options": {
+            "A": "2, 5, 5, 8, 5, 8",
+            "B": "2, 8, 2, 8, 5, 8",
+            "C": "2, 5, 2, 8, 5, 8",
+            "D": "2, 5, 2, 2, 5, 8",
+            "E": "5, 5, 2, 8, 5, 8"
+          },
+          "answer": "C",
+          "explanation": "Equal letters must have equal replacements and different letters must have different replacements. With A = 2, B = 5 and C = 8 this gives 2, 5, 2, 8, 5, 8.",
+          "difficulty": 2,
+          "family": "symbol-pattern"
+        },
+        {
+          "id": "tara-drill-ps-symbol-pattern-04",
+          "type": "identifying-similarity",
+          "stem": "A museum trail uses six labels in this order: A, B, C, C, B, A. Each letter is to be replaced consistently by a different number, chosen from 2, 5 and 8. Which list could be the result?",
+          "options": {
+            "A": "5, 5, 8, 8, 5, 2",
+            "B": "2, 5, 8, 2, 5, 2",
+            "C": "2, 8, 8, 8, 5, 2",
+            "D": "2, 5, 8, 8, 5, 2",
+            "E": "2, 5, 2, 8, 5, 2"
+          },
+          "answer": "D",
+          "explanation": "Equal letters must have equal replacements and different letters must have different replacements. With A = 2, B = 5 and C = 8 this gives 2, 5, 8, 8, 5, 2.",
+          "difficulty": 2,
+          "family": "symbol-pattern"
+        },
+        {
+          "id": "tara-drill-ps-symbol-pattern-05",
+          "type": "identifying-similarity",
+          "stem": "A craft display uses six labels in this order: A, B, C, A, B, B. Each letter is to be replaced consistently by a different number, chosen from 2, 5 and 8. Which list could be the result?",
+          "options": {
+            "A": "2, 8, 8, 2, 5, 5",
+            "B": "2, 5, 2, 2, 5, 5",
+            "C": "5, 5, 8, 2, 5, 5",
+            "D": "2, 5, 8, 2, 5, 5",
+            "E": "2, 5, 8, 5, 5, 5"
+          },
+          "answer": "D",
+          "explanation": "Equal letters must have equal replacements and different letters must have different replacements. With A = 2, B = 5 and C = 8 this gives 2, 5, 8, 2, 5, 5.",
+          "difficulty": 2,
+          "family": "symbol-pattern"
+        },
+        {
+          "id": "tara-drill-ps-grid-directions-01",
+          "type": "identifying-similarity",
+          "stem": "A geocacher walks in a straight line from (0, 0) to (3, 2) on a map, where x increases east and y increases north. A second straight walk starts at (1, 2). Which finishing point gives exactly the same direction as the first walk, regardless of the distance?",
+          "options": {
+            "A": "(9, 8)",
+            "B": "(10, 8)",
+            "C": "(-8, -4)",
+            "D": "(7, 11)",
+            "E": "(10, 9)"
+          },
+          "answer": "B",
+          "explanation": "The matching walk changes x by 9 and y by 6. Both changes are 3 times the original; reversing both signs would go the opposite way.",
+          "difficulty": 3,
+          "family": "grid-directions"
+        },
+        {
+          "id": "tara-drill-ps-grid-directions-02",
+          "type": "identifying-similarity",
+          "stem": "A cartographer walks in a straight line from (0, 0) to (4, -3) on a map, where x increases east and y increases north. A second straight walk starts at (-2, 4). Which finishing point gives exactly the same direction as the first walk, regardless of the distance?",
+          "options": {
+            "A": "(5, -2)",
+            "B": "(6, -2)",
+            "C": "(-10, 10)",
+            "D": "(-8, 12)",
+            "E": "(6, -1)"
+          },
+          "answer": "B",
+          "explanation": "The matching walk changes x by 8 and y by -6. Both changes are 2 times the original; reversing both signs would go the opposite way.",
+          "difficulty": 3,
+          "family": "grid-directions"
+        },
+        {
+          "id": "tara-drill-ps-grid-directions-03",
+          "type": "identifying-similarity",
+          "stem": "A park ranger walks in a straight line from (0, 0) to (-3, 2) on a map, where x increases east and y increases north. A second straight walk starts at (7, 1). Which finishing point gives exactly the same direction as the first walk, regardless of the distance?",
+          "options": {
+            "A": "(-5, 10)",
+            "B": "(-6, 9)",
+            "C": "(15, -11)",
+            "D": "(19, -7)",
+            "E": "(-5, 9)"
+          },
+          "answer": "E",
+          "explanation": "The matching walk changes x by -12 and y by 8. Both changes are 4 times the original; reversing both signs would go the opposite way.",
+          "difficulty": 3,
+          "family": "grid-directions"
+        },
+        {
+          "id": "tara-drill-ps-grid-directions-04",
+          "type": "identifying-similarity",
+          "stem": "A surveyor walks in a straight line from (0, 0) to (-2, -4) on a map, where x increases east and y increases north. A second straight walk starts at (4, 6). Which finishing point gives exactly the same direction as the first walk, regardless of the distance?",
+          "options": {
+            "A": "(-4, 2)",
+            "B": "(8, 14)",
+            "C": "(0, -2)",
+            "D": "(0, -1)",
+            "E": "(-1, -2)"
+          },
+          "answer": "C",
+          "explanation": "The matching walk changes x by -4 and y by -8. Both changes are 2 times the original; reversing both signs would go the opposite way.",
+          "difficulty": 3,
+          "family": "grid-directions"
+        },
+        {
+          "id": "tara-drill-ps-grid-directions-05",
+          "type": "identifying-similarity",
+          "stem": "A trail guide walks in a straight line from (0, 0) to (5, 4) on a map, where x increases east and y increases north. A second straight walk starts at (-1, -2). Which finishing point gives exactly the same direction as the first walk, regardless of the distance?",
+          "options": {
+            "A": "(14, 10)",
+            "B": "(-16, -14)",
+            "C": "(14, 11)",
+            "D": "(13, 10)",
+            "E": "(11, 13)"
+          },
+          "answer": "A",
+          "explanation": "The matching walk changes x by 15 and y by 12. Both changes are 3 times the original; reversing both signs would go the opposite way.",
+          "difficulty": 3,
+          "family": "grid-directions"
+        },
+        {
+          "id": "tara-drill-ps-grid-transformations-01",
+          "type": "identifying-similarity",
+          "stem": "A square chocolate mould is marked on a 3 × 3 grid. Coordinates run from 0 to 2, with x increasing right and y increasing down. Marks A, B and C start at (0, 0); (1, 0); (2, 2), respectively. First rotate 90° clockwise in its plane; then reflect across its vertical centre line. Where do A, B and C end up, in that order?",
+          "options": {
+            "A": "(2, 2); (0, 1); (0, 0)",
+            "B": "(0, 1); (0, 0); (2, 2)",
+            "C": "(0, 0); (0, 1); (2, 2)",
+            "D": "(0, 0); (2, 2); (0, 1)",
+            "E": "(0, 1); (2, 2); (0, 0)"
+          },
+          "answer": "C",
+          "explanation": "After the first step the marks are at (2, 0); (2, 1); (0, 2). Applying the second step in the stated order gives (0, 0); (0, 1); (2, 2).",
+          "difficulty": 4,
+          "family": "grid-transformations"
+        },
+        {
+          "id": "tara-drill-ps-grid-transformations-02",
+          "type": "identifying-similarity",
+          "stem": "A square badge design is marked on a 3 × 3 grid. Coordinates run from 0 to 2, with x increasing right and y increasing down. Marks A, B and C start at (0, 1); (2, 1); (0, 0), respectively. First reflect across its vertical centre line; then rotate 90° clockwise in its plane. Where do A, B and C end up, in that order?",
+          "options": {
+            "A": "(1, 2); (1, 0); (2, 2)",
+            "B": "(2, 2); (1, 0); (1, 2)",
+            "C": "(1, 2); (2, 2); (1, 0)",
+            "D": "(1, 0); (2, 2); (1, 2)",
+            "E": "(1, 0); (1, 2); (2, 2)"
+          },
+          "answer": "A",
+          "explanation": "After the first step the marks are at (2, 1); (0, 1); (2, 0). Applying the second step in the stated order gives (1, 2); (1, 0); (2, 2).",
+          "difficulty": 4,
+          "family": "grid-transformations"
+        },
+        {
+          "id": "tara-drill-ps-grid-transformations-03",
+          "type": "identifying-similarity",
+          "stem": "A square tile panel is marked on a 3 × 3 grid. Coordinates run from 0 to 2, with x increasing right and y increasing down. Marks A, B and C start at (1, 0); (0, 2); (2, 0), respectively. First rotate 90° clockwise in its plane; then rotate 90° clockwise in its plane. Where do A, B and C end up, in that order?",
+          "options": {
+            "A": "(2, 0); (1, 2); (0, 2)",
+            "B": "(1, 2); (2, 0); (0, 2)",
+            "C": "(2, 0); (0, 2); (1, 2)",
+            "D": "(0, 2); (2, 0); (1, 2)",
+            "E": "(1, 2); (0, 2); (2, 0)"
+          },
+          "answer": "B",
+          "explanation": "After the first step the marks are at (2, 1); (0, 0); (2, 2). Applying the second step in the stated order gives (1, 2); (2, 0); (0, 2).",
+          "difficulty": 4,
+          "family": "grid-transformations"
+        },
+        {
+          "id": "tara-drill-ps-grid-transformations-04",
+          "type": "identifying-similarity",
+          "stem": "A square quilt pattern is marked on a 3 × 3 grid. Coordinates run from 0 to 2, with x increasing right and y increasing down. Marks A, B and C start at (2, 0); (1, 2); (0, 1), respectively. First reflect across its vertical centre line; then rotate 90° clockwise in its plane. Where do A, B and C end up, in that order?",
+          "options": {
+            "A": "(2, 0); (1, 2); (0, 1)",
+            "B": "(0, 1); (1, 2); (2, 0)",
+            "C": "(2, 0); (0, 1); (1, 2)",
+            "D": "(0, 1); (2, 0); (1, 2)",
+            "E": "(1, 2); (0, 1); (2, 0)"
+          },
+          "answer": "C",
+          "explanation": "After the first step the marks are at (0, 0); (1, 2); (2, 1). Applying the second step in the stated order gives (2, 0); (0, 1); (1, 2).",
+          "difficulty": 4,
+          "family": "grid-transformations"
+        },
+        {
+          "id": "tara-drill-ps-grid-transformations-05",
+          "type": "identifying-similarity",
+          "stem": "A square mosaic panel is marked on a 3 × 3 grid. Coordinates run from 0 to 2, with x increasing right and y increasing down. Marks A, B and C start at (0, 2); (2, 1); (1, 0), respectively. First rotate 90° clockwise in its plane; then reflect across its vertical centre line. Where do A, B and C end up, in that order?",
+          "options": {
+            "A": "(1, 2); (2, 0); (0, 1)",
+            "B": "(2, 0); (1, 2); (0, 1)",
+            "C": "(2, 0); (0, 1); (1, 2)",
+            "D": "(1, 2); (0, 1); (2, 0)",
+            "E": "(0, 1); (1, 2); (2, 0)"
+          },
+          "answer": "B",
+          "explanation": "After the first step the marks are at (0, 0); (1, 2); (2, 1). Applying the second step in the stated order gives (2, 0); (1, 2); (0, 1).",
+          "difficulty": 4,
+          "family": "grid-transformations"
+        },
+        {
+          "id": "tara-drill-ps-interval-rankings-01",
+          "type": "identifying-similarity",
+          "stem": "A chart shows station entries as cumulative counts at the start and then after each of three equal intervals: 0, 12, 20, 36. Which other chart preserves the order of those intervals from most entries in an interval to fewest?",
+          "options": {
+            "A": "0, 19, 32, 42",
+            "B": "0, 19, 29, 42",
+            "C": "0, 13, 23, 42",
+            "D": "0, 13, 32, 42",
+            "E": "0, 10, 29, 42"
+          },
+          "answer": "C",
+          "explanation": "The original interval counts are 12, 8, 16. Subtract neighbouring cumulative totals in the options. The matching option gives 13, 10, 19, with the same ranking.",
+          "difficulty": 3,
+          "family": "interval-rankings"
+        },
+        {
+          "id": "tara-drill-ps-interval-rankings-02",
+          "type": "identifying-similarity",
+          "stem": "A chart shows café visits as cumulative counts at the start and then after each of three equal intervals: 0, 12, 17, 25. Which other chart preserves the order of those intervals from most entries in an interval to fewest?",
+          "options": {
+            "A": "0, 15, 24, 31",
+            "B": "0, 15, 22, 31",
+            "C": "0, 9, 16, 31",
+            "D": "0, 7, 22, 31",
+            "E": "0, 9, 24, 31"
+          },
+          "answer": "B",
+          "explanation": "The original interval counts are 12, 5, 8. Subtract neighbouring cumulative totals in the options. The matching option gives 15, 7, 9, with the same ranking.",
+          "difficulty": 3,
+          "family": "interval-rankings"
+        },
+        {
+          "id": "tara-drill-ps-interval-rankings-03",
+          "type": "identifying-similarity",
+          "stem": "A chart shows gallery admissions as cumulative counts at the start and then after each of three equal intervals: 0, 6, 20, 40. Which other chart preserves the order of those intervals from most entries in an interval to fewest?",
+          "options": {
+            "A": "0, 23, 31, 46",
+            "B": "0, 23, 38, 46",
+            "C": "0, 15, 23, 46",
+            "D": "0, 15, 38, 46",
+            "E": "0, 8, 23, 46"
+          },
+          "answer": "E",
+          "explanation": "The original interval counts are 6, 14, 20. Subtract neighbouring cumulative totals in the options. The matching option gives 8, 15, 23, with the same ranking.",
+          "difficulty": 3,
+          "family": "interval-rankings"
+        },
+        {
+          "id": "tara-drill-ps-interval-rankings-04",
+          "type": "identifying-similarity",
+          "stem": "A chart shows race finishes as cumulative counts at the start and then after each of three equal intervals: 0, 11, 26, 33. Which other chart preserves the order of those intervals from most entries in an interval to fewest?",
+          "options": {
+            "A": "0, 18, 30, 39",
+            "B": "0, 9, 27, 39",
+            "C": "0, 12, 30, 39",
+            "D": "0, 18, 27, 39",
+            "E": "0, 12, 21, 39"
+          },
+          "answer": "C",
+          "explanation": "The original interval counts are 11, 15, 7. Subtract neighbouring cumulative totals in the options. The matching option gives 12, 18, 9, with the same ranking.",
+          "difficulty": 3,
+          "family": "interval-rankings"
+        },
+        {
+          "id": "tara-drill-ps-interval-rankings-05",
+          "type": "identifying-similarity",
+          "stem": "A chart shows ice-rink admissions as cumulative counts at the start and then after each of three equal intervals: 0, 6, 24, 34. Which other chart preserves the order of those intervals from most entries in an interval to fewest?",
+          "options": {
+            "A": "0, 21, 32, 40",
+            "B": "0, 11, 32, 40",
+            "C": "0, 8, 29, 40",
+            "D": "0, 11, 19, 40",
+            "E": "0, 21, 29, 40"
+          },
+          "answer": "C",
+          "explanation": "The original interval counts are 6, 18, 10. Subtract neighbouring cumulative totals in the options. The matching option gives 8, 21, 11, with the same ranking.",
+          "difficulty": 3,
+          "family": "interval-rankings"
+        },
+        {
+          "id": "tara-drill-ps-network-shapes-01",
+          "type": "identifying-similarity",
+          "stem": "At a post room, five points are joined by two-way paths: A–B, A–C, A–D, B–C, C–E. All paths are listed. A second site uses points P, Q, R, S and T. Which list has exactly the same pattern of paths, allowing any consistent renaming?",
+          "options": {
+            "A": "P–Q, P–S, P–T, Q–T, R–S",
+            "B": "P–S, Q–S, Q–T, R–T, S–T",
+            "C": "P–R, P–S, P–T, Q–R, Q–S",
+            "D": "P–R, Q–R, Q–T, R–S, R–T",
+            "E": "P–Q, P–R, P–S, P–T, Q–R"
+          },
+          "answer": "B",
+          "explanation": "Relabel A→S, B→Q, C→T, D→P, E→R. This preserves every connection and gives P–S, Q–S, Q–T, R–T, S–T. Match the whole pattern, not just the number of paths.",
+          "difficulty": 5,
+          "family": "network-shapes"
+        },
+        {
+          "id": "tara-drill-ps-network-shapes-02",
+          "type": "identifying-similarity",
+          "stem": "At a farm, five points are joined by two-way paths: A–B, A–E, B–C, C–D, D–E. All paths are listed. A second site uses points P, Q, R, S and T. Which list has exactly the same pattern of paths, allowing any consistent renaming?",
+          "options": {
+            "A": "P–Q, P–R, P–S, P–T, Q–R",
+            "B": "P–R, P–T, Q–S, Q–T, R–S",
+            "C": "P–Q, P–S, P–T, Q–S, R–S",
+            "D": "P–R, Q–R, R–S, R–T, S–T",
+            "E": "P–R, P–S, P–T, Q–R, Q–S"
+          },
+          "answer": "B",
+          "explanation": "Relabel A→S, B→Q, C→T, D→P, E→R. This preserves every connection and gives P–R, P–T, Q–S, Q–T, R–S. Match the whole pattern, not just the number of paths.",
+          "difficulty": 5,
+          "family": "network-shapes"
+        },
+        {
+          "id": "tara-drill-ps-network-shapes-03",
+          "type": "identifying-similarity",
+          "stem": "At a campsite, five points are joined by two-way paths: A–B, A–C, A–D, A–E, C–D. All paths are listed. A second site uses points P, Q, R, S and T. Which list has exactly the same pattern of paths, allowing any consistent renaming?",
+          "options": {
+            "A": "P–Q, P–S, P–T, Q–S, R–T",
+            "B": "P–R, Q–R, Q–S, R–T, S–T",
+            "C": "P–S, P–T, Q–S, R–S, S–T",
+            "D": "P–Q, P–R, P–S, Q–R, Q–S",
+            "E": "P–R, P–S, P–T, Q–R, Q–S"
+          },
+          "answer": "C",
+          "explanation": "Relabel A→S, B→Q, C→T, D→P, E→R. This preserves every connection and gives P–S, P–T, Q–S, R–S, S–T. Match the whole pattern, not just the number of paths.",
+          "difficulty": 5,
+          "family": "network-shapes"
+        },
+        {
+          "id": "tara-drill-ps-network-shapes-04",
+          "type": "identifying-similarity",
+          "stem": "At a country estate, five points are joined by two-way paths: A–B, A–C, B–D, C–D, C–E. All paths are listed. A second site uses points P, Q, R, S and T. Which list has exactly the same pattern of paths, allowing any consistent renaming?",
+          "options": {
+            "A": "P–Q, P–R, P–S, P–T, Q–R",
+            "B": "P–R, Q–S, Q–T, R–S, S–T",
+            "C": "P–R, P–S, P–T, Q–R, R–S",
+            "D": "P–Q, P–S, P–T, Q–S, R–S",
+            "E": "P–Q, P–T, Q–S, R–T, S–T"
+          },
+          "answer": "E",
+          "explanation": "Relabel A→S, B→Q, C→T, D→P, E→R. This preserves every connection and gives P–Q, P–T, Q–S, R–T, S–T. Match the whole pattern, not just the number of paths.",
+          "difficulty": 5,
+          "family": "network-shapes"
+        },
+        {
+          "id": "tara-drill-ps-network-shapes-05",
+          "type": "identifying-similarity",
+          "stem": "At a theatre complex, five points are joined by two-way paths: A–B, B–C, B–E, C–D, D–E. All paths are listed. A second site uses points P, Q, R, S and T. Which list has exactly the same pattern of paths, allowing any consistent renaming?",
+          "options": {
+            "A": "P–R, P–T, Q–R, Q–S, Q–T",
+            "B": "P–R, P–S, P–T, Q–R, R–S",
+            "C": "P–Q, P–R, P–S, P–T, Q–R",
+            "D": "P–R, Q–S, Q–T, R–S, S–T",
+            "E": "P–Q, P–S, P–T, Q–S, R–S"
+          },
+          "answer": "A",
+          "explanation": "Relabel A→S, B→Q, C→T, D→P, E→R. This preserves every connection and gives P–R, P–T, Q–R, Q–S, Q–T. Match the whole pattern, not just the number of paths.",
+          "difficulty": 5,
+          "family": "network-shapes"
+        }
+      ],
+      "skills": [
+        {
+          "id": "relevant-selection",
+          "title": "Select relevant information",
+          "lessonId": "relevant-selection"
+        },
+        {
+          "id": "finding-procedures",
+          "title": "Find a procedure",
+          "lessonId": "finding-procedures"
+        },
+        {
+          "id": "identifying-similarity",
+          "title": "Identify similarity",
+          "lessonId": "identifying-similarity"
+        }
+      ]
+    }
+  ],
+  "studyPath": [
+    {
+      "id": "begin",
+      "title": "Start with technique",
+      "steps": [
+        "Read the official Question Guide. Choose one Critical Thinking type and one Problem Solving type you find difficult.",
+        "Do five questions per type without a timer. Before reviewing, write down which rule or step you used.",
+        "Explain the correct answer in a sentence and note what made the distractor appealing."
+      ]
+    },
+    {
+      "id": "build",
+      "title": "Add time pressure",
+      "steps": [
+        "Do a Daily 5 and flag correct guesses as well as misses.",
+        "Use about 109 seconds per question as a practice benchmark. Finish a short set before checking the answers.",
+        "Retry a miss without notes in one or two days, then try an unseen item in the same skill."
+      ]
+    },
+    {
+      "id": "rehearse",
+      "title": "Rehearse all three modules",
+      "steps": [
+        "Complete a Ratio mock and then an unseen Pearson sample, with 40 minutes per module and no calculator or dictionary.",
+        "Compare separate raw Critical Thinking and Problem Solving results. Do not average them or convert them to estimated official scaled scores.",
+        "Choose one writing prompt and use the studio checklist after completing your draft."
+      ]
+    }
+  ],
+  "resourceLinks": [
+    {
+      "id": "uat-prepare",
+      "title": "UAT-UK: Prepare",
+      "url": "https://esat-tmua.ac.uk/prepare/",
+      "category": "official",
+      "description": "Learn the test and open the specification and Question Guide."
+    },
+    {
+      "id": "pearson",
+      "title": "Pearson VUE: specimen and sample tests",
+      "url": "https://www.pearsonvue.com/us/en/uatuk.html",
+      "category": "official",
+      "description": "Practise in the official interface. Save an unseen sample for a final rehearsal."
+    },
+    {
+      "id": "uat-legacy",
+      "title": "UAT-UK: TSA and BMAT reasoning archive",
+      "url": "https://esat-tmua.ac.uk/tara-preparation-materials/",
+      "category": "legacy",
+      "description": "Find official legacy Section 1 papers and answer keys for targeted practice, not score prediction."
+    },
+    {
+      "id": "ghostprep-guide",
+      "title": "GhostPrep: Critical Thinking guide",
+      "url": "https://ghostprep.co.uk/tara/guides/critical-thinking",
+      "category": "third-party",
+      "description": "Free public reading from a commercial provider. Use the type breakdown to support your own review."
+    },
+    {
+      "id": "studymind-tsa",
+      "title": "Study Mind: TSA worked explanations",
+      "url": "https://studymind.co.uk/resource/tsa-past-papers/",
+      "category": "third-party",
+      "description": "Consult legacy worked explanations after attempting the archive questions."
+    },
+    {
+      "id": "oxbridge-applications",
+      "title": "Oxbridge Applications: section strategies",
+      "url": "https://oxbridgeapplications.com/blog/how-to-tackle-each-section-of-the-tara/",
+      "category": "third-party",
+      "description": "Public suggestions for tackling the three sections; not official guidance or an endorsement of paid courses."
+    }
+  ]
+}

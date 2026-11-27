@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import {
   ArrowRight,
   Clock,
+  ExternalLink,
   Eye,
   EyeOff,
   RotateCcw,
@@ -12,6 +13,8 @@ import taraRevisionRaw from '../data/packs/tara_revision.json';
 import { AdmissionsTest } from '../data/allTests';
 import { GenericAttempt, OfficialResourcesPanel } from './TestWorkspace';
 import { PearsonVueShell } from './OfficialExamChrome';
+import { TARA_DRILLS_DATA, TaraPracticeSuite } from './TaraPracticeSuite';
+import { TaraEssayStudio } from './TaraEssayStudio';
 
 interface TaraMcqQuestion {
   id: string;
@@ -103,8 +106,9 @@ export const TaraWorkspace: React.FC<TaraWorkspaceProps> = ({
   attempts,
   onSaveAttempt,
 }) => {
-  const [mode, setMode] = useState<'mocks' | 'revision'>('mocks');
+  const [mode, setMode] = useState<'mocks' | 'practice' | 'essay' | 'revision'>('practice');
   const [activeRun, setActiveRun] = useState<{ mock: TaraMock; mod: TaraModule } | null>(null);
+  const [highlightedLessonId, setHighlightedLessonId] = useState<string | null>(null);
 
   // MCQ runner state
   const [qIdx, setQIdx] = useState(0);
@@ -196,8 +200,73 @@ export const TaraWorkspace: React.FC<TaraWorkspaceProps> = ({
     return Array.from(map.entries()).map(([skill, stats]) => ({ skill, ...stats }));
   }, [activeRun, finished, answers]);
 
+  const openRevisionLesson = (lessonId: string) => {
+    setMode('revision');
+    setHighlightedLessonId(lessonId);
+    setOpenExamples((prev) => ({ ...prev, [lessonId]: true }));
+    window.setTimeout(() => {
+      document.getElementById(`tara-rev-${lessonId}`)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 80);
+  };
+
   if (subTab === 'resources') {
-    return <OfficialResourcesPanel test={test} />;
+    const existingUrls = new Set(
+      (test.officialLinks || []).map((l) => l.url.replace(/\/+$/, '').toLowerCase()),
+    );
+    const addendumLinks = TARA_DRILLS_DATA.resourceLinks.filter(
+      (l) => !existingUrls.has(l.url.replace(/\/+$/, '').toLowerCase()),
+    );
+    const categoryBadge = (cat: 'official' | 'legacy' | 'third-party') => {
+      if (cat === 'official')
+        return { label: 'Official', cls: 'border-emerald-500/40 bg-emerald-500/10 text-emerald-300' };
+      if (cat === 'legacy')
+        return { label: 'Legacy Archive (TSA / BMAT)', cls: 'border-amber-500/40 bg-amber-500/10 text-amber-300' };
+      return { label: 'Third-Party / Commercial', cls: 'border-[var(--rule)] text-[var(--text-muted)]' };
+    };
+    return (
+      <div className="space-y-8">
+        <OfficialResourcesPanel test={test} />
+        {addendumLinks.length > 0 && (
+          <section className="space-y-4">
+            <div>
+              <div className="text-xs font-mono-tabular uppercase tracking-wider text-[var(--accent)]">
+                Additional TARA Study Links
+              </div>
+              <p className="text-xs text-[var(--text-muted)] mt-1">
+                Vetted outbound links deduplicated against official UAT-UK resources above. Legacy
+                TSA/BMAT archives and commercial third-party guides are labeled separately and are
+                not endorsed as official scoring guidance.
+              </p>
+            </div>
+            <div className="grid sm:grid-cols-2 gap-3">
+              {addendumLinks.map((link) => {
+                const badge = categoryBadge(link.category);
+                return (
+                  <a
+                    key={link.id}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-4 border border-[var(--rule)] hover:border-[var(--accent)] bg-[var(--surface)] transition-colors space-y-2 block"
+                  >
+                    <div className="flex items-center justify-between gap-2">
+                      <span className={`px-2 py-0.5 border text-[10px] font-mono-tabular uppercase ${badge.cls}`}>
+                        {badge.label}
+                      </span>
+                      <ExternalLink className="w-3.5 h-3.5 text-[var(--text-muted)] shrink-0" />
+                    </div>
+                    <div className="text-sm font-semibold text-[var(--ink)]">{link.title}</div>
+                    <p className="text-xs text-[var(--text-muted)] leading-relaxed">
+                      {link.description}
+                    </p>
+                  </a>
+                );
+              })}
+            </div>
+          </section>
+        )}
+      </div>
+    );
   }
 
   if (subTab === 'progress') {
@@ -541,39 +610,42 @@ export const TaraWorkspace: React.FC<TaraWorkspaceProps> = ({
       <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[var(--rule)] pb-4">
         <div>
           <div className="text-xs font-mono-tabular uppercase tracking-wider text-[var(--accent)]">
-            TARA · 3 FULL MOCKS · 132 MCQS + 9 WRITING PROMPTS
+            TARA · 337 ORIGINAL MCQS · 27 WRITING PROMPTS · 3 FULL MOCKS
           </div>
           <h2 className="font-display text-3xl sm:text-4xl text-[var(--ink)] mt-0.5">
             {test.name}
           </h2>
         </div>
-        <div className="flex items-center gap-1 text-xs">
-          <button
-            type="button"
-            onClick={() => setMode('mocks')}
-            className={`px-3 py-1.5 border cursor-pointer transition-colors ${
-              mode === 'mocks'
-                ? 'border-[var(--accent)] text-[var(--accent)]'
-                : 'border-[var(--rule)] text-[var(--text-muted)] hover:text-[var(--ink)]'
-            }`}
-          >
-            3 Full Mocks
-          </button>
-          <button
-            type="button"
-            onClick={() => setMode('revision')}
-            className={`px-3 py-1.5 border cursor-pointer transition-colors ${
-              mode === 'revision'
-                ? 'border-[var(--accent)] text-[var(--accent)]'
-                : 'border-[var(--rule)] text-[var(--text-muted)] hover:text-[var(--ink)]'
-            }`}
-          >
-            TARA Revision Guide
-          </button>
+        <div className="flex flex-wrap items-center gap-1 text-xs">
+          {(
+            [
+              ['practice', 'Skills Practice (205 Qs)'],
+              ['essay', 'Essay Studio (18 Prompts)'],
+              ['mocks', '3 Full Mocks'],
+              ['revision', 'Revision Guide'],
+            ] as const
+          ).map(([id, label]) => (
+            <button
+              key={id}
+              type="button"
+              onClick={() => setMode(id)}
+              className={`px-3 py-1.5 border cursor-pointer transition-colors ${
+                mode === id
+                  ? 'border-[var(--accent)] text-[var(--accent)]'
+                  : 'border-[var(--rule)] text-[var(--text-muted)] hover:text-[var(--ink)]'
+              }`}
+            >
+              {label}
+            </button>
+          ))}
         </div>
       </div>
 
-      {mode === 'revision' ? (
+      {mode === 'practice' ? (
+        <TaraPracticeSuite onOpenLesson={openRevisionLesson} />
+      ) : mode === 'essay' ? (
+        <TaraEssayStudio />
+      ) : mode === 'revision' ? (
         <div className="space-y-6">
           <p className="text-sm text-[var(--text-muted)]">
             Structured TARA strategy guide with worked examples for every Critical Thinking, Problem
@@ -583,7 +655,13 @@ export const TaraWorkspace: React.FC<TaraWorkspaceProps> = ({
             {TARA_REVISION.sections.map((sec) => {
               const exOpen = !!openExamples[sec.id];
               return (
-                <div key={sec.id} className="py-5 space-y-3">
+                <div
+                  key={sec.id}
+                  id={`tara-rev-${sec.id}`}
+                  className={`py-5 space-y-3 ${
+                    highlightedLessonId === sec.id ? 'bg-[var(--accent-soft)] px-4 -mx-4' : ''
+                  }`}
+                >
                   <h3 className="font-display text-2xl text-[var(--ink)]">{sec.title}</h3>
                   {sec.body.map((p, idx) => (
                     <p key={idx} className="text-sm text-[var(--text)] leading-relaxed">

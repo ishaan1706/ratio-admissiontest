@@ -1,0 +1,422 @@
+{
+  "schemaVersion": 1,
+  "exam": "TARA",
+  "title": "TARA Essay Studio",
+  "durationMinutes": 40,
+  "wordLimit": 750,
+  "answerCount": 1,
+  "scored": false,
+  "instructions": "Explain what the statement means. Give a reasoned argument against it. Discuss the extent to which you agree.",
+  "timing": [
+    {
+      "id": "choose-plan",
+      "title": "Choose and plan",
+      "minutes": 7
+    },
+    {
+      "id": "draft",
+      "title": "Draft",
+      "minutes": 28
+    },
+    {
+      "id": "review",
+      "title": "Review",
+      "minutes": 5
+    }
+  ],
+  "rubricDisclaimer": "Ratio self-review only. UAT-UK does not score the Writing Task; university use may vary.",
+  "rubric": [
+    {
+      "id": "meaning",
+      "title": "Explain the claim",
+      "anchors": {
+        "notYet": "I skipped an important term or paraphrased without explaining it.",
+        "developing": "I identified the scope and explained one key term.",
+        "clear": "I defined the key terms and showed what the claim would require in a concrete case."
+      },
+      "nextStep": "Underline the strongest qualifier (for example, always or better) and paraphrase its effect."
+    },
+    {
+      "id": "objection",
+      "title": "Develop the case against",
+      "anchors": {
+        "notYet": "I disagreed without giving a reason, or attacked a different claim.",
+        "developing": "I supplied a relevant objection but did not fully explain how it harms the claim.",
+        "clear": "I made a serious opposing argument and explained how an example or mechanism supports it."
+      },
+      "nextStep": "After the objection, add a sentence beginning: This matters because…"
+    },
+    {
+      "id": "judgement",
+      "title": "Judge how far you agree",
+      "anchors": {
+        "notYet": "I did not state a position, or repeated the opening.",
+        "developing": "I stated a position and gave a reason, but did not weigh the main objection.",
+        "clear": "I weighed the objection and gave a position with a reasoned boundary or exception where appropriate."
+      },
+      "nextStep": "Write a sentence naming a case where your answer changes and say why."
+    },
+    {
+      "id": "structure",
+      "title": "Organise the reasoning",
+      "anchors": {
+        "notYet": "My points repeat or appear in an order that obscures the argument.",
+        "developing": "Most paragraphs have a purpose, but links between them are sometimes implicit.",
+        "clear": "Each paragraph advances a distinct point and the conclusion follows from those points."
+      },
+      "nextStep": "Write a four-word margin label for each paragraph; merge paragraphs doing the same job."
+    },
+    {
+      "id": "expression",
+      "title": "Write clearly and concisely",
+      "anchors": {
+        "notYet": "Unclear wording, unsupported generalisations or length make the reasoning hard to follow.",
+        "developing": "The argument is readable but some examples or claims are vague.",
+        "clear": "Language is precise and concise, examples do real work, and the response is within 750 words."
+      },
+      "nextStep": "Replace a broad claim with one concrete example; cut a sentence that repeats a point."
+    }
+  ],
+  "prompts": [
+    {
+      "id": "tara-studio-wt-01",
+      "type": "writing-task",
+      "theme": "education",
+      "statement": "Universities should give the same deadline flexibility to all students, rather than decide requests one at a time.",
+      "stem": "Universities should give the same deadline flexibility to all students, rather than decide requests one at a time.\n\nExplain what the statement means. Give a reasoned argument against it. Discuss the extent to which you agree.",
+      "planningGuidance": "Define flexibility as a limited automatic extension, not an open-ended deadline. Uniform extensions may fail students who face longer disruptions and can create avoidable delays in group work. Ask which problems a small universal allowance solves and where justified exceptions should remain.",
+      "plan": {
+        "interpret": "Define flexibility as a limited automatic extension, not an open-ended deadline.",
+        "challenge": "Uniform extensions may fail students who face longer disruptions and can create avoidable delays in group work.",
+        "judge": "Ask which problems a small universal allowance solves and where justified exceptions should remain."
+      }
+    },
+    {
+      "id": "tara-studio-wt-02",
+      "type": "writing-task",
+      "theme": "public-policy",
+      "statement": "Public organisations should publish the reasons for decisions even when the decision itself cannot be changed.",
+      "stem": "Public organisations should publish the reasons for decisions even when the decision itself cannot be changed.\n\nExplain what the statement means. Give a reasoned argument against it. Discuss the extent to which you agree.",
+      "planningGuidance": "Distinguish explanation after a decision from a route of appeal. Full disclosure can invade privacy or consume time without helping anyone act. Defend publication of meaningful reasons by default while identifying what may reasonably be withheld.",
+      "plan": {
+        "interpret": "Distinguish explanation after a decision from a route of appeal.",
+        "challenge": "Full disclosure can invade privacy or consume time without helping anyone act.",
+        "judge": "Defend publication of meaningful reasons by default while identifying what may reasonably be withheld."
+      }
+    },
+    {
+      "id": "tara-studio-wt-03",
+      "type": "writing-task",
+      "theme": "technology",
+      "statement": "A useful service should always have a non-digital alternative.",
+      "stem": "A useful service should always have a non-digital alternative.\n\nExplain what the statement means. Give a reasoned argument against it. Discuss the extent to which you agree.",
+      "planningGuidance": "Define a usable alternative, not necessarily a staffed counter at every site. Duplicating services can divert money from quality or delay urgent support. Distinguish essential services from optional conveniences and say what alternative is proportionate.",
+      "plan": {
+        "interpret": "Define a usable alternative, not necessarily a staffed counter at every site.",
+        "challenge": "Duplicating services can divert money from quality or delay urgent support.",
+        "judge": "Distinguish essential services from optional conveniences and say what alternative is proportionate."
+      }
+    },
+    {
+      "id": "tara-studio-wt-04",
+      "type": "writing-task",
+      "theme": "education",
+      "statement": "Students should spend more time learning how to ask good questions than learning how to give accurate answers.",
+      "stem": "Students should spend more time learning how to ask good questions than learning how to give accurate answers.\n\nExplain what the statement means. Give a reasoned argument against it. Discuss the extent to which you agree.",
+      "planningGuidance": "Explain what makes a question useful: it exposes uncertainty or guides inquiry. Without reliable background knowledge or accurate answers, interesting questions can lead nowhere. Compare early instruction with advanced enquiry rather than imposing one split for every learner.",
+      "plan": {
+        "interpret": "Explain what makes a question useful: it exposes uncertainty or guides inquiry.",
+        "challenge": "Without reliable background knowledge or accurate answers, interesting questions can lead nowhere.",
+        "judge": "Compare early instruction with advanced enquiry rather than imposing one split for every learner."
+      }
+    },
+    {
+      "id": "tara-studio-wt-05",
+      "type": "writing-task",
+      "theme": "community",
+      "statement": "A town should improve existing public facilities before building new ones.",
+      "stem": "A town should improve existing public facilities before building new ones.\n\nExplain what the statement means. Give a reasoned argument against it. Discuss the extent to which you agree.",
+      "planningGuidance": "Clarify whether “before” means an absolute order or a preference when both meet the same need. Renovation can preserve an inaccessible or badly located service and cost more in the long run. Separate repairable deficits from structural ones; give an example for each.",
+      "plan": {
+        "interpret": "Clarify whether “before” means an absolute order or a preference when both meet the same need.",
+        "challenge": "Renovation can preserve an inaccessible or badly located service and cost more in the long run.",
+        "judge": "Separate repairable deficits from structural ones; give an example for each."
+      }
+    },
+    {
+      "id": "tara-studio-wt-06",
+      "type": "writing-task",
+      "theme": "fairness",
+      "statement": "In competitions for scarce opportunities, effort deserves greater weight than achievement.",
+      "stem": "In competitions for scarce opportunities, effort deserves greater weight than achievement.\n\nExplain what the statement means. Give a reasoned argument against it. Discuss the extent to which you agree.",
+      "planningGuidance": "Separate effort, achievement and evidence that either can be measured fairly. Effort is hard to observe and sometimes the opportunity requires a demonstrated level of competence. Discuss whether effort should affect selection, recognition, or only a tie between qualified applicants.",
+      "plan": {
+        "interpret": "Separate effort, achievement and evidence that either can be measured fairly.",
+        "challenge": "Effort is hard to observe and sometimes the opportunity requires a demonstrated level of competence.",
+        "judge": "Discuss whether effort should affect selection, recognition, or only a tie between qualified applicants."
+      }
+    },
+    {
+      "id": "tara-studio-wt-07",
+      "type": "writing-task",
+      "theme": "environment",
+      "statement": "People should pay for the environmental costs of the things they buy.",
+      "stem": "People should pay for the environmental costs of the things they buy.\n\nExplain what the statement means. Give a reasoned argument against it. Discuss the extent to which you agree.",
+      "planningGuidance": "Explain who pays at purchase and which harms a price is meant to reflect. A flat charge can burden people with few alternatives while allowing wealthier consumers to continue unchanged. Identify when a charge works and where alternatives or rebates are needed for fairness.",
+      "plan": {
+        "interpret": "Explain who pays at purchase and which harms a price is meant to reflect.",
+        "challenge": "A flat charge can burden people with few alternatives while allowing wealthier consumers to continue unchanged.",
+        "judge": "Identify when a charge works and where alternatives or rebates are needed for fairness."
+      }
+    },
+    {
+      "id": "tara-studio-wt-08",
+      "type": "writing-task",
+      "theme": "work",
+      "statement": "Teams work best when every member has a clearly defined role.",
+      "stem": "Teams work best when every member has a clearly defined role.\n\nExplain what the statement means. Give a reasoned argument against it. Discuss the extent to which you agree.",
+      "planningGuidance": "Explain how defined responsibilities prevent neglected work without prescribing every action. Rigid roles can make a team slow to respond when an unexpected task appears. Distinguish the need for named accountability from the freedom to help across roles.",
+      "plan": {
+        "interpret": "Explain how defined responsibilities prevent neglected work without prescribing every action.",
+        "challenge": "Rigid roles can make a team slow to respond when an unexpected task appears.",
+        "judge": "Distinguish the need for named accountability from the freedom to help across roles."
+      }
+    },
+    {
+      "id": "tara-studio-wt-09",
+      "type": "writing-task",
+      "theme": "media",
+      "statement": "News organisations should publish fewer stories if doing so allows them to verify each one more thoroughly.",
+      "stem": "News organisations should publish fewer stories if doing so allows them to verify each one more thoroughly.\n\nExplain what the statement means. Give a reasoned argument against it. Discuss the extent to which you agree.",
+      "planningGuidance": "Explain the trade-off between breadth, speed and confidence. Too few stories can mean poorly covered communities disappear from public attention. Set out when provisional labelled updates are preferable and when a story should wait.",
+      "plan": {
+        "interpret": "Explain the trade-off between breadth, speed and confidence.",
+        "challenge": "Too few stories can mean poorly covered communities disappear from public attention.",
+        "judge": "Set out when provisional labelled updates are preferable and when a story should wait."
+      }
+    },
+    {
+      "id": "tara-studio-wt-10",
+      "type": "writing-task",
+      "theme": "community",
+      "statement": "Communities should make important changes through small trials before committing to permanent action.",
+      "stem": "Communities should make important changes through small trials before committing to permanent action.\n\nExplain what the statement means. Give a reasoned argument against it. Discuss the extent to which you agree.",
+      "planningGuidance": "Explain how a reversible trial can reveal effects that forecasts miss. Some choices require a network or long time horizon to show value; urgent repairs cannot wait. Propose a rule for when evidence from a trial is likely to transfer to the full change.",
+      "plan": {
+        "interpret": "Explain how a reversible trial can reveal effects that forecasts miss.",
+        "challenge": "Some choices require a network or long time horizon to show value; urgent repairs cannot wait.",
+        "judge": "Propose a rule for when evidence from a trial is likely to transfer to the full change."
+      }
+    },
+    {
+      "id": "tara-studio-wt-11",
+      "type": "writing-task",
+      "theme": "fairness",
+      "statement": "A rule that is fair in most cases should not be changed just because an exception is possible.",
+      "stem": "A rule that is fair in most cases should not be changed just because an exception is possible.\n\nExplain what the statement means. Give a reasoned argument against it. Discuss the extent to which you agree.",
+      "planningGuidance": "Distinguish rewriting a rule from adding a narrow exception. Rare cases can still involve severe and predictable harm, especially where a group is routinely excluded. Consider severity, frequency and whether discretion can be checked.",
+      "plan": {
+        "interpret": "Distinguish rewriting a rule from adding a narrow exception.",
+        "challenge": "Rare cases can still involve severe and predictable harm, especially where a group is routinely excluded.",
+        "judge": "Consider severity, frequency and whether discretion can be checked."
+      }
+    },
+    {
+      "id": "tara-studio-wt-12",
+      "type": "writing-task",
+      "theme": "public-policy",
+      "statement": "Public transport should be designed to be dependable rather than fast.",
+      "stem": "Public transport should be designed to be dependable rather than fast.\n\nExplain what the statement means. Give a reasoned argument against it. Discuss the extent to which you agree.",
+      "planningGuidance": "Define dependability through the ability to plan, not just average punctuality. There is little value in a reliable trip that is too slow for commuters to use. Defend reliability as a priority once a journey meets a useful travel-time threshold.",
+      "plan": {
+        "interpret": "Define dependability through the ability to plan, not just average punctuality.",
+        "challenge": "There is little value in a reliable trip that is too slow for commuters to use.",
+        "judge": "Defend reliability as a priority once a journey meets a useful travel-time threshold."
+      }
+    },
+    {
+      "id": "tara-studio-wt-13",
+      "type": "writing-task",
+      "theme": "education",
+      "statement": "Schools should let students choose how to demonstrate what they have learned.",
+      "stem": "Schools should let students choose how to demonstrate what they have learned.\n\nExplain what the statement means. Give a reasoned argument against it. Discuss the extent to which you agree.",
+      "planningGuidance": "Explain what can vary, such as format, and what learning outcomes should remain fixed. Some options can remove the very skill being assessed, or make comparisons unfair. Differentiate assessing history knowledge from assessing written argument.",
+      "plan": {
+        "interpret": "Explain what can vary, such as format, and what learning outcomes should remain fixed.",
+        "challenge": "Some options can remove the very skill being assessed, or make comparisons unfair.",
+        "judge": "Differentiate assessing history knowledge from assessing written argument."
+      }
+    },
+    {
+      "id": "tara-studio-wt-14",
+      "type": "writing-task",
+      "theme": "technology",
+      "statement": "A decision becomes more trustworthy when it is supported by more data.",
+      "stem": "A decision becomes more trustworthy when it is supported by more data.\n\nExplain what the statement means. Give a reasoned argument against it. Discuss the extent to which you agree.",
+      "planningGuidance": "Define trustworthy as confidence warranted by relevant evidence. More records from the same biased source can increase apparent certainty without correcting the bias. Identify when quality, coverage and independence make extra data worth gathering.",
+      "plan": {
+        "interpret": "Define trustworthy as confidence warranted by relevant evidence.",
+        "challenge": "More records from the same biased source can increase apparent certainty without correcting the bias.",
+        "judge": "Identify when quality, coverage and independence make extra data worth gathering."
+      }
+    },
+    {
+      "id": "tara-studio-wt-15",
+      "type": "writing-task",
+      "theme": "community",
+      "statement": "People should have more say in decisions they must live with than in decisions they merely fund.",
+      "stem": "People should have more say in decisions they must live with than in decisions they merely fund.\n\nExplain what the statement means. Give a reasoned argument against it. Discuss the extent to which you agree.",
+      "planningGuidance": "Explain why direct exposure to consequences can justify influence. Funders may represent a wider public or have legitimate oversight responsibilities. Differentiate local design choices from choices about expenditure and legal duties.",
+      "plan": {
+        "interpret": "Explain why direct exposure to consequences can justify influence.",
+        "challenge": "Funders may represent a wider public or have legitimate oversight responsibilities.",
+        "judge": "Differentiate local design choices from choices about expenditure and legal duties."
+      }
+    },
+    {
+      "id": "tara-studio-wt-16",
+      "type": "writing-task",
+      "theme": "work",
+      "statement": "Organisations should reward people who improve shared processes rather than people who simply work faster within them.",
+      "stem": "Organisations should reward people who improve shared processes rather than people who simply work faster within them.\n\nExplain what the statement means. Give a reasoned argument against it. Discuss the extent to which you agree.",
+      "planningGuidance": "Clarify process improvement as an enduring gain for others, not a one-off suggestion. Reliable delivery deserves recognition, and not every problem gives everyone equal scope to redesign work. Propose distinguishing everyday competence from rewards for well-evidenced shared improvements.",
+      "plan": {
+        "interpret": "Clarify process improvement as an enduring gain for others, not a one-off suggestion.",
+        "challenge": "Reliable delivery deserves recognition, and not every problem gives everyone equal scope to redesign work.",
+        "judge": "Propose distinguishing everyday competence from rewards for well-evidenced shared improvements."
+      }
+    },
+    {
+      "id": "tara-studio-wt-17",
+      "type": "writing-task",
+      "theme": "culture",
+      "statement": "Access to an important cultural work matters more than preserving its original form.",
+      "stem": "Access to an important cultural work matters more than preserving its original form.\n\nExplain what the statement means. Give a reasoned argument against it. Discuss the extent to which you agree.",
+      "planningGuidance": "Distinguish access to its content from direct experience of an artefact. Some works gain much of their meaning from their scale, material or setting. Compare a digital manuscript copy with a site-specific installation; consider whether access can protect an original.",
+      "plan": {
+        "interpret": "Distinguish access to its content from direct experience of an artefact.",
+        "challenge": "Some works gain much of their meaning from their scale, material or setting.",
+        "judge": "Compare a digital manuscript copy with a site-specific installation; consider whether access can protect an original."
+      }
+    },
+    {
+      "id": "tara-studio-wt-18",
+      "type": "writing-task",
+      "theme": "public-policy",
+      "statement": "Public bodies should stop a programme once it no longer meets the goal it was created for.",
+      "stem": "Public bodies should stop a programme once it no longer meets the goal it was created for.\n\nExplain what the statement means. Give a reasoned argument against it. Discuss the extent to which you agree.",
+      "planningGuidance": "Explain why initial purpose matters for accountability. An adapted programme may now meet a genuine need better than a new one would. Require an explicit decision on a changed purpose rather than automatic closure or quiet continuation.",
+      "plan": {
+        "interpret": "Explain why initial purpose matters for accountability.",
+        "challenge": "An adapted programme may now meet a genuine need better than a new one would.",
+        "judge": "Require an explicit decision on a changed purpose rather than automatic closure or quiet continuation."
+      }
+    }
+  ],
+  "promptSets": [
+    {
+      "id": "tara-studio-set-01",
+      "title": "Studio set 1",
+      "promptIds": [
+        "tara-studio-wt-01",
+        "tara-studio-wt-02",
+        "tara-studio-wt-03"
+      ]
+    },
+    {
+      "id": "tara-studio-set-02",
+      "title": "Studio set 2",
+      "promptIds": [
+        "tara-studio-wt-04",
+        "tara-studio-wt-05",
+        "tara-studio-wt-06"
+      ]
+    },
+    {
+      "id": "tara-studio-set-03",
+      "title": "Studio set 3",
+      "promptIds": [
+        "tara-studio-wt-07",
+        "tara-studio-wt-08",
+        "tara-studio-wt-09"
+      ]
+    },
+    {
+      "id": "tara-studio-set-04",
+      "title": "Studio set 4",
+      "promptIds": [
+        "tara-studio-wt-10",
+        "tara-studio-wt-11",
+        "tara-studio-wt-12"
+      ]
+    },
+    {
+      "id": "tara-studio-set-05",
+      "title": "Studio set 5",
+      "promptIds": [
+        "tara-studio-wt-13",
+        "tara-studio-wt-14",
+        "tara-studio-wt-15"
+      ]
+    },
+    {
+      "id": "tara-studio-set-06",
+      "title": "Studio set 6",
+      "promptIds": [
+        "tara-studio-wt-16",
+        "tara-studio-wt-17",
+        "tara-studio-wt-18"
+      ]
+    }
+  ],
+  "models": [
+    {
+      "id": "tara-studio-model-03",
+      "promptId": "tara-studio-wt-03",
+      "title": "Practice model: a fallback where failure matters",
+      "wordCount": 348,
+      "paragraphs": [
+        {
+          "text": "The statement argues that using a website or an app should never be the only way to obtain a service. A non-digital alternative would need to be usable, not merely listed: a phone line nobody answers is no better than a form the user cannot submit. The difficulty lies in the word “always”. A fallback that is essential for one service could be a poor use of money for another.",
+          "annotation": "Defines both the disputed term (a usable alternative) and the absolute word the essay will test."
+        },
+        {
+          "text": "The strongest reason against a universal rule is that a second channel is not free. Imagine a festival that sells a small number of extra seats to an optional talk. Employing someone to take telephone bookings throughout the booking period might cost enough to cancel the talk altogether. In that case maintaining the alternative reduces access overall rather than improving it. Even an essential service may not need to offer every transaction in several formats. A second process that shares no records with the first might leave a user explaining the same problem twice, or it might lead staff to act on an out-of-date appointment.",
+          "annotation": "Develops the objection through mechanisms: resource diversion and poor coordination. A concrete example makes the cost claim testable."
+        },
+        {
+          "text": "The case for an alternative grows stronger when exclusion has serious consequences. If a patient must use an app to rearrange a treatment appointment, a lost phone or unfamiliar login can turn a small technical problem into a missed appointment. Giving that patient a phone number need not entail duplicating the booking system. Staff can use the same records while taking details in a different way. A fallback built into the design may therefore cost less than dealing with missed treatments and repeated complaints.",
+          "annotation": "Responds to the strongest objection rather than ignoring it: the access route can differ even when the underlying records are shared."
+        },
+        {
+          "text": "I agree that organisations should provide a realistic alternative when failing to gain access carries a substantial cost for users or when digital exclusion is foreseeable and there is no equivalent service. This is a stricter requirement for a clinic than for an optional festival event. For a low-stakes service, accurate notice of the digital-only arrangement may be enough if users have genuinely comparable alternatives. The test should be whether a person can reasonably meet the underlying need, not whether every service has an identical menu of booking methods.",
+          "annotation": "Gives a qualified verdict with a workable criterion. It does not merely repeat the claim or switch to arguing against digital services."
+        }
+      ]
+    },
+    {
+      "id": "tara-studio-model-14",
+      "promptId": "tara-studio-wt-14",
+      "title": "Practice model: more observations are not always better evidence",
+      "wordCount": 327,
+      "paragraphs": [
+        {
+          "text": "To call a decision trustworthy is to say that its grounds can bear the weight placed on them. Extra data can support a decision by reducing the influence of unusual examples or revealing who will be affected. But the statement is too broad if “more” means only a larger number of entries. Whether the extra observations answer the right question matters more than how many there are.",
+          "annotation": "Establishes what “trustworthy” means and states an initial position without simply repeating the question."
+        },
+        {
+          "text": "Consider a town choosing where to put a new pedestrian crossing. Its online complaint form produces hundreds of reports from a street where residents are familiar with the council’s website. A smaller set of observations from an estate with low internet access shows that several pupils have to cross a busy road there. Collecting another hundred online complaints from the first street would not make the comparison fairer. Because using the form differs by neighbourhood, the reports are partly a measure of who knows how to contact the council, not just of danger. A decision based on the larger pile of records may look better supported while remaining biased.",
+          "annotation": "Makes a reasoned case against the claim by explaining how the collection method changes what an apparent count actually measures."
+        },
+        {
+          "text": "On the other hand, a single count at the estate might have taken place during a road closure or a school event. Repeating observations at each site across ordinary days and times can distinguish an unusual period from persistent demand. It can also show whether a problem affects only people crossing at a certain hour. This additional evidence improves the comparison because it fills a gap, not because another row on a spreadsheet carries authority of its own.",
+          "annotation": "Concedes the best case for more data and states what changes: coverage of the relevant conditions."
+        },
+        {
+          "text": "I would therefore support collecting more data when it makes the evidence more representative or provides an independent check. If a council already knows that its reporting channel misses some users, it should spend its effort observing those places rather than collecting more of the same reports. The principle does not demand exhaustive research before every decision. It demands that the next piece of evidence can resolve a real uncertainty in the decision.",
+          "annotation": "Turns the discussion into a usable judgement: ask what uncertainty the additional evidence would reduce."
+        }
+      ]
+    }
+  ]
+}
