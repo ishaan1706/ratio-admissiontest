@@ -12,6 +12,7 @@ import satDrillsRaw from '../data/packs/sat/sat-drills.json';
 import satRevisionGuideMd from '../data/packs/sat/sat-revision-guide.md?raw';
 import { AdmissionsTest } from '../data/allTests';
 import { GenericAttempt, OfficialResourcesPanel } from './TestWorkspace';
+import { MarkdownRenderer } from './MarkdownRenderer';
 
 interface SatOption {
   letter: string;
@@ -679,9 +680,9 @@ export const SatWorkspace: React.FC<SatWorkspaceProps> = ({
       )}
 
       {mode === 'guide' && (
-        <pre className="whitespace-pre-wrap font-sans text-sm text-[var(--text)] leading-relaxed border border-[var(--rule)] bg-[var(--surface)] p-6 overflow-x-auto">
-          {satRevisionGuideMd}
-        </pre>
+        <div className="rounded-2xl border border-[var(--rule)] bg-[var(--surface)] p-6 sm:p-8">
+          <MarkdownRenderer content={satRevisionGuideMd} />
+        </div>
       )}
     </div>
   );

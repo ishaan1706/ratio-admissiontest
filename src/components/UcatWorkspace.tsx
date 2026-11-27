@@ -15,6 +15,7 @@ import ucatDrillsRaw from '../data/packs/ucat/ucat-drills.json';
 import ucatRevisionRaw from '../data/packs/ucat/ucat-revision.json';
 import { AdmissionsTest } from '../data/allTests';
 import { GenericAttempt, OfficialResourcesPanel } from './TestWorkspace';
+import { MarkdownRenderer } from './MarkdownRenderer';
 import { UcatBasicCalculator } from './ExamRevisionTools';
 
 interface UcatChart {
@@ -1008,13 +1009,17 @@ export const UcatWorkspace: React.FC<UcatWorkspaceProps> = ({
               </div>
             </div>
           ) : (
-            <pre className="whitespace-pre-wrap font-sans text-sm text-[var(--text)] leading-relaxed border border-[var(--rule)] bg-[var(--surface)] p-6 overflow-x-auto">
-              {guideTab === 'dm'
-                ? UCAT_REV.dmLogicMarkdown
-                : guideTab === 'qr'
-                ? UCAT_REV.qrMathsMarkdown
-                : UCAT_REV.sjtFrameworkMarkdown}
-            </pre>
+            <div className="rounded-2xl border border-[var(--rule)] bg-[var(--surface)] p-6 sm:p-8">
+              <MarkdownRenderer
+                content={
+                  guideTab === 'dm'
+                    ? UCAT_REV.dmLogicMarkdown
+                    : guideTab === 'qr'
+                    ? UCAT_REV.qrMathsMarkdown
+                    : UCAT_REV.sjtFrameworkMarkdown
+                }
+              />
+            </div>
           )}
         </div>
       )}

@@ -8,6 +8,7 @@ import {
 } from '../data/packs/tmua/tmuaData';
 import { AdmissionsTest } from '../data/allTests';
 import { GenericAttempt, OfficialResourcesPanel } from './TestWorkspace';
+import { MarkdownRenderer } from './MarkdownRenderer';
 
 interface TmuaWorkspaceProps {
   test: AdmissionsTest;
@@ -514,9 +515,9 @@ export const TmuaWorkspace: React.FC<TmuaWorkspaceProps> = ({
       )}
 
       {mode === 'logic' && (
-        <pre className="whitespace-pre-wrap font-sans text-sm text-[var(--text)] leading-relaxed border border-[var(--rule)] bg-[var(--surface)] p-6 overflow-x-auto">
-          {TMUA_LOGIC_GUIDE}
-        </pre>
+        <div className="rounded-2xl border border-[var(--rule)] bg-[var(--surface)] p-6 sm:p-8">
+          <MarkdownRenderer content={TMUA_LOGIC_GUIDE} />
+        </div>
       )}
     </div>
   );

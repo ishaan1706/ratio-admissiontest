@@ -15,6 +15,7 @@ import esatFormulaSheetsMd from '../data/packs/esat/esat-formula-sheets.md?raw';
 import esatStudyPlanMd from '../data/packs/esat/esat-study-plan.md?raw';
 import { AdmissionsTest } from '../data/allTests';
 import { GenericAttempt, OfficialResourcesPanel } from './TestWorkspace';
+import { MarkdownRenderer } from './MarkdownRenderer';
 
 interface EsatOption {
   label: string;
@@ -605,9 +606,11 @@ export const EsatWorkspace: React.FC<EsatWorkspaceProps> = ({
               10-Week ESAT Study Plan
             </button>
           </div>
-          <pre className="whitespace-pre-wrap font-sans text-sm text-[var(--text)] leading-relaxed border border-[var(--rule)] bg-[var(--surface)] p-6 overflow-x-auto">
-            {sheetTab === 'formulas' ? esatFormulaSheetsMd : esatStudyPlanMd}
-          </pre>
+          <div className="rounded-2xl border border-[var(--rule)] bg-[var(--surface)] p-6 sm:p-8">
+            <MarkdownRenderer
+              content={sheetTab === 'formulas' ? esatFormulaSheetsMd : esatStudyPlanMd}
+            />
+          </div>
         </div>
       )}
     </div>
