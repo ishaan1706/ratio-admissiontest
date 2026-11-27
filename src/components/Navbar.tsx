@@ -40,10 +40,15 @@ export const Navbar: React.FC<NavbarProps> = ({
         <button
           type="button"
           onClick={onGoHome}
-          className="font-display text-2xl tracking-tight text-[var(--ink)] leading-none cursor-pointer shrink-0"
+          className="inline-flex items-center gap-2 cursor-pointer shrink-0 group"
           title="Back to Welcome"
         >
-          Ratio
+          <span className="w-6 h-6 rounded-md bg-[var(--surface-subtle)] border border-[var(--border-strong)] flex items-center justify-center text-xs font-display text-[var(--accent)]">
+            R
+          </span>
+          <span className="font-display text-2xl tracking-tight text-[var(--ink)] leading-none group-hover:text-[var(--accent)] transition-colors">
+            Ratio
+          </span>
         </button>
 
         {/* Spring-animated 5-Test Switcher */}
