@@ -478,6 +478,36 @@ export const TaraPracticeSuite: React.FC<TaraPracticeSuiteProps> = ({ onOpenLess
     return () => window.clearInterval(id);
   }, [session, submitted, answers, committed]);
 
+  /* ── Stats Computation (Separate CT & PS, First-Attempt Accuracy) ──────── */
+  const stats = useMemo(() => {
+    const byMod = {
+      'critical-thinking': { firstCorrect: 0, firstTotal: 0 },
+      'problem-solving': { firstCorrect: 0, firstTotal: 0 },
+    };
+    const bySkill = new Map<string, { title: string; moduleTitle: string; lessonId: string; firstCorrect: number; firstTotal: number }>();
+    for (const s of TARA_ALL_SKILLS) {
+      bySkill.set(s.id, {
+        title: s.title,
+        moduleTitle: s.moduleTitle,
+        lessonId: s.lessonId,
+        firstCorrect: 0,
+        firstTotal: 0,
+      });
+    }
+    for (const [qId, rec] of Object.entries(store.items)) {
+      const q = QUESTION_MAP.get(qId);
+      if (!q) continue;
+      byMod[q.moduleType].firstTotal += 1;
+      if (rec.firstOutcome === 'correct') byMod[q.moduleType].firstCorrect += 1;
+      const sk = bySkill.get(q.type);
+      if (sk) {
+        sk.firstTotal += 1;
+        if (rec.firstOutcome === 'correct') sk.firstCorrect += 1;
+      }
+    }
+    return { byMod, skills: Array.from(bySkill.entries()) };
+  }, [store.items]);
+
   const handleUntimedCommit = (q: TaraDrillQuestion) => {
     const pick = answers[q.id];
     if (!pick || committed[q.id]) return;
@@ -849,36 +879,6 @@ export const TaraPracticeSuite: React.FC<TaraPracticeSuiteProps> = ({ onOpenLess
       </div>
     );
   }
-
-  /* ── Stats Computation (Separate CT & PS, First-Attempt Accuracy) ──────── */
-  const stats = useMemo(() => {
-    const byMod = {
-      'critical-thinking': { firstCorrect: 0, firstTotal: 0 },
-      'problem-solving': { firstCorrect: 0, firstTotal: 0 },
-    };
-    const bySkill = new Map<string, { title: string; moduleTitle: string; lessonId: string; firstCorrect: number; firstTotal: number }>();
-    for (const s of TARA_ALL_SKILLS) {
-      bySkill.set(s.id, {
-        title: s.title,
-        moduleTitle: s.moduleTitle,
-        lessonId: s.lessonId,
-        firstCorrect: 0,
-        firstTotal: 0,
-      });
-    }
-    for (const [qId, rec] of Object.entries(store.items)) {
-      const q = QUESTION_MAP.get(qId);
-      if (!q) continue;
-      byMod[q.moduleType].firstTotal += 1;
-      if (rec.firstOutcome === 'correct') byMod[q.moduleType].firstCorrect += 1;
-      const sk = bySkill.get(q.type);
-      if (sk) {
-        sk.firstTotal += 1;
-        if (rec.firstOutcome === 'correct') sk.firstCorrect += 1;
-      }
-    }
-    return { byMod, skills: Array.from(bySkill.entries()) };
-  }, [store.items]);
 
   /* ── Skills Practice Hub ──────────────────────────────────────────────── */
   return (
