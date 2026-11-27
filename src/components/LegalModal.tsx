@@ -97,9 +97,9 @@ export const LegalModal: React.FC<LegalModalProps> = ({ doc, onClose }) => {
               purchase with your account email for a full refund — no awkward hoops.
             </p>
             <p>
-              <strong>Monthly Subscriptions.</strong> You can cancel at any time before your next
-              renewal date; you keep Pro access until the end of the billing period already paid
-              for.
+              <strong>One-Off Passes (No Renewals).</strong> Both the £24 Single Test Pass (valid
+              until that test&apos;s exam season ends) and the £39 All Tests Bundle are single
+              one-off payments — there are no recurring subscriptions or automatic charges.
             </p>
           </div>
         )}

@@ -1,4 +1,4 @@
-export type TestId = 'lnat' | 'ucat' | 'tara' | 'esat' | 'sat';
+export type TestId = 'lnat' | 'ucat' | 'tara' | 'esat' | 'tmua' | 'sat';
 
 export interface PracticeQuestion {
   id: string;
@@ -782,6 +782,233 @@ export const ADMISSIONS_TESTS: AdmissionsTest[] = [
         explanation: 'Substitute (5, 13): 13 = a(5 − 3)² + 5 ⇒ 8 = 4a ⇒ a = 2.',
       },
     ],
+  },
+  {
+    id: 'tmua',
+    code: 'TMUA',
+    name: 'Test of Mathematics for University Admission',
+    subject: 'Maths, CS & Economics',
+    universities: 'Cambridge, Imperial, LSE, Warwick, Durham, UCL, Bath, Exeter',
+    format: 'Paper 1 (20 MCQs, 75m) + Paper 2 Logic & Proof (20 MCQs, 75m)',
+    duration: '150 mins',
+    scoreScale: '1.0–9.0 UAT-UK scale (no negative marking)',
+    officialSite: 'https://esat-tmua.ac.uk/about-the-tests/tmua-test/',
+    officialAdvice: [
+      'Two 75-minute papers (20 MCQs each, 40 total). No calculator, no formula sheet, and no negative marking — answer every question.',
+      'Paper 1 tests applying AS/A-level maths under pressure; Paper 2 tests mathematical reasoning, logic (necessary/sufficient, contrapositive), and spotting errors in proofs.',
+      'Read the official TMUA Content Specification carefully — Paper 2 logic rules ("only if", quantifiers, counterexamples) are quick wins once mastered.',
+      'Use the official 2016–2023 past papers and worked solutions below under timed 75-minute no-calculator conditions.',
+    ],
+    officialLinks: [
+      {
+        label: 'Official UAT-UK TMUA Overview',
+        url: 'https://esat-tmua.ac.uk/about-the-tests/tmua-test/',
+        category: 'Portal',
+        note: 'Official format, dates, universities, and test-day rules',
+      },
+      {
+        label: 'Official TMUA Content Specification (PDF)',
+        url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/03165619/TMUA_Content_Specification.pdf',
+        category: 'Spec',
+        note: 'Full syllabus for Paper 1 maths and Paper 2 logic & proof',
+      },
+      {
+        label: 'Official TMUA Preparation Materials Hub',
+        url: 'https://esat-tmua.ac.uk/tmua-preparation-materials/',
+        category: 'Practice Tests',
+        note: 'All official past papers, worked answers, and specimen papers',
+      },
+      {
+        label: 'Pearson VUE UAT-UK Registration & Booking',
+        url: 'https://www.pearsonvue.com/us/en/uatuk.html',
+        category: 'Portal',
+        note: 'Create your UAT-UK account and book your TMUA sitting',
+      },
+      {
+        label: 'Official UAT-UK Course List (2027 Entry PDF)',
+        url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/04/01172717/Course_List_2027_Entry_Final.pdf',
+        category: 'Guide',
+        note: 'Every UK university course requiring or accepting TMUA',
+      },
+      {
+        label: 'Official TMUA Specimen Paper 1 & 2',
+        url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141417/TMUA-early-specimen-paper-1.pdf',
+        category: 'Practice Tests',
+        note: 'Official UAT-UK early specimen Paper 1 PDF',
+      },
+    ],
+    pastPapersTitle: 'Official TMUA Past Papers Archive (2016–2023)',
+    pastPapers: [
+      {
+        year: '2023',
+        items: [
+          {
+            label: 'Paper 1',
+            url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/04/30144109/TMUA-2023-paper-1.pdf',
+          },
+          {
+            label: 'P1 Worked',
+            url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/06/04105227/TMUA-2023-paper-1-worked-answers.pdf',
+          },
+          {
+            label: 'Paper 2',
+            url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/04/30144111/TMUA-2023-paper-2.pdf',
+          },
+          {
+            label: 'P2 Worked',
+            url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/06/04105226/TMUA-2023-paper-2-worked-answers.pdf',
+          },
+          {
+            label: 'Answer Key',
+            url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/04/30144123/TMUA-2023-answer-keys.pdf',
+          },
+        ],
+      },
+      {
+        year: '2022',
+        items: [
+          {
+            label: 'Paper 1',
+            url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141241/TMUA-2022-paper-1.pdf',
+          },
+          {
+            label: 'P1 Worked',
+            url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/06/04105226/TMUA-2022-paper-1-worked-answers.pdf',
+          },
+          {
+            label: 'Paper 2',
+            url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141239/TMUA-2022-paper-2.pdf',
+          },
+          {
+            label: 'P2 Worked',
+            url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/06/04105227/TMUA-2022-paper-2-worked-answers.pdf',
+          },
+          {
+            label: 'Answer Key',
+            url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141242/TMUA-2022-answer-keys.pdf',
+          },
+        ],
+      },
+      {
+        year: '2021',
+        items: [
+          {
+            label: 'Paper 1',
+            url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141119/TMUA-2021-paper-1.pdf',
+          },
+          {
+            label: 'P1 Worked',
+            url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141121/TMUA-2021-paper-1-worked-answers.pdf',
+          },
+          {
+            label: 'Paper 2',
+            url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141117/TMUA-2021-paper-2.pdf',
+          },
+          {
+            label: 'P2 Worked',
+            url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141118/TMUA-2021-paper-2-worked-answers.pdf',
+          },
+          {
+            label: 'Answer Key',
+            url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141122/TMUA-2021-answer-keys.pdf',
+          },
+        ],
+      },
+      {
+        year: '2020',
+        items: [
+          {
+            label: 'Paper 1',
+            url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140953/TMUA-2020-paper-1.pdf',
+          },
+          {
+            label: 'P1 Worked',
+            url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140955/TMUA-2020-paper-1-worked-answers.pdf',
+          },
+          {
+            label: 'Paper 2',
+            url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140951/TMUA-2020-paper-2.pdf',
+          },
+          {
+            label: 'P2 Worked',
+            url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140952/TMUA-2020-paper-2-worked-answers.pdf',
+          },
+          {
+            label: 'Answer Key',
+            url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140956/TMUA-2020-answer-keys.pdf',
+          },
+        ],
+      },
+      {
+        year: '2019',
+        items: [
+          {
+            label: 'Paper 1',
+            url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140825/TMUA-2019-paper-1.pdf',
+          },
+          {
+            label: 'P1 Worked',
+            url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140826/TMUA-2019-paper-1-worked-answers.pdf',
+          },
+          {
+            label: 'Paper 2',
+            url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140823/TMUA-2019-paper-2.pdf',
+          },
+        ],
+      },
+      {
+        year: '2018',
+        items: [
+          {
+            label: 'Paper 1',
+            url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125407/TMUA-2018-paper-1.pdf',
+          },
+          {
+            label: 'Paper 2',
+            url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125404/TMUA-2018-paper-2.pdf',
+          },
+          {
+            label: 'Answer Key',
+            url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125413/TMUA-2018-answer-keys.pdf',
+          },
+        ],
+      },
+      {
+        year: '2017',
+        items: [
+          {
+            label: 'Paper 1',
+            url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125230/TMUA-2017-paper-1.pdf',
+          },
+          {
+            label: 'Paper 2',
+            url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125224/TMUA-2017-paper-2.pdf',
+          },
+          {
+            label: 'Answer Key',
+            url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125232/TMUA-2017-answer-keys.pdf',
+          },
+        ],
+      },
+      {
+        year: '2016',
+        items: [
+          {
+            label: 'Paper 1',
+            url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125112/TMUA-2016-paper-1.pdf',
+          },
+          {
+            label: 'Paper 2',
+            url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125102/TMUA-2016-paper-2.pdf',
+          },
+          {
+            label: 'Answer Key',
+            url: 'https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125113/TMUA-2016-answer-keys.pdf',
+          },
+        ],
+      },
+    ],
+    questions: [],
   },
 ];
 

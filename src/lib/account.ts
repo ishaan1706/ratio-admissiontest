@@ -131,12 +131,13 @@ export async function logoutAccount(): Promise<void> {
 }
 
 export async function startStripeCheckout(
-  tier: 'monthly' | 'season'
+  tier: 'single' | 'bundle',
+  testId?: string
 ): Promise<{ url?: string; error?: string; setupRequired?: boolean }> {
   const staticUrl =
-    tier === 'season'
-      ? import.meta.env.VITE_CHECKOUT_URL_SEASON
-      : import.meta.env.VITE_CHECKOUT_URL_MONTHLY;
+    tier === 'bundle'
+      ? import.meta.env.VITE_CHECKOUT_URL_BUNDLE
+      : import.meta.env.VITE_CHECKOUT_URL_SINGLE;
   if (staticUrl) {
     return { url: staticUrl };
   }
@@ -145,7 +146,7 @@ export async function startStripeCheckout(
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       credentials: 'include',
-      body: JSON.stringify({ tier }),
+      body: JSON.stringify({ tier, testId }),
     });
     const data = await res.json();
     if (!res.ok) {

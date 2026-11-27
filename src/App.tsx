@@ -40,6 +40,9 @@ const EsatWorkspace = lazy(() =>
 const SatWorkspace = lazy(() =>
   import('./components/SatWorkspace').then((m) => ({ default: m.SatWorkspace }))
 );
+const TmuaWorkspace = lazy(() =>
+  import('./components/TmuaWorkspace').then((m) => ({ default: m.TmuaWorkspace }))
+);
 const UcatWorkspace = lazy(() =>
   import('./components/UcatWorkspace').then((m) => ({ default: m.UcatWorkspace }))
 );
@@ -294,7 +297,7 @@ export const App: React.FC = () => {
                 onClick={() => openPricing()}
                 className="hidden sm:inline-flex items-center gap-1.5 text-[11px] font-mono-tabular text-[var(--accent)] hover:underline cursor-pointer"
               >
-                <Sparkles className="w-3 h-3" /> Unlock all 5 exams (£39 Season Pass)
+                <Sparkles className="w-3 h-3" /> Single Test £24 · All 6 Tests £39
               </button>
             )}
           </div>
@@ -424,6 +427,17 @@ export const App: React.FC = () => {
             <Suspense fallback={workspaceFallback}>
               <EsatWorkspace
                 test={TEST_BY_ID.esat}
+                subTab={subTab}
+                attempts={genericAttempts}
+                onSaveAttempt={handleSaveGenericAttempt}
+              />
+            </Suspense>
+          </div>
+        ) : activeTest === 'tmua' ? (
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10">
+            <Suspense fallback={workspaceFallback}>
+              <TmuaWorkspace
+                test={TEST_BY_ID.tmua}
                 subTab={subTab}
                 attempts={genericAttempts}
                 onSaveAttempt={handleSaveGenericAttempt}

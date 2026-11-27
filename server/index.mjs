@@ -20,8 +20,8 @@ const SESSION_SECRET =
 
 const STRIPE_SECRET_KEY = process.env.STRIPE_SECRET_KEY || '';
 const STRIPE_WEBHOOK_SECRET = process.env.STRIPE_WEBHOOK_SECRET || '';
-const STRIPE_PRICE_MONTHLY = process.env.STRIPE_PRICE_MONTHLY || '';
-const STRIPE_PRICE_SEASON = process.env.STRIPE_PRICE_SEASON || '';
+const STRIPE_PRICE_SINGLE = process.env.STRIPE_PRICE_SINGLE || '';
+const STRIPE_PRICE_BUNDLE = process.env.STRIPE_PRICE_BUNDLE || '';
 const APP_URL = process.env.APP_URL || '';
 const ACCESS_CODES = new Set(
   (process.env.RATIO_ACCESS_CODES || 'RATIO-FOUNDER,RATIO-PRO-2026')
@@ -219,7 +219,7 @@ app.get('/api/health', (_req, res) => {
   res.json({
     ok: true,
     dbPath: DB_PATH,
-    stripeConfigured: Boolean(STRIPE_SECRET_KEY && (STRIPE_PRICE_MONTHLY || STRIPE_PRICE_SEASON)),
+    stripeConfigured: Boolean(STRIPE_SECRET_KEY && (STRIPE_PRICE_SINGLE || STRIPE_PRICE_BUNDLE)),
   });
 });
 
@@ -228,7 +228,7 @@ app.get('/api/auth/me', (req, res) => {
   const user = getSessionUser(req);
   res.json({
     user,
-    stripeConfigured: Boolean(STRIPE_SECRET_KEY && (STRIPE_PRICE_MONTHLY || STRIPE_PRICE_SEASON)),
+    stripeConfigured: Boolean(STRIPE_SECRET_KEY && (STRIPE_PRICE_SINGLE || STRIPE_PRICE_BUNDLE)),
   });
 });
 
@@ -299,8 +299,8 @@ app.post('/api/sync', (req, res) => {
 
 /* ── Billing: Stripe Checkout + Customer Portal + Access Code Redemption ── */
 app.post('/api/billing/checkout', async (req, res) => {
-  const { tier } = req.body || {}; // 'monthly' | 'season'
-  const priceId = tier === 'season' ? STRIPE_PRICE_SEASON : STRIPE_PRICE_MONTHLY;
+  const { tier, testId } = req.body || {}; // 'single' | 'bundle'
+  const priceId = tier === 'bundle' ? STRIPE_PRICE_BUNDLE : STRIPE_PRICE_SINGLE;
   if (!STRIPE_SECRET_KEY || !priceId) {
     return res.status(501).json({
       error: 'Stripe is not configured on this server yet.',
@@ -310,9 +310,11 @@ app.post('/api/billing/checkout', async (req, res) => {
   const user = getSessionUser(req);
   const origin = APP_URL || `${req.protocol}://${req.get('host')}`;
   const params = new URLSearchParams({
-    mode: tier === 'season' ? 'payment' : 'subscription',
+    mode: 'payment',
     'line_items[0][price]': priceId,
     'line_items[0][quantity]': '1',
+    'metadata[tier]': tier === 'bundle' ? 'bundle' : 'single',
+    'metadata[test_id]': String(testId || 'all'),
     success_url: `${origin}/?checkout=success`,
     cancel_url: `${origin}/?checkout=cancelled`,
   });

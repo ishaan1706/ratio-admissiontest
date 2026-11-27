@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Check, KeyRound, ShieldCheck, Sparkles, X } from 'lucide-react';
+import { ADMISSIONS_TESTS, TestId } from '../data/allTests';
 import { redeemAccessCode, setLocalPro, startStripeCheckout } from '../lib/account';
 
 interface PaywallModalProps {
@@ -19,7 +20,8 @@ export const PaywallModal: React.FC<PaywallModalProps> = ({
   onProChange,
   reason,
 }) => {
-  const [busyTier, setBusyTier] = useState<'monthly' | 'season' | null>(null);
+  const [selectedTest, setSelectedTest] = useState<TestId>('lnat');
+  const [busyTier, setBusyTier] = useState<'single' | 'bundle' | null>(null);
   const [notice, setNotice] = useState<string | null>(null);
   const [code, setCode] = useState('');
   const [codeError, setCodeError] = useState<string | null>(null);
@@ -27,10 +29,10 @@ export const PaywallModal: React.FC<PaywallModalProps> = ({
 
   if (!open) return null;
 
-  const handleCheckout = async (tier: 'monthly' | 'season') => {
+  const handleCheckout = async (tier: 'single' | 'bundle') => {
     setNotice(null);
     setBusyTier(tier);
-    const res = await startStripeCheckout(tier);
+    const res = await startStripeCheckout(tier, tier === 'single' ? selectedTest : 'all');
     setBusyTier(null);
     if (res.url) {
       window.location.href = res.url;
@@ -38,7 +40,7 @@ export const PaywallModal: React.FC<PaywallModalProps> = ({
     }
     if (res.setupRequired) {
       setNotice(
-        'Stripe keys are not connected yet. Add STRIPE_SECRET_KEY & price IDs in .env to take live payments — or unlock Pro now with an access code below.'
+        'Stripe keys are not connected yet. Add STRIPE_SECRET_KEY, STRIPE_PRICE_SINGLE & STRIPE_PRICE_BUNDLE in .env to take live payments — or unlock Pro now with an access code below.'
       );
       setShowCodeBox(true);
     } else {
@@ -70,10 +72,10 @@ export const PaywallModal: React.FC<PaywallModalProps> = ({
         <div className="flex items-start justify-between gap-4">
           <div>
             <div className="inline-flex items-center gap-1.5 text-[11px] font-mono-tabular uppercase tracking-wider text-emerald-400">
-              <Sparkles className="w-3.5 h-3.5" /> Ratio Pro · All 5 Admissions Tests
+              <Sparkles className="w-3.5 h-3.5" /> Ratio Pro · No Subscriptions
             </div>
             <h3 className="font-display text-3xl sm:text-4xl text-white mt-1">
-              One pass for every exam you sit.
+              Pay once for one test, or unlock all six.
             </h3>
             {reason && <p className="text-xs text-amber-300 mt-1.5">{reason}</p>}
           </div>
@@ -88,25 +90,48 @@ export const PaywallModal: React.FC<PaywallModalProps> = ({
         </div>
 
         <div className="grid sm:grid-cols-2 gap-4">
-          {/* Monthly Plan */}
+          {/* Single Test Pass (£24) */}
           <div className="rounded-xl border border-white/10 bg-[#09090B] p-5 flex flex-col justify-between gap-5">
             <div>
               <div className="text-xs font-mono-tabular uppercase tracking-wider text-zinc-400">
-                Monthly
+                Single Test Pass · One-Off
               </div>
-              <div className="mt-2 flex items-baseline gap-1">
-                <span className="font-display text-4xl text-white">£19</span>
-                <span className="text-xs text-zinc-400">/ month</span>
+              <div className="mt-2 flex items-baseline gap-1.5">
+                <span className="font-display text-4xl text-white">£24</span>
+                <span className="text-xs text-zinc-400">valid until exam season ends</span>
               </div>
               <p className="text-xs text-zinc-400 mt-2">
-                Cancel in one click before your next billing date. Ideal for 4–6 week sprints.
+                Full access to one admissions test through the end of its exam season. No recurring
+                bills.
               </p>
+
+              <div className="mt-4">
+                <label className="block text-[11px] font-mono-tabular uppercase tracking-wider text-zinc-500 mb-1.5">
+                  Choose your test
+                </label>
+                <div className="grid grid-cols-3 gap-1.5">
+                  {ADMISSIONS_TESTS.map((t) => (
+                    <button
+                      key={t.id}
+                      type="button"
+                      onClick={() => setSelectedTest(t.id)}
+                      className={`py-1.5 rounded-lg text-xs font-mono-tabular font-semibold border cursor-pointer transition-colors ${
+                        selectedTest === t.id
+                          ? 'border-emerald-500 bg-emerald-500/15 text-emerald-300'
+                          : 'border-white/10 text-zinc-400 hover:text-white'
+                      }`}
+                    >
+                      {t.code}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
               <ul className="mt-4 space-y-2 text-xs text-zinc-300">
                 {[
-                  'All 10 full-length mocks (LNAT, UCAT, TARA, ESAT, SAT)',
-                  '1,040+ original exam-format questions & explanations',
-                  'All 20+ timed drills & 220+ active-recall flashcards',
-                  'Cross-device sync & progress backup export',
+                  `All full-length ${selectedTest.toUpperCase()} mocks & timed drills`,
+                  'Every worked explanation & revision guide',
+                  'Flashcards, cloud sync & progress backup',
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2">
                     <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
@@ -118,35 +143,38 @@ export const PaywallModal: React.FC<PaywallModalProps> = ({
             <button
               type="button"
               disabled={busyTier !== null}
-              onClick={() => handleCheckout('monthly')}
+              onClick={() => handleCheckout('single')}
               className="w-full py-2.5 rounded-xl border border-white/15 hover:border-white/35 bg-white/5 hover:bg-white/10 text-white text-xs font-semibold transition-colors cursor-pointer"
             >
-              {busyTier === 'monthly' ? 'Opening Checkout…' : 'Start Monthly (£19/mo)'}
+              {busyTier === 'single'
+                ? 'Opening Checkout…'
+                : `Get ${selectedTest.toUpperCase()} Pass (£24 once)`}
             </button>
           </div>
 
-          {/* Season Pass — Best Value */}
+          {/* All Tests Bundle (£39) */}
           <div className="rounded-xl border border-emerald-500/40 bg-gradient-to-b from-emerald-500/10 to-[#09090B] p-5 flex flex-col justify-between gap-5 relative">
             <span className="absolute -top-2.5 right-4 px-2.5 py-0.5 rounded-full bg-emerald-500 text-[#09090B] text-[10px] font-mono-tabular font-bold uppercase tracking-wider">
-              Most Popular
+              Best Value
             </span>
             <div>
               <div className="text-xs font-mono-tabular uppercase tracking-wider text-emerald-400">
-                Season Pass · One-Off
+                All Tests Bundle · One-Off
               </div>
-              <div className="mt-2 flex items-baseline gap-1">
+              <div className="mt-2 flex items-baseline gap-1.5">
                 <span className="font-display text-4xl text-white">£39</span>
-                <span className="text-xs text-zinc-400">for the full admissions cycle</span>
+                <span className="text-xs text-zinc-400">all 6 tests · full cycle</span>
               </div>
               <p className="text-xs text-zinc-300 mt-2">
-                Pay once, no recurring bills. Covers every exam from summer prep through January.
+                Sitting more than one exam? Unlock LNAT, UCAT, TARA, ESAT, TMUA &amp; SAT together
+                for £15 more.
               </p>
               <ul className="mt-4 space-y-2 text-xs text-zinc-200">
                 {[
-                  'Everything in Monthly for the entire cycle',
-                  'Zero subscription renewals or surprise charges',
+                  'All 6 admissions tests unlocked (1,080+ original Qs)',
+                  'Every full-length mock, timed drill & flashcard deck',
+                  'Zero subscriptions or automatic renewals',
                   '14-day no-questions-asked refund guarantee',
-                  'All future mock & question updates included',
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2">
                     <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
@@ -158,10 +186,10 @@ export const PaywallModal: React.FC<PaywallModalProps> = ({
             <button
               type="button"
               disabled={busyTier !== null}
-              onClick={() => handleCheckout('season')}
+              onClick={() => handleCheckout('bundle')}
               className="w-full py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-[#09090B] text-xs font-semibold transition-colors cursor-pointer"
             >
-              {busyTier === 'season' ? 'Opening Checkout…' : 'Get Season Pass (£39 once)'}
+              {busyTier === 'bundle' ? 'Opening Checkout…' : 'Get All Tests Bundle (£39 once)'}
             </button>
           </div>
         </div>
@@ -175,7 +203,7 @@ export const PaywallModal: React.FC<PaywallModalProps> = ({
         <div className="flex flex-wrap items-center justify-between gap-3 pt-2 border-t border-white/10 text-xs text-zinc-400">
           <div className="flex items-center gap-2">
             <ShieldCheck className="w-4 h-4 text-emerald-400" />
-            <span>14-day refund guarantee · Secure card checkout</span>
+            <span>14-day refund guarantee · Secure one-off checkout</span>
           </div>
 
           <div className="flex items-center gap-3">

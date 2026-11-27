@@ -109,7 +109,7 @@ export const AccountModal: React.FC<AccountModalProps> = ({
                 }}
                 className="w-full py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-[#09090B] text-xs font-semibold transition-colors cursor-pointer"
               >
-                Upgrade to Ratio Pro — All 5 Exams
+                Upgrade to Ratio Pro — £24 Single Test or £39 All 6 Tests
               </button>
             )}
 

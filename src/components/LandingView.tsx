@@ -27,6 +27,7 @@ const MARQUEE_ROW_1 = [
   { label: 'UCAT', tag: '2 Full 2026 Mocks' },
   { label: 'TARA', tag: '3 Full UAT-UK Mocks' },
   { label: 'ESAT', tag: '270 Science & Maths Qs' },
+  { label: 'TMUA', tag: 'Paper 1 & Paper 2 Logic' },
   { label: 'SAT', tag: 'Digital Adaptive Format' },
   { label: 'Critical Thinking', tag: 'LNAT · TARA' },
   { label: 'Verbal Reasoning', tag: 'UCAT' },
@@ -36,10 +37,10 @@ const MARQUEE_ROW_1 = [
 
 const MARQUEE_ROW_2 = [
   { label: 'Oxford', tag: 'LNAT · TARA · UCAT' },
-  { label: 'Cambridge', tag: 'LNAT · ESAT · UCAT' },
-  { label: 'Imperial', tag: 'ESAT · UCAT' },
-  { label: 'UCL', tag: 'LNAT · TARA · ESAT' },
-  { label: 'LSE', tag: 'LNAT' },
+  { label: 'Cambridge', tag: 'LNAT · ESAT · TMUA · UCAT' },
+  { label: 'Imperial', tag: 'ESAT · TMUA · UCAT' },
+  { label: 'UCL', tag: 'LNAT · TARA · ESAT · TMUA' },
+  { label: 'LSE', tag: 'LNAT · TMUA' },
   { label: "King's College London", tag: 'LNAT · UCAT' },
   { label: 'Durham & Bristol', tag: 'LNAT' },
   { label: 'Ivy League & MIT', tag: 'SAT' },
@@ -68,6 +69,11 @@ const EXAM_STATS: Record<
     mocks: '2 Mocks × 5 Modules (270 Qs)',
     extras: '160 Flashcards · Formula Sheets',
     highlight: 'No-calculator sprint · 10-week study plan',
+  },
+  tmua: {
+    mocks: 'Full Mock (Paper 1 & 2 · 40 Qs)',
+    extras: 'Logic & Proof Guide · Flashcards',
+    highlight: '75-min no-calculator papers · 2016–23 archive',
   },
   sat: {
     mocks: '2 Digital Mocks (196 Qs)',
@@ -150,7 +156,7 @@ export const LandingView: React.FC<LandingViewProps> = ({
             </span>
             <nav className="hidden md:flex items-center gap-6 text-xs text-zinc-400">
               <a href="#exams" className="hover:text-white transition-colors">
-                5 Exams
+                6 Exams
               </a>
               <a href="#pricing" className="hover:text-white transition-colors">
                 Pricing
@@ -200,7 +206,7 @@ export const LandingView: React.FC<LandingViewProps> = ({
             <div className="lg:col-span-6 space-y-6">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/[0.1] bg-white/[0.03] text-[11px] font-mono-tabular text-zinc-300">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-                LNAT · UCAT · TARA · ESAT · Digital SAT
+                LNAT · UCAT · TARA · ESAT · TMUA · SAT
               </div>
 
               <h1 className="font-display text-[3.2rem] sm:text-[4.6rem] leading-[0.94] tracking-[-0.025em] text-white">
@@ -231,7 +237,7 @@ export const LandingView: React.FC<LandingViewProps> = ({
                   href="#pricing"
                   className="px-5 py-3 rounded-xl border border-white/12 hover:border-white/25 bg-white/[0.03] text-sm font-medium text-white inline-flex items-center gap-2 transition-colors"
                 >
-                  {isPro ? 'Ratio Pro Active' : 'See Pricing — £19/mo'}
+                  {isPro ? 'Ratio Pro Active' : 'See Pricing — from £24'}
                 </a>
               </div>
 
@@ -333,10 +339,10 @@ export const LandingView: React.FC<LandingViewProps> = ({
         <section className="border-b border-white/[0.07] bg-[#0C0C0F]">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 py-7 grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { value: '1,040+', label: 'Original exam-format questions' },
-              { value: '10', label: 'Full-length timed mocks' },
-              { value: '220+', label: 'Active-recall flashcards' },
-              { value: '48', label: 'Verified official board links' },
+              { value: '1,080+', label: 'Original exam-format questions' },
+              { value: '11', label: 'Full-length timed mocks' },
+              { value: '230+', label: 'Active-recall flashcards' },
+              { value: '54', label: 'Verified official board links' },
             ].map((stat) => (
               <div key={stat.label}>
                 <div className="font-display text-3xl sm:text-4xl text-white">{stat.value}</div>
@@ -351,7 +357,7 @@ export const LandingView: React.FC<LandingViewProps> = ({
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
             <div>
               <div className="text-xs font-mono-tabular uppercase tracking-wider text-emerald-400">
-                Five admissions tracks
+                Six admissions tracks
               </div>
               <h2 className="font-display text-3xl sm:text-5xl text-white mt-1">
                 Pick your test and start in seconds.
@@ -362,7 +368,7 @@ export const LandingView: React.FC<LandingViewProps> = ({
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-3.5">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {ADMISSIONS_TESTS.map((test) => {
               const meta = EXAM_STATS[test.id];
               return (
@@ -409,11 +415,11 @@ export const LandingView: React.FC<LandingViewProps> = ({
               Simple Pricing
             </div>
             <h2 className="font-display text-4xl sm:text-5xl text-white">
-              Start free. Unlock every exam with one pass.
+              One-off pricing. No subscriptions.
             </h2>
             <p className="text-sm text-zinc-400">
-              Competitors charge £30–£75 per individual exam. Ratio Pro gives you LNAT, UCAT, TARA,
-              ESAT, and Digital SAT together.
+              Start free, buy a single test pass through the end of its exam season for £24, or
+              unlock all six tests together for £39.
             </p>
           </div>
 
@@ -431,7 +437,7 @@ export const LandingView: React.FC<LandingViewProps> = ({
                 <ul className="mt-5 space-y-2.5 text-xs text-zinc-300">
                   {[
                     'Diagnostic & Mock 1 access',
-                    'All 48 verified official board links',
+                    'All 54 verified official board links',
                     'Built-in calculators, timers & essay rulers',
                     'Local progress saving in your browser',
                   ].map((f) => (
@@ -451,24 +457,24 @@ export const LandingView: React.FC<LandingViewProps> = ({
               </button>
             </div>
 
-            {/* Monthly */}
+            {/* Single Test Pass (£24) */}
             <div className="rounded-2xl border border-white/[0.11] bg-[#111114] p-6 flex flex-col justify-between gap-6">
               <div>
                 <div className="text-xs font-mono-tabular uppercase tracking-wider text-zinc-300">
-                  Ratio Pro · Monthly
+                  Single Test Pass · One-Off
                 </div>
-                <div className="mt-3 flex items-baseline gap-1">
-                  <span className="font-display text-4xl text-white">£19</span>
-                  <span className="text-xs text-zinc-400">/ month</span>
+                <div className="mt-3 flex items-baseline gap-1.5">
+                  <span className="font-display text-4xl text-white">£24</span>
+                  <span className="text-xs text-zinc-400">until exam season ends</span>
                 </div>
                 <p className="text-xs text-zinc-400 mt-2">
-                  Flexible month-to-month access. Cancel anytime in one click.
+                  Pick any one test (LNAT, UCAT, TARA, ESAT, TMUA, or SAT). Pay once, no renewals.
                 </p>
                 <ul className="mt-5 space-y-2.5 text-xs text-zinc-300">
                   {[
-                    'All 10 full-length mocks across all 5 tests',
-                    'All 1,040+ original questions & explanations',
-                    'All 20+ timed drills & 220+ flashcards',
+                    'Every full-length mock for your chosen test',
+                    'All timed drills, flashcards & revision guides',
+                    'Valid until that test’s exam season ends',
                     'Cloud account sync & JSON backup export',
                   ].map((f) => (
                     <li key={f} className="flex items-start gap-2">
@@ -483,30 +489,30 @@ export const LandingView: React.FC<LandingViewProps> = ({
                 onClick={() => onOpenPricing()}
                 className="w-full py-2.5 rounded-xl bg-white hover:bg-zinc-200 text-[#09090B] text-xs font-semibold cursor-pointer transition-colors"
               >
-                {isPro ? 'Pro Unlocked' : 'Choose Monthly'}
+                {isPro ? 'Pro Unlocked' : 'Choose Single Test (£24)'}
               </button>
             </div>
 
-            {/* Season Pass */}
+            {/* All Tests Bundle (£39) */}
             <div className="rounded-2xl border border-emerald-500/45 bg-gradient-to-b from-emerald-500/[0.12] to-[#111114] p-6 flex flex-col justify-between gap-6 relative">
               <span className="absolute -top-3 right-5 px-3 py-0.5 rounded-full bg-emerald-500 text-[#09090B] text-[10px] font-mono-tabular font-bold uppercase tracking-wider inline-flex items-center gap-1">
                 <Sparkles className="w-3 h-3" /> Best Value
               </span>
               <div>
                 <div className="text-xs font-mono-tabular uppercase tracking-wider text-emerald-400">
-                  Season Pass · One-Off
+                  All Tests Bundle · One-Off
                 </div>
-                <div className="mt-3 flex items-baseline gap-1">
+                <div className="mt-3 flex items-baseline gap-1.5">
                   <span className="font-display text-4xl text-white">£39</span>
-                  <span className="text-xs text-zinc-400">one-time payment</span>
+                  <span className="text-xs text-zinc-400">all 6 tests · full cycle</span>
                 </div>
                 <p className="text-xs text-zinc-300 mt-2">
-                  Pay once for the full admissions cycle. No subscriptions, no renewals.
+                  Unlock all six admissions tests together for £15 more. Zero recurring bills.
                 </p>
                 <ul className="mt-5 space-y-2.5 text-xs text-zinc-200">
                   {[
-                    'Everything in Ratio Pro for the full cycle',
-                    'LNAT + UCAT + TARA + ESAT + Digital SAT',
+                    'LNAT + UCAT + TARA + ESAT + TMUA + SAT',
+                    'All 1,080+ original questions & 11 full mocks',
                     '14-day no-questions-asked refund guarantee',
                     'All future mock & question additions free',
                   ].map((f) => (
@@ -522,7 +528,7 @@ export const LandingView: React.FC<LandingViewProps> = ({
                 onClick={() => onOpenPricing()}
                 className="w-full py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-[#09090B] text-xs font-semibold cursor-pointer transition-colors"
               >
-                {isPro ? 'Pro Unlocked' : 'Get Season Pass (£39)'}
+                {isPro ? 'Pro Unlocked' : 'Get All Tests Bundle (£39)'}
               </button>
             </div>
           </div>
