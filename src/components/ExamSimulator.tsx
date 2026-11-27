@@ -316,37 +316,37 @@ export const ExamSimulator: React.FC<ExamSimulatorProps> = ({
   }
 
   return (
-    <div className="flex flex-col h-[calc(100vh-3.75rem)] bg-[var(--bg)]">
-      {/* Exam control bar */}
-      <div className="shrink-0 border-b border-[var(--border)] bg-[var(--surface)] px-4 sm:px-6 h-12 flex items-center justify-between gap-2">
+    <div className="fixed inset-0 z-50 flex flex-col bg-white text-[#1A1A1A]">
+      {/* Official Pearson VUE LNAT Top Blue Bar */}
+      <div className="shrink-0 bg-[#005A9C] text-white px-4 sm:px-6 h-12 flex items-center justify-between gap-2 shadow-sm">
         <div className="flex items-center gap-2.5 min-w-0">
           <button
             type="button"
             onClick={onExit}
-            className="p-1.5 rounded hover:bg-[var(--surface-subtle)] text-[var(--text-muted)] hover:text-[var(--text)] cursor-pointer"
+            className="p-1.5 rounded hover:bg-white/15 text-white/80 hover:text-white cursor-pointer"
             title="Exit exam"
           >
             <X className="w-4 h-4" />
           </button>
           <div className="truncate">
-            <span className="text-xs sm:text-sm font-semibold text-[var(--text)]">
-              {config.label}
+            <span className="text-xs sm:text-sm font-semibold text-white">
+              LNAT — {config.label}
             </span>
-            <span className="hidden md:inline text-xs text-[var(--text-muted)] ml-2">
-              Q{currentIndex + 1} / {slots.length}
+            <span className="hidden md:inline text-xs text-white/80 ml-2 font-mono-tabular">
+              Question {currentIndex + 1} of {slots.length}
             </span>
           </div>
         </div>
 
-        {/* Multi-colour Argument Highlighter */}
+        {/* Multi-colour Argument Highlighter + Flag + Timer + Navigator */}
         <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
-          <div className="hidden sm:flex items-center gap-1 px-1.5 py-1 rounded-[7px] border border-[var(--border)] bg-[var(--bg)]">
-            <Highlighter className="w-3.5 h-3.5 text-[var(--text-muted)] ml-1" />
+          <div className="hidden sm:flex items-center gap-1 px-1.5 py-1 rounded bg-white/12 border border-white/20">
+            <Highlighter className="w-3.5 h-3.5 text-white/80 ml-1" />
             {(
               [
-                { id: 'claim', label: 'Claim', cls: 'bg-[#FEF08A]' },
-                { id: 'evidence', label: 'Evidence', cls: 'bg-[#BFDBFE]' },
-                { id: 'counter', label: 'Pivot', cls: 'bg-[#FBCFE8]' },
+                { id: 'claim', label: 'Claim', cls: 'bg-[#FEF08A] text-[#1A1A1A]' },
+                { id: 'evidence', label: 'Evidence', cls: 'bg-[#BFDBFE] text-[#1A1A1A]' },
+                { id: 'counter', label: 'Pivot', cls: 'bg-[#FBCFE8] text-[#1A1A1A]' },
               ] as const
             ).map((pen) => (
               <button
@@ -355,8 +355,8 @@ export const ExamSimulator: React.FC<ExamSimulatorProps> = ({
                 onClick={() => setActivePen((p) => (p === pen.id ? null : pen.id))}
                 className={`px-2 py-0.5 rounded text-[11px] font-medium transition-all cursor-pointer ${
                   activePen === pen.id
-                    ? `${pen.cls} text-[var(--text)] ring-1 ring-[var(--text)]/30`
-                    : 'text-[var(--text-muted)] hover:text-[var(--text)]'
+                    ? `${pen.cls} font-semibold`
+                    : 'text-white/85 hover:text-white'
                 }`}
               >
                 {pen.label}
@@ -369,22 +369,22 @@ export const ExamSimulator: React.FC<ExamSimulatorProps> = ({
             onClick={() =>
               setFlagged((prev) => ({ ...prev, [question.id]: !prev[question.id] }))
             }
-            className={`px-2.5 py-1 rounded-[6px] text-xs font-medium inline-flex items-center gap-1 border transition-colors cursor-pointer ${
+            className={`px-2.5 py-1 rounded text-xs font-medium inline-flex items-center gap-1 border transition-colors cursor-pointer ${
               isFlagged
-                ? 'border-[var(--crimson)] bg-[var(--crimson-soft)] text-[var(--crimson)]'
-                : 'border-[var(--border)] bg-[var(--bg)] text-[var(--text-muted)] hover:text-[var(--text)]'
+                ? 'border-[#F59E0B] bg-[#FEF3C7] text-[#92400E]'
+                : 'border-white/25 bg-white/10 text-white hover:bg-white/20'
             }`}
             title="Flag question for review (F)"
           >
             <Flag className="w-3.5 h-3.5" />
-            <span className="hidden sm:inline">{isFlagged ? 'Flagged' : 'Flag'}</span>
+            <span className="hidden sm:inline">{isFlagged ? 'Flagged' : 'Flag for Review'}</span>
           </button>
 
           <div
-            className={`px-2.5 py-1 rounded-[6px] font-mono-tabular text-xs font-semibold inline-flex items-center gap-1.5 border ${
+            className={`px-2.5 py-1 rounded font-mono-tabular text-xs font-bold inline-flex items-center gap-1.5 ${
               isLowTime
-                ? 'border-[var(--crimson)] bg-[var(--crimson-soft)] text-[var(--crimson)]'
-                : 'border-[var(--border)] bg-[var(--bg)] text-[var(--text)]'
+                ? 'bg-[#DC2626] text-white'
+                : 'bg-white/15 text-white'
             }`}
           >
             <Clock className="w-3.5 h-3.5" />
@@ -394,18 +394,18 @@ export const ExamSimulator: React.FC<ExamSimulatorProps> = ({
           <button
             type="button"
             onClick={() => setShowReviewScreen(true)}
-            className="px-3 py-1 rounded-[6px] bg-[#0F172A] hover:bg-[#1E293B] text-white text-xs font-semibold inline-flex items-center gap-1.5 cursor-pointer"
+            className="px-3 py-1 rounded bg-white text-[#005A9C] hover:bg-[#F0F7FC] text-xs font-bold inline-flex items-center gap-1.5 cursor-pointer"
           >
             <LayoutGrid className="w-3.5 h-3.5" />
-            Review ({answeredCount}/{slots.length})
+            Navigator ({answeredCount}/{slots.length})
           </button>
         </div>
       </div>
 
-      {/* Split-screen exam workspace */}
-      <div className="flex-1 min-h-0 grid lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-[var(--border)]">
+      {/* Split-screen Pearson VUE white exam workspace */}
+      <div className="flex-1 min-h-0 grid lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-[#C8D1DC] bg-white text-[#1A1A1A] [--bg:#FFFFFF] [--surface:#F8FAFC] [--surface-subtle:#EFF6FF] [--text:#1A1A1A] [--ink:#111827] [--text-muted:#475569] [--border:#CBD5E1] [--rule:#CBD5E1] [--accent:#005A9C] [--accent-soft:#E6F1FA]">
         {/* Left: Reading passage */}
-        <div className="overflow-y-auto exam-scroll bg-[var(--surface)] px-5 sm:px-8 py-6">
+        <div className="overflow-y-auto exam-scroll bg-white px-5 sm:px-8 py-6">
           <div className="max-w-2xl mx-auto space-y-5">
             <div className="flex items-start justify-between gap-3 border-b border-[var(--border)] pb-4">
               <div>
@@ -597,15 +597,15 @@ export const ExamSimulator: React.FC<ExamSimulatorProps> = ({
         </div>
       </div>
 
-      {/* Bottom navigator */}
-      <div className="shrink-0 border-t border-[var(--border)] bg-[var(--surface)] px-4 sm:px-6 py-2.5 flex items-center justify-between gap-3">
+      {/* Official Pearson VUE Bottom Blue Navigation Bar */}
+      <div className="shrink-0 bg-[#005A9C] text-white px-4 sm:px-6 py-2.5 flex items-center justify-between gap-3">
         <button
           type="button"
           disabled={currentIndex === 0}
           onClick={() => setCurrentIndex((i) => Math.max(0, i - 1))}
-          className="px-3 py-1.5 rounded-[7px] border border-[var(--border)] text-xs font-medium text-[var(--text)] disabled:opacity-40 hover:bg-[var(--surface-subtle)] inline-flex items-center gap-1 cursor-pointer disabled:cursor-not-allowed"
+          className="px-3.5 py-1.5 rounded bg-white/15 hover:bg-white/25 text-xs font-semibold text-white disabled:opacity-40 inline-flex items-center gap-1 cursor-pointer disabled:cursor-not-allowed"
         >
-          <ChevronLeft className="w-4 h-4" /> Prev
+          <ChevronLeft className="w-4 h-4" /> Previous
         </button>
 
         <div className="flex items-center gap-1.5 overflow-x-auto py-0.5">
@@ -618,17 +618,17 @@ export const ExamSimulator: React.FC<ExamSimulatorProps> = ({
                 key={slot.question.id}
                 type="button"
                 onClick={() => setCurrentIndex(idx)}
-                className={`relative w-7 h-7 rounded-[6px] font-mono-tabular text-xs font-semibold shrink-0 transition-colors cursor-pointer border ${
+                className={`relative w-7 h-7 rounded font-mono-tabular text-xs font-semibold shrink-0 transition-colors cursor-pointer border ${
                   isCurr
-                    ? 'border-[var(--accent)] bg-[var(--accent)] text-white'
+                    ? 'border-white bg-white text-[#005A9C]'
                     : isAns
-                      ? 'border-[var(--emerald)]/40 bg-[var(--emerald-soft)] text-[var(--emerald)]'
-                      : 'border-[var(--border)] bg-[var(--bg)] text-[var(--text-muted)] hover:text-[var(--text)]'
+                      ? 'border-white/50 bg-white/25 text-white'
+                      : 'border-white/25 bg-white/10 text-white/80 hover:bg-white/20'
                 }`}
               >
                 {idx + 1}
                 {isFlg && (
-                  <span className="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-[var(--crimson)]" />
+                  <span className="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-[#F59E0B]" />
                 )}
               </button>
             );
@@ -639,7 +639,7 @@ export const ExamSimulator: React.FC<ExamSimulatorProps> = ({
           <button
             type="button"
             onClick={() => setCurrentIndex((i) => Math.min(slots.length - 1, i + 1))}
-            className="px-3.5 py-1.5 rounded-[7px] bg-[var(--primary-action)] hover:bg-[var(--accent-hover)] text-white text-xs font-semibold inline-flex items-center gap-1 cursor-pointer"
+            className="px-4 py-1.5 rounded bg-white text-[#005A9C] hover:bg-[#F0F7FC] text-xs font-bold inline-flex items-center gap-1 cursor-pointer"
           >
             Next <ChevronRight className="w-4 h-4" />
           </button>
@@ -647,9 +647,9 @@ export const ExamSimulator: React.FC<ExamSimulatorProps> = ({
           <button
             type="button"
             onClick={() => setShowReviewScreen(true)}
-            className="px-3.5 py-1.5 rounded-[7px] bg-[var(--emerald)] hover:opacity-90 text-white text-xs font-semibold inline-flex items-center gap-1 cursor-pointer"
+            className="px-4 py-1.5 rounded bg-[#F59E0B] hover:bg-[#FBBF24] text-[#111827] text-xs font-bold inline-flex items-center gap-1 cursor-pointer"
           >
-            Review &amp; Submit <CheckCircle2 className="w-3.5 h-3.5" />
+            End Review <CheckCircle2 className="w-3.5 h-3.5" />
           </button>
         )}
       </div>

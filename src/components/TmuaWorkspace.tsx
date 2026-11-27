@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { ArrowRight, Check, Clock, Eye, EyeOff, Flag, RotateCcw, Shuffle } from 'lucide-react';
+import { ArrowRight, Eye, EyeOff, RotateCcw, Shuffle } from 'lucide-react';
 import {
   TMUA_FLASHCARDS,
   TMUA_LOGIC_GUIDE,
@@ -9,6 +9,7 @@ import {
 import { AdmissionsTest } from '../data/allTests';
 import { GenericAttempt, OfficialResourcesPanel } from './TestWorkspace';
 import { MarkdownRenderer } from './MarkdownRenderer';
+import { PearsonVueShell } from './OfficialExamChrome';
 
 interface TmuaWorkspaceProps {
   test: AdmissionsTest;
@@ -85,12 +86,6 @@ export const TmuaWorkspace: React.FC<TmuaWorkspaceProps> = ({
     });
     setFinished(true);
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  const formatTime = (s: number) => {
-    const m = Math.floor(s / 60);
-    const r = s % 60;
-    return `${String(m).padStart(2, '0')}:${String(r).padStart(2, '0')}`;
   };
 
   if (subTab === 'resources') {
@@ -226,122 +221,72 @@ export const TmuaWorkspace: React.FC<TmuaWorkspaceProps> = ({
 
     const q = qs[qIdx];
     return (
-      <div className="space-y-6">
-        <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[var(--rule)] pb-3 text-xs font-mono-tabular">
-          <span className="text-[var(--text-muted)]">
-            {mockTitle} · Paper {paper.paperNumber} · Q{qIdx + 1}/{qs.length} · No calculator
+      <PearsonVueShell
+        examLabel={`TMUA — ${mockTitle}`}
+        sectionLabel={`Paper ${paper.paperNumber}: ${paper.title}`}
+        brand="uatuk"
+        questionIndex={qIdx}
+        totalQuestions={qs.length}
+        secondsLeft={secondsLeft}
+        isFlagged={!!flagged[q.id]}
+        onToggleFlag={() => setFlagged((f) => ({ ...f, [q.id]: !f[q.id] }))}
+        navItems={qs.map((item, i) => ({
+          index: i,
+          answered: answers[item.id] !== undefined,
+          flagged: !!flagged[item.id],
+        }))}
+        onJump={(i) => setQIdx(i)}
+        onPrev={() => setQIdx((i) => Math.max(0, i - 1))}
+        onNext={() => setQIdx((i) => Math.min(qs.length - 1, i + 1))}
+        onFinish={finishPaper}
+        onExit={() => setActivePaper(null)}
+        finishLabel="Finish & Score"
+        noCalculatorBadge
+        toolbarExtra={
+          <span className="text-[11px] font-medium text-[#334155]">
+            UAT-UK / Pearson VUE CBT · 75 Minutes · No Calculator · No Formula Sheet
           </span>
-          <div className="flex items-center gap-4">
-            <button
-              type="button"
-              onClick={() => setFlagged((f) => ({ ...f, [q.id]: !f[q.id] }))}
-              className={`inline-flex items-center gap-1 cursor-pointer ${
-                flagged[q.id]
-                  ? 'text-[var(--gold)]'
-                  : 'text-[var(--text-muted)] hover:text-[var(--ink)]'
-              }`}
-            >
-              <Flag className="w-3.5 h-3.5" />
-              {flagged[q.id] ? 'Flagged' : 'Flag'}
-            </button>
-            <span className="inline-flex items-center gap-1.5 text-[var(--ink)]">
-              <Clock className="w-3.5 h-3.5 text-[var(--accent)]" />
-              {formatTime(secondsLeft)}
-            </span>
-            <button
-              type="button"
-              onClick={() => setActivePaper(null)}
-              className="text-[var(--text-muted)] hover:text-[var(--ink)] cursor-pointer"
-            >
-              Exit
-            </button>
+        }
+      >
+        <div className="max-w-3xl mx-auto px-6 py-8 space-y-6">
+          <div className="text-xs font-semibold uppercase tracking-wider text-[#0B4F6C]">
+            {q.topic}
+          </div>
+          <div className="text-[15px] text-[#111827] leading-relaxed whitespace-pre-line">
+            {q.stem}
+          </div>
+
+          <div className="space-y-2.5 pt-2">
+            {q.options.map((opt, idx) => {
+              const selected = answers[q.id] === idx;
+              const letter = String.fromCharCode(65 + idx);
+              return (
+                <button
+                  key={idx}
+                  type="button"
+                  onClick={() => setAnswers((prev) => ({ ...prev, [q.id]: idx }))}
+                  className={`w-full text-left px-4 py-3 rounded border transition-colors flex items-start gap-3 cursor-pointer ${
+                    selected
+                      ? 'border-[#0B4F6C] bg-[#E6F2F7] text-[#111827]'
+                      : 'border-[#CBD5E1] bg-white hover:bg-[#F8FAFC] text-[#1F2937]'
+                  }`}
+                >
+                  <span
+                    className={`w-5 h-5 rounded-full border flex items-center justify-center text-[11px] font-bold shrink-0 mt-0.5 ${
+                      selected
+                        ? 'border-[#0B4F6C] bg-[#0B4F6C] text-white'
+                        : 'border-[#94A3B8] text-[#475569]'
+                    }`}
+                  >
+                    {letter}
+                  </span>
+                  <span className="text-sm leading-relaxed">{opt}</span>
+                </button>
+              );
+            })}
           </div>
         </div>
-
-        <div className="flex flex-wrap gap-1.5">
-          {qs.map((item, i) => {
-            const isCur = i === qIdx;
-            const isAns = answers[item.id] !== undefined;
-            const isFlg = !!flagged[item.id];
-            return (
-              <button
-                key={item.id}
-                type="button"
-                onClick={() => setQIdx(i)}
-                className={`w-7 h-7 text-[11px] font-mono-tabular border cursor-pointer transition-colors ${
-                  isCur
-                    ? 'border-[var(--accent)] bg-[var(--accent)] text-[var(--accent-fg)] font-semibold'
-                    : isFlg
-                    ? 'border-[var(--gold)] text-[var(--gold)]'
-                    : isAns
-                    ? 'border-[var(--border-strong)] bg-[var(--surface-subtle)] text-[var(--ink)]'
-                    : 'border-[var(--rule)] text-[var(--text-muted)]'
-                }`}
-              >
-                {i + 1}
-              </button>
-            );
-          })}
-        </div>
-
-        <div className="text-xs font-mono-tabular uppercase tracking-wider text-[var(--accent)]">
-          {q.topic}
-        </div>
-        <div className="text-base font-medium text-[var(--ink)] leading-relaxed whitespace-pre-line">
-          {q.stem}
-        </div>
-
-        <div className="space-y-2.5">
-          {q.options.map((opt, idx) => {
-            const selected = answers[q.id] === idx;
-            return (
-              <button
-                key={idx}
-                type="button"
-                onClick={() => setAnswers((prev) => ({ ...prev, [q.id]: idx }))}
-                className={`w-full text-left p-4 border transition-colors flex items-start gap-3 cursor-pointer ${
-                  selected
-                    ? 'border-[var(--accent)] bg-[var(--accent-soft)] text-[var(--ink)]'
-                    : 'border-[var(--rule)] hover:border-[var(--border-strong)] text-[var(--text)]'
-                }`}
-              >
-                <span className="font-mono-tabular text-xs text-[var(--text-muted)] mt-0.5">
-                  {String.fromCharCode(65 + idx)}
-                </span>
-                <span className="text-sm leading-relaxed">{opt}</span>
-              </button>
-            );
-          })}
-        </div>
-
-        <div className="flex items-center justify-between pt-2">
-          <button
-            type="button"
-            disabled={qIdx === 0}
-            onClick={() => setQIdx((i) => Math.max(0, i - 1))}
-            className="px-4 py-2 border border-[var(--rule)] text-xs text-[var(--text-muted)] disabled:opacity-40 cursor-pointer"
-          >
-            Previous
-          </button>
-          {qIdx < qs.length - 1 ? (
-            <button
-              type="button"
-              onClick={() => setQIdx((i) => i + 1)}
-              className="px-5 py-2 bg-[var(--ink)] text-[var(--bg)] text-xs font-semibold inline-flex items-center gap-1.5 cursor-pointer"
-            >
-              Next <ArrowRight className="w-3.5 h-3.5" />
-            </button>
-          ) : (
-            <button
-              type="button"
-              onClick={finishPaper}
-              className="px-5 py-2 bg-[var(--accent)] text-[var(--accent-fg)] text-xs font-semibold inline-flex items-center gap-1.5 cursor-pointer"
-            >
-              Finish &amp; Score <Check className="w-3.5 h-3.5" />
-            </button>
-          )}
-        </div>
-      </div>
+      </PearsonVueShell>
     );
   }
 

@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import {
   ArrowRight,
-  Check,
-  Clock,
-  Flag,
   RotateCcw,
   Sparkles,
 } from 'lucide-react';
@@ -13,6 +10,7 @@ import esatStudyPlanMd from '../data/packs/esat/esat-study-plan.md?raw';
 import { AdmissionsTest } from '../data/allTests';
 import { GenericAttempt, OfficialResourcesPanel } from './TestWorkspace';
 import { MarkdownRenderer } from './MarkdownRenderer';
+import { PearsonVueShell } from './OfficialExamChrome';
 import {
   buildLeastPractisedModule,
   ESAT_MODULES_META,
@@ -191,12 +189,6 @@ export const EsatWorkspace: React.FC<EsatWorkspaceProps> = ({
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const formatTime = (s: number) => {
-    const m = Math.floor(s / 60);
-    const r = s % 60;
-    return `${String(m).padStart(2, '0')}:${String(r).padStart(2, '0')}`;
-  };
-
   if (subTab === 'resources') {
     return <OfficialResourcesPanel test={test} />;
   }
@@ -337,120 +329,68 @@ export const EsatWorkspace: React.FC<EsatWorkspaceProps> = ({
     const picked = answers[q.id];
 
     return (
-      <div className="space-y-6">
-        <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[var(--rule)] pb-3 text-xs font-mono-tabular">
-          <span className="text-[var(--text-muted)]">
-            {mock.title} · {mod.module} · Q{qIdx + 1}/{qs.length} · No calculator · No formula sheet
+      <PearsonVueShell
+        examLabel={`ESAT — ${mock.title}`}
+        sectionLabel={mod.module}
+        brand="uatuk"
+        questionIndex={qIdx}
+        totalQuestions={qs.length}
+        secondsLeft={secondsLeft}
+        isFlagged={!!flagged[q.id]}
+        onToggleFlag={() => setFlagged((f) => ({ ...f, [q.id]: !f[q.id] }))}
+        navItems={qs.map((item, i) => ({
+          index: i,
+          answered: !!answers[item.id],
+          flagged: !!flagged[item.id],
+        }))}
+        onJump={(i) => setQIdx(i)}
+        onPrev={() => setQIdx((i) => Math.max(0, i - 1))}
+        onNext={() => setQIdx((i) => Math.min(qs.length - 1, i + 1))}
+        onFinish={finishModule}
+        onExit={() => setActiveRun(null)}
+        finishLabel="Finish & Score"
+        noCalculatorBadge
+        toolbarExtra={
+          <span className="text-[11px] font-medium text-[#334155]">
+            UAT-UK / Pearson VUE CBT · No calculator · No formula sheet
           </span>
-          <div className="flex items-center gap-4">
-            <button
-              type="button"
-              onClick={() => setFlagged((f) => ({ ...f, [q.id]: !f[q.id] }))}
-              className={`inline-flex items-center gap-1 cursor-pointer ${
-                flagged[q.id]
-                  ? 'text-[var(--gold)]'
-                  : 'text-[var(--text-muted)] hover:text-[var(--ink)]'
-              }`}
-            >
-              <Flag className="w-3.5 h-3.5" />
-              {flagged[q.id] ? 'Flagged' : 'Flag'}
-            </button>
-            <span className="inline-flex items-center gap-1.5 text-[var(--ink)]">
-              <Clock className="w-3.5 h-3.5 text-[var(--accent)]" />
-              {formatTime(secondsLeft)}
-            </span>
-            <button
-              type="button"
-              onClick={() => setActiveRun(null)}
-              className="text-[var(--text-muted)] hover:text-[var(--ink)] cursor-pointer"
-            >
-              Exit
-            </button>
+        }
+      >
+        <div className="max-w-3xl mx-auto px-6 py-8 space-y-6">
+          <div className="text-[15px] text-[#111827] whitespace-pre-line leading-relaxed">
+            {q.stem}
+          </div>
+
+          <div className="space-y-2.5 pt-2">
+            {q.options.map((opt) => {
+              const selected = picked === opt.label;
+              return (
+                <button
+                  key={opt.label}
+                  type="button"
+                  onClick={() => setAnswers((prev) => ({ ...prev, [q.id]: opt.label }))}
+                  className={`w-full text-left px-4 py-3 rounded border transition-colors flex items-start gap-3 cursor-pointer ${
+                    selected
+                      ? 'border-[#0B4F6C] bg-[#E6F2F7] text-[#111827]'
+                      : 'border-[#CBD5E1] bg-white hover:bg-[#F8FAFC] text-[#1F2937]'
+                  }`}
+                >
+                  <span
+                    className={`w-5 h-5 rounded-full border flex items-center justify-center text-[11px] font-bold shrink-0 mt-0.5 ${
+                      selected
+                        ? 'border-[#0B4F6C] bg-[#0B4F6C] text-white'
+                        : 'border-[#94A3B8] text-[#475569]'
+                    }`}
+                  >
+                    {opt.label}
+                  </span>
+                  <span className="text-sm leading-relaxed">{opt.text}</span>
+                </button>
+              );
+            })}
           </div>
         </div>
-
-        {/* 27-question navigator */}
-        <div className="flex flex-wrap gap-1">
-          {qs.map((item, i) => {
-            const isCur = i === qIdx;
-            const isAns = !!answers[item.id];
-            const isFlg = !!flagged[item.id];
-            return (
-              <button
-                key={item.id}
-                type="button"
-                onClick={() => setQIdx(i)}
-                className={`w-7 h-7 text-[11px] font-mono-tabular border cursor-pointer transition-colors ${
-                  isCur
-                    ? 'border-[var(--accent)] bg-[var(--accent)] text-[var(--accent-fg)] font-semibold'
-                    : isFlg
-                    ? 'border-[var(--gold)] text-[var(--gold)]'
-                    : isAns
-                    ? 'border-[var(--border-strong)] bg-[var(--surface-subtle)] text-[var(--ink)]'
-                    : 'border-[var(--rule)] text-[var(--text-muted)]'
-                }`}
-              >
-                {i + 1}
-              </button>
-            );
-          })}
-        </div>
-
-        <div className="text-sm sm:text-base text-[var(--ink)] whitespace-pre-line leading-relaxed">
-          {q.stem}
-        </div>
-
-        <div className="space-y-2.5">
-          {q.options.map((opt) => {
-            const selected = picked === opt.label;
-            return (
-              <button
-                key={opt.label}
-                type="button"
-                onClick={() => setAnswers((prev) => ({ ...prev, [q.id]: opt.label }))}
-                className={`w-full text-left p-4 border transition-colors flex items-start gap-3 cursor-pointer ${
-                  selected
-                    ? 'border-[var(--accent)] bg-[var(--accent-soft)] text-[var(--ink)]'
-                    : 'border-[var(--rule)] hover:border-[var(--border-strong)] text-[var(--text)]'
-                }`}
-              >
-                <span className="font-mono-tabular text-xs text-[var(--text-muted)] mt-0.5">
-                  {opt.label}
-                </span>
-                <span className="text-sm leading-relaxed">{opt.text}</span>
-              </button>
-            );
-          })}
-        </div>
-
-        <div className="flex items-center justify-between pt-2">
-          <button
-            type="button"
-            disabled={qIdx === 0}
-            onClick={() => setQIdx((i) => Math.max(0, i - 1))}
-            className="px-4 py-2 border border-[var(--rule)] text-xs text-[var(--text-muted)] disabled:opacity-40 cursor-pointer"
-          >
-            Previous
-          </button>
-          {qIdx < qs.length - 1 ? (
-            <button
-              type="button"
-              onClick={() => setQIdx((i) => i + 1)}
-              className="px-5 py-2 bg-[var(--ink)] text-[var(--bg)] text-xs font-semibold inline-flex items-center gap-1.5 cursor-pointer"
-            >
-              Next <ArrowRight className="w-3.5 h-3.5" />
-            </button>
-          ) : (
-            <button
-              type="button"
-              onClick={finishModule}
-              className="px-5 py-2 bg-[var(--accent)] text-[var(--accent-fg)] text-xs font-semibold inline-flex items-center gap-1.5 cursor-pointer"
-            >
-              Finish &amp; Score <Check className="w-3.5 h-3.5" />
-            </button>
-          )}
-        </div>
-      </div>
+      </PearsonVueShell>
     );
   }
 

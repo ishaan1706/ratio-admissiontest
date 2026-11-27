@@ -2,11 +2,8 @@ import React, { useEffect, useMemo, useState } from 'react';
 import {
   ArrowRight,
   Calculator,
-  Check,
-  Clock,
   Eye,
   EyeOff,
-  Flag,
   RotateCcw,
   Shuffle,
 } from 'lucide-react';
@@ -17,6 +14,7 @@ import { AdmissionsTest } from '../data/allTests';
 import { GenericAttempt, OfficialResourcesPanel } from './TestWorkspace';
 import { MarkdownRenderer } from './MarkdownRenderer';
 import { UcatBasicCalculator } from './ExamRevisionTools';
+import { PearsonVueShell } from './OfficialExamChrome';
 
 interface UcatChart {
   type: 'table' | 'bar' | 'line';
@@ -287,12 +285,6 @@ export const UcatWorkspace: React.FC<UcatWorkspaceProps> = ({
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const formatTime = (s: number) => {
-    const m = Math.floor(s / 60);
-    const r = s % 60;
-    return `${String(m).padStart(2, '0')}:${String(r).padStart(2, '0')}`;
-  };
-
   if (subTab === 'resources') {
     return <OfficialResourcesPanel test={test} />;
   }
@@ -426,308 +418,256 @@ export const UcatWorkspace: React.FC<UcatWorkspaceProps> = ({
     const { group, question: q } = items[qIdx];
     const currentAns = answers[q.id];
 
+    const hasStimulus = Boolean(group.stimulus || group.chart || group.venn);
+
     return (
-      <div className="space-y-6">
-        <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[var(--rule)] pb-3 text-xs font-mono-tabular">
-          <span className="text-[var(--text-muted)]">
-            {activeRun.title} · Q{qIdx + 1}/{items.length}
-            {activeRun.extraTime ? ' · +25% time' : ''}
-          </span>
-          <div className="flex items-center gap-4">
-            {(section.code === 'QR' || section.code === 'DM') && (
-              <button
-                type="button"
-                onClick={() => setShowCalc((c) => !c)}
-                className={`inline-flex items-center gap-1 px-2.5 py-1 border cursor-pointer ${
-                  showCalc
-                    ? 'border-[var(--accent)] text-[var(--accent)]'
-                    : 'border-[var(--rule)] text-[var(--text-muted)] hover:text-[var(--ink)]'
-                }`}
-              >
-                <Calculator className="w-3.5 h-3.5" /> Calc
-              </button>
-            )}
+      <PearsonVueShell
+        examLabel="UCAT — Pearson VUE"
+        sectionLabel={`${activeRun.title}${activeRun.extraTime ? ' (+25% SEN)' : ''}`}
+        brand="pearson"
+        questionIndex={qIdx}
+        totalQuestions={items.length}
+        secondsLeft={secondsLeft}
+        isFlagged={!!flagged[q.id]}
+        onToggleFlag={() => setFlagged((f) => ({ ...f, [q.id]: !f[q.id] }))}
+        navItems={items.map((it, i) => ({
+          index: i,
+          answered: isAnswered(it.question, answers[it.question.id]),
+          flagged: !!flagged[it.question.id],
+        }))}
+        onJump={(i) => setQIdx(i)}
+        onPrev={() => setQIdx((i) => Math.max(0, i - 1))}
+        onNext={() => setQIdx((i) => Math.min(items.length - 1, i + 1))}
+        onFinish={finishRun}
+        onExit={() => setActiveRun(null)}
+        finishLabel="End Review"
+        toolbarExtra={
+          (section.code === 'QR' || section.code === 'DM') ? (
             <button
               type="button"
-              onClick={() => setFlagged((f) => ({ ...f, [q.id]: !f[q.id] }))}
-              className={`inline-flex items-center gap-1 cursor-pointer ${
-                flagged[q.id]
-                  ? 'text-[var(--gold)]'
-                  : 'text-[var(--text-muted)] hover:text-[var(--ink)]'
+              onClick={() => setShowCalc((c) => !c)}
+              className={`px-2.5 py-1 rounded border text-xs font-medium inline-flex items-center gap-1.5 cursor-pointer ${
+                showCalc
+                  ? 'bg-[#005A9C] border-[#005A9C] text-white'
+                  : 'bg-white border-[#B6C5D3] text-[#1F2937] hover:bg-[#F3F7FA]'
               }`}
             >
-              <Flag className="w-3.5 h-3.5" />
-              {flagged[q.id] ? 'Flagged' : 'Flag'}
+              <Calculator className="w-3.5 h-3.5" /> Calculator
             </button>
-            <span className="inline-flex items-center gap-1.5 text-[var(--ink)]">
-              <Clock className="w-3.5 h-3.5 text-[var(--accent)]" />
-              {formatTime(secondsLeft)}
+          ) : (
+            <span className="text-[11px] font-medium text-[#334155]">
+              Pearson VUE Delivery · {SECTION_LABELS[section.code]}
             </span>
-            <button
-              type="button"
-              onClick={() => setActiveRun(null)}
-              className="text-[var(--text-muted)] hover:text-[var(--ink)] cursor-pointer"
-            >
-              Exit
-            </button>
-          </div>
-        </div>
-
+          )
+        }
+      >
         {showCalc && (
-          <div className="flex justify-end">
+          <div className="fixed top-24 right-6 z-60 shadow-2xl rounded-xl overflow-hidden">
             <UcatBasicCalculator />
           </div>
         )}
 
-        {/* Compact Question Strip */}
-        <div className="flex flex-wrap gap-1 max-h-24 overflow-y-auto">
-          {items.map((it, i) => {
-            const isCur = i === qIdx;
-            const isAns = isAnswered(it.question, answers[it.question.id]);
-            const isFlg = !!flagged[it.question.id];
-            return (
-              <button
-                key={it.question.id}
-                type="button"
-                onClick={() => setQIdx(i)}
-                className={`w-7 h-7 text-[11px] font-mono-tabular border cursor-pointer transition-colors ${
-                  isCur
-                    ? 'border-[var(--accent)] bg-[var(--accent)] text-[var(--accent-fg)] font-semibold'
-                    : isFlg
-                    ? 'border-[var(--gold)] text-[var(--gold)]'
-                    : isAns
-                    ? 'border-[var(--border-strong)] bg-[var(--surface-subtle)] text-[var(--ink)]'
-                    : 'border-[var(--rule)] text-[var(--text-muted)]'
-                }`}
-              >
-                {i + 1}
-              </button>
-            );
-          })}
-        </div>
-
-        {/* Shared Group Stimulus, Chart, or Venn */}
-        {(group.stimulus || group.chart || group.venn) && (
-          <div className="border border-[var(--rule)] bg-[var(--surface)] p-5 space-y-3">
-            {group.title && (
-              <div className="text-xs font-mono-tabular uppercase tracking-wider text-[var(--accent)]">
-                {group.title}
-              </div>
-            )}
-            {group.stimulus && (
-              <p className="font-serif-passage text-sm sm:text-base text-[var(--ink)] leading-relaxed whitespace-pre-line">
-                {group.stimulus}
-              </p>
-            )}
-            {group.chart && (
-              <div className="overflow-x-auto space-y-2">
-                <div className="text-xs font-semibold text-[var(--ink)]">{group.chart.title}</div>
-                <table className="w-full text-xs font-mono-tabular text-left border-collapse">
-                  <thead>
-                    <tr className="border-b border-[var(--rule)] text-[var(--text-muted)]">
-                      <th className="py-1.5 pr-4">Metric</th>
-                      {group.chart.labels.map((lbl) => (
-                        <th key={lbl} className="py-1.5 pr-4">
-                          {lbl}
-                        </th>
-                      ))}
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-[var(--rule)] text-[var(--ink)]">
-                    {group.chart.series.map((s) => (
-                      <tr key={s.name}>
-                        <td className="py-1.5 pr-4 text-[var(--text-muted)]">{s.name}</td>
-                        {s.values.map((v, i) => (
-                          <td key={i} className="py-1.5 pr-4">
-                            {v}
-                          </td>
+        <div
+          className={`h-full grid ${
+            hasStimulus ? 'lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-[#C8D1DC]' : 'max-w-3xl mx-auto'
+          }`}
+        >
+          {hasStimulus && (
+            <div className="p-6 sm:p-8 space-y-4 overflow-y-auto bg-white">
+              {group.title && (
+                <div className="text-xs font-bold uppercase tracking-wider text-[#005A9C]">
+                  {group.title}
+                </div>
+              )}
+              {group.stimulus && (
+                <p className="font-serif-passage text-[15px] text-[#1A1A1A] leading-[1.72] whitespace-pre-line">
+                  {group.stimulus}
+                </p>
+              )}
+              {group.chart && (
+                <div className="overflow-x-auto space-y-2 border border-[#CBD5E1] rounded p-3 bg-[#F8FAFC]">
+                  <div className="text-xs font-bold text-[#111827]">{group.chart.title}</div>
+                  <table className="w-full text-xs font-mono-tabular text-left border-collapse">
+                    <thead>
+                      <tr className="border-b border-[#CBD5E1] text-[#334155]">
+                        <th className="py-1.5 pr-4">Metric</th>
+                        {group.chart.labels.map((lbl) => (
+                          <th key={lbl} className="py-1.5 pr-4">{lbl}</th>
                         ))}
                       </tr>
+                    </thead>
+                    <tbody className="divide-y divide-[#E2E8F0] text-[#111827]">
+                      {group.chart.series.map((s) => (
+                        <tr key={s.name}>
+                          <td className="py-1.5 pr-4 font-medium text-[#475569]">{s.name}</td>
+                          {s.values.map((v, i) => (
+                            <td key={i} className="py-1.5 pr-4">{v}</td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+              {group.venn && (
+                <div className="text-xs font-mono-tabular space-y-2 border border-[#CBD5E1] rounded p-3 bg-[#F8FAFC]">
+                  <div className="text-[#334155] font-semibold">
+                    Venn exclusive regions ({group.venn.sets.join(', ')}):
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {Object.entries(group.venn.regions).map(([k, v]) => (
+                      <span key={k} className="px-2 py-1 border border-[#CBD5E1] bg-white text-[#111827] rounded">
+                        {k}: {v}
+                      </span>
                     ))}
-                  </tbody>
-                </table>
-              </div>
-            )}
-            {group.venn && (
-              <div className="text-xs font-mono-tabular space-y-1.5">
-                <div className="text-[var(--text-muted)]">
-                  Venn exclusive regions ({group.venn.sets.join(', ')}):
+                  </div>
                 </div>
-                <div className="flex flex-wrap gap-2">
-                  {Object.entries(group.venn.regions).map(([k, v]) => (
-                    <span
-                      key={k}
-                      className="px-2 py-1 border border-[var(--rule)] bg-[var(--bg)] text-[var(--ink)]"
+              )}
+            </div>
+          )}
+
+          <div className="p-6 sm:p-8 space-y-5 bg-white">
+            <div className="text-[15px] font-medium text-[#111827] whitespace-pre-line leading-relaxed">
+              {q.stem}
+            </div>
+
+            {q.format === 'yes-no-5' && q.statements ? (
+              <div className="border-t border-[#CBD5E1] divide-y divide-[#E2E8F0]">
+                {q.statements.map((stmt, sIdx) => {
+                  const arr = Array.isArray(currentAns)
+                    ? currentAns
+                    : new Array(q.statements!.length).fill(null);
+                  const val = arr[sIdx];
+                  const setChoice = (choice: number) => {
+                    const next = [...arr];
+                    next[sIdx] = choice;
+                    setAnswers((prev) => ({ ...prev, [q.id]: next }));
+                  };
+                  return (
+                    <div
+                      key={sIdx}
+                      className="py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3"
                     >
-                      {k}: {v}
-                    </span>
-                  ))}
-                </div>
+                      <span className="text-sm text-[#1F2937] leading-relaxed">
+                        {sIdx + 1}. {stmt}
+                      </span>
+                      <div className="flex items-center gap-2 shrink-0">
+                        {q.options.map((optLabel, oIdx) => (
+                          <button
+                            key={optLabel}
+                            type="button"
+                            onClick={() => setChoice(oIdx)}
+                            className={`px-3.5 py-1.5 text-xs font-semibold rounded border cursor-pointer transition-colors ${
+                              val === oIdx
+                                ? 'border-[#005A9C] bg-[#005A9C] text-white'
+                                : 'border-[#CBD5E1] bg-white text-[#334155] hover:bg-[#F1F5F9]'
+                            }`}
+                          >
+                            {optLabel}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
-            )}
-          </div>
-        )}
-
-        <div className="text-base font-medium text-[var(--ink)] whitespace-pre-line">{q.stem}</div>
-
-        {/* Format-Specific Inputs */}
-        {q.format === 'yes-no-5' && q.statements ? (
-          <div className="border-t border-[var(--rule)] divide-y divide-[var(--rule)]">
-            {q.statements.map((stmt, sIdx) => {
-              const arr = Array.isArray(currentAns)
-                ? currentAns
-                : new Array(q.statements!.length).fill(null);
-              const val = arr[sIdx];
-              const setChoice = (choice: number) => {
-                const next = [...arr];
-                next[sIdx] = choice;
-                setAnswers((prev) => ({ ...prev, [q.id]: next }));
-              };
-              return (
-                <div
-                  key={sIdx}
-                  className="py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3"
-                >
-                  <span className="text-sm text-[var(--ink)] leading-relaxed">
-                    {sIdx + 1}. {stmt}
-                  </span>
-                  <div className="flex items-center gap-2 shrink-0">
-                    {q.options.map((optLabel, oIdx) => (
-                      <button
-                        key={optLabel}
-                        type="button"
-                        onClick={() => setChoice(oIdx)}
-                        className={`px-3.5 py-1.5 text-xs font-mono-tabular border cursor-pointer transition-colors ${
-                          val === oIdx
-                            ? 'border-[var(--accent)] bg-[var(--accent-soft)] text-[var(--ink)] font-semibold'
-                            : 'border-[var(--rule)] text-[var(--text-muted)] hover:text-[var(--ink)]'
+            ) : q.format === 'most-least' ? (
+              <div className="space-y-3">
+                <div className="text-xs text-[#475569]">
+                  Pick one option as <strong>Most Appropriate</strong> and a different option as{' '}
+                  <strong>Least Appropriate</strong>.
+                </div>
+                {q.options.map((opt, idx) => {
+                  const cur =
+                    typeof currentAns === 'object' && !Array.isArray(currentAns)
+                      ? currentAns
+                      : { most: null, least: null };
+                  const isMost = cur.most === idx;
+                  const isLeast = cur.least === idx;
+                  return (
+                    <div
+                      key={idx}
+                      className="p-3.5 rounded border border-[#CBD5E1] bg-white flex flex-col sm:flex-row sm:items-center justify-between gap-3"
+                    >
+                      <span className="text-sm text-[#1F2937] leading-relaxed">{opt}</span>
+                      <div className="flex items-center gap-2 shrink-0">
+                        <button
+                          type="button"
+                          onClick={() =>
+                            setAnswers((prev) => ({
+                              ...prev,
+                              [q.id]: {
+                                most: idx,
+                                least: cur.least === idx ? null : cur.least,
+                              },
+                            }))
+                          }
+                          className={`px-3 py-1 text-xs font-semibold rounded border cursor-pointer ${
+                            isMost
+                              ? 'border-[#005A9C] bg-[#005A9C] text-white'
+                              : 'border-[#CBD5E1] bg-white text-[#334155]'
+                          }`}
+                        >
+                          Most
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() =>
+                            setAnswers((prev) => ({
+                              ...prev,
+                              [q.id]: {
+                                most: cur.most === idx ? null : cur.most,
+                                least: idx,
+                              },
+                            }))
+                          }
+                          className={`px-3 py-1 text-xs font-semibold rounded border cursor-pointer ${
+                            isLeast
+                              ? 'border-[#B91C1C] bg-[#FEE2E2] text-[#991B1B]'
+                              : 'border-[#CBD5E1] bg-white text-[#334155]'
+                          }`}
+                        >
+                          Least
+                        </button>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            ) : (
+              <div className="space-y-2.5">
+                {q.options.map((opt, idx) => {
+                  const selected = currentAns === idx;
+                  const letter = String.fromCharCode(65 + idx);
+                  return (
+                    <button
+                      key={idx}
+                      type="button"
+                      onClick={() => setAnswers((prev) => ({ ...prev, [q.id]: idx }))}
+                      className={`w-full text-left px-4 py-3 rounded border transition-colors flex items-start gap-3 cursor-pointer ${
+                        selected
+                          ? 'border-[#005A9C] bg-[#E6F1FA] text-[#111827]'
+                          : 'border-[#CBD5E1] bg-white hover:bg-[#F8FAFC] text-[#1F2937]'
+                      }`}
+                    >
+                      <span
+                        className={`w-5 h-5 rounded-full border flex items-center justify-center text-[11px] font-bold shrink-0 mt-0.5 ${
+                          selected
+                            ? 'border-[#005A9C] bg-[#005A9C] text-white'
+                            : 'border-[#94A3B8] text-[#475569]'
                         }`}
                       >
-                        {optLabel}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        ) : q.format === 'most-least' ? (
-          <div className="space-y-3">
-            <div className="text-xs text-[var(--text-muted)]">
-              Pick one option as <strong>Most Appropriate</strong> and a different option as{' '}
-              <strong>Least Appropriate</strong>.
-            </div>
-            {q.options.map((opt, idx) => {
-              const cur =
-                typeof currentAns === 'object' && !Array.isArray(currentAns)
-                  ? currentAns
-                  : { most: null, least: null };
-              const isMost = cur.most === idx;
-              const isLeast = cur.least === idx;
-              return (
-                <div
-                  key={idx}
-                  className="p-4 border border-[var(--rule)] flex flex-col sm:flex-row sm:items-center justify-between gap-3"
-                >
-                  <span className="text-sm text-[var(--ink)] leading-relaxed">{opt}</span>
-                  <div className="flex items-center gap-2 shrink-0">
-                    <button
-                      type="button"
-                      onClick={() =>
-                        setAnswers((prev) => ({
-                          ...prev,
-                          [q.id]: {
-                            most: idx,
-                            least: cur.least === idx ? null : cur.least,
-                          },
-                        }))
-                      }
-                      className={`px-3 py-1 text-xs font-mono-tabular border cursor-pointer ${
-                        isMost
-                          ? 'border-[var(--accent)] bg-[var(--accent)] text-[var(--accent-fg)] font-semibold'
-                          : 'border-[var(--rule)] text-[var(--text-muted)] hover:text-[var(--ink)]'
-                      }`}
-                    >
-                      Most
+                        {letter}
+                      </span>
+                      <span className="text-sm leading-relaxed">{opt}</span>
                     </button>
-                    <button
-                      type="button"
-                      onClick={() =>
-                        setAnswers((prev) => ({
-                          ...prev,
-                          [q.id]: {
-                            most: cur.most === idx ? null : cur.most,
-                            least: idx,
-                          },
-                        }))
-                      }
-                      className={`px-3 py-1 text-xs font-mono-tabular border cursor-pointer ${
-                        isLeast
-                          ? 'border-[var(--danger)] bg-[var(--danger-soft)] text-[var(--ink)] font-semibold'
-                          : 'border-[var(--rule)] text-[var(--text-muted)] hover:text-[var(--ink)]'
-                      }`}
-                    >
-                      Least
-                    </button>
-                  </div>
-                </div>
-              );
-            })}
+                  );
+                })}
+              </div>
+            )}
           </div>
-        ) : (
-          <div className="space-y-2.5">
-            {q.options.map((opt, idx) => {
-              const selected = currentAns === idx;
-              const letter = String.fromCharCode(65 + idx);
-              return (
-                <button
-                  key={idx}
-                  type="button"
-                  onClick={() => setAnswers((prev) => ({ ...prev, [q.id]: idx }))}
-                  className={`w-full text-left p-4 border transition-colors flex items-start gap-3 cursor-pointer ${
-                    selected
-                      ? 'border-[var(--accent)] bg-[var(--accent-soft)] text-[var(--ink)]'
-                      : 'border-[var(--rule)] hover:border-[var(--border-strong)] text-[var(--text)]'
-                  }`}
-                >
-                  <span className="font-mono-tabular text-xs text-[var(--text-muted)] mt-0.5">
-                    {letter}
-                  </span>
-                  <span className="text-sm leading-relaxed">{opt}</span>
-                </button>
-              );
-            })}
-          </div>
-        )}
-
-        <div className="flex items-center justify-between pt-2">
-          <button
-            type="button"
-            disabled={qIdx === 0}
-            onClick={() => setQIdx((i) => Math.max(0, i - 1))}
-            className="px-4 py-2 border border-[var(--rule)] text-xs text-[var(--text-muted)] disabled:opacity-40 cursor-pointer"
-          >
-            Previous
-          </button>
-          {qIdx < items.length - 1 ? (
-            <button
-              type="button"
-              onClick={() => setQIdx((i) => i + 1)}
-              className="px-5 py-2 bg-[var(--ink)] text-[var(--bg)] text-xs font-semibold inline-flex items-center gap-1.5 cursor-pointer"
-            >
-              Next <ArrowRight className="w-3.5 h-3.5" />
-            </button>
-          ) : (
-            <button
-              type="button"
-              onClick={finishRun}
-              className="px-5 py-2 bg-[var(--accent)] text-[var(--accent-fg)] text-xs font-semibold inline-flex items-center gap-1.5 cursor-pointer"
-            >
-              Finish &amp; Score <Check className="w-3.5 h-3.5" />
-            </button>
-          )}
         </div>
-      </div>
+      </PearsonVueShell>
     );
   }
 
