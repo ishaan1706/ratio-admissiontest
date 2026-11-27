@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Moon, Sparkles, Sun, User } from 'lucide-react';
 import { ADMISSIONS_TESTS, TestId } from '../data/allTests';
-import { RatioUser } from '../lib/account';
+import { RatioUser, hasTestAccess, isBundleUnlocked } from '../lib/account';
 
 interface NavbarProps {
   activeTest: TestId;
@@ -11,7 +11,7 @@ interface NavbarProps {
   theme: 'light' | 'dark';
   onToggleTheme: () => void;
   user: RatioUser | null;
-  isPro: boolean;
+  unlockedTests: string[];
   onOpenAccount: () => void;
   onOpenPricing: () => void;
 }
@@ -23,10 +23,17 @@ export const Navbar: React.FC<NavbarProps> = ({
   theme,
   onToggleTheme,
   user,
-  isPro,
+  unlockedTests,
   onOpenAccount,
   onOpenPricing,
 }) => {
+  const bundleActive = isBundleUnlocked(unlockedTests);
+  const currentUnlocked = hasTestAccess(unlockedTests, activeTest);
+  const badgeText = bundleActive
+    ? 'ALL 6'
+    : currentUnlocked
+      ? `${activeTest.toUpperCase()} PASS`
+      : 'Upgrade';
   return (
     <header className="sticky top-0 z-30 border-b border-[var(--rule)] bg-[var(--bg)]/92 backdrop-blur-xl text-[var(--text)] no-print">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between gap-3">
@@ -76,13 +83,13 @@ export const Navbar: React.FC<NavbarProps> = ({
             type="button"
             onClick={onOpenPricing}
             className={`hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors cursor-pointer ${
-              isPro
+              currentUnlocked
                 ? 'border border-emerald-500/35 bg-emerald-500/10 text-emerald-400'
                 : 'bg-[var(--accent)] hover:bg-[var(--accent-hover)] text-[var(--accent-fg)]'
             }`}
           >
             <Sparkles className="w-3 h-3" />
-            {isPro ? 'PRO' : 'Upgrade'}
+            {badgeText}
           </button>
 
           <button

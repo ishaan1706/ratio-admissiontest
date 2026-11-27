@@ -3,6 +3,7 @@ import { Download, LogOut, ShieldCheck, X } from 'lucide-react';
 import {
   RatioUser,
   exportAllProgressJson,
+  isBundleUnlocked,
   loginAccount,
   logoutAccount,
   registerAccount,
@@ -12,7 +13,7 @@ interface AccountModalProps {
   open: boolean;
   onClose: () => void;
   user: RatioUser | null;
-  isPro: boolean;
+  unlockedTests: string[];
   onAuthChange: (user: RatioUser | null) => void;
   onOpenUpgrade: () => void;
 }
@@ -21,10 +22,16 @@ export const AccountModal: React.FC<AccountModalProps> = ({
   open,
   onClose,
   user,
-  isPro,
+  unlockedTests,
   onAuthChange,
   onOpenUpgrade,
 }) => {
+  const bundleActive = isBundleUnlocked(unlockedTests);
+  const badgeLabel = bundleActive
+    ? 'ALL 6 TESTS'
+    : unlockedTests.length > 0
+      ? unlockedTests.map((t) => t.toUpperCase()).join(' · ') + ' PASS'
+      : 'FREE PLAN';
   const [tab, setTab] = useState<'login' | 'register'>('register');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -91,16 +98,16 @@ export const AccountModal: React.FC<AccountModalProps> = ({
               </div>
               <span
                 className={`px-2.5 py-1 rounded-full text-[11px] font-mono-tabular font-semibold ${
-                  isPro
+                  unlockedTests.length > 0
                     ? 'bg-emerald-500/15 text-emerald-300 border border-emerald-500/30'
                     : 'bg-white/5 text-zinc-300 border border-white/10'
                 }`}
               >
-                {isPro ? 'RATIO PRO' : 'FREE PLAN'}
+                {badgeLabel}
               </span>
             </div>
 
-            {!isPro && (
+            {!bundleActive && (
               <button
                 type="button"
                 onClick={() => {
@@ -109,7 +116,9 @@ export const AccountModal: React.FC<AccountModalProps> = ({
                 }}
                 className="w-full py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-[#09090B] text-xs font-semibold transition-colors cursor-pointer"
               >
-                Upgrade to Ratio Pro — £24 Single Test or £39 All 6 Tests
+                {unlockedTests.length > 0
+                  ? 'Upgrade to All 6 Tests Bundle (£39 once)'
+                  : 'Get £24 Single Test Pass or £39 All 6 Tests'}
               </button>
             )}
 

@@ -1,33 +1,52 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Check, KeyRound, ShieldCheck, Sparkles, X } from 'lucide-react';
 import { ADMISSIONS_TESTS, TestId } from '../data/allTests';
-import { redeemAccessCode, setLocalPro, startStripeCheckout } from '../lib/account';
+import {
+  hasTestAccess,
+  isBundleUnlocked,
+  redeemAccessCode,
+  setLocalEntitlements,
+  startStripeCheckout,
+} from '../lib/account';
 
 interface PaywallModalProps {
   open: boolean;
   onClose: () => void;
-  isPro: boolean;
+  activeTest: TestId;
+  unlockedTests: string[];
   stripeConfigured: boolean;
-  onProChange: (pro: boolean) => void;
+  onEntitlementsChange: (tests: string[]) => void;
   reason?: string | null;
 }
 
 export const PaywallModal: React.FC<PaywallModalProps> = ({
   open,
   onClose,
-  isPro,
+  activeTest,
+  unlockedTests,
   stripeConfigured,
-  onProChange,
+  onEntitlementsChange,
   reason,
 }) => {
-  const [selectedTest, setSelectedTest] = useState<TestId>('lnat');
+  const [selectedTest, setSelectedTest] = useState<TestId>(activeTest);
   const [busyTier, setBusyTier] = useState<'single' | 'bundle' | null>(null);
   const [notice, setNotice] = useState<string | null>(null);
   const [code, setCode] = useState('');
   const [codeError, setCodeError] = useState<string | null>(null);
   const [showCodeBox, setShowCodeBox] = useState(false);
 
+  useEffect(() => {
+    if (open) {
+      setSelectedTest(activeTest);
+      setNotice(null);
+      setCodeError(null);
+    }
+  }, [open, activeTest]);
+
   if (!open) return null;
+
+  const bundleActive = isBundleUnlocked(unlockedTests);
+  const selectedUnlocked = hasTestAccess(unlockedTests, selectedTest);
 
   const handleCheckout = async (tier: 'single' | 'bundle') => {
     setNotice(null);
@@ -40,7 +59,7 @@ export const PaywallModal: React.FC<PaywallModalProps> = ({
     }
     if (res.setupRequired) {
       setNotice(
-        'Stripe keys are not connected yet. Add STRIPE_SECRET_KEY, STRIPE_PRICE_SINGLE & STRIPE_PRICE_BUNDLE in .env to take live payments — or unlock Pro now with an access code below.'
+        'Stripe keys are not connected yet. Add STRIPE_SECRET_KEY, STRIPE_PRICE_SINGLE & STRIPE_PRICE_BUNDLE in .env to take live payments — or test per-test / bundle unlock with an access code or preview mode below.'
       );
       setShowCodeBox(true);
     } else {
@@ -51,12 +70,19 @@ export const PaywallModal: React.FC<PaywallModalProps> = ({
   const handleRedeem = async (e: React.FormEvent) => {
     e.preventDefault();
     setCodeError(null);
-    const res = await redeemAccessCode(code);
-    if (!res.ok) {
+    const res = await redeemAccessCode(code, selectedTest);
+    if (!res.ok || !res.unlockedTests) {
       setCodeError(res.error || 'Invalid access code.');
       return;
     }
-    onProChange(true);
+    onEntitlementsChange(res.unlockedTests);
+    setCode('');
+    onClose();
+  };
+
+  const applyPreview = (tests: string[]) => {
+    const next = setLocalEntitlements(tests);
+    onEntitlementsChange(next);
     onClose();
   };
 
@@ -72,7 +98,7 @@ export const PaywallModal: React.FC<PaywallModalProps> = ({
         <div className="flex items-start justify-between gap-4">
           <div>
             <div className="inline-flex items-center gap-1.5 text-[11px] font-mono-tabular uppercase tracking-wider text-emerald-400">
-              <Sparkles className="w-3.5 h-3.5" /> Ratio Pro · No Subscriptions
+              <Sparkles className="w-3.5 h-3.5" /> Ratio Passes · No Subscriptions
             </div>
             <h3 className="font-display text-3xl sm:text-4xl text-white mt-1">
               Pay once for one test, or unlock all six.
@@ -101,8 +127,8 @@ export const PaywallModal: React.FC<PaywallModalProps> = ({
                 <span className="text-xs text-zinc-400">valid until exam season ends</span>
               </div>
               <p className="text-xs text-zinc-400 mt-2">
-                Full access to one admissions test through the end of its exam season. No recurring
-                bills.
+                Unlocks only the one test you select through the end of its exam season. No
+                recurring bills.
               </p>
 
               <div className="mt-4">
@@ -110,28 +136,34 @@ export const PaywallModal: React.FC<PaywallModalProps> = ({
                   Choose your test
                 </label>
                 <div className="grid grid-cols-3 gap-1.5">
-                  {ADMISSIONS_TESTS.map((t) => (
-                    <button
-                      key={t.id}
-                      type="button"
-                      onClick={() => setSelectedTest(t.id)}
-                      className={`py-1.5 rounded-lg text-xs font-mono-tabular font-semibold border cursor-pointer transition-colors ${
-                        selectedTest === t.id
-                          ? 'border-emerald-500 bg-emerald-500/15 text-emerald-300'
-                          : 'border-white/10 text-zinc-400 hover:text-white'
-                      }`}
-                    >
-                      {t.code}
-                    </button>
-                  ))}
+                  {ADMISSIONS_TESTS.map((t) => {
+                    const unlocked = hasTestAccess(unlockedTests, t.id);
+                    return (
+                      <button
+                        key={t.id}
+                        type="button"
+                        onClick={() => setSelectedTest(t.id)}
+                        className={`py-1.5 px-1 rounded-lg text-xs font-mono-tabular font-semibold border cursor-pointer transition-colors flex items-center justify-center gap-1 ${
+                          selectedTest === t.id
+                            ? 'border-emerald-500 bg-emerald-500/15 text-emerald-300'
+                            : unlocked
+                              ? 'border-emerald-500/35 bg-emerald-500/5 text-emerald-300/90'
+                              : 'border-white/10 text-zinc-400 hover:text-white'
+                        }`}
+                      >
+                        <span>{t.code}</span>
+                        {unlocked && <Check className="w-3 h-3 text-emerald-400" />}
+                      </button>
+                    );
+                  })}
                 </div>
               </div>
 
               <ul className="mt-4 space-y-2 text-xs text-zinc-300">
                 {[
-                  `All full-length ${selectedTest.toUpperCase()} mocks & timed drills`,
-                  'Every worked explanation & revision guide',
-                  'Flashcards, cloud sync & progress backup',
+                  `Unlocks ${selectedTest.toUpperCase()} mocks, drills & guides only`,
+                  'Other 5 tests remain on Free preview',
+                  'Valid until that test’s exam season ends',
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2">
                     <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
@@ -142,13 +174,19 @@ export const PaywallModal: React.FC<PaywallModalProps> = ({
             </div>
             <button
               type="button"
-              disabled={busyTier !== null}
+              disabled={busyTier !== null || selectedUnlocked}
               onClick={() => handleCheckout('single')}
-              className="w-full py-2.5 rounded-xl border border-white/15 hover:border-white/35 bg-white/5 hover:bg-white/10 text-white text-xs font-semibold transition-colors cursor-pointer"
+              className={`w-full py-2.5 rounded-xl border text-xs font-semibold transition-colors ${
+                selectedUnlocked
+                  ? 'border-emerald-500/35 bg-emerald-500/10 text-emerald-300 cursor-default'
+                  : 'border-white/15 hover:border-white/35 bg-white/5 hover:bg-white/10 text-white cursor-pointer'
+              }`}
             >
-              {busyTier === 'single'
-                ? 'Opening Checkout…'
-                : `Get ${selectedTest.toUpperCase()} Pass (£24 once)`}
+              {selectedUnlocked
+                ? `${selectedTest.toUpperCase()} Unlocked ✓`
+                : busyTier === 'single'
+                  ? 'Opening Checkout…'
+                  : `Get ${selectedTest.toUpperCase()} Pass (£24 once)`}
             </button>
           </div>
 
@@ -185,11 +223,19 @@ export const PaywallModal: React.FC<PaywallModalProps> = ({
             </div>
             <button
               type="button"
-              disabled={busyTier !== null}
+              disabled={busyTier !== null || bundleActive}
               onClick={() => handleCheckout('bundle')}
-              className="w-full py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-[#09090B] text-xs font-semibold transition-colors cursor-pointer"
+              className={`w-full py-2.5 rounded-xl text-xs font-semibold transition-colors ${
+                bundleActive
+                  ? 'bg-emerald-500/15 border border-emerald-500/35 text-emerald-300 cursor-default'
+                  : 'bg-emerald-500 hover:bg-emerald-400 text-[#09090B] cursor-pointer'
+              }`}
             >
-              {busyTier === 'bundle' ? 'Opening Checkout…' : 'Get All Tests Bundle (£39 once)'}
+              {bundleActive
+                ? 'All 6 Tests Unlocked ✓'
+                : busyTier === 'bundle'
+                  ? 'Opening Checkout…'
+                  : 'Get All Tests Bundle (£39 once)'}
             </button>
           </div>
         </div>
@@ -206,47 +252,79 @@ export const PaywallModal: React.FC<PaywallModalProps> = ({
             <span>14-day refund guarantee · Secure one-off checkout</span>
           </div>
 
-          <div className="flex items-center gap-3">
-            <button
-              type="button"
-              onClick={() => setShowCodeBox((v) => !v)}
-              className="inline-flex items-center gap-1 text-zinc-300 hover:text-white cursor-pointer"
-            >
-              <KeyRound className="w-3.5 h-3.5" /> Have an access code?
-            </button>
-            {!stripeConfigured && (
-              <button
-                type="button"
-                onClick={() => {
-                  const next = !isPro;
-                  setLocalPro(next);
-                  onProChange(next);
-                  onClose();
-                }}
-                className="text-emerald-400 hover:text-emerald-300 underline cursor-pointer"
-              >
-                {isPro ? 'Preview as Free' : 'Preview as Pro'}
-              </button>
-            )}
-          </div>
+          <button
+            type="button"
+            onClick={() => setShowCodeBox((v) => !v)}
+            className="inline-flex items-center gap-1 text-zinc-300 hover:text-white cursor-pointer"
+          >
+            <KeyRound className="w-3.5 h-3.5" /> Have an access code?
+          </button>
         </div>
 
+        {!stripeConfigured && (
+          <div className="rounded-xl border border-white/10 bg-white/[0.02] p-3 flex flex-wrap items-center justify-between gap-2 text-xs">
+            <span className="text-zinc-400 font-mono-tabular">Preview mode (Stripe off):</span>
+            <div className="flex flex-wrap items-center gap-1.5">
+              <button
+                type="button"
+                onClick={() => applyPreview([])}
+                className={`px-2.5 py-1 rounded-lg border font-mono-tabular cursor-pointer transition-colors ${
+                  unlockedTests.length === 0
+                    ? 'border-emerald-500/50 bg-emerald-500/15 text-emerald-300'
+                    : 'border-white/10 text-zinc-300 hover:text-white'
+                }`}
+              >
+                Free
+              </button>
+              <button
+                type="button"
+                onClick={() => applyPreview([selectedTest])}
+                className={`px-2.5 py-1 rounded-lg border font-mono-tabular cursor-pointer transition-colors ${
+                  !bundleActive && unlockedTests.length === 1 && unlockedTests[0] === selectedTest
+                    ? 'border-emerald-500/50 bg-emerald-500/15 text-emerald-300'
+                    : 'border-white/10 text-zinc-300 hover:text-white'
+                }`}
+              >
+                Single ({selectedTest.toUpperCase()} only)
+              </button>
+              <button
+                type="button"
+                onClick={() => applyPreview(['all'])}
+                className={`px-2.5 py-1 rounded-lg border font-mono-tabular cursor-pointer transition-colors ${
+                  bundleActive
+                    ? 'border-emerald-500/50 bg-emerald-500/15 text-emerald-300'
+                    : 'border-white/10 text-zinc-300 hover:text-white'
+                }`}
+              >
+                All 6 Bundle
+              </button>
+            </div>
+          </div>
+        )}
+
         {showCodeBox && (
-          <form onSubmit={handleRedeem} className="flex flex-col sm:flex-row gap-2 pt-1">
-            <input
-              type="text"
-              value={code}
-              onChange={(e) => setCode(e.target.value)}
-              placeholder="Enter access code (e.g. RATIO-FOUNDER)"
-              className="flex-1 px-3.5 py-2 rounded-xl bg-[#09090B] border border-white/10 focus:border-emerald-500 outline-none text-xs text-white font-mono-tabular uppercase"
-            />
-            <button
-              type="submit"
-              className="px-4 py-2 rounded-xl bg-white text-[#09090B] text-xs font-semibold cursor-pointer"
-            >
-              Unlock Pro
-            </button>
-            {codeError && <div className="text-xs text-red-400 self-center">{codeError}</div>}
+          <form onSubmit={handleRedeem} className="space-y-2 pt-1">
+            <div className="flex flex-col sm:flex-row gap-2">
+              <input
+                type="text"
+                value={code}
+                onChange={(e) => setCode(e.target.value)}
+                placeholder={`Code (e.g. RATIO-${selectedTest.toUpperCase()} for 1 test, RATIO-FOUNDER for all 6)`}
+                className="flex-1 px-3.5 py-2 rounded-xl bg-[#09090B] border border-white/10 focus:border-emerald-500 outline-none text-xs text-white font-mono-tabular uppercase"
+              />
+              <button
+                type="submit"
+                className="px-4 py-2 rounded-xl bg-white text-[#09090B] text-xs font-semibold cursor-pointer"
+              >
+                Redeem Code
+              </button>
+            </div>
+            <div className="text-[11px] text-zinc-500">
+              Single-test codes (e.g. <span className="font-mono-tabular text-zinc-300">RATIO-{selectedTest.toUpperCase()}</span> or{' '}
+              <span className="font-mono-tabular text-zinc-300">RATIO-SINGLE</span>) unlock only{' '}
+              {selectedTest.toUpperCase()}; <span className="font-mono-tabular text-zinc-300">RATIO-FOUNDER</span> unlocks all 6 tests.
+            </div>
+            {codeError && <div className="text-xs text-red-400">{codeError}</div>}
           </form>
         )}
       </div>

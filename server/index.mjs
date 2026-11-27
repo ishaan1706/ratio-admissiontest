@@ -23,12 +23,21 @@ const STRIPE_WEBHOOK_SECRET = process.env.STRIPE_WEBHOOK_SECRET || '';
 const STRIPE_PRICE_SINGLE = process.env.STRIPE_PRICE_SINGLE || '';
 const STRIPE_PRICE_BUNDLE = process.env.STRIPE_PRICE_BUNDLE || '';
 const APP_URL = process.env.APP_URL || '';
-const ACCESS_CODES = new Set(
-  (process.env.RATIO_ACCESS_CODES || 'RATIO-FOUNDER,RATIO-PRO-2026')
+const VALID_TESTS = new Set(['lnat', 'ucat', 'tara', 'esat', 'tmua', 'sat']);
+const BUNDLE_ACCESS_CODES = new Set(
+  (process.env.RATIO_ACCESS_CODES || 'RATIO-FOUNDER,RATIO-PRO-2026,RATIO-ALL')
     .split(',')
     .map((s) => s.trim().toUpperCase())
     .filter(Boolean)
 );
+const SINGLE_TEST_ACCESS_CODES = new Map([
+  ['RATIO-LNAT', 'lnat'],
+  ['RATIO-UCAT', 'ucat'],
+  ['RATIO-TARA', 'tara'],
+  ['RATIO-ESAT', 'esat'],
+  ['RATIO-TMUA', 'tmua'],
+  ['RATIO-SAT', 'sat'],
+]);
 
 const db = new DatabaseSync(DB_PATH);
 db.exec(`
@@ -40,6 +49,7 @@ db.exec(`
     name TEXT NOT NULL,
     password_hash TEXT NOT NULL,
     plan TEXT NOT NULL DEFAULT 'free',
+    unlocked_tests TEXT NOT NULL DEFAULT '[]',
     stripe_customer_id TEXT,
     created_at TEXT NOT NULL
   );
@@ -84,6 +94,74 @@ db.exec(`
     created_at TEXT NOT NULL
   );
 `);
+
+// Safe migration for existing databases created before unlocked_tests existed
+try {
+  const cols = db.prepare('PRAGMA table_info(users)').all();
+  if (!cols.some((c) => c.name === 'unlocked_tests')) {
+    db.exec("ALTER TABLE users ADD COLUMN unlocked_tests TEXT NOT NULL DEFAULT '[]'");
+  }
+} catch {
+  // ignore if already present
+}
+
+function parseUnlockedTests(row) {
+  if (!row) return [];
+  if (row.plan === 'pro' || row.plan === 'bundle') return ['all'];
+  try {
+    const parsed = JSON.parse(row.unlocked_tests || '[]');
+    if (Array.isArray(parsed)) {
+      if (parsed.includes('all')) return ['all'];
+      return Array.from(new Set(parsed.filter((t) => VALID_TESTS.has(String(t)))));
+    }
+  } catch {
+    // ignore
+  }
+  return [];
+}
+
+function serializeUser(row) {
+  if (!row) return null;
+  const unlockedTests = parseUnlockedTests(row);
+  const plan = unlockedTests.includes('all')
+    ? 'bundle'
+    : unlockedTests.length > 0
+      ? 'single'
+      : 'free';
+  return {
+    id: row.id,
+    email: row.email,
+    name: row.name,
+    plan,
+    unlockedTests,
+    created_at: row.created_at,
+  };
+}
+
+function grantEntitlementBy(column, value, { tier, testId, customerId = null }) {
+  const row = db
+    .prepare(`SELECT id, plan, unlocked_tests, stripe_customer_id FROM users WHERE ${column} = ?`)
+    .get(value);
+  if (!row) return null;
+  const current = parseUnlockedTests(row);
+  let nextTests = current;
+  if (tier === 'bundle' || testId === 'all') {
+    nextTests = ['all'];
+  } else if (VALID_TESTS.has(String(testId || ''))) {
+    if (!current.includes('all')) {
+      nextTests = Array.from(new Set([...current, String(testId)]));
+    }
+  }
+  const nextPlan = nextTests.includes('all')
+    ? 'bundle'
+    : nextTests.length > 0
+      ? 'single'
+      : 'free';
+  db.prepare(
+    'UPDATE users SET plan = ?, unlocked_tests = ?, stripe_customer_id = COALESCE(?, stripe_customer_id) WHERE id = ?'
+  ).run(nextPlan, JSON.stringify(nextTests), customerId, row.id);
+  return { plan: nextPlan, unlockedTests: nextTests };
+}
 
 function hashPassword(password) {
   const salt = crypto.randomBytes(16).toString('hex');
@@ -139,9 +217,9 @@ function getSessionUser(req) {
   const uid = verifySession(cookies.ratio_session);
   if (!uid) return null;
   const row = db
-    .prepare('SELECT id, email, name, plan, stripe_customer_id, created_at FROM users WHERE id = ?')
+    .prepare('SELECT id, email, name, plan, unlocked_tests, stripe_customer_id, created_at FROM users WHERE id = ?')
     .get(uid);
-  return row || null;
+  return serializeUser(row);
 }
 
 function setSessionCookie(res, userId) {
@@ -185,24 +263,17 @@ app.post('/api/billing/webhook', express.raw({ type: 'application/json' }), (req
       const uid = session?.client_reference_id;
       const email = session?.customer_details?.email;
       const customerId = session?.customer || null;
+      const tier = session?.metadata?.tier === 'bundle' ? 'bundle' : 'single';
+      const testId = String(session?.metadata?.test_id || (tier === 'bundle' ? 'all' : '')).toLowerCase();
       if (uid) {
-        db.prepare('UPDATE users SET plan = ?, stripe_customer_id = ? WHERE id = ?').run(
-          'pro',
-          customerId,
-          uid
-        );
+        grantEntitlementBy('id', uid, { tier, testId, customerId });
       } else if (email) {
-        db.prepare('UPDATE users SET plan = ?, stripe_customer_id = ? WHERE email = ?').run(
-          'pro',
-          customerId,
-          String(email).toLowerCase()
-        );
+        grantEntitlementBy('email', String(email).toLowerCase(), { tier, testId, customerId });
       }
     } else if (event.type === 'customer.subscription.deleted') {
       const sub = event.data?.object;
       if (sub?.customer) {
-        db.prepare('UPDATE users SET plan = ? WHERE stripe_customer_id = ?').run(
-          'free',
+        db.prepare("UPDATE users SET plan = 'free', unlocked_tests = '[]' WHERE stripe_customer_id = ?").run(
           String(sub.customer)
         );
       }
@@ -246,12 +317,12 @@ app.post('/api/auth/register', (req, res) => {
   const id = `usr-${crypto.randomUUID()}`;
   const createdAt = new Date().toISOString();
   db.prepare(
-    'INSERT INTO users (id, email, name, password_hash, plan, created_at) VALUES (?, ?, ?, ?, ?, ?)'
-  ).run(id, cleanEmail, cleanName, hashPassword(String(password)), 'free', createdAt);
+    'INSERT INTO users (id, email, name, password_hash, plan, unlocked_tests, created_at) VALUES (?, ?, ?, ?, ?, ?, ?)'
+  ).run(id, cleanEmail, cleanName, hashPassword(String(password)), 'free', '[]', createdAt);
 
   setSessionCookie(res, id);
   res.status(201).json({
-    user: { id, email: cleanEmail, name: cleanName, plan: 'free', created_at: createdAt },
+    user: { id, email: cleanEmail, name: cleanName, plan: 'free', unlockedTests: [], created_at: createdAt },
   });
 });
 
@@ -264,13 +335,7 @@ app.post('/api/auth/login', (req, res) => {
   }
   setSessionCookie(res, row.id);
   res.json({
-    user: {
-      id: row.id,
-      email: row.email,
-      name: row.name,
-      plan: row.plan,
-      created_at: row.created_at,
-    },
+    user: serializeUser(row),
   });
 });
 
@@ -343,14 +408,42 @@ app.post('/api/billing/checkout', async (req, res) => {
 
 app.post('/api/billing/redeem', (req, res) => {
   const code = String(req.body?.code || '').trim().toUpperCase();
-  if (!ACCESS_CODES.has(code)) {
+  const requestedTest = String(req.body?.testId || '').trim().toLowerCase();
+
+  let tier = null;
+  let testId = null;
+  if (BUNDLE_ACCESS_CODES.has(code)) {
+    tier = 'bundle';
+    testId = 'all';
+  } else if (SINGLE_TEST_ACCESS_CODES.has(code)) {
+    tier = 'single';
+    testId = SINGLE_TEST_ACCESS_CODES.get(code);
+  } else if (code === 'RATIO-SINGLE') {
+    if (!VALID_TESTS.has(requestedTest)) {
+      return res.status(400).json({ error: 'Select a valid test to redeem a single-test code.' });
+    }
+    tier = 'single';
+    testId = requestedTest;
+  } else {
     return res.status(400).json({ error: 'Invalid or expired access code.' });
   }
+
   const user = getSessionUser(req);
   if (user) {
-    db.prepare('UPDATE users SET plan = ? WHERE id = ?').run('pro', user.id);
+    const updated = grantEntitlementBy('id', user.id, { tier, testId });
+    return res.json({
+      ok: true,
+      tier,
+      plan: updated?.plan || (tier === 'bundle' ? 'bundle' : 'single'),
+      unlockedTests: updated?.unlockedTests || (tier === 'bundle' ? ['all'] : [testId]),
+    });
   }
-  res.json({ ok: true, plan: 'pro' });
+  res.json({
+    ok: true,
+    tier,
+    plan: tier === 'bundle' ? 'bundle' : 'single',
+    unlockedTests: tier === 'bundle' ? ['all'] : [testId],
+  });
 });
 
 /* ── Existing LNAT Attempts, Essays & Question Reports ──────────────────── */

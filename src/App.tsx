@@ -11,7 +11,16 @@ import {
 import { ALL_QUESTIONS, PASSAGES } from './data/passages';
 import { TEST_BY_ID, TestId } from './data/allTests';
 import { fetchAttempts, fetchEssays, saveAttempt, saveEssay } from './lib/api';
-import { RatioUser, fetchSession, getLocalPro, setLocalPro } from './lib/account';
+import {
+  RatioUser,
+  fetchSession,
+  getLocalEntitlements,
+  hasTestAccess,
+  isBundleUnlocked,
+  mergeEntitlements,
+  setLocalEntitlements,
+  userEntitlements,
+} from './lib/account';
 import { LandingView } from './components/LandingView';
 import { Navbar } from './components/Navbar';
 import { PracticeHub } from './components/PracticeHub';
@@ -75,14 +84,17 @@ export const App: React.FC = () => {
     loadGenericAttempts()
   );
 
-  // Commercial state: Account, Pro entitlement, Stripe readiness, Legal modals
+  // Commercial state: Account, per-test entitlements, Stripe readiness, Legal modals
   const [user, setUser] = useState<RatioUser | null>(null);
-  const [isPro, setIsPro] = useState<boolean>(() => getLocalPro());
+  const [unlockedTests, setUnlockedTests] = useState<string[]>(() => getLocalEntitlements());
   const [stripeConfigured, setStripeConfigured] = useState(false);
   const [accountOpen, setAccountOpen] = useState(false);
   const [pricingOpen, setPricingOpen] = useState(false);
   const [pricingReason, setPricingReason] = useState<string | null>(null);
   const [legalDoc, setLegalDoc] = useState<LegalDoc>(null);
+
+  const bundleActive = isBundleUnlocked(unlockedTests);
+  const activeTestUnlocked = hasTestAccess(unlockedTests, activeTest);
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
@@ -99,9 +111,10 @@ export const App: React.FC = () => {
     fetchSession().then(({ user: u, stripeConfigured: sc }) => {
       setUser(u);
       setStripeConfigured(sc);
-      if (u?.plan === 'pro') {
-        setIsPro(true);
-        setLocalPro(true);
+      const serverEnt = userEntitlements(u);
+      if (serverEnt.length > 0) {
+        const merged = setLocalEntitlements(mergeEntitlements(getLocalEntitlements(), serverEnt));
+        setUnlockedTests(merged);
       }
     });
   }, []);
@@ -203,19 +216,26 @@ export const App: React.FC = () => {
         open={accountOpen}
         onClose={() => setAccountOpen(false)}
         user={user}
-        isPro={isPro}
+        unlockedTests={unlockedTests}
         onAuthChange={(u) => {
           setUser(u);
-          if (u?.plan === 'pro') setIsPro(true);
+          if (u) {
+            const serverEnt = userEntitlements(u);
+            if (serverEnt.length > 0) {
+              const merged = setLocalEntitlements(mergeEntitlements(getLocalEntitlements(), serverEnt));
+              setUnlockedTests(merged);
+            }
+          }
         }}
         onOpenUpgrade={() => openPricing()}
       />
       <PaywallModal
         open={pricingOpen}
         onClose={() => setPricingOpen(false)}
-        isPro={isPro}
+        activeTest={activeTest}
+        unlockedTests={unlockedTests}
         stripeConfigured={stripeConfigured}
-        onProChange={(pro) => setIsPro(pro)}
+        onEntitlementsChange={(tests) => setUnlockedTests(tests)}
         reason={pricingReason}
       />
       <LegalModal doc={legalDoc} onClose={() => setLegalDoc(null)} />
@@ -228,7 +248,7 @@ export const App: React.FC = () => {
         <LandingView
           onSelectTest={handleSelectTest}
           user={user}
-          isPro={isPro}
+          isPro={bundleActive}
           onOpenAccount={() => setAccountOpen(true)}
           onOpenPricing={openPricing}
           onOpenLegal={setLegalDoc}
@@ -258,7 +278,7 @@ export const App: React.FC = () => {
           theme={theme}
           onToggleTheme={() => setTheme((t) => (t === 'dark' ? 'light' : 'dark'))}
           user={user}
-          isPro={isPro}
+          unlockedTests={unlockedTests}
           onOpenAccount={() => setAccountOpen(true)}
           onOpenPricing={() => openPricing()}
         />
@@ -291,13 +311,16 @@ export const App: React.FC = () => {
               ))}
             </div>
 
-            {!isPro && (
+            {!bundleActive && (
               <button
                 type="button"
                 onClick={() => openPricing()}
                 className="hidden sm:inline-flex items-center gap-1.5 text-[11px] font-mono-tabular text-[var(--accent)] hover:underline cursor-pointer"
               >
-                <Sparkles className="w-3 h-3" /> Single Test £24 · All 6 Tests £39
+                <Sparkles className="w-3 h-3" />
+                {activeTestUnlocked
+                  ? `${activeTest.toUpperCase()} Pass Active · Upgrade to All 6 (£39)`
+                  : `Unlock ${activeTest.toUpperCase()} £24 · All 6 Tests £39`}
               </button>
             )}
           </div>
