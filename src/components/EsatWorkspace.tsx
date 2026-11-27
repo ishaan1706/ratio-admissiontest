@@ -1,21 +1,30 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   ArrowRight,
   Check,
   Clock,
-  Eye,
-  EyeOff,
   Flag,
   RotateCcw,
-  Shuffle,
+  Sparkles,
 } from 'lucide-react';
 import esatMocksRaw from '../data/packs/esat/esat-mocks.json';
-import esatFlashcardsRaw from '../data/packs/esat/esat-flashcards.json';
 import esatFormulaSheetsMd from '../data/packs/esat/esat-formula-sheets.md?raw';
 import esatStudyPlanMd from '../data/packs/esat/esat-study-plan.md?raw';
 import { AdmissionsTest } from '../data/allTests';
 import { GenericAttempt, OfficialResourcesPanel } from './TestWorkspace';
 import { MarkdownRenderer } from './MarkdownRenderer';
+import {
+  buildLeastPractisedModule,
+  ESAT_MODULES_META,
+  EsatModuleKey,
+  EsatPracticeQuestion,
+  EsatPracticeSuite,
+  EsatQuestionRecord,
+  loadChosenModules,
+  loadEsatHistory,
+  saveChosenModules,
+  saveEsatHistory,
+} from './EsatPracticeSuite';
 
 interface EsatOption {
   label: string;
@@ -47,18 +56,7 @@ interface EsatMock {
   modules: EsatModule[];
 }
 
-interface EsatFlashcard {
-  id: string;
-  module: string;
-  topic: string;
-  front: string;
-  back: string;
-}
-
 const ESAT_MOCKS = (esatMocksRaw as { mocks: EsatMock[] }).mocks;
-const ESAT_CARDS = (esatFlashcardsRaw as { cards: EsatFlashcard[] }).cards;
-
-const MODULE_NAMES = ['All', 'Mathematics 1', 'Mathematics 2', 'Physics', 'Chemistry', 'Biology'];
 
 interface EsatWorkspaceProps {
   test: AdmissionsTest;
@@ -73,8 +71,16 @@ export const EsatWorkspace: React.FC<EsatWorkspaceProps> = ({
   attempts,
   onSaveAttempt,
 }) => {
-  const [mode, setMode] = useState<'mocks' | 'flashcards' | 'sheets'>('mocks');
+  const [mode, setMode] = useState<'practice' | 'mocks' | 'sheets'>('practice');
   const [activeRun, setActiveRun] = useState<{ mock: EsatMock; mod: EsatModule } | null>(null);
+
+  // Module picker & persistent practice history
+  const initialMods = loadChosenModules();
+  const [chosenModules, setChosenModules] = useState<EsatModuleKey[]>(initialMods.modules);
+  const [modulesConfigured, setModulesConfigured] = useState<boolean>(initialMods.configured);
+  const [esatHistory, setEsatHistory] = useState<Record<string, EsatQuestionRecord>>(() =>
+    loadEsatHistory()
+  );
 
   // Exam runner state
   const [qIdx, setQIdx] = useState(0);
@@ -82,12 +88,6 @@ export const EsatWorkspace: React.FC<EsatWorkspaceProps> = ({
   const [flagged, setFlagged] = useState<Record<string, boolean>>({});
   const [finished, setFinished] = useState(false);
   const [secondsLeft, setSecondsLeft] = useState(40 * 60);
-
-  // Flashcards state
-  const [fcModule, setFcModule] = useState('All');
-  const [fcIdx, setFcIdx] = useState(0);
-  const [fcRevealed, setFcRevealed] = useState(false);
-  const [fcShuffleSeed, setFcShuffleSeed] = useState(0);
 
   // Sheets sub-view
   const [sheetTab, setSheetTab] = useState<'formulas' | 'plan'>('formulas');
@@ -100,19 +100,70 @@ export const EsatWorkspace: React.FC<EsatWorkspaceProps> = ({
     return () => window.clearInterval(id);
   }, [activeRun, finished]);
 
-  const filteredCards = useMemo(() => {
-    const base =
-      fcModule === 'All' ? ESAT_CARDS : ESAT_CARDS.filter((c) => c.module === fcModule);
-    if (fcShuffleSeed === 0) return base;
-    const copy = [...base];
-    let s = fcShuffleSeed;
-    for (let i = copy.length - 1; i > 0; i--) {
-      s = (s * 1664525 + 1013904223) % 4294967296;
-      const j = s % (i + 1);
-      [copy[i], copy[j]] = [copy[j], copy[i]];
-    }
-    return copy;
-  }, [fcModule, fcShuffleSeed]);
+  const handleUpdateModules = (mods: EsatModuleKey[]) => {
+    const saved = saveChosenModules(mods);
+    setChosenModules(saved);
+    setModulesConfigured(true);
+  };
+
+  const handleRecordAnswer = (
+    q: EsatPracticeQuestion,
+    isCorrect: boolean,
+    secondsSpent: number
+  ) => {
+    setEsatHistory((prev) => {
+      const cur = prev[q.id];
+      const next: Record<string, EsatQuestionRecord> = {
+        ...prev,
+        [q.id]: {
+          attempts: (cur?.attempts || 0) + 1,
+          correctCount: (cur?.correctCount || 0) + (isCorrect ? 1 : 0),
+          lastCorrect: isCorrect,
+          inMistakeQueue: isCorrect ? false : true,
+          totalSeconds: (cur?.totalSeconds || 0) + secondsSpent,
+          flags: cur?.flags || {},
+          lastAnsweredAt: new Date().toISOString(),
+        },
+      };
+      saveEsatHistory(next);
+      return next;
+    });
+  };
+
+  const handleToggleFlag = (qId: string, flag: 'tooHard' | 'revisit') => {
+    setEsatHistory((prev) => {
+      const cur = prev[qId] || {
+        attempts: 0,
+        correctCount: 0,
+        lastCorrect: false,
+        inMistakeQueue: false,
+        totalSeconds: 0,
+        flags: {},
+        lastAnsweredAt: new Date().toISOString(),
+      };
+      const next: Record<string, EsatQuestionRecord> = {
+        ...prev,
+        [qId]: {
+          ...cur,
+          flags: { ...cur.flags, [flag]: !cur.flags?.[flag] },
+        },
+      };
+      saveEsatHistory(next);
+      return next;
+    });
+  };
+
+  const startLeastPractisedMock = (moduleKey: EsatModuleKey) => {
+    const mod = buildLeastPractisedModule(moduleKey, esatHistory);
+    startModule(
+      {
+        id: `esat-least-${moduleKey}-${Date.now()}`,
+        title: 'ESAT Least-Practised Mock',
+        modules: [mod],
+      },
+      mod
+    );
+  };
 
   const startModule = (mock: EsatMock, mod: EsatModule) => {
     setActiveRun({ mock, mod });
@@ -403,15 +454,13 @@ export const EsatWorkspace: React.FC<EsatWorkspaceProps> = ({
     );
   }
 
-  /* ── ESAT Hub (270-Q Mocks · 160 Flashcards · Formula Sheets & Plan) ──── */
-  const currentCard = filteredCards[fcIdx % Math.max(1, filteredCards.length)];
-
+  /* ── ESAT Hub (400-Q Practice Suite · 270-Q Mocks · Formula Sheets & Plan) ── */
   return (
     <div className="space-y-8">
       <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[var(--rule)] pb-4">
         <div>
           <div className="text-xs font-mono-tabular uppercase tracking-wider text-[var(--accent)]">
-            ESAT · 270 ORIGINAL MCQS · 160 FLASHCARDS · 5 MODULES
+            ESAT · 670 ORIGINAL MCQS · 5 MODULES · 1:30/Q PACE TRACKER
           </div>
           <h2 className="font-display text-3xl sm:text-4xl text-[var(--ink)] mt-0.5">
             {test.name}
@@ -420,8 +469,8 @@ export const EsatWorkspace: React.FC<EsatWorkspaceProps> = ({
         <div className="flex flex-wrap items-center gap-1 text-xs">
           {(
             [
-              ['mocks', 'Mocks (270 Qs)'],
-              ['flashcards', '160 Flashcards'],
+              ['practice', 'Practice & Daily 5 (400 Qs)'],
+              ['mocks', '40-Min Mocks (270 Qs)'],
               ['sheets', 'Formulas & Plan'],
             ] as const
           ).map(([id, label]) => (
@@ -441,10 +490,53 @@ export const EsatWorkspace: React.FC<EsatWorkspaceProps> = ({
         </div>
       </div>
 
+      {mode === 'practice' && (
+        <EsatPracticeSuite
+          chosenModules={chosenModules}
+          configured={modulesConfigured}
+          onUpdateModules={handleUpdateModules}
+          history={esatHistory}
+          onRecordAnswer={handleRecordAnswer}
+          onToggleFlag={handleToggleFlag}
+          onStartLeastPractisedMock={startLeastPractisedMock}
+          onSaveAttemptSummary={(title, correct, total) =>
+            onSaveAttempt({
+              id: `esat-prac-${Date.now()}`,
+              testId: 'esat',
+              testCode: title,
+              correct,
+              total,
+              createdAt: new Date().toISOString(),
+            })
+          }
+        />
+      )}
+
       {mode === 'mocks' && (
         <div className="space-y-6">
+          <div className="border border-emerald-500/30 bg-[var(--surface)] p-5 space-y-3">
+            <div className="flex items-center gap-2 text-xs font-mono-tabular uppercase tracking-wider text-[var(--accent)]">
+              <Sparkles className="w-3.5 h-3.5" /> Adaptive Least-Practised Module Mock
+            </div>
+            <p className="text-xs text-[var(--text-muted)]">
+              Generate a fresh 27-question, 40-minute no-calculator paper built from the questions you have attempted least across the full ESAT bank.
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {ESAT_MODULES_META.map((m) => (
+                <button
+                  key={m.key}
+                  type="button"
+                  onClick={() => startLeastPractisedMock(m.key)}
+                  className="px-3.5 py-2 border border-[var(--rule)] hover:border-[var(--accent)] bg-[var(--bg)] text-xs font-medium text-[var(--ink)] cursor-pointer transition-colors"
+                >
+                  {m.name} (27 Qs) →
+                </button>
+              ))}
+            </div>
+          </div>
+
           <p className="text-sm text-[var(--text-muted)]">
-            Pick Mathematics 1 (compulsory) plus the two modules your course requires. Each module
+            Pick Mathematics 1 (compulsory) plus the two modules your course requires. Each fixed mock module
             runs as an authentic 40-minute, 27-question no-calculator paper.
           </p>
           {ESAT_MOCKS.map((mock) => (
@@ -488,95 +580,6 @@ export const EsatWorkspace: React.FC<EsatWorkspaceProps> = ({
               </div>
             </div>
           ))}
-        </div>
-      )}
-
-      {mode === 'flashcards' && currentCard && (
-        <div className="space-y-6">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <div className="flex flex-wrap gap-1.5">
-              {MODULE_NAMES.map((m) => (
-                <button
-                  key={m}
-                  type="button"
-                  onClick={() => {
-                    setFcModule(m);
-                    setFcIdx(0);
-                    setFcRevealed(false);
-                  }}
-                  className={`px-2.5 py-1 text-xs border cursor-pointer transition-colors ${
-                    fcModule === m
-                      ? 'border-[var(--accent)] text-[var(--accent)]'
-                      : 'border-[var(--rule)] text-[var(--text-muted)] hover:text-[var(--ink)]'
-                  }`}
-                >
-                  {m}
-                </button>
-              ))}
-            </div>
-            <button
-              type="button"
-              onClick={() => {
-                setFcShuffleSeed((s) => s + 1);
-                setFcIdx(0);
-                setFcRevealed(false);
-              }}
-              className="text-xs font-mono-tabular text-[var(--text-muted)] hover:text-[var(--ink)] inline-flex items-center gap-1.5 cursor-pointer"
-            >
-              <Shuffle className="w-3.5 h-3.5" /> Shuffle
-            </button>
-          </div>
-
-          <div className="border border-[var(--rule)] bg-[var(--surface)] p-6 sm:p-8 space-y-5">
-            <div className="flex items-center justify-between text-xs font-mono-tabular text-[var(--text-muted)]">
-              <span className="text-[var(--accent)]">
-                {currentCard.module} · Spec {currentCard.topic}
-              </span>
-              <span>
-                {(fcIdx % filteredCards.length) + 1} / {filteredCards.length}
-              </span>
-            </div>
-            <div className="font-display text-2xl sm:text-3xl text-[var(--ink)] leading-snug">
-              {currentCard.front}
-            </div>
-            {fcRevealed && (
-              <div className="pt-4 border-t border-[var(--rule)] text-base font-mono-tabular text-[var(--accent)] leading-relaxed">
-                {currentCard.back}
-              </div>
-            )}
-            <div className="flex items-center justify-between pt-2">
-              <button
-                type="button"
-                onClick={() => setFcRevealed((r) => !r)}
-                className="px-4 py-2 border border-[var(--rule)] hover:border-[var(--accent)] text-xs font-mono-tabular text-[var(--ink)] inline-flex items-center gap-1.5 cursor-pointer"
-              >
-                {fcRevealed ? <EyeOff className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5" />}
-                {fcRevealed ? 'Hide answer' : 'Reveal answer'}
-              </button>
-              <div className="flex items-center gap-4 text-xs">
-                <button
-                  type="button"
-                  onClick={() => {
-                    setFcRevealed(false);
-                    setFcIdx((i) => (i - 1 + filteredCards.length) % filteredCards.length);
-                  }}
-                  className="text-[var(--text-muted)] hover:text-[var(--ink)] cursor-pointer"
-                >
-                  ← Previous
-                </button>
-                <button
-                  type="button"
-                  onClick={() => {
-                    setFcRevealed(false);
-                    setFcIdx((i) => (i + 1) % filteredCards.length);
-                  }}
-                  className="font-medium text-[var(--accent)] hover:underline cursor-pointer"
-                >
-                  Next card →
-                </button>
-              </div>
-            </div>
-          </div>
         </div>
       )}
 

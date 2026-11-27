@@ -66,9 +66,9 @@ const EXAM_STATS: Record<
     highlight: 'Per-module 40-min timers · raw /22 scoring',
   },
   esat: {
-    mocks: '2 Mocks × 5 Modules (270 Qs)',
-    extras: '160 Flashcards · Formula Sheets',
-    highlight: 'No-calculator sprint · 10-week study plan',
+    mocks: '400-Q Practice + 2 Mocks (670 Qs)',
+    extras: 'Daily 5 · 1:30/Q Pace · Mistake Queue',
+    highlight: '5 modules · Custom sets · Formula sheets',
   },
   tmua: {
     mocks: 'Full Mock (Paper 1 & 2 · 40 Qs)',
@@ -341,9 +341,9 @@ export const LandingView: React.FC<LandingViewProps> = ({
         <section className="border-b border-white/[0.07] bg-[#0C0C0F]">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 py-7 grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { value: '1,680+', label: 'Original exam-format questions' },
+              { value: '2,080+', label: 'Original exam-format questions' },
               { value: '11', label: 'Full-length timed mocks' },
-              { value: '630+', label: 'Flashcards & SAT vocab cards' },
+              { value: '470+', label: 'Flashcards & SAT vocab cards' },
               { value: '54', label: 'Verified official board links' },
             ].map((stat) => (
               <div key={stat.label}>
