@@ -76,9 +76,9 @@ const EXAM_STATS: Record<
     highlight: '75-min no-calculator papers · 2016–23 archive',
   },
   sat: {
-    mocks: '2 Digital Mocks (196 Qs)',
-    extras: '8 Domain Drills · Reference Sheet',
-    highlight: 'Harder Module 2 · SPR grid-in grading',
+    mocks: '600-Q Bank + 2 Full Mocks',
+    extras: '30 Skill Lessons · 400 Vocab',
+    highlight: 'Desmos guide · Error log · 2–12 wk plans',
   },
 };
 
@@ -339,9 +339,9 @@ export const LandingView: React.FC<LandingViewProps> = ({
         <section className="border-b border-white/[0.07] bg-[#0C0C0F]">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 py-7 grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { value: '1,080+', label: 'Original exam-format questions' },
+              { value: '1,680+', label: 'Original exam-format questions' },
               { value: '11', label: 'Full-length timed mocks' },
-              { value: '230+', label: 'Active-recall flashcards' },
+              { value: '630+', label: 'Flashcards & SAT vocab cards' },
               { value: '54', label: 'Verified official board links' },
             ].map((stat) => (
               <div key={stat.label}>

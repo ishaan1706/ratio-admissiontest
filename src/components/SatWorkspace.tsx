@@ -9,10 +9,15 @@ import {
 } from 'lucide-react';
 import satMocksRaw from '../data/packs/sat/sat-mocks.json';
 import satDrillsRaw from '../data/packs/sat/sat-drills.json';
-import satRevisionGuideMd from '../data/packs/sat/sat-revision-guide.md?raw';
 import { AdmissionsTest } from '../data/allTests';
 import { GenericAttempt, OfficialResourcesPanel } from './TestWorkspace';
-import { MarkdownRenderer } from './MarkdownRenderer';
+import {
+  BankQuestion,
+  SatGuidesAndPlansView,
+  SatQuestionBankView,
+  SatSkillLessonsView,
+  SatVocabView,
+} from './SatRevisionSuite';
 
 interface SatOption {
   letter: string;
@@ -28,7 +33,7 @@ interface SatQuestion {
   skill: string;
   difficulty: string;
   type: 'mcq' | 'spr';
-  passage?: string;
+  passage?: string | null;
   underlined?: string;
   texts?: { label: string; body: string }[];
   notes?: string[];
@@ -39,6 +44,8 @@ interface SatQuestion {
   correct?: string;
   acceptedAnswers?: string[];
   explanation: string;
+  commonTrap?: string;
+  desmosFriendly?: boolean;
 }
 
 interface SatModule {
@@ -137,7 +144,8 @@ export const SatWorkspace: React.FC<SatWorkspaceProps> = ({
   attempts,
   onSaveAttempt,
 }) => {
-  const [mode, setMode] = useState<'mocks' | 'drills' | 'guide'>('mocks');
+  const [mode, setMode] = useState<'bank' | 'mocks' | 'drills' | 'lessons' | 'vocab' | 'guide'>('bank');
+  const [linkedSkill, setLinkedSkill] = useState<string | null>(null);
   const [activeRun, setActiveRun] = useState<ActiveSatRun | null>(null);
   const [qIdx, setQIdx] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
@@ -558,27 +566,30 @@ export const SatWorkspace: React.FC<SatWorkspaceProps> = ({
       <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[var(--rule)] pb-4">
         <div>
           <div className="text-xs font-mono-tabular uppercase tracking-wider text-[var(--accent)]">
-            DIGITAL SAT · 2 FULL MOCKS (196 QS) · 8 DOMAIN DRILLS (80 QS)
+            DIGITAL SAT · 600-Q FILTERABLE BANK · 2 FULL MOCKS · 30 SKILL LESSONS · 400 VOCAB
           </div>
           <h2 className="font-display text-3xl sm:text-4xl text-[var(--ink)] mt-0.5">
             {test.name}
           </h2>
         </div>
-        <div className="flex flex-wrap items-center gap-1 text-xs">
+        <div className="flex flex-wrap items-center gap-1.5 text-xs">
           {(
             [
+              ['bank', 'Question Bank (600)'],
               ['mocks', '2 Full Mocks'],
-              ['drills', '8 Domain Drills'],
-              ['guide', 'Revision Guide'],
+              ['drills', '8 Drills'],
+              ['lessons', '30 Lessons'],
+              ['vocab', '400 Vocab'],
+              ['guide', 'Guides & Plans'],
             ] as const
           ).map(([id, label]) => (
             <button
               key={id}
               type="button"
               onClick={() => setMode(id)}
-              className={`px-3 py-1.5 border cursor-pointer transition-colors ${
+              className={`px-3 py-1.5 rounded-lg border cursor-pointer transition-colors ${
                 mode === id
-                  ? 'border-[var(--accent)] text-[var(--accent)]'
+                  ? 'border-[var(--accent)] bg-[var(--accent-soft)] text-[var(--accent)] font-medium'
                   : 'border-[var(--rule)] text-[var(--text-muted)] hover:text-[var(--ink)]'
               }`}
             >
@@ -587,6 +598,24 @@ export const SatWorkspace: React.FC<SatWorkspaceProps> = ({
           ))}
         </div>
       </div>
+
+      {mode === 'bank' && (
+        <SatQuestionBankView
+          initialSkill={linkedSkill}
+          onOpenLesson={(sk) => {
+            setLinkedSkill(sk);
+            setMode('lessons');
+          }}
+          onStartTimedSprint={(title, section, minutes, qs: BankQuestion[]) =>
+            startRun({
+              title,
+              section,
+              minutes,
+              questions: qs as SatQuestion[],
+            })
+          }
+        />
+      )}
 
       {mode === 'mocks' && (
         <div className="space-y-6">
@@ -679,11 +708,19 @@ export const SatWorkspace: React.FC<SatWorkspaceProps> = ({
         </div>
       )}
 
-      {mode === 'guide' && (
-        <div className="rounded-2xl border border-[var(--rule)] bg-[var(--surface)] p-6 sm:p-8">
-          <MarkdownRenderer content={satRevisionGuideMd} />
-        </div>
+      {mode === 'lessons' && (
+        <SatSkillLessonsView
+          initialSkill={linkedSkill}
+          onPracticeSkill={(sk) => {
+            setLinkedSkill(sk);
+            setMode('bank');
+          }}
+        />
       )}
+
+      {mode === 'vocab' && <SatVocabView />}
+
+      {mode === 'guide' && <SatGuidesAndPlansView />}
     </div>
   );
 };

@@ -1,0 +1,3206 @@
+{
+  "exam": "SAT",
+  "version": 1,
+  "entries": [
+    {
+      "id": "rs2-v-corroborate",
+      "word": "corroborate",
+      "category": "Evidence and reasoning",
+      "definition": "support with additional evidence",
+      "example": "A second log may corroborate the pilot’s account.",
+      "cloze": "A second log may ______ the pilot’s account."
+    },
+    {
+      "id": "rs2-v-substantiate",
+      "word": "substantiate",
+      "category": "Evidence and reasoning",
+      "definition": "show that a claim is supported with evidence",
+      "example": "The audit used bank records to substantiate the reported expenses.",
+      "cloze": "The audit used bank records to ______ the reported expenses."
+    },
+    {
+      "id": "rs2-v-infer",
+      "word": "infer",
+      "category": "Evidence and reasoning",
+      "definition": "draw a conclusion from clues or evidence",
+      "example": "From the fresh tracks, Mina could infer that someone had crossed the yard.",
+      "cloze": "From the fresh tracks, Mina could ______ that someone had crossed the yard."
+    },
+    {
+      "id": "rs2-v-deduce",
+      "word": "deduce",
+      "category": "Evidence and reasoning",
+      "definition": "reach a conclusion by logical reasoning",
+      "example": "You can deduce the missing date from the two dated entries.",
+      "cloze": "You can ______ the missing date from the two dated entries."
+    },
+    {
+      "id": "rs2-v-imply",
+      "word": "imply",
+      "category": "Evidence and reasoning",
+      "definition": "suggest without stating directly",
+      "example": "The unsigned note seemed to imply that someone else had access.",
+      "cloze": "The unsigned note seemed to ______ that someone else had access."
+    },
+    {
+      "id": "rs2-v-indicate",
+      "word": "indicate",
+      "category": "Evidence and reasoning",
+      "definition": "point to or show",
+      "example": "The muddy hem may indicate that he took the flooded path.",
+      "cloze": "The muddy hem may ______ that he took the flooded path."
+    },
+    {
+      "id": "rs2-v-verify",
+      "word": "verify",
+      "category": "Evidence and reasoning",
+      "definition": "check that something is accurate or true",
+      "example": "Call the station to verify that the last train is running.",
+      "cloze": "Call the station to ______ that the last train is running."
+    },
+    {
+      "id": "rs2-v-validate",
+      "word": "validate",
+      "category": "Evidence and reasoning",
+      "definition": "establish that a method or result is sound",
+      "example": "The team ran a second trial to validate its measurement procedure.",
+      "cloze": "The team ran a second trial to ______ its measurement procedure."
+    },
+    {
+      "id": "rs2-v-falsify",
+      "word": "falsify",
+      "category": "Evidence and reasoning",
+      "definition": "show a claim to be false",
+      "example": "One authentic dated photograph could falsify the legend.",
+      "cloze": "One authentic dated photograph could ______ the legend."
+    },
+    {
+      "id": "rs2-v-refute",
+      "word": "refute",
+      "category": "Evidence and reasoning",
+      "definition": "disprove a claim with evidence or argument",
+      "example": "The receipts refute the claim that the work went unpaid.",
+      "cloze": "The receipts ______ the claim that the work went unpaid."
+    },
+    {
+      "id": "rs2-v-rebut",
+      "word": "rebut",
+      "category": "Evidence and reasoning",
+      "definition": "respond to an argument with a counterargument",
+      "example": "She used survey data to rebut the charge that the park was unpopular.",
+      "cloze": "She used survey data to ______ the charge that the park was unpopular."
+    },
+    {
+      "id": "rs2-v-attest",
+      "word": "attest",
+      "category": "Evidence and reasoning",
+      "definition": "affirm or give evidence for",
+      "example": "The stamped labels attest to the origin of the crates.",
+      "cloze": "The stamped labels ______ to the origin of the crates."
+    },
+    {
+      "id": "rs2-v-demonstrate",
+      "word": "demonstrate",
+      "category": "Evidence and reasoning",
+      "definition": "show clearly with an example, proof, or experiment",
+      "example": "A set of drawings can demonstrate why the hinge bends.",
+      "cloze": "A set of drawings can ______ why the hinge bends."
+    },
+    {
+      "id": "rs2-v-document",
+      "word": "document",
+      "category": "Evidence and reasoning",
+      "definition": "record with supporting evidence",
+      "example": "The photographers returned to document the gradual erosion.",
+      "cloze": "The photographers returned to ______ the gradual erosion."
+    },
+    {
+      "id": "rs2-v-establish",
+      "word": "establish",
+      "category": "Evidence and reasoning",
+      "definition": "show firmly to be true",
+      "example": "The two signatures establish that both tenants approved the change.",
+      "cloze": "The two signatures ______ that both tenants approved the change."
+    },
+    {
+      "id": "rs2-v-assess",
+      "word": "assess",
+      "category": "Evidence and reasoning",
+      "definition": "judge the quality, size, or importance of",
+      "example": "The engineer will assess the damage before setting a budget.",
+      "cloze": "The engineer will ______ the damage before setting a budget."
+    },
+    {
+      "id": "rs2-v-evaluate",
+      "word": "evaluate",
+      "category": "Evidence and reasoning",
+      "definition": "judge by applying criteria",
+      "example": "Readers should evaluate the article’s handling of its sources.",
+      "cloze": "Readers should ______ the article’s handling of its sources."
+    },
+    {
+      "id": "rs2-v-scrutinize",
+      "word": "scrutinize",
+      "category": "Evidence and reasoning",
+      "definition": "examine closely and carefully",
+      "example": "Inspectors scrutinize each joint for hidden cracks.",
+      "cloze": "Inspectors ______ each joint for hidden cracks."
+    },
+    {
+      "id": "rs2-v-analyze",
+      "word": "analyze",
+      "category": "Evidence and reasoning",
+      "definition": "examine parts or patterns to understand something",
+      "example": "We analyze each recording before assigning a speaker label.",
+      "cloze": "We ______ each recording before assigning a speaker label."
+    },
+    {
+      "id": "rs2-v-discern",
+      "word": "discern",
+      "category": "Evidence and reasoning",
+      "definition": "perceive or distinguish something difficult to notice",
+      "example": "Only after adjusting the lamp could Leo discern the pencil marks.",
+      "cloze": "Only after adjusting the lamp could Leo ______ the pencil marks."
+    },
+    {
+      "id": "rs2-v-assert",
+      "word": "assert",
+      "category": "Arguments and claims",
+      "definition": "state firmly",
+      "example": "The witnesses assert that the gates were already closed.",
+      "cloze": "The witnesses ______ that the gates were already closed."
+    },
+    {
+      "id": "rs2-v-contend",
+      "word": "contend",
+      "category": "Arguments and claims",
+      "definition": "argue in favor of a position",
+      "example": "Some planners contend that the extra lane will not reduce traffic.",
+      "cloze": "Some planners ______ that the extra lane will not reduce traffic."
+    },
+    {
+      "id": "rs2-v-posit",
+      "word": "posit",
+      "category": "Arguments and claims",
+      "definition": "put forward as a basis for discussion or reasoning",
+      "example": "The authors posit a connection between shade and soil moisture.",
+      "cloze": "The authors ______ a connection between shade and soil moisture."
+    },
+    {
+      "id": "rs2-v-postulate",
+      "word": "postulate",
+      "category": "Arguments and claims",
+      "definition": "propose an assumption or principle",
+      "example": "The model’s designers postulate that each household makes one trip.",
+      "cloze": "The model’s designers ______ that each household makes one trip."
+    },
+    {
+      "id": "rs2-v-hypothesize",
+      "word": "hypothesize",
+      "category": "Arguments and claims",
+      "definition": "propose a testable explanation",
+      "example": "Researchers hypothesize that cooler nights delay germination.",
+      "cloze": "Researchers ______ that cooler nights delay germination."
+    },
+    {
+      "id": "rs2-v-speculate",
+      "word": "speculate",
+      "category": "Arguments and claims",
+      "definition": "form an explanation without firm evidence",
+      "example": "Neighbors speculate about why the empty station still lights up.",
+      "cloze": "Neighbors ______ about why the empty station still lights up."
+    },
+    {
+      "id": "rs2-v-conjecture",
+      "word": "conjecture",
+      "category": "Arguments and claims",
+      "definition": "a conclusion or guess based on incomplete information",
+      "example": "The guide presents the tunnel’s original use as conjecture.",
+      "cloze": "The guide presents the tunnel’s original use as ______."
+    },
+    {
+      "id": "rs2-v-propose",
+      "word": "propose",
+      "category": "Arguments and claims",
+      "definition": "suggest a plan or explanation for consideration",
+      "example": "The students propose moving the printer nearer the entrance.",
+      "cloze": "The students ______ moving the printer nearer the entrance."
+    },
+    {
+      "id": "rs2-v-maintain",
+      "word": "maintain",
+      "category": "Arguments and claims",
+      "definition": "continue to hold or state a position",
+      "example": "Several editors maintain that the ending should remain unchanged.",
+      "cloze": "Several editors ______ that the ending should remain unchanged."
+    },
+    {
+      "id": "rs2-v-advocate",
+      "word": "advocate",
+      "category": "Arguments and claims",
+      "definition": "publicly support an idea or action",
+      "example": "Local organizers advocate longer opening hours at the library.",
+      "cloze": "Local organizers ______ longer opening hours at the library."
+    },
+    {
+      "id": "rs2-v-endorse",
+      "word": "endorse",
+      "category": "Arguments and claims",
+      "definition": "give approval or support to",
+      "example": "The committee voted to endorse the updated timetable.",
+      "cloze": "The committee voted to ______ the updated timetable."
+    },
+    {
+      "id": "rs2-v-defend",
+      "word": "defend",
+      "category": "Arguments and claims",
+      "definition": "support a position against criticism",
+      "example": "The designer had to defend her choice of a cheaper, lighter frame.",
+      "cloze": "The designer had to ______ her choice of a cheaper, lighter frame."
+    },
+    {
+      "id": "rs2-v-concede",
+      "word": "concede",
+      "category": "Arguments and claims",
+      "definition": "admit that a point is valid, often reluctantly",
+      "example": "I concede that the older route has a better view.",
+      "cloze": "I ______ that the older route has a better view."
+    },
+    {
+      "id": "rs2-v-acknowledge",
+      "word": "acknowledge",
+      "category": "Arguments and claims",
+      "definition": "recognize the truth or existence of something",
+      "example": "The authors acknowledge the limited range of their sample.",
+      "cloze": "The authors ______ the limited range of their sample."
+    },
+    {
+      "id": "rs2-v-qualify",
+      "word": "qualify",
+      "category": "Arguments and claims",
+      "definition": "limit or modify a statement to make it more precise",
+      "example": "The results qualify the claim that every material dries at the same rate.",
+      "cloze": "The results ______ the claim that every material dries at the same rate."
+    },
+    {
+      "id": "rs2-v-contest",
+      "word": "contest",
+      "category": "Arguments and claims",
+      "definition": "challenge or dispute",
+      "example": "Residents can contest a fine by providing a dated receipt.",
+      "cloze": "Residents can ______ a fine by providing a dated receipt."
+    },
+    {
+      "id": "rs2-v-dispute",
+      "word": "dispute",
+      "category": "Arguments and claims",
+      "definition": "question the truth or validity of",
+      "example": "The neighbors dispute the surveyor’s account of the boundary.",
+      "cloze": "The neighbors ______ the surveyor’s account of the boundary."
+    },
+    {
+      "id": "rs2-v-undermine",
+      "word": "undermine",
+      "category": "Arguments and claims",
+      "definition": "weaken the basis or credibility of",
+      "example": "One ambiguous label can undermine confidence in the whole exhibit.",
+      "cloze": "One ambiguous label can ______ confidence in the whole exhibit."
+    },
+    {
+      "id": "rs2-v-bolster",
+      "word": "bolster",
+      "category": "Arguments and claims",
+      "definition": "strengthen or support",
+      "example": "The inspection records bolster the crew’s explanation for the delay.",
+      "cloze": "The inspection records ______ the crew’s explanation for the delay."
+    },
+    {
+      "id": "rs2-v-justify",
+      "word": "justify",
+      "category": "Arguments and claims",
+      "definition": "give good reasons for",
+      "example": "A small efficiency gain may not justify replacing every cabinet.",
+      "cloze": "A small efficiency gain may not ______ replacing every cabinet."
+    },
+    {
+      "id": "rs2-v-alter",
+      "word": "alter",
+      "category": "Change and continuity",
+      "definition": "change in some way",
+      "example": "Higher water levels could alter the shape of the riverbank.",
+      "cloze": "Higher water levels could ______ the shape of the riverbank."
+    },
+    {
+      "id": "rs2-v-modify",
+      "word": "modify",
+      "category": "Change and continuity",
+      "definition": "make a partial change to",
+      "example": "We can modify the latch without replacing the door.",
+      "cloze": "We can ______ the latch without replacing the door."
+    },
+    {
+      "id": "rs2-v-adapt",
+      "word": "adapt",
+      "category": "Change and continuity",
+      "definition": "adjust to suit a new use or condition",
+      "example": "The players adapt their routines when practice moves outdoors.",
+      "cloze": "The players ______ their routines when practice moves outdoors."
+    },
+    {
+      "id": "rs2-v-revise",
+      "word": "revise",
+      "category": "Change and continuity",
+      "definition": "reconsider and change a text, plan, or estimate",
+      "example": "The editor plans to revise the opening sentence.",
+      "cloze": "The editor plans to ______ the opening sentence."
+    },
+    {
+      "id": "rs2-v-transform",
+      "word": "transform",
+      "category": "Change and continuity",
+      "definition": "change greatly in form or appearance",
+      "example": "A wider doorway can transform how the crowded lobby feels.",
+      "cloze": "A wider doorway can ______ how the crowded lobby feels."
+    },
+    {
+      "id": "rs2-v-convert",
+      "word": "convert",
+      "category": "Change and continuity",
+      "definition": "change from one form, use, or system to another",
+      "example": "Volunteers will convert the empty kiosk into a tool shed.",
+      "cloze": "Volunteers will ______ the empty kiosk into a tool shed."
+    },
+    {
+      "id": "rs2-v-evolve",
+      "word": "evolve",
+      "category": "Change and continuity",
+      "definition": "develop gradually over time",
+      "example": "Local expressions evolve as speakers borrow from neighbors.",
+      "cloze": "Local expressions ______ as speakers borrow from neighbors."
+    },
+    {
+      "id": "rs2-v-emerge",
+      "word": "emerge",
+      "category": "Change and continuity",
+      "definition": "come into view or become apparent",
+      "example": "A repetition began to emerge in the interview transcripts.",
+      "cloze": "A repetition began to ______ in the interview transcripts."
+    },
+    {
+      "id": "rs2-v-persist",
+      "word": "persist",
+      "category": "Change and continuity",
+      "definition": "continue despite time or difficulty",
+      "example": "Some chalk marks persist even after light rain.",
+      "cloze": "Some chalk marks ______ even after light rain."
+    },
+    {
+      "id": "rs2-v-endure",
+      "word": "endure",
+      "category": "Change and continuity",
+      "definition": "last or withstand difficult conditions",
+      "example": "The cloth must endure months of direct sun.",
+      "cloze": "The cloth must ______ months of direct sun."
+    },
+    {
+      "id": "rs2-v-retain",
+      "word": "retain",
+      "category": "Change and continuity",
+      "definition": "keep or continue to have",
+      "example": "The revision will retain the narrator’s last line.",
+      "cloze": "The revision will ______ the narrator’s last line."
+    },
+    {
+      "id": "rs2-v-preserve",
+      "word": "preserve",
+      "category": "Change and continuity",
+      "definition": "keep from loss, damage, or major change",
+      "example": "The archivist uses a padded case to preserve the binding.",
+      "cloze": "The archivist uses a padded case to ______ the binding."
+    },
+    {
+      "id": "rs2-v-restore",
+      "word": "restore",
+      "category": "Change and continuity",
+      "definition": "return something to an earlier condition",
+      "example": "Careful cleaning may restore the paint’s original brightness.",
+      "cloze": "Careful cleaning may ______ the paint’s original brightness."
+    },
+    {
+      "id": "rs2-v-reinstate",
+      "word": "reinstate",
+      "category": "Change and continuity",
+      "definition": "bring back into use or position",
+      "example": "The office may reinstate weekend pickup after the trial.",
+      "cloze": "The office may ______ weekend pickup after the trial."
+    },
+    {
+      "id": "rs2-v-supersede",
+      "word": "supersede",
+      "category": "Change and continuity",
+      "definition": "replace something older or less effective",
+      "example": "A signed addendum will supersede the earlier schedule.",
+      "cloze": "A signed addendum will ______ the earlier schedule."
+    },
+    {
+      "id": "rs2-v-displace",
+      "word": "displace",
+      "category": "Change and continuity",
+      "definition": "take the place of or move out of position",
+      "example": "The new method may displace the slower manual check.",
+      "cloze": "The new method may ______ the slower manual check."
+    },
+    {
+      "id": "rs2-v-substitute",
+      "word": "substitute",
+      "category": "Change and continuity",
+      "definition": "use one thing in place of another",
+      "example": "You can substitute cotton for linen in the first test.",
+      "cloze": "You can ______ cotton for linen in the first test."
+    },
+    {
+      "id": "rs2-v-eliminate",
+      "word": "eliminate",
+      "category": "Change and continuity",
+      "definition": "remove completely",
+      "example": "A second clamp might eliminate the vibration.",
+      "cloze": "A second clamp might ______ the vibration."
+    },
+    {
+      "id": "rs2-v-stagnate",
+      "word": "stagnate",
+      "category": "Change and continuity",
+      "definition": "stop developing or making progress",
+      "example": "Attendance may stagnate if no new sessions are offered.",
+      "cloze": "Attendance may ______ if no new sessions are offered."
+    },
+    {
+      "id": "rs2-v-accelerate",
+      "word": "accelerate",
+      "category": "Change and continuity",
+      "definition": "increase in rate or speed",
+      "example": "Warmer conditions can accelerate the drying process.",
+      "cloze": "Warmer conditions can ______ the drying process."
+    },
+    {
+      "id": "rs2-v-mitigate",
+      "word": "mitigate",
+      "category": "Effects and constraints",
+      "definition": "make a problem or harm less severe",
+      "example": "Padding will mitigate the effect of minor bumps.",
+      "cloze": "Padding will ______ the effect of minor bumps."
+    },
+    {
+      "id": "rs2-v-alleviate",
+      "word": "alleviate",
+      "category": "Effects and constraints",
+      "definition": "relieve or reduce a burden, pain, or problem",
+      "example": "Extra volunteers helped alleviate the wait at the door.",
+      "cloze": "Extra volunteers helped ______ the wait at the door."
+    },
+    {
+      "id": "rs2-v-ameliorate",
+      "word": "ameliorate",
+      "category": "Effects and constraints",
+      "definition": "improve an unfavorable condition",
+      "example": "Better drainage could ameliorate conditions on the lower trail.",
+      "cloze": "Better drainage could ______ conditions on the lower trail."
+    },
+    {
+      "id": "rs2-v-attenuate",
+      "word": "attenuate",
+      "category": "Effects and constraints",
+      "definition": "reduce force, intensity, or effect",
+      "example": "The curtains attenuate the echo from the high ceiling.",
+      "cloze": "The curtains ______ the echo from the high ceiling."
+    },
+    {
+      "id": "rs2-v-exacerbate",
+      "word": "exacerbate",
+      "category": "Effects and constraints",
+      "definition": "make a problem worse",
+      "example": "A second closure would exacerbate delays on the route.",
+      "cloze": "A second closure would ______ delays on the route."
+    },
+    {
+      "id": "rs2-v-amplify",
+      "word": "amplify",
+      "category": "Effects and constraints",
+      "definition": "increase the strength or amount of",
+      "example": "The curved wall can amplify voices near the stage.",
+      "cloze": "The curved wall can ______ voices near the stage."
+    },
+    {
+      "id": "rs2-v-augment",
+      "word": "augment",
+      "category": "Effects and constraints",
+      "definition": "increase by adding to",
+      "example": "A small grant will augment the existing repair fund.",
+      "cloze": "A small grant will ______ the existing repair fund."
+    },
+    {
+      "id": "rs2-v-inhibit",
+      "word": "inhibit",
+      "category": "Effects and constraints",
+      "definition": "restrain or slow a process",
+      "example": "Cold soil can inhibit early root growth.",
+      "cloze": "Cold soil can ______ early root growth."
+    },
+    {
+      "id": "rs2-v-impede",
+      "word": "impede",
+      "category": "Effects and constraints",
+      "definition": "hinder progress or movement",
+      "example": "Loose stones impede carts on the upper path.",
+      "cloze": "Loose stones ______ carts on the upper path."
+    },
+    {
+      "id": "rs2-v-facilitate",
+      "word": "facilitate",
+      "category": "Effects and constraints",
+      "definition": "make a process easier",
+      "example": "Color labels facilitate sorting in low light.",
+      "cloze": "Color labels ______ sorting in low light."
+    },
+    {
+      "id": "rs2-v-enable",
+      "word": "enable",
+      "category": "Effects and constraints",
+      "definition": "make possible or provide the means for",
+      "example": "A longer cable would enable the crew to work from the dock.",
+      "cloze": "A longer cable would ______ the crew to work from the dock."
+    },
+    {
+      "id": "rs2-v-constrain",
+      "word": "constrain",
+      "category": "Effects and constraints",
+      "definition": "limit what can happen",
+      "example": "The short growing season will constrain the number of planting trials.",
+      "cloze": "The short growing season will ______ the number of planting trials."
+    },
+    {
+      "id": "rs2-v-curtail",
+      "word": "curtail",
+      "category": "Effects and constraints",
+      "definition": "reduce in extent or duration",
+      "example": "The library may curtail Sunday service during repairs.",
+      "cloze": "The library may ______ Sunday service during repairs."
+    },
+    {
+      "id": "rs2-v-offset",
+      "word": "offset",
+      "category": "Effects and constraints",
+      "definition": "counterbalance an effect or cost",
+      "example": "Lower rent may offset a longer commute.",
+      "cloze": "Lower rent may ______ a longer commute."
+    },
+    {
+      "id": "rs2-v-counteract",
+      "word": "counteract",
+      "category": "Effects and constraints",
+      "definition": "act against and reduce an effect",
+      "example": "The fabric cover can counteract glare from the glass.",
+      "cloze": "The fabric cover can ______ glare from the glass."
+    },
+    {
+      "id": "rs2-v-trigger",
+      "word": "trigger",
+      "category": "Effects and constraints",
+      "definition": "cause something to begin",
+      "example": "A sharp temperature drop can trigger the warning light.",
+      "cloze": "A sharp temperature drop can ______ the warning light."
+    },
+    {
+      "id": "rs2-v-prompt",
+      "word": "prompt",
+      "category": "Effects and constraints",
+      "definition": "cause or encourage an action",
+      "example": "The missing tag may prompt a search of older records.",
+      "cloze": "The missing tag may ______ a search of older records."
+    },
+    {
+      "id": "rs2-v-yield",
+      "word": "yield",
+      "category": "Effects and constraints",
+      "definition": "produce a result or amount",
+      "example": "A slower survey can yield more accurate estimates.",
+      "cloze": "A slower survey can ______ more accurate estimates."
+    },
+    {
+      "id": "rs2-v-engender",
+      "word": "engender",
+      "category": "Effects and constraints",
+      "definition": "cause a feeling or condition to develop",
+      "example": "Transparent decisions can engender trust in the committee.",
+      "cloze": "Transparent decisions can ______ trust in the committee."
+    },
+    {
+      "id": "rs2-v-preclude",
+      "word": "preclude",
+      "category": "Effects and constraints",
+      "definition": "make an outcome impossible or prevent it",
+      "example": "A lack of staff may preclude opening the gallery tonight.",
+      "cloze": "A lack of staff may ______ opening the gallery tonight."
+    },
+    {
+      "id": "rs2-v-explicit",
+      "word": "explicit",
+      "category": "Clarity and expression",
+      "definition": "stated clearly and directly",
+      "example": "The instructions give an explicit limit on ticket transfers.",
+      "cloze": "The instructions give an ______ limit on ticket transfers."
+    },
+    {
+      "id": "rs2-v-implicit",
+      "word": "implicit",
+      "category": "Clarity and expression",
+      "definition": "understood without being stated directly",
+      "example": "An implicit rule kept conversations quiet near the desks.",
+      "cloze": "An ______ rule kept conversations quiet near the desks."
+    },
+    {
+      "id": "rs2-v-ambiguous",
+      "word": "ambiguous",
+      "category": "Clarity and expression",
+      "definition": "having more than one reasonable interpretation",
+      "example": "The ambiguous sign left drivers unsure which lane to use.",
+      "cloze": "The ______ sign left drivers unsure which lane to use."
+    },
+    {
+      "id": "rs2-v-equivocal",
+      "word": "equivocal",
+      "category": "Clarity and expression",
+      "definition": "not clearly committed to one interpretation or position",
+      "example": "The official’s equivocal reply left the start date uncertain.",
+      "cloze": "The official’s ______ reply left the start date uncertain."
+    },
+    {
+      "id": "rs2-v-unambiguous",
+      "word": "unambiguous",
+      "category": "Clarity and expression",
+      "definition": "clear enough to allow only one interpretation",
+      "example": "The new wording provides an unambiguous deadline.",
+      "cloze": "The new wording provides an ______ deadline."
+    },
+    {
+      "id": "rs2-v-lucid",
+      "word": "lucid",
+      "category": "Clarity and expression",
+      "definition": "clear and easy to understand",
+      "example": "The guide offers a lucid explanation of the numbering system.",
+      "cloze": "The guide offers a ______ explanation of the numbering system."
+    },
+    {
+      "id": "rs2-v-coherent",
+      "word": "coherent",
+      "category": "Clarity and expression",
+      "definition": "logically connected and understandable as a whole",
+      "example": "The editor arranged the fragments into a coherent account.",
+      "cloze": "The editor arranged the fragments into a ______ account."
+    },
+    {
+      "id": "rs2-v-concise",
+      "word": "concise",
+      "category": "Clarity and expression",
+      "definition": "brief while still conveying the needed meaning",
+      "example": "A concise caption let visitors keep looking at the painting.",
+      "cloze": "A ______ caption let visitors keep looking at the painting."
+    },
+    {
+      "id": "rs2-v-succinct",
+      "word": "succinct",
+      "category": "Clarity and expression",
+      "definition": "expressed in very few effective words",
+      "example": "The report ends with a succinct list of next steps.",
+      "cloze": "The report ends with a ______ list of next steps."
+    },
+    {
+      "id": "rs2-v-verbose",
+      "word": "verbose",
+      "category": "Clarity and expression",
+      "definition": "using more words than necessary",
+      "example": "The verbose announcement repeated the date in three paragraphs.",
+      "cloze": "The ______ announcement repeated the date in three paragraphs."
+    },
+    {
+      "id": "rs2-v-redundant",
+      "word": "redundant",
+      "category": "Clarity and expression",
+      "definition": "unnecessary because it repeats or duplicates something",
+      "example": "Once the map was printed on the ticket, the leaflet was redundant.",
+      "cloze": "Once the map was printed on the ticket, the leaflet was ______."
+    },
+    {
+      "id": "rs2-v-obscure",
+      "word": "obscure",
+      "category": "Clarity and expression",
+      "definition": "make unclear or hard to see",
+      "example": "A glare on the glass can obscure the smallest lettering.",
+      "cloze": "A glare on the glass can ______ the smallest lettering."
+    },
+    {
+      "id": "rs2-v-elucidate",
+      "word": "elucidate",
+      "category": "Clarity and expression",
+      "definition": "make a difficult idea clear",
+      "example": "The diagrams elucidate the difference between the two pulleys.",
+      "cloze": "The diagrams ______ the difference between the two pulleys."
+    },
+    {
+      "id": "rs2-v-articulate",
+      "word": "articulate",
+      "category": "Clarity and expression",
+      "definition": "express an idea clearly",
+      "example": "She asked each volunteer to articulate the reason for the rule.",
+      "cloze": "She asked each volunteer to ______ the reason for the rule."
+    },
+    {
+      "id": "rs2-v-restate",
+      "word": "restate",
+      "category": "Clarity and expression",
+      "definition": "express again, often in different words",
+      "example": "Can you restate the request without using the word “soon”?",
+      "cloze": "Can you ______ the request without using the word “soon”?"
+    },
+    {
+      "id": "rs2-v-paraphrase",
+      "word": "paraphrase",
+      "category": "Clarity and expression",
+      "definition": "express another text or statement in different words",
+      "example": "Students paraphrase the speech before comparing its arguments.",
+      "cloze": "Students ______ the speech before comparing its arguments."
+    },
+    {
+      "id": "rs2-v-summarize",
+      "word": "summarize",
+      "category": "Clarity and expression",
+      "definition": "give a brief statement of the main points",
+      "example": "The opening lines summarize the survey’s findings.",
+      "cloze": "The opening lines ______ the survey’s findings."
+    },
+    {
+      "id": "rs2-v-synthesize",
+      "word": "synthesize",
+      "category": "Clarity and expression",
+      "definition": "combine separate ideas into a new or coherent whole",
+      "example": "The essay will synthesize interviews and maps into one account.",
+      "cloze": "The essay will ______ interviews and maps into one account."
+    },
+    {
+      "id": "rs2-v-elaborate",
+      "word": "elaborate",
+      "category": "Clarity and expression",
+      "definition": "add details or develop an idea further",
+      "example": "The teacher invited him to elaborate on his first example.",
+      "cloze": "The teacher invited him to ______ on his first example."
+    },
+    {
+      "id": "rs2-v-illustrate",
+      "word": "illustrate",
+      "category": "Clarity and expression",
+      "definition": "make an idea clear with an example or picture",
+      "example": "The first two cases illustrate the dangers of a small sample.",
+      "cloze": "The first two cases ______ the dangers of a small sample."
+    },
+    {
+      "id": "rs2-v-analogous",
+      "word": "analogous",
+      "category": "Scope and comparison",
+      "definition": "similar in a way that supports comparison",
+      "example": "The two filters are analogous because both sort by particle size.",
+      "cloze": "The two filters are ______ because both sort by particle size."
+    },
+    {
+      "id": "rs2-v-comparable",
+      "word": "comparable",
+      "category": "Scope and comparison",
+      "definition": "similar enough to compare or of roughly equal quality",
+      "example": "The two editions are comparable in length and detail.",
+      "cloze": "The two editions are ______ in length and detail."
+    },
+    {
+      "id": "rs2-v-equivalent",
+      "word": "equivalent",
+      "category": "Scope and comparison",
+      "definition": "equal in value, amount, or effect",
+      "example": "The fractions are equivalent even though they look different.",
+      "cloze": "The fractions are ______ even though they look different."
+    },
+    {
+      "id": "rs2-v-commensurate",
+      "word": "commensurate",
+      "category": "Scope and comparison",
+      "definition": "matching in size, degree, or importance",
+      "example": "The stipend should be commensurate with the hours required.",
+      "cloze": "The stipend should be ______ with the hours required."
+    },
+    {
+      "id": "rs2-v-disparate",
+      "word": "disparate",
+      "category": "Scope and comparison",
+      "definition": "substantially different in kind",
+      "example": "The archive joins disparate records, from letters to weather charts.",
+      "cloze": "The archive joins ______ records, from letters to weather charts."
+    },
+    {
+      "id": "rs2-v-divergent",
+      "word": "divergent",
+      "category": "Scope and comparison",
+      "definition": "developing in different directions or showing different views",
+      "example": "The researchers reached divergent conclusions from the same chart.",
+      "cloze": "The researchers reached ______ conclusions from the same chart."
+    },
+    {
+      "id": "rs2-v-convergent",
+      "word": "convergent",
+      "category": "Scope and comparison",
+      "definition": "moving toward a shared point or result",
+      "example": "Two interviews provide convergent evidence about the earlier closing.",
+      "cloze": "Two interviews provide ______ evidence about the earlier closing."
+    },
+    {
+      "id": "rs2-v-contrast",
+      "word": "contrast",
+      "category": "Scope and comparison",
+      "definition": "show or emphasize differences",
+      "example": "The essay will contrast the pilot’s approach with the captain’s.",
+      "cloze": "The essay will ______ the pilot’s approach with the captain’s."
+    },
+    {
+      "id": "rs2-v-differentiate",
+      "word": "differentiate",
+      "category": "Scope and comparison",
+      "definition": "recognize or mark a difference between",
+      "example": "A reader must differentiate observed results from guesses.",
+      "cloze": "A reader must ______ observed results from guesses."
+    },
+    {
+      "id": "rs2-v-distinguish",
+      "word": "distinguish",
+      "category": "Scope and comparison",
+      "definition": "recognize or show what makes one thing different",
+      "example": "The tiny marks distinguish the first printing from later copies.",
+      "cloze": "The tiny marks ______ the first printing from later copies."
+    },
+    {
+      "id": "rs2-v-conflate",
+      "word": "conflate",
+      "category": "Scope and comparison",
+      "definition": "combine two things that should be kept separate",
+      "example": "Do not conflate the number of visitors with the number of tickets sold.",
+      "cloze": "Do not ______ the number of visitors with the number of tickets sold."
+    },
+    {
+      "id": "rs2-v-juxtapose",
+      "word": "juxtapose",
+      "category": "Scope and comparison",
+      "definition": "place side by side for comparison",
+      "example": "Curators juxtapose an early sketch with the completed piece.",
+      "cloze": "Curators ______ an early sketch with the completed piece."
+    },
+    {
+      "id": "rs2-v-correspond",
+      "word": "correspond",
+      "category": "Scope and comparison",
+      "definition": "match or be closely related",
+      "example": "Check whether the new codes correspond to the original locations.",
+      "cloze": "Check whether the new codes ______ to the original locations."
+    },
+    {
+      "id": "rs2-v-overlap",
+      "word": "overlap",
+      "category": "Scope and comparison",
+      "definition": "share some but not all parts or coverage",
+      "example": "The afternoon sessions overlap for twenty minutes.",
+      "cloze": "The afternoon sessions ______ for twenty minutes."
+    },
+    {
+      "id": "rs2-v-encompass",
+      "word": "encompass",
+      "category": "Scope and comparison",
+      "definition": "include or contain within a scope",
+      "example": "The interviews encompass three generations of workers.",
+      "cloze": "The interviews ______ three generations of workers."
+    },
+    {
+      "id": "rs2-v-comprise",
+      "word": "comprise",
+      "category": "Scope and comparison",
+      "definition": "consist of or be made up of",
+      "example": "Four small sheds comprise most of the storage area.",
+      "cloze": "Four small sheds ______ most of the storage area."
+    },
+    {
+      "id": "rs2-v-inclusive",
+      "word": "inclusive",
+      "category": "Scope and comparison",
+      "definition": "including all relevant groups or categories",
+      "example": "The organizers chose an inclusive format that accommodated remote speakers.",
+      "cloze": "The organizers chose an ______ format that accommodated remote speakers."
+    },
+    {
+      "id": "rs2-v-exclusive",
+      "word": "exclusive",
+      "category": "Scope and comparison",
+      "definition": "limited to a particular group or condition",
+      "example": "The morning workshops are exclusive to first-time volunteers.",
+      "cloze": "The morning workshops are ______ to first-time volunteers."
+    },
+    {
+      "id": "rs2-v-prevalent",
+      "word": "prevalent",
+      "category": "Scope and comparison",
+      "definition": "common or widespread",
+      "example": "Canvas roofs were prevalent in the earliest photographs.",
+      "cloze": "Canvas roofs were ______ in the earliest photographs."
+    },
+    {
+      "id": "rs2-v-ubiquitous",
+      "word": "ubiquitous",
+      "category": "Scope and comparison",
+      "definition": "present or found almost everywhere",
+      "example": "Color codes became ubiquitous once every route had a printed map.",
+      "cloze": "Color codes became ______ once every route had a printed map."
+    },
+    {
+      "id": "rs2-v-precede",
+      "word": "precede",
+      "category": "Structure and sequence",
+      "definition": "come before in time or order",
+      "example": "A set of warnings will precede the main instructions.",
+      "cloze": "A set of warnings will ______ the main instructions."
+    },
+    {
+      "id": "rs2-v-succeed",
+      "word": "succeed",
+      "category": "Structure and sequence",
+      "definition": "come after in time or take the place of",
+      "example": "A brief inspection will succeed the first trial.",
+      "cloze": "A brief inspection will ______ the first trial."
+    },
+    {
+      "id": "rs2-v-antecedent",
+      "word": "antecedent",
+      "category": "Structure and sequence",
+      "definition": "something that comes before and may explain a later event",
+      "example": "The earlier agreement was an antecedent of the current policy.",
+      "cloze": "The earlier agreement was an ______ of the current policy."
+    },
+    {
+      "id": "rs2-v-subsequent",
+      "word": "subsequent",
+      "category": "Structure and sequence",
+      "definition": "coming after something else",
+      "example": "The subsequent meeting dealt only with funding.",
+      "cloze": "The ______ meeting dealt only with funding."
+    },
+    {
+      "id": "rs2-v-successive",
+      "word": "successive",
+      "category": "Structure and sequence",
+      "definition": "following one after another",
+      "example": "Three successive storms kept the path closed for a week.",
+      "cloze": "Three ______ storms kept the path closed for a week."
+    },
+    {
+      "id": "rs2-v-simultaneous",
+      "word": "simultaneous",
+      "category": "Structure and sequence",
+      "definition": "happening at the same time",
+      "example": "The simultaneous announcements confused travelers on both platforms.",
+      "cloze": "The ______ announcements confused travelers on both platforms."
+    },
+    {
+      "id": "rs2-v-concurrent",
+      "word": "concurrent",
+      "category": "Structure and sequence",
+      "definition": "occurring during the same period",
+      "example": "The two concurrent workshops share a waiting area.",
+      "cloze": "The two ______ workshops share a waiting area."
+    },
+    {
+      "id": "rs2-v-chronological",
+      "word": "chronological",
+      "category": "Structure and sequence",
+      "definition": "arranged in the order events happened",
+      "example": "The journal keeps a chronological record of repairs.",
+      "cloze": "The journal keeps a ______ record of repairs."
+    },
+    {
+      "id": "rs2-v-intermittent",
+      "word": "intermittent",
+      "category": "Structure and sequence",
+      "definition": "starting and stopping at intervals",
+      "example": "The intermittent rain made it hard to schedule the event.",
+      "cloze": "The ______ rain made it hard to schedule the event."
+    },
+    {
+      "id": "rs2-v-sporadic",
+      "word": "sporadic",
+      "category": "Structure and sequence",
+      "definition": "occurring irregularly and infrequently",
+      "example": "Sporadic bursts of static interrupted the recording.",
+      "cloze": "______ bursts of static interrupted the recording."
+    },
+    {
+      "id": "rs2-v-periodic",
+      "word": "periodic",
+      "category": "Structure and sequence",
+      "definition": "happening at regular intervals",
+      "example": "Periodic inspections catch most loose fittings.",
+      "cloze": "______ inspections catch most loose fittings."
+    },
+    {
+      "id": "rs2-v-prolonged",
+      "word": "prolonged",
+      "category": "Structure and sequence",
+      "definition": "continuing for a long time",
+      "example": "A prolonged closure would require storing the equipment elsewhere.",
+      "cloze": "A ______ closure would require storing the equipment elsewhere."
+    },
+    {
+      "id": "rs2-v-transient",
+      "word": "transient",
+      "category": "Structure and sequence",
+      "definition": "lasting only briefly",
+      "example": "A transient shade fell across the field as a cloud passed.",
+      "cloze": "A ______ shade fell across the field as a cloud passed."
+    },
+    {
+      "id": "rs2-v-ephemeral",
+      "word": "ephemeral",
+      "category": "Structure and sequence",
+      "definition": "lasting a very short time",
+      "example": "The artist used sand to create an ephemeral pattern.",
+      "cloze": "The artist used sand to create an ______ pattern."
+    },
+    {
+      "id": "rs2-v-incipient",
+      "word": "incipient",
+      "category": "Structure and sequence",
+      "definition": "beginning to appear or develop",
+      "example": "Inspectors noticed an incipient crack beneath the bolt.",
+      "cloze": "Inspectors noticed an ______ crack beneath the bolt."
+    },
+    {
+      "id": "rs2-v-preliminary",
+      "word": "preliminary",
+      "category": "Structure and sequence",
+      "definition": "coming before the main action or conclusion",
+      "example": "The preliminary estimate covered only the smallest room.",
+      "cloze": "The ______ estimate covered only the smallest room."
+    },
+    {
+      "id": "rs2-v-eventual",
+      "word": "eventual",
+      "category": "Structure and sequence",
+      "definition": "occurring in the end, after other events",
+      "example": "The eventual decision matched the committee’s first proposal.",
+      "cloze": "The ______ decision matched the committee’s first proposal."
+    },
+    {
+      "id": "rs2-v-culminate",
+      "word": "culminate",
+      "category": "Structure and sequence",
+      "definition": "reach a final or important stage",
+      "example": "The two weeks of rehearsals culminate in a public performance.",
+      "cloze": "The two weeks of rehearsals ______ in a public performance."
+    },
+    {
+      "id": "rs2-v-recur",
+      "word": "recur",
+      "category": "Structure and sequence",
+      "definition": "happen again",
+      "example": "If the problem should recur, write down the valve position.",
+      "cloze": "If the problem should ______, write down the valve position."
+    },
+    {
+      "id": "rs2-v-defer",
+      "word": "defer",
+      "category": "Structure and sequence",
+      "definition": "put off until a later time",
+      "example": "The committee will defer its vote until the missing figures arrive.",
+      "cloze": "The committee will ______ its vote until the missing figures arrive."
+    },
+    {
+      "id": "rs2-v-tentative",
+      "word": "tentative",
+      "category": "Judgment and uncertainty",
+      "definition": "provisional or not definitely settled",
+      "example": "The guide lists a tentative opening date in May.",
+      "cloze": "The guide lists a ______ opening date in May."
+    },
+    {
+      "id": "rs2-v-plausible",
+      "word": "plausible",
+      "category": "Judgment and uncertainty",
+      "definition": "reasonable enough to seem possible or true",
+      "example": "The analyst offered a plausible explanation for the two missing days.",
+      "cloze": "The analyst offered a ______ explanation for the two missing days."
+    },
+    {
+      "id": "rs2-v-probable",
+      "word": "probable",
+      "category": "Judgment and uncertainty",
+      "definition": "more likely than not",
+      "example": "A worn fitting is the probable cause of the slow leak.",
+      "cloze": "A worn fitting is the ______ cause of the slow leak."
+    },
+    {
+      "id": "rs2-v-credible",
+      "word": "credible",
+      "category": "Judgment and uncertainty",
+      "definition": "worthy of belief or confidence",
+      "example": "The account is credible because several details can be checked.",
+      "cloze": "The account is ______ because several details can be checked."
+    },
+    {
+      "id": "rs2-v-questionable",
+      "word": "questionable",
+      "category": "Judgment and uncertainty",
+      "definition": "open to doubt or criticism",
+      "example": "The unsigned invoice is a questionable source for the exact price.",
+      "cloze": "The unsigned invoice is a ______ source for the exact price."
+    },
+    {
+      "id": "rs2-v-dubious",
+      "word": "dubious",
+      "category": "Judgment and uncertainty",
+      "definition": "doubtful or not likely to be reliable",
+      "example": "The editors were dubious about a date cited without a source.",
+      "cloze": "The editors were ______ about a date cited without a source."
+    },
+    {
+      "id": "rs2-v-skeptical",
+      "word": "skeptical",
+      "category": "Judgment and uncertainty",
+      "definition": "not easily convinced; inclined to doubt",
+      "example": "The investigator remained skeptical until she saw the original records.",
+      "cloze": "The investigator remained ______ until she saw the original records."
+    },
+    {
+      "id": "rs2-v-discerning",
+      "word": "discerning",
+      "category": "Judgment and uncertainty",
+      "definition": "showing careful judgment",
+      "example": "A discerning listener could tell the recordings came from different rooms.",
+      "cloze": "A ______ listener could tell the recordings came from different rooms."
+    },
+    {
+      "id": "rs2-v-judicious",
+      "word": "judicious",
+      "category": "Judgment and uncertainty",
+      "definition": "showing good judgment",
+      "example": "A judicious cut preserved the strongest example in the essay.",
+      "cloze": "A ______ cut preserved the strongest example in the essay."
+    },
+    {
+      "id": "rs2-v-prudent",
+      "word": "prudent",
+      "category": "Judgment and uncertainty",
+      "definition": "careful about possible consequences",
+      "example": "The stewards thought it prudent to test the stairs before opening the gate.",
+      "cloze": "The stewards thought it ______ to test the stairs before opening the gate."
+    },
+    {
+      "id": "rs2-v-circumspect",
+      "word": "circumspect",
+      "category": "Judgment and uncertainty",
+      "definition": "careful to consider risks before acting or speaking",
+      "example": "The surveyor was circumspect when describing estimates based on one visit.",
+      "cloze": "The surveyor was ______ when describing estimates based on one visit."
+    },
+    {
+      "id": "rs2-v-equivocate",
+      "word": "equivocate",
+      "category": "Judgment and uncertainty",
+      "definition": "use ambiguous language to avoid a clear position",
+      "example": "A witness should not equivocate when asked which door she used.",
+      "cloze": "A witness should not ______ when asked which door she used."
+    },
+    {
+      "id": "rs2-v-uncertain",
+      "word": "uncertain",
+      "category": "Judgment and uncertainty",
+      "definition": "not known or settled",
+      "example": "The date remains uncertain because the stamp has faded.",
+      "cloze": "The date remains ______ because the stamp has faded."
+    },
+    {
+      "id": "rs2-v-inconclusive",
+      "word": "inconclusive",
+      "category": "Judgment and uncertainty",
+      "definition": "not enough to settle the question",
+      "example": "The trial was inconclusive because neither sample stayed dry.",
+      "cloze": "The trial was ______ because neither sample stayed dry."
+    },
+    {
+      "id": "rs2-v-indeterminate",
+      "word": "indeterminate",
+      "category": "Judgment and uncertainty",
+      "definition": "not fixed or precisely definable",
+      "example": "The duration of the first closure is indeterminate from these records.",
+      "cloze": "The duration of the first closure is ______ from these records."
+    },
+    {
+      "id": "rs2-v-definitive",
+      "word": "definitive",
+      "category": "Judgment and uncertainty",
+      "definition": "providing a final and decisive answer",
+      "example": "The serial number supplied definitive evidence about the machine’s origin.",
+      "cloze": "The serial number supplied ______ evidence about the machine’s origin."
+    },
+    {
+      "id": "rs2-v-conclusive",
+      "word": "conclusive",
+      "category": "Judgment and uncertainty",
+      "definition": "sufficient to settle a question",
+      "example": "No conclusive result could be drawn from two broken gauges.",
+      "cloze": "No ______ result could be drawn from two broken gauges."
+    },
+    {
+      "id": "rs2-v-undeniable",
+      "word": "undeniable",
+      "category": "Judgment and uncertainty",
+      "definition": "too clear to reasonably dispute",
+      "example": "The worn stairs show undeniable signs of repeated use.",
+      "cloze": "The worn stairs show ______ signs of repeated use."
+    },
+    {
+      "id": "rs2-v-subjective",
+      "word": "subjective",
+      "category": "Judgment and uncertainty",
+      "definition": "based on personal feelings or perspectives",
+      "example": "Ratings of comfort are partly subjective.",
+      "cloze": "Ratings of comfort are partly ______."
+    },
+    {
+      "id": "rs2-v-objective",
+      "word": "objective",
+      "category": "Judgment and uncertainty",
+      "definition": "based on observable evidence rather than personal preference",
+      "example": "Room temperature supplied an objective measure for the trial.",
+      "cloze": "Room temperature supplied an ______ measure for the trial."
+    },
+    {
+      "id": "rs2-v-arduous",
+      "word": "arduous",
+      "category": "Difficulty and effort",
+      "definition": "requiring great sustained effort",
+      "example": "The climb became arduous once rain turned the path to mud.",
+      "cloze": "The climb became ______ once rain turned the path to mud."
+    },
+    {
+      "id": "rs2-v-onerous",
+      "word": "onerous",
+      "category": "Difficulty and effort",
+      "definition": "involving a heavy burden or obligation",
+      "example": "A second set of weekly forms made the job more onerous.",
+      "cloze": "A second set of weekly forms made the job more ______."
+    },
+    {
+      "id": "rs2-v-formidable",
+      "word": "formidable",
+      "category": "Difficulty and effort",
+      "definition": "difficult enough to inspire respect or concern",
+      "example": "The steep bank was a formidable obstacle for the crew.",
+      "cloze": "The steep bank was a ______ obstacle for the crew."
+    },
+    {
+      "id": "rs2-v-laborious",
+      "word": "laborious",
+      "category": "Difficulty and effort",
+      "definition": "taking a lot of time and effort",
+      "example": "Separating photographs by hand was a laborious process.",
+      "cloze": "Separating photographs by hand was a ______ process."
+    },
+    {
+      "id": "rs2-v-strenuous",
+      "word": "strenuous",
+      "category": "Difficulty and effort",
+      "definition": "requiring intense energy or effort",
+      "example": "The final steep mile was more strenuous than the earlier six.",
+      "cloze": "The final steep mile was more ______ than the earlier six."
+    },
+    {
+      "id": "rs2-v-daunting",
+      "word": "daunting",
+      "category": "Difficulty and effort",
+      "definition": "seeming difficult enough to discourage action",
+      "example": "The pile looked daunting until they divided it into smaller batches.",
+      "cloze": "The pile looked ______ until they divided it into smaller batches."
+    },
+    {
+      "id": "rs2-v-manageable",
+      "word": "manageable",
+      "category": "Difficulty and effort",
+      "definition": "able to be handled without excessive difficulty",
+      "example": "A marked timetable made the day’s workload manageable.",
+      "cloze": "A marked timetable made the day’s workload ______."
+    },
+    {
+      "id": "rs2-v-feasible",
+      "word": "feasible",
+      "category": "Difficulty and effort",
+      "definition": "possible and practical to do",
+      "example": "A seasonal footbridge is feasible if the supports can be reused.",
+      "cloze": "A seasonal footbridge is ______ if the supports can be reused."
+    },
+    {
+      "id": "rs2-v-viable",
+      "word": "viable",
+      "category": "Difficulty and effort",
+      "definition": "capable of working or succeeding",
+      "example": "The cheaper plan is viable only if the old motor still runs.",
+      "cloze": "The cheaper plan is ______ only if the old motor still runs."
+    },
+    {
+      "id": "rs2-v-impracticable",
+      "word": "impracticable",
+      "category": "Difficulty and effort",
+      "definition": "not practical to carry out",
+      "example": "Moving the stone without machinery would be impracticable.",
+      "cloze": "Moving the stone without machinery would be ______."
+    },
+    {
+      "id": "rs2-v-futile",
+      "word": "futile",
+      "category": "Difficulty and effort",
+      "definition": "unlikely to produce any useful result",
+      "example": "Looking for the key was futile once the box had been sealed inside the wall.",
+      "cloze": "Looking for the key was ______ once the box had been sealed inside the wall."
+    },
+    {
+      "id": "rs2-v-ineffectual",
+      "word": "ineffectual",
+      "category": "Difficulty and effort",
+      "definition": "failing to achieve the intended result",
+      "example": "An ineffectual seal allowed water into the case.",
+      "cloze": "An ______ seal allowed water into the case."
+    },
+    {
+      "id": "rs2-v-efficacious",
+      "word": "efficacious",
+      "category": "Difficulty and effort",
+      "definition": "capable of producing the desired effect",
+      "example": "The insulation proved efficacious in the colder room.",
+      "cloze": "The insulation proved ______ in the colder room."
+    },
+    {
+      "id": "rs2-v-persevere",
+      "word": "persevere",
+      "category": "Difficulty and effort",
+      "definition": "continue steadily despite difficulty",
+      "example": "The volunteers chose to persevere after the first schedule failed.",
+      "cloze": "The volunteers chose to ______ after the first schedule failed."
+    },
+    {
+      "id": "rs2-v-assiduous",
+      "word": "assiduous",
+      "category": "Difficulty and effort",
+      "definition": "showing steady, careful effort",
+      "example": "Assiduous checks uncovered defects that earlier inspections had missed.",
+      "cloze": "______ checks uncovered defects that earlier inspections had missed."
+    },
+    {
+      "id": "rs2-v-meticulous",
+      "word": "meticulous",
+      "category": "Difficulty and effort",
+      "definition": "very careful about small details",
+      "example": "A meticulous copy preserved even the stray pencil marks.",
+      "cloze": "A ______ copy preserved even the stray pencil marks."
+    },
+    {
+      "id": "rs2-v-diligent",
+      "word": "diligent",
+      "category": "Difficulty and effort",
+      "definition": "working carefully and persistently",
+      "example": "The diligent technician checked each link before opening the gate.",
+      "cloze": "The ______ technician checked each link before opening the gate."
+    },
+    {
+      "id": "rs2-v-perfunctory",
+      "word": "perfunctory",
+      "category": "Difficulty and effort",
+      "definition": "done with minimal attention or effort",
+      "example": "A perfunctory check missed the loose wire.",
+      "cloze": "A ______ check missed the loose wire."
+    },
+    {
+      "id": "rs2-v-superficial",
+      "word": "superficial",
+      "category": "Difficulty and effort",
+      "definition": "concerned only with surface details rather than depth",
+      "example": "The superficial review did not address the study’s sampling method.",
+      "cloze": "The ______ review did not address the study’s sampling method."
+    },
+    {
+      "id": "rs2-v-rigorous",
+      "word": "rigorous",
+      "category": "Difficulty and effort",
+      "definition": "thorough, careful, and strict",
+      "example": "The rigorous protocol required two people to repeat each measurement.",
+      "cloze": "The ______ protocol required two people to repeat each measurement."
+    },
+    {
+      "id": "rs2-v-novel",
+      "word": "novel",
+      "category": "Novelty and tradition",
+      "definition": "new and unlike earlier approaches",
+      "example": "A novel clasp allowed the bags to close without a buckle.",
+      "cloze": "A ______ clasp allowed the bags to close without a buckle."
+    },
+    {
+      "id": "rs2-v-innovative",
+      "word": "innovative",
+      "category": "Novelty and tradition",
+      "definition": "introducing an original or improved approach",
+      "example": "The innovative design used offcuts to reinforce the edges.",
+      "cloze": "The ______ design used offcuts to reinforce the edges."
+    },
+    {
+      "id": "rs2-v-unprecedented",
+      "word": "unprecedented",
+      "category": "Novelty and tradition",
+      "definition": "never previously known or experienced",
+      "example": "The library faced unprecedented demand after the only nearby branch closed.",
+      "cloze": "The library faced ______ demand after the only nearby branch closed."
+    },
+    {
+      "id": "rs2-v-conventional",
+      "word": "conventional",
+      "category": "Novelty and tradition",
+      "definition": "following accepted or usual ways",
+      "example": "The conventional hinge lasted longer in the saltwater test.",
+      "cloze": "The ______ hinge lasted longer in the saltwater test."
+    },
+    {
+      "id": "rs2-v-orthodox",
+      "word": "orthodox",
+      "category": "Novelty and tradition",
+      "definition": "conforming to established beliefs or practices",
+      "example": "The repairer preferred the orthodox method of sewing the leaves by hand.",
+      "cloze": "The repairer preferred the ______ method of sewing the leaves by hand."
+    },
+    {
+      "id": "rs2-v-unorthodox",
+      "word": "unorthodox",
+      "category": "Novelty and tradition",
+      "definition": "not following established practices",
+      "example": "The director’s unorthodox casting drew attention to an overlooked character.",
+      "cloze": "The director’s ______ casting drew attention to an overlooked character."
+    },
+    {
+      "id": "rs2-v-customary",
+      "word": "customary",
+      "category": "Novelty and tradition",
+      "definition": "usual according to local practice",
+      "example": "It is customary to leave the exterior doors open during the fair.",
+      "cloze": "It is ______ to leave the exterior doors open during the fair."
+    },
+    {
+      "id": "rs2-v-traditional",
+      "word": "traditional",
+      "category": "Novelty and tradition",
+      "definition": "following practices handed down over time",
+      "example": "The workshop still uses a traditional method for drying paper.",
+      "cloze": "The workshop still uses a ______ method for drying paper."
+    },
+    {
+      "id": "rs2-v-obsolete",
+      "word": "obsolete",
+      "category": "Novelty and tradition",
+      "definition": "no longer in use or superseded",
+      "example": "The obsolete bearings are kept as examples, not spare parts.",
+      "cloze": "The ______ bearings are kept as examples, not spare parts."
+    },
+    {
+      "id": "rs2-v-antiquated",
+      "word": "antiquated",
+      "category": "Novelty and tradition",
+      "definition": "old-fashioned and often out of date",
+      "example": "An antiquated ticket press required two separate handles.",
+      "cloze": "An ______ ticket press required two separate handles."
+    },
+    {
+      "id": "rs2-v-anachronistic",
+      "word": "anachronistic",
+      "category": "Novelty and tradition",
+      "definition": "belonging to the wrong historical period in context",
+      "example": "A plastic badge would look anachronistic in the period drama.",
+      "cloze": "A plastic badge would look ______ in the period drama."
+    },
+    {
+      "id": "rs2-v-retrofit",
+      "word": "retrofit",
+      "category": "Novelty and tradition",
+      "definition": "add new parts or capabilities to existing equipment",
+      "example": "The crew will retrofit the lift with a quieter motor.",
+      "cloze": "The crew will ______ the lift with a quieter motor."
+    },
+    {
+      "id": "rs2-v-pioneering",
+      "word": "pioneering",
+      "category": "Novelty and tradition",
+      "definition": "among the first to develop an approach",
+      "example": "Her pioneering study showed how the sound carried through brick walls.",
+      "cloze": "Her ______ study showed how the sound carried through brick walls."
+    },
+    {
+      "id": "rs2-v-derivative",
+      "word": "derivative",
+      "category": "Novelty and tradition",
+      "definition": "largely taken from preexisting work and lacking originality",
+      "example": "The poster looked derivative beside the designer’s earlier sketches.",
+      "cloze": "The poster looked ______ beside the designer’s earlier sketches."
+    },
+    {
+      "id": "rs2-v-emulate",
+      "word": "emulate",
+      "category": "Novelty and tradition",
+      "definition": "try to match or learn from someone or something",
+      "example": "The apprentice sought to emulate the carpenter’s careful joinery.",
+      "cloze": "The apprentice sought to ______ the carpenter’s careful joinery."
+    },
+    {
+      "id": "rs2-v-imitate",
+      "word": "imitate",
+      "category": "Novelty and tradition",
+      "definition": "copy the manner or form of",
+      "example": "New birds in the courtyard began to imitate the repeated whistle.",
+      "cloze": "New birds in the courtyard began to ______ the repeated whistle."
+    },
+    {
+      "id": "rs2-v-replicate",
+      "word": "replicate",
+      "category": "Novelty and tradition",
+      "definition": "produce a close copy or repeat a result",
+      "example": "Another lab tried to replicate the original drying test.",
+      "cloze": "Another lab tried to ______ the original drying test."
+    },
+    {
+      "id": "rs2-v-reproduce",
+      "word": "reproduce",
+      "category": "Novelty and tradition",
+      "definition": "create again or make a copy of",
+      "example": "The printer can reproduce the map at three different sizes.",
+      "cloze": "The printer can ______ the map at three different sizes."
+    },
+    {
+      "id": "rs2-v-reinvent",
+      "word": "reinvent",
+      "category": "Novelty and tradition",
+      "definition": "make into a substantially different version",
+      "example": "The company hopes to reinvent the reading room as a study center.",
+      "cloze": "The company hopes to ______ the reading room as a study center."
+    },
+    {
+      "id": "rs2-v-revitalize",
+      "word": "revitalize",
+      "category": "Novelty and tradition",
+      "definition": "give new energy or life to",
+      "example": "A weekend market could revitalize the quiet station square.",
+      "cloze": "A weekend market could ______ the quiet station square."
+    },
+    {
+      "id": "rs2-v-impartial",
+      "word": "impartial",
+      "category": "People and perspective",
+      "definition": "not favoring one person or side",
+      "example": "An impartial reviewer scored both samples without seeing their labels.",
+      "cloze": "An ______ reviewer scored both samples without seeing their labels."
+    },
+    {
+      "id": "rs2-v-biased",
+      "word": "biased",
+      "category": "People and perspective",
+      "definition": "unfairly inclined toward or against something",
+      "example": "A survey of season-ticket holders alone may give a biased picture.",
+      "cloze": "A survey of season-ticket holders alone may give a ______ picture."
+    },
+    {
+      "id": "rs2-v-partial",
+      "word": "partial",
+      "category": "People and perspective",
+      "definition": "favoring one side or option",
+      "example": "The coach was partial to routines that could be rehearsed outdoors.",
+      "cloze": "The coach was ______ to routines that could be rehearsed outdoors."
+    },
+    {
+      "id": "rs2-v-detached",
+      "word": "detached",
+      "category": "People and perspective",
+      "definition": "not emotionally involved",
+      "example": "A detached observer might notice patterns that the players miss.",
+      "cloze": "A ______ observer might notice patterns that the players miss."
+    },
+    {
+      "id": "rs2-v-dispassionate",
+      "word": "dispassionate",
+      "category": "People and perspective",
+      "definition": "not influenced by strong emotion",
+      "example": "The article offers a dispassionate account of a heated meeting.",
+      "cloze": "The article offers a ______ account of a heated meeting."
+    },
+    {
+      "id": "rs2-v-empathetic",
+      "word": "empathetic",
+      "category": "People and perspective",
+      "definition": "showing understanding of another person’s feelings",
+      "example": "An empathetic interviewer gave participants time to gather their thoughts.",
+      "cloze": "An ______ interviewer gave participants time to gather their thoughts."
+    },
+    {
+      "id": "rs2-v-sympathetic",
+      "word": "sympathetic",
+      "category": "People and perspective",
+      "definition": "showing understanding or support",
+      "example": "The manager was sympathetic to volunteers who could not work nights.",
+      "cloze": "The manager was ______ to volunteers who could not work nights."
+    },
+    {
+      "id": "rs2-v-altruistic",
+      "word": "altruistic",
+      "category": "People and perspective",
+      "definition": "motivated by concern for others rather than personal gain",
+      "example": "Her altruistic decision to drive neighbors cost her several evenings.",
+      "cloze": "Her ______ decision to drive neighbors cost her several evenings."
+    },
+    {
+      "id": "rs2-v-indifferent",
+      "word": "indifferent",
+      "category": "People and perspective",
+      "definition": "showing no particular interest or preference",
+      "example": "Customers were indifferent to the cup’s new color.",
+      "cloze": "Customers were ______ to the cup’s new color."
+    },
+    {
+      "id": "rs2-v-apathetic",
+      "word": "apathetic",
+      "category": "People and perspective",
+      "definition": "showing little interest, concern, or motivation",
+      "example": "A once apathetic audience began asking questions after the demonstration.",
+      "cloze": "A once ______ audience began asking questions after the demonstration."
+    },
+    {
+      "id": "rs2-v-ambivalent",
+      "word": "ambivalent",
+      "category": "People and perspective",
+      "definition": "having mixed feelings about something",
+      "example": "Belen was ambivalent about moving to a larger, noisier studio.",
+      "cloze": "Belen was ______ about moving to a larger, noisier studio."
+    },
+    {
+      "id": "rs2-v-reluctant",
+      "word": "reluctant",
+      "category": "People and perspective",
+      "definition": "unwilling or hesitant",
+      "example": "The director was reluctant to change the ending without another rehearsal.",
+      "cloze": "The director was ______ to change the ending without another rehearsal."
+    },
+    {
+      "id": "rs2-v-receptive",
+      "word": "receptive",
+      "category": "People and perspective",
+      "definition": "willing to consider suggestions or ideas",
+      "example": "The council was receptive to a shorter trial.",
+      "cloze": "The council was ______ to a shorter trial."
+    },
+    {
+      "id": "rs2-v-resolute",
+      "word": "resolute",
+      "category": "People and perspective",
+      "definition": "firm and determined",
+      "example": "She remained resolute even after the first proposal failed.",
+      "cloze": "She remained ______ even after the first proposal failed."
+    },
+    {
+      "id": "rs2-v-complacent",
+      "word": "complacent",
+      "category": "People and perspective",
+      "definition": "too satisfied to notice a problem or risk",
+      "example": "Early success made the team complacent about checking the old bolts.",
+      "cloze": "Early success made the team ______ about checking the old bolts."
+    },
+    {
+      "id": "rs2-v-deferential",
+      "word": "deferential",
+      "category": "People and perspective",
+      "definition": "showing respect or yielding to another’s judgment",
+      "example": "The new guide was deferential to the crew’s experienced navigator.",
+      "cloze": "The new guide was ______ to the crew’s experienced navigator."
+    },
+    {
+      "id": "rs2-v-condescending",
+      "word": "condescending",
+      "category": "People and perspective",
+      "definition": "speaking or behaving as though others are inferior",
+      "example": "The instructor’s condescending tone distracted from an otherwise useful lesson.",
+      "cloze": "The instructor’s ______ tone distracted from an otherwise useful lesson."
+    },
+    {
+      "id": "rs2-v-cordial",
+      "word": "cordial",
+      "category": "People and perspective",
+      "definition": "warm and friendly",
+      "example": "A cordial exchange followed weeks of disagreement.",
+      "cloze": "A ______ exchange followed weeks of disagreement."
+    },
+    {
+      "id": "rs2-v-adversarial",
+      "word": "adversarial",
+      "category": "People and perspective",
+      "definition": "involving opposition or conflict",
+      "example": "The hearing became adversarial when each group challenged the other’s figures.",
+      "cloze": "The hearing became ______ when each group challenged the other’s figures."
+    },
+    {
+      "id": "rs2-v-collegial",
+      "word": "collegial",
+      "category": "People and perspective",
+      "definition": "cooperative and respectful among colleagues",
+      "example": "A collegial atmosphere made it easy to ask for feedback.",
+      "cloze": "A ______ atmosphere made it easy to ask for feedback."
+    },
+    {
+      "id": "rs2-v-evocative",
+      "word": "evocative",
+      "category": "Tone and literary effect",
+      "definition": "bringing strong images, memories, or feelings to mind",
+      "example": "The essay’s opening description was evocative of a quiet railway platform.",
+      "cloze": "The essay’s opening description was ______ of a quiet railway platform."
+    },
+    {
+      "id": "rs2-v-poignant",
+      "word": "poignant",
+      "category": "Tone and literary effect",
+      "definition": "deeply moving, often with sadness",
+      "example": "The empty desk made the reunion unexpectedly poignant.",
+      "cloze": "The empty desk made the reunion unexpectedly ______."
+    },
+    {
+      "id": "rs2-v-wistful",
+      "word": "wistful",
+      "category": "Tone and literary effect",
+      "definition": "showing quiet longing, often for the past",
+      "example": "A wistful note crept into his description of the old store.",
+      "cloze": "A ______ note crept into his description of the old store."
+    },
+    {
+      "id": "rs2-v-nostalgic",
+      "word": "nostalgic",
+      "category": "Tone and literary effect",
+      "definition": "feeling or expressing affection for the past",
+      "example": "The program’s nostalgic cover reproduced the first season’s poster.",
+      "cloze": "The program’s ______ cover reproduced the first season’s poster."
+    },
+    {
+      "id": "rs2-v-mournful",
+      "word": "mournful",
+      "category": "Tone and literary effect",
+      "definition": "expressing sorrow",
+      "example": "A mournful melody accompanied the nearly empty stage.",
+      "cloze": "A ______ melody accompanied the nearly empty stage."
+    },
+    {
+      "id": "rs2-v-celebratory",
+      "word": "celebratory",
+      "category": "Tone and literary effect",
+      "definition": "expressing joy or marking an achievement",
+      "example": "A celebratory banner greeted the returning rowers.",
+      "cloze": "A ______ banner greeted the returning rowers."
+    },
+    {
+      "id": "rs2-v-ironic",
+      "word": "ironic",
+      "category": "Tone and literary effect",
+      "definition": "marked by a contrast between expectation and what occurs or is meant",
+      "example": "It was ironic that the silence workshop met beside the marching band.",
+      "cloze": "It was ______ that the silence workshop met beside the marching band."
+    },
+    {
+      "id": "rs2-v-satirical",
+      "word": "satirical",
+      "category": "Tone and literary effect",
+      "definition": "using humor or exaggeration to criticize",
+      "example": "The satirical sketch mocked the committee’s endless rules.",
+      "cloze": "The ______ sketch mocked the committee’s endless rules."
+    },
+    {
+      "id": "rs2-v-sardonic",
+      "word": "sardonic",
+      "category": "Tone and literary effect",
+      "definition": "mocking in a sharp or bitter way",
+      "example": "A sardonic reply was all the chair offered after the repeated excuse.",
+      "cloze": "A ______ reply was all the chair offered after the repeated excuse."
+    },
+    {
+      "id": "rs2-v-wry",
+      "word": "wry",
+      "category": "Tone and literary effect",
+      "definition": "dryly and often ironically humorous",
+      "example": "He gave a wry smile at the notice that called the steep climb effortless.",
+      "cloze": "He gave a ______ smile at the notice that called the steep climb effortless."
+    },
+    {
+      "id": "rs2-v-earnest",
+      "word": "earnest",
+      "category": "Tone and literary effect",
+      "definition": "sincere and serious",
+      "example": "An earnest plea for repair funding ended the meeting.",
+      "cloze": "An ______ plea for repair funding ended the meeting."
+    },
+    {
+      "id": "rs2-v-solemn",
+      "word": "solemn",
+      "category": "Tone and literary effect",
+      "definition": "serious, grave, or formal",
+      "example": "The audience grew solemn during the reading of the names.",
+      "cloze": "The audience grew ______ during the reading of the names."
+    },
+    {
+      "id": "rs2-v-reflective",
+      "word": "reflective",
+      "category": "Tone and literary effect",
+      "definition": "showing careful thought about past events or ideas",
+      "example": "The final letter is more reflective than the hurried first one.",
+      "cloze": "The final letter is more ______ than the hurried first one."
+    },
+    {
+      "id": "rs2-v-introspective",
+      "word": "introspective",
+      "category": "Tone and literary effect",
+      "definition": "examining one’s own thoughts or feelings",
+      "example": "The narrator becomes introspective when she returns to the closed theater.",
+      "cloze": "The narrator becomes ______ when she returns to the closed theater."
+    },
+    {
+      "id": "rs2-v-aloof",
+      "word": "aloof",
+      "category": "Tone and literary effect",
+      "definition": "distant or uninvolved in manner",
+      "example": "At first his quietness made him appear aloof.",
+      "cloze": "At first his quietness made him appear ______."
+    },
+    {
+      "id": "rs2-v-effusive",
+      "word": "effusive",
+      "category": "Tone and literary effect",
+      "definition": "expressing enthusiasm or affection in an unrestrained way",
+      "example": "An effusive thank-you note arrived the morning after the concert.",
+      "cloze": "An ______ thank-you note arrived the morning after the concert."
+    },
+    {
+      "id": "rs2-v-restrained",
+      "word": "restrained",
+      "category": "Tone and literary effect",
+      "definition": "controlled or not openly emotional",
+      "example": "The critic’s restrained praise differed from the excited audience response.",
+      "cloze": "The critic’s ______ praise differed from the excited audience response."
+    },
+    {
+      "id": "rs2-v-acerbic",
+      "word": "acerbic",
+      "category": "Tone and literary effect",
+      "definition": "sharp and cutting in tone",
+      "example": "Her acerbic review targeted the cluttered design rather than the performers.",
+      "cloze": "Her ______ review targeted the cluttered design rather than the performers."
+    },
+    {
+      "id": "rs2-v-playful",
+      "word": "playful",
+      "category": "Tone and literary effect",
+      "definition": "lighthearted and not entirely serious",
+      "example": "The illustrator gave the old warehouses playful names.",
+      "cloze": "The illustrator gave the old warehouses ______ names."
+    },
+    {
+      "id": "rs2-v-understated",
+      "word": "understated",
+      "category": "Tone and literary effect",
+      "definition": "expressed with deliberate restraint",
+      "example": "An understated closing line made the farewell more affecting.",
+      "cloze": "An ______ closing line made the farewell more affecting."
+    },
+    {
+      "id": "rs2-v-systematic",
+      "word": "systematic",
+      "category": "Order and consistency",
+      "definition": "following a fixed method or organized plan",
+      "example": "A systematic search starts with the newest folder and moves backward.",
+      "cloze": "A ______ search starts with the newest folder and moves backward."
+    },
+    {
+      "id": "rs2-v-methodical",
+      "word": "methodical",
+      "category": "Order and consistency",
+      "definition": "working in a careful and orderly way",
+      "example": "The methodical caretaker checked every latch in the same sequence.",
+      "cloze": "The ______ caretaker checked every latch in the same sequence."
+    },
+    {
+      "id": "rs2-v-consistent",
+      "word": "consistent",
+      "category": "Order and consistency",
+      "definition": "showing the same pattern over time or across cases",
+      "example": "The same timing method kept the comparisons consistent.",
+      "cloze": "The same timing method kept the comparisons ______."
+    },
+    {
+      "id": "rs2-v-uniform",
+      "word": "uniform",
+      "category": "Order and consistency",
+      "definition": "the same across parts or examples",
+      "example": "A uniform page width made the book easier to bind.",
+      "cloze": "A ______ page width made the book easier to bind."
+    },
+    {
+      "id": "rs2-v-homogeneous",
+      "word": "homogeneous",
+      "category": "Order and consistency",
+      "definition": "made up of parts that are similar or alike",
+      "example": "The sample was too homogeneous to capture the whole district’s views.",
+      "cloze": "The sample was too ______ to capture the whole district’s views."
+    },
+    {
+      "id": "rs2-v-heterogeneous",
+      "word": "heterogeneous",
+      "category": "Order and consistency",
+      "definition": "made up of different kinds of parts",
+      "example": "The heterogeneous collection includes plans, diaries, and postcards.",
+      "cloze": "The ______ collection includes plans, diaries, and postcards."
+    },
+    {
+      "id": "rs2-v-stable",
+      "word": "stable",
+      "category": "Order and consistency",
+      "definition": "not changing readily",
+      "example": "The readings became stable once the lamp warmed up.",
+      "cloze": "The readings became ______ once the lamp warmed up."
+    },
+    {
+      "id": "rs2-v-volatile",
+      "word": "volatile",
+      "category": "Order and consistency",
+      "definition": "liable to change rapidly or unpredictably",
+      "example": "A volatile supply price makes a fixed budget difficult.",
+      "cloze": "A ______ supply price makes a fixed budget difficult."
+    },
+    {
+      "id": "rs2-v-variable",
+      "word": "variable",
+      "category": "Order and consistency",
+      "definition": "able or likely to vary",
+      "example": "The volunteers reported variable demand on rainy Saturdays.",
+      "cloze": "The volunteers reported ______ demand on rainy Saturdays."
+    },
+    {
+      "id": "rs2-v-erratic",
+      "word": "erratic",
+      "category": "Order and consistency",
+      "definition": "irregular and unpredictable",
+      "example": "The erratic needle jumped when the cable moved.",
+      "cloze": "The ______ needle jumped when the cable moved."
+    },
+    {
+      "id": "rs2-v-arbitrary",
+      "word": "arbitrary",
+      "category": "Order and consistency",
+      "definition": "based on chance or personal choice rather than a clear reason",
+      "example": "The cutoff seemed arbitrary because no one could explain why it was set at noon.",
+      "cloze": "The cutoff seemed ______ because no one could explain why it was set at noon."
+    },
+    {
+      "id": "rs2-v-discretionary",
+      "word": "discretionary",
+      "category": "Order and consistency",
+      "definition": "left to a person’s judgment rather than required",
+      "example": "The director had discretionary funds for unexpected repairs.",
+      "cloze": "The director had ______ funds for unexpected repairs."
+    },
+    {
+      "id": "rs2-v-mandatory",
+      "word": "mandatory",
+      "category": "Order and consistency",
+      "definition": "required by a rule",
+      "example": "Safety training is mandatory before the workshop opens.",
+      "cloze": "Safety training is ______ before the workshop opens."
+    },
+    {
+      "id": "rs2-v-obligatory",
+      "word": "obligatory",
+      "category": "Order and consistency",
+      "definition": "required by a rule or duty",
+      "example": "The guide lists two obligatory checks before launch.",
+      "cloze": "The guide lists two ______ checks before launch."
+    },
+    {
+      "id": "rs2-v-optional",
+      "word": "optional",
+      "category": "Order and consistency",
+      "definition": "available but not required",
+      "example": "An optional tour followed the main exhibition.",
+      "cloze": "An ______ tour followed the main exhibition."
+    },
+    {
+      "id": "rs2-v-ad-hoc",
+      "word": "ad hoc",
+      "category": "Order and consistency",
+      "definition": "created for an immediate particular purpose",
+      "example": "An ad hoc group sorted the crates during the surprise delivery.",
+      "cloze": "An ______ group sorted the crates during the surprise delivery."
+    },
+    {
+      "id": "rs2-v-standardize",
+      "word": "standardize",
+      "category": "Order and consistency",
+      "definition": "make consistent by following a common standard",
+      "example": "The two clubs will standardize their sign-in forms.",
+      "cloze": "The two clubs will ______ their sign-in forms."
+    },
+    {
+      "id": "rs2-v-calibrate",
+      "word": "calibrate",
+      "category": "Order and consistency",
+      "definition": "adjust an instrument against a known reference",
+      "example": "The technician used a marked weight to calibrate the scale.",
+      "cloze": "The technician used a marked weight to ______ the scale."
+    },
+    {
+      "id": "rs2-v-reconcile",
+      "word": "reconcile",
+      "category": "Order and consistency",
+      "definition": "make different accounts or ideas agree",
+      "example": "The treasurer could reconcile the totals after removing a duplicate.",
+      "cloze": "The treasurer could ______ the totals after removing a duplicate."
+    },
+    {
+      "id": "rs2-v-integrate",
+      "word": "integrate",
+      "category": "Order and consistency",
+      "definition": "combine parts into a functioning whole",
+      "example": "The editors will integrate the maps with the neighborhood histories.",
+      "cloze": "The editors will ______ the maps with the neighborhood histories."
+    },
+    {
+      "id": "rs2-v-consensus",
+      "word": "consensus",
+      "category": "Power and cooperation",
+      "definition": "general agreement within a group",
+      "example": "The committee reached a consensus on where to place the signs.",
+      "cloze": "The committee reached a ______ on where to place the signs."
+    },
+    {
+      "id": "rs2-v-unanimous",
+      "word": "unanimous",
+      "category": "Power and cooperation",
+      "definition": "involving agreement by all members",
+      "example": "The vote was unanimous after the funding issue was resolved.",
+      "cloze": "The vote was ______ after the funding issue was resolved."
+    },
+    {
+      "id": "rs2-v-accord",
+      "word": "accord",
+      "category": "Power and cooperation",
+      "definition": "agreement, especially a formal one",
+      "example": "The two clubs signed an accord to share storage space.",
+      "cloze": "The two clubs signed an ______ to share storage space."
+    },
+    {
+      "id": "rs2-v-coalition",
+      "word": "coalition",
+      "category": "Power and cooperation",
+      "definition": "a union of groups working toward a shared goal",
+      "example": "A coalition of theater groups pooled its lighting equipment.",
+      "cloze": "A ______ of theater groups pooled its lighting equipment."
+    },
+    {
+      "id": "rs2-v-collaborate",
+      "word": "collaborate",
+      "category": "Power and cooperation",
+      "definition": "work together toward a goal",
+      "example": "The two repair crews collaborate on large jobs.",
+      "cloze": "The two repair crews ______ on large jobs."
+    },
+    {
+      "id": "rs2-v-mediate",
+      "word": "mediate",
+      "category": "Power and cooperation",
+      "definition": "help opposing sides reach an agreement",
+      "example": "A librarian agreed to mediate the dispute about room bookings.",
+      "cloze": "A librarian agreed to ______ the dispute about room bookings."
+    },
+    {
+      "id": "rs2-v-arbitrate",
+      "word": "arbitrate",
+      "category": "Power and cooperation",
+      "definition": "settle a disagreement as a neutral decision-maker",
+      "example": "The league asked a retired official to arbitrate the scheduling dispute.",
+      "cloze": "The league asked a retired official to ______ the scheduling dispute."
+    },
+    {
+      "id": "rs2-v-negotiate",
+      "word": "negotiate",
+      "category": "Power and cooperation",
+      "definition": "discuss terms in order to reach agreement",
+      "example": "The clubs will negotiate who has access on Saturdays.",
+      "cloze": "The clubs will ______ who has access on Saturdays."
+    },
+    {
+      "id": "rs2-v-compromise",
+      "word": "compromise",
+      "category": "Power and cooperation",
+      "definition": "an agreement reached by each side giving something up",
+      "example": "As a compromise, both groups accepted shorter sessions.",
+      "cloze": "As a ______, both groups accepted shorter sessions."
+    },
+    {
+      "id": "rs2-v-accommodate",
+      "word": "accommodate",
+      "category": "Power and cooperation",
+      "definition": "adjust to meet a need or fit a condition",
+      "example": "An extra rack will accommodate visitors with larger bags.",
+      "cloze": "An extra rack will ______ visitors with larger bags."
+    },
+    {
+      "id": "rs2-v-relegate",
+      "word": "relegate",
+      "category": "Power and cooperation",
+      "definition": "assign to a less important position",
+      "example": "The new catalog may relegate obsolete codes to a separate index.",
+      "cloze": "The new catalog may ______ obsolete codes to a separate index."
+    },
+    {
+      "id": "rs2-v-delegate",
+      "word": "delegate",
+      "category": "Power and cooperation",
+      "definition": "assign a duty or authority to someone else",
+      "example": "A supervisor can delegate equipment checks to a trained volunteer.",
+      "cloze": "A supervisor can ______ equipment checks to a trained volunteer."
+    },
+    {
+      "id": "rs2-v-authorize",
+      "word": "authorize",
+      "category": "Power and cooperation",
+      "definition": "give official permission to",
+      "example": "Only the manager can authorize changes to the lock.",
+      "cloze": "Only the manager can ______ changes to the lock."
+    },
+    {
+      "id": "rs2-v-sanction",
+      "word": "sanction",
+      "category": "Power and cooperation",
+      "definition": "officially approve or permit",
+      "example": "The organizers would not sanction a race on the unfinished path.",
+      "cloze": "The organizers would not ______ a race on the unfinished path."
+    },
+    {
+      "id": "rs2-v-mandate",
+      "word": "mandate",
+      "category": "Power and cooperation",
+      "definition": "officially require",
+      "example": "The new rules mandate a separate log for repairs.",
+      "cloze": "The new rules ______ a separate log for repairs."
+    },
+    {
+      "id": "rs2-v-enforce",
+      "word": "enforce",
+      "category": "Power and cooperation",
+      "definition": "make sure a law, rule, or agreement is followed",
+      "example": "The wardens enforce a limit on vehicles near the nesting area.",
+      "cloze": "The wardens ______ a limit on vehicles near the nesting area."
+    },
+    {
+      "id": "rs2-v-comply",
+      "word": "comply",
+      "category": "Power and cooperation",
+      "definition": "act according to a request, rule, or requirement",
+      "example": "All companies must comply with the posted loading schedule.",
+      "cloze": "All companies must ______ with the posted loading schedule."
+    },
+    {
+      "id": "rs2-v-rescind",
+      "word": "rescind",
+      "category": "Power and cooperation",
+      "definition": "officially cancel a decision or rule",
+      "example": "The board may rescind the closure once the railing is fixed.",
+      "cloze": "The board may ______ the closure once the railing is fixed."
+    },
+    {
+      "id": "rs2-v-ratify",
+      "word": "ratify",
+      "category": "Power and cooperation",
+      "definition": "confirm or formally approve",
+      "example": "Both associations must ratify the agreement before it takes effect.",
+      "cloze": "Both associations must ______ the agreement before it takes effect."
+    },
+    {
+      "id": "rs2-v-advocacy",
+      "word": "advocacy",
+      "category": "Power and cooperation",
+      "definition": "active public support for a cause or policy",
+      "example": "The association’s advocacy helped extend weekend hours.",
+      "cloze": "The association’s ______ helped extend weekend hours."
+    },
+    {
+      "id": "rs2-v-empirical",
+      "word": "empirical",
+      "category": "Research and measurement",
+      "definition": "based on observation or experiment",
+      "example": "The report asks for empirical evidence rather than a proposed mechanism alone.",
+      "cloze": "The report asks for ______ evidence rather than a proposed mechanism alone."
+    },
+    {
+      "id": "rs2-v-theoretical",
+      "word": "theoretical",
+      "category": "Research and measurement",
+      "definition": "based on ideas or models rather than direct observations",
+      "example": "The team’s theoretical prediction did not match the first measurement.",
+      "cloze": "The team’s ______ prediction did not match the first measurement."
+    },
+    {
+      "id": "rs2-v-anecdotal",
+      "word": "anecdotal",
+      "category": "Research and measurement",
+      "definition": "based on personal reports rather than systematic evidence",
+      "example": "The caretaker’s notes provided useful but anecdotal evidence.",
+      "cloze": "The caretaker’s notes provided useful but ______ evidence."
+    },
+    {
+      "id": "rs2-v-observational",
+      "word": "observational",
+      "category": "Research and measurement",
+      "definition": "based on watching and recording without assigning conditions",
+      "example": "An observational study compared shade on paths already in use.",
+      "cloze": "An ______ study compared shade on paths already in use."
+    },
+    {
+      "id": "rs2-v-experimental",
+      "word": "experimental",
+      "category": "Research and measurement",
+      "definition": "involving a controlled test or trial",
+      "example": "The experimental procedure used two different drying temperatures.",
+      "cloze": "The ______ procedure used two different drying temperatures."
+    },
+    {
+      "id": "rs2-v-randomize",
+      "word": "randomize",
+      "category": "Research and measurement",
+      "definition": "assign or order by chance",
+      "example": "The organizer will randomize the order of the taste samples.",
+      "cloze": "The organizer will ______ the order of the taste samples."
+    },
+    {
+      "id": "rs2-v-representative",
+      "word": "representative",
+      "category": "Research and measurement",
+      "definition": "accurately reflecting an important range within a larger group",
+      "example": "The survey needs a representative sample of riders from every route.",
+      "cloze": "The survey needs a ______ sample of riders from every route."
+    },
+    {
+      "id": "rs2-v-selective",
+      "word": "selective",
+      "category": "Research and measurement",
+      "definition": "choosing some things while excluding others",
+      "example": "The report’s selective use of examples left out crowded stations.",
+      "cloze": "The report’s ______ use of examples left out crowded stations."
+    },
+    {
+      "id": "rs2-v-systemic",
+      "word": "systemic",
+      "category": "Research and measurement",
+      "definition": "affecting a whole system rather than only an isolated part",
+      "example": "Missing records in every branch pointed to a systemic filing problem.",
+      "cloze": "Missing records in every branch pointed to a ______ filing problem."
+    },
+    {
+      "id": "rs2-v-correlation",
+      "word": "correlation",
+      "category": "Research and measurement",
+      "definition": "an association between two quantities or traits",
+      "example": "The correlation between ice sales and sunburn could reflect hot weather.",
+      "cloze": "The ______ between ice sales and sunburn could reflect hot weather."
+    },
+    {
+      "id": "rs2-v-causation",
+      "word": "causation",
+      "category": "Research and measurement",
+      "definition": "the relationship in which one thing produces another",
+      "example": "The study could detect an association but not establish causation.",
+      "cloze": "The study could detect an association but not establish ______."
+    },
+    {
+      "id": "rs2-v-confound",
+      "word": "confound",
+      "category": "Research and measurement",
+      "definition": "make it hard to separate the effects of different factors",
+      "example": "Unrecorded shade could confound the comparison of soil types.",
+      "cloze": "Unrecorded shade could ______ the comparison of soil types."
+    },
+    {
+      "id": "rs2-v-baseline",
+      "word": "baseline",
+      "category": "Research and measurement",
+      "definition": "a starting level used for comparison",
+      "example": "The team recorded a baseline before changing the room temperature.",
+      "cloze": "The team recorded a ______ before changing the room temperature."
+    },
+    {
+      "id": "rs2-v-threshold",
+      "word": "threshold",
+      "category": "Research and measurement",
+      "definition": "a point or level beyond which something changes",
+      "example": "The alarm sounds only when pressure exceeds a threshold.",
+      "cloze": "The alarm sounds only when pressure exceeds a ______."
+    },
+    {
+      "id": "rs2-v-proxy",
+      "word": "proxy",
+      "category": "Research and measurement",
+      "definition": "an indirect measure used in place of the desired one",
+      "example": "The team used library visits as a proxy for demand for public study space.",
+      "cloze": "The team used library visits as a ______ for demand for public study space."
+    },
+    {
+      "id": "rs2-v-indicator",
+      "word": "indicator",
+      "category": "Research and measurement",
+      "definition": "a sign that suggests a condition or trend",
+      "example": "Repeated late arrivals can be an indicator of an unreliable route.",
+      "cloze": "Repeated late arrivals can be an ______ of an unreliable route."
+    },
+    {
+      "id": "rs2-v-estimate",
+      "word": "estimate",
+      "category": "Research and measurement",
+      "definition": "an approximate calculation or judgment",
+      "example": "The survey provides an estimate of average travel time.",
+      "cloze": "The survey provides an ______ of average travel time."
+    },
+    {
+      "id": "rs2-v-quantify",
+      "word": "quantify",
+      "category": "Research and measurement",
+      "definition": "measure or express as a number",
+      "example": "The researchers tried to quantify the loss of light after sunset.",
+      "cloze": "The researchers tried to ______ the loss of light after sunset."
+    },
+    {
+      "id": "rs2-v-aggregate",
+      "word": "aggregate",
+      "category": "Research and measurement",
+      "definition": "combine into a total or whole",
+      "example": "The software can aggregate separate counts into a monthly total.",
+      "cloze": "The software can ______ separate counts into a monthly total."
+    },
+    {
+      "id": "rs2-v-extrapolate",
+      "word": "extrapolate",
+      "category": "Research and measurement",
+      "definition": "extend a trend or conclusion beyond the available data",
+      "example": "It would be risky to extrapolate from the quietest weekday to a holiday.",
+      "cloze": "It would be risky to ______ from the quietest weekday to a holiday."
+    },
+    {
+      "id": "rs2-v-adjacent",
+      "word": "adjacent",
+      "category": "Movement and form",
+      "definition": "next to or adjoining",
+      "example": "The adjacent room remained open during the carpet replacement.",
+      "cloze": "The ______ room remained open during the carpet replacement."
+    },
+    {
+      "id": "rs2-v-peripheral",
+      "word": "peripheral",
+      "category": "Movement and form",
+      "definition": "at the edge or of secondary importance",
+      "example": "The peripheral display cases are harder to see from the door.",
+      "cloze": "The ______ display cases are harder to see from the door."
+    },
+    {
+      "id": "rs2-v-central",
+      "word": "central",
+      "category": "Movement and form",
+      "definition": "at the middle or of primary importance",
+      "example": "The missing record is central to the argument about timing.",
+      "cloze": "The missing record is ______ to the argument about timing."
+    },
+    {
+      "id": "rs2-v-proximate",
+      "word": "proximate",
+      "category": "Movement and form",
+      "definition": "near in place, time, or relation",
+      "example": "A proximate cause of the closure was a jammed motor.",
+      "cloze": "A ______ cause of the closure was a jammed motor."
+    },
+    {
+      "id": "rs2-v-remote",
+      "word": "remote",
+      "category": "Movement and form",
+      "definition": "far away or unlikely",
+      "example": "The remote shelter can be reached only on foot.",
+      "cloze": "The ______ shelter can be reached only on foot."
+    },
+    {
+      "id": "rs2-v-diffuse",
+      "word": "diffuse",
+      "category": "Movement and form",
+      "definition": "spread widely over an area",
+      "example": "The frosted glass helps diffuse the light across the room.",
+      "cloze": "The frosted glass helps ______ the light across the room."
+    },
+    {
+      "id": "rs2-v-disperse",
+      "word": "disperse",
+      "category": "Movement and form",
+      "definition": "scatter or spread in different directions",
+      "example": "The wind can disperse light seeds beyond the garden.",
+      "cloze": "The wind can ______ light seeds beyond the garden."
+    },
+    {
+      "id": "rs2-v-concentrate",
+      "word": "concentrate",
+      "category": "Movement and form",
+      "definition": "gather or bring together in one place",
+      "example": "Planners decided to concentrate the busiest stalls near the main entrance.",
+      "cloze": "Planners decided to ______ the busiest stalls near the main entrance."
+    },
+    {
+      "id": "rs2-v-consolidate",
+      "word": "consolidate",
+      "category": "Movement and form",
+      "definition": "combine separate things into a more organized whole",
+      "example": "The clerk will consolidate the two small storage lists.",
+      "cloze": "The clerk will ______ the two small storage lists."
+    },
+    {
+      "id": "rs2-v-partition",
+      "word": "partition",
+      "category": "Movement and form",
+      "definition": "divide into separate parts",
+      "example": "Workers will partition the hall with temporary walls.",
+      "cloze": "Workers will ______ the hall with temporary walls."
+    },
+    {
+      "id": "rs2-v-segment",
+      "word": "segment",
+      "category": "Movement and form",
+      "definition": "divide into distinct sections",
+      "example": "The researchers segment the route into stretches of equal length.",
+      "cloze": "The researchers ______ the route into stretches of equal length."
+    },
+    {
+      "id": "rs2-v-truncate",
+      "word": "truncate",
+      "category": "Movement and form",
+      "definition": "shorten by cutting part off",
+      "example": "Do not truncate the date if the final digit distinguishes the two files.",
+      "cloze": "Do not ______ the date if the final digit distinguishes the two files."
+    },
+    {
+      "id": "rs2-v-extend",
+      "word": "extend",
+      "category": "Movement and form",
+      "definition": "make longer in space or time",
+      "example": "The crew will extend the ramp to reach the landing.",
+      "cloze": "The crew will ______ the ramp to reach the landing."
+    },
+    {
+      "id": "rs2-v-expand",
+      "word": "expand",
+      "category": "Movement and form",
+      "definition": "increase in size, scope, or amount",
+      "example": "The archive plans to expand its collection of sound recordings.",
+      "cloze": "The archive plans to ______ its collection of sound recordings."
+    },
+    {
+      "id": "rs2-v-constrict",
+      "word": "constrict",
+      "category": "Movement and form",
+      "definition": "make narrower or more limited",
+      "example": "An extra pillar would constrict movement past the west door.",
+      "cloze": "An extra pillar would ______ movement past the west door."
+    },
+    {
+      "id": "rs2-v-compress",
+      "word": "compress",
+      "category": "Movement and form",
+      "definition": "squeeze together or make smaller",
+      "example": "A press can compress loose fibers into a thin sheet.",
+      "cloze": "A press can ______ loose fibers into a thin sheet."
+    },
+    {
+      "id": "rs2-v-distort",
+      "word": "distort",
+      "category": "Movement and form",
+      "definition": "change the shape, sound, or meaning in a misleading way",
+      "example": "The bent frame can distort reflections along the mirror’s edge.",
+      "cloze": "The bent frame can ______ reflections along the mirror’s edge."
+    },
+    {
+      "id": "rs2-v-align",
+      "word": "align",
+      "category": "Movement and form",
+      "definition": "bring into the correct line or position",
+      "example": "The crew used marks to align the two glass panels.",
+      "cloze": "The crew used marks to ______ the two glass panels."
+    },
+    {
+      "id": "rs2-v-orient",
+      "word": "orient",
+      "category": "Movement and form",
+      "definition": "position or direct relative to a point of reference",
+      "example": "The builders decided to orient the windows toward the morning sun.",
+      "cloze": "The builders decided to ______ the windows toward the morning sun."
+    },
+    {
+      "id": "rs2-v-invert",
+      "word": "invert",
+      "category": "Movement and form",
+      "definition": "turn upside down or reverse position",
+      "example": "To inspect the base, the restorer had to invert the vase.",
+      "cloze": "To inspect the base, the restorer had to ______ the vase."
+    },
+    {
+      "id": "rs2-v-abundant",
+      "word": "abundant",
+      "category": "Amount and emphasis",
+      "definition": "existing in a large quantity",
+      "example": "Wildflowers were abundant near the recently cleared trail.",
+      "cloze": "Wildflowers were ______ near the recently cleared trail."
+    },
+    {
+      "id": "rs2-v-scarce",
+      "word": "scarce",
+      "category": "Amount and emphasis",
+      "definition": "hard to find or available in limited amounts",
+      "example": "Unmarked copies of the earliest program are scarce.",
+      "cloze": "Unmarked copies of the earliest program are ______."
+    },
+    {
+      "id": "rs2-v-ample",
+      "word": "ample",
+      "category": "Amount and emphasis",
+      "definition": "more than enough for the purpose",
+      "example": "The crew left ample space beside the door for unloading.",
+      "cloze": "The crew left ______ space beside the door for unloading."
+    },
+    {
+      "id": "rs2-v-meager",
+      "word": "meager",
+      "category": "Amount and emphasis",
+      "definition": "too small in amount or lacking quality",
+      "example": "A meager supply of dry boards slowed the work.",
+      "cloze": "A ______ supply of dry boards slowed the work."
+    },
+    {
+      "id": "rs2-v-prolific",
+      "word": "prolific",
+      "category": "Amount and emphasis",
+      "definition": "producing a large number of works or results",
+      "example": "The prolific illustrator completed hundreds of field sketches.",
+      "cloze": "The ______ illustrator completed hundreds of field sketches."
+    },
+    {
+      "id": "rs2-v-copious",
+      "word": "copious",
+      "category": "Amount and emphasis",
+      "definition": "large in quantity",
+      "example": "The supervisor took copious notes during the two-hour inspection.",
+      "cloze": "The supervisor took ______ notes during the two-hour inspection."
+    },
+    {
+      "id": "rs2-v-substantial",
+      "word": "substantial",
+      "category": "Amount and emphasis",
+      "definition": "large enough to be important",
+      "example": "A substantial drop in rent outweighed the cost of moving.",
+      "cloze": "A ______ drop in rent outweighed the cost of moving."
+    },
+    {
+      "id": "rs2-v-negligible",
+      "word": "negligible",
+      "category": "Amount and emphasis",
+      "definition": "too small to matter for the decision at hand",
+      "example": "The change in journey time was negligible on the shortest route.",
+      "cloze": "The change in journey time was ______ on the shortest route."
+    },
+    {
+      "id": "rs2-v-marginal",
+      "word": "marginal",
+      "category": "Amount and emphasis",
+      "definition": "small or near a limit",
+      "example": "The second design gave only a marginal improvement in speed.",
+      "cloze": "The second design gave only a ______ improvement in speed."
+    },
+    {
+      "id": "rs2-v-incremental",
+      "word": "incremental",
+      "category": "Amount and emphasis",
+      "definition": "happening in a series of small increases or changes",
+      "example": "Incremental adjustments gradually brought the frame into alignment.",
+      "cloze": "______ adjustments gradually brought the frame into alignment."
+    },
+    {
+      "id": "rs2-v-disproportionate",
+      "word": "disproportionate",
+      "category": "Amount and emphasis",
+      "definition": "too large or small in relation to something else",
+      "example": "A single torn label received disproportionate attention in the meeting.",
+      "cloze": "A single torn label received ______ attention in the meeting."
+    },
+    {
+      "id": "rs2-v-proportional",
+      "word": "proportional",
+      "category": "Amount and emphasis",
+      "definition": "changing in the same ratio as another value",
+      "example": "For identical packs, total cost is proportional to the number purchased.",
+      "cloze": "For identical packs, total cost is ______ to the number purchased."
+    },
+    {
+      "id": "rs2-v-predominant",
+      "word": "predominant",
+      "category": "Amount and emphasis",
+      "definition": "the most frequent or influential",
+      "example": "Oak was the predominant material in the oldest shelves.",
+      "cloze": "Oak was the ______ material in the oldest shelves."
+    },
+    {
+      "id": "rs2-v-salient",
+      "word": "salient",
+      "category": "Amount and emphasis",
+      "definition": "especially noticeable or important",
+      "example": "The most salient change was the removal of the exterior steps.",
+      "cloze": "The most ______ change was the removal of the exterior steps."
+    },
+    {
+      "id": "rs2-v-paramount",
+      "word": "paramount",
+      "category": "Amount and emphasis",
+      "definition": "more important than all other considerations",
+      "example": "For a dark staircase, visibility is paramount.",
+      "cloze": "For a dark staircase, visibility is ______."
+    },
+    {
+      "id": "rs2-v-trivial",
+      "word": "trivial",
+      "category": "Amount and emphasis",
+      "definition": "of little importance",
+      "example": "The marks were trivial compared with the damage to the hinges.",
+      "cloze": "The marks were ______ compared with the damage to the hinges."
+    },
+    {
+      "id": "rs2-v-represent",
+      "word": "represent",
+      "category": "Amount and emphasis",
+      "definition": "stand for, depict, or speak on behalf of",
+      "example": "The triangles on the map represent trail entrances.",
+      "cloze": "The triangles on the map ______ trail entrances."
+    },
+    {
+      "id": "rs2-v-accentuate",
+      "word": "accentuate",
+      "category": "Amount and emphasis",
+      "definition": "make a feature more noticeable",
+      "example": "Side lighting can accentuate the shallow carvings.",
+      "cloze": "Side lighting can ______ the shallow carvings."
+    },
+    {
+      "id": "rs2-v-underscore",
+      "word": "underscore",
+      "category": "Amount and emphasis",
+      "definition": "emphasize the importance of something",
+      "example": "The final interview will underscore how little notice workers received.",
+      "cloze": "The final interview will ______ how little notice workers received."
+    },
+    {
+      "id": "rs2-v-diminish",
+      "word": "diminish",
+      "category": "Amount and emphasis",
+      "definition": "make or become smaller or less important",
+      "example": "Additional copies will diminish the need to handle the original.",
+      "cloze": "Additional copies will ______ the need to handle the original."
+    },
+    {
+      "id": "rs2-v-allude",
+      "word": "allude",
+      "category": "Text and craft",
+      "definition": "refer to something indirectly",
+      "example": "The opening line seems to allude to an earlier voyage.",
+      "cloze": "The opening line seems to ______ to an earlier voyage."
+    },
+    {
+      "id": "rs2-v-denote",
+      "word": "denote",
+      "category": "Text and craft",
+      "definition": "directly mean or stand for",
+      "example": "A dashed line can denote an unverified boundary.",
+      "cloze": "A dashed line can ______ an unverified boundary."
+    },
+    {
+      "id": "rs2-v-connote",
+      "word": "connote",
+      "category": "Text and craft",
+      "definition": "suggest an additional idea or feeling",
+      "example": "The word “hearth” may connote warmth and welcome.",
+      "cloze": "The word “hearth” may ______ warmth and welcome."
+    },
+    {
+      "id": "rs2-v-depict",
+      "word": "depict",
+      "category": "Text and craft",
+      "definition": "show or describe",
+      "example": "The engravings depict a harbor before the breakwater was built.",
+      "cloze": "The engravings ______ a harbor before the breakwater was built."
+    },
+    {
+      "id": "rs2-v-portray",
+      "word": "portray",
+      "category": "Text and craft",
+      "definition": "describe or show someone or something in a particular way",
+      "example": "The letters portray the guide as patient with nervous travelers.",
+      "cloze": "The letters ______ the guide as patient with nervous travelers."
+    },
+    {
+      "id": "rs2-v-characterize",
+      "word": "characterize",
+      "category": "Text and craft",
+      "definition": "describe a typical or defining quality of",
+      "example": "Several observers characterize the task as slow but straightforward.",
+      "cloze": "Several observers ______ the task as slow but straightforward."
+    },
+    {
+      "id": "rs2-v-embody",
+      "word": "embody",
+      "category": "Text and craft",
+      "definition": "express an idea or quality in a concrete form",
+      "example": "The open courtyard seems to embody the school’s emphasis on shared space.",
+      "cloze": "The open courtyard seems to ______ the school’s emphasis on shared space."
+    },
+    {
+      "id": "rs2-v-personify",
+      "word": "personify",
+      "category": "Text and craft",
+      "definition": "give human traits to something that is not human",
+      "example": "Some verses personify the wind as a traveler.",
+      "cloze": "Some verses ______ the wind as a traveler."
+    },
+    {
+      "id": "rs2-v-symbolize",
+      "word": "symbolize",
+      "category": "Text and craft",
+      "definition": "stand for an abstract idea or concept",
+      "example": "The unlocked gate can symbolize a change in who is welcome.",
+      "cloze": "The unlocked gate can ______ a change in who is welcome."
+    },
+    {
+      "id": "rs2-v-metaphor",
+      "word": "metaphor",
+      "category": "Text and craft",
+      "definition": "an expression that describes one thing as another for effect",
+      "example": "Calling the archive a maze is a metaphor for its confusing layout.",
+      "cloze": "Calling the archive a maze is a ______ for its confusing layout."
+    },
+    {
+      "id": "rs2-v-allegory",
+      "word": "allegory",
+      "category": "Text and craft",
+      "definition": "a story whose elements represent another level of meaning",
+      "example": "The short fable works as an allegory about sharing public land.",
+      "cloze": "The short fable works as an ______ about sharing public land."
+    },
+    {
+      "id": "rs2-v-motif",
+      "word": "motif",
+      "category": "Text and craft",
+      "definition": "a feature or idea that recurs in a work",
+      "example": "A locked window is a recurring motif in the short stories.",
+      "cloze": "A locked window is a recurring ______ in the short stories."
+    },
+    {
+      "id": "rs2-v-foreshadow",
+      "word": "foreshadow",
+      "category": "Text and craft",
+      "definition": "hint at something that occurs later",
+      "example": "Details in the quiet first scene foreshadow the later conflict.",
+      "cloze": "Details in the quiet first scene ______ the later conflict."
+    },
+    {
+      "id": "rs2-v-accent",
+      "word": "accent",
+      "category": "Text and craft",
+      "definition": "emphasize a part or feature",
+      "example": "The narrow bands of white accent the otherwise plain wall.",
+      "cloze": "The narrow bands of white ______ the otherwise plain wall."
+    },
+    {
+      "id": "rs2-v-embellish",
+      "word": "embellish",
+      "category": "Text and craft",
+      "definition": "decorate or add details, sometimes to make an account more impressive",
+      "example": "The reporter declined to embellish the witness’s plain description.",
+      "cloze": "The reporter declined to ______ the witness’s plain description."
+    },
+    {
+      "id": "rs2-v-abridge",
+      "word": "abridge",
+      "category": "Text and craft",
+      "definition": "shorten a text while retaining its main points",
+      "example": "The publisher may abridge the guide for use on a single sheet.",
+      "cloze": "The publisher may ______ the guide for use on a single sheet."
+    },
+    {
+      "id": "rs2-v-excerpt",
+      "word": "excerpt",
+      "category": "Text and craft",
+      "definition": "a passage taken from a longer work",
+      "example": "The review quotes an excerpt about the day the market reopened.",
+      "cloze": "The review quotes an ______ about the day the market reopened."
+    },
+    {
+      "id": "rs2-v-annotate",
+      "word": "annotate",
+      "category": "Text and craft",
+      "definition": "add explanatory notes or comments to",
+      "example": "The students annotate each map with the sources of its dates.",
+      "cloze": "The students ______ each map with the sources of its dates."
+    },
+    {
+      "id": "rs2-v-interpolate",
+      "word": "interpolate",
+      "category": "Text and craft",
+      "definition": "insert something into a text or sequence",
+      "example": "The editor did not interpolate explanations into the text of the letters.",
+      "cloze": "The editor did not ______ explanations into the text of the letters."
+    },
+    {
+      "id": "rs2-v-interweave",
+      "word": "interweave",
+      "category": "Text and craft",
+      "definition": "blend separate strands or ideas together",
+      "example": "The final chapters interweave records of weather and travel.",
+      "cloze": "The final chapters ______ records of weather and travel."
+    },
+    {
+      "id": "rs2-v-attribute",
+      "word": "attribute",
+      "category": "Causes and outcomes",
+      "definition": "regard something as caused by or belonging to someone or something",
+      "example": "Visitors attribute the improved signs to the new volunteer crew.",
+      "cloze": "Visitors ______ the improved signs to the new volunteer crew."
+    },
+    {
+      "id": "rs2-v-ascribe",
+      "word": "ascribe",
+      "category": "Causes and outcomes",
+      "definition": "assign a cause, source, or quality to",
+      "example": "The authors ascribe the delay to a change in temperature.",
+      "cloze": "The authors ______ the delay to a change in temperature."
+    },
+    {
+      "id": "rs2-v-derive",
+      "word": "derive",
+      "category": "Causes and outcomes",
+      "definition": "obtain or trace from a source",
+      "example": "Readers can derive the duration by comparing the two dates.",
+      "cloze": "Readers can ______ the duration by comparing the two dates."
+    },
+    {
+      "id": "rs2-v-originate",
+      "word": "originate",
+      "category": "Causes and outcomes",
+      "definition": "begin or arise in a particular place or way",
+      "example": "Several street names originate in old trades.",
+      "cloze": "Several street names ______ in old trades."
+    },
+    {
+      "id": "rs2-v-generate",
+      "word": "generate",
+      "category": "Causes and outcomes",
+      "definition": "produce or bring about",
+      "example": "The new workshop could generate demand for evening transport.",
+      "cloze": "The new workshop could ______ demand for evening transport."
+    },
+    {
+      "id": "rs2-v-precipitate",
+      "word": "precipitate",
+      "category": "Causes and outcomes",
+      "definition": "cause something to happen abruptly",
+      "example": "A sudden loss of funding could precipitate a closure.",
+      "cloze": "A sudden loss of funding could ______ a closure."
+    },
+    {
+      "id": "rs2-v-catalyze",
+      "word": "catalyze",
+      "category": "Causes and outcomes",
+      "definition": "set in motion or speed up an important change",
+      "example": "The accidental discovery helped catalyze a broader search.",
+      "cloze": "The accidental discovery helped ______ a broader search."
+    },
+    {
+      "id": "rs2-v-provoke",
+      "word": "provoke",
+      "category": "Causes and outcomes",
+      "definition": "bring about a reaction or feeling",
+      "example": "The proposal may provoke objections from late-shift workers.",
+      "cloze": "The proposal may ______ objections from late-shift workers."
+    },
+    {
+      "id": "rs2-v-elicit",
+      "word": "elicit",
+      "category": "Causes and outcomes",
+      "definition": "draw out a response or information",
+      "example": "A specific question can elicit more detail than a general invitation.",
+      "cloze": "A specific question can ______ more detail than a general invitation."
+    },
+    {
+      "id": "rs2-v-induce",
+      "word": "induce",
+      "category": "Causes and outcomes",
+      "definition": "cause a condition or process to occur",
+      "example": "Suddenly warming the room could induce condensation on the cold panels.",
+      "cloze": "Suddenly warming the room could ______ condensation on the cold panels."
+    },
+    {
+      "id": "rs2-v-predispose",
+      "word": "predispose",
+      "category": "Causes and outcomes",
+      "definition": "make someone or something more likely to experience a condition",
+      "example": "Heavy use can predispose a hinge to early failure.",
+      "cloze": "Heavy use can ______ a hinge to early failure."
+    },
+    {
+      "id": "rs2-v-susceptible",
+      "word": "susceptible",
+      "category": "Causes and outcomes",
+      "definition": "likely to be affected by a particular influence",
+      "example": "Thin paper is susceptible to tearing when wet.",
+      "cloze": "Thin paper is ______ to tearing when wet."
+    },
+    {
+      "id": "rs2-v-resilient",
+      "word": "resilient",
+      "category": "Causes and outcomes",
+      "definition": "able to recover after difficulty or disturbance",
+      "example": "The resilient schedule includes spare days for delays.",
+      "cloze": "The ______ schedule includes spare days for delays."
+    },
+    {
+      "id": "rs2-v-robust",
+      "word": "robust",
+      "category": "Causes and outcomes",
+      "definition": "remaining effective under a range of conditions",
+      "example": "The newer design is robust enough to work in dust or rain.",
+      "cloze": "The newer design is ______ enough to work in dust or rain."
+    },
+    {
+      "id": "rs2-v-vulnerable",
+      "word": "vulnerable",
+      "category": "Causes and outcomes",
+      "definition": "open to harm or damage",
+      "example": "The uncovered mechanism is vulnerable to dirt.",
+      "cloze": "The uncovered mechanism is ______ to dirt."
+    },
+    {
+      "id": "rs2-v-repercussion",
+      "word": "repercussion",
+      "category": "Causes and outcomes",
+      "definition": "an indirect, often unwelcome consequence",
+      "example": "A possible repercussion of closing the station is added traffic downtown.",
+      "cloze": "A possible ______ of closing the station is added traffic downtown."
+    },
+    {
+      "id": "rs2-v-implication",
+      "word": "implication",
+      "category": "Causes and outcomes",
+      "definition": "a possible consequence or an unstated conclusion",
+      "example": "One implication of the study is that maps need regular updates.",
+      "cloze": "One ______ of the study is that maps need regular updates."
+    },
+    {
+      "id": "rs2-v-ramification",
+      "word": "ramification",
+      "category": "Causes and outcomes",
+      "definition": "a consequence or related development of a decision",
+      "example": "A financial ramification of the move is higher heating costs.",
+      "cloze": "A financial ______ of the move is higher heating costs."
+    },
+    {
+      "id": "rs2-v-aftermath",
+      "word": "aftermath",
+      "category": "Causes and outcomes",
+      "definition": "the period or consequences following a significant event",
+      "example": "In the aftermath of the flood, the library opened a temporary reading room.",
+      "cloze": "In the ______ of the flood, the library opened a temporary reading room."
+    },
+    {
+      "id": "rs2-v-ensue",
+      "word": "ensue",
+      "category": "Causes and outcomes",
+      "definition": "occur afterward or as a result",
+      "example": "Further delays may ensue if the spare motor does not arrive.",
+      "cloze": "Further delays may ______ if the spare motor does not arrive."
+    },
+    {
+      "id": "rs2-v-allocate",
+      "word": "allocate",
+      "category": "Resources and decisions",
+      "definition": "assign resources to a particular person or use",
+      "example": "The committee will allocate funds to the most urgent repairs first.",
+      "cloze": "The committee will ______ funds to the most urgent repairs first."
+    },
+    {
+      "id": "rs2-v-apportion",
+      "word": "apportion",
+      "category": "Resources and decisions",
+      "definition": "divide and distribute among recipients or uses",
+      "example": "The workshops will apportion the cost according to attendance.",
+      "cloze": "The workshops will ______ the cost according to attendance."
+    },
+    {
+      "id": "rs2-v-prioritize",
+      "word": "prioritize",
+      "category": "Resources and decisions",
+      "definition": "put in order of importance",
+      "example": "The crew will prioritize work on the northern entrance.",
+      "cloze": "The crew will ______ work on the northern entrance."
+    },
+    {
+      "id": "rs2-v-optimize",
+      "word": "optimize",
+      "category": "Resources and decisions",
+      "definition": "make as effective as possible for a goal",
+      "example": "The designers sought to optimize the route for short walking times.",
+      "cloze": "The designers sought to ______ the route for short walking times."
+    },
+    {
+      "id": "rs2-v-economize",
+      "word": "economize",
+      "category": "Resources and decisions",
+      "definition": "avoid wasting resources or spending unnecessarily",
+      "example": "The library can economize by reusing the old stands.",
+      "cloze": "The library can ______ by reusing the old stands."
+    },
+    {
+      "id": "rs2-v-conserve",
+      "word": "conserve",
+      "category": "Resources and decisions",
+      "definition": "protect from loss or use sparingly",
+      "example": "The group tried to conserve water during the repair.",
+      "cloze": "The group tried to ______ water during the repair."
+    },
+    {
+      "id": "rs2-v-sustain",
+      "word": "sustain",
+      "category": "Resources and decisions",
+      "definition": "keep in operation or support over time",
+      "example": "Ticket sales will not sustain two performances a night.",
+      "cloze": "Ticket sales will not ______ two performances a night."
+    },
+    {
+      "id": "rs2-v-subsidize",
+      "word": "subsidize",
+      "category": "Resources and decisions",
+      "definition": "support financially to reduce costs",
+      "example": "The school will subsidize travel for students in the competition.",
+      "cloze": "The school will ______ travel for students in the competition."
+    },
+    {
+      "id": "rs2-v-divert",
+      "word": "divert",
+      "category": "Resources and decisions",
+      "definition": "redirect from an original course or purpose",
+      "example": "Construction workers will divert buses around the closed street.",
+      "cloze": "Construction workers will ______ buses around the closed street."
+    },
+    {
+      "id": "rs2-v-procure",
+      "word": "procure",
+      "category": "Resources and decisions",
+      "definition": "obtain, often through effort or a formal process",
+      "example": "The technician had to procure a replacement part from another branch.",
+      "cloze": "The technician had to ______ a replacement part from another branch."
+    },
+    {
+      "id": "rs2-v-stipulate",
+      "word": "stipulate",
+      "category": "Resources and decisions",
+      "definition": "specify as part of an agreement or rule",
+      "example": "The rental terms stipulate that all keys must be returned.",
+      "cloze": "The rental terms ______ that all keys must be returned."
+    },
+    {
+      "id": "rs2-v-contingent",
+      "word": "contingent",
+      "category": "Resources and decisions",
+      "definition": "dependent on something else happening",
+      "example": "The evening show is contingent on access to the repaired hall.",
+      "cloze": "The evening show is ______ on access to the repaired hall."
+    },
+    {
+      "id": "rs2-v-contingency",
+      "word": "contingency",
+      "category": "Resources and decisions",
+      "definition": "a possible event requiring a plan or provision",
+      "example": "The crew kept a spare set of lights for an unexpected contingency.",
+      "cloze": "The crew kept a spare set of lights for an unexpected ______."
+    },
+    {
+      "id": "rs2-v-provision",
+      "word": "provision",
+      "category": "Resources and decisions",
+      "definition": "an arrangement made for a need or future event",
+      "example": "The plan makes provision for an additional storage room.",
+      "cloze": "The plan makes ______ for an additional storage room."
+    },
+    {
+      "id": "rs2-v-prerequisite",
+      "word": "prerequisite",
+      "category": "Resources and decisions",
+      "definition": "a condition that must be met before something else can happen",
+      "example": "A safety inspection is a prerequisite for reopening the path.",
+      "cloze": "A safety inspection is a ______ for reopening the path."
+    },
+    {
+      "id": "rs2-v-criterion",
+      "word": "criterion",
+      "category": "Resources and decisions",
+      "definition": "a standard used for a judgment or decision",
+      "example": "Repair time was the main criterion the team used to compare designs.",
+      "cloze": "Repair time was the main ______ the team used to compare designs."
+    },
+    {
+      "id": "rs2-v-expedient",
+      "word": "expedient",
+      "category": "Resources and decisions",
+      "definition": "convenient for an immediate purpose, often at a longer-term cost",
+      "example": "It seemed expedient to borrow a key, but issuing new keys would solve the recurring problem.",
+      "cloze": "It seemed ______ to borrow a key, but issuing new keys would solve the recurring problem."
+    },
+    {
+      "id": "rs2-v-trade-off",
+      "word": "trade-off",
+      "category": "Resources and decisions",
+      "definition": "a choice that gains one advantage by giving up another",
+      "example": "The lighter package creates a trade-off between portability and protection.",
+      "cloze": "The lighter package creates a ______ between portability and protection."
+    },
+    {
+      "id": "rs2-v-frugal",
+      "word": "frugal",
+      "category": "Resources and decisions",
+      "definition": "careful about spending or resource use",
+      "example": "A frugal manager found a use for boards left over from construction.",
+      "cloze": "A ______ manager found a use for boards left over from construction."
+    },
+    {
+      "id": "rs2-v-indispensable",
+      "word": "indispensable",
+      "category": "Resources and decisions",
+      "definition": "so important that it cannot be done without",
+      "example": "A reliable flashlight proved indispensable in the dark archive.",
+      "cloze": "A reliable flashlight proved ______ in the dark archive."
+    }
+  ]
+}
