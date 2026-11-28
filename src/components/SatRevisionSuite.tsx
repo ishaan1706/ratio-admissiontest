@@ -449,9 +449,9 @@ export const SatQuestionBankView: React.FC<{
             }}
             className="px-3 py-2 rounded-lg bg-[var(--bg)] border border-[var(--rule)] text-[var(--ink)]"
           >
-            <option value="all">All Sections (600 Qs)</option>
-            <option value="rw">Reading &amp; Writing (220 Qs)</option>
-            <option value="math">Math (380 Qs)</option>
+            <option value="all">All Sections ({ALL_BANK_QUESTIONS.length} Qs)</option>
+            <option value="rw">Reading &amp; Writing ({ALL_BANK_QUESTIONS.filter((x) => x.section === 'rw').length} Qs)</option>
+            <option value="math">Math ({ALL_BANK_QUESTIONS.filter((x) => x.section === 'math').length} Qs)</option>
           </select>
 
           <select
@@ -632,7 +632,17 @@ export const SatQuestionBankView: React.FC<{
           {/* Stimulus: passage, paired texts, notes, table */}
           {q.passage && (
             <div className="rounded-xl border border-[var(--rule)] bg-[var(--bg)] p-4 text-sm text-[var(--text)] leading-relaxed whitespace-pre-line">
-              {q.passage}
+              {q.underlined && q.passage.includes(q.underlined) ? (
+                <>
+                  {q.passage.slice(0, q.passage.indexOf(q.underlined))}
+                  <span className="underline decoration-[var(--accent)] decoration-2 underline-offset-4">
+                    {q.underlined}
+                  </span>
+                  {q.passage.slice(q.passage.indexOf(q.underlined) + q.underlined.length)}
+                </>
+              ) : (
+                q.passage
+              )}
             </div>
           )}
 
@@ -650,11 +660,18 @@ export const SatQuestionBankView: React.FC<{
           )}
 
           {q.notes && q.notes.length > 0 && (
-            <ul className="rounded-xl border border-[var(--rule)] bg-[var(--bg)] p-4 space-y-1.5 list-disc pl-8 text-sm text-[var(--text)]">
-              {q.notes.map((n, i) => (
-                <li key={i}>{n}</li>
-              ))}
-            </ul>
+            <div className="space-y-2">
+              {!q.passage && (
+                <p className="text-xs font-semibold text-[var(--text-muted)]">
+                  While researching a topic, a student has taken the following notes:
+                </p>
+              )}
+              <ul className="rounded-xl border border-[var(--rule)] bg-[var(--bg)] p-4 space-y-1.5 list-disc pl-8 text-sm text-[var(--text)]">
+                {q.notes.map((n, i) => (
+                  <li key={i}>{n}</li>
+                ))}
+              </ul>
+            </div>
           )}
 
           {q.table && (
@@ -690,7 +707,7 @@ export const SatQuestionBankView: React.FC<{
           )}
 
           {/* Question Stem */}
-          <div className="text-base font-medium text-[var(--ink)] leading-relaxed">{q.question}</div>
+          <div className="text-base font-medium text-[var(--ink)] leading-relaxed whitespace-pre-line">{q.question}</div>
 
           {/* Options or SPR Input */}
           {q.type === 'mcq' && q.options ? (
