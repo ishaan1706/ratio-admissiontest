@@ -502,3 +502,194 @@ export function srsStageLabel(stage: 0 | 1 | 2 | 3): string {
   if (stage === 2) return '7-day review';
   return 'Mastered';
 }
+
+/* ── Confidence Calibration (Guess 30% / Unsure 60% / Sure 90%) ─────────── */
+export const TMUA_CONF_KEY = 'ratio_tmua_conf_v1';
+
+export type TmuaConfidenceLevel = 0.3 | 0.6 | 0.9;
+
+export interface TmuaConfidenceRecord {
+  qid: string;
+  topic: string;
+  paper: 1 | 2;
+  conf: TmuaConfidenceLevel;
+  correct: boolean;
+  at: string;
+}
+
+export const TMUA_CONFIDENCE_BANDS: Array<{
+  p: TmuaConfidenceLevel;
+  label: string;
+  pct: string;
+}> = [
+  { p: 0.3, label: 'Guess', pct: '30%' },
+  { p: 0.6, label: 'Unsure', pct: '60%' },
+  { p: 0.9, label: 'Sure', pct: '90%' },
+];
+
+export function loadTmuaConfidenceLog(): TmuaConfidenceRecord[] {
+  try {
+    const raw = window.localStorage.getItem(TMUA_CONF_KEY);
+    if (!raw) return [];
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed) ? (parsed as TmuaConfidenceRecord[]) : [];
+  } catch {
+    return [];
+  }
+}
+
+export function saveTmuaConfidenceLog(log: TmuaConfidenceRecord[]): void {
+  try {
+    window.localStorage.setItem(TMUA_CONF_KEY, JSON.stringify(log.slice(-500)));
+  } catch {
+    // ignore storage errors
+  }
+}
+
+export function computeConfidenceSummary(log: TmuaConfidenceRecord[]) {
+  if (log.length === 0) {
+    return {
+      total: 0,
+      brier: null as number | null,
+      bands: TMUA_CONFIDENCE_BANDS.map((b) => ({ ...b, n: 0, right: 0, acc: null as number | null })),
+      verdicts: [] as Array<{ topic: string; n: number; saidPct: number; accPct: number; status: 'over' | 'under' | 'calibrated' }>,
+    };
+  }
+  let brierSum = 0;
+  const byTopic = new Map<string, { n: number; said: number; right: number }>();
+  for (const r of log) {
+    const y = r.correct ? 1 : 0;
+    brierSum += (r.conf - y) * (r.conf - y);
+    const cur = byTopic.get(r.topic) ?? { n: 0, said: 0, right: 0 };
+    cur.n += 1;
+    cur.said += r.conf;
+    cur.right += y;
+    byTopic.set(r.topic, cur);
+  }
+  const bands = TMUA_CONFIDENCE_BANDS.map((b) => {
+    const subset = log.filter((r) => Math.abs(r.conf - b.p) < 1e-6);
+    const right = subset.filter((r) => r.correct).length;
+    return {
+      ...b,
+      n: subset.length,
+      right,
+      acc: subset.length > 0 ? Math.round((right / subset.length) * 100) : null,
+    };
+  });
+  const verdicts = Array.from(byTopic.entries())
+    .filter(([, s]) => s.n >= 3)
+    .map(([topic, s]) => {
+      const said = s.said / s.n;
+      const acc = s.right / s.n;
+      const gap = said - acc;
+      const status: 'over' | 'under' | 'calibrated' =
+        gap >= 0.15 ? 'over' : gap <= -0.15 ? 'under' : 'calibrated';
+      return {
+        topic,
+        n: s.n,
+        saidPct: Math.round(said * 100),
+        accPct: Math.round(acc * 100),
+        status,
+      };
+    })
+    .sort((a, b) => Math.abs(b.saidPct - b.accPct) - Math.abs(a.saidPct - a.accPct));
+  return {
+    total: log.length,
+    brier: brierSum / log.length,
+    bands,
+    verdicts,
+  };
+}
+
+/* ── Original TMUA High-Frequency Trap Taxonomy (Paper 1 & Paper 2) ─────── */
+export interface TmuaTrapItem {
+  id: string;
+  paper: 1 | 2;
+  name: string;
+  check: string;
+}
+
+export const TMUA_TRAP_TAXONOMY: TmuaTrapItem[] = [
+  { id: 'div-zero', paper: 1, name: 'Dividing by a factor that could be zero', check: 'Always test the cancelled factor = 0 as a separate root before reducing.' },
+  { id: 'ineq-sign', paper: 1, name: 'Multiplying an inequality by an unknown sign', check: 'Multiply by the square of the denominator or split into positive/negative cases.' },
+  { id: 'extraneous-square', paper: 1, name: 'Keeping extraneous roots after squaring', check: 'Substitute every candidate root back into the original unsquared equation.' },
+  { id: 'log-domain', paper: 1, name: 'Ignoring log / square-root domain restrictions', check: 'Verify every argument is strictly positive (and base > 0, base ≠ 1).' },
+  { id: 'signed-area', paper: 1, name: 'Treating a signed integral as geometric area', check: 'Find x-intercepts inside [a, b] and integrate above/below the axis separately.' },
+  { id: 'endpoint-max', paper: 1, name: 'Checking stationary points without endpoints', check: 'Compare f(a) and f(b) against local turning points on every closed interval.' },
+  { id: 'trig-interval', paper: 1, name: 'Dropping solutions across the full trig interval', check: 'Count solutions on the unit circle after scaling the angle (e.g. 2x or 3x).' },
+  { id: 'transform-dir', paper: 1, name: 'Reversing graph translation / stretch direction', check: 'Test one known point (x, y) under f(ax + b) to confirm left/right shift.' },
+  { id: 'tangency-root', paper: 1, name: 'Miscounting a repeated root at tangency', check: 'Distinguish number of distinct real roots from algebraic multiplicity.' },
+  { id: 'series-count', paper: 1, name: 'Off-by-one term count in sequences & sums', check: 'Check n = 1 and n = 2 directly; terms from r = a to b total b − a + 1.' },
+  { id: 'nec-vs-suff', paper: 2, name: 'Swapping necessary and sufficient', check: 'Test P ⇒ Q (P sufficient for Q) and Q ⇒ P (P necessary for Q) independently.' },
+  { id: 'converse-contra', paper: 2, name: 'Confusing converse with contrapositive', check: 'P ⇒ Q is equivalent to ¬Q ⇒ ¬P, never to Q ⇒ P or ¬P ⇒ ¬Q.' },
+  { id: 'imp-negation', paper: 2, name: 'Negating "if P then Q" as another implication', check: '¬(P ⇒ Q) is "P and not Q" — a single witness where P holds and Q fails.' },
+  { id: 'quant-order', paper: 2, name: 'Flipping ∀ and ∃ quantifier order', check: 'Check whether the second variable may depend on the first (∀x ∃y) or must be fixed (∃y ∀x).' },
+  { id: 'quant-neg', paper: 2, name: 'Forgetting to swap ∀ ↔ ∃ when negating', check: 'Negate from the outside in: ¬(∀x P(x)) ≡ ∃x ¬P(x).' },
+  { id: 'backward-proof', paper: 2, name: 'Treating one-way backward algebra as a proof', check: 'Starting from the conclusion proves nothing unless every line is reversible (⇔).' },
+  { id: 'vacuous-witness', paper: 2, name: 'Testing a case where the premise is false', check: 'A value that falsifies the premise P cannot refute P ⇒ Q.' },
+  { id: 'generalise-small', paper: 2, name: 'Generalising from two or three small cases', check: 'Look for boundary integers, 0, negatives, fractions in (0, 1), or non-coprime factors.' },
+];
+
+/* ── Kevinvariant Direct Free TMUA Mock Sets A–D & Tools (Outbound Only) ── */
+export interface KevinvariantMockSetLink {
+  set: string;
+  difficulty: string;
+  note: string;
+  links: Array<{ label: string; url: string }>;
+}
+
+export const KEVINVARIANT_FREE_MOCK_SETS: KevinvariantMockSetLink[] = [
+  {
+    set: 'Set A (Free · Entry)',
+    difficulty: 'Unrated · Gentlest entry',
+    note: 'Questions and full worked solutions combined in one PDF per paper.',
+    links: [
+      { label: 'Paper 1 + Solutions', url: 'https://kevinvariant08.github.io/hu_mock_a_p1_with_solutions.pdf' },
+      { label: 'Paper 2 + Solutions', url: 'https://kevinvariant08.github.io/hu_mock_a_p2_with_solutions.pdf' },
+    ],
+  },
+  {
+    set: 'Set D (Free · Core)',
+    difficulty: 'Paper 1: 6.3 · Paper 2: 6.2',
+    note: 'Gentlest rated free set — recommended straight after Set A.',
+    links: [
+      { label: 'P1 Paper', url: 'https://kevinvariant08.github.io/HU_Collection_TMUA_SetD_Paper1.pdf' },
+      { label: 'P1 Solutions', url: 'https://kevinvariant08.github.io/HU_Collection_TMUA_SetD_Paper1_Solutions.pdf' },
+      { label: 'P2 Paper', url: 'https://kevinvariant08.github.io/HU_Collection_TMUA_SetD_Paper2.pdf' },
+      { label: 'P2 Solutions', url: 'https://kevinvariant08.github.io/HU_Collection_TMUA_SetD_Paper2_Solutions.pdf' },
+    ],
+  },
+  {
+    set: 'Set C (Free · Stretch)',
+    difficulty: 'Paper 1: 7.1 · Paper 2: 6.9',
+    note: 'Pitched above the 2025 TMUA.',
+    links: [
+      { label: 'P1 Paper', url: 'https://kevinvariant08.github.io/HU_Collection_TMUA_SetC_Paper1.pdf' },
+      { label: 'P1 Solutions', url: 'https://kevinvariant08.github.io/HU_Collection_TMUA_SetC_Paper1_Solutions.pdf' },
+      { label: 'P2 Paper', url: 'https://kevinvariant08.github.io/HU_Collection_TMUA_SetC_Paper2.pdf' },
+      { label: 'P2 Solutions', url: 'https://kevinvariant08.github.io/HU_Collection_TMUA_SetC_Paper2_Solutions.pdf' },
+    ],
+  },
+  {
+    set: 'Set B (Free · Challenge)',
+    difficulty: 'Paper 1: 7.3 · Paper 2: 7.5',
+    note: 'No routine questions in either paper.',
+    links: [
+      { label: 'P1 Paper', url: 'https://kevinvariant08.github.io/HU_Collection_TMUA_SetB_Paper1.pdf' },
+      { label: 'P1 Solutions', url: 'https://kevinvariant08.github.io/HU_Collection_TMUA_SetB_Paper1_Solutions.pdf' },
+      { label: 'P2 Paper', url: 'https://kevinvariant08.github.io/HU_Collection_TMUA_SetB_Paper2.pdf' },
+      { label: 'P2 Solutions', url: 'https://kevinvariant08.github.io/HU_Collection_TMUA_SetB_Paper2_Solutions.pdf' },
+    ],
+  },
+  {
+    set: 'Sets E–H & Interactive Tools (Free on Site)',
+    difficulty: '6.1 to 8.0 · IRT Smart Practice',
+    note: 'Free Sets E–H, IRT adaptive Smart Practice, Timed Drill, and Binomial Coefficients handout.',
+    links: [
+      { label: 'Sets E–H Hub', url: 'https://kevinvariant08.github.io/tmua.html#sets' },
+      { label: 'Smart Practice (IRT)', url: 'https://kevinvariant08.github.io/smart.html' },
+      { label: 'Timed Drill', url: 'https://kevinvariant08.github.io/drill.html' },
+      { label: 'Binomial Coeffs PDF', url: 'https://kevinvariant08.github.io/HU_Collection_Binomial_Coefficients.pdf' },
+    ],
+  },
+];

@@ -21,12 +21,17 @@ import {
 } from '../data/packs/tmua-practice';
 import {
   advanceSrsCleanRetry,
+  loadTmuaConfidenceLog,
   loadTmuaSrs,
+  saveTmuaConfidenceLog,
   saveTmuaSrs,
   scheduleSrsMiss,
   srsStageLabel,
+  TMUA_CONFIDENCE_BANDS,
   TMUA_FIVE_STAGE_PLAN,
   TMUA_TECHNIQUE_META,
+  TMUA_TRAP_TAXONOMY,
+  TmuaConfidenceLevel,
   TmuaSrsMap,
 } from '../data/packs/tmua-practice/tmuaExtras';
 import {
@@ -65,6 +70,7 @@ interface ActiveDrillSession {
   assisted: Record<string, boolean>;
   reasons: Record<string, string | null>;
   notes: Record<string, string>;
+  confidence?: Record<string, TmuaConfidenceLevel>;
   committed: Record<string, boolean>; // for untimed per-question commit
   submitted: boolean;
   submittedAt: string | null;
@@ -267,6 +273,7 @@ export const TmuaPracticeSuite: React.FC<TmuaPracticeSuiteProps> = ({
   const commitSessionBatch = (targetSession: ActiveDrillSession, atIso: string) => {
     let nextHist = history;
     let nextSrs = srs;
+    const confAdditions: Array<{ qid: string; topic: string; paper: 1 | 2; conf: TmuaConfidenceLevel; correct: boolean; at: string }> = [];
     for (const qid of targetSession.questionIds) {
       if (targetSession.committed[qid]) continue;
       const q = questionById.get(qid);
@@ -288,6 +295,20 @@ export const TmuaPracticeSuite: React.FC<TmuaPracticeSuiteProps> = ({
       } else if (nextSrs[qid]) {
         nextSrs = advanceSrsCleanRetry(nextSrs, qid, atIso);
       }
+      const confVal = targetSession.confidence?.[qid];
+      if (confVal && sel !== null) {
+        confAdditions.push({
+          qid,
+          topic: q.topic,
+          paper: q.tags.includes('paper-2') ? 2 : 1,
+          conf: confVal,
+          correct: sel === q.answer,
+          at: atIso,
+        });
+      }
+    }
+    if (confAdditions.length > 0) {
+      saveTmuaConfidenceLog([...loadTmuaConfidenceLog(), ...confAdditions]);
     }
     onUpdateHistory(nextHist);
     saveTmuaHistory(nextHist);
@@ -401,6 +422,20 @@ export const TmuaPracticeSuite: React.FC<TmuaPracticeSuiteProps> = ({
     if (nextSrs !== srs) {
       setSrs(nextSrs);
       saveTmuaSrs(nextSrs);
+    }
+    const confVal = session.confidence?.[q.id];
+    if (confVal) {
+      saveTmuaConfidenceLog([
+        ...loadTmuaConfidenceLog(),
+        {
+          qid: q.id,
+          topic: q.topic,
+          paper: q.tags.includes('paper-2') ? 2 : 1,
+          conf: confVal,
+          correct: sel === q.answer,
+          at: atIso,
+        },
+      ]);
     }
 
     const nextCommitted = { ...session.committed, [q.id]: true };
@@ -814,6 +849,43 @@ export const TmuaPracticeSuite: React.FC<TmuaPracticeSuiteProps> = ({
               );
             })}
           </div>
+
+          {/* Confidence Calibration Selector (Guess 30% / Unsure 60% / Sure 90%) */}
+          {(!isCommitted || session.timed) && (
+            <div className="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-[var(--rule)]/70">
+              <span className="text-[11px] font-mono-tabular uppercase tracking-wider text-[var(--text-muted)]">
+                Confidence calibration (optional)
+              </span>
+              <div className="flex items-center gap-1.5">
+                {TMUA_CONFIDENCE_BANDS.map((band) => {
+                  const active = session.confidence?.[q.id] === band.p;
+                  return (
+                    <button
+                      key={band.label}
+                      type="button"
+                      onClick={() =>
+                        setSession({
+                          ...session,
+                          confidence: { ...(session.confidence ?? {}), [q.id]: band.p },
+                          guessed:
+                            band.p === 0.3
+                              ? { ...session.guessed, [q.id]: true }
+                              : session.guessed,
+                        })
+                      }
+                      className={`px-2.5 py-1 text-[11px] font-mono-tabular border cursor-pointer transition-colors ${
+                        active
+                          ? 'border-[var(--accent)] bg-[var(--accent)]/15 text-[var(--accent)] font-semibold'
+                          : 'border-[var(--rule)] text-[var(--text-muted)] hover:text-[var(--ink)]'
+                      }`}
+                    >
+                      {band.label} · {band.pct}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          )}
 
           {/* Untimed peek / commit controls */}
           {!session.timed && !isCommitted && (
@@ -1411,6 +1483,37 @@ export const TmuaPracticeSuite: React.FC<TmuaPracticeSuiteProps> = ({
             })}
           </div>
         )}
+
+        {/* 18-Trap Paper 1 & Paper 2 Diagnostic Checklist */}
+        <div className="border border-[var(--rule)] bg-[var(--surface)] p-5 space-y-4">
+          <div>
+            <div className="text-xs font-mono-tabular uppercase tracking-wider text-[var(--accent)]">
+              Common TMUA Trap Taxonomy · 18 Distractor Patterns
+            </div>
+            <p className="text-xs text-[var(--text-muted)] mt-0.5">
+              Before locking an option, scan for these high-frequency Paper 1 and Paper 2 traps.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-3">
+            {([1, 2] as const).map((p) => (
+              <div key={p} className="border border-[var(--rule)] bg-[var(--bg)] p-4 space-y-2.5">
+                <div className="text-xs font-mono-tabular uppercase tracking-wider text-[var(--accent)]">
+                  Paper {p} Traps ({TMUA_TRAP_TAXONOMY.filter((t) => t.paper === p).length})
+                </div>
+                <div className="space-y-2">
+                  {TMUA_TRAP_TAXONOMY.filter((t) => t.paper === p).map((trap) => (
+                    <div key={trap.id} className="border-b border-[var(--rule)]/50 pb-2 last:border-b-0 last:pb-0">
+                      <div className="text-xs font-semibold text-[var(--ink)]">{trap.name}</div>
+                      <div className="text-[11px] text-[var(--text-muted)] leading-relaxed mt-0.5">
+                        {trap.check}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     );
   }

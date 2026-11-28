@@ -19,7 +19,12 @@ import {
   TMUA_PACK_MOCK_QUESTIONS,
   TMUA_PRIMER_SECTIONS,
 } from '../data/packs/tmua-practice';
-import { KEVINVARIANT_TMUA_RESOURCES } from '../data/packs/tmua-practice/tmuaExtras';
+import {
+  computeConfidenceSummary,
+  KEVINVARIANT_FREE_MOCK_SETS,
+  KEVINVARIANT_TMUA_RESOURCES,
+  loadTmuaConfidenceLog,
+} from '../data/packs/tmua-practice/tmuaExtras';
 import {
   bankQuestions,
   firstAttemptStats,
@@ -243,6 +248,41 @@ export const TmuaWorkspace: React.FC<TmuaWorkspaceProps> = ({
 
           <div className="space-y-2.5">
             <div className="text-[11px] font-mono-tabular uppercase tracking-wider text-[var(--text-muted)]">
+              Direct Free Mock Paper &amp; Solution PDFs (Sets A–D) &amp; Interactive Tools
+            </div>
+            <div className="grid md:grid-cols-2 gap-3">
+              {KEVINVARIANT_FREE_MOCK_SETS.map((set) => (
+                <div
+                  key={set.set}
+                  className="border border-[var(--rule)] bg-[var(--bg)] p-3.5 space-y-2"
+                >
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="text-xs font-semibold text-[var(--ink)]">{set.set}</span>
+                    <span className="text-[11px] font-mono-tabular text-[var(--accent)]">
+                      {set.difficulty}
+                    </span>
+                  </div>
+                  <p className="text-[11px] text-[var(--text-muted)] leading-relaxed">{set.note}</p>
+                  <div className="flex flex-wrap gap-1.5 pt-0.5">
+                    {set.links.map((lk) => (
+                      <a
+                        key={lk.url}
+                        href={lk.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="px-2 py-1 border border-[var(--rule)] hover:border-[var(--accent)] hover:text-[var(--accent)] text-[11px] font-mono-tabular text-[var(--ink)] inline-flex items-center gap-1 transition-colors"
+                      >
+                        {lk.label} <ExternalLink className="w-2.5 h-2.5" />
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="space-y-2.5">
+            <div className="text-[11px] font-mono-tabular uppercase tracking-wider text-[var(--text-muted)]">
               Mathematical Knowledge Notes (Paper 1 &amp; Paper 2 · MM1–MM8)
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -352,6 +392,7 @@ export const TmuaWorkspace: React.FC<TmuaWorkspaceProps> = ({
     const drillTried = Object.values(drillStats).reduce((s, v) => s + v.total, 0);
     const drillCorrect = Object.values(drillStats).reduce((s, v) => s + v.correct, 0);
     const drillSecure = Object.values(drillStats).reduce((s, v) => s + v.secure, 0);
+    const confSummary = computeConfidenceSummary(loadTmuaConfidenceLog());
 
     return (
       <div className="space-y-8">
@@ -362,6 +403,65 @@ export const TmuaWorkspace: React.FC<TmuaWorkspaceProps> = ({
             separately. Official UAT-UK 1.0–9.0 grades are scaled each sitting across both papers
             and are not predicted here.
           </p>
+        </div>
+
+        {/* Confidence Calibration (Brier Score & Over/Under-Confidence) */}
+        <div className="border border-[var(--rule)] bg-[var(--surface)] p-5 space-y-4">
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <div>
+              <div className="text-xs font-mono-tabular uppercase tracking-wider text-[var(--accent)]">
+                Confidence Calibration · Guess (30%) · Unsure (60%) · Sure (90%)
+              </div>
+              <p className="text-xs text-[var(--text-muted)] mt-0.5">
+                Rate how sure you are before checking drill answers to spot overconfidence and lucky guesses.
+              </p>
+            </div>
+            <span className="text-xs font-mono-tabular text-[var(--ink)]">
+              {confSummary.brier !== null
+                ? `Brier ${confSummary.brier.toFixed(3)} (${confSummary.total} rated)`
+                : 'No rated answers yet'}
+            </span>
+          </div>
+          <div className="grid sm:grid-cols-3 gap-3">
+            {confSummary.bands.map((b) => (
+              <div key={b.label} className="border border-[var(--rule)] bg-[var(--bg)] p-3.5">
+                <div className="text-xs font-mono-tabular text-[var(--text-muted)]">
+                  {b.label} (target {b.pct})
+                </div>
+                <div className="font-display text-2xl text-[var(--ink)] mt-0.5">
+                  {b.acc !== null ? `${b.acc}%` : '—'}
+                </div>
+                <div className="text-[11px] text-[var(--text-muted)]">
+                  {b.n > 0 ? `${b.right}/${b.n} right` : 'Rate answers during drills'}
+                </div>
+              </div>
+            ))}
+          </div>
+          {confSummary.verdicts.length > 0 && (
+            <div className="space-y-1.5 pt-1 border-t border-[var(--rule)]/70">
+              {confSummary.verdicts.slice(0, 4).map((v) => (
+                <div key={v.topic} className="flex items-center justify-between text-xs">
+                  <span className="text-[var(--ink)]">{v.topic}</span>
+                  <span
+                    className={`font-mono-tabular ${
+                      v.status === 'over'
+                        ? 'text-[var(--crimson)]'
+                        : v.status === 'under'
+                        ? 'text-sky-400'
+                        : 'text-[var(--accent)]'
+                    }`}
+                  >
+                    {v.status === 'over'
+                      ? 'Overconfident'
+                      : v.status === 'under'
+                      ? 'Underconfident'
+                      : 'Calibrated'}{' '}
+                    · {v.saidPct}% sure vs {v.accPct}% right
+                  </span>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
 
         <div className="border border-[var(--rule)] bg-[var(--surface)] p-5 grid sm:grid-cols-4 gap-4">
