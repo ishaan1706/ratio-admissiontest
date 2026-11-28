@@ -91,121 +91,13 @@ body {
   transition: background-color 160ms ease, color 160ms ease;
 }
 
-/* Ratio Black-Platinum × Emerald creative landing primitives */
-.ratio-grid-bg {
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.032) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.032) 1px, transparent 1px);
-  background-size: 56px 56px;
-}
-
-.ratio-platinum-text {
-  background: linear-gradient(180deg, #ffffff 0%, #e4e4e7 52%, #a1a1aa 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-.ratio-platinum-num {
-  background: linear-gradient(180deg, #ffffff 0%, #d4d4d8 55%, #8a94a6 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-.ratio-btn-3d {
-  background: linear-gradient(180deg, #ffffff 0%, #d8dde6 100%);
-  color: #09090b;
-  box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.55) inset,
-    0 4px 0 #525866,
-    0 14px 32px -12px rgba(216, 221, 230, 0.45);
-  transition: transform 130ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 130ms cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.ratio-btn-3d:hover {
-  transform: translateY(1px);
-  box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.55) inset,
-    0 3px 0 #525866,
-    0 10px 24px -10px rgba(216, 221, 230, 0.45);
-}
-
-.ratio-btn-3d:active {
-  transform: translateY(3px);
-  box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.4) inset,
-    0 1px 0 #525866;
-}
-
-.ratio-btn-emerald {
-  background: linear-gradient(180deg, #34d399 0%, #10b981 100%);
-  color: #04130d;
-  box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.35) inset,
-    0 4px 0 #047857,
-    0 14px 32px -12px rgba(16, 185, 129, 0.55);
-  transition: transform 130ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 130ms cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.ratio-btn-emerald:hover {
-  transform: translateY(1px);
-  box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.35) inset,
-    0 3px 0 #047857,
-    0 10px 26px -10px rgba(16, 185, 129, 0.55);
-}
-
-.ratio-btn-emerald:active {
-  transform: translateY(3px);
-  box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.3) inset,
-    0 1px 0 #047857;
-}
-
-@keyframes ratio-float {
-  0%,
-  100% {
-    transform: rotate(var(--r, 0deg)) translateY(0px);
-  }
-  50% {
-    transform: rotate(var(--r, 0deg)) translateY(-10px);
-  }
-}
-
-.ratio-sticker {
-  background: linear-gradient(160deg, rgba(28, 32, 42, 0.92), rgba(12, 14, 18, 0.96));
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow:
-    0 22px 44px -12px rgba(0, 0, 0, 0.85),
-    0 0 0 6px rgba(255, 255, 255, 0.025);
-  animation: ratio-float 6.5s ease-in-out infinite;
-}
-
-.ratio-sticker:nth-child(even) {
-  animation-delay: -3.25s;
-}
-
-.ratio-card-lift {
-  transition:
-    transform 220ms cubic-bezier(0.22, 1, 0.36, 1),
-    border-color 220ms ease,
-    background-color 220ms ease,
-    box-shadow 220ms ease;
-}
-
-.ratio-card-lift:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 22px 48px -24px rgba(0, 0, 0, 0.85);
-}
-
 .ratio-faq summary::-webkit-details-marker {
   display: none;
 }
 
 .ratio-faq details[open] summary .ratio-faq-plus {
   transform: rotate(45deg);
-  color: #34d399;
+  color: var(--accent);
 }
 
 .font-display {

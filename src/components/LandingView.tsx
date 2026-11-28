@@ -1,96 +1,92 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import {
-  Activity,
   ArrowRight,
   ArrowUpRight,
-  Atom,
-  BookOpen,
   Check,
-  Clock,
-  Compass,
-  Feather,
-  Flame,
-  GraduationCap,
-  Layers,
-  Monitor,
   Plus,
-  Scale,
-  ShieldCheck,
-  Sigma,
-  Sparkles,
-  Target,
   User,
 } from 'lucide-react';
 import { ADMISSIONS_TESTS, TestId } from '../data/allTests';
-import { RatioUser } from '../lib/account';
-import { LegalDoc } from './LegalModal';
 
 interface LandingViewProps {
-  onSelectTest: (testId: TestId) => void;
-  user: RatioUser | null;
+  user: { name: string; email?: string } | null;
   isPro: boolean;
+  onSelectTest: (id: TestId) => void;
+  onOpenPricing: () => void;
   onOpenAccount: () => void;
-  onOpenPricing: (reason?: string) => void;
-  onOpenLegal: (doc: LegalDoc) => void;
+  onOpenLegal: (tab: 'terms' | 'privacy' | 'refunds') => void;
 }
 
 const EXAM_STATS: Record<
   TestId,
-  { mocks: string; extras: string; interfaceLabel: string; universities: string; tag: string }
+  {
+    index: string;
+    mocks: string;
+    extras: string;
+    interfaceLabel: string;
+    universities: string;
+    subject: string;
+  }
 > = {
   lnat: {
-    mocks: 'Full 95-min Mock (42 Qs)',
-    extras: '15 Essay Prompts · Revision Lab',
-    interfaceLabel: 'Pearson VUE screen',
-    universities: 'Oxford · Cambridge · UCL · LSE · KCL',
-    tag: 'Law',
+    index: '01',
+    mocks: '2 Full Mocks (84 MCQs)',
+    extras: '8 Essay Sets · Flaw & Assumption Drills',
+    interfaceLabel: 'Pearson VUE split-screen',
+    universities: 'Oxford · UCL · LSE · KCL · Bristol',
+    subject: 'Law',
   },
   ucat: {
-    mocks: '2 Full Mocks (368 Qs)',
-    extras: '12 Timed Drills · 60 Flashcards',
+    index: '02',
+    mocks: '2 Full Mocks (268 Qs)',
+    extras: 'VR · DM · QR · SJT · Calculator',
     interfaceLabel: 'Pearson VUE + Calculator',
-    universities: 'UK & ANZ Medicine & Dentistry',
-    tag: 'Medicine',
+    universities: 'UK & ANZ Medical Schools',
+    subject: 'Medicine',
   },
   tara: {
-    mocks: '205-Q Drills + 3 Full Mocks',
-    extras: 'Essay Studio (18 Prompts · Models) · Daily 5',
+    index: '03',
+    mocks: '3 Full Mocks + 205 Drills',
+    extras: '18-Prompt Essay Studio · Daily 5',
     interfaceLabel: 'UAT-UK exam screen',
-    universities: 'Oxford · UCL · Warwick',
-    tag: 'Applied Reasoning',
+    universities: 'Cambridge · UCL · Warwick',
+    subject: 'Applied Reasoning',
   },
   esat: {
+    index: '04',
     mocks: '800-Q Adaptive Bank + 2 Mocks',
     extras: '160/Module · Levels 1–5 · 1:30/Q Pace',
-    interfaceLabel: 'UAT-UK exam screen',
+    interfaceLabel: 'UAT-UK no-calculator',
     universities: 'Cambridge · Imperial · UCL',
-    tag: 'Engineering & Science',
+    subject: 'Engineering & Science',
   },
   tmua: {
-    mocks: '3 Full Mocks (Paper 1 & 2 · 120 Qs)',
-    extras: '460 Drills · Daily 5 · Logic Primer',
-    interfaceLabel: 'UAT-UK exam screen',
+    index: '05',
+    mocks: '3 Full Mocks + 460 Drills',
+    extras: 'Daily 5 · Mistake Queue · Logic Primer',
+    interfaceLabel: 'UAT-UK 75m × 2',
     universities: 'Cambridge · Imperial · LSE · Warwick',
-    tag: 'Mathematics',
+    subject: 'Mathematics',
   },
   sat: {
+    index: '06',
     mocks: '1,000-Q Bank + 4 Full Mocks',
     extras: 'Adaptive M2 · 30 Lessons · 400 Vocab',
-    interfaceLabel: 'Bluebook screen',
+    interfaceLabel: 'College Board Bluebook',
     universities: 'US Ivy League · MIT · Stanford',
-    tag: 'US Admissions',
+    subject: 'US Admissions',
   },
 };
 
-type SampleKey = 'lnat' | 'ucat' | 'tara' | 'esat' | 'sat';
+type SampleKey = TestId;
 
 const SAMPLE_QUESTIONS: Record<
   SampleKey,
   {
     code: string;
-    badge: string;
-    screenStyle: string;
+    section: string;
+    screen: string;
     timer: string;
     passage: string;
     stem: string;
@@ -101,8 +97,8 @@ const SAMPLE_QUESTIONS: Record<
 > = {
   lnat: {
     code: 'LNAT',
-    badge: 'LNAT · Section A · Assumption',
-    screenStyle: 'Pearson VUE split-screen',
+    section: 'Section A · Assumption',
+    screen: 'Pearson VUE',
     timer: '94:12',
     passage:
       'Defenders of mandatory minimum sentences argue that judicial discretion produces inconsistent outcomes across courts. Yet removing discretion does not eliminate disparity; it merely transfers it from open courtrooms to prosecutors deciding which charge to bring.',
@@ -114,16 +110,16 @@ const SAMPLE_QUESTIONS: Record<
     ],
     correct: 1,
     explanation:
-      'The contrast between "open courtrooms" and prosecutorial charging assumes prosecutorial discretion operates with less public scrutiny than judicial sentencing.',
+      'Contrasting "open courtrooms" with prosecutorial charging assumes charging decisions operate with less public scrutiny than judicial sentencing.',
   },
   ucat: {
     code: 'UCAT',
-    badge: 'UCAT · Decision Making · Syllogism',
-    screenStyle: 'Pearson VUE + Calculator',
+    section: 'Decision Making · Syllogism',
+    screen: 'Pearson VUE',
     timer: '28:40',
     passage:
       'Every glazed tile in a crate passed inspection. Some square tiles in the crate are glazed. No tile that passed inspection is chipped.',
-    stem: 'Which conclusion MUST follow from the statements above?',
+    stem: 'Which conclusion MUST follow?',
     options: [
       'Every square tile in the crate passed inspection.',
       'Some square tiles in the crate are not chipped.',
@@ -131,29 +127,29 @@ const SAMPLE_QUESTIONS: Record<
     ],
     correct: 1,
     explanation:
-      'Some square tiles are glazed → all glazed tiles passed inspection → none that passed are chipped. Therefore those square glazed tiles cannot be chipped.',
+      'Some square tiles are glazed → all glazed tiles passed inspection → none that passed are chipped. So those square glazed tiles cannot be chipped.',
   },
   tara: {
     code: 'TARA',
-    badge: 'TARA · Critical Thinking · Flaw',
-    screenStyle: 'UAT-UK Pearson VUE',
+    section: 'Critical Thinking · Flaw',
+    screen: 'UAT-UK CBT',
     timer: '39:10',
     passage:
-      'Every student who joined the university debating society this term achieved a first-class mark in their autumn essay. Clearly, joining the debating society guarantees a first-class essay mark.',
-    stem: 'Which flaw is committed by the argument above?',
+      'Every student who joined the debating society this term achieved a first-class mark in their autumn essay. Clearly, joining the debating society guarantees a first-class essay mark.',
+    stem: 'Which flaw is committed by the argument?',
     options: [
       'It appeals to an unqualified authority.',
-      'It mistakes a correlation among self-selected students for a causal guarantee.',
-      'It relies on an equivocation on the word "essay".',
+      'It mistakes correlation among self-selected students for a causal guarantee.',
+      'It equivocates on the word "essay".',
     ],
     correct: 1,
     explanation:
-      'Strong writers may disproportionately join the debating society; past overlap does not establish that membership itself guarantees the outcome.',
+      'Strong writers may disproportionately join the society; overlap does not establish that membership itself guarantees the outcome.',
   },
   esat: {
     code: 'ESAT',
-    badge: 'ESAT · Mathematics 1 · Level 4',
-    screenStyle: 'UAT-UK no-calculator',
+    section: 'Mathematics 1 · Level 4',
+    screen: 'UAT-UK CBT',
     timer: '38:25',
     passage:
       'The quadratic equation x² − (k + 2)x + 2k + 1 = 0 has two equal real roots, where k is a real constant.',
@@ -161,12 +157,29 @@ const SAMPLE_QUESTIONS: Record<
     options: ['0', '4', '8'],
     correct: 1,
     explanation:
-      'Set discriminant Δ = 0: (k + 2)² − 4(2k + 1) = k² − 4k = 0, so k = 0 or k = 4. Their sum is 4.',
+      'Set Δ = 0: (k + 2)² − 4(2k + 1) = k² − 4k = 0, giving k = 0 or k = 4. Their sum is 4.',
+  },
+  tmua: {
+    code: 'TMUA',
+    section: 'Paper 2 · Necessary & Sufficient',
+    screen: 'UAT-UK CBT',
+    timer: '71:15',
+    passage:
+      'Let x be a positive integer. Statement P: 10 divides x. Statement Q: 2 divides x.',
+    stem: 'Which describes P relative to Q?',
+    options: [
+      'Necessary but not sufficient',
+      'Sufficient but not necessary',
+      'Necessary and sufficient',
+    ],
+    correct: 1,
+    explanation:
+      'If 10 divides x then 2 divides x (P ⇒ Q), so P is sufficient. At x = 2, Q holds while P fails, so P is not necessary.',
   },
   sat: {
     code: 'SAT',
-    badge: 'Digital SAT · Math · Module 2 (Harder)',
-    screenStyle: 'College Board Bluebook',
+    section: 'Math · Module 2 (Harder)',
+    screen: 'Bluebook',
     timer: '34:15',
     passage:
       'A quadratic function f(x) = a(x − 4)² + 12 passes through the point (6, 20), where a is a constant.',
@@ -174,101 +187,98 @@ const SAMPLE_QUESTIONS: Record<
     options: ['24', '30', '36'],
     correct: 1,
     explanation:
-      'Plug in (6, 20): a(2)² + 12 = 20 ⇒ 4a = 8 ⇒ a = 2. Then f(1) = 2(1 − 4)² + 12 = 2(9) + 12 = 30.',
+      'Substitute (6, 20): 20 = 4a + 12 ⇒ a = 2. Then f(1) = 2(−3)² + 12 = 18 + 12 = 30.',
   },
 };
 
-const HERO_STICKERS = [
-  { label: 'LNAT', Icon: Scale, style: { left: '5%', top: '13%', '--r': '-10deg' } as React.CSSProperties },
-  { label: 'UCAT', Icon: Activity, style: { left: '10%', top: '34%', '--r': '8deg' } as React.CSSProperties },
-  { label: 'TARA', Icon: Compass, style: { left: '4%', top: '54%', '--r': '-6deg' } as React.CSSProperties },
-  { label: 'ESAT', Icon: Atom, style: { right: '5%', top: '12%', '--r': '9deg' } as React.CSSProperties },
-  { label: 'TMUA', Icon: Sigma, style: { right: '10%', top: '33%', '--r': '-8deg' } as React.CSSProperties },
-  { label: 'SAT', Icon: GraduationCap, style: { right: '4%', top: '53%', '--r': '6deg' } as React.CSSProperties },
+const FAQ_ITEMS: Array<[string, string]> = [
+  [
+    'Are these original questions or copied past papers?',
+    'Every mock, drill, flashcard, and model essay in Ratio is originally authored to match the official specifications. Official past papers and specimen PDFs are linked directly to the exam boards so we never rehost copyrighted material.',
+  ],
+  [
+    'How does the one-off pricing work?',
+    'No recurring billing. The £24 Single Test Pass unlocks one admissions test until your exam season ends; the £39 All Tests Bundle unlocks all six tests in one payment. Both include a 14-day refund guarantee.',
+  ],
+  [
+    'Do the mocks match the real exam interfaces?',
+    'Yes. LNAT and UCAT run in a Pearson VUE split-screen with flagging, navigator, and UCAT calculator; ESAT, TMUA, and TARA run in the UAT-UK no-calculator interface; Digital SAT runs in a Bluebook-style adaptive runner.',
+  ],
+  [
+    'Does my progress save without an account?',
+    'Yes — every drill, mistake queue item, mock score, and essay draft saves locally in your browser immediately. Create a free account anytime to sync across devices.',
+  ],
 ];
 
-const FAQ_ITEMS: [string, string][] = [
-  [
-    'Which admissions tests does Ratio cover?',
-    'All six major UK and US university admissions exams: LNAT (Law), UCAT (Medicine), TARA (Applied Reasoning), ESAT (Engineering & Science), TMUA (Mathematics), and the adaptive Digital SAT.',
-  ],
-  [
-    'Do the mocks look like the real test day screen?',
-    'Yes. LNAT and UCAT run in a Pearson VUE split-screen shell (with LNAT highlighter and UCAT calculator), ESAT, TMUA, and TARA use a UAT-UK no-calculator shell, and Digital SAT runs in a College Board Bluebook-style shell with adaptive Module 2 routing.',
-  ],
-  [
-    'Is there a monthly subscription?',
-    'Never. You can start free, unlock any single test through the end of its exam season for a one-off £24, or unlock all six tests together for a one-off £39.',
-  ],
-  [
-    'Are the questions original or copied from past papers?',
-    'Every question, drill, and essay model inside Ratio is 100% original and written to exam-board format. Official past papers and specimen tests are linked directly to the exam boards in each track’s Official Resources tab.',
-  ],
-  [
-    'Does my progress save automatically?',
-    'Yes — every Daily 5, mistake queue item, mock attempt, and essay draft saves automatically in your browser, with optional account sync and JSON export.',
-  ],
-];
+const REVEAL = {
+  initial: { opacity: 0, y: 12 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, amount: 0.15 as const },
+  transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] as const },
+};
 
 export const LandingView: React.FC<LandingViewProps> = ({
-  onSelectTest,
   user,
   isPro,
-  onOpenAccount,
+  onSelectTest,
   onOpenPricing,
+  onOpenAccount,
   onOpenLegal,
 }) => {
-  const [sampleTab, setSampleTab] = useState<SampleKey>('lnat');
+  const [sampleKey, setSampleKey] = useState<SampleKey>('lnat');
   const [picked, setPicked] = useState<number | null>(null);
   const [showcaseScreen, setShowcaseScreen] = useState<'pearson' | 'uatuk' | 'bluebook'>('pearson');
-  const sample = SAMPLE_QUESTIONS[sampleTab];
+
+  const sample = SAMPLE_QUESTIONS[sampleKey];
+
+  const scrollTo = (id: string) => (e: React.MouseEvent) => {
+    e.preventDefault();
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
-    <div className="min-h-screen bg-[#070709] text-[#F4F4F5] flex flex-col selection:bg-emerald-500/30 overflow-x-hidden">
-      {/* Frosted Platinum Glass Sticky Header */}
-      <header className="sticky top-0 z-30 border-b border-white/[0.08] bg-[#070709]/80 backdrop-blur-xl">
+    <div className="min-h-screen bg-[var(--bg)] text-[var(--ink)] flex flex-col selection:bg-emerald-500/25 selection:text-white">
+      {/* Sticky Minimal Header */}
+      <header className="sticky top-0 z-40 border-b border-[var(--rule)] bg-[var(--bg)]/90 backdrop-blur-md">
         <div className="max-w-6xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between gap-4">
-          <div className="flex items-center gap-8">
-            <a href="#" className="flex items-center gap-2.5 group">
-              <span className="w-7 h-7 rounded-lg bg-gradient-to-br from-white/15 to-white/[0.03] border border-white/15 flex items-center justify-center text-xs font-display text-emerald-400 shadow-inner">
-                R
-              </span>
-              <span className="font-display text-2xl tracking-tight text-white leading-none">
-                Ratio
-              </span>
-              <span className="hidden sm:inline-block text-[10px] font-mono-tabular uppercase tracking-[0.16em] text-zinc-500 border-l border-white/10 pl-2.5">
-                Admissions Studio
-              </span>
-            </a>
-            <nav className="hidden md:flex items-center gap-7 text-[13px] text-zinc-400">
-              <a href="#exams" className="hover:text-white transition-colors">
-                Exams
-              </a>
-              <a href="#features" className="hover:text-white transition-colors">
-                Inside the studio
-              </a>
-              <a href="#pricing" className="hover:text-white transition-colors">
-                Pricing
-              </a>
-              <a href="#faq" className="hover:text-white transition-colors">
-                FAQ
-              </a>
-            </nav>
+          <div className="flex items-center gap-3">
+            <span className="font-display text-2xl tracking-tight text-[var(--ink)] leading-none">
+              Ratio
+            </span>
+            <span className="hidden sm:inline-block h-3.5 w-px bg-[var(--rule)]" />
+            <span className="hidden sm:inline text-[11px] font-mono-tabular uppercase tracking-[0.16em] text-[var(--text-muted)]">
+              Admissions Test Studio
+            </span>
           </div>
 
-          <div className="flex items-center gap-2.5">
+          <nav className="hidden md:flex items-center gap-7 text-xs text-[var(--text-muted)]">
+            <a href="#exams" onClick={scrollTo('exams')} className="hover:text-[var(--ink)] transition-colors">
+              Exams
+            </a>
+            <a href="#interfaces" onClick={scrollTo('interfaces')} className="hover:text-[var(--ink)] transition-colors">
+              Exam Screens
+            </a>
+            <a href="#pricing" onClick={scrollTo('pricing')} className="hover:text-[var(--ink)] transition-colors">
+              Pricing
+            </a>
+            <a href="#faq" onClick={scrollTo('faq')} className="hover:text-[var(--ink)] transition-colors">
+              FAQ
+            </a>
+          </nav>
+
+          <div className="flex items-center gap-3">
             <button
               type="button"
               onClick={onOpenAccount}
-              className="px-3.5 py-2 rounded-xl border border-white/[0.1] hover:border-white/25 bg-white/[0.03] hover:bg-white/[0.06] text-xs font-medium text-zinc-200 inline-flex items-center gap-1.5 transition-all cursor-pointer"
+              className="text-xs text-[var(--text-muted)] hover:text-[var(--ink)] inline-flex items-center gap-1.5 px-2.5 py-1.5 transition-colors cursor-pointer"
             >
-              <User className="w-3.5 h-3.5 text-zinc-400" />
-              {user ? user.name : 'Sign in'}
+              <User className="w-3.5 h-3.5" />
+              <span className="max-w-[110px] truncate">{user ? user.name : 'Sign in'}</span>
             </button>
             <button
               type="button"
               onClick={() => onSelectTest('lnat')}
-              className="ratio-btn-3d px-4 py-2 rounded-xl text-xs font-semibold inline-flex items-center gap-1.5 cursor-pointer"
+              className="px-4 py-2 bg-[var(--ink)] text-[var(--bg)] hover:bg-[var(--accent)] hover:text-[#04130d] text-xs font-semibold inline-flex items-center gap-1.5 transition-colors cursor-pointer"
             >
               {isPro ? 'Open Studio' : 'Start Free'}
               <ArrowUpRight className="w-3.5 h-3.5" />
@@ -278,609 +288,510 @@ export const LandingView: React.FC<LandingViewProps> = ({
       </header>
 
       <main className="flex-1">
-        {/* Centered Black-Platinum Architectural Grid Hero */}
-        <section className="relative ratio-grid-bg overflow-hidden">
-          {/* Ambient Emerald × Midnight Radial Spotlight */}
-          <div
-            className="pointer-events-none absolute inset-0"
-            style={{
-              background:
-                'radial-gradient(56% 42% at 50% 18%, rgba(16, 185, 129, 0.14), rgba(24, 30, 48, 0.28) 48%, transparent 78%)',
-            }}
-          />
-
-          {/* Floating Tactile Subject Stickers (desktop only, inspired by recall-politics) */}
-          <div className="hidden xl:block pointer-events-none absolute inset-0 max-w-7xl mx-auto">
-            {HERO_STICKERS.map(({ label, Icon, style }) => (
-              <div
-                key={label}
-                style={style}
-                className="ratio-sticker absolute w-[74px] h-[74px] rounded-[22px] flex flex-col items-center justify-center gap-1 text-zinc-200"
-              >
-                <Icon className="w-6 h-6 text-emerald-300/90" strokeWidth={1.6} />
-                <span className="text-[9px] font-mono-tabular uppercase tracking-widest text-zinc-400">
-                  {label}
-                </span>
-              </div>
-            ))}
-          </div>
-
-          <div className="relative max-w-5xl mx-auto px-5 sm:px-8 pt-16 sm:pt-24 pb-8 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-              className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-white/[0.12] bg-white/[0.04] backdrop-blur-md text-xs text-zinc-300"
-            >
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_10px_#34d399]" />
-              <span>
-                Built for <strong className="text-white font-semibold">LNAT · UCAT · TARA · ESAT · TMUA · SAT</strong>
-              </span>
-            </motion.div>
-
-            <motion.h1
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.55, delay: 0.06, ease: [0.22, 1, 0.36, 1] }}
-              className="mt-6 font-display text-[3.3rem] sm:text-[5.25rem] leading-[0.96] tracking-[-0.03em] max-w-4xl mx-auto ratio-platinum-text"
-            >
-              Practice in the
-              <br />
-              <em className="italic font-normal text-emerald-300/95 not-italic-override">
-                exact exam room.
-              </em>
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.55, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
-              className="mt-5 text-[16px] sm:text-[18px] text-zinc-400 leading-[1.65] max-w-xl mx-auto"
-            >
-              Original full-length mocks, authentic Pearson VUE, UAT-UK, and Bluebook screens,
-              adaptive drills, and essay studios.{' '}
-              <strong className="text-zinc-200 font-medium">
-                Six admissions tests, one calm workspace.
-              </strong>
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.55, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
-              className="mt-8 flex flex-wrap items-center justify-center gap-3.5"
-            >
-              <button
-                type="button"
-                onClick={() => onSelectTest('lnat')}
-                className="ratio-btn-3d px-6 py-3 rounded-xl text-sm font-semibold inline-flex items-center gap-2 cursor-pointer"
-              >
-                {isPro ? 'Continue practicing' : 'Start practicing free'}
-                <ArrowRight className="w-4 h-4" />
-              </button>
-              <button
-                type="button"
-                onClick={() => onOpenPricing()}
-                className="px-5 py-3 rounded-xl border border-white/[0.12] hover:border-white/25 bg-white/[0.03] hover:bg-white/[0.07] text-sm font-medium text-zinc-200 hover:text-white transition-all cursor-pointer"
-              >
-                Pricing — from £24
-              </button>
-            </motion.div>
-
-            {!isPro && (
-              <div className="mt-3.5 text-[11px] font-mono-tabular text-zinc-500">
-                No card required to try · One-off passes, zero subscriptions
-              </div>
-            )}
-
-            {/* macOS-Framed Interactive Studio Stage (Live Question Preview + Floating Adaptive Card) */}
-            <motion.div
-              initial={{ opacity: 0, y: 26 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.65, delay: 0.22, ease: [0.22, 1, 0.36, 1] }}
-              className="relative max-w-4xl mx-auto mt-14 sm:mt-16 text-left"
-            >
-              {/* Soft backlight behind window */}
-              <div
-                className="pointer-events-none absolute -inset-8 opacity-60 blur-3xl"
-                style={{
-                  background:
-                    'radial-gradient(closest-side, rgba(16, 185, 129, 0.18), rgba(255, 255, 255, 0.06) 55%, transparent)',
-                }}
-              />
-
-              <div className="relative rounded-2xl border border-white/[0.14] bg-[#0D0E12] shadow-[0_50px_120px_-30px_rgba(0,0,0,0.95)] overflow-hidden">
-                {/* macOS Window Chrome */}
-                <div className="flex flex-wrap items-center justify-between gap-3 px-4 py-3 bg-[#13141A] border-b border-white/[0.08]">
-                  <div className="flex items-center gap-3">
-                    <div className="flex items-center gap-1.5">
-                      <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]" />
-                      <span className="w-2.5 h-2.5 rounded-full bg-[#febc2e]" />
-                      <span className="w-2.5 h-2.5 rounded-full bg-[#28c840]" />
-                    </div>
-                    <span className="text-[11px] font-mono-tabular text-zinc-400 bg-black/40 border border-white/[0.06] px-2.5 py-0.5 rounded-md">
-                      ratio.studio / {sample.screenStyle}
-                    </span>
-                  </div>
-
-                  {/* Interactive 5-Exam Live Switcher */}
-                  <div className="flex items-center gap-1 p-0.5 rounded-lg bg-black/50 border border-white/[0.07]">
-                    {(['lnat', 'ucat', 'tara', 'esat', 'sat'] as const).map((tab) => (
-                      <button
-                        key={tab}
-                        type="button"
-                        onClick={() => {
-                          setSampleTab(tab);
-                          setPicked(null);
-                        }}
-                        className={`px-2.5 py-1 rounded-md text-[10px] font-mono-tabular font-semibold uppercase tracking-wider transition-all cursor-pointer ${
-                          sampleTab === tab
-                            ? 'bg-white text-[#09090B] shadow-sm'
-                            : 'text-zinc-400 hover:text-white'
-                        }`}
-                      >
-                        {tab}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Interactive Split Question Body */}
-                <div className="p-5 sm:p-7 grid md:grid-cols-12 gap-6 items-start">
-                  <div className="md:col-span-6 space-y-3">
-                    <div className="flex items-center justify-between text-[11px] font-mono-tabular">
-                      <span className="text-emerald-400 uppercase tracking-wider">
-                        {sample.badge}
-                      </span>
-                      <span className="inline-flex items-center gap-1 text-zinc-400 bg-white/[0.04] border border-white/[0.07] px-2 py-0.5 rounded">
-                        <Clock className="w-3 h-3 text-emerald-400" />
-                        {sample.timer}
-                      </span>
-                    </div>
-                    <div className="rounded-xl border border-white/[0.07] bg-white/[0.025] p-4 sm:p-5 text-[13.5px] text-zinc-200 leading-[1.7] font-serif-passage">
-                      {sample.passage}
-                    </div>
-                    <div className="flex items-center justify-between text-[11px] text-zinc-500 pt-1">
-                      <span>Try answering live →</span>
-                      <button
-                        type="button"
-                        onClick={() => onSelectTest(sampleTab)}
-                        className="text-emerald-400 hover:text-emerald-300 font-medium inline-flex items-center gap-1 cursor-pointer"
-                      >
-                        Open full {sample.code} workspace <ArrowRight className="w-3 h-3" />
-                      </button>
-                    </div>
-                  </div>
-
-                  <div className="md:col-span-6 space-y-3">
-                    <p className="text-[14px] font-medium text-white leading-snug">{sample.stem}</p>
-                    <div className="space-y-2">
-                      {sample.options.map((opt, idx) => {
-                        const isPicked = picked === idx;
-                        const isRight = idx === sample.correct;
-                        const stateCls =
-                          picked === null
-                            ? 'border-white/[0.09] bg-white/[0.02] hover:border-white/25 hover:bg-white/[0.05] text-zinc-200'
-                            : isRight
-                              ? 'border-emerald-400/60 bg-emerald-500/12 text-emerald-100'
-                              : isPicked
-                                ? 'border-rose-400/50 bg-rose-500/10 text-rose-200'
-                                : 'border-white/[0.05] bg-transparent text-zinc-500';
-                        return (
-                          <button
-                            key={opt}
-                            type="button"
-                            onClick={() => setPicked(idx)}
-                            className={`w-full text-left px-3.5 py-2.5 rounded-xl border text-[13px] transition-all flex items-start gap-2.5 cursor-pointer ${stateCls}`}
-                          >
-                            <span className="font-mono-tabular text-[11px] font-semibold mt-0.5 opacity-75">
-                              {String.fromCharCode(65 + idx)}
-                            </span>
-                            <span className="leading-snug">{opt}</span>
-                          </button>
-                        );
-                      })}
-                    </div>
-
-                    {picked !== null && (
-                      <div className="rounded-xl border border-emerald-500/25 bg-emerald-500/[0.07] p-3.5 text-xs text-zinc-200 leading-relaxed">
-                        <span className="font-semibold text-emerald-300 mr-1.5">
-                          {picked === sample.correct ? 'Correct.' : 'Explanation:'}
-                        </span>
-                        {sample.explanation}
-                      </div>
-                    )}
-                  </div>
-                </div>
+        {/* Asymmetric 12-Column Swiss Editorial Hero */}
+        <section className="max-w-6xl mx-auto px-5 sm:px-8 pt-12 sm:pt-16 pb-16 sm:pb-20">
+          <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+            {/* Left Editorial Column */}
+            <div className="lg:col-span-6 space-y-7 pt-2">
+              <div className="text-[11px] font-mono-tabular uppercase tracking-[0.18em] text-[var(--accent)]">
+                LNAT · UCAT · TARA · ESAT · TMUA · SAT
               </div>
 
-              {/* Floating Companion Card (Daily 5 & Adaptive Pace, desktop only) */}
-              <div className="hidden lg:block absolute -right-6 -bottom-7 w-64 rounded-2xl border border-white/[0.15] bg-[#12141B]/95 backdrop-blur-xl p-4 shadow-[0_30px_70px_-15px_rgba(0,0,0,0.95)] rotate-[2deg]">
-                <div className="flex items-center justify-between text-[10px] font-mono-tabular uppercase tracking-wider text-emerald-400">
-                  <span className="inline-flex items-center gap-1">
-                    <Flame className="w-3 h-3" /> Adaptive Daily 5
-                  </span>
-                  <span className="text-zinc-400">Lvl 4 / 5</span>
-                </div>
-                <div className="mt-2.5 flex items-center gap-1">
-                  {[1, 2, 3, 4, 5].map((lvl) => (
-                    <span
-                      key={lvl}
-                      className={`h-1.5 flex-1 rounded-full ${
-                        lvl <= 4 ? 'bg-emerald-400' : 'bg-white/10'
+              <h1 className="font-display text-5xl sm:text-[62px] leading-[1.02] tracking-[-0.025em] text-[var(--ink)]">
+                Admissions prep built around the real exam screen.
+              </h1>
+
+              <p className="text-base sm:text-[17px] text-[var(--text-muted)] leading-relaxed max-w-xl">
+                Original full-length mocks, adaptive skill drills, and timed essay studios rendered
+                in authentic Pearson VUE, UAT-UK, and Bluebook interfaces — without subscriptions.
+              </p>
+
+              <div className="flex flex-wrap items-center gap-3 pt-1">
+                <button
+                  type="button"
+                  onClick={() => onSelectTest('lnat')}
+                  className="px-6 py-3 bg-[var(--accent)] text-[#04130d] hover:opacity-90 text-sm font-semibold inline-flex items-center gap-2 transition-opacity cursor-pointer"
+                >
+                  {isPro ? 'Continue practicing' : 'Start practicing free'}
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+                <a
+                  href="#pricing"
+                  onClick={scrollTo('pricing')}
+                  className="px-5 py-3 border border-[var(--rule)] hover:border-[var(--ink)]/50 text-sm font-medium text-[var(--ink)] transition-colors"
+                >
+                  Pricing — from £24
+                </a>
+              </div>
+
+              {!isPro && (
+                <p className="text-xs font-mono-tabular text-[var(--text-muted)]">
+                  No card required to try · One-off season passes, zero subscriptions
+                </p>
+              )}
+            </div>
+
+            {/* Right Column: Live Interactive Exam Desk (No fake browser chrome) */}
+            <div className="lg:col-span-6 border border-[var(--rule)] bg-[var(--surface)]">
+              {/* Exam Switcher Bar */}
+              <div className="flex items-center justify-between border-b border-[var(--rule)] px-4 py-2.5 gap-2 overflow-x-auto">
+                <div className="flex items-center gap-1">
+                  {(['lnat', 'ucat', 'tara', 'esat', 'tmua', 'sat'] as SampleKey[]).map((key) => (
+                    <button
+                      key={key}
+                      type="button"
+                      onClick={() => {
+                        setSampleKey(key);
+                        setPicked(null);
+                      }}
+                      className={`px-2.5 py-1 text-[11px] font-mono-tabular uppercase tracking-wider transition-colors cursor-pointer ${
+                        sampleKey === key
+                          ? 'bg-[var(--ink)] text-[var(--bg)] font-semibold'
+                          : 'text-[var(--text-muted)] hover:text-[var(--ink)]'
                       }`}
-                    />
+                    >
+                      {key}
+                    </button>
                   ))}
                 </div>
-                <div className="mt-2.5 flex items-center justify-between text-[11px] text-zinc-300">
-                  <span>Pace: 1:18 / Q</span>
-                  <span className="text-emerald-400 font-mono-tabular">−12s ahead</span>
-                </div>
+                <span className="text-[11px] font-mono-tabular text-[var(--text-muted)] shrink-0">
+                  {sample.screen} · {sample.timer}
+                </span>
               </div>
-            </motion.div>
-          </div>
 
-          {/* Smooth Bottom Fade out of Grid */}
-          <div className="h-24 -mt-10 relative pointer-events-none bg-gradient-to-b from-transparent to-[#070709]" />
+              {/* Specimen Body */}
+              <div className="p-5 sm:p-6 space-y-5">
+                <div className="flex items-center justify-between text-[11px] font-mono-tabular uppercase tracking-wider">
+                  <span className="text-[var(--accent)]">
+                    {sample.code} · {sample.section}
+                  </span>
+                  <span className="text-[var(--text-muted)]">Interactive Specimen</span>
+                </div>
+
+                <p className="font-serif-passage text-[14.5px] leading-[1.7] text-[var(--ink)]/90 border-l-2 border-[var(--rule)] pl-4">
+                  {sample.passage}
+                </p>
+
+                <div className="text-sm font-medium text-[var(--ink)]">{sample.stem}</div>
+
+                <div className="space-y-2">
+                  {sample.options.map((opt, idx) => {
+                    const isPicked = picked === idx;
+                    const isCorrect = idx === sample.correct;
+                    let cls =
+                      'border-[var(--rule)] bg-[var(--bg)] text-[var(--ink)]/90 hover:border-[var(--ink)]/40';
+                    if (picked !== null) {
+                      if (isCorrect) {
+                        cls = 'border-[var(--accent)] bg-[var(--accent)]/10 text-[var(--ink)]';
+                      } else if (isPicked && !isCorrect) {
+                        cls = 'border-[var(--crimson)] bg-[var(--crimson)]/10 text-[var(--ink)]';
+                      } else {
+                        cls = 'border-[var(--rule)] bg-[var(--bg)] text-[var(--text-muted)]';
+                      }
+                    }
+                    return (
+                      <button
+                        key={idx}
+                        type="button"
+                        onClick={() => setPicked(idx)}
+                        className={`w-full text-left px-3.5 py-2.5 border text-xs sm:text-[13px] leading-snug transition-colors flex items-start gap-3 cursor-pointer ${cls}`}
+                      >
+                        <span className="font-mono-tabular text-[11px] text-[var(--text-muted)] mt-0.5 shrink-0">
+                          {String.fromCharCode(65 + idx)}.
+                        </span>
+                        <span>{opt}</span>
+                      </button>
+                    );
+                  })}
+                </div>
+
+                {picked !== null ? (
+                  <div className="border-t border-[var(--rule)] pt-4 flex flex-col sm:flex-row sm:items-start justify-between gap-3">
+                    <div className="text-xs leading-relaxed text-[var(--text-muted)]">
+                      <span
+                        className={`font-semibold mr-1.5 ${
+                          picked === sample.correct ? 'text-[var(--accent)]' : 'text-[var(--crimson)]'
+                        }`}
+                      >
+                        {picked === sample.correct ? 'Correct.' : 'Not quite.'}
+                      </span>
+                      {sample.explanation}
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => onSelectTest(sampleKey)}
+                      className="text-xs font-medium text-[var(--accent)] hover:underline inline-flex items-center gap-1 shrink-0 cursor-pointer"
+                    >
+                      Open {sample.code} <ArrowRight className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
+                ) : (
+                  <div className="border-t border-[var(--rule)] pt-3.5 flex items-center justify-between text-xs">
+                    <span className="text-[var(--text-muted)] font-mono-tabular">
+                      Select an option to check the explanation
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() => onSelectTest(sampleKey)}
+                      className="text-[var(--ink)] hover:text-[var(--accent)] font-medium inline-flex items-center gap-1 transition-colors cursor-pointer"
+                    >
+                      Full {sample.code} studio <ArrowRight className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
         </section>
 
-        {/* 5-Column Platinum Stats Strip (inspired by recall-politics .lp-strip) */}
-        <section className="border-y border-white/[0.08] bg-gradient-to-r from-transparent via-white/[0.035] to-transparent">
-          <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-5 divide-y md:divide-y-0 md:divide-x divide-white/[0.08]">
+        {/* Ruled Architectural Ledger Strip */}
+        <section className="border-y border-[var(--rule)] bg-[var(--surface)]/50">
+          <div className="max-w-6xl mx-auto px-5 sm:px-8 grid grid-cols-2 md:grid-cols-5 divide-y md:divide-y-0 md:divide-x divide-[var(--rule)]">
             {[
-              ['3,915+', 'Original questions', 'Written to real exam-board specs'],
-              ['15', 'Full-length mocks', 'Timed under official conditions'],
-              ['6', 'Exam screens', 'Pearson VUE, UAT-UK & Bluebook'],
-              ['470+', 'Vocab & flashcards', 'SAT themes, UCAT & TMUA logic'],
-              ['54', 'Official board links', 'Direct past papers & specimens'],
+              ['3,915+', 'Original questions', 'Authored to official specs'],
+              ['15', 'Full-length mocks', 'Timed exam conditions'],
+              ['6', 'Admissions tracks', 'UK, ANZ & US entry'],
+              ['470+', 'Vocab & logic cards', 'SAT, UCAT & TMUA'],
+              ['54', 'Official board links', 'Direct to past papers'],
             ].map(([num, label, sub]) => (
-              <div key={label} className="px-6 py-8">
-                <div className="font-display text-4xl sm:text-[2.75rem] leading-none ratio-platinum-num">
+              <div key={label} className="py-6 sm:px-5 first:pl-0 last:pr-0">
+                <div className="font-display text-3xl sm:text-4xl text-[var(--ink)] leading-none">
                   {num}
                 </div>
-                <div className="mt-2.5 text-sm font-semibold text-white">{label}</div>
-                <div className="mt-1 text-xs text-zinc-400 leading-relaxed">{sub}</div>
+                <div className="text-xs font-medium text-[var(--ink)] mt-2">{label}</div>
+                <div className="text-[11px] text-[var(--text-muted)] mt-0.5">{sub}</div>
               </div>
             ))}
           </div>
         </section>
 
-        {/* 6 Admissions Tracks — Crisp Static Interactive Grid (No Marquee) */}
-        <section id="exams" className="max-w-6xl mx-auto px-5 sm:px-8 py-20 sm:py-28">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
+        {/* Six Admissions Tracks — Numbered Architectural Directory */}
+        <motion.section {...REVEAL} id="exams" className="max-w-6xl mx-auto px-5 sm:px-8 py-20">
+          <div className="flex flex-wrap items-end justify-between gap-4 pb-8 border-b border-[var(--rule)]">
             <div>
-              <div className="text-[11px] font-mono-tabular uppercase tracking-[0.16em] text-emerald-400">
-                Admissions Tracks
+              <div className="text-[11px] font-mono-tabular uppercase tracking-[0.18em] text-[var(--accent)]">
+                01 / Six Admissions Tracks
               </div>
-              <h2 className="font-display text-4xl sm:text-5xl ratio-platinum-text tracking-tight mt-2">
+              <h2 className="font-display text-4xl sm:text-5xl text-[var(--ink)] mt-2 leading-tight">
                 Choose your exam.
               </h2>
             </div>
-            <p className="text-sm text-zinc-400 max-w-md leading-relaxed">
-              Every track opens directly into its own full workspace with authentic timed mocks,
-              targeted skill banks, mistake queues, and official resources.
+            <p className="text-sm text-[var(--text-muted)] max-w-md">
+              Each workspace has its own exam-board simulator, original question bank, revision
+              guide, and mistake queue.
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {ADMISSIONS_TESTS.map((test) => {
-              const info = EXAM_STATS[test.id];
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 border-l border-[var(--rule)]">
+            {ADMISSIONS_TESTS.map((t) => {
+              const meta = EXAM_STATS[t.id];
               return (
                 <button
-                  key={test.id}
+                  key={t.id}
                   type="button"
-                  onClick={() => onSelectTest(test.id)}
-                  className="ratio-card-lift group text-left rounded-2xl border border-white/[0.09] hover:border-emerald-400/45 bg-gradient-to-b from-[#13141A] to-[#0D0E12] p-6 flex flex-col justify-between gap-6 cursor-pointer"
+                  onClick={() => onSelectTest(t.id)}
+                  className="group text-left p-6 border-r border-b border-[var(--rule)] hover:bg-[var(--surface)] transition-colors flex flex-col justify-between gap-6 cursor-pointer"
                 >
                   <div className="space-y-3">
-                    <div className="flex items-center justify-between gap-2">
-                      <span className="font-mono-tabular text-xs font-bold tracking-[0.12em] uppercase text-white">
-                        {test.code}
+                    <div className="flex items-center justify-between text-[11px] font-mono-tabular text-[var(--text-muted)]">
+                      <span>
+                        {meta.index} · {meta.subject}
                       </span>
-                      <span className="text-[10px] font-mono-tabular uppercase tracking-wider px-2.5 py-0.5 rounded-full border border-white/[0.09] bg-white/[0.03] text-zinc-400 group-hover:border-emerald-500/30 group-hover:text-emerald-300 transition-colors">
-                        {info.interfaceLabel}
-                      </span>
+                      <ArrowUpRight className="w-4 h-4 text-[var(--text-muted)] group-hover:text-[var(--accent)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
                     </div>
-
                     <div>
-                      <div className="text-[15px] font-semibold text-white group-hover:text-emerald-300 transition-colors">
-                        {info.mocks}
-                      </div>
-                      <div className="text-xs text-zinc-400 mt-1 leading-relaxed">{info.extras}</div>
+                      <h3 className="font-display text-3xl text-[var(--ink)] group-hover:text-[var(--accent)] transition-colors">
+                        {t.code}
+                      </h3>
+                      <p className="text-xs text-[var(--text-muted)] mt-1">{meta.universities}</p>
+                    </div>
+                    <div className="text-xs text-[var(--ink)]/90 space-y-1 pt-2 border-t border-[var(--rule)]/70">
+                      <div className="font-medium">{meta.mocks}</div>
+                      <div className="text-[var(--text-muted)]">{meta.extras}</div>
                     </div>
                   </div>
 
-                  <div className="pt-4 border-t border-white/[0.07] flex items-center justify-between gap-2">
-                    <span className="text-[11px] text-zinc-500 truncate">{info.universities}</span>
-                    <span className="text-xs font-semibold text-zinc-200 group-hover:text-emerald-300 inline-flex items-center gap-1 shrink-0 transition-colors">
-                      Enter{' '}
-                      <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
-                    </span>
+                  <div className="text-[11px] font-mono-tabular text-[var(--text-muted)] group-hover:text-[var(--ink)] transition-colors">
+                    {meta.interfaceLabel}
                   </div>
                 </button>
               );
             })}
           </div>
-        </section>
+        </motion.section>
 
-        {/* 3 Alternating Editorial Feature Showcases (inspired by recall-politics .lp-feat) */}
-        <section id="features" className="max-w-6xl mx-auto px-5 sm:px-8 pb-20 sm:pb-28 space-y-6">
-          {/* Feature 1: Official Exam Screens */}
-          <div className="rounded-[28px] border border-white/[0.09] bg-gradient-to-br from-[#101923] via-[#0B0E14] to-[#090A0D] p-7 sm:p-12 grid lg:grid-cols-12 gap-8 lg:gap-12 items-center overflow-hidden">
-            <div className="lg:col-span-5 space-y-4">
-              <div className="inline-flex items-center gap-2 text-xs font-mono-tabular uppercase tracking-wider text-emerald-300">
-                <Monitor className="w-4 h-4" /> Official Exam Screens
-              </div>
-              <h3 className="font-display text-3xl sm:text-[2.6rem] leading-[1.05] text-white tracking-tight">
-                Zero test-day surprises.
-              </h3>
-              <p className="text-sm sm:text-[15px] text-zinc-400 leading-relaxed">
-                Sit every mock in the exact chrome your exam uses — Pearson VUE split-screen with
-                highlighter and UCAT calculator, UAT-UK no-calculator CBT, or College Board Bluebook
-                with adaptive Module 2 routing.
-              </p>
-              <hr className="border-white/[0.08]" />
-              <div className="text-xs font-mono-tabular text-zinc-300">
-                Flag for Review · Question Navigator · Official timing rules
-              </div>
-            </div>
-
-            <div className="lg:col-span-7">
-              <div className="rounded-2xl border border-white/[0.14] bg-[#0B0C10] shadow-[0_30px_70px_-20px_rgba(0,0,0,0.9)] overflow-hidden lg:rotate-[1.2deg] hover:rotate-0 transition-transform duration-300">
-                <div className="flex items-center justify-between px-4 py-2.5 border-b border-white/[0.08] bg-[#14161D]">
-                  <div className="flex items-center gap-1.5 text-[11px] font-mono-tabular text-zinc-400">
-                    <Sparkles className="w-3.5 h-3.5 text-emerald-400" />
-                    Preview exam chrome
+        {/* Authentic Exam Screens — Editorial Split Showcase */}
+        <motion.section
+          {...REVEAL}
+          id="interfaces"
+          className="border-t border-[var(--rule)] bg-[var(--surface)]/40"
+        >
+          <div className="max-w-6xl mx-auto px-5 sm:px-8 py-20 space-y-12">
+            <div className="grid lg:grid-cols-12 gap-10 items-start">
+              {/* Left Index Switcher */}
+              <div className="lg:col-span-5 space-y-6">
+                <div>
+                  <div className="text-[11px] font-mono-tabular uppercase tracking-[0.18em] text-[var(--accent)]">
+                    02 / Official Exam Screens
                   </div>
-                  <div className="flex gap-1">
-                    {(
+                  <h2 className="font-display text-4xl text-[var(--ink)] mt-2 leading-tight">
+                    Zero test-day surprises.
+                  </h2>
+                  <p className="text-sm text-[var(--text-muted)] mt-3 leading-relaxed">
+                    Rehearse in the exact layout, timer placement, and review navigator you will
+                    face in the test centre.
+                  </p>
+                </div>
+
+                <div className="border-t border-[var(--rule)] divide-y divide-[var(--rule)]">
+                  {(
+                    [
                       [
-                        ['pearson', 'Pearson VUE'],
-                        ['uatuk', 'UAT-UK'],
-                        ['bluebook', 'Bluebook'],
-                      ] as const
-                    ).map(([id, label]) => (
+                        'pearson',
+                        '01',
+                        'Pearson VUE — LNAT & UCAT',
+                        'Blue header & footer, white split-screen passage, text highlighter, Flag for Review, and on-screen UCAT calculator.',
+                      ],
+                      [
+                        'uatuk',
+                        '02',
+                        'UAT-UK CBT — ESAT, TMUA & TARA',
+                        'Navy UAT-UK chrome, No Calculator badge, 75-minute and 40-minute paper clocks, and item navigator.',
+                      ],
+                      [
+                        'bluebook',
+                        '03',
+                        'College Board Bluebook — Digital SAT',
+                        'Light split-pane, hide-able centered clock, Mark for Review, Reference Sheet, and adaptive Module 2 routing.',
+                      ],
+                    ] as const
+                  ).map(([id, num, title, desc]) => {
+                    const active = showcaseScreen === id;
+                    return (
                       <button
                         key={id}
                         type="button"
                         onClick={() => setShowcaseScreen(id)}
-                        className={`px-2.5 py-1 rounded text-[10px] font-mono-tabular cursor-pointer transition-colors ${
-                          showcaseScreen === id
-                            ? 'bg-emerald-400 text-[#04130D] font-semibold'
-                            : 'text-zinc-400 hover:text-white'
+                        className={`w-full text-left py-4 transition-colors cursor-pointer ${
+                          active ? 'text-[var(--ink)]' : 'text-[var(--text-muted)] hover:text-[var(--ink)]'
                         }`}
                       >
-                        {label}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-                <div className="p-5">
-                  <div
-                    className={`rounded-xl overflow-hidden border ${
-                      showcaseScreen === 'bluebook'
-                        ? 'border-zinc-200 bg-white text-zinc-900'
-                        : 'border-slate-300 bg-white text-slate-900'
-                    }`}
-                  >
-                    <div
-                      className={`px-4 py-2.5 flex items-center justify-between text-xs font-semibold ${
-                        showcaseScreen === 'pearson'
-                          ? 'bg-[#005A9C] text-white'
-                          : showcaseScreen === 'uatuk'
-                            ? 'bg-[#0B4F6C] text-white'
-                            : 'bg-[#F3F4F6] text-zinc-900 border-b border-zinc-200'
-                      }`}
-                    >
-                      <span>
-                        {showcaseScreen === 'pearson'
-                          ? 'LNAT / UCAT · Section A'
-                          : showcaseScreen === 'uatuk'
-                            ? 'ESAT / TARA / TMUA · No Calculator'
-                            : 'Digital SAT · Reading & Writing · Module 2'}
-                      </span>
-                      <span className="font-mono-tabular">
-                        {showcaseScreen === 'bluebook' ? '31:42 · Hide' : 'Time Remaining 39:18'}
-                      </span>
-                    </div>
-                    <div className="p-4 grid grid-cols-2 gap-4 text-[11px] leading-relaxed">
-                      <div className="border-r border-slate-200 pr-3 text-slate-600">
-                        <div className="font-semibold text-slate-900 mb-1">Passage / Stem</div>
-                        Authentic split-pane layout with keyboard shortcuts, strikethrough, and
-                        instant review jump.
-                      </div>
-                      <div className="space-y-1.5">
-                        {['A. Option one', 'B. Option two (selected)', 'C. Option three'].map(
-                          (o, i) => (
-                            <div
-                              key={o}
-                              className={`px-2.5 py-1.5 rounded border text-[11px] ${
-                                i === 1
-                                  ? 'border-blue-600 bg-blue-50 text-blue-900 font-medium'
-                                  : 'border-slate-200 text-slate-700'
-                              }`}
-                            >
-                              {o}
-                            </div>
-                          ),
+                        <div className="flex items-center justify-between gap-2">
+                          <span className="text-xs font-mono-tabular text-[var(--accent)]">
+                            {num}
+                          </span>
+                          <span className="text-sm font-semibold flex-1">{title}</span>
+                        </div>
+                        {active && (
+                          <p className="text-xs text-[var(--text-muted)] leading-relaxed mt-2 pl-6">
+                            {desc}
+                          </p>
                         )}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Right Authentic Screen Preview */}
+              <div className="lg:col-span-7 border border-[var(--rule)] bg-[var(--bg)] p-3 sm:p-4">
+                {showcaseScreen === 'pearson' && (
+                  <div className="overflow-hidden border border-[#CBD5E1] bg-white text-[#111827]">
+                    <div className="bg-[#005A9C] text-white px-4 py-2.5 flex items-center justify-between text-xs font-semibold">
+                      <span>LNAT — Section A · Multiple Choice</span>
+                      <span className="font-mono-tabular">Time Remaining 94:12</span>
+                    </div>
+                    <div className="bg-[#E8F1F8] border-b border-[#CBD5E1] px-4 py-1.5 flex items-center justify-between text-[11px] text-[#1E3A5F]">
+                      <span>Question 14 of 42</span>
+                      <span className="font-semibold">Flag for Review</span>
+                    </div>
+                    <div className="grid sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-[#CBD5E1] text-xs">
+                      <div className="p-4 leading-relaxed text-[#1F2937]">
+                        <div className="font-semibold text-[#005A9C] mb-1.5">Passage 5</div>
+                        Judicial discretion has long been criticised for producing unequal sentences
+                        for comparable offences. Yet mandatory minimums shift that discretion
+                        upstream to prosecutors…
+                      </div>
+                      <div className="p-4 space-y-2">
+                        <div className="font-semibold text-[#111827] mb-2">
+                          Which assumption underlies the author’s objection?
+                        </div>
+                        <div className="px-2.5 py-1.5 rounded border border-[#CBD5E1] text-[#334155]">
+                          A. Prosecutors seek maximum sentences.
+                        </div>
+                        <div className="px-2.5 py-1.5 rounded border border-[#005A9C] bg-[#E6F2F7] font-medium">
+                          B. Charging decisions are less transparent.
+                        </div>
+                        <div className="px-2.5 py-1.5 rounded border border-[#CBD5E1] text-[#334155]">
+                          C. Mandatory minimums lowered crime rates.
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Feature 2: Adaptive Drills, Daily 5 & Mistake Queues */}
-          <div className="rounded-[28px] border border-white/[0.09] bg-gradient-to-br from-[#141220] via-[#0B0B11] to-[#090A0D] p-7 sm:p-12 grid lg:grid-cols-12 gap-8 lg:gap-12 items-center overflow-hidden">
-            <div className="lg:col-span-7 order-2 lg:order-1">
-              <div className="rounded-2xl border border-white/[0.14] bg-[#0D0E13] p-5 sm:p-6 shadow-[0_30px_70px_-20px_rgba(0,0,0,0.9)] lg:-rotate-[1.2deg] hover:rotate-0 transition-transform duration-300 space-y-4">
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-mono-tabular uppercase tracking-wider text-emerald-400 inline-flex items-center gap-1.5">
-                    <Target className="w-3.5 h-3.5" /> Adaptive Run · ESAT Maths 2
-                  </span>
-                  <span className="px-2 py-0.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-[11px] font-mono-tabular text-emerald-300">
-                    Stepped up → Level 4
-                  </span>
-                </div>
-                <div className="grid grid-cols-5 gap-1.5">
-                  {['L1', 'L2', 'L3', 'L4', 'L5'].map((l, idx) => (
-                    <div
-                      key={l}
-                      className={`py-2 rounded-lg border text-center text-xs font-mono-tabular ${
-                        idx === 3
-                          ? 'border-emerald-400 bg-emerald-500/15 text-emerald-200 font-semibold'
-                          : idx < 3
-                            ? 'border-white/10 bg-white/[0.04] text-zinc-400'
-                            : 'border-white/[0.06] bg-transparent text-zinc-600'
-                      }`}
-                    >
-                      {l}
+                    <div className="bg-[#005A9C] text-white px-4 py-2 flex items-center justify-between text-[11px]">
+                      <span>Navigator</span>
+                      <span>Previous · Next</span>
                     </div>
-                  ))}
-                </div>
-                <div className="grid grid-cols-3 gap-2.5 pt-1">
-                  <div className="rounded-xl border border-white/[0.08] bg-white/[0.02] p-3">
-                    <div className="text-[10px] font-mono-tabular uppercase text-zinc-500">
-                      Daily 5
-                    </div>
-                    <div className="text-sm font-semibold text-white mt-0.5">5 / 5 Locked</div>
                   </div>
-                  <div className="rounded-xl border border-white/[0.08] bg-white/[0.02] p-3">
-                    <div className="text-[10px] font-mono-tabular uppercase text-zinc-500">
-                      Pace Target
-                    </div>
-                    <div className="text-sm font-semibold text-emerald-300 mt-0.5">1:30 / Q</div>
-                  </div>
-                  <div className="rounded-xl border border-white/[0.08] bg-white/[0.02] p-3">
-                    <div className="text-[10px] font-mono-tabular uppercase text-zinc-500">
-                      Review Queue
-                    </div>
-                    <div className="text-sm font-semibold text-amber-300 mt-0.5">3 to retry</div>
-                  </div>
-                </div>
-              </div>
-            </div>
+                )}
 
-            <div className="lg:col-span-5 order-1 lg:order-2 space-y-4">
-              <div className="inline-flex items-center gap-2 text-xs font-mono-tabular uppercase tracking-wider text-emerald-300">
-                <Layers className="w-4 h-4" /> Adaptive Drills &amp; Mistake Queues
-              </div>
-              <h3 className="font-display text-3xl sm:text-[2.6rem] leading-[1.05] text-white tracking-tight">
-                Harder as you get sharper.
-              </h3>
-              <p className="text-sm sm:text-[15px] text-zinc-400 leading-relaxed">
-                ESAT adapts from Level 1 to Level 5 in real time. TARA and SAT filter by exact
-                skill, lock a persistent Daily 5, and keep missed or guessed items in your Review
-                Queue until you earn an unflagged correct retry.
-              </p>
-              <hr className="border-white/[0.08]" />
-              <div className="text-xs font-mono-tabular text-zinc-300">
-                First-attempt stats kept separate · Never inflates practice accuracy
-              </div>
-            </div>
-          </div>
-
-          {/* Feature 3: Essay Studios & Self-Review Rubrics */}
-          <div className="rounded-[28px] border border-white/[0.09] bg-gradient-to-br from-[#0F1B18] via-[#0B0E0E] to-[#090A0D] p-7 sm:p-12 grid lg:grid-cols-12 gap-8 lg:gap-12 items-center overflow-hidden">
-            <div className="lg:col-span-5 space-y-4">
-              <div className="inline-flex items-center gap-2 text-xs font-mono-tabular uppercase tracking-wider text-emerald-300">
-                <Feather className="w-4 h-4" /> LNAT &amp; TARA Essay Studios
-              </div>
-              <h3 className="font-display text-3xl sm:text-[2.6rem] leading-[1.05] text-white tracking-tight">
-                Write under the clock. Review with precision.
-              </h3>
-              <p className="text-sm sm:text-[15px] text-zinc-400 leading-relaxed">
-                Pick one of three prompts in 40 minutes with live word count and a 750-word
-                guardrail. Plans, paragraph-annotated model essays, and self-review rubrics unlock
-                only after you submit — or open untimed revision mode anytime.
-              </p>
-              <hr className="border-white/[0.08]" />
-              <div className="text-xs font-mono-tabular text-zinc-300">
-                18 TARA prompts + 15 LNAT prompts · Annotated models · No fake AI grades
-              </div>
-            </div>
-
-            <div className="lg:col-span-7">
-              <div className="rounded-2xl border border-white/[0.14] bg-[#0D0E13] p-5 sm:p-6 shadow-[0_30px_70px_-20px_rgba(0,0,0,0.9)] lg:rotate-[1.2deg] hover:rotate-0 transition-transform duration-300 space-y-4">
-                <div className="flex items-center justify-between text-xs font-mono-tabular">
-                  <span className="text-white font-semibold">TARA Essay Studio · Set 1</span>
-                  <div className="flex items-center gap-2">
-                    <span className="px-2 py-0.5 rounded bg-white/[0.06] text-zinc-300">
-                      612 / 750 words
-                    </span>
-                    <span className="px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-300">
-                      08:14 left
-                    </span>
+                {showcaseScreen === 'uatuk' && (
+                  <div className="overflow-hidden border border-[#CBD5E1] bg-white text-[#111827]">
+                    <div className="bg-[#0B4F6C] text-white px-4 py-2.5 flex items-center justify-between text-xs font-semibold">
+                      <span>TMUA — Paper 2 · Mathematical Reasoning</span>
+                      <span className="font-mono-tabular">74:10</span>
+                    </div>
+                    <div className="bg-[#EEF4F7] border-b border-[#CBD5E1] px-4 py-1.5 flex items-center justify-between text-[11px] text-[#0B4F6C]">
+                      <span>No Calculator · No Formula Sheet</span>
+                      <span>Question 9 of 20</span>
+                    </div>
+                    <div className="p-5 space-y-3 text-xs">
+                      <div className="text-[11px] font-semibold uppercase tracking-wider text-[#0B4F6C]">
+                        Necessary &amp; Sufficient Conditions
+                      </div>
+                      <div className="text-[#111827] leading-relaxed">
+                        Let x be a positive integer. P: 10 divides x. Q: 2 divides x. Which
+                        describes P relative to Q?
+                      </div>
+                      <div className="grid grid-cols-2 gap-2 pt-1">
+                        {[
+                          'A. Necessary, not sufficient',
+                          'B. Sufficient, not necessary',
+                          'C. Necessary & sufficient',
+                          'D. Neither',
+                        ].map((o, i) => (
+                          <div
+                            key={o}
+                            className={`px-3 py-2 rounded border ${
+                              i === 1
+                                ? 'border-[#0B4F6C] bg-[#E6F2F7] font-semibold'
+                                : 'border-[#CBD5E1] text-[#334155]'
+                            }`}
+                          >
+                            {o}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    <div className="bg-[#0B4F6C] text-white px-4 py-2 flex items-center justify-between text-[11px]">
+                      <span>Flag for Review</span>
+                      <span>Previous · Next</span>
+                    </div>
                   </div>
-                </div>
-                <div className="rounded-xl border border-white/[0.07] bg-white/[0.02] p-3.5 text-xs text-zinc-300 leading-relaxed font-serif-passage">
-                  “While algorithmic triage speeds initial screening, delegating moral judgement to
-                  opaque models erodes public accountability unless human review remains binding…”
-                </div>
-                <div className="grid grid-cols-3 gap-2 text-[11px]">
-                  {[
-                    ['Thesis & Scope', 'Clear'],
-                    ['Counterargument', 'Clear'],
-                    ['Precision', 'Developing'],
-                  ].map(([crit, state]) => (
-                    <div
-                      key={crit}
-                      className="rounded-lg border border-white/[0.08] bg-white/[0.025] px-3 py-2 flex items-center justify-between"
-                    >
-                      <span className="text-zinc-400 truncate">{crit}</span>
-                      <span
-                        className={`font-mono-tabular font-semibold ${
-                          state === 'Clear' ? 'text-emerald-400' : 'text-amber-300'
-                        }`}
-                      >
-                        {state}
+                )}
+
+                {showcaseScreen === 'bluebook' && (
+                  <div className="overflow-hidden border border-[#CBD5E1] bg-[#F8FAFC] text-[#111827]">
+                    <div className="bg-white border-b border-[#E2E8F0] px-4 py-2.5 flex items-center justify-between text-xs">
+                      <span className="font-semibold">Section 2, Module 2: Math (Harder)</span>
+                      <span className="font-mono-tabular font-bold">34:15</span>
+                      <span className="text-[11px] text-[#475569]">Reference</span>
+                    </div>
+                    <div className="grid sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-[#E2E8F0] text-xs bg-white">
+                      <div className="p-4 leading-relaxed text-[#1F2937]">
+                        A quadratic function f(x) = a(x − 4)² + 12 passes through (6, 20), where a
+                        is a constant.
+                      </div>
+                      <div className="p-4 space-y-2">
+                        <div className="font-semibold">What is the value of f(1)?</div>
+                        <div className="px-2.5 py-1.5 rounded border border-[#CBD5E1]">A. 24</div>
+                        <div className="px-2.5 py-1.5 rounded border-2 border-[#1D4ED8] bg-[#EFF6FF] font-semibold">
+                          B. 30
+                        </div>
+                        <div className="px-2.5 py-1.5 rounded border border-[#CBD5E1]">C. 36</div>
+                      </div>
+                    </div>
+                    <div className="bg-white border-t border-[#E2E8F0] px-4 py-2 flex items-center justify-between text-[11px]">
+                      <span className="px-2.5 py-1 rounded bg-[#111827] text-white font-semibold">
+                        Question 14 of 22
+                      </span>
+                      <span className="px-3 py-1 rounded bg-[#1D4ED8] text-white font-semibold">
+                        Next
                       </span>
                     </div>
-                  ))}
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* Three Studio Craft Pillars — Architectural 3-Column Strip */}
+            <div className="grid md:grid-cols-3 border-t border-[var(--rule)] pt-10 gap-8">
+              <div className="space-y-2.5">
+                <div className="text-[11px] font-mono-tabular uppercase tracking-wider text-[var(--accent)]">
+                  Adaptive Pacing
                 </div>
+                <h3 className="font-display text-2xl text-[var(--ink)]">
+                  Difficulty that climbs with you.
+                </h3>
+                <p className="text-xs text-[var(--text-muted)] leading-relaxed">
+                  ESAT runs step up across levels 1–5 at 1:30/Q; TMUA adaptive sets prioritise your
+                  weakest Paper 1 &amp; Paper 2 skills at 3:45/Q.
+                </p>
+              </div>
+              <div className="space-y-2.5">
+                <div className="text-[11px] font-mono-tabular uppercase tracking-wider text-[var(--accent)]">
+                  Mistake &amp; Guess Queues
+                </div>
+                <h3 className="font-display text-2xl text-[var(--ink)]">
+                  Lucky guesses don’t hide weak spots.
+                </h3>
+                <p className="text-xs text-[var(--text-muted)] leading-relaxed">
+                  Wrong answers, timeouts, and flagged guesses stay in your review queue until you
+                  solve them cleanly without the key visible.
+                </p>
+              </div>
+              <div className="space-y-2.5">
+                <div className="text-[11px] font-mono-tabular uppercase tracking-wider text-[var(--accent)]">
+                  Timed Essay Studios
+                </div>
+                <h3 className="font-display text-2xl text-[var(--ink)]">
+                  Write under real clock pressure.
+                </h3>
+                <p className="text-xs text-[var(--text-muted)] leading-relaxed">
+                  LNAT and TARA essay rehearsals enforce the 40-minute clock and 750-word limit,
+                  unlocking annotated model answers and rubrics only after submission.
+                </p>
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
-        {/* One-Off Pricing Section */}
-        <section id="pricing" className="max-w-5xl mx-auto px-5 sm:px-8 py-16 sm:py-24">
-          <div className="text-center max-w-xl mx-auto space-y-3">
-            <div className="text-[11px] font-mono-tabular uppercase tracking-[0.16em] text-emerald-400">
-              Pricing
+        {/* Flat Architectural Pricing */}
+        <motion.section {...REVEAL} id="pricing" className="max-w-6xl mx-auto px-5 sm:px-8 py-20">
+          <div className="flex flex-wrap items-end justify-between gap-4 pb-8 border-b border-[var(--rule)]">
+            <div>
+              <div className="text-[11px] font-mono-tabular uppercase tracking-[0.18em] text-[var(--accent)]">
+                03 / Transparent Pricing
+              </div>
+              <h2 className="font-display text-4xl sm:text-5xl text-[var(--ink)] mt-2 leading-tight">
+                One payment. Zero subscriptions.
+              </h2>
             </div>
-            <h2 className="font-display text-4xl sm:text-5xl ratio-platinum-text tracking-tight">
-              Pay once. No subscriptions.
-            </h2>
-            <p className="text-sm text-zinc-400 leading-relaxed">
-              Try Ratio free, unlock one test through the end of its exam season for £24, or get
-              all six tests together for £39.
+            <p className="text-sm text-[var(--text-muted)] max-w-md">
+              Start free with zero card required. Unlock one exam until your sitting ends, or all
+              six in a single pass.
             </p>
           </div>
 
-          <div className="mt-12 grid md:grid-cols-3 gap-5">
+          <div className="grid md:grid-cols-3 border-l border-[var(--rule)]">
             {/* Free */}
-            <div className="ratio-card-lift rounded-2xl border border-white/[0.09] bg-[#101116] p-6 flex flex-col justify-between gap-6">
+            <div className="p-7 border-r border-b border-[var(--rule)] flex flex-col justify-between gap-8">
               <div>
-                <div className="text-xs font-mono-tabular uppercase tracking-wider text-zinc-400">
-                  Free Starter
+                <div className="text-xs font-mono-tabular uppercase tracking-wider text-[var(--text-muted)]">
+                  Starter
                 </div>
-                <div className="mt-3 font-display text-4xl text-white">£0</div>
-                <p className="text-xs text-zinc-400 mt-2 leading-relaxed">
-                  Explore the studio, diagnostic mocks, and official links before paying.
+                <div className="font-display text-5xl text-[var(--ink)] mt-3">£0</div>
+                <p className="text-xs text-[var(--text-muted)] mt-2">
+                  Try every exam track before paying a penny.
                 </p>
-                <ul className="mt-5 space-y-2.5 text-xs text-zinc-300">
+                <ul className="mt-6 space-y-2.5 text-xs text-[var(--ink)]/85">
                   {[
-                    'Diagnostic & starter mock access',
-                    'All 54 verified official board links',
-                    'Official exam-screen mock interfaces',
+                    'Diagnostic drills & Daily 5 across all 6 tests',
+                    'Official exam-board links & past paper archives',
                     'Local progress saving in your browser',
-                  ].map((f) => (
-                    <li key={f} className="flex items-start gap-2">
-                      <Check className="w-3.5 h-3.5 text-zinc-400 shrink-0 mt-0.5" />
-                      <span>{f}</span>
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-2">
+                      <Check className="w-3.5 h-3.5 text-[var(--accent)] shrink-0 mt-0.5" />
+                      <span>{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -888,198 +799,142 @@ export const LandingView: React.FC<LandingViewProps> = ({
               <button
                 type="button"
                 onClick={() => onSelectTest('lnat')}
-                className="w-full py-2.5 rounded-xl border border-white/[0.14] hover:border-white/30 hover:bg-white/[0.04] text-xs font-semibold text-white cursor-pointer transition-all"
+                className="w-full py-2.5 border border-[var(--rule)] hover:border-[var(--ink)]/50 text-xs font-semibold text-[var(--ink)] transition-colors cursor-pointer"
               >
                 {isPro ? 'Open Studio' : 'Start Free'}
               </button>
             </div>
 
-            {/* Single Test Pass (£24) */}
-            <div className="ratio-card-lift rounded-2xl border border-white/[0.12] bg-[#111319] p-6 flex flex-col justify-between gap-6">
+            {/* Single Test Pass */}
+            <div className="p-7 border-r border-b border-[var(--rule)] flex flex-col justify-between gap-8">
               <div>
-                <div className="text-xs font-mono-tabular uppercase tracking-wider text-zinc-300">
+                <div className="text-xs font-mono-tabular uppercase tracking-wider text-[var(--text-muted)]">
                   Single Test Pass
                 </div>
-                <div className="mt-3 flex items-baseline gap-1.5">
-                  <span className="font-display text-4xl text-white">£24</span>
-                  <span className="text-xs text-zinc-500">one-off · full season</span>
+                <div className="flex items-baseline gap-2 mt-3">
+                  <span className="font-display text-5xl text-[var(--ink)]">£24</span>
+                  <span className="text-xs font-mono-tabular text-[var(--text-muted)]">
+                    one-off · exam season
+                  </span>
                 </div>
-                <p className="text-xs text-zinc-400 mt-2 leading-relaxed">
-                  Pick any one test (LNAT, UCAT, TARA, ESAT, TMUA, or SAT). Valid until its exam
-                  season ends.
+                <p className="text-xs text-[var(--text-muted)] mt-2">
+                  Full access to your chosen admissions test until its season ends.
                 </p>
-                <ul className="mt-5 space-y-2.5 text-xs text-zinc-300">
+                <ul className="mt-6 space-y-2.5 text-xs text-[var(--ink)]/85">
                   {[
-                    'Every full-length mock for your chosen test',
-                    'All timed drills, question banks & guides',
-                    'Valid until that test’s exam season ends',
-                    'Cloud account sync & JSON backup export',
-                  ].map((f) => (
-                    <li key={f} className="flex items-start gap-2">
-                      <Check className="w-3.5 h-3.5 text-zinc-300 shrink-0 mt-0.5" />
-                      <span>{f}</span>
+                    'Every full mock & adaptive bank for 1 test',
+                    'Authentic Pearson VUE, UAT-UK, or Bluebook screen',
+                    'Mistake review queue, guides & essay studio',
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-2">
+                      <Check className="w-3.5 h-3.5 text-[var(--accent)] shrink-0 mt-0.5" />
+                      <span>{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
               <button
                 type="button"
-                onClick={() => onOpenPricing()}
-                className="w-full py-2.5 rounded-xl border border-white/25 hover:bg-white hover:text-[#09090B] text-xs font-semibold text-white cursor-pointer transition-all"
+                onClick={onOpenPricing}
+                className="w-full py-2.5 border border-[var(--rule)] hover:border-[var(--accent)] text-xs font-semibold text-[var(--ink)] transition-colors cursor-pointer"
               >
-                {isPro ? 'Pro Unlocked' : 'Choose Single Test (£24)'}
+                Choose a test pass
               </button>
             </div>
 
-            {/* All Tests Bundle (£39) */}
-            <div className="ratio-card-lift rounded-2xl border border-emerald-400/40 bg-gradient-to-b from-[#131C1A] to-[#0E1114] p-6 flex flex-col justify-between gap-6 relative shadow-[0_24px_60px_-24px_rgba(16,185,129,0.28)]">
+            {/* All Tests Bundle */}
+            <div className="p-7 border-r border-b border-[var(--rule)] border-t-2 border-t-[var(--accent)] bg-[var(--surface)] flex flex-col justify-between gap-8">
               <div>
-                <div className="flex items-center justify-between gap-2">
-                  <span className="text-xs font-mono-tabular uppercase tracking-wider text-white">
-                    All Tests Bundle
-                  </span>
-                  <span className="text-[10px] font-mono-tabular uppercase tracking-wider px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-400/35">
-                    Best value
+                <div className="flex items-center justify-between text-xs font-mono-tabular uppercase tracking-wider">
+                  <span className="text-[var(--accent)]">All Tests Bundle</span>
+                  <span className="text-[var(--text-muted)]">Best Value</span>
+                </div>
+                <div className="flex items-baseline gap-2 mt-3">
+                  <span className="font-display text-5xl text-[var(--ink)]">£39</span>
+                  <span className="text-xs font-mono-tabular text-[var(--text-muted)]">
+                    one-off · all 6 tests
                   </span>
                 </div>
-                <div className="mt-3 flex items-baseline gap-1.5">
-                  <span className="font-display text-4xl text-white">£39</span>
-                  <span className="text-xs text-zinc-400">one-off · all 6 tests</span>
-                </div>
-                <p className="text-xs text-zinc-300 mt-2 leading-relaxed">
-                  Unlock all six admissions tests together for £15 more. Zero recurring bills.
+                <p className="text-xs text-[var(--text-muted)] mt-2">
+                  Every UK, ANZ, and US admissions track unlocked in one payment.
                 </p>
-                <ul className="mt-5 space-y-2.5 text-xs text-zinc-200">
+                <ul className="mt-6 space-y-2.5 text-xs text-[var(--ink)]">
                   {[
                     'LNAT + UCAT + TARA + ESAT + TMUA + SAT',
                     'All 3,915+ original questions & 15 full mocks',
                     '14-day no-questions-asked refund guarantee',
-                    'All future mock & question additions included',
-                  ].map((f) => (
-                    <li key={f} className="flex items-start gap-2">
-                      <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
-                      <span>{f}</span>
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-2">
+                      <Check className="w-3.5 h-3.5 text-[var(--accent)] shrink-0 mt-0.5" />
+                      <span>{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
               <button
                 type="button"
-                onClick={() => onOpenPricing()}
-                className="ratio-btn-emerald w-full py-2.5 rounded-xl text-xs font-semibold cursor-pointer"
+                onClick={onOpenPricing}
+                className="w-full py-2.5 bg-[var(--accent)] text-[#04130d] hover:opacity-90 text-xs font-semibold transition-opacity cursor-pointer"
               >
-                {isPro ? 'Pro Unlocked' : 'Get All Tests Bundle (£39)'}
+                {isPro ? 'Manage pass' : 'Unlock all 6 tests — £39'}
               </button>
             </div>
           </div>
+        </motion.section>
 
-          <div className="mt-8 flex flex-wrap items-center justify-between gap-3 pt-6 border-t border-white/[0.08] text-xs text-zinc-500">
-            <span className="inline-flex items-center gap-2">
-              <ShieldCheck className="w-4 h-4 text-emerald-400/80" />
-              14-day refund guarantee · Independent prep, not affiliated with exam boards.
-            </span>
-            <span className="inline-flex items-center gap-1.5">
-              <BookOpen className="w-3.5 h-3.5 text-zinc-400" />
-              All official past papers linked directly to exam boards.
-            </span>
-          </div>
-        </section>
-
-        {/* 2-Column Interactive FAQ (inspired by recall-politics .lp-faq) */}
-        <section id="faq" className="max-w-5xl mx-auto px-5 sm:px-8 py-14 sm:py-20">
-          <div className="grid lg:grid-cols-12 gap-10 items-start">
-            <div className="lg:col-span-5 space-y-4">
-              <div className="text-[11px] font-mono-tabular uppercase tracking-[0.16em] text-emerald-400">
-                FAQ
+        {/* Editorial 2-Column FAQ */}
+        <motion.section
+          {...REVEAL}
+          id="faq"
+          className="border-t border-[var(--rule)] max-w-6xl mx-auto px-5 sm:px-8 py-20"
+        >
+          <div className="grid md:grid-cols-12 gap-10">
+            <div className="md:col-span-4 space-y-3">
+              <div className="text-[11px] font-mono-tabular uppercase tracking-[0.18em] text-[var(--accent)]">
+                04 / FAQ
               </div>
-              <h2 className="font-display text-4xl ratio-platinum-text tracking-tight">
-                Got questions?
+              <h2 className="font-display text-4xl text-[var(--ink)] leading-tight">
+                Common questions.
               </h2>
-              <p className="text-sm text-zinc-400 leading-relaxed">
-                Everything you need to know about mocks, exam screens, pricing, and how progress
-                saves.
+              <p className="text-sm text-[var(--text-muted)]">
+                Straight answers on originality, pricing, and how progress is stored.
               </p>
-              <button
-                type="button"
-                onClick={() => onSelectTest('lnat')}
-                className="px-4 py-2.5 rounded-xl border border-white/[0.12] hover:border-white/25 bg-white/[0.03] text-xs font-semibold text-white inline-flex items-center gap-1.5 cursor-pointer transition-colors"
-              >
-                {isPro ? 'Open Studio' : 'Try a free mock'} <ArrowRight className="w-3.5 h-3.5" />
-              </button>
             </div>
-
-            <div className="lg:col-span-7 ratio-faq rounded-2xl border border-white/[0.09] bg-[#0D0E13] divide-y divide-white/[0.08] overflow-hidden">
+            <div className="md:col-span-8 ratio-faq border-t border-[var(--rule)] divide-y divide-[var(--rule)]">
               {FAQ_ITEMS.map(([q, a], idx) => (
-                <details key={q} open={idx === 0} className="group">
-                  <summary className="list-none cursor-pointer px-6 py-5 font-display text-xl text-white flex items-center justify-between gap-4 hover:bg-white/[0.02] transition-colors">
+                <details key={q} open={idx === 0} className="py-5 group">
+                  <summary className="list-none flex items-center justify-between gap-4 cursor-pointer text-sm sm:text-[15px] font-medium text-[var(--ink)]">
                     <span>{q}</span>
-                    <Plus className="ratio-faq-plus w-4 h-4 text-zinc-400 shrink-0 transition-transform duration-200" />
+                    <Plus className="w-4 h-4 text-[var(--text-muted)] shrink-0 ratio-faq-plus transition-transform" />
                   </summary>
-                  <p className="px-6 pb-5 text-sm text-zinc-400 leading-relaxed">{a}</p>
+                  <p className="text-xs sm:text-sm text-[var(--text-muted)] leading-relaxed mt-3 pr-8">
+                    {a}
+                  </p>
                 </details>
               ))}
             </div>
           </div>
-        </section>
-
-        {/* Closing Radial-Glow CTA Card (inspired by recall-politics .lp-cta) */}
-        <section className="max-w-5xl mx-auto px-5 sm:px-8 pb-20">
-          <div
-            className="rounded-[28px] border border-white/[0.1] px-6 py-14 sm:py-16 text-center space-y-5"
-            style={{
-              background:
-                'radial-gradient(65% 85% at 50% 0%, rgba(16, 185, 129, 0.16), rgba(16, 20, 32, 0.7) 52%, #0A0B0F 100%)',
-            }}
-          >
-            <h2 className="font-display text-4xl sm:text-5xl ratio-platinum-text tracking-tight">
-              Walk into exam day calm.
-            </h2>
-            <p className="text-sm sm:text-base text-zinc-400 max-w-md mx-auto leading-relaxed">
-              Open your test workspace now, take a timed diagnostic or Daily 5, and pick up right
-              where you left off on any device.
-            </p>
-            <div className="pt-2">
-              <button
-                type="button"
-                onClick={() => onSelectTest('lnat')}
-                className="ratio-btn-3d px-6 py-3 rounded-xl text-sm font-semibold inline-flex items-center gap-2 cursor-pointer"
-              >
-                {isPro ? 'Continue practicing' : 'Start practicing free'}
-                <ArrowRight className="w-4 h-4" />
-              </button>
-            </div>
-          </div>
-        </section>
+        </motion.section>
       </main>
 
-      {/* Commercial & Legal Footer */}
-      <footer className="border-t border-white/[0.08] py-8 px-5 sm:px-8 text-xs text-zinc-500">
-        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex flex-wrap items-center gap-5">
-            <span className="font-display text-lg text-zinc-200">Ratio</span>
-            <button
-              type="button"
-              onClick={() => onOpenLegal('terms')}
-              className="hover:text-zinc-200 cursor-pointer"
-            >
+      {/* Minimal Legal Footer */}
+      <footer className="border-t border-[var(--rule)] py-8">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8 flex flex-wrap items-center justify-between gap-4 text-xs text-[var(--text-muted)]">
+          <div className="flex items-center gap-3">
+            <span className="font-display text-lg text-[var(--ink)]">Ratio</span>
+            <span>· Independent practice studio. Not affiliated with Pearson VUE, UAT-UK, or College Board.</span>
+          </div>
+          <div className="flex items-center gap-5">
+            <button type="button" onClick={() => onOpenLegal('terms')} className="hover:text-[var(--ink)] cursor-pointer">
               Terms
             </button>
-            <button
-              type="button"
-              onClick={() => onOpenLegal('privacy')}
-              className="hover:text-zinc-200 cursor-pointer"
-            >
-              Privacy (UK GDPR)
+            <button type="button" onClick={() => onOpenLegal('privacy')} className="hover:text-[var(--ink)] cursor-pointer">
+              Privacy
             </button>
-            <button
-              type="button"
-              onClick={() => onOpenLegal('refunds')}
-              className="hover:text-zinc-200 cursor-pointer"
-            >
-              Refund Policy
+            <button type="button" onClick={() => onOpenLegal('refunds')} className="hover:text-[var(--ink)] cursor-pointer">
+              Refunds
             </button>
           </div>
-          <span>Not affiliated with LNAT, UCAT, UAT-UK, or College Board.</span>
         </div>
       </footer>
     </div>
