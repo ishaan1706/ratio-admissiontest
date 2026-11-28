@@ -1837,7 +1837,7 @@
         {
           "id": "tara-drill-ps2-waste-round",
           "type": "relevant-selection",
-          "stem": "A crew considers only normal days when checking its typical recycling load. Its daily loads were as follows, in tonnes:\nMon | 8 | Tue | 11 | Wed | 6 | Thu | 14\nFri | 9 | Sat | 20 | Sun | 10\nTuesday was affected by a breakdown and Saturday included an extra collection. What was the median of the normal days' loads?",
+          "stem": "A crew considers only normal days when checking its typical recycling load. Its daily loads were as follows, in tonnes:\nDay      | Mon | Tue | Wed | Thu | Fri | Sat | Sun\nLoad (t) | 8   | 11  | 6   | 14  | 9   | 20  | 10\nTuesday was affected by a breakdown and Saturday included an extra collection. What was the median of the normal days' loads?",
           "options": {
             "A": "8",
             "B": "10",
