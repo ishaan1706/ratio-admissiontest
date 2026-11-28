@@ -16387,7 +16387,7 @@
               "number": 5,
               "topic": "C10.3",
               "difficulty": 4,
-              "stem": "A balance tracks a reaction in an open flask. The only material leaving the flask is the gas produced. The balance shows 90.0 g at 0 s, 89.4 g at 3 s, 88.2 g at 9 s and 88.0 g at 13 s. Which row gives all intervals with the largest mean rate of gas production and that rate?",
+              "stem": "A balance tracks a reaction in an open flask. The only material leaving the flask is the gas produced. The balance shows 90.0 g at 0 s, 89.4 g at 3 s, 88.2 g at 9 s and 88.0 g at 13 s. Consider only the intervals between consecutive readings. Which row gives all such intervals with the largest mean rate of gas production, and what is that rate?",
               "options": [
                 {
                   "label": "A",
@@ -16423,7 +16423,7 @@
                 }
               ],
               "answer": "G",
-              "explanation": "The gas masses in the three intervals are 0.6, 1.2 and 0.2 g. Divide by 3, 6 and 4 s respectively to get 0.20, 0.20 and 0.05 g/s."
+              "explanation": "The gas masses lost between consecutive readings are 0.6, 1.2 and 0.2 g. Divide by 3, 6 and 4 s respectively to get 0.20, 0.20 and 0.05 g/s. The first two intervals tie for the largest rate."
             },
             {
               "id": "esat-p-chem-11-06",
