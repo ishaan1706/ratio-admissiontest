@@ -515,7 +515,7 @@
           {
             "questions": [
               {
-                "stem": "A game offers two independent chances to ring a bell. On each chance, Mia rings it with probability 1/3. If she rings it at least once she takes one token from a bag containing five silver and three gold tokens. What is the probability she takes a gold token?",
+                "stem": "A game offers two independent chances to ring a bell. On each chance, Mia rings it with probability 1/3. If she rings it at least once, she draws one token uniformly at random from a bag containing five silver and three gold tokens. What is the probability she draws a gold token?",
                 "options": [
                   "1/8",
                   "5/24",
