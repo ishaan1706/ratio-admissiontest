@@ -4289,7 +4289,7 @@
             {
               "questions": [
                 {
-                  "stem": "A playlist has four different tracks. Ada chooses her first track uniformly at random from the three she has not yet heard. She chooses her second track uniformly at random from the three tracks left after her first choice. One of the tracks she has not heard is instrumental, and so is the only track she has heard. What is the probability both chosen tracks are instrumental?",
+                  "stem": "A playlist has four different tracks. Ada chooses her first track uniformly at random from the three she has not yet heard. She chooses her second track uniformly at random from the three tracks left after her first choice. Exactly one of the three unheard tracks is instrumental, and so is the only track she has heard. What is the probability both chosen tracks are instrumental?",
                   "options": [
                     "1/6",
                     "2/9",
