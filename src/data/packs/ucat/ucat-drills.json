@@ -36,58 +36,58 @@
         "extraTime25Seconds": 150,
         "groups": [
           {
-            "title": "Packing for the route",
-            "stimulus": "A greengrocer delivered boxes of produce by bicycle. It switched to a deeper box because that let staff stack more produce in one load, reducing the number of trips on some routes. Frequent bruising was first noticed among plums delivered to shops on a steep street. Staff wondered whether the slope, the new box or a change of supplier explained it. In a small comparison they packed fruit from the same delivery in both shallow and deep boxes and rode both boxes along the same route. More plums were bruised in the deeper box, chiefly at the bottom. They then laid a rigid divider halfway up that box so the top layer rested on the divider rather than on the fruit below. The number damaged fell on the test route, though it was not measured on flatter routes. The manager decided to use divided boxes for plums on steep routes and review results after a month. Leafy vegetables continued to go in undivided boxes, because symptoms had not been reported for them. The manager rejected a proposal to advertise the boxes as damage-proof. The new method still relied on careful loading and drivers were asked to log any route on which they noticed the boxes moving.",
+            "title": "Two names for a street",
+            "stimulus": "The municipal naming panel could not agree on a single date for the renaming of Lane Street. Local guides put it in 1931, when the council voted in favour of calling it Hester Lane. A trade directory used the name Hester Lane a year earlier, however. And it had not completely displaced Lane Street by 1935, when a greengrocer put both names on an invoice.\n\nWhether any of these records settles the question depends on what counts as renaming. A council resolution standardises a name for public use. A directory helps a reader find a place, and its editor might prefer a name already widely understood. An invoice helps an order reach one address. When the greengrocer printed both names, this could have been a practical accommodation rather than a judgement about the merits of the name chosen by the council.\n\nThe panel eventually favoured printing both names on an interpretive plaque beside the contemporary street sign. It did not recommend that council records give both names equal status. A plaque aimed at explaining the history could show the uncertainty that an address used for delivering goods was meant to remove.",
             "questions": [
               {
-                "stem": "What did using fruit from the same delivery help control for?",
+                "stem": "Which document shows Hester Lane in use before the council vote?",
                 "options": [
-                  "How often drivers noticed boxes moving",
-                  "The effects of using a divider in both boxes",
-                  "Differences in route length across towns",
-                  "Differences between produce suppliers or deliveries"
+                  "The 1935 invoice",
+                  "The interpretive plaque",
+                  "The trade directory",
+                  "A council address record"
                 ],
-                "answer": 3,
-                "explanation": "Comparable fruit makes differences in box depth easier to investigate.",
+                "answer": 2,
+                "explanation": "The trade directory used Hester Lane in 1930, a year before the vote.",
                 "id": "ucat-drill-vr-1-VR-q01",
                 "format": "single-choice"
               },
               {
-                "stem": "Where did the test support a change in normal practice?",
+                "stem": "Why does the author list different purposes of resolutions, directories and invoices?",
                 "options": [
-                  "Using divided boxes for plums on steep routes.",
-                  "Switching to divided shallow boxes on flat streets.",
-                  "Replacing bike deliveries with another vehicle on hills.",
-                  "Using divided boxes for all produce going to any shop."
+                  "To explain how records can differ without any of them being wrong",
+                  "To show that councils were required to seek the approval of directory editors",
+                  "To establish which document first referred to Lane Street",
+                  "To rank the records according to how widely they circulated"
                 ],
                 "answer": 0,
-                "explanation": "The improvement was observed on the steep test route and was applied to similar deliveries.",
+                "explanation": "Different records can accurately represent administrative, common and practical usage at different times.",
                 "id": "ucat-drill-vr-1-VR-q02",
                 "format": "single-choice"
               },
               {
-                "stem": "Why were leafy vegetables exempted from the change?",
+                "stem": "Which statement describes the panel’s recommendation?",
                 "options": [
-                  "Staff had not reported damage symptoms for them.",
-                  "Their route was known to be flatter than every plum route.",
-                  "Testing showed a divider caused more damage to leafy vegetables.",
-                  "They were delivered from a different supplier by van."
+                  "Change the official address back to Lane Street.",
+                  "Treat both names as interchangeable in all council records.",
+                  "Keep only Hester Lane on the new plaque.",
+                  "Show both names on the historical plaque without establishing two official names."
                 ],
-                "answer": 0,
-                "explanation": "Without the reported problem seen in plums, undivided boxes remained in use for leafy vegetables.",
+                "answer": 3,
+                "explanation": "The historical display and the council records have different jobs; the panel did not recommend equal status in the latter.",
                 "id": "ucat-drill-vr-1-VR-q03",
                 "format": "single-choice"
               },
               {
-                "stem": "Which statement about the divider is best supported?",
+                "stem": "What is the most cautious inference about the greengrocer?",
                 "options": [
-                  "It directly reduced damage by shortening the route.",
-                  "It reduced damage in the test, but that does not establish that it prevents all damage.",
-                  "It made the deliveries completely damage-free.",
-                  "It was used only in the original shallow boxes."
+                  "The council commissioned the invoice.",
+                  "The greengrocer may have wanted people familiar with either name to recognise the address.",
+                  "The greengrocer found the new name in the directory.",
+                  "The greengrocer was protesting against the change."
                 ],
                 "answer": 1,
-                "explanation": "The benefit was observed on one test route, and careful loading was still needed.",
+                "explanation": "The text suggests a practical accommodation without claiming to know the greengrocer’s motives.",
                 "id": "ucat-drill-vr-1-VR-q04",
                 "format": "single-choice"
               }
@@ -108,57 +108,57 @@
         "extraTime25Seconds": 150,
         "groups": [
           {
-            "title": "News from the allotments",
-            "stimulus": "The newsletter of an allotment association began publishing a page on what tenants had harvested. Members could submit pictures, crop names and estimated weights. The editor initially ranked crops by total reported weight. One year the newsletter received many photographs of pumpkins and very few of herbs. A reader claimed this showed that herbs were rarely grown. The editor noted that members often picked herbs in handfuls without weighing them and were unlikely to send a photograph each time. She asked whether a simple tick list of crops grown by each responding tenant would be a better measure of prevalence. The committee trialled the list in a short survey and invited nonreaders of the newsletter to respond too. It reminded those completing the form that varieties of a crop should be recorded as one crop, not separate entries. The results put herbs among the most widely listed crops. Pumpkins still had a high reported weight in the newsletter. Rather than discard the original page, the editor retitled it 'Harvest highlights' and explained that its numbers came from volunteered entries. The survey summary gave the number of respondents but not an estimate for all tenants, because there was no record of whether nonrespondents grew the same kinds of crops.",
+            "title": "From the weather log",
+            "stimulus": "The Halden observatory issued its first monthly weather bulletin in April. Before then, the observatory sent daily readings to the shipping office but did not publish them. The monthly bulletin reproduces the highest and lowest temperatures from the daily readings; it does not print the series in full.\n\nAn editor preparing the April bulletin noticed that the rain collector had overflowed on two days. She printed the rain total as “at least 61 mm” because those two catches had been entered as the collector’s maximum, not as measurements of the full amount. The thermometer readings were unaffected. The editor placed a certificate for the collector at the end of the bulletin, but did not say when a larger replacement would be installed.",
             "questions": [
               {
-                "stem": "Why was crop weight a poor basis for the reader's claim about herbs?",
+                "stem": "Why did the bulletin use the words “at least”?",
                 "options": [
-                  "The newsletter counted varieties as separate entries in the survey.",
-                  "Pumpkins were excluded from the list.",
-                  "The editor had already invited nonreaders to photograph each harvest.",
-                  "Reported weight reflected what people submitted, not simply what tenants grew."
+                  "The two highest temperature readings were estimated.",
+                  "The daily log omitted the first two days of April.",
+                  "More rain fell than the full collector could register on two days.",
+                  "The shipping office supplied a total from a different collector."
                 ],
-                "answer": 3,
-                "explanation": "Herbs were often unweighed or unphotographed, distorting the newsletter measure.",
+                "answer": 2,
+                "explanation": "Overflow means the recorded total includes only the collector’s capacity on those two days, so 61 mm is a lower bound.",
                 "id": "ucat-drill-vr-2-VR-q01",
                 "format": "single-choice"
               },
               {
                 "format": "true-false-cant-tell",
-                "stem": "The original harvest page was discontinued after the survey.",
+                "stem": "The observatory published its daily readings before the first monthly bulletin.",
                 "options": [
                   "True",
                   "False",
                   "Can't Tell"
                 ],
                 "answer": 1,
-                "explanation": "It was retained under a new title with clarification.",
+                "explanation": "The passage distinguishes privately sending readings to the shipping office from publishing them.",
                 "id": "ucat-drill-vr-2-VR-q02"
               },
               {
-                "stem": "Which finding is consistent with both measures?",
+                "stem": "Which question could a reader answer from the temperature figures described?",
                 "options": [
-                  "A widely grown crop can have a low reported harvest weight.",
-                  "Every tenant grew herbs.",
-                  "Most pumpkins went unreported.",
-                  "Pumpkins were grown by the fewest tenants."
+                  "What was the lowest recorded temperature that month?",
+                  "What was the temperature on each of the days when the collector overflowed?",
+                  "What was the mean of the daily readings?",
+                  "How often did the highest temperature occur?"
                 ],
                 "answer": 0,
-                "explanation": "Herbs ranked highly on surveyed prevalence despite little newsletter attention.",
+                "explanation": "The monthly bulletin publishes the extremes but not the full series or their frequency.",
                 "id": "ucat-drill-vr-2-VR-q03",
                 "format": "single-choice"
               },
               {
                 "format": "true-false-cant-tell",
-                "stem": "Nonresponding tenants were mostly tenants who did not read the newsletter.",
+                "stem": "The replacement collector will be installed before May’s bulletin is issued.",
                 "options": [
                   "True",
                   "False",
                   "Can't Tell"
                 ],
                 "answer": 2,
-                "explanation": "The response-by-readership breakdown is not given.",
+                "explanation": "No installation date is given.",
                 "id": "ucat-drill-vr-2-VR-q04"
               }
             ],
@@ -298,15 +298,15 @@
           {
             "questions": [
               {
-                "stem": "Five alerts A–E arrive in separate minutes. D directly follows A. E is third. C precedes B. B is not next to E. Which statement must be true?",
+                "stem": "The allowed one-way walking connections are: Market → Bridge; Market → Garden; Market → Fountain; Bridge → Observatory; Garden → Lane; Fountain → Lane; Lane → Observatory; Station → Bridge.\n\nA journey from the Market to the Observatory is still possible after the Bridge closes. Which extra closure would make that journey impossible?",
                 "options": [
-                  "C is in position 3.",
-                  "A is in position 2.",
-                  "D is in position 2.",
-                  "B is in position 2."
+                  "Fountain",
+                  "Garden",
+                  "Lane",
+                  "Station"
                 ],
                 "answer": 2,
-                "explanation": "The valid orders are A–D–E–C–B. D is in position 2. This is the only option that holds in all of them.",
+                "explanation": "The Bridge closure leaves the Garden route and the Fountain route. Both must next pass through the Lane to reach the Observatory.",
                 "id": "ucat-drill-dm-1-DM-q03",
                 "format": "single-choice"
               }
@@ -345,34 +345,17 @@
         "extraTime25Seconds": 318,
         "groups": [
           {
-            "venn": {
-              "sets": [
-                "A",
-                "B",
-                "C"
-              ],
-              "regions": {
-                "A": 12,
-                "B": 17,
-                "C": 11,
-                "AB": 4,
-                "AC": 5,
-                "BC": 8,
-                "ABC": 3,
-                "none": 13
-              }
-            },
             "questions": [
               {
-                "stem": "Only A: 12; only B: 17; only C: 11; A and B only: 4; A and C only: 5; B and C only: 8; all three: 3; none: 13. How many people belong to at least one group, but not all three?",
+                "stem": "Of 36 badges, 14 have a triangle and 25 have a blue border. Every badge has at least one of those features. A badge with a triangle is selected at random. What is the probability it has no blue border?",
                 "options": [
-                  "70",
-                  "57",
-                  "61",
-                  "54"
+                  "3/14",
+                  "11/14",
+                  "11/36",
+                  "25/36"
                 ],
                 "answer": 1,
-                "explanation": "The relevant non-overlapping regions are A, B, C, AB, AC, BC: 12 + 17 + 11 + 4 + 5 + 8 = 57.",
+                "explanation": "All 36 − 25 = 11 badges without borders must have triangles. The selection is from the 14 triangles, giving 11/14.",
                 "id": "ucat-drill-dm-2-DM-q01",
                 "format": "single-choice"
               }
@@ -400,15 +383,15 @@
           {
             "questions": [
               {
-                "stem": "Five displays F, G, H, I and Q are installed sequentially. I is second. F directly follows H. G precedes Q. Q is not last. Which statement must be true?",
+                "stem": "The tool shed releases one key for each task. Keys are kept in separate boxes. No key in the yellow box is for digging. Every watering key is in the red box. One key is either for watering or digging, but is not in the red box. Which statement must be true?",
                 "options": [
-                  "H is in position 3.",
-                  "Q is in position 5.",
-                  "F is in position 5.",
-                  "G is in position 2."
+                  "It is in the yellow box.",
+                  "It is for watering.",
+                  "It is for digging and is not in the yellow box.",
+                  "Every digging key is outside the red box."
                 ],
                 "answer": 2,
-                "explanation": "The valid orders are G–I–Q–H–F. F is in position 5. This is the only option that holds in all of them.",
+                "explanation": "Not being in the red box rules out watering. It must be for digging, which also puts it outside the yellow box. This says nothing about where other digging keys are kept.",
                 "id": "ucat-drill-dm-2-DM-q03",
                 "format": "single-choice"
               }
@@ -532,15 +515,15 @@
           {
             "questions": [
               {
-                "stem": "Nine of 23 parcels have a tracking label. Two different parcels are drawn uniformly. What is the chance exactly one has a tracking label?",
+                "stem": "A game offers two independent chances to ring a bell. On each chance, Mia rings it with probability 1/3. If she rings it at least once, she draws one token uniformly at random from a bag containing five silver and three gold tokens. What is the probability she draws a gold token?",
                 "options": [
-                  "9/23",
-                  "81/529",
-                  "4/11",
-                  "126/253"
+                  "1/8",
+                  "5/24",
+                  "5/16",
+                  "3/8"
                 ],
-                "answer": 3,
-                "explanation": "Either order works: 2 × 9/23 × 14/22 = 126/253.",
+                "answer": 1,
+                "explanation": "At least one ring has probability 1 − (2/3)² = 5/9. Then the token is gold with probability 3/8. Their product is 15/72 = 5/24.",
                 "id": "ucat-drill-dm-3-DM-q04",
                 "format": "single-choice"
               }
@@ -561,101 +544,83 @@
         "extraTime25Seconds": 216,
         "groups": [
           {
-            "title": "Equipment hire",
-            "stimulus": "Hire lasts whole days. The deposit is refunded in full. Each block of five days is charged as four days; leftover days are full rate.",
+            "title": "Shared workshop charging",
+            "stimulus": "The workshop uses energy credits. A machine in use consumes the stated number of credits each half-hour, and several machines may run at once. Time is billed by whole half-hours: for each machine separately, round any partial half-hour up.",
             "chart": {
               "type": "table",
-              "title": "Equipment hire",
+              "title": "Machine rates",
               "labels": [
-                "Tripod",
-                "Projector",
-                "Screen",
-                "Speaker"
+                "Laser cutter",
+                "Lathe",
+                "Drill",
+                "Press"
               ],
               "series": [
                 {
-                  "name": "Daily rate (£)",
+                  "name": "Credits per half-hour",
                   "values": [
-                    9,
-                    27,
-                    16,
-                    18
-                  ]
-                },
-                {
-                  "name": "Refundable deposit (£)",
-                  "values": [
-                    24,
-                    90,
-                    40,
-                    50
-                  ]
-                },
-                {
-                  "name": "Setup fee per hire (£)",
-                  "values": [
-                    4,
-                    14,
-                    10,
-                    12
+                    12,
+                    8,
+                    5,
+                    6
                   ]
                 }
               ]
             },
             "questions": [
               {
-                "stem": "What must be paid upfront to hire a projector for 7 days?",
+                "stem": "How many credits are billed for 45 minutes on a lathe and 20 minutes on a drill?",
                 "options": [
-                  "£356",
-                  "£86",
-                  "£239",
-                  "£293",
-                  "£266"
+                  "16",
+                  "21",
+                  "24",
+                  "26",
+                  "29"
                 ],
-                "answer": 4,
-                "explanation": "((27 × 6) + 90) + 14 gives £266.",
+                "answer": 1,
+                "explanation": "The lathe is billed for two half-hours and the drill for one, giving 2 × 8 + 5 = 21.",
                 "id": "ucat-drill-qr-1-QR-q01",
                 "format": "single-choice"
               },
               {
-                "stem": "What net cost remains after the deposits are refunded on 10 days of screen hire and 3 days of speaker hire?",
+                "stem": "Four identical presses run for 40 minutes each. Their credits are split equally between three teams. How many credits does each team pay?",
                 "options": [
-                  "£24",
-                  "£294",
-                  "£172",
-                  "£236",
-                  "£204"
+                  "6",
+                  "8",
+                  "10",
+                  "12",
+                  "16"
                 ],
                 "answer": 4,
-                "explanation": "((16 × 8) + 10) + ((18 × 3) + 12) gives £204.",
+                "explanation": "Each press uses 2 × 6 = 12 credits. Four presses cost 48 credits, or 16 per team.",
                 "id": "ucat-drill-qr-1-QR-q02",
                 "format": "single-choice"
               },
               {
-                "stem": "For a six-day tripod hire, what percentage of the upfront amount is refundable, to one decimal place?",
+                "stem": "A team has 48 credits. After using a laser cutter for 1 hour and 5 minutes, what is the maximum time it could use a press?",
                 "options": [
-                  "37.9%",
-                  "42.9%",
-                  "32.9%",
-                  "27.9%",
-                  "12.9%"
+                  "30 min",
+                  "60 min",
+                  "75 min",
+                  "90 min",
+                  "120 min"
                 ],
-                "answer": 2,
-                "explanation": "(24 ÷ (((9 × 5) + 24) + 4)) × 100 gives 32.9% to the stated precision.",
+                "answer": 1,
+                "explanation": "Three laser half-hours cost 36 credits, leaving 12, which buy exactly two press half-hours.",
                 "id": "ucat-drill-qr-1-QR-q03",
                 "format": "single-choice"
               },
               {
-                "stem": "Two people need identical projectors consecutively for 4 days each. How much less is the net cost of one 8-day hire than two separate 4-day hires?",
+                "stem": "A member receives 25% off the total booked credits, rounded up to a whole credit after discount. What is the discounted bill for 30 minutes on each of the four machines?",
                 "options": [
-                  "£95",
-                  "£41",
-                  "£68",
-                  "£27",
-                  "£55"
+                  "21 credits",
+                  "23 credits",
+                  "24 credits",
+                  "26 credits",
+                  "31 credits"
                 ],
-                "answer": 1,
-                "explanation": "27 + 14 gives £41.",
+                "answer": 2,
+                "explanation": "The bill before discount is 12 + 8 + 5 + 6 = 31. Pay 75% (23.25 credits), rounded up to 24.",
                 "id": "ucat-drill-qr-1-QR-q04",
                 "format": "single-choice"
               }
@@ -791,101 +756,97 @@
         "extraTime25Seconds": 216,
         "groups": [
           {
-            "title": "Drink concentrate",
-            "stimulus": "A syrup-to-water ratio of 1:3 means 1 part syrup and 3 parts water; volumes add exactly. Bottles of syrup must be bought whole.",
+            "title": "Post in three countries",
+            "stimulus": "An exchange office sells postage using quote units. The sender pays for the next weight band when a parcel exceeds one of the stated upper limits. The office adds a charge of 2 quote units to each tracked parcel after determining its ordinary price. One quote unit costs £1.60.",
             "chart": {
               "type": "table",
-              "title": "Drink concentrate",
+              "title": "Ordinary postage (quote units)",
               "labels": [
-                "Lime",
-                "Ginger",
-                "Berry",
-                "Orange"
+                "Up to 250 g",
+                "Up to 500 g",
+                "Up to 1,000 g"
               ],
               "series": [
                 {
-                  "name": "Bottle volume (mL)",
+                  "name": "North",
                   "values": [
-                    750,
-                    500,
-                    600,
-                    800
+                    3,
+                    5,
+                    8
                   ]
                 },
                 {
-                  "name": "Water parts per part syrup",
+                  "name": "West",
                   "values": [
                     4,
                     5,
-                    3,
-                    6
+                    7
                   ]
                 },
                 {
-                  "name": "Bottle price (£)",
+                  "name": "East",
                   "values": [
-                    4.8,
-                    3.1,
-                    4.4,
-                    5.2
+                    2,
+                    6,
+                    9
                   ]
                 }
               ]
             },
             "questions": [
               {
-                "stem": "How many litres can be made with all the syrup in 8 Lime bottles?",
+                "stem": "How much does it cost in pounds to send a tracked 500 g parcel to North?",
                 "options": [
-                  "37.5 L",
-                  "15.0 L",
-                  "36.0 L",
-                  "30.0 L",
-                  "24.0 L"
+                  "£8.00",
+                  "£9.60",
+                  "£11.20",
+                  "£12.80",
+                  "£16.00"
                 ],
-                "answer": 3,
-                "explanation": "((750 × (4 + 1)) × 8) ÷ 1000 gives 30.0 L to the stated precision.",
+                "answer": 2,
+                "explanation": "Exactly 500 g is in the middle band. North is five units plus two for tracking, so the cost is 7 × £1.60 = £11.20.",
                 "id": "ucat-drill-qr-3-QR-q01",
                 "format": "single-choice"
               },
               {
-                "stem": "What is the minimum syrup cost to make 22 L of Ginger drink?",
+                "stem": "At which weights is ordinary postage to East cheaper than to both North and West?",
                 "options": [
-                  "£21.70",
-                  "£12.40",
-                  "£31.00",
-                  "£24.80",
-                  "£27.90"
+                  "Up to 250 g only",
+                  "Over 250 g and up to 500 g only",
+                  "Over 500 g and up to 1,000 g only",
+                  "Up to 500 g",
+                  "All listed weights"
                 ],
-                "answer": 3,
-                "explanation": "(round up to a whole number of ((22 × 1000) ÷ (500 × (5 + 1)))) × 3.1 gives £24.80 to the stated precision.",
+                "answer": 0,
+                "explanation": "East has the lowest rate in the first band only; in the second and third bands another destination is cheaper.",
                 "id": "ucat-drill-qr-3-QR-q02",
                 "format": "single-choice"
               },
               {
-                "stem": "For a 20 L batch of Berry drink, how much water is required?",
+                "stem": "A sender wants to post two untracked items to West. Each weighs 260 g. Sending them in one parcel adds 10 g of packaging in total; sending them separately adds 10 g per parcel. How much is saved in pounds by combining them?",
                 "options": [
-                  "18.0 L",
-                  "5.0 L",
-                  "12.0 L",
-                  "20.0 L",
-                  "15.0 L"
+                  "£3.00",
+                  "£4.80",
+                  "£6.40",
+                  "£8.00",
+                  "£11.20"
                 ],
-                "answer": 4,
-                "explanation": "(20 × 3) ÷ (3 + 1) gives 15.0 L to the stated precision.",
+                "answer": 1,
+                "explanation": "Separately, each 270 g parcel costs five units, 10 in total. One 530 g parcel costs seven units. The difference is 3 × £1.60 = £4.80.",
                 "id": "ucat-drill-qr-3-QR-q03",
                 "format": "single-choice"
               },
               {
-                "stem": "A 300 mL serving of Orange drink sells for £1.50. From one syrup bottle, what revenue do all complete servings earn?",
+                "stem": "If the price of the quote unit rises to £2.00 and charges in units stay the same, by what percentage does the price of a tracked parcel rise?",
                 "options": [
-                  "£27.00",
-                  "£28.50",
-                  "£30.00",
-                  "£25.50",
-                  "£21.00"
+                  "12.5%",
+                  "15%",
+                  "20%",
+                  "25%",
+                  "40%"
                 ],
-                "answer": 0,
-                "explanation": "(round down to a whole number of ((800 × (6 + 1)) ÷ 300)) × 1.5 gives £27.00 to the stated precision.",
+                "answer": 3,
+                "explanation": "All prices in pounds rise in the ratio 2.00/1.60 = 1.25, an increase of 25%.",
                 "id": "ucat-drill-qr-3-QR-q04",
                 "format": "single-choice"
               }
@@ -906,12 +867,12 @@
         "extraTime25Seconds": 112,
         "groups": [
           {
-            "title": "Lost study notebook",
-            "stimulus": "Student Dalia realises her placement notebook is missing after leaving a bus. It contains patient initials and two distinctive case details copied for study. There are no patient names.",
+            "title": "Finding a safe meeting point",
+            "stimulus": "Marin, a student on placement, is asked to show a visiting family to a meeting room. On the route they find a lift out of service. One family member says they cannot use the stairs; they are happy to wait on this floor if the team can meet them here. They have already waited thirty minutes, and Marin can contact the team’s coordinator.",
             "questions": [
               {
                 "format": "importance",
-                "stem": "How important is the following consideration? Whether the combinations of details could reasonably identify someone.",
+                "stem": "How important is the following consideration?\n\nWhether an accessible room is free on the current floor and whether the team can meet there.",
                 "options": [
                   "Very important",
                   "Important",
@@ -919,12 +880,12 @@
                   "Not important at all"
                 ],
                 "answer": 0,
-                "explanation": "Identify the privacy risk even without full names.",
+                "explanation": "This is central to arranging a safe and practical alternative without unnecessarily delaying the meeting.",
                 "id": "ucat-drill-sjt-1-SJT-q01"
               },
               {
                 "format": "appropriateness",
-                "stem": "How appropriate is the following response? Promptly report the loss through the placement's process and describe the details recorded.",
+                "stem": "How appropriate is the following response?\n\nAsk what would work for the family, contact the coordinator about moving the meeting and keep the family informed.",
                 "options": [
                   "A very appropriate thing to do",
                   "Appropriate, but not ideal",
@@ -932,25 +893,12 @@
                   "A very inappropriate thing to do"
                 ],
                 "answer": 0,
-                "explanation": "Combinations can identify people; the incident team needs accurate information.",
+                "explanation": "It involves the family, avoids an inaccessible route and gives the coordinator a chance to make a workable arrangement.",
                 "id": "ucat-drill-sjt-1-SJT-q02"
               },
               {
                 "format": "appropriateness",
-                "stem": "How appropriate is the following response? Wait until she knows someone has read it before telling anyone.",
-                "options": [
-                  "A very appropriate thing to do",
-                  "Appropriate, but not ideal",
-                  "Inappropriate, but not awful",
-                  "A very inappropriate thing to do"
-                ],
-                "answer": 3,
-                "explanation": "Confirmed access is not required to report a potentially identifiable disclosure.",
-                "id": "ucat-drill-sjt-1-SJT-q03"
-              },
-              {
-                "format": "appropriateness",
-                "stem": "How appropriate is the following response? Call the bus operator's lost property desk but do not inform the placement.",
+                "stem": "How appropriate is the following response?\n\nAsk the rest of the family to go upstairs and offer to explain the meeting to the person left downstairs afterwards.",
                 "options": [
                   "A very appropriate thing to do",
                   "Appropriate, but not ideal",
@@ -958,7 +906,20 @@
                   "A very inappropriate thing to do"
                 ],
                 "answer": 2,
-                "explanation": "Recovering it can help, but it does not replace incident reporting.",
+                "explanation": "It would let the meeting proceed, but excludes someone who wants to attend even though an accessible alternative can still be checked.",
+                "id": "ucat-drill-sjt-1-SJT-q03"
+              },
+              {
+                "format": "appropriateness",
+                "stem": "How appropriate is the following response?\n\nStay with the family in the existing waiting area and ask reception for directions to another lift, without yet telling the meeting team.",
+                "options": [
+                  "A very appropriate thing to do",
+                  "Appropriate, but not ideal",
+                  "Inappropriate, but not awful",
+                  "A very inappropriate thing to do"
+                ],
+                "answer": 1,
+                "explanation": "Finding an accessible route is reasonable. Promptly updating the meeting team as well would reduce the chance of another avoidable wait.",
                 "id": "ucat-drill-sjt-1-SJT-q04"
               }
             ],
@@ -978,12 +939,12 @@
         "extraTime25Seconds": 112,
         "groups": [
           {
-            "title": "A dismissive reply",
-            "stimulus": "Student Emil tells his supervisor that a patient is becoming increasingly distressed while waiting. The supervisor is distracted and replies 'later' without looking up. There is another qualified member of staff close by.",
+            "title": "Two versions of a handover",
+            "stimulus": "A tutor asks Salem and another student to relay when a patient is due to return from a routine test. The other student says the return is at 14:00; Salem heard 14:30. The receiving team has asked for an update before making its plans. The staff member who arranged the transport can be contacted now. Neither student can see a record of the confirmed time.",
             "questions": [
               {
                 "format": "appropriateness",
-                "stem": "How appropriate is the following response? Restate the change clearly and, if no response is secured, seek timely help from the available clinician.",
+                "stem": "How appropriate is the following response?\n\nCall the person who booked transport to verify the time, tell the receiving team it is being checked and relay the confirmed information.",
                 "options": [
                   "A very appropriate thing to do",
                   "Appropriate, but not ideal",
@@ -991,40 +952,12 @@
                   "A very inappropriate thing to do"
                 ],
                 "answer": 0,
-                "explanation": "Escalate a worsening concern until someone appropriate takes responsibility.",
+                "explanation": "This avoids transmitting a guess and gives the team a useful update while it waits.",
                 "id": "ucat-drill-sjt-2-SJT-q01"
               },
               {
                 "format": "appropriateness",
-                "stem": "How appropriate is the following response? Do nothing further because the first response came from a supervisor.",
-                "options": [
-                  "A very appropriate thing to do",
-                  "Appropriate, but not ideal",
-                  "Inappropriate, but not awful",
-                  "A very inappropriate thing to do"
-                ],
-                "answer": 3,
-                "explanation": "Hierarchy does not remove the duty to act on an unresolved safety concern.",
-                "id": "ucat-drill-sjt-2-SJT-q02"
-              },
-              {
-                "format": "most-least",
-                "stem": "Select the most and least appropriate next action if the supervisor remains unavailable.",
-                "options": [
-                  "Stay with the patient while asking a colleague to locate help.",
-                  "Tell the available clinician specifically what has changed.",
-                  "Leave without telling anyone to avoid bothering the team."
-                ],
-                "answer": [
-                  1,
-                  2
-                ],
-                "explanation": "Find a qualified responder now; disappearing without handover leaves the risk unresolved.",
-                "id": "ucat-drill-sjt-2-SJT-q03"
-              },
-              {
-                "format": "appropriateness",
-                "stem": "How appropriate is the following response? Offer reassurance and ask the patient to wait without alerting anyone else.",
+                "stem": "How appropriate is the following response?\n\nGive the receiving team the earlier time as if it were confirmed, so it is ready either way.",
                 "options": [
                   "A very appropriate thing to do",
                   "Appropriate, but not ideal",
@@ -1032,7 +965,35 @@
                   "A very inappropriate thing to do"
                 ],
                 "answer": 2,
-                "explanation": "Reassurance is useful but cannot replace review of worsening distress.",
+                "explanation": "The intention is precautionary, but presenting a guess as confirmed can disrupt planning when verification is available.",
+                "id": "ucat-drill-sjt-2-SJT-q02"
+              },
+              {
+                "format": "most-least",
+                "stem": "In this situation, select the most and least appropriate actions as a first response.",
+                "options": [
+                  "Verify the time with the person who arranged transport and then pass it on.",
+                  "Tell the receiving team there are two unconfirmed times and ask them not to rely on either yet.",
+                  "Pass on the time the other student quoted as confirmed so the receiving team has one clear answer."
+                ],
+                "answer": [
+                  0,
+                  2
+                ],
+                "explanation": "Verification directly resolves the disagreement. An explicitly provisional update is useful but incomplete. Reporting either recollection as confirmed is least appropriate.",
+                "id": "ucat-drill-sjt-2-SJT-q03"
+              },
+              {
+                "format": "appropriateness",
+                "stem": "How appropriate is the following response?\n\nTell the tutor about the discrepancy and ask them to take over the call, even though Salem can contact the arranger directly.",
+                "options": [
+                  "A very appropriate thing to do",
+                  "Appropriate, but not ideal",
+                  "Inappropriate, but not awful",
+                  "A very inappropriate thing to do"
+                ],
+                "answer": 1,
+                "explanation": "Asking the tutor prevents the guess being reported as fact, but may add avoidable delay when Salem has a straightforward way to check.",
                 "id": "ucat-drill-sjt-2-SJT-q04"
               }
             ],
@@ -1052,25 +1013,25 @@
         "extraTime25Seconds": 112,
         "groups": [
           {
-            "title": "Competing requests",
-            "stimulus": "Student Farah is due to join a tutorial. Before she leaves, a patient who was told not to walk unaided asks for help, and a classmate asks Farah to sign an attendance sheet on their behalf. A member of staff is nearby.",
+            "title": "A different way to give feedback",
+            "stimulus": "At a student-run community event, Erin is collecting anonymous feedback. A visitor says they cannot use the online form and asks to give comments aloud. The organisers have approved a paper form that can be completed privately with help if the visitor wants it. The queue at the desk is long, and other visitors are close enough to hear a conversation.",
             "questions": [
               {
                 "format": "appropriateness",
-                "stem": "How appropriate is the following response? Sign for the classmate and ask the patient to try walking alone.",
+                "stem": "How appropriate is the following response?\n\nOffer the approved paper form and the option of help in a quieter place, without assuming the visitor wants help.",
                 "options": [
                   "A very appropriate thing to do",
                   "Appropriate, but not ideal",
                   "Inappropriate, but not awful",
                   "A very inappropriate thing to do"
                 ],
-                "answer": 3,
-                "explanation": "This combines dishonesty with a foreseeable immediate risk.",
+                "answer": 0,
+                "explanation": "It provides an accessible route while leaving the visitor in control of both assistance and privacy.",
                 "id": "ucat-drill-sjt-3-SJT-q01"
               },
               {
                 "format": "appropriateness",
-                "stem": "How appropriate is the following response? Notify the tutor she may be delayed but fail to tell ward staff why she is staying.",
+                "stem": "How appropriate is the following response?\n\nTake the feedback aloud at the desk immediately so the visitor does not have to join another queue.",
                 "options": [
                   "A very appropriate thing to do",
                   "Appropriate, but not ideal",
@@ -1078,25 +1039,25 @@
                   "A very inappropriate thing to do"
                 ],
                 "answer": 2,
-                "explanation": "Notice to the tutor is useful, but the patient still needs qualified assistance.",
+                "explanation": "This improves speed but overlooks an available private option when others can hear.",
                 "id": "ucat-drill-sjt-3-SJT-q02"
               },
               {
                 "format": "appropriateness",
-                "stem": "How appropriate is the following response? Alert the staff member to the patient's need, confirm it has been accepted and decline to sign for the classmate.",
+                "stem": "How appropriate is the following response?\n\nPoint out the paper form and let the visitor decide whether to take it, without mentioning that help is available.",
                 "options": [
                   "A very appropriate thing to do",
                   "Appropriate, but not ideal",
                   "Inappropriate, but not awful",
                   "A very inappropriate thing to do"
                 ],
-                "answer": 0,
-                "explanation": "A current safety need comes first, and attendance must be recorded honestly.",
+                "answer": 1,
+                "explanation": "The paper form offers an alternative, but it may not be usable without the help the event can provide.",
                 "id": "ucat-drill-sjt-3-SJT-q03"
               },
               {
                 "format": "importance",
-                "stem": "How important is the following consideration? Whether the patient may mobilise before help arrives.",
+                "stem": "How important is the following consideration?\n\nWhether the visitor is comfortable with other people being able to hear their feedback.",
                 "options": [
                   "Very important",
                   "Important",
@@ -1104,7 +1065,7 @@
                   "Not important at all"
                 ],
                 "answer": 0,
-                "explanation": "An immediate fall risk outweighs ordinary scheduling concerns.",
+                "explanation": "That matters to how a spoken option is offered; a quieter place is available and the visitor should be able to choose.",
                 "id": "ucat-drill-sjt-3-SJT-q04"
               }
             ],
