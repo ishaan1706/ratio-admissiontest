@@ -5931,7 +5931,7 @@
           "correct": "B",
           "explanation": "The answer names Fallow Pier and connects it to the earlier structure, the wooden signal tower.",
           "commonTrap": "A true statement can still miss the audience, focus, or comparison requested.",
-          "passage": "While researching a topic, a student has taken the following notes:",
+          "passage": null,
           "notes": [
             "The site is called Fallow Pier.",
             "A wooden signal tower stood there in 1884.",
@@ -9688,7 +9688,7 @@
           "domain": "Information and Ideas",
           "skill": "Command of Evidence: Quantitative",
           "difficulty": "easy",
-          "question": "Cedar Falls led only on Saturday.",
+          "question": "Which choice most effectively uses data from the table to complete the statement?",
           "explanation": "Eagle Ridge totals 290 + 520 = 810, the highest.",
           "passage": "A park ranger counted visitors at four trailheads on a holiday weekend. The busiest trailhead was ______",
           "tableTitle": "Visitors by Trailhead",
@@ -9740,7 +9740,8 @@
             }
           ],
           "correct": "B",
-          "type": "mcq"
+          "type": "mcq",
+          "commonTrap": "Cedar Falls led only on Saturday."
         },
         {
           "id": "rs4-b-ceq-02",
@@ -9803,7 +9804,7 @@
           "domain": "Information and Ideas",
           "skill": "Command of Evidence: Quantitative",
           "difficulty": "easy",
-          "question": "36 is six times June's 6 kg, not three times.",
+          "question": "Which choice most effectively uses data from the table to complete the statement?",
           "explanation": "36 kg is twice July's 18 kg.",
           "passage": "A school garden tracked tomato harvests. The harvest in August was about ______",
           "tableTitle": "Tomatoes Harvested (kg)",
@@ -9850,7 +9851,8 @@
             }
           ],
           "correct": "C",
-          "type": "mcq"
+          "type": "mcq",
+          "commonTrap": "36 is six times June's 6 kg, not three times."
         },
         {
           "id": "rs4-b-ceq-04",
@@ -9858,7 +9860,7 @@
           "domain": "Information and Ideas",
           "skill": "Command of Evidence: Quantitative",
           "difficulty": "medium",
-          "question": "The ozone rise weakens the claim.",
+          "question": "Which choice most effectively uses data from the table to complete the statement?",
           "explanation": "Only this choice shows a pollutant dropping with the zone on.",
           "passage": "A city compared air quality on days with and without a car-free downtown zone. Supporting the view that the zone improved air quality, ______",
           "tableTitle": "Average Downtown Air Pollutant Levels (µg/m³)",
@@ -9905,7 +9907,8 @@
             }
           ],
           "correct": "A",
-          "type": "mcq"
+          "type": "mcq",
+          "commonTrap": "The ozone rise weakens the claim."
         },
         {
           "id": "rs4-b-ceq-05",
@@ -10023,7 +10026,7 @@
           "domain": "Information and Ideas",
           "skill": "Command of Evidence: Quantitative",
           "difficulty": "medium",
-          "question": "Old Town ended highest but gained only 12 points.",
+          "question": "Which choice most effectively uses data from the table to complete the statement?",
           "explanation": "Riverside rose from 25 to 49 percent, the largest gain.",
           "passage": "A student compared plastic recycling rates in four neighborhoods before and after the city handed out free recycling bins. The neighborhood with the largest increase was ______",
           "tableTitle": "Household Recycling Rate (percent)",
@@ -10075,7 +10078,8 @@
             }
           ],
           "correct": "C",
-          "type": "mcq"
+          "type": "mcq",
+          "commonTrap": "Old Town ended highest but gained only 12 points."
         },
         {
           "id": "rs4-b-ceq-08",
@@ -10083,7 +10087,7 @@
           "domain": "Information and Ideas",
           "skill": "Command of Evidence: Quantitative",
           "difficulty": "hard",
-          "question": "Growth in both places does not single out the wolves' effect near streams.",
+          "question": "Which choice most effectively uses data from the table to complete the statement?",
           "explanation": "The extra growth is concentrated near streams, where the argument says elk were scared away.",
           "passage": "Some ecologists argue that wolves returning to an area help young aspen trees by scaring elk away from streams, where elk browse most. Data from one valley support this argument: ______",
           "tableTitle": "Average Aspen Sapling Height (cm)",
@@ -10125,7 +10129,8 @@
             }
           ],
           "correct": "B",
-          "type": "mcq"
+          "type": "mcq",
+          "commonTrap": "Growth in both places does not single out the wolves' effect near streams."
         },
         {
           "id": "rs4-b-ceq-09",
@@ -12647,7 +12652,7 @@
           ],
           "explanation": "The answer combines the later achievement with the intended audience, without adding dates.",
           "commonTrap": "A true option can still omit the audience’s requested comparison or purpose.",
-          "passage": "While researching a topic, a student took the following notes:",
+          "passage": null,
           "notes": [
             "Felix Noor led a roof survey.",
             "In 2002, Felix Noor measured runoff during storms.",
@@ -13419,7 +13424,7 @@
           "difficulty": "easy",
           "question": "The student wants to explain why the Eiffel Tower was built. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
           "explanation": "Only this choice gives the tower's original purpose.",
-          "passage": "While researching a topic, a student has taken the following notes:",
+          "passage": null,
           "notes": [
             "The Eiffel Tower was completed in 1889.",
             "It was built as the entrance arch for the World's Fair in Paris.",
@@ -13455,7 +13460,7 @@
           "difficulty": "easy",
           "question": "The student wants to state how sea turtles may find their way. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
           "explanation": "Only this choice names a navigation method.",
-          "passage": "While researching a topic, a student has taken the following notes:",
+          "passage": null,
           "notes": [
             "Sea turtles return to lay eggs on the beach where they hatched.",
             "Scientists think they use Earth's magnetic field to navigate.",
@@ -13491,7 +13496,7 @@
           "difficulty": "easy",
           "question": "The student wants to introduce Kwanzaa to an audience unfamiliar with it. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
           "explanation": "It gives what, when, and how the holiday works.",
-          "passage": "While researching a topic, a student has taken the following notes:",
+          "passage": null,
           "notes": [
             "Kwanzaa is a week-long holiday celebrated from December 26 to January 1.",
             "It was created by Maulana Karenga in 1966.",
@@ -13527,7 +13532,7 @@
           "difficulty": "medium",
           "question": "The student wants to help readers picture the depth of Challenger Deep. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
           "explanation": "Comparing with Everest makes the depth concrete.",
-          "passage": "While researching a topic, a student has taken the following notes:",
+          "passage": null,
           "notes": [
             "The Mariana Trench is the deepest known part of the ocean.",
             "Its deepest point, Challenger Deep, is about 10,900 meters below sea level.",
@@ -13563,7 +13568,7 @@
           "difficulty": "medium",
           "question": "The student wants to emphasize Polgár's success against the strongest players. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
           "explanation": "Beating world champions is direct evidence of success against the strongest players.",
-          "passage": "While researching a topic, a student has taken the following notes:",
+          "passage": null,
           "notes": [
             "Chess grandmaster Judit Polgár became a grandmaster at age 15 in 1991.",
             "She broke the record held by Bobby Fischer for youngest grandmaster.",
@@ -13599,7 +13604,7 @@
           "difficulty": "medium",
           "question": "The student wants to explain how researchers have worked around the difficulty of farming spiders. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
           "explanation": "It names the problem and the workaround.",
-          "passage": "While researching a topic, a student has taken the following notes:",
+          "passage": null,
           "notes": [
             "Spider silk is stronger by weight than steel.",
             "Spiders are difficult to farm because they are territorial and may eat each other.",
@@ -13635,7 +13640,7 @@
           "difficulty": "medium",
           "question": "The student wants to emphasize that the Silk Road carried more than goods. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
           "explanation": "Only this choice mentions ideas and religions.",
-          "passage": "While researching a topic, a student has taken the following notes:",
+          "passage": null,
           "notes": [
             "The Silk Road was a network of trade routes linking China and the Mediterranean.",
             "Silk, spices, and paper moved west along the routes.",
@@ -13671,7 +13676,7 @@
           "difficulty": "medium",
           "question": "The student wants to contrast root bridges with typical bridges. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
           "explanation": "It sets the root bridges against typical materials and highlights a key difference.",
-          "passage": "While researching a topic, a student has taken the following notes:",
+          "passage": null,
           "notes": [
             "Most bridges are built from steel or concrete.",
             "In the Indian state of Meghalaya, the Khasi people grow bridges from the roots of rubber fig trees.",
@@ -13707,7 +13712,7 @@
           "difficulty": "medium",
           "question": "The student wants to present the study's most surprising finding. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
           "explanation": "Uncaptured crows reacting suggests they learned from others.",
-          "passage": "While researching a topic, a student has taken the following notes:",
+          "passage": null,
           "notes": [
             "Researchers studied 1,500 crows in Seattle.",
             "Volunteers wearing a specific mask briefly captured some crows.",
@@ -13743,7 +13748,7 @@
           "difficulty": "hard",
           "question": "The student wants to make the point that the decline in print reading did not mean less reading overall. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
           "explanation": "Pairing the print decline with the e-book rise makes the point.",
-          "passage": "While researching a topic, a student has taken the following notes:",
+          "passage": null,
           "notes": [
             "Survey A asked 2,000 adults whether they read printed books; 65 percent said yes.",
             "Survey B asked the same question ten years earlier; 72 percent said yes.",
@@ -13779,7 +13784,7 @@
           "difficulty": "hard",
           "question": "The student wants to explain a possible reason handwriting may aid memory despite producing fewer words. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
           "explanation": "It acknowledges the word gap and offers the explanation.",
-          "passage": "While researching a topic, a student has taken the following notes:",
+          "passage": null,
           "notes": [
             "Study 1: students who took handwritten notes remembered more lecture concepts a week later than students who typed notes.",
             "Study 2: typists recorded about 70 percent more words than handwriters.",

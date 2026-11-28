@@ -449,9 +449,9 @@ export const SatQuestionBankView: React.FC<{
             }}
             className="px-3 py-2 rounded-lg bg-[var(--bg)] border border-[var(--rule)] text-[var(--ink)]"
           >
-            <option value="all">All Sections (600 Qs)</option>
-            <option value="rw">Reading &amp; Writing (220 Qs)</option>
-            <option value="math">Math (380 Qs)</option>
+            <option value="all">All Sections ({ALL_BANK_QUESTIONS.length} Qs)</option>
+            <option value="rw">Reading &amp; Writing ({ALL_BANK_QUESTIONS.filter((x) => x.section === 'rw').length} Qs)</option>
+            <option value="math">Math ({ALL_BANK_QUESTIONS.filter((x) => x.section === 'math').length} Qs)</option>
           </select>
 
           <select

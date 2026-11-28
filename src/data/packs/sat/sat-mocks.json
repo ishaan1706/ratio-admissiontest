@@ -940,7 +940,7 @@
               "skill": "Rhetorical Synthesis",
               "difficulty": "easy",
               "type": "mcq",
-              "passage": "While researching a topic, a student has taken the following notes:",
+              "passage": null,
               "notes": [
                 "The Svalbard Global Seed Vault is located on an island in Norway, about 1,300 kilometers from the North Pole.",
                 "It stores seeds from crops around the world.",
@@ -981,7 +981,7 @@
               "skill": "Rhetorical Synthesis",
               "difficulty": "medium",
               "type": "mcq",
-              "passage": "While researching a topic, a student has taken the following notes:",
+              "passage": null,
               "notes": [
                 "Ada Lovelace (1815–1852) was an English mathematician.",
                 "She wrote notes on Charles Babbage's proposed Analytical Engine, a mechanical computer.",
@@ -1023,7 +1023,7 @@
               "skill": "Rhetorical Synthesis",
               "difficulty": "hard",
               "type": "mcq",
-              "passage": "While researching a topic, a student has taken the following notes:",
+              "passage": null,
               "notes": [
                 "Two species of finches live on the same island.",
                 "Species A has a large, deep beak.",
@@ -1985,7 +1985,7 @@
               "skill": "Rhetorical Synthesis",
               "difficulty": "medium",
               "type": "mcq",
-              "passage": "While researching a topic, a student has taken the following notes:",
+              "passage": null,
               "notes": [
                 "The kākāpō is a large, flightless parrot native to New Zealand.",
                 "It is nocturnal and feeds on plants.",
@@ -2027,7 +2027,7 @@
               "skill": "Rhetorical Synthesis",
               "difficulty": "hard",
               "type": "mcq",
-              "passage": "While researching a topic, a student has taken the following notes:",
+              "passage": null,
               "notes": [
                 "Phillis Wheatley was born in West Africa around 1753 and was enslaved as a child.",
                 "In 1773 she published Poems on Various Subjects, Religious and Moral.",
@@ -2069,7 +2069,7 @@
               "skill": "Rhetorical Synthesis",
               "difficulty": "hard",
               "type": "mcq",
-              "passage": "While researching a topic, a student has taken the following notes:",
+              "passage": null,
               "notes": [
                 "Researchers compared two methods for teaching fractions to fourth graders.",
                 "Method 1 used number lines; Method 2 used pie diagrams.",
@@ -4233,7 +4233,7 @@
               "skill": "Rhetorical Synthesis",
               "difficulty": "easy",
               "type": "mcq",
-              "passage": "While researching a topic, a student has taken the following notes:",
+              "passage": null,
               "notes": [
                 "The Burj Khalifa is a skyscraper in Dubai, United Arab Emirates.",
                 "It opened in 2010.",
@@ -4275,7 +4275,7 @@
               "skill": "Rhetorical Synthesis",
               "difficulty": "medium",
               "type": "mcq",
-              "passage": "While researching a topic, a student has taken the following notes:",
+              "passage": null,
               "notes": [
                 "Wangari Maathai was a Kenyan environmental activist.",
                 "In 1977, she founded the Green Belt Movement.",
@@ -4317,7 +4317,7 @@
               "skill": "Rhetorical Synthesis",
               "difficulty": "hard",
               "type": "mcq",
-              "passage": "While researching a topic, a student has taken the following notes:",
+              "passage": null,
               "notes": [
                 "Hydroelectric dams generate electricity from flowing water.",
                 "Wind turbines generate electricity from moving air.",
@@ -5269,7 +5269,7 @@
               "skill": "Rhetorical Synthesis",
               "difficulty": "hard",
               "type": "mcq",
-              "passage": "While researching a topic, a student has taken the following notes:",
+              "passage": null,
               "notes": [
                 "Octavia E. Butler (1947–2006) was an American author of science fiction.",
                 "Her novel Kindred (1979) follows a Black woman in 1970s California who is repeatedly pulled back in time to a plantation in early nineteenth-century Maryland.",
@@ -5310,7 +5310,7 @@
               "skill": "Rhetorical Synthesis",
               "difficulty": "hard",
               "type": "mcq",
-              "passage": "While researching a topic, a student has taken the following notes:",
+              "passage": null,
               "notes": [
                 "A comet is a body of ice, dust, and rock that orbits the Sun.",
                 "An asteroid is a rocky or metallic body that orbits the Sun.",
@@ -5352,7 +5352,7 @@
               "skill": "Rhetorical Synthesis",
               "difficulty": "hard",
               "type": "mcq",
-              "passage": "While researching a topic, a student has taken the following notes:",
+              "passage": null,
               "notes": [
                 "In 2019, researchers surveyed 1,200 public library users in four countries.",
                 "68% said they used the library mainly to borrow books.",
@@ -7090,7 +7090,7 @@
               "domain": "Information and Ideas",
               "skill": "Command of Evidence: Quantitative",
               "difficulty": "easy",
-              "question": "Print books led in 2022, not 2023.",
+              "question": "Which choice most effectively uses data from the table to complete the statement?",
               "explanation": "In 2023, e-books (205 thousand) exceeded print books (198 thousand).",
               "passage": "A city library tracked how many items were borrowed in each format. In 2023, the format borrowed most often was ______",
               "tableTitle": "Items Borrowed by Format (thousands)",
@@ -7139,7 +7139,8 @@
               "correct": "B",
               "type": "mcq",
               "number": 13,
-              "practiceBand": 1
+              "practiceBand": 1,
+              "commonTrap": "Print books led in 2022, not 2023."
             },
             {
               "id": "rs4-rs3-mock-3-rw-m1-14",
@@ -7474,7 +7475,7 @@
               "difficulty": "easy",
               "question": "The student wants to explain the purpose of the Great Green Wall. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
               "explanation": "Only this choice states the project's goal.",
-              "passage": "While researching a topic, a student has taken the following notes:",
+              "passage": null,
               "notes": [
                 "The Great Green Wall is a project to plant trees across Africa's Sahel region.",
                 "It aims to stretch about 8,000 kilometers from Senegal to Djibouti.",
@@ -7512,7 +7513,7 @@
               "difficulty": "medium",
               "question": "The student wants to compare when the two Voyager probes reached interstellar space. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
               "explanation": "Only this choice gives both dates and relates them.",
-              "passage": "While researching a topic, a student has taken the following notes:",
+              "passage": null,
               "notes": [
                 "In 1977 NASA launched two probes, Voyager 1 and Voyager 2.",
                 "Voyager 1 entered interstellar space in 2012.",
@@ -8521,7 +8522,7 @@
               "difficulty": "medium",
               "question": "The student wants to present two different uses of bioluminescence in the ocean. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
               "explanation": "Only this choice gives two ocean uses; fireflies are not marine.",
-              "passage": "While researching a topic, a student has taken the following notes:",
+              "passage": null,
               "notes": [
                 "Bioluminescence is light produced by living organisms.",
                 "Anglerfish use a glowing lure to attract prey in the deep sea.",
@@ -8559,7 +8560,7 @@
               "difficulty": "medium",
               "question": "The student wants to emphasize the long-term significance of Lamarr's invention. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
               "explanation": "Its present-day use in Wi-Fi and Bluetooth shows long-term significance.",
-              "passage": "While researching a topic, a student has taken the following notes:",
+              "passage": null,
               "notes": [
                 "Hedy Lamarr was a popular film actress in the 1930s and 1940s.",
                 "During World War II she co-invented a frequency-hopping system to keep torpedo signals from being jammed.",
@@ -8597,7 +8598,7 @@
               "difficulty": "medium",
               "question": "The student wants to challenge the assumption that owners see most of what their cats catch. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
               "explanation": "If only a quarter of catches come home, owners see a small share.",
-              "passage": "While researching a topic, a student has taken the following notes:",
+              "passage": null,
               "notes": [
                 "Researchers placed small cameras on 30 house cats in a town in Georgia, USA.",
                 "The cats hunted on about 44 percent of their outdoor trips.",
@@ -10719,7 +10720,7 @@
                 "difficulty": "easy",
                 "question": "The student wants to emphasize what makes the axolotl unusual among salamanders. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
                 "explanation": "The note contrasting the axolotl with “most salamanders” directly shows what is unusual.",
-                "passage": "While researching a topic, a student has taken the following notes:",
+                "passage": null,
                 "notes": [
                   "The axolotl is a salamander native to lakes near Mexico City.",
                   "Unlike most salamanders, it keeps its gills and lives in water its entire life.",
@@ -10757,7 +10758,7 @@
                 "difficulty": "medium",
                 "question": "The student wants to explain why some scholars doubt the gardens were in Babylon. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
                 "explanation": "This choice gives the reasons for the doubt.",
-                "passage": "While researching a topic, a student has taken the following notes:",
+                "passage": null,
                 "notes": [
                   "The Hanging Gardens of Babylon are listed among the Seven Wonders of the Ancient World.",
                   "No Babylonian texts mention the gardens.",
@@ -10795,7 +10796,7 @@
                 "difficulty": "medium",
                 "question": "The student wants to emphasize the tuatara's uniqueness to a reader unfamiliar with it. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
                 "explanation": "It introduces the animal and states that it is the last of its group.",
-                "passage": "While researching a topic, a student has taken the following notes:",
+                "passage": null,
                 "notes": [
                   "The tuatara is a reptile found only in New Zealand.",
                   "It looks like a lizard but belongs to a separate group, Rhynchocephalia.",
@@ -12367,7 +12368,7 @@
               "difficulty": "medium",
               "question": "The student wants to explain how the safety bicycle changed cycling. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
               "explanation": "It names the design change and its effect.",
-              "passage": "While researching a topic, a student has taken the following notes:",
+              "passage": null,
               "notes": [
                 "Early bicycles of the 1870s, called penny-farthings, had a huge front wheel.",
                 "Riders sat high above the ground and often fell.",
@@ -12405,7 +12406,7 @@
               "difficulty": "hard",
               "question": "The student wants to suggest a possible reason the studies' results differed. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
               "explanation": "The sunlight difference offers an explanation for the contrasting results.",
-              "passage": "While researching a topic, a student has taken the following notes:",
+              "passage": null,
               "notes": [
                 "Study 1: in a lab, lettuce grown under red and blue LED light grew 20 percent faster than lettuce under white light.",
                 "Study 2: on a commercial farm, the same lighting change produced no measurable growth difference.",
@@ -13399,7 +13400,7 @@
               "difficulty": "medium",
               "question": "The student wants to stress mangroves' value in fighting climate change. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
               "explanation": "Carbon storage is the climate-related benefit.",
-              "passage": "While researching a topic, a student has taken the following notes:",
+              "passage": null,
               "notes": [
                 "Mangrove forests grow along tropical coastlines.",
                 "Their tangled roots slow waves and reduce erosion.",
@@ -13437,7 +13438,7 @@
               "difficulty": "medium",
               "question": "The student wants to emphasize the historic nature of the 1933 performance. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
               "explanation": "It ties the performance to the “first” it achieved.",
-              "passage": "While researching a topic, a student has taken the following notes:",
+              "passage": null,
               "notes": [
                 "The composer Florence Price was born in Little Rock, Arkansas, in 1887.",
                 "In 1933 the Chicago Symphony Orchestra performed her Symphony in E Minor.",
@@ -13475,7 +13476,7 @@
               "difficulty": "hard",
               "question": "The student wants to emphasize how efficient the Inca road system was despite its limitations. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
               "explanation": "It pairs the limitation with the speed achieved.",
-              "passage": "While researching a topic, a student has taken the following notes:",
+              "passage": null,
               "notes": [
                 "The Inca built more than 40,000 kilometers of roads.",
                 "They had no wheeled vehicles and no horses.",
@@ -15589,7 +15590,7 @@
                 "difficulty": "easy",
                 "question": "The student wants to indicate the scale of the Green Belt Movement's work. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
                 "explanation": "Only the number of trees planted conveys scale.",
-                "passage": "While researching a topic, a student has taken the following notes:",
+                "passage": null,
                 "notes": [
                   "Wangari Maathai founded the Green Belt Movement in Kenya in 1977.",
                   "The movement paid women to plant trees in their communities.",
@@ -15627,7 +15628,7 @@
                 "difficulty": "easy",
                 "question": "The student wants to highlight the distance some of Stonehenge's stones traveled. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
                 "explanation": "Only this choice gives the distance.",
-                "passage": "While researching a topic, a student has taken the following notes:",
+                "passage": null,
                 "notes": [
                   "Stonehenge was built in stages beginning around 3000 BCE.",
                   "Its largest stones, called sarsens, weigh about 25 tons each.",
@@ -15665,7 +15666,7 @@
                 "difficulty": "medium",
                 "question": "The student wants to present the results of the 2007 experiment. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
                 "explanation": "Only this choice reports results.",
-                "passage": "While researching a topic, a student has taken the following notes:",
+                "passage": null,
                 "notes": [
                   "Tardigrades are animals less than a millimeter long.",
                   "In 2007, tardigrades were sent into low Earth orbit on a satellite.",
