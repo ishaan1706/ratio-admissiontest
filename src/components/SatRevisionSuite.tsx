@@ -650,11 +650,18 @@ export const SatQuestionBankView: React.FC<{
           )}
 
           {q.notes && q.notes.length > 0 && (
-            <ul className="rounded-xl border border-[var(--rule)] bg-[var(--bg)] p-4 space-y-1.5 list-disc pl-8 text-sm text-[var(--text)]">
-              {q.notes.map((n, i) => (
-                <li key={i}>{n}</li>
-              ))}
-            </ul>
+            <div className="space-y-2">
+              {!q.passage && (
+                <p className="text-xs font-semibold text-[var(--text-muted)]">
+                  While researching a topic, a student has taken the following notes:
+                </p>
+              )}
+              <ul className="rounded-xl border border-[var(--rule)] bg-[var(--bg)] p-4 space-y-1.5 list-disc pl-8 text-sm text-[var(--text)]">
+                {q.notes.map((n, i) => (
+                  <li key={i}>{n}</li>
+                ))}
+              </ul>
+            </div>
           )}
 
           {q.table && (
