@@ -49,23 +49,26 @@ export function TaraStem({ stem, className, exam = false }: { stem: string; clas
         const { rows } = block;
         if (block.kind === 'grid') {
           return (
-            <div
-              key={i}
-              role="group"
-              aria-label="Question grid"
-              className="my-2 grid w-fit max-w-full gap-0.5"
-              style={{ gridTemplateColumns: `repeat(${rows[0].length}, minmax(0, 2rem))` }}
-            >
-              {rows.flat().map((cell, j) =>
-                cell === '·' ? (
-                  <span key={j} className="aspect-square" aria-hidden="true" />
-                ) : (
-                  <span key={j} className={`grid aspect-square place-items-center border font-semibold ${border} ${header}`}>
-                    {cell}
-                  </span>
-                ),
-              )}
-            </div>
+            <React.Fragment key={i}>
+              <span className="sr-only">
+                {rows.map((row, j) => `Row ${j + 1}: ${row.map((cell) => cell === '·' ? 'blank' : cell).join(', ')}.`).join(' ')}
+              </span>
+              <div
+                aria-hidden="true"
+                className="my-2 grid w-fit max-w-full gap-0.5"
+                style={{ gridTemplateColumns: `repeat(${rows[0].length}, minmax(0, 2rem))` }}
+              >
+                {rows.flat().map((cell, j) =>
+                  cell === '·' ? (
+                    <span key={j} className="aspect-square" />
+                  ) : (
+                    <span key={j} className={`grid aspect-square place-items-center border font-semibold ${border} ${header}`}>
+                      {cell}
+                    </span>
+                  ),
+                )}
+              </div>
+            </React.Fragment>
           );
         }
         return (
