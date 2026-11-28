@@ -835,7 +835,7 @@
             {
               "questions": [
                 {
-                  "stem": "A courier can use any of the one-way lanes listed. Which stop must occur on a route from the yard to the quay if the gate-to-mill lane is closed?",
+                  "stem": "The permitted one-way lanes are: Yard → Gate; Yard → Mill; Gate → Mill; Gate → Depot; Mill → Depot; Depot → Bridge; Depot → Quay; Bridge → Quay.\n\nWhich stop must occur on a route from the Yard to the Quay if the Gate-to-Mill lane is closed?",
                   "options": [
                     "Gate",
                     "Depot",
@@ -848,9 +848,7 @@
                   "format": "single-choice"
                 }
               ],
-              "id": "ucat-mock-1-DM-g08",
-              "title": "One-way lanes",
-              "stimulus": "Yard → Gate\nYard → Mill\nGate → Mill\nGate → Depot\nMill → Depot\nDepot → Bridge\nDepot → Quay\nBridge → Quay"
+              "id": "ucat-mock-1-DM-g08"
             },
             {
               "questions": [
@@ -928,7 +926,7 @@
               "questions": [
                 {
                   "format": "yes-no-5",
-                  "stem": "Does each statement follow from the figures? Treat the records as complete.",
+                  "stem": "Each of 24 badges is orange, striped, or both. There are 15 orange badges and 15 striped badges.\n\nDoes each statement follow from the figures? Treat the records as complete.",
                   "options": [
                     "Yes",
                     "No"
@@ -952,9 +950,7 @@
                   "id": "ucat-mock-1-DM-q13"
                 }
               ],
-              "id": "ucat-mock-1-DM-g13",
-              "title": "A complete badge inventory",
-              "stimulus": "Each of 24 badges is orange, striped, or both. There are 15 orange badges and 15 striped badges."
+              "id": "ucat-mock-1-DM-g13"
             },
             {
               "questions": [
@@ -1061,7 +1057,7 @@
             {
               "questions": [
                 {
-                  "stem": "A festival assigns each act a different space. Which proposed swap, starting from the listed plan, produces a valid plan?",
+                  "stem": "Plan: Duo → Tent; Choir → Hall; Mime → Room; Drums → Yard.\n\nAllowed spaces: Duo (Tent or Yard); Choir (Hall or Tent); Mime (Room or Yard); Drums (Yard or Room).\n\nA festival assigns each act a different space. Which proposed swap, starting from the listed plan, produces a valid plan?",
                   "options": [
                     "Swap Duo and Choir.",
                     "Swap Choir and Mime.",
@@ -1074,9 +1070,7 @@
                   "format": "single-choice"
                 }
               ],
-              "id": "ucat-mock-1-DM-g19",
-              "title": "Stage allocations",
-              "stimulus": "Plan: Duo → Tent; Choir → Hall; Mime → Room; Drums → Yard.\nAllowed spaces: Duo (Tent or Yard); Choir (Hall or Tent); Mime (Room or Yard); Drums (Yard or Room)."
+              "id": "ucat-mock-1-DM-g19"
             },
             {
               "questions": [
@@ -4055,7 +4049,7 @@
             {
               "questions": [
                 {
-                  "stem": "A delivery team must visit four lockers. It must visit Cedar before Elm and Birch before Dock. It pays for each move between consecutively visited lockers, with no travel charge for the starting or ending point. Which of the listed sequences is eligible and cheapest among the eligible options?",
+                  "stem": "A delivery team must visit four lockers, Cedar before Elm and Birch before Dock. Charges for travelling between a pair of lockers are the same in either direction:\n\nBirch–Cedar £2; Birch–Dock £6; Birch–Elm £5;\nCedar–Dock £3; Cedar–Elm £1; Dock–Elm £5.\n\nThere is no charge to reach the first locker or leave the last one. Which listed sequence follows both rules and costs the least?",
                   "options": [
                     "Birch → Cedar → Elm → Dock",
                     "Cedar → Birch → Elm → Dock",
@@ -4068,56 +4062,7 @@
                   "format": "single-choice"
                 }
               ],
-              "id": "ucat-mock-2-DM-g02",
-              "title": "Locker transfers",
-              "chart": {
-                "type": "table",
-                "title": "Charge (£) for a move, in either direction",
-                "labels": [
-                  "Birch",
-                  "Cedar",
-                  "Dock",
-                  "Elm"
-                ],
-                "series": [
-                  {
-                    "name": "Birch",
-                    "values": [
-                      0,
-                      2,
-                      6,
-                      5
-                    ]
-                  },
-                  {
-                    "name": "Cedar",
-                    "values": [
-                      2,
-                      0,
-                      3,
-                      1
-                    ]
-                  },
-                  {
-                    "name": "Dock",
-                    "values": [
-                      6,
-                      3,
-                      0,
-                      5
-                    ]
-                  },
-                  {
-                    "name": "Elm",
-                    "values": [
-                      5,
-                      1,
-                      5,
-                      0
-                    ]
-                  }
-                ]
-              }
+              "id": "ucat-mock-2-DM-g02"
             },
             {
               "questions": [
@@ -4297,7 +4242,7 @@
               "questions": [
                 {
                   "format": "yes-no-5",
-                  "stem": "Does each statement follow logically from the rules?",
+                  "stem": "Every returned map is checked. A map can enter the return drawer only if it is sealed. A map that passes through the timed hatch automatically enters the drawer. At least one map was returned through the timed hatch after closing.\n\nDoes each statement follow logically from the rules?",
                   "options": [
                     "Yes",
                     "No"
@@ -4321,9 +4266,7 @@
                   "id": "ucat-mock-2-DM-q12"
                 }
               ],
-              "id": "ucat-mock-2-DM-g12",
-              "title": "An archive’s return rules",
-              "stimulus": "Every returned map is checked. A map can enter the return drawer only if it is sealed. A map that passes through the timed hatch automatically enters the drawer. At least one map was returned through the timed hatch after closing."
+              "id": "ucat-mock-2-DM-g12"
             },
             {
               "questions": [
@@ -4364,7 +4307,7 @@
             {
               "questions": [
                 {
-                  "stem": "Four volunteers each take a different duty. Which assignment could work?",
+                  "stem": "Four volunteers each take a different duty. Their options are:\n\nAnya: welcome or raffle;\nBran: raffle, welcome or tickets;\nCora: tickets or packs;\nDeni: packs or raffle.\n\nIf Cora takes tickets, Anya must take welcome and Deni must take packs. Which assignment could work?",
                   "options": [
                     "Bran: welcome; Deni: raffle.",
                     "Anya: raffle; Bran: welcome.",
@@ -4377,9 +4320,7 @@
                   "format": "single-choice"
                 }
               ],
-              "id": "ucat-mock-2-DM-g15",
-              "title": "Volunteer duties",
-              "stimulus": "Anya: welcome or raffle.\nBran: raffle, welcome or tickets.\nCora: tickets or packs.\nDeni: packs or raffle.\nIf Cora takes tickets, Anya must take welcome and Deni must take packs."
+              "id": "ucat-mock-2-DM-g15"
             },
             {
               "questions": [
@@ -4468,7 +4409,7 @@
             {
               "questions": [
                 {
-                  "stem": "A committee picks exactly two of the six screenings listed. It needs two different venues and two different languages; at least one screening must be before 18:00. Which screening could not be one of its choices?",
+                  "stem": "A committee must pick two screenings in different venues and in different languages, at least one before 18:00. Its choices are:\n\nKite (Hall, Polish, 17:00);\nInk (Loft, Arabic, 17:30);\nGlass (Hall, Arabic, 19:00);\nTide (Loft, Hindi, 18:15);\nMap (Yard, Arabic, 20:00);\nThread (Yard, Polish, 19:30).\n\nWhich screening could not be picked?",
                   "options": [
                     "Kite",
                     "Glass",
@@ -4481,9 +4422,7 @@
                   "format": "single-choice"
                 }
               ],
-              "id": "ucat-mock-2-DM-g20",
-              "title": "Screening shortlist",
-              "stimulus": "Kite — Hall, Polish, 17:00\nInk — Loft, Arabic, 17:30\nGlass — Hall, Arabic, 19:00\nTide — Loft, Hindi, 18:15\nMap — Yard, Arabic, 20:00\nThread — Yard, Polish, 19:30"
+              "id": "ucat-mock-2-DM-g20"
             },
             {
               "questions": [
@@ -4590,7 +4529,7 @@
             {
               "questions": [
                 {
-                  "stem": "Four assistants start at the same time. A task can start only after its prerequisites have finished. Each assistant may work on one task at a time. A fifth task, Mail, must wait for both Trim and Fold and takes 5 minutes. What is the earliest Mail can finish?",
+                  "stem": "Four assistants are available. Each task takes one assistant, and no one can work on two tasks at once. A task can start only when its prerequisites are finished:\n\nPrint: 6 minutes, no prerequisite;\nFold: 4 minutes, after Print;\nTrim: 3 minutes, after Print;\nPack: 8 minutes, no prerequisite;\nMail: 5 minutes, after both Trim and Fold.\n\nWhat is the earliest Mail can finish, measured from when the assistants become available?",
                   "options": [
                     "14 minutes",
                     "15 minutes",
@@ -4603,9 +4542,7 @@
                   "format": "single-choice"
                 }
               ],
-              "id": "ucat-mock-2-DM-g26",
-              "title": "Production tasks",
-              "stimulus": "Print: 6 minutes; no prerequisite.\nFold: 4 minutes; requires Print.\nTrim: 3 minutes; requires Print.\nPack: 8 minutes; no prerequisite."
+              "id": "ucat-mock-2-DM-g26"
             },
             {
               "questions": [

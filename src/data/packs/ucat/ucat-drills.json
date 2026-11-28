@@ -298,7 +298,7 @@
           {
             "questions": [
               {
-                "stem": "A walk from the Market to the Observatory must follow the listed one-way connections. After the Bridge closes, a journey is still possible. Which extra closure would make that journey impossible?",
+                "stem": "The allowed one-way walking connections are: Market → Bridge; Market → Garden; Market → Fountain; Bridge → Observatory; Garden → Lane; Fountain → Lane; Lane → Observatory; Station → Bridge.\n\nA journey from the Market to the Observatory is still possible after the Bridge closes. Which extra closure would make that journey impossible?",
                 "options": [
                   "Fountain",
                   "Garden",
@@ -311,9 +311,7 @@
                 "format": "single-choice"
               }
             ],
-            "id": "ucat-drill-dm-1-DM-g03",
-            "title": "Walking connections",
-            "stimulus": "Market → Bridge\nMarket → Garden\nMarket → Fountain\nBridge → Observatory\nGarden → Lane\nFountain → Lane\nLane → Observatory\nStation → Bridge"
+            "id": "ucat-drill-dm-1-DM-g03"
           },
           {
             "questions": [
