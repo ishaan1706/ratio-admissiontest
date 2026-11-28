@@ -33,8 +33,6 @@ function splitStem(stem: string): StemBlock[] {
 }
 
 const numericCell = /^[+−-]?(?:[£$€]\s*)?\d[\d,.]*(?:(?:[:/–-]\d+)|(?:\s*(?:%|°?[A-Za-z]+[²³]?)))?$/;
-const cellClass = (cell: string) =>
-  `px-3 py-2 whitespace-nowrap ${numericCell.test(cell) ? 'text-right tabular-nums' : 'text-left'}`;
 
 export function TaraStem({ stem, className, exam = false }: { stem: string; className: string; exam?: boolean }) {
   const border = exam ? 'border-[#CBD5E1]' : 'border-[var(--rule)]';
@@ -71,6 +69,10 @@ export function TaraStem({ stem, className, exam = false }: { stem: string; clas
             </React.Fragment>
           );
         }
+        const [headers, ...body] = rows;
+        const columnClasses = headers.map((_, column) =>
+          `px-3 py-2 whitespace-nowrap ${body.every((row) => numericCell.test(row[column])) ? 'text-right tabular-nums' : 'text-left'}`,
+        );
         return (
           <div
             key={i}
@@ -82,15 +84,15 @@ export function TaraStem({ stem, className, exam = false }: { stem: string; clas
             <table className="w-full border-collapse text-sm">
               <thead className={header}>
                 <tr className={`border-b ${border}`}>
-                  {rows[0].map((cell, j) => (
-                    <th key={j} scope="col" className={`${cellClass(cell)} font-semibold`}>{cell}</th>
+                  {headers.map((cell, j) => (
+                    <th key={j} scope="col" className={`${columnClasses[j]} font-semibold`}>{cell}</th>
                   ))}
                 </tr>
               </thead>
               <tbody className={`divide-y ${rowDividers}`}>
-                {rows.slice(1).map((row, j) => (
+                {body.map((row, j) => (
                   <tr key={j}>
-                    {row.map((cell, k) => <td key={k} className={cellClass(cell)}>{cell}</td>)}
+                    {row.map((cell, k) => <td key={k} className={columnClasses[k]}>{cell}</td>)}
                   </tr>
                 ))}
               </tbody>
