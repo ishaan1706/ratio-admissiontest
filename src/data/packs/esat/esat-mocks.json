@@ -305,7 +305,7 @@
        ],
        "answer": "B",
        "explanation": "In pence, equality requires 200 + 30n = 50 + 55n. So 25n = 150 and n = 6.",
-       "id": "esat-a-m1-08",
+       "id": "esat-a-m1-08-v2",
        "number": 8
       },
       {
@@ -515,7 +515,7 @@
        ],
        "answer": "A",
        "explanation": "All 15 unordered pairs are equally likely. There are 4 × 2 = 8 mixed pairs and 4 × 3/2 = 6 weekday pairs. Their probabilities differ by 2/15.",
-       "id": "esat-a-m1-14",
+       "id": "esat-a-m1-14-v2",
        "number": 14
       },
       {
@@ -1258,7 +1258,7 @@
        ],
        "answer": "A",
        "explanation": "In AA and aa, the two alleles within each genotype are identical. Aa has two different alleles and is heterozygous.",
-       "id": "esat-a-bio-08",
+       "id": "esat-a-bio-08-v2",
        "number": 8
       },
       {
@@ -2176,7 +2176,7 @@
        ],
        "answer": "D",
        "explanation": "Each portion contains half as much acid as its original 20.0 cm³ sample. It therefore requires half of its original titre, giving 6.0 + 9.0 = 15.0 cm³.",
-       "id": "esat-a-chem-07",
+       "id": "esat-a-chem-07-v2",
        "number": 7
       },
       {
@@ -2596,7 +2596,7 @@
        ],
        "answer": "A",
        "explanation": "A catalyst increases both the forward and reverse rates, so the mixture reaches equilibrium sooner without changing the equilibrium composition.",
-       "id": "esat-a-chem-19",
+       "id": "esat-a-chem-19-v2",
        "number": 19
       },
       {
@@ -2841,7 +2841,7 @@
        ],
        "answer": "C",
        "explanation": "Propanoic acid differs from ethanoic acid by CH₂. Both reactions add methanol and remove water, so the esters also differ by CH₂, with mass 12 + 2 = 14.",
-       "id": "esat-a-chem-26",
+       "id": "esat-a-chem-26-v2",
        "number": 26
       },
       {
@@ -2989,7 +2989,7 @@
        ],
        "answer": "D",
        "explanation": "Parallel branches each receive the full supply voltage. Each panel needs its own switch in its branch so switching it off does not interrupt the other branch.",
-       "id": "esat-a-phys-03",
+       "id": "esat-a-phys-03-v2",
        "number": 3
       },
       {
@@ -3514,7 +3514,7 @@
        ],
        "answer": "E",
        "explanation": "Potential difference is energy per unit charge. The same energy divided by twice the charge gives half the potential difference.",
-       "id": "esat-a-phys-18",
+       "id": "esat-a-phys-18-v2",
        "number": 18
       },
       {
@@ -3584,7 +3584,7 @@
        ],
        "answer": "E",
        "explanation": "The upward change in momentum is 6 kg m/s, making the mean resultant 30 N upward. The downward weight is 20 N, so the cushion supplies 50 N upward.",
-       "id": "esat-a-phys-20",
+       "id": "esat-a-phys-20-v2",
        "number": 20
       },
       {
@@ -3619,7 +3619,7 @@
        ],
        "answer": "E",
        "explanation": "For the same useful work W, P uses 2W and Q uses 4W/3. With twice Q’s time, P’s input power is (2/(4/3))/2 = 3/4 of Q’s.",
-       "id": "esat-a-phys-21",
+       "id": "esat-a-phys-21-v2",
        "number": 21
       },
       {
@@ -3794,7 +3794,7 @@
        ],
        "answer": "C",
        "explanation": "Both masses are 24 g. The combined density is total mass divided by total volume, 48/16 = 3 g/cm³, not the unweighted mean of the two densities.",
-       "id": "esat-a-phys-26",
+       "id": "esat-a-phys-26-v2",
        "number": 26
       },
       {
@@ -4047,7 +4047,7 @@
        ],
        "answer": "A",
        "explanation": "The proposed examples with sin x = 1/2 are π/6 and 5π/6. Doubling the latter gives 5π/3, with sine −√3/2, so 5π/6 disproves the claim.",
-       "id": "esat-a-m2-06",
+       "id": "esat-a-m2-06-v2",
        "number": 6
       },
       {
@@ -4222,7 +4222,7 @@
        ],
        "answer": "B",
        "explanation": "The point at x = 2 is (2, 8), where the gradient is 2x + 2 = 6. The perpendicular line has gradient −1/6.",
-       "id": "esat-a-m2-11",
+       "id": "esat-a-m2-11-v2",
        "number": 11
       },
       {
@@ -4292,7 +4292,7 @@
        ],
        "answer": "C",
        "explanation": "The integral of the derivative is F(4) − F(1). Here F(1) = 1 + 2 = 3.",
-       "id": "esat-a-m2-13",
+       "id": "esat-a-m2-13-v2",
        "number": 13
       },
       {
@@ -4432,7 +4432,7 @@
        ],
        "answer": "F",
        "explanation": "The second factor requires sin x = −3/2, outside the range [−1, 1]. The first gives sin x = 1/2, true at π/6 and 5π/6.",
-       "id": "esat-a-m2-17",
+       "id": "esat-a-m2-17-v2",
        "number": 17
       },
       {
@@ -5216,7 +5216,7 @@
        ],
        "answer": "B",
        "explanation": "The total rises from 5 × 8 to 6 × 8, so the added reading is 8.",
-       "id": "esat-b-m1-12",
+       "id": "esat-b-m1-12-v2",
        "number": 12
       },
       {
@@ -5784,7 +5784,7 @@
        ],
        "answer": "C",
        "explanation": "A typical bacterium has DNA, ribosomes and cytoplasm even though it lacks a membrane-bound nucleus and mitochondria.",
-       "id": "esat-b-bio-01",
+       "id": "esat-b-bio-01-v2",
        "number": 1
       },
       {
@@ -6344,7 +6344,7 @@
        ],
        "answer": "D",
        "explanation": "The volume per minute is the volume per beat multiplied by beats per minute. The ratio is (75/60) × (84/70) = (5/4) × (6/5) = 3/2.",
-       "id": "esat-b-bio-17",
+       "id": "esat-b-bio-17-v2",
        "number": 17
       },
       {
@@ -6772,7 +6772,7 @@
        ],
        "answer": "E",
        "explanation": "The atom must have three occupied shells and six electrons in the outer one. The arrangement 2,8,6 satisfies both clues.",
-       "id": "esat-b-chem-02",
+       "id": "esat-b-chem-02-v2",
        "number": 2
       },
       {
@@ -6982,7 +6982,7 @@
        ],
        "answer": "C",
        "explanation": "Concentration is amount divided by solution volume. Doubling both the amount and volume preserves the concentration.",
-       "id": "esat-b-chem-08",
+       "id": "esat-b-chem-08-v2",
        "number": 8
       },
       {
@@ -7332,7 +7332,7 @@
        ],
        "answer": "D",
        "explanation": "The peak is at 90 + 55 = 145 and the products at 90 − 20 = 70 kJ mol⁻¹. The reverse activation energy is 145 − 70 = 75 kJ mol⁻¹.",
-       "id": "esat-b-chem-18",
+       "id": "esat-b-chem-18-v2",
        "number": 18
       },
       {
@@ -8355,7 +8355,7 @@
        ],
        "answer": "B",
        "explanation": "Their total momentum remains zero, so the individual momenta are opposite and equal in magnitude. For equal magnitude mv, doubling the mass halves the speed.",
-       "id": "esat-b-phys-20",
+       "id": "esat-b-phys-20-v2",
        "number": 20
       },
       {
@@ -8460,7 +8460,7 @@
        ],
        "answer": "B",
        "explanation": "Reducing the sensor’s opposition reduces the total, increasing the current. Its share of the supply voltage is R_sensor/(R_fixed + R_sensor), which falls when R_sensor falls.",
-       "id": "esat-b-phys-23",
+       "id": "esat-b-phys-23-v2",
        "number": 23
       },
       {
@@ -8713,7 +8713,7 @@
        ],
        "answer": "A",
        "explanation": "The product of the side lengths is (√5 + √2)(√5 − √2) = 5 − 2 = 3. The product of the areas is the square of that product, 9.",
-       "id": "esat-b-m2-03",
+       "id": "esat-b-m2-03-v2",
        "number": 3
       },
       {
@@ -9168,7 +9168,7 @@
        ],
        "answer": "B",
        "explanation": "For 1 < t < 3 the first factor is positive and the second negative. The velocity is nonpositive throughout, so distance is the integral of −v.",
-       "id": "esat-b-m2-16",
+       "id": "esat-b-m2-16-v2",
        "number": 16
       },
       {
@@ -9273,7 +9273,7 @@
        ],
        "answer": "F",
        "explanation": "Multiplying powers of n adds the exponents. In ab the exponent is 1/2 − 1/3 = 1/6.",
-       "id": "esat-b-m2-19",
+       "id": "esat-b-m2-19-v2",
        "number": 19
       },
       {
@@ -9343,7 +9343,7 @@
        ],
        "answer": "D",
        "explanation": "With c = cos x, the equation becomes 2c² − 1 = c, or (2c + 1)(c − 1) = 0. On the stated interval c = 1 occurs at 0, and c = −1/2 at 2π/3 and 4π/3. The endpoint 2π is excluded.",
-       "id": "esat-b-m2-21",
+       "id": "esat-b-m2-21-v2",
        "number": 21
       },
       {
@@ -9553,7 +9553,7 @@
        ],
        "answer": "C",
        "explanation": "Integrating each profile gives 2/3 and 1/2, respectively. Their ratio is (2/3)/(1/2) = 4/3.",
-       "id": "esat-b-m2-27",
+       "id": "esat-b-m2-27-v2",
        "number": 27
       }
      ]

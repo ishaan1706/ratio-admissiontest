@@ -27,7 +27,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-m1-1-01",
+              "id": "esat-p-m1-1-01-v2",
               "number": 1,
               "topic": "M1.2",
               "difficulty": 2,
@@ -767,7 +767,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-m1-3-01",
+              "id": "esat-p-m1-3-01-v2",
               "number": 1,
               "topic": "M5.2",
               "difficulty": 1,
@@ -1136,7 +1136,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-m1-4-01",
+              "id": "esat-p-m1-4-01-v2",
               "number": 1,
               "topic": "M6.1",
               "difficulty": 1,
@@ -1505,7 +1505,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-m1-5-01",
+              "id": "esat-p-m1-5-01-v2",
               "number": 1,
               "topic": "M2.3",
               "difficulty": 1,
@@ -1925,7 +1925,7 @@
               "explanation": "Subtract 3p and add 2q to obtain 2p = 2q + 3r. Divide both terms on the right by 2."
             },
             {
-              "id": "esat-p-m1-6-02",
+              "id": "esat-p-m1-6-02-v2",
               "number": 2,
               "topic": "M4.4",
               "difficulty": 2,
@@ -2683,7 +2683,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-m1-8-01",
+              "id": "esat-p-m1-8-01-v2",
               "number": 1,
               "topic": "M6.3",
               "difficulty": 1,
@@ -2827,7 +2827,7 @@
               "explanation": "The areas give frequencies 20, 30 and 20. The tallest bin does not have the highest count because it is narrow."
             },
             {
-              "id": "esat-p-m1-8-05",
+              "id": "esat-p-m1-8-05-v2",
               "number": 5,
               "topic": "M7.6",
               "difficulty": 2,
@@ -3078,7 +3078,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-m1-9-01",
+              "id": "esat-p-m1-9-01-v2",
               "number": 1,
               "topic": "M1.2",
               "difficulty": 2,
@@ -3494,7 +3494,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-m1-10-01",
+              "id": "esat-p-m1-10-01-v2",
               "number": 1,
               "topic": "M4.4",
               "difficulty": 2,
@@ -4309,7 +4309,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-m1-12-01",
+              "id": "esat-p-m1-12-01-v2",
               "number": 1,
               "topic": "M6.3",
               "difficulty": 2,
@@ -4570,7 +4570,7 @@
               "explanation": "Both summaries transform in the same way because order is preserved and every value changes by the same linear rule."
             },
             {
-              "id": "esat-p-m1-12-08",
+              "id": "esat-p-m1-12-08-v2",
               "number": 8,
               "topic": "M7.7",
               "difficulty": 5,
@@ -4819,7 +4819,7 @@
               "explanation": "Scale the sugar to six units. The two flour quantities become 15 and 14 respectively."
             },
             {
-              "id": "esat-p-m1-13-04",
+              "id": "esat-p-m1-13-04-v2",
               "number": 4,
               "topic": "M2.12",
               "difficulty": 4,
@@ -5105,7 +5105,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-m1-14-01",
+              "id": "esat-p-m1-14-01-v2",
               "number": 1,
               "topic": "M4.10",
               "difficulty": 1,
@@ -5493,7 +5493,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-m1-15-01",
+              "id": "esat-p-m1-15-01-v2",
               "number": 1,
               "topic": "M5.2",
               "difficulty": 1,
@@ -5563,7 +5563,7 @@
               "explanation": "The centre angle on the same arc is twice the circumference angle."
             },
             {
-              "id": "esat-p-m1-15-03",
+              "id": "esat-p-m1-15-03-v2",
               "number": 3,
               "topic": "M5.18",
               "difficulty": 3,
@@ -5641,7 +5641,7 @@
               "explanation": "The length scale factor is 3/2. Square it for surface area and cube it for volume."
             },
             {
-              "id": "esat-p-m1-15-05",
+              "id": "esat-p-m1-15-05-v2",
               "number": 5,
               "topic": "M5.16",
               "difficulty": 4,
@@ -5884,7 +5884,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-m1-16-01",
+              "id": "esat-p-m1-16-01-v2",
               "number": 1,
               "topic": "M6.3",
               "difficulty": 1,
@@ -5919,7 +5919,7 @@
               "explanation": "Of the four original scores, two are below 10 and two are above it. The third of the five scores must be the new score, 10."
             },
             {
-              "id": "esat-p-m1-16-02",
+              "id": "esat-p-m1-16-02-v2",
               "number": 2,
               "topic": "M7.4",
               "difficulty": 3,
@@ -6272,7 +6272,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-phys-1-01",
+              "id": "esat-p-phys-1-01-v2",
               "number": 1,
               "topic": "P1.2",
               "difficulty": 1,
@@ -6377,7 +6377,7 @@
               "explanation": "A magnetically soft core is easily magnetised and demagnetised. A magnetically hard material retains its magnetism and could keep hold of the washers."
             },
             {
-              "id": "esat-p-phys-1-04",
+              "id": "esat-p-phys-1-04-v2",
               "number": 4,
               "topic": "P1.2",
               "difficulty": 3,
@@ -6587,7 +6587,7 @@
               "explanation": "The output current is 1800/120 = 15 A and the input current is 2400/480 = 5 A, so the ratio is 3 : 1. The 4 : 1 voltage ratio would give the current ratio only if no power were lost."
             },
             {
-              "id": "esat-p-phys-1-10",
+              "id": "esat-p-phys-1-10-v2",
               "number": 10,
               "topic": "P1.2",
               "difficulty": 4,
@@ -6742,7 +6742,7 @@
               "explanation": "The useful energy gained is mgh = 15 × 10 × 2 = 300 J. Divide by 5 s to get 60 W; 300 is the energy in joules, not the power."
             },
             {
-              "id": "esat-p-phys-2-04",
+              "id": "esat-p-phys-2-04-v2",
               "number": 4,
               "topic": "P3.1",
               "difficulty": 3,
@@ -6812,7 +6812,7 @@
               "explanation": "The stored energy scales as x², so at 4 cm it is 4 × 0.16 = 0.64 J. Subtract the energy already stored to get 0.48 J; 0.64 J is the total from the natural length."
             },
             {
-              "id": "esat-p-phys-2-06",
+              "id": "esat-p-phys-2-06-v2",
               "number": 6,
               "topic": "P3.4",
               "difficulty": 3,
@@ -7075,7 +7075,7 @@
               "explanation": "The same molecules now occupy a smaller volume, so their average separation decreases. Compression does not remove molecules from the sealed syringe."
             },
             {
-              "id": "esat-p-phys-3-03",
+              "id": "esat-p-phys-3-03-v2",
               "number": 3,
               "topic": "P5.4",
               "difficulty": 2,
@@ -7145,7 +7145,7 @@
               "explanation": "Warming decreases the density of the water here, so it rises. Cooler, denser water sinks elsewhere and flows back along the bottom; convection involves a bulk flow, not just energy passing between particles."
             },
             {
-              "id": "esat-p-phys-3-05",
+              "id": "esat-p-phys-3-05-v2",
               "number": 5,
               "topic": "P4.4",
               "difficulty": 3,
@@ -7250,7 +7250,7 @@
               "explanation": "Volume is proportional to column length, so at constant temperature 120 × 15 = P × 10. Thus P = 180 kPa; treating the pressure as directly proportional to length reverses the change."
             },
             {
-              "id": "esat-p-phys-3-08",
+              "id": "esat-p-phys-3-08-v2",
               "number": 8,
               "topic": "P4.4",
               "difficulty": 4,
@@ -7373,7 +7373,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-phys-4-01",
+              "id": "esat-p-phys-4-01-v2",
               "number": 1,
               "topic": "P6.1",
               "difficulty": 1,
@@ -7735,7 +7735,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-phys-5-01",
+              "id": "esat-p-phys-5-01-v2",
               "number": 1,
               "topic": "P3.1",
               "difficulty": 1,
@@ -7770,7 +7770,7 @@
               "explanation": "Equal changes of velocity in equal times give constant acceleration. The negative change fixes the acceleration’s direction but does not, by itself, tell us the initial velocity."
             },
             {
-              "id": "esat-p-phys-5-02",
+              "id": "esat-p-phys-5-02-v2",
               "number": 2,
               "topic": "P3.4",
               "difficulty": 1,
@@ -8130,7 +8130,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-phys-6-01",
+              "id": "esat-p-phys-6-01-v2",
               "number": 1,
               "topic": "P3.6",
               "difficulty": 1,
@@ -8165,7 +8165,7 @@
               "explanation": "Taking east as positive, the two momenta are +2 and −1 kg m/s. Their sum is +1 kg m/s."
             },
             {
-              "id": "esat-p-phys-6-02",
+              "id": "esat-p-phys-6-02-v2",
               "number": 2,
               "topic": "P3.7",
               "difficulty": 1,
@@ -8539,7 +8539,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-phys-7-01",
+              "id": "esat-p-phys-7-01-v2",
               "number": 1,
               "topic": "P1.2",
               "difficulty": 1,
@@ -8574,7 +8574,7 @@
               "explanation": "The slope of a V-against-I graph is V/I, the resistance. With V fixed, the greater resistance gives the smaller current."
             },
             {
-              "id": "esat-p-phys-7-02",
+              "id": "esat-p-phys-7-02-v2",
               "number": 2,
               "topic": "P1.2",
               "difficulty": 1,
@@ -8730,7 +8730,7 @@
               "explanation": "Total resistance rises, lowering current. Both the unchanged resistor’s voltage IR and the supply power VI decrease."
             },
             {
-              "id": "esat-p-phys-7-06",
+              "id": "esat-p-phys-7-06-v2",
               "number": 6,
               "topic": "P1.2",
               "difficulty": 3,
@@ -8800,7 +8800,7 @@
               "explanation": "The operating time is 100/60 hours, so the appliance uses 2 kWh. Multiply by 30p, not by a charge for 100 hours."
             },
             {
-              "id": "esat-p-phys-7-08",
+              "id": "esat-p-phys-7-08-v2",
               "number": 8,
               "topic": "P1.2",
               "difficulty": 4,
@@ -8843,7 +8843,7 @@
               "explanation": "In parallel the zone taking twice as much current has half the electrical resistance. In series the same current passes through each, so P = I²R gives a power ratio of 1 : 2."
             },
             {
-              "id": "esat-p-phys-7-09",
+              "id": "esat-p-phys-7-09-v2",
               "number": 9,
               "topic": "P1.2",
               "difficulty": 3,
@@ -9007,7 +9007,7 @@
               "explanation": "Divide speed by frequency to obtain wavelength. Inverting the ratio would give waves per metre."
             },
             {
-              "id": "esat-p-phys-8-03",
+              "id": "esat-p-phys-8-03-v2",
               "number": 3,
               "topic": "P5.4",
               "difficulty": 2,
@@ -9332,7 +9332,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-phys-9-01",
+              "id": "esat-p-phys-9-01-v2",
               "number": 1,
               "topic": "P3.1",
               "difficulty": 2,
@@ -9515,7 +9515,7 @@
               "explanation": "The first resultant is 18 N, so resistance is 14 N. With the weaker pull the resultant is −6 N and acceleration is −1 m/s²."
             },
             {
-              "id": "esat-p-phys-9-06",
+              "id": "esat-p-phys-9-06-v2",
               "number": 6,
               "topic": "P3.6",
               "difficulty": 3,
@@ -9671,7 +9671,7 @@
               "explanation": "Velocity crosses zero after 6 s. The areas have magnitudes 18 and 2; add for distance, subtract for displacement."
             },
             {
-              "id": "esat-p-phys-9-10",
+              "id": "esat-p-phys-9-10-v2",
               "number": 10,
               "topic": "P3.6",
               "difficulty": 5,
@@ -9726,7 +9726,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-phys-10-01",
+              "id": "esat-p-phys-10-01-v2",
               "number": 1,
               "topic": "P3.7",
               "difficulty": 2,
@@ -10127,7 +10127,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-phys-11-01",
+              "id": "esat-p-phys-11-01-v2",
               "number": 1,
               "topic": "P1.2",
               "difficulty": 2,
@@ -10380,7 +10380,7 @@
               "explanation": "Each voltage divided by its own current is 5 Ω. This comparison does not establish constant resistance outside the measured range."
             },
             {
-              "id": "esat-p-phys-11-08",
+              "id": "esat-p-phys-11-08-v2",
               "number": 8,
               "topic": "P1.2",
               "difficulty": 5,
@@ -10716,7 +10716,7 @@
               "explanation": "The pressure–volume product is 2400 kPa cm³. Divide it by the specified volume or pressure to find the matching quantity."
             },
             {
-              "id": "esat-p-phys-12-06",
+              "id": "esat-p-phys-12-06-v2",
               "number": 6,
               "topic": "P4.4",
               "difficulty": 4,
@@ -10922,7 +10922,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-phys-13-01",
+              "id": "esat-p-phys-13-01-v2",
               "number": 1,
               "topic": "P1.2",
               "difficulty": 1,
@@ -11245,7 +11245,7 @@
               "explanation": "Opening the live connection removes the high-potential supply from the appliance. An open neutral alone would leave it connected to live."
             },
             {
-              "id": "esat-p-phys-13-10",
+              "id": "esat-p-phys-13-10-v2",
               "number": 10,
               "topic": "P1.2",
               "difficulty": 5,
@@ -11304,7 +11304,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-phys-14-01",
+              "id": "esat-p-phys-14-01-v2",
               "number": 1,
               "topic": "P3.5",
               "difficulty": 2,
@@ -11448,7 +11448,7 @@
               "explanation": "Both the leftward pull and friction oppose the rightward motion. Subtract them before dividing by mass."
             },
             {
-              "id": "esat-p-phys-14-05",
+              "id": "esat-p-phys-14-05-v2",
               "number": 5,
               "topic": "P3.1",
               "difficulty": 4,
@@ -11687,7 +11687,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-phys-15-01",
+              "id": "esat-p-phys-15-01-v2",
               "number": 1,
               "topic": "P5.4",
               "difficulty": 2,
@@ -11722,7 +11722,7 @@
               "explanation": "The first piece occupies 6 cm³ and so the density is 3 g/cm³. The second occupies 15 cm³, giving 45 g."
             },
             {
-              "id": "esat-p-phys-15-02",
+              "id": "esat-p-phys-15-02-v2",
               "number": 2,
               "topic": "P4.4",
               "difficulty": 3,
@@ -12006,7 +12006,7 @@
               "explanation": "Pressure is proportional to density times depth at fixed g, so twice the density needs half the depth."
             },
             {
-              "id": "esat-p-phys-15-10",
+              "id": "esat-p-phys-15-10-v2",
               "number": 10,
               "topic": "P4.4",
               "difficulty": 5,
@@ -12818,7 +12818,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-chem-2-01",
+              "id": "esat-p-chem-2-01-v2",
               "number": 1,
               "topic": "C4.1",
               "difficulty": 2,
@@ -12888,7 +12888,7 @@
               "explanation": "A metal reacting with hydrochloric acid forms a chloride salt and hydrogen. Removing the leftover metal does not remove the dissolved zinc chloride."
             },
             {
-              "id": "esat-p-chem-2-03",
+              "id": "esat-p-chem-2-03-v2",
               "number": 3,
               "topic": "C4.8",
               "difficulty": 3,
@@ -13223,7 +13223,7 @@
               "explanation": "Solid is (s) and dissolved in water is (aq), so NaCl(s) → NaCl(aq) is the correct representation. The symbol (l) would mean liquid sodium chloride itself, not its solution."
             },
             {
-              "id": "esat-p-chem-3-02",
+              "id": "esat-p-chem-3-02-v2",
               "number": 2,
               "topic": "C11.1",
               "difficulty": 1,
@@ -13924,7 +13924,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-chem-5-01",
+              "id": "esat-p-chem-5-01-v2",
               "number": 1,
               "topic": "C1.4",
               "difficulty": 1,
@@ -13959,7 +13959,7 @@
               "explanation": "The last number in 2,8,4 is the number of electrons in the outer shell."
             },
             {
-              "id": "esat-p-chem-5-02",
+              "id": "esat-p-chem-5-02-v2",
               "number": 2,
               "topic": "C2.4",
               "difficulty": 1,
@@ -14308,7 +14308,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-chem-6-01",
+              "id": "esat-p-chem-6-01-v2",
               "number": 1,
               "topic": "C4.1",
               "difficulty": 1,
@@ -14343,7 +14343,7 @@
               "explanation": "The three oxygen atoms contribute 48. The two X atoms contribute 160 − 48 = 112, so each contributes 56."
             },
             {
-              "id": "esat-p-chem-6-02",
+              "id": "esat-p-chem-6-02-v2",
               "number": 2,
               "topic": "C4.3",
               "difficulty": 1,
@@ -14569,7 +14569,7 @@
               "explanation": "Percentage yield is actual divided by theoretical times 100. The 25% is the shortfall, not the yield."
             },
             {
-              "id": "esat-p-chem-6-08",
+              "id": "esat-p-chem-6-08-v2",
               "number": 8,
               "topic": "C4.10",
               "difficulty": 3,
@@ -14702,7 +14702,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-chem-7-01",
+              "id": "esat-p-chem-7-01-v2",
               "number": 1,
               "topic": "C10.4",
               "difficulty": 1,
@@ -14799,7 +14799,7 @@
               "explanation": "Zn forms Zn²⁺ by losing two electrons. Cu²⁺ gains electrons, so it is reduced rather than oxidised."
             },
             {
-              "id": "esat-p-chem-7-04",
+              "id": "esat-p-chem-7-04-v2",
               "number": 4,
               "topic": "C10.3",
               "difficulty": 3,
@@ -15082,7 +15082,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-chem-8-01",
+              "id": "esat-p-chem-8-01-v2",
               "number": 1,
               "topic": "C13.3",
               "difficulty": 1,
@@ -15468,7 +15468,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-chem-9-01",
+              "id": "esat-p-chem-9-01-v2",
               "number": 1,
               "topic": "C2.4",
               "difficulty": 2,
@@ -15499,7 +15499,7 @@
               "explanation": "After the last element of period 3, the next electron goes into a new outer shell. That puts X at the start of period 4, in group 1."
             },
             {
-              "id": "esat-p-chem-9-02",
+              "id": "esat-p-chem-9-02-v2",
               "number": 2,
               "topic": "C1.4",
               "difficulty": 3,
@@ -15848,7 +15848,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-chem-10-01",
+              "id": "esat-p-chem-10-01-v2",
               "number": 1,
               "topic": "C4.3",
               "difficulty": 2,
@@ -16255,7 +16255,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-chem-11-01",
+              "id": "esat-p-chem-11-01-v2",
               "number": 1,
               "topic": "C3.5",
               "difficulty": 2,
@@ -16383,7 +16383,7 @@
               "explanation": "Lower temperature favours the exothermic direction. Higher pressure favours fewer gas molecules, also on the product side."
             },
             {
-              "id": "esat-p-chem-11-05",
+              "id": "esat-p-chem-11-05-v2",
               "number": 5,
               "topic": "C10.3",
               "difficulty": 4,
@@ -16640,7 +16640,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-chem-12-01",
+              "id": "esat-p-chem-12-01-v2",
               "number": 1,
               "topic": "C16.1",
               "difficulty": 2,
@@ -17164,7 +17164,7 @@
               "explanation": "Ca²⁺ is reduced and Br⁻ is oxidised. Hydrogen and oxygen from water are not available in the melt."
             },
             {
-              "id": "esat-p-chem-13-05",
+              "id": "esat-p-chem-13-05-v2",
               "number": 5,
               "topic": "C4.6",
               "difficulty": 4,
@@ -17230,7 +17230,7 @@
               "explanation": "Adding water reduces hydrogen-ion concentration. An acid becomes less acidic, not alkaline."
             },
             {
-              "id": "esat-p-chem-13-07",
+              "id": "esat-p-chem-13-07-v2",
               "number": 7,
               "topic": "C12.5",
               "difficulty": 4,
@@ -17428,7 +17428,7 @@
               "explanation": "A filled outer shell makes argon unlikely to gain or lose electrons in ordinary reactions."
             },
             {
-              "id": "esat-p-chem-14-02",
+              "id": "esat-p-chem-14-02-v2",
               "number": 2,
               "topic": "C3.2",
               "difficulty": 3,
@@ -17537,7 +17537,7 @@
               "explanation": "The nitride ion gains three electrons and the magnesium ion loses two. Their proton counts stay fixed."
             },
             {
-              "id": "esat-p-chem-14-05",
+              "id": "esat-p-chem-14-05-v2",
               "number": 5,
               "topic": "C4.6",
               "difficulty": 4,
@@ -17769,7 +17769,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-chem-15-01",
+              "id": "esat-p-chem-15-01-v2",
               "number": 1,
               "topic": "C11.1",
               "difficulty": 2,
@@ -17800,7 +17800,7 @@
               "explanation": "The temperature of the solution falls in the insulated cup, so its thermal store decreases. The dissolving takes in energy and is endothermic."
             },
             {
-              "id": "esat-p-chem-15-02",
+              "id": "esat-p-chem-15-02-v2",
               "number": 2,
               "topic": "C10.5",
               "difficulty": 3,
@@ -17940,7 +17940,7 @@
               "explanation": "The solution absorbs 2400 J. This is four fifths of the total, so divide by 0.8."
             },
             {
-              "id": "esat-p-chem-15-06",
+              "id": "esat-p-chem-15-06-v2",
               "number": 6,
               "topic": "C10.4",
               "difficulty": 4,
@@ -18538,7 +18538,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-bio-1-01",
+              "id": "esat-p-bio-1-01-v2",
               "number": 1,
               "topic": "B1.1",
               "difficulty": 1,
@@ -18573,7 +18573,7 @@
               "explanation": "Mitochondria are the principal site of aerobic ATP production. Glycolysis occurs in the cytoplasm but generates much less ATP per glucose molecule."
             },
             {
-              "id": "esat-p-bio-1-02",
+              "id": "esat-p-bio-1-02-v2",
               "number": 2,
               "topic": "B1.1",
               "difficulty": 2,
@@ -18853,7 +18853,7 @@
               "explanation": "The fixed amount of product is made fastest at pH 5, taking half as long as at pH 7. The rate is therefore twice as high, not half as high; pH 5 is the best of the tested values."
             },
             {
-              "id": "esat-p-bio-1-10",
+              "id": "esat-p-bio-1-10-v2",
               "number": 10,
               "topic": "B3.1",
               "difficulty": 3,
@@ -19273,7 +19273,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-bio-3-01",
+              "id": "esat-p-bio-3-01-v2",
               "number": 1,
               "topic": "B9.2",
               "difficulty": 1,
@@ -19343,7 +19343,7 @@
               "explanation": "Endocrine glands release hormones into the bloodstream, which carries them to target organs. Nerve impulses are a different signalling mechanism."
             },
             {
-              "id": "esat-p-bio-3-03",
+              "id": "esat-p-bio-3-03-v2",
               "number": 3,
               "topic": "B9.2",
               "difficulty": 1,
@@ -19883,7 +19883,7 @@
               "explanation": "Combustion releases carbon from the wood as carbon dioxide. A seedling takes in carbon dioxide and fixes its carbon by photosynthesis; respiration releases carbon dioxide rather than taking it up."
             },
             {
-              "id": "esat-p-bio-4-08",
+              "id": "esat-p-bio-4-08-v2",
               "number": 8,
               "topic": "B10.3",
               "difficulty": 3,
@@ -20004,7 +20004,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-bio-5-01",
+              "id": "esat-p-bio-5-01-v2",
               "number": 1,
               "topic": "B1.2",
               "difficulty": 1,
@@ -20210,7 +20210,7 @@
               "explanation": "High heat can denature the enzyme. Once permanently altered, its active site does not recover simply because the sample cools."
             },
             {
-              "id": "esat-p-bio-5-07",
+              "id": "esat-p-bio-5-07-v2",
               "number": 7,
               "topic": "B3.1",
               "difficulty": 3,
@@ -20392,7 +20392,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-bio-6-01",
+              "id": "esat-p-bio-6-01-v2",
               "number": 1,
               "topic": "B4.2",
               "difficulty": 1,
@@ -20774,7 +20774,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-bio-7-01",
+              "id": "esat-p-bio-7-01-v2",
               "number": 1,
               "topic": "B9.2",
               "difficulty": 1,
@@ -20809,7 +20809,7 @@
               "explanation": "Arteries carry blood away from the heart, so P is the pulmonary artery. The pulmonary vein brings blood from the lungs back to the left side."
             },
             {
-              "id": "esat-p-bio-7-02",
+              "id": "esat-p-bio-7-02-v2",
               "number": 2,
               "topic": "B9.2",
               "difficulty": 1,
@@ -20875,7 +20875,7 @@
               "explanation": "Thin walls shorten the diffusion path. Thicker walls or reduced exchange area would slow diffusion."
             },
             {
-              "id": "esat-p-bio-7-04",
+              "id": "esat-p-bio-7-04-v2",
               "number": 4,
               "topic": "B9.2",
               "difficulty": 3,
@@ -21154,7 +21154,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-bio-8-01",
+              "id": "esat-p-bio-8-01-v2",
               "number": 1,
               "topic": "B11.2",
               "difficulty": 1,
@@ -21255,7 +21255,7 @@
               "explanation": "Loss of turgor causes closure. Wider opening generally requires the guard cells to become more turgid, not flaccid."
             },
             {
-              "id": "esat-p-bio-8-04",
+              "id": "esat-p-bio-8-04-v2",
               "number": 4,
               "topic": "B10.3",
               "difficulty": 3,
@@ -21535,7 +21535,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-bio-9-01",
+              "id": "esat-p-bio-9-01-v2",
               "number": 1,
               "topic": "B1.1",
               "difficulty": 2,
@@ -21846,7 +21846,7 @@
               "explanation": "At pH 6 the rates are 2 and 3 units/s, so B is faster. At pH 7 the rates are 3 and 1.5 units/s, so A is faster."
             },
             {
-              "id": "esat-p-bio-9-10",
+              "id": "esat-p-bio-9-10-v2",
               "number": 10,
               "topic": "B3.1",
               "difficulty": 5,
@@ -22007,7 +22007,7 @@
               "explanation": "The remaining 36 pairs are A–T, and every such pair contributes one thymine. There are 120 bases in total, but not two thymine per pair."
             },
             {
-              "id": "esat-p-bio-10-04",
+              "id": "esat-p-bio-10-04-v2",
               "number": 4,
               "topic": "B4.3",
               "difficulty": 4,
@@ -22661,7 +22661,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-bio-12-01",
+              "id": "esat-p-bio-12-01-v2",
               "number": 1,
               "topic": "B11.2",
               "difficulty": 2,
@@ -22723,7 +22723,7 @@
               "explanation": "Covering blocks light and reduces sugar production. Respiration can still use carbohydrate, so stores can decline."
             },
             {
-              "id": "esat-p-bio-12-03",
+              "id": "esat-p-bio-12-03-v2",
               "number": 3,
               "topic": "B10.3",
               "difficulty": 3,
@@ -22906,7 +22906,7 @@
               "explanation": "Organic carbon is oxidised in respiration and released as CO₂. Photosynthesis fixes carbon rather than explaining this release."
             },
             {
-              "id": "esat-p-bio-12-08",
+              "id": "esat-p-bio-12-08-v2",
               "number": 8,
               "topic": "B10.3",
               "difficulty": 5,
@@ -23042,7 +23042,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-bio-13-01",
+              "id": "esat-p-bio-13-01-v2",
               "number": 1,
               "topic": "B1.1",
               "difficulty": 2,
@@ -23422,7 +23422,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-bio-14-01",
+              "id": "esat-p-bio-14-01-v2",
               "number": 1,
               "topic": "B4.2",
               "difficulty": 2,
@@ -23453,7 +23453,7 @@
               "explanation": "Different DNA versions at the same gene locus are alleles. The common position does not make their base sequences identical."
             },
             {
-              "id": "esat-p-bio-14-02",
+              "id": "esat-p-bio-14-02-v2",
               "number": 2,
               "topic": "B4.3",
               "difficulty": 3,
@@ -23784,7 +23784,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-bio-15-01",
+              "id": "esat-p-bio-15-01-v2",
               "number": 1,
               "topic": "B9.2",
               "difficulty": 2,
@@ -23877,7 +23877,7 @@
               "explanation": "Evaporation removes energy from the skin. Producing sweat without evaporation gives less of that cooling effect."
             },
             {
-              "id": "esat-p-bio-15-04",
+              "id": "esat-p-bio-15-04-v2",
               "number": 4,
               "topic": "B9.2",
               "difficulty": 4,
@@ -24145,7 +24145,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-bio-16-01",
+              "id": "esat-p-bio-16-01-v2",
               "number": 1,
               "topic": "B11.1",
               "difficulty": 2,
@@ -24901,7 +24901,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-m2-2-01",
+              "id": "esat-p-m2-2-01-v2",
               "number": 1,
               "topic": "MM3.1",
               "difficulty": 3,
@@ -25146,7 +25146,7 @@
               "explanation": "Use (x + y)² = (y − x)² + 4xy, giving 1 + 48 = 49. The sign of x + y can differ between solutions, but the square is fixed."
             },
             {
-              "id": "esat-p-m2-2-08",
+              "id": "esat-p-m2-2-08-v2",
               "number": 8,
               "topic": "MM3.3",
               "difficulty": 4,
@@ -25637,7 +25637,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-m2-4-01",
+              "id": "esat-p-m2-4-01-v2",
               "number": 1,
               "topic": "MM6.3",
               "difficulty": 3,
@@ -26343,7 +26343,7 @@
               "explanation": "Composition multiplies the inner constant by 3, then adds another k. The total constant is 4k, not k²."
             },
             {
-              "id": "esat-p-m2-5-10",
+              "id": "esat-p-m2-5-10-v2",
               "number": 10,
               "topic": "MM1.5",
               "difficulty": 4,
@@ -26790,7 +26790,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-m2-7-01",
+              "id": "esat-p-m2-7-01-v2",
               "number": 1,
               "topic": "MM4.3",
               "difficulty": 1,
@@ -27094,7 +27094,7 @@
               "explanation": "Cosine is positive and equals 4/5. Tangent is −3/4 and cos(2θ) = cos²θ − sin²θ = 7/25, which is positive."
             },
             {
-              "id": "esat-p-m2-7-09",
+              "id": "esat-p-m2-7-09-v2",
               "number": 9,
               "topic": "MM4.6",
               "difficulty": 3,
@@ -27181,7 +27181,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-m2-8-01",
+              "id": "esat-p-m2-8-01-v2",
               "number": 1,
               "topic": "MM7.2",
               "difficulty": 2,
@@ -27580,7 +27580,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-m2-9-01",
+              "id": "esat-p-m2-9-01-v2",
               "number": 1,
               "topic": "MM1.1",
               "difficulty": 1,
@@ -27968,7 +27968,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-m2-10-01",
+              "id": "esat-p-m2-10-01-v2",
               "number": 1,
               "topic": "MM2.2",
               "difficulty": 2,
@@ -28186,7 +28186,7 @@
               "explanation": "The later block adds 32, or 8 per term across four gaps, so d = 2. Then 4a + 12 = 10, and terms 3–10 sum to eight times their mean 10.5."
             },
             {
-              "id": "esat-p-m2-10-07",
+              "id": "esat-p-m2-10-07-v2",
               "number": 7,
               "topic": "MM2.1",
               "difficulty": 4,
@@ -28367,7 +28367,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-m2-11-01",
+              "id": "esat-p-m2-11-01-v2",
               "number": 1,
               "topic": "MM4.3",
               "difficulty": 1,
@@ -28511,7 +28511,7 @@
               "explanation": "Cosine is −3/5 in quadrant II. Both sin θ/cos θ and 2sin θ cos θ are negative, giving the stated values."
             },
             {
-              "id": "esat-p-m2-11-05",
+              "id": "esat-p-m2-11-05-v2",
               "number": 5,
               "topic": "MM4.6",
               "difficulty": 4,
@@ -28771,7 +28771,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-m2-12-01",
+              "id": "esat-p-m2-12-01-v2",
               "number": 1,
               "topic": "MM7.2",
               "difficulty": 1,
@@ -28806,7 +28806,7 @@
               "explanation": "The added 5 cancels in the difference. An antiderivative of x³ is x⁴/4 plus a constant, and subtracting its value at zero removes the constant."
             },
             {
-              "id": "esat-p-m2-12-02",
+              "id": "esat-p-m2-12-02-v2",
               "number": 2,
               "topic": "MM6.2",
               "difficulty": 2,
@@ -28911,7 +28911,7 @@
               "explanation": "The integral equals (2a)³ − a³ = 7a³. Divide before taking the cube root and use both limits."
             },
             {
-              "id": "esat-p-m2-12-05",
+              "id": "esat-p-m2-12-05-v2",
               "number": 5,
               "topic": "MM6.3",
               "difficulty": 4,
@@ -29163,7 +29163,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-m2-13-01",
+              "id": "esat-p-m2-13-01-v2",
               "number": 1,
               "topic": "MM1.1",
               "difficulty": 1,
@@ -29552,7 +29552,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-m2-14-01",
+              "id": "esat-p-m2-14-01-v2",
               "number": 1,
               "topic": "MM2.1",
               "difficulty": 1,
@@ -29936,7 +29936,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-m2-15-01",
+              "id": "esat-p-m2-15-01-v2",
               "number": 1,
               "topic": "MM6.2",
               "difficulty": 1,
@@ -29967,7 +29967,7 @@
               "explanation": "The derivative is 14x, so replacing x by −x reverses the sign of the gradient. Equal heights do not imply equal gradients."
             },
             {
-              "id": "esat-p-m2-15-02",
+              "id": "esat-p-m2-15-02-v2",
               "number": 2,
               "topic": "MM7.2",
               "difficulty": 2,
@@ -30328,7 +30328,7 @@
           "question_count": 10,
           "questions": [
             {
-              "id": "esat-p-m2-16-01",
+              "id": "esat-p-m2-16-01-v2",
               "number": 1,
               "topic": "MM3.2",
               "difficulty": 1,
@@ -30456,7 +30456,7 @@
               "explanation": "Reversing limits reverses the sign of the definite integral, not its absolute magnitude."
             },
             {
-              "id": "esat-p-m2-16-05",
+              "id": "esat-p-m2-16-05-v2",
               "number": 5,
               "topic": "MM3.3",
               "difficulty": 4,
@@ -30577,7 +30577,7 @@
               "explanation": "The maximum occurs where the function’s input 3 − x equals −3. Its output is transformed to 2×7 − 4 = 10."
             },
             {
-              "id": "esat-p-m2-16-08",
+              "id": "esat-p-m2-16-08-v2",
               "number": 8,
               "topic": "MM7.2",
               "difficulty": 4,
