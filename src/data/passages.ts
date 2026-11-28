@@ -1,5 +1,5 @@
 import { LnatPassage } from '../types';
-import { EXTRA_PASSAGES } from './passagesExtra';
+import { EXTRA_PASSAGES, FULL_MOCK_PASSAGES } from './passagesExtra';
 
 const CORE_PASSAGES: LnatPassage[] = [
   {
@@ -67,28 +67,28 @@ const CORE_PASSAGES: LnatPassage[] = [
         options: [
           {
             letter: 'A',
-            text: 'To suggest that software developers deliberately manipulate crime statistics for commercial gain.',
-            explanation: 'Unsupported: the author attributes bias to historical enforcement data, not deliberate fraud by developers.'
+            text: 'To suggest that the training data blur the distinction between different categories of criminal offences.',
+            explanation: 'The distortion concerns whose behaviour is captured, not how offences are named.'
           },
           {
             letter: 'B',
-            text: 'To emphasise that past policing disparities are repackaged so they appear objective and mathematically neutral.',
-            explanation: 'Matches the sentence directly: converting a "contestable pattern of enforcement into a neutral-looking decimal".'
+            text: 'To show how existing policing disparities are made to look objective.',
+            explanation: 'A mathematical score gives the appearance of neutrality to patterns inherited from policing.'
           },
           {
             letter: 'C',
-            text: 'To argue that algorithms successfully cleanse raw arrest data of racial and geographic prejudice.',
-            explanation: 'Reverses the meaning of the metaphor—the author says the algorithm "does not eliminate human bias".'
+            text: 'To suggest that earlier discrepancies in arrests can be filtered out by converting records to probabilities.',
+            explanation: 'The scoring process obscures inherited disparities rather than removing them.'
           },
           {
             letter: 'D',
-            text: 'To show that recidivism scores are legally inadmissible under existing rules of criminal evidence.',
-            explanation: 'Outside the text: admissibility under evidence law is never discussed.'
+            text: 'To show that an apparently impartial score can lead police departments to abandon their past patrol practices.',
+            explanation: 'The paragraph explains what the model inherits from previous policing, not how departments respond to it.'
           },
           {
             letter: 'E',
-            text: 'To indicate that police officers alter their patrol routes in response to sentencing algorithms.',
-            explanation: 'Reverses the causal chain described in paragraph 2 (past policing choices feed into the data, not vice versa).'
+            text: 'To argue that predictions replace a defendant’s personal record with information about sentencing decisions in similar cases.',
+            explanation: 'The author’s point is that supposedly neutral predictions can reproduce unequal patterns already in the data.'
           }
         ]
       },
@@ -197,28 +197,28 @@ const CORE_PASSAGES: LnatPassage[] = [
         options: [
           {
             letter: 'A',
-            text: 'Older and wealthier citizens in Britain currently favour compulsory voting.',
-            explanation: 'Not assumed or implied; paragraph 1 only notes they currently turn out reliably.'
+            text: 'Older and wealthier citizens’ influence depends chiefly on political donations rather than on votes.',
+            explanation: 'That would make it harder to conclude that raising turnout would shift attention.'
           },
           {
             letter: 'B',
-            text: 'Australian voters are significantly better informed about fiscal policy than British voters.',
-            explanation: 'Not part of the proponents’ case in paragraph 1 (informedness is raised by the author as a rebuttal in paragraph 2).'
+            text: 'Compulsory voting can be justified in Britain on the same grounds as a duty to sit on a jury.',
+            explanation: 'The argument here is about representation, not a comparison of civic duties.'
           },
           {
             letter: 'C',
-            text: 'Turnout below sixty per cent renders a British government legally invalid.',
-            explanation: 'Too extreme: legal invalidity is never claimed.'
+            text: 'Most citizens who abstain would choose to submit a valid ballot without any threat of a fine.',
+            explanation: 'This would undermine the apparent need for a legal requirement rather than explain its effect on parties.'
           },
           {
             letter: 'D',
-            text: 'Fines for non-voting must be severe in order to achieve ninety per cent turnout.',
-            explanation: 'Contradicts paragraph 1, which explicitly mentions "a modest fine".'
+            text: 'A high turnout is enough to establish the legal validity of a British election.',
+            explanation: 'The desired change is in whose interests parties represent, not in the legal standing of an election.'
           },
           {
             letter: 'E',
-            text: 'Compelling non-voters to cast ballots will cause political parties to represent their interests more faithfully.',
-            explanation: 'Directly connects the premise (parties can no longer ignore non-voters) to the conclusion (a more representative parliament).'
+            text: 'Parties will respond to newly participating voters by better representing their interests.',
+            explanation: 'The argument depends on increased participation changing what parties do.'
           }
         ]
       },
@@ -441,28 +441,28 @@ const CORE_PASSAGES: LnatPassage[] = [
         options: [
           {
             letter: 'A',
-            text: 'To ground the principle of rehabilitation in an established legal tradition rather than treating it as novel.',
-            explanation: 'Directly matches "a principle the common law has long recognised in statutes governing spent convictions".'
+            text: 'To show that the principle of rehabilitation already has a legal precedent.',
+            explanation: 'The example shows that limiting the enduring consequences of a conviction is not a new principle.'
           },
           {
             letter: 'B',
-            text: 'To argue that delisting should be restricted exclusively to former criminal offenders.',
-            explanation: 'Too narrow: spent convictions are cited as an example of a broader principle.'
+            text: 'To identify the limits the author thinks should govern which kinds of online records can be delisted.',
+            explanation: 'The analogy supports the principle, not restricting delisting to conviction records.'
           },
           {
             letter: 'C',
-            text: 'To demonstrate that common-law jurisdictions have solved the problem of online search archives.',
-            explanation: 'Contradicts the passage’s premise that a durable settlement has not yet been achieved.'
+            text: 'To explain how another area of law already prevents older newspaper articles from appearing in internet searches.',
+            explanation: 'Spent-conviction rules illustrate rehabilitation, not a working model for internet search.'
           },
           {
             letter: 'D',
-            text: 'To criticise Silicon Valley companies for ignoring criminal record legislation.',
-            explanation: 'Misreads the purpose of the reference.'
+            text: 'To suggest that search companies are applying criminal record legislation to the wrong classes of applicants.',
+            explanation: 'The problem with companies is how decisions are made, not their application of spent-conviction law.'
           },
           {
             letter: 'E',
-            text: 'To contrast European privacy law unfavourably with British criminal procedure.',
-            explanation: 'The reference supports the goal of rehabilitation shared by the European model, rather than attacking it.'
+            text: 'To distinguish the value of a fair hearing in privacy disputes from the fairness of earlier criminal proceedings.',
+            explanation: 'The historical example concerns the effects of a conviction over time, not whether the original hearing was fair.'
           }
         ]
       }
@@ -571,28 +571,28 @@ const CORE_PASSAGES: LnatPassage[] = [
         options: [
           {
             letter: 'A',
-            text: 'Emerging economies view unilateral carbon tariffs as out of step with earlier UN climate equity commitments.',
-            explanation: 'Directly supported by the contrast between "common but differentiated responsibilities" and border trade penalties.'
+            text: 'Emerging economies see unilateral carbon tariffs as inconsistent with earlier climate equity commitments.',
+            explanation: 'They read the tariffs against the earlier recognition that obligations and historical responsibility differ.'
           },
           {
             letter: 'B',
-            text: 'India and South Africa have higher per-capita emissions than most European states.',
-            explanation: 'Reverses the comparison in paragraph 2 (2 tonnes vs ten times as much).'
+            text: 'India and South Africa object mainly because the tariffs are calculated using national emissions rather than individual products.',
+            explanation: 'The paragraph describes a broader dispute about responsibility, not this objection to the calculation.'
           },
           {
             letter: 'C',
-            text: 'The United Nations explicitly forbids all member states from taxing imported goods.',
-            explanation: 'Too extreme and unsupported.'
+            text: 'Emerging economies would accept a uniform tariff if the United Nations rather than Europe collected it.',
+            explanation: 'The passage gives no reason to expect agreement simply because the collector changes.'
           },
           {
             letter: 'D',
-            text: 'Emerging economies oppose decarbonisation even when provided with financial and technological aid.',
-            explanation: 'Contradicts paragraph 2, which states they lack the capital to decarbonise overnight.'
+            text: 'Emerging economies consider assistance unnecessary as long as Europeans reduce their own industrial emissions first.',
+            explanation: 'The paragraph does not treat support as unnecessary; it highlights an obligation to provide it.'
           },
           {
             letter: 'E',
-            text: 'Historical coal combustion accounts for all current global warming.',
-            explanation: 'Overstates the historical point made in paragraph 2.'
+            text: 'Earlier climate negotiations settled how much each country must pay when its exports generate carbon emissions.',
+            explanation: 'The principle of differentiated responsibility did not settle the operation or legitimacy of these tariffs.'
           }
         ]
       }
@@ -663,28 +663,28 @@ const CORE_PASSAGES: LnatPassage[] = [
         options: [
           {
             letter: 'A',
-            text: 'By denying that university endowments have any ethical or political implications.',
-            explanation: 'Contradicts "There is force in this critique".'
+            text: 'By treating investment choices as the trustees’ private business rather than a question of institutional ethics.',
+            explanation: 'The author accepts that these choices raise ethical questions.'
           },
           {
             letter: 'B',
-            text: 'By arguing that universities should divest from all private industries immediately.',
-            explanation: 'Not proposed in the passage.'
+            text: 'By accepting that a university’s investments amount to a political position it should publicly announce.',
+            explanation: 'The author distinguishes financial decisions from statements on outside events.'
           },
           {
             letter: 'C',
-            text: 'By claiming that donors have no influence over campus life.',
-            explanation: 'Not stated; the author acknowledges the critique has force.'
+            text: 'By giving investment policy priority over public statements whenever both options are available.',
+            explanation: 'The point is that they serve different purposes, not that they are interchangeable options.'
           },
           {
             letter: 'D',
-            text: 'By conceding the need for ethical financial governance while denying that it justifies routine institutional statements.',
-            explanation: 'Exact match for the concession + distinction at the end of paragraph 3.'
+            text: 'By distinguishing ethical management of investments from issuing statements about world events.',
+            explanation: 'The objection matters for institutional conduct but does not establish a reason to issue statements.'
           },
           {
             letter: 'E',
-            text: 'By noting that the 1967 Kalven Report already banned defence partnerships.',
-            explanation: 'Unsupported: the Kalven Report is not said to ban defence partnerships.'
+            text: 'By making an exception for disputes in which the university’s investments give it a direct stake.',
+            explanation: 'The author does not offer that exception in response to the objection.'
           }
         ]
       },
@@ -701,28 +701,28 @@ const CORE_PASSAGES: LnatPassage[] = [
         options: [
           {
             letter: 'A',
-            text: 'Once an institution comments on some global crises, its silence on others appears to rank which tragedies deserve official concern.',
-            explanation: 'Directly matches paragraph 4’s explanation.'
+            text: 'Commenting on some crises makes silence on others look like a judgement about their importance.',
+            explanation: 'Once speaking is an option, omissions can be read as deliberate choices.'
           },
           {
             letter: 'B',
-            text: 'Students are unable to agree on which international conflicts should be taught in history courses.',
-            explanation: 'Curriculum disputes are not mentioned.'
+            text: 'Universities cannot speak on global crises until students and staff reach agreement on their significance.',
+            explanation: 'The problem is how selective statements are read, not how agreement is secured.'
           },
           {
             letter: 'C',
-            text: 'Universities spend more money on public relations than on undergraduate teaching.',
-            explanation: 'Spending allocations are never discussed.'
+            text: 'A university that comments on events abroad will be expected to defend its stance in its teaching.',
+            explanation: 'The dilemma concerns which events to address, not what to teach.'
           },
           {
             letter: 'D',
-            text: 'Media outlets misquote university statements to manufacture campus controversies.',
-            explanation: 'Media misquotation is not mentioned.'
+            text: 'University leaders must reach the same moral judgement about each crisis on which they speak.',
+            explanation: 'The difficulty arises before leaders decide what to say: they must decide whether to speak.'
           },
           {
             letter: 'E',
-            text: 'Scholars cannot evaluate moral arguments unless they agree on the same political principles.',
-            explanation: 'Contradicts the closing line, which celebrates testing moral arguments through disagreement.'
+            text: 'Universities must weigh the risk to their reputation against their obligation to comment on events abroad.',
+            explanation: 'The author does not assume an obligation to comment.'
           }
         ]
       },
@@ -793,28 +793,28 @@ const CORE_PASSAGES: LnatPassage[] = [
         options: [
           {
             letter: 'A',
-            text: 'Because somatic gene therapy also affects future generations without obtaining their consent.',
-            explanation: 'Contradicts paragraph 1, which distinguishes somatic therapy as not affecting descendants.'
+            text: 'Because it applies to decisions that affect descendants but overlooks the difference between reversible and irreversible choices.',
+            explanation: 'The examples already include ordinary choices with irreversible consequences.'
           },
           {
             letter: 'B',
-            text: 'Because most parents would refuse germline editing even if it were proved completely safe.',
-            explanation: 'Parental demand is not discussed in paragraph 2.'
+            text: 'Because it treats prevention and enhancement alike although parents may have different motives for pursuing them.',
+            explanation: 'The passage tests lack of consent as an objection in itself, rather than examining parents’ motives.'
           },
           {
             letter: 'C',
-            text: 'Because lack of future-child consent would condemn ordinary parenting choices while failing to explain why preventing fatal disease is wrong.',
-            explanation: 'Captures both halves of "too much" (ordinary parenting) and "too little" (sparing fatal suffering).'
+            text: 'Because it condemns ordinary parenting choices but cannot explain why preventing fatal disease wrongs the child.',
+            explanation: 'The first consequence is too sweeping; the second exposes what the objection fails to establish.'
           },
           {
             letter: 'D',
-            text: 'Because international law already grants parents legal authority to consent to embryo editing.',
-            explanation: 'Legal authority is not mentioned in paragraph 2.'
+            text: 'Because it assumes parents have less authority over treatment decisions than over decisions about where to live.',
+            explanation: 'The comparison does not rank parental authority; it shows that consent is absent in both cases.'
           },
           {
             letter: 'E',
-            text: 'Because philosophers disagree about whether Tay-Sachs disease causes genuine suffering.',
-            explanation: 'Contradicts paragraph 2, which treats Tay-Sachs as an uncontroversial example of devastating suffering.'
+            text: 'Because it demands consent from the future child without considering whether someone else could provide it instead.',
+            explanation: 'Whether somebody could give consent on the child’s behalf is not part of the argument.'
           }
         ]
       },
@@ -936,6 +936,8 @@ const CORE_PASSAGES: LnatPassage[] = [
   }
 ];
 
-export const PASSAGES: LnatPassage[] = [...CORE_PASSAGES, ...EXTRA_PASSAGES];
+export { FULL_MOCK_PASSAGES };
+
+export const PASSAGES: LnatPassage[] = [...CORE_PASSAGES, ...EXTRA_PASSAGES, ...FULL_MOCK_PASSAGES];
 
 export const ALL_QUESTIONS = PASSAGES.flatMap((p) => p.questions);

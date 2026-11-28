@@ -8,7 +8,7 @@ import {
   SectionAAttempt,
   SectionBEssayRecord,
 } from './types';
-import { ALL_QUESTIONS, PASSAGES } from './data/passages';
+import { ALL_QUESTIONS, FULL_MOCK_PASSAGES, PASSAGES } from './data/passages';
 import { TEST_BY_ID, TestId } from './data/allTests';
 import { fetchAttempts, fetchEssays, saveAttempt, saveEssay } from './lib/api';
 import {
@@ -67,6 +67,8 @@ function getInitialTheme(): 'light' | 'dark' {
 }
 
 type SubTab = 'practice' | 'resources' | 'progress';
+
+const FULL_MOCK_LABEL = 'Full LNAT Mock: Mixed Genres (42 Qs)';
 
 export const App: React.FC = () => {
   const [onWelcome, setOnWelcome] = useState(true);
@@ -162,9 +164,9 @@ export const App: React.FC = () => {
   const handleStartFullMock = () => {
     handleStartExam({
       mode: 'mock',
-      label: 'Full 12-Passage LNAT Mock (42 Qs)',
+      label: FULL_MOCK_LABEL,
       timeLimitSeconds: 95 * 60,
-      passageIds: PASSAGES.map((p) => p.id),
+      passageIds: FULL_MOCK_PASSAGES.map((p) => p.id),
     });
   };
 
@@ -407,7 +409,13 @@ export const App: React.FC = () => {
                   const answeredIds = new Set(Object.keys(attempt.answers));
                   const qs = ALL_QUESTIONS.filter((q) => answeredIds.has(q.id));
                   setLastAttempt(attempt);
-                  setLastQuestions(qs.length > 0 ? qs : ALL_QUESTIONS.slice(0, attempt.total));
+                  setLastQuestions(
+                    qs.length > 0
+                      ? qs
+                      : attempt.label === FULL_MOCK_LABEL
+                        ? FULL_MOCK_PASSAGES.flatMap((p) => p.questions)
+                        : ALL_QUESTIONS.slice(0, attempt.total)
+                  );
                 }}
                 onNavigate={(view) => {
                   if (view === 'essay') {
