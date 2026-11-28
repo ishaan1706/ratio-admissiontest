@@ -4978,7 +4978,7 @@
               },
               "questions": [
                 {
-                  "stem": "What fraction of the day’s rooftop generation occurs between 12:00 and 16:00?",
+                  "stem": "What fraction of the rooftop generation recorded from 08:00 to midnight occurs between 12:00 and 16:00?",
                   "options": [
                     "1/2",
                     "11/18",
