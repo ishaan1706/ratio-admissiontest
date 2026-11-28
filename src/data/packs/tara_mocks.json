@@ -408,7 +408,7 @@
             {
               "id": "tara-01-ps-06",
               "type": "relevant-selection",
-              "stem": "A chart gives the number of cargo-bike journeys for March – June. March: 120 booked, 90 completed. April: 130 booked, 104 completed. May: 160 booked, 112 completed. June: 150 booked, 105 completed. Across which consecutive pair of months were there the fewest booked journeys that did not finish?",
+              "stem": "The table gives the number of cargo-bike journeys for March – June.\nMonth | Booked | Completed\nMarch | 120 | 90\nApril | 130 | 104\nMay | 160 | 112\nJune | 150 | 105\nAcross which consecutive pair of months were there the fewest booked journeys that did not finish?",
               "options": {
                 "A": "March and May",
                 "B": "April and June",
@@ -1082,7 +1082,7 @@
             {
               "id": "tara-02-ps-06",
               "type": "relevant-selection",
-              "stem": "A solar dashboard gives generation and on-site use, in units: Mon (40, 24), Tue (54, 42), Wed (45, 26), Thu (35, 30), Fri (62, 47). Unused generation is exported. Which day exported the greatest number of units?",
+              "stem": "A solar dashboard gives generation and on-site use, in units.\nDay | Generation | On-site use\nMon | 40 | 24\nTue | 54 | 42\nWed | 45 | 26\nThu | 35 | 30\nFri | 62 | 47\nUnused generation is exported. Which day exported the greatest number of units?",
               "options": {
                 "A": "Friday",
                 "B": "Tuesday",
@@ -1784,7 +1784,7 @@
             {
               "id": "tara-03-ps-08",
               "type": "identifying-similarity",
-              "stem": "A chart shows the cumulative number of people through a gate at 09:00, 09:15, 09:30 and 09:45: 0, 12, 30, 38. Which chart has the same ranking of arrivals in the three intervals, from busiest to quietest, with no ties?",
+              "stem": "The table shows the cumulative number of people through a gate.\nTime | Cumulative arrivals\n09:00 | 0\n09:15 | 12\n09:30 | 30\n09:45 | 38\nWhich chart has the same ranking of arrivals in the three intervals, from busiest to quietest, with no ties?",
               "options": {
                 "A": "0, 6, 20, 29",
                 "B": "0, 9, 18, 27",

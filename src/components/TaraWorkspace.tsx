@@ -15,6 +15,7 @@ import { GenericAttempt, OfficialResourcesPanel } from './TestWorkspace';
 import { PearsonVueShell } from './OfficialExamChrome';
 import { TARA_DRILLS_DATA, TaraPracticeSuite } from './TaraPracticeSuite';
 import { TaraEssayStudio } from './TaraEssayStudio';
+import { TaraStem } from './TaraStem';
 
 interface TaraMcqQuestion {
   id: string;
@@ -517,9 +518,7 @@ export const TaraWorkspace: React.FC<TaraWorkspaceProps> = ({
                       {isRight ? 'Correct' : `Picked ${picked ?? '—'} · Correct ${q.answer}`}
                     </span>
                   </div>
-                  <div className="text-sm text-[var(--ink)] whitespace-pre-line leading-relaxed">
-                    {q.stem}
-                  </div>
+                  <TaraStem stem={q.stem} className="text-sm text-[var(--ink)] whitespace-pre-line leading-relaxed" />
                   <div className="text-xs text-[var(--accent)]">
                     Answer {q.answer}: {q.options[q.answer]}
                   </div>
@@ -567,9 +566,7 @@ export const TaraWorkspace: React.FC<TaraWorkspaceProps> = ({
         }
       >
         <div className="max-w-3xl mx-auto px-6 py-8 space-y-6">
-          <div className="text-[15px] text-[#111827] whitespace-pre-line leading-relaxed font-serif-passage">
-            {q.stem}
-          </div>
+          <TaraStem stem={q.stem} exam className="text-[15px] text-[#111827] whitespace-pre-line leading-relaxed font-serif-passage" />
 
           <div className="space-y-2.5 pt-2">
             {optionKeys.map((key) => {
