@@ -632,7 +632,17 @@ export const SatQuestionBankView: React.FC<{
           {/* Stimulus: passage, paired texts, notes, table */}
           {q.passage && (
             <div className="rounded-xl border border-[var(--rule)] bg-[var(--bg)] p-4 text-sm text-[var(--text)] leading-relaxed whitespace-pre-line">
-              {q.passage}
+              {q.underlined && q.passage.includes(q.underlined) ? (
+                <>
+                  {q.passage.slice(0, q.passage.indexOf(q.underlined))}
+                  <span className="underline decoration-[var(--accent)] decoration-2 underline-offset-4">
+                    {q.underlined}
+                  </span>
+                  {q.passage.slice(q.passage.indexOf(q.underlined) + q.underlined.length)}
+                </>
+              ) : (
+                q.passage
+              )}
             </div>
           )}
 
@@ -697,7 +707,7 @@ export const SatQuestionBankView: React.FC<{
           )}
 
           {/* Question Stem */}
-          <div className="text-base font-medium text-[var(--ink)] leading-relaxed">{q.question}</div>
+          <div className="text-base font-medium text-[var(--ink)] leading-relaxed whitespace-pre-line">{q.question}</div>
 
           {/* Options or SPR Input */}
           {q.type === 'mcq' && q.options ? (
