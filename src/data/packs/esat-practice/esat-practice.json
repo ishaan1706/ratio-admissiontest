@@ -771,35 +771,35 @@
               "number": 1,
               "topic": "M5.2",
               "difficulty": 1,
-              "stem": "Two angles of a quadrilateral are 100° and 116°. The other two angles are equal.\n\nWhat is the size of each of those equal angles?",
+              "stem": "A hinged arrow starts pointing in a fixed direction. It turns clockwise through 100° and then anticlockwise through 35°. Which final turn brings it back to its starting direction using the smaller angle?",
               "options": [
                 {
                   "label": "A",
-                  "text": "72°"
+                  "text": "65° anticlockwise"
                 },
                 {
                   "label": "B",
-                  "text": "36°"
+                  "text": "65° clockwise"
                 },
                 {
                   "label": "C",
-                  "text": "62°"
+                  "text": "35° clockwise"
                 },
                 {
                   "label": "D",
-                  "text": "82°"
+                  "text": "100° anticlockwise"
                 },
                 {
                   "label": "E",
-                  "text": "108°"
+                  "text": "135° clockwise"
                 },
                 {
                   "label": "F",
-                  "text": "144°"
+                  "text": "135° anticlockwise"
                 }
               ],
               "answer": "A",
-              "explanation": "The angles left over total 360° − 100° − 116° = 144°. Divide this remainder by two, rather than using the full remaining angle as the answer."
+              "explanation": "The net turn so far is 100° − 35° = 65° clockwise. Reverse that turn to return to the starting direction."
             },
             {
               "id": "esat-p-m1-3-02",
@@ -2687,35 +2687,35 @@
               "number": 1,
               "topic": "M6.3",
               "difficulty": 1,
-              "stem": "A tally gives the number of calls answered by each of seven volunteers.\n\nCalls: 0, 1, 2, 3\nNumber of volunteers: 1, 2, 3, 1\n\nWhat is the median number of calls answered?",
+              "stem": "Six rehearsal times, in minutes, are 2, 3, 5, 7, 9 and 12. One more time is added. For which added time would the middle entry in the ordered list be the added time itself?",
               "options": [
                 {
                   "label": "A",
-                  "text": "0"
+                  "text": "3 minutes"
                 },
                 {
                   "label": "B",
-                  "text": "2"
+                  "text": "6 minutes"
                 },
                 {
                   "label": "C",
-                  "text": "1"
+                  "text": "4 minutes"
                 },
                 {
                   "label": "D",
-                  "text": "1.5"
+                  "text": "8 minutes"
                 },
                 {
                   "label": "E",
-                  "text": "12/7"
+                  "text": "10 minutes"
                 },
                 {
                   "label": "F",
-                  "text": "3"
+                  "text": "12 minutes"
                 }
               ],
               "answer": "B",
-              "explanation": "Three volunteers answered fewer than 2 calls. The fourth value in the ordered list, and therefore the median of seven values, is 2."
+              "explanation": "With seven entries, the added time must have three originals below it and three above it. Only 6 lies between the original third and fourth entries, 5 and 7."
             },
             {
               "id": "esat-p-m1-8-02",
@@ -2831,15 +2831,15 @@
               "number": 5,
               "topic": "M7.6",
               "difficulty": 2,
-              "stem": "Roll a fair six-sided die twice. What is the probability that the second score equals the first?",
+              "stem": "A route display independently shows one of three equally likely arrows in the morning and one of four equally likely symbols in the afternoon. The arrows include Left, and exactly two of the four symbols are circles. What is the probability of Left followed by a circle?",
               "options": [
                 {
                   "label": "A",
-                  "text": "1/36"
+                  "text": "1/12"
                 },
                 {
                   "label": "B",
-                  "text": "1/12"
+                  "text": "1/4"
                 },
                 {
                   "label": "C",
@@ -2847,11 +2847,11 @@
                 },
                 {
                   "label": "D",
-                  "text": "5/6"
+                  "text": "1/2"
                 },
                 {
                   "label": "E",
-                  "text": "1/2"
+                  "text": "5/6"
                 },
                 {
                   "label": "F",
@@ -2859,7 +2859,7 @@
                 }
               ],
               "answer": "F",
-              "explanation": "For every first roll exactly one second roll matches. There are six matching pairs out of 36, not one."
+              "explanation": "The two displays are independent. The probability is (1/3) × (2/4) = 1/6."
             },
             {
               "id": "esat-p-m1-8-06",
@@ -4574,43 +4574,43 @@
               "number": 8,
               "topic": "M7.7",
               "difficulty": 5,
-              "stem": "A bag has two black and three white counters. Two are drawn without replacement. Given that at least one is black, what is the probability both are black?",
+              "stem": "A workshop has five labelled sample books. Two are spiral-bound and three are stitched. Two distinct books are selected uniformly to display. A sensor reports that at least one displayed book is stitched. Given the report, what is the probability that there is one of each binding?",
               "options": [
                 {
                   "label": "A",
-                  "text": "1/10"
+                  "text": "1/3"
                 },
                 {
                   "label": "B",
-                  "text": "1/5"
+                  "text": "1/2"
                 },
                 {
                   "label": "C",
-                  "text": "1/4"
+                  "text": "3/5"
                 },
                 {
                   "label": "D",
-                  "text": "2/7"
+                  "text": "3/4"
                 },
                 {
                   "label": "E",
-                  "text": "3/7"
+                  "text": "5/9"
                 },
                 {
                   "label": "F",
-                  "text": "6/7"
+                  "text": "7/9"
                 },
                 {
                   "label": "G",
-                  "text": "1/7"
+                  "text": "2/3"
                 },
                 {
                   "label": "H",
-                  "text": "7/10"
+                  "text": "4/5"
                 }
               ],
               "answer": "G",
-              "explanation": "Of the ten unordered pairs, three are both white. Among the seven remaining pairs just one consists of both black counters."
+              "explanation": "Of the ten unordered pairs, only the pair of two spiral books is ruled out by the report. Six of the remaining nine pairs have one book of each binding, giving 6/9 = 2/3."
             },
             {
               "id": "esat-p-m1-12-09",
@@ -4823,43 +4823,43 @@
               "number": 4,
               "topic": "M2.12",
               "difficulty": 4,
-              "stem": "A rectangle’s sides round to 7 cm and 4 cm to the nearest centimetre. Which row gives the minimum possible area; the upper bound for area in cm²?",
+              "stem": "Two steel strips are measured as 7 cm and 4 cm, each rounded to the nearest centimetre. A bracket needs the longer strip to exceed the shorter by at least 2.5 cm. Which row gives the range of possible differences d and whether the bracket requirement is guaranteed?",
               "options": [
                 {
                   "label": "A",
-                  "text": "24.5; 31.5"
+                  "text": "2 ≤ d ≤ 4; not guaranteed"
                 },
                 {
                   "label": "B",
-                  "text": "22.75; 28"
+                  "text": "2.5 ≤ d < 4; guaranteed"
                 },
                 {
                   "label": "C",
-                  "text": "28; 33.75"
+                  "text": "2 < d < 4; guaranteed"
                 },
                 {
                   "label": "D",
-                  "text": "26.25; 29.75"
+                  "text": "3 ≤ d < 4; guaranteed"
                 },
                 {
                   "label": "E",
-                  "text": "24; 40"
+                  "text": "2.5 < d < 3.5; guaranteed"
                 },
                 {
                   "label": "F",
-                  "text": "6.5; 7.5"
+                  "text": "2 ≤ d < 3; not guaranteed"
                 },
                 {
                   "label": "G",
-                  "text": "22.75; 33.75"
+                  "text": "2 < d < 4; not guaranteed"
                 },
                 {
                   "label": "H",
-                  "text": "20.25; 33.75"
+                  "text": "3 < d < 4; guaranteed"
                 }
               ],
               "answer": "G",
-              "explanation": "The side intervals are [6.5, 7.5) and [3.5, 4.5). Multiply the lower ends for the minimum and the upper ends for the bound."
+              "explanation": "The lengths are in [6.5, 7.5) and [3.5, 4.5). The difference is strictly above 6.5 − 4.5 and strictly below 7.5 − 3.5. Values below 2.5 are possible, for example 6.5 − 4.2 = 2.3 cm."
             },
             {
               "id": "esat-p-m1-13-05",
@@ -5645,35 +5645,35 @@
               "number": 5,
               "topic": "M5.16",
               "difficulty": 4,
-              "stem": "A 120° sector of a circle has area 12π cm². How long is its curved edge?",
+              "stem": "A round window is divided into three identical regions by cuts from the centre to the rim. The outer curved edge of one region has length 4π cm. A designer needs the perimeter of one piece, including the two straight cut edges. What length is needed?",
               "options": [
                 {
                   "label": "A",
-                  "text": "2π cm"
+                  "text": "6 + 4π cm"
                 },
                 {
                   "label": "B",
-                  "text": "4π cm"
+                  "text": "12 + 4π cm"
                 },
                 {
                   "label": "C",
-                  "text": "3π cm"
+                  "text": "8 + 4π cm"
                 },
                 {
                   "label": "D",
-                  "text": "6π cm"
+                  "text": "12 + 2π cm"
                 },
                 {
                   "label": "E",
-                  "text": "8π cm"
+                  "text": "12 + 6π cm"
                 },
                 {
                   "label": "F",
-                  "text": "12π cm"
+                  "text": "24 + 4π cm"
                 }
               ],
               "answer": "B",
-              "explanation": "The sector is one third of the circle, which therefore has radius 6 cm. Use one third of its circumference."
+              "explanation": "The full circumference is 3 × 4π = 12π, so the radius is 6 cm. The perimeter of a piece adds the two 6 cm cut edges to the curved edge."
             },
             {
               "id": "esat-p-m1-15-06",
@@ -5923,35 +5923,35 @@
               "number": 2,
               "topic": "M7.4",
               "difficulty": 3,
-              "stem": "A spinner’s only outcomes are red, green and blue. Red has probability 1/3 and green has probability 1/4. Find the probability of blue.",
+              "stem": "A habitat survey assigns each observation to exactly one of three categories: on land, on water, or in flight. A student makes a pie chart with angles 150° for land and 120° for water. The student says a randomly selected observation is twice as likely to be on land as in flight. Which assessment is correct?",
               "options": [
                 {
                   "label": "A",
-                  "text": "1/12"
+                  "text": "The claim is true: the flight angle is 75°."
                 },
                 {
                   "label": "B",
-                  "text": "1/7"
+                  "text": "The claim is false: the likelihood ratio is 3 : 5."
                 },
                 {
                   "label": "C",
-                  "text": "1/2"
+                  "text": "The claim is false: the likelihood ratio is 5 : 4."
                 },
                 {
                   "label": "D",
-                  "text": "5/12"
+                  "text": "The claim is false: the likelihood ratio is 5 : 3."
                 },
                 {
                   "label": "E",
-                  "text": "7/12"
+                  "text": "The claim is true: the land angle is twice the water angle."
                 },
                 {
                   "label": "F",
-                  "text": "2/3"
+                  "text": "The claim cannot be checked without the number of observations."
                 }
               ],
               "answer": "D",
-              "explanation": "The known probabilities sum to 7/12. The remaining share is 5/12."
+              "explanation": "The three categories are mutually exclusive and exhaustive, so the flight sector is 360° − 150° − 120° = 90°. The ratio of probabilities is the ratio of sector angles, 150 : 90 = 5 : 3."
             },
             {
               "id": "esat-p-m1-16-03",
@@ -6381,35 +6381,35 @@
               "number": 4,
               "topic": "P1.2",
               "difficulty": 3,
-              "stem": "Two fixed resistors are connected in parallel across an ideal 12 V supply. One resistor is 8 Ω and the total current is 2.0 A.\n\nWhat is the resistance of the other resistor?",
+              "stem": "A display has two independent branches on an ideal supply. One branch draws 0.75 A and the other draws 0.25 A. When a switch in the first branch opens, which pair of readings should two ammeters show at the supply and in the second branch, respectively?",
               "options": [
                 {
                   "label": "A",
-                  "text": "24 Ω"
+                  "text": "0.25 A; 0.25 A"
                 },
                 {
                   "label": "B",
-                  "text": "4 Ω"
+                  "text": "0 A; 0 A"
                 },
                 {
                   "label": "C",
-                  "text": "6 Ω"
+                  "text": "0.25 A; 0 A"
                 },
                 {
                   "label": "D",
-                  "text": "8 Ω"
+                  "text": "0.75 A; 0.25 A"
                 },
                 {
                   "label": "E",
-                  "text": "12 Ω"
+                  "text": "1.0 A; 0.25 A"
                 },
                 {
                   "label": "F",
-                  "text": "16 Ω"
+                  "text": "1.0 A; 1.0 A"
                 }
               ],
               "answer": "A",
-              "explanation": "The 8 Ω branch takes 12/8 = 1.5 A, leaving 0.5 A in the other branch. That branch has the full 12 V across it, giving 24 Ω; the two currents need not be equal."
+              "explanation": "An open branch draws no current. The other branch is still across the same ideal supply and continues to draw 0.25 A. This is now also the supply current."
             },
             {
               "id": "esat-p-phys-1-05",
@@ -6591,35 +6591,35 @@
               "number": 10,
               "topic": "P1.2",
               "difficulty": 4,
-              "stem": "A 6 Ω resistor is in series with a parallel pair of 6 Ω resistors. The circuit is connected to an ideal 18 V supply. One resistor in the parallel pair is then disconnected while the other remains connected.\n\nHow does the power in the series resistor change?",
+              "stem": "An alarm is powered by a 6 V supply. In mode X it draws 0.40 A for one second in every four, and zero otherwise. In mode Y it draws a steady 0.08 A. Which mode uses less electrical energy over 20 s, and by how much?",
               "options": [
                 {
                   "label": "A",
-                  "text": "It rises from 24 W to 54 W."
+                  "text": "Mode X, by 2.4 J."
                 },
                 {
                   "label": "B",
-                  "text": "It falls from 24 W to 18 W."
+                  "text": "Mode Y, by 0.4 J."
                 },
                 {
                   "label": "C",
-                  "text": "It falls from 54 W to 24 W."
+                  "text": "Mode Y, by 9.6 J."
                 },
                 {
                   "label": "D",
-                  "text": "It falls from 24 W to 13.5 W."
+                  "text": "Mode Y, by 2.4 J."
                 },
                 {
                   "label": "E",
-                  "text": "It stays at 24 W."
+                  "text": "Mode X, by 12 J."
                 },
                 {
                   "label": "F",
-                  "text": "It rises from 13.5 W to 24 W."
+                  "text": "They use equal amounts."
                 }
               ],
               "answer": "D",
-              "explanation": "Initially the total resistance is 9 Ω, so the series resistor carries 2 A and dissipates 24 W. After disconnection the total is 12 Ω, so it carries 1.5 A and dissipates 13.5 W; the supply voltage is fixed, not the current."
+              "explanation": "Mode X is on for 5 s, so it uses 6 × 0.40 × 5 = 12 J. Mode Y uses 6 × 0.08 × 20 = 9.6 J, which is 2.4 J less."
             }
           ]
         },
@@ -6746,35 +6746,35 @@
               "number": 4,
               "topic": "P3.1",
               "difficulty": 3,
-              "stem": "A cyclist is moving at 6 m/s when the route begins to slope downwards. After travelling 20 m down the slope at constant acceleration, the cyclist is moving at 10 m/s.\n\nWhat is the acceleration?",
+              "stem": "A film scanner moves a strip of film from rest at a steady rate of increase in speed. It takes 1 s to cover the first 3 mm. How far does it move during the third second alone?",
               "options": [
                 {
                   "label": "A",
-                  "text": "1.6 m/s²"
+                  "text": "15 mm"
                 },
                 {
                   "label": "B",
-                  "text": "0.20 m/s²"
+                  "text": "6 mm"
                 },
                 {
                   "label": "C",
-                  "text": "0.40 m/s²"
+                  "text": "9 mm"
                 },
                 {
                   "label": "D",
-                  "text": "0.80 m/s²"
+                  "text": "12 mm"
                 },
                 {
                   "label": "E",
-                  "text": "2.5 m/s²"
+                  "text": "18 mm"
                 },
                 {
                   "label": "F",
-                  "text": "3.2 m/s²"
+                  "text": "27 mm"
                 }
               ],
               "answer": "A",
-              "explanation": "Use v² − u² = 2as: a = (100 − 36)/40 = 1.6 m/s². The numerator is the difference of squares, not the square of the change in speed."
+              "explanation": "For motion from rest with constant acceleration, displacement is proportional to time squared. The difference between the distances after 3 s and 2 s is 3(9 − 4) = 15 mm."
             },
             {
               "id": "esat-p-phys-2-05",
@@ -6816,35 +6816,35 @@
               "number": 6,
               "topic": "P3.4",
               "difficulty": 3,
-              "stem": "A 12 kg box slides down a vertical guide. The guide exerts an upward friction force of 84 N, and no other vertical force acts apart from weight. Take g = 10 m/s².\n\nWhat is the box’s acceleration?",
+              "stem": "A vertical shaft has a capsule that is rising but losing speed. The capsule has mass 8 kg. Two proposed upward cable tensions are I: 72 N and II: 88 N. Take g = 10 N/kg and ignore air resistance. Which assessment is correct?",
               "options": [
                 {
                   "label": "A",
-                  "text": "3.0 m/s² upwards"
+                  "text": "Only II is consistent, because the net force must be upwards."
                 },
                 {
                   "label": "B",
-                  "text": "7.0 m/s² downwards"
+                  "text": "Both are consistent, because the capsule is above its starting point."
                 },
                 {
                   "label": "C",
-                  "text": "7.0 m/s² upwards"
+                  "text": "Neither is consistent, because the net force must be zero."
                 },
                 {
                   "label": "D",
-                  "text": "10 m/s² downwards"
+                  "text": "Only I is consistent, because the net force must be upwards."
                 },
                 {
                   "label": "E",
-                  "text": "17 m/s² downwards"
+                  "text": "Only II is consistent, because the net force must be downwards."
                 },
                 {
                   "label": "F",
-                  "text": "3.0 m/s² downwards"
+                  "text": "Only I is consistent, because the net force must be downwards."
                 }
               ],
               "answer": "F",
-              "explanation": "The weight is 120 N, leaving a downward resultant of 120 − 84 = 36 N. Dividing by the mass gives 3.0 m/s² downwards; using only the friction would give the wrong resultant."
+              "explanation": "The capsule is slowing while going up, so its acceleration and resultant force are downwards. Its weight is 80 N; only 72 N is less than this."
             },
             {
               "id": "esat-p-phys-2-07",
@@ -7079,35 +7079,35 @@
               "number": 3,
               "topic": "P5.4",
               "difficulty": 2,
-              "stem": "A metal sample has mass 84 g. When fully immersed in a measuring cylinder it raises the reading from 35 cm³ to 45 cm³.\n\nWhat is the sample’s density?",
+              "stem": "A balance and a measuring cylinder give the following readings for two fully submerged samples. X adds 45 g and raises the water reading from 20 to 35 cm³. Y adds 24 g and raises it from 35 to 43 cm³. What do the measurements imply?",
               "options": [
                 {
                   "label": "A",
-                  "text": "0.84 g/cm³"
+                  "text": "X is denser because it adds more mass."
                 },
                 {
                   "label": "B",
-                  "text": "8.4 g/cm³"
+                  "text": "The samples have equal densities."
                 },
                 {
                   "label": "C",
-                  "text": "2.4 g/cm³"
+                  "text": "X is denser because it displaces more water."
                 },
                 {
                   "label": "D",
-                  "text": "4.2 g/cm³"
+                  "text": "Y is denser because it displaces less water."
                 },
                 {
                   "label": "E",
-                  "text": "1.87 g/cm³"
+                  "text": "Y is denser because it adds less mass."
                 },
                 {
                   "label": "F",
-                  "text": "12 g/cm³"
+                  "text": "The densities cannot be compared without the density of the water."
                 }
               ],
               "answer": "B",
-              "explanation": "The displaced volume is 45 − 35 = 10 cm³, so density is 84/10 = 8.4 g/cm³. The final cylinder reading includes the original water volume."
+              "explanation": "X has 45 g in 15 cm³ and Y has 24 g in 8 cm³. Both ratios are 3 g/cm³."
             },
             {
               "id": "esat-p-phys-3-04",
@@ -7149,35 +7149,35 @@
               "number": 5,
               "topic": "P4.4",
               "difficulty": 3,
-              "stem": "A 600 W heater warms 0.50 kg of a liquid by 24 °C in 60 s. Half the energy supplied by the heater enters the liquid.\n\nWhat is the liquid’s specific heat capacity?",
+              "stem": "An insulated thermal store receives 24 kJ. A 2 kg sample inside warms by 5 °C and has specific heat capacity 1800 J/(kg °C). The remaining energy warms the casing. What fraction of the input reaches the sample?",
               "options": [
                 {
                   "label": "A",
-                  "text": "1500 J/(kg °C)"
+                  "text": "3/4"
                 },
                 {
                   "label": "B",
-                  "text": "750 J/(kg °C)"
+                  "text": "1/4"
                 },
                 {
                   "label": "C",
-                  "text": "1200 J/(kg °C)"
+                  "text": "1/3"
                 },
                 {
                   "label": "D",
-                  "text": "2400 J/(kg °C)"
+                  "text": "2/3"
                 },
                 {
                   "label": "E",
-                  "text": "3000 J/(kg °C)"
+                  "text": "4/5"
                 },
                 {
                   "label": "F",
-                  "text": "6000 J/(kg °C)"
+                  "text": "1"
                 }
               ],
               "answer": "A",
-              "explanation": "The liquid receives ½ × 600 × 60 = 18 000 J. Dividing by 0.50 × 24 gives 1500 J/(kg °C); 3000 assumes all the heater’s energy enters the liquid."
+              "explanation": "The sample gains 2 × 1800 × 5 = 18 000 J. This is 18 kJ out of 24 kJ, or three quarters."
             },
             {
               "id": "esat-p-phys-3-06",
@@ -7254,35 +7254,35 @@
               "number": 8,
               "topic": "P4.4",
               "difficulty": 4,
-              "stem": "A 0.30 kg block at 100 °C is placed in 0.20 kg of water at 20 °C. They reach 40 °C. Neglect energy transfer to the surroundings or container. The specific heat capacity of water is 4200 J/(kg °C).\n\nWhat is the specific heat capacity of the block?",
+              "stem": "Two equal-mass samples P and Q are brought into thermal contact in an insulated chamber, initially at 20 °C and 80 °C respectively. P has twice the specific heat capacity of Q. No change of state occurs. At which temperature do both readings settle?",
               "options": [
                 {
                   "label": "A",
-                  "text": "1400/3 J/(kg °C)"
+                  "text": "30 °C"
                 },
                 {
                   "label": "B",
-                  "text": "2800/3 J/(kg °C)"
+                  "text": "40 °C"
                 },
                 {
                   "label": "C",
-                  "text": "700 J/(kg °C)"
+                  "text": "35 °C"
                 },
                 {
                   "label": "D",
-                  "text": "1400 J/(kg °C)"
+                  "text": "50 °C"
                 },
                 {
                   "label": "E",
-                  "text": "2800 J/(kg °C)"
+                  "text": "60 °C"
                 },
                 {
                   "label": "F",
-                  "text": "6300 J/(kg °C)"
+                  "text": "70 °C"
                 }
               ],
               "answer": "B",
-              "explanation": "The water gains 0.20 × 4200 × 20 = 16 800 J and the block loses that amount while cooling by 60 °C. Divide by 0.30 × 60 to get 2800/3 J/(kg °C); the temperature changes are not equal."
+              "explanation": "P gains as much energy as Q loses. For equal masses, P needs twice the energy per degree, so its temperature rises by half Q’s fall. The initial 60 °C difference closes with a rise of 20 °C and a fall of 40 °C."
             },
             {
               "id": "esat-p-phys-3-09",
@@ -7774,35 +7774,35 @@
               "number": 2,
               "topic": "P3.4",
               "difficulty": 1,
-              "stem": "A 4 kg box on a level floor is pulled right by 18 N and pushed left by 6 N. Friction is negligible. Find its acceleration.",
+              "stem": "A hanging ornament is motionless. Its weight is 12 N and two vertical cords together support it. The tension in one cord is 5 N. Which arrow must represent the force of the other cord on the ornament?",
               "options": [
                 {
                   "label": "A",
-                  "text": "3 m/s² left"
+                  "text": "7 N downwards"
                 },
                 {
                   "label": "B",
-                  "text": "4.5 m/s² right"
+                  "text": "5 N upwards"
                 },
                 {
                   "label": "C",
-                  "text": "6 m/s² right"
+                  "text": "12 N upwards"
                 },
                 {
                   "label": "D",
-                  "text": "12 m/s² right"
+                  "text": "17 N upwards"
                 },
                 {
                   "label": "E",
-                  "text": "24 m/s² right"
+                  "text": "17 N downwards"
                 },
                 {
                   "label": "F",
-                  "text": "3 m/s² right"
+                  "text": "7 N upwards"
                 }
               ],
               "answer": "F",
-              "explanation": "The net force is 12 N right. Dividing by 4 kg gives 3 m/s²; the forces oppose rather than add."
+              "explanation": "The ornament is at rest, so the upward forces together balance its 12 N weight. The missing upward force is 12 − 5 = 7 N."
             },
             {
               "id": "esat-p-phys-5-03",
@@ -8169,35 +8169,35 @@
               "number": 2,
               "topic": "P3.7",
               "difficulty": 1,
-              "stem": "A hoist delivers 240 J of useful work in 8 s. What is its useful power?",
+              "stem": "Pump A transfers 90 J of useful energy in 3 s; pump B transfers 120 J in 6 s. Which comparison is correct?",
               "options": [
                 {
                   "label": "A",
-                  "text": "30 W"
+                  "text": "A transfers useful energy faster, but transfers less in these runs."
                 },
                 {
                   "label": "B",
-                  "text": "8 W"
+                  "text": "A transfers useful energy faster and transfers more in these runs."
                 },
                 {
                   "label": "C",
-                  "text": "24 W"
+                  "text": "B transfers useful energy faster and transfers more in these runs."
                 },
                 {
                   "label": "D",
-                  "text": "32 W"
+                  "text": "B transfers useful energy faster, but transfers less in these runs."
                 },
                 {
                   "label": "E",
-                  "text": "120 W"
+                  "text": "Both transfer useful energy at the same rate."
                 },
                 {
                   "label": "F",
-                  "text": "1920 W"
+                  "text": "Both transfer the same useful energy in these runs."
                 }
               ],
               "answer": "A",
-              "explanation": "Power is the rate of doing work, so divide 240 J by 8 s."
+              "explanation": "A transfers 30 J each second and B transfers 20 J each second. A has the higher useful power even though it transfers less total useful energy in the stated time."
             },
             {
               "id": "esat-p-phys-6-03",
@@ -8578,35 +8578,35 @@
               "number": 2,
               "topic": "P1.2",
               "difficulty": 1,
-              "stem": "A steady current of 0.25 A flows for 2 minutes. How much charge passes?",
+              "stem": "Two fabric sensors each transfer 12 C before resetting. X resets after 4 s and Y after 6 s. Which comparison of their mean currents is correct?",
               "options": [
                 {
                   "label": "A",
-                  "text": "0.125 C"
+                  "text": "The mean current in X is two thirds that in Y."
                 },
                 {
                   "label": "B",
-                  "text": "0.5 C"
+                  "text": "Both have the same mean current."
                 },
                 {
                   "label": "C",
-                  "text": "7.5 C"
+                  "text": "The mean current in X is twice that in Y."
                 },
                 {
                   "label": "D",
-                  "text": "30 C"
+                  "text": "The mean current in X is 1.5 times that in Y."
                 },
                 {
                   "label": "E",
-                  "text": "15 C"
+                  "text": "The mean current in X is three times that in Y."
                 },
                 {
                   "label": "F",
-                  "text": "480 C"
+                  "text": "The mean current in X is half that in Y."
                 }
               ],
               "answer": "D",
-              "explanation": "Convert 2 minutes to 120 seconds before multiplying by 0.25 A."
+              "explanation": "Mean current is transferred charge divided by time. X averages 3 A and Y 2 A, giving a ratio of 3/2."
             },
             {
               "id": "esat-p-phys-7-03",
@@ -8734,35 +8734,35 @@
               "number": 6,
               "topic": "P1.2",
               "difficulty": 3,
-              "stem": "A 2 Ω resistor is placed in series with two 8 Ω resistors in parallel. Find the total resistance.",
+              "stem": "Two identical lengths of conducting thread in a wearable circuit each have the same opposition to current. The designer replaces a connection end-to-end with a connection side-by-side across the same ideal supply. By what factor does the supply current change?",
               "options": [
                 {
                   "label": "A",
-                  "text": "6 Ω"
+                  "text": "It becomes four times as large."
                 },
                 {
                   "label": "B",
-                  "text": "2 Ω"
+                  "text": "It becomes twice as large."
                 },
                 {
                   "label": "C",
-                  "text": "4 Ω"
+                  "text": "It becomes half as large."
                 },
                 {
                   "label": "D",
-                  "text": "8 Ω"
+                  "text": "It becomes one quarter as large."
                 },
                 {
                   "label": "E",
-                  "text": "10 Ω"
+                  "text": "It becomes three times as large."
                 },
                 {
                   "label": "F",
-                  "text": "18 Ω"
+                  "text": "It is unchanged."
                 }
               ],
               "answer": "A",
-              "explanation": "The parallel pair has effective resistance 4 Ω. Add the separate 2 Ω series resistor, rather than adding all three directly."
+              "explanation": "If each thread has value R, the end-to-end connection has 2R while the parallel connection has R/2. At the same voltage the current becomes 2R/(R/2) = 4 times as large."
             },
             {
               "id": "esat-p-phys-7-07",
@@ -8804,78 +8804,78 @@
               "number": 8,
               "topic": "P1.2",
               "difficulty": 4,
-              "stem": "A 12 V ideal supply feeds a 2 Ω series resistor followed by parallel 3 Ω and 6 Ω branches. Which row gives the voltage across the parallel pair (V); current through the 3 Ω branch (A)?",
+              "stem": "A transparent window has two electrically separate heating zones joined in parallel. Their currents are in the ratio 2 : 1 at their normal common voltage. Both zones are then wired in series across the same voltage. Which row gives the ratio of their currents and the ratio of their powers in the series connection, in the same zone order?",
               "options": [
                 {
                   "label": "A",
-                  "text": "4; 4/3"
+                  "text": "1 : 1; 2 : 1"
                 },
                 {
                   "label": "B",
-                  "text": "6; 1"
+                  "text": "1 : 1; 1 : 1"
                 },
                 {
                   "label": "C",
-                  "text": "6; 3"
+                  "text": "2 : 1; 1 : 2"
                 },
                 {
                   "label": "D",
-                  "text": "8; 8/3"
+                  "text": "2 : 1; 2 : 1"
                 },
                 {
                   "label": "E",
-                  "text": "12; 4"
+                  "text": "1 : 2; 1 : 2"
                 },
                 {
                   "label": "F",
-                  "text": "9; 3"
+                  "text": "1 : 2; 2 : 1"
                 },
                 {
                   "label": "G",
-                  "text": "6; 2"
+                  "text": "1 : 1; 1 : 2"
                 },
                 {
                   "label": "H",
-                  "text": "3; 1"
+                  "text": "1 : 1; 1 : 4"
                 }
               ],
               "answer": "G",
-              "explanation": "The pair is equivalent to 2 Ω, so it gets half the supply voltage. Each branch has the full 6 V across it, and the 3 Ω branch draws 2 A."
+              "explanation": "In parallel the zone taking twice as much current has half the electrical resistance. In series the same current passes through each, so P = I²R gives a power ratio of 1 : 2."
             },
             {
               "id": "esat-p-phys-7-09",
               "number": 9,
               "topic": "P1.2",
               "difficulty": 3,
-              "stem": "A 10 V source feeds a 3 Ω resistor in series with an unknown resistor. Power in the 3 Ω resistor is 12 W. Find the unknown resistance.",
+              "stem": "A 12 V supply runs two components in series. A sensor has a 4 V drop and transfers 8 J each second. A driver uses the remaining electrical energy. Which pair gives the current through the driver and the energy it transfers in 3 s?",
               "options": [
                 {
                   "label": "A",
-                  "text": "1 Ω"
+                  "text": "2 A; 24 J"
                 },
                 {
                   "label": "B",
-                  "text": "2 Ω"
+                  "text": "2 A; 48 J"
                 },
                 {
                   "label": "C",
-                  "text": "3 Ω"
+                  "text": "2 A; 72 J"
                 },
                 {
                   "label": "D",
-                  "text": "4 Ω"
+                  "text": "3 A; 48 J"
                 },
                 {
                   "label": "E",
-                  "text": "5 Ω"
+                  "text": "3 A; 72 J"
                 },
                 {
                   "label": "F",
-                  "text": "6 Ω"
+                  "text": "4 A; 96 J"
                 }
               ],
               "answer": "B",
-              "explanation": "P = I²R gives I = 2 A. The total resistance is 5 Ω, which includes the 3 Ω already given."
+              "explanation": "The common current is 8 W ÷ 4 V = 2 A. The driver has a drop of 8 V and transfers 8 × 2 × 3 = 48 J."
             },
             {
               "id": "esat-p-phys-7-10",
@@ -9011,35 +9011,35 @@
               "number": 3,
               "topic": "P5.4",
               "difficulty": 2,
-              "stem": "A liquid has mass 560 g and volume 700 cm³. Find its density in g/cm³.",
+              "stem": "An equal-volume sample of each of three liquids is weighed in the same empty 20 g cup. The balance reads 62 g for X, 54 g for Y and 70 g for Z. In which order do the liquids rank from least dense to most dense?",
               "options": [
                 {
                   "label": "A",
-                  "text": "0.08"
+                  "text": "X, Y, Z"
                 },
                 {
                   "label": "B",
-                  "text": "1.25"
+                  "text": "Z, X, Y"
                 },
                 {
                   "label": "C",
-                  "text": "8"
+                  "text": "Y, Z, X"
                 },
                 {
                   "label": "D",
-                  "text": "0.8"
+                  "text": "Y, X, Z"
                 },
                 {
                   "label": "E",
-                  "text": "140"
+                  "text": "X, Z, Y"
                 },
                 {
                   "label": "F",
-                  "text": "392"
+                  "text": "Z, Y, X"
                 }
               ],
               "answer": "D",
-              "explanation": "Density is mass over volume, so 560/700 = 0.8. A volume-over-mass calculation gives the reciprocal."
+              "explanation": "The cup adds the same mass to each reading. The liquid masses are 34 g, 42 g and 50 g for Y, X and Z respectively. Equal volumes mean their densities rank in the same order."
             },
             {
               "id": "esat-p-phys-8-04",
@@ -9519,35 +9519,35 @@
               "number": 6,
               "topic": "P3.6",
               "difficulty": 3,
-              "stem": "A cart of mass 3 kg approaches a 1 kg cart at rest at 4 m/s. They stick. Find their common speed and state where the momentum went.",
+              "stem": "A moving clay puck sticks to a stationary metal plate that can slide freely on frictionless ice. The plate has twice the mass of the puck. A student says sticking means both momentum and kinetic energy disappear. Which correction is right?",
               "options": [
                 {
                   "label": "A",
-                  "text": "4 m/s; it stayed in the system"
+                  "text": "Total momentum is unchanged, and the final speed is one half of the puck’s initial speed."
                 },
                 {
                   "label": "B",
-                  "text": "3 m/s; half was lost"
+                  "text": "Total momentum is unchanged, and the final speed equals the puck’s initial speed."
                 },
                 {
                   "label": "C",
-                  "text": "1 m/s; momentum doubled"
+                  "text": "Total momentum is halved, and the final speed is one third of the puck’s initial speed."
                 },
                 {
                   "label": "D",
-                  "text": "2 m/s; momentum was lost"
+                  "text": "The final momentum and kinetic energy are both zero."
                 },
                 {
                   "label": "E",
-                  "text": "3 m/s; total momentum increased"
+                  "text": "Total momentum increases as the plate starts moving."
                 },
                 {
                   "label": "F",
-                  "text": "3 m/s; it stayed in the two-cart system"
+                  "text": "Total momentum is unchanged, and the final speed is one third of the puck’s initial speed."
                 }
               ],
               "answer": "F",
-              "explanation": "Initial momentum 12 kg m/s is conserved for the pair, so divide it by the combined mass 4 kg. Kinetic energy need not be conserved."
+              "explanation": "There is no external horizontal impulse, so total momentum stays the same. The joined mass is three times the puck mass, hence its speed is one third as large. Kinetic energy is not conserved in the sticking collision."
             },
             {
               "id": "esat-p-phys-9-07",
@@ -9675,43 +9675,43 @@
               "number": 10,
               "topic": "P3.6",
               "difficulty": 5,
-              "stem": "A 1 kg trolley moving east at 9 m/s collides with a 2 kg trolley moving west at 3 m/s. Afterward the first trolley moves west at 1 m/s. Which row gives the second trolley’s velocity (east positive, m/s); change in total kinetic energy (J)?",
+              "stem": "A 60 kg person carrying a 20 kg pack glides on level ice at 3 m/s. The person pushes the pack straight ahead. Immediately afterwards the pack travels at 6 m/s relative to the ice. Ignore external horizontal forces. Which row gives the person’s final speed and the increase in total kinetic energy?",
               "options": [
                 {
                   "label": "A",
-                  "text": "−2; −45"
+                  "text": "2 m/s; 0 J"
                 },
                 {
                   "label": "B",
-                  "text": "2; 45"
+                  "text": "2 m/s; 240 J"
                 },
                 {
                   "label": "C",
-                  "text": "−2; 45"
+                  "text": "3 m/s; 120 J"
                 },
                 {
                   "label": "D",
-                  "text": "4; −45"
+                  "text": "3 m/s; 270 J"
                 },
                 {
                   "label": "E",
-                  "text": "1; −40"
+                  "text": "1 m/s; 30 J"
                 },
                 {
                   "label": "F",
-                  "text": "2; −40"
+                  "text": "1 m/s; 120 J"
                 },
                 {
                   "label": "G",
-                  "text": "2; −45"
+                  "text": "2 m/s; 120 J"
                 },
                 {
                   "label": "H",
-                  "text": "3; −42"
+                  "text": "4 m/s; 480 J"
                 }
               ],
               "answer": "G",
-              "explanation": "Initial momentum is +3, so the second trolley has +4 kg m/s after the first takes −1. The initial kinetic energy is 49.5 J and final energy is 4.5 J."
+              "explanation": "Initial momentum is 80 × 3 = 240 kg m/s, and the pack ends with 120 kg m/s, leaving 120 for the person at 2 m/s. Energy changes from 360 J to 120 + 360 = 480 J. The extra energy comes from the push."
             }
           ]
         },
@@ -10131,35 +10131,35 @@
               "number": 1,
               "topic": "P1.2",
               "difficulty": 2,
-              "stem": "An ammeter on a charging circuit reads 0.30 A for the first 10 s and 0.10 A for the next 30 s. Current flows in the same direction throughout. How much charge passes in total?",
+              "stem": "A sensor logs the total charge that has crossed a connector since it was switched on.\n\nTime / s: 0, 2, 6, 8\nCharge / C: 0, 4, 8, 11\n\nDuring which interval is the mean current greatest?",
               "options": [
                 {
                   "label": "A",
-                  "text": "6 C"
+                  "text": "0–2 s"
                 },
                 {
                   "label": "B",
-                  "text": "3 C"
+                  "text": "2–6 s"
                 },
                 {
                   "label": "C",
-                  "text": "4 C"
+                  "text": "6–8 s"
                 },
                 {
                   "label": "D",
-                  "text": "8 C"
+                  "text": "0–6 s"
                 },
                 {
                   "label": "E",
-                  "text": "9 C"
+                  "text": "2–8 s"
                 },
                 {
                   "label": "F",
-                  "text": "12 C"
+                  "text": "0–8 s"
                 }
               ],
               "answer": "A",
-              "explanation": "The charge is the area under the current–time graph: (0.30 × 10) + (0.10 × 30) = 6 C."
+              "explanation": "The three successive rates are 2 A, 1 A and 1.5 A. The rate over a combined interval is a weighted mean of the successive rates, so none of those combined intervals exceeds 2 A."
             },
             {
               "id": "esat-p-phys-11-02",
@@ -10384,43 +10384,43 @@
               "number": 8,
               "topic": "P1.2",
               "difficulty": 5,
-              "stem": "A 15 V supply feeds a 4 Ω resistor in series with a parallel pair of 6 Ω and 3 Ω. Find the power in the 6 Ω branch.",
+              "stem": "A 12 V lighting supply feeds a 3 Ω cable, then two identical 6 Ω lighting strips in parallel. A strip fails open-circuit; the supply stays at 12 V. How do the current in the surviving strip and the supply current change?",
               "options": [
                 {
                   "label": "A",
-                  "text": "5/6 W"
+                  "text": "The strip falls from 1 A to 2/3 A; the supply falls from 2 A to 2/3 A."
                 },
                 {
                   "label": "B",
-                  "text": "5/2 W"
+                  "text": "The strip stays at 1 A; the supply falls from 2 A to 1 A."
                 },
                 {
                   "label": "C",
-                  "text": "15/4 W"
+                  "text": "The strip rises from 1 A to 2 A; the supply stays at 2 A."
                 },
                 {
                   "label": "D",
-                  "text": "5 W"
+                  "text": "The strip falls from 2 A to 4/3 A; the supply falls from 4 A to 4/3 A."
                 },
                 {
                   "label": "E",
-                  "text": "25/3 W"
+                  "text": "The strip stays at 2 A; the supply falls from 4 A to 2 A."
                 },
                 {
                   "label": "F",
-                  "text": "75/2 W"
+                  "text": "The strip rises from 1 A to 3 A; the supply rises from 2 A to 3 A."
                 },
                 {
                   "label": "G",
-                  "text": "25/6 W"
+                  "text": "The strip rises from 1 A to 4/3 A; the supply falls from 2 A to 4/3 A."
                 },
                 {
                   "label": "H",
-                  "text": "225/4 W"
+                  "text": "The strip rises from 2 A to 4 A; the supply stays at 4 A."
                 }
               ],
               "answer": "G",
-              "explanation": "The pair is equivalent to 2 Ω, so it receives one third of 15 V. The 6 Ω branch has all 5 V across it, giving V²/R."
+              "explanation": "Initially the two strips together contribute 3 Ω, so the supply current is 12/6 = 2 A and each strip takes 1 A. After the failure the total is 9 Ω and the surviving strip takes all 12/9 A."
             },
             {
               "id": "esat-p-phys-11-09",
@@ -10720,35 +10720,35 @@
               "number": 6,
               "topic": "P4.4",
               "difficulty": 4,
-              "stem": "A heater delivers 12 kJ to a 0.50 kg block and its surroundings. Three quarters goes to the block and raises its temperature by 20 °C. Find the block’s specific heat capacity.",
+              "stem": "A student plots temperature rise against the energy absorbed by samples A and B. The straight line for A is twice as steep as B’s, and A has one quarter of B’s mass. How do their specific heat capacities compare?",
               "options": [
                 {
                   "label": "A",
-                  "text": "300 J/(kg °C)"
+                  "text": "A’s is half B’s."
                 },
                 {
                   "label": "B",
-                  "text": "450 J/(kg °C)"
+                  "text": "A’s is one quarter of B’s."
                 },
                 {
                   "label": "C",
-                  "text": "900 J/(kg °C)"
+                  "text": "A’s is twice B’s."
                 },
                 {
                   "label": "D",
-                  "text": "600 J/(kg °C)"
+                  "text": "A’s is four times B’s."
                 },
                 {
                   "label": "E",
-                  "text": "1200 J/(kg °C)"
+                  "text": "A’s is eight times B’s."
                 },
                 {
                   "label": "F",
-                  "text": "1800 J/(kg °C)"
+                  "text": "They are equal."
                 }
               ],
               "answer": "C",
-              "explanation": "The block receives 9000 J. Divide by its mass times its temperature rise, using only the energy it absorbs."
+              "explanation": "For this choice of axes the gradient is 1/(mc). A’s larger gradient means its mc is half that of B. Dividing by A’s mass, which is one quarter as large, gives twice the specific heat capacity."
             },
             {
               "id": "esat-p-phys-12-07",
@@ -11249,43 +11249,43 @@
               "number": 10,
               "topic": "P1.2",
               "difficulty": 5,
-              "stem": "An 18 V ideal supply feeds a 3 Ω series resistor and a parallel pair. The supply current is 3 A. One parallel branch is 4 Ω. Find the other branch resistance.",
+              "stem": "A 24 V supply feeds a 4 Ω feed cable that joins two identical instrument branches in parallel. Each branch has opposition to current of 8 Ω and operates correctly only if it receives at least 14 V. How can operation of both branches be restored by changing only the cable?",
               "options": [
                 {
                   "label": "A",
-                  "text": "2 Ω"
+                  "text": "Use a 2 Ω cable; each branch then receives 12 V."
                 },
                 {
                   "label": "B",
-                  "text": "3 Ω"
+                  "text": "Use a 3 Ω cable; each branch then receives 12 V."
                 },
                 {
                   "label": "C",
-                  "text": "4 Ω"
+                  "text": "Keep the 4 Ω cable; each branch already receives 16 V."
                 },
                 {
                   "label": "D",
-                  "text": "6 Ω"
+                  "text": "Use a 6 Ω cable; each branch then receives 16 V."
                 },
                 {
                   "label": "E",
-                  "text": "8 Ω"
+                  "text": "Use an 8 Ω cable; each branch then receives 12 V."
                 },
                 {
                   "label": "F",
-                  "text": "9 Ω"
+                  "text": "Use a 3 Ω cable; each branch then receives 16 V."
                 },
                 {
                   "label": "G",
-                  "text": "15 Ω"
+                  "text": "Use a 12 Ω cable; each branch then receives 14 V."
                 },
                 {
                   "label": "H",
-                  "text": "12 Ω"
+                  "text": "Use a 2 Ω cable; each branch then receives 16 V."
                 }
               ],
               "answer": "H",
-              "explanation": "The total resistance is 6 Ω, so the pair is 3 Ω. Subtract the known branch conductance 1/4 from the pair’s 1/3 to obtain 1/12."
+              "explanation": "The parallel load is equivalent to 4 Ω. With a 2 Ω cable it gets 4/(2 + 4) of 24 V, or 16 V. A 3 Ω cable would give 96/7 V, less than 14 V, and larger cable values give still less."
             }
           ]
         },
@@ -11452,35 +11452,35 @@
               "number": 5,
               "topic": "P3.1",
               "difficulty": 4,
-              "stem": "A car passes a marker at 18 m/s and decelerates uniformly at 3 m/s². At what distance beyond the marker does it first reach 6 m/s?",
+              "stem": "A shuttle in a straight tunnel moves forwards throughout a test. Its speed falls uniformly from 12 m/s to 4 m/s over 4 s, then rises uniformly to 12 m/s over the next 2 s. What fraction of the total distance is covered during the second segment?",
               "options": [
                 {
                   "label": "A",
-                  "text": "24 m"
+                  "text": "1/6"
                 },
                 {
                   "label": "B",
-                  "text": "36 m"
+                  "text": "1/4"
                 },
                 {
                   "label": "C",
-                  "text": "54 m"
+                  "text": "1/2"
                 },
                 {
                   "label": "D",
-                  "text": "60 m"
+                  "text": "2/3"
                 },
                 {
                   "label": "E",
-                  "text": "48 m"
+                  "text": "1/3"
                 },
                 {
                   "label": "F",
-                  "text": "72 m"
+                  "text": "3/4"
                 }
               ],
               "answer": "E",
-              "explanation": "Slowing by 12 m/s at 3 m/s² takes 4 s. Mean speed is 12 m/s, giving 48 m."
+              "explanation": "Both segments have mean speed (12 + 4)/2 = 8 m/s. The second takes 2 of the 6 s, so contributes one third of the distance."
             },
             {
               "id": "esat-p-phys-14-06",
@@ -11726,35 +11726,35 @@
               "number": 2,
               "topic": "P4.4",
               "difficulty": 3,
-              "stem": "Two insulated containers hold the same mass of different liquids. Identical heaters deliver equal power. Liquid X warms by 12 °C in 4 minutes and liquid Y warms by 8 °C in 2 minutes. What is the ratio of the specific heat capacity of X to that of Y?",
+              "stem": "A 100 g sample and a 200 g sample of the same material receive identical amounts of energy. Neither loses energy to the surroundings. The 100 g sample warms from 20 °C to 38 °C. If the other starts at 25 °C, which final reading is consistent with the experiment?",
               "options": [
                 {
                   "label": "A",
-                  "text": "4 : 3"
+                  "text": "34 °C"
                 },
                 {
                   "label": "B",
-                  "text": "3 : 4"
+                  "text": "29.5 °C"
                 },
                 {
                   "label": "C",
-                  "text": "3 : 2"
+                  "text": "38 °C"
                 },
                 {
                   "label": "D",
-                  "text": "2 : 3"
+                  "text": "43 °C"
                 },
                 {
                   "label": "E",
-                  "text": "2 : 1"
+                  "text": "56 °C"
                 },
                 {
                   "label": "F",
-                  "text": "1 : 2"
+                  "text": "61 °C"
                 }
               ],
               "answer": "A",
-              "explanation": "With equal masses and powers, specific heat capacity is proportional to heating time divided by temperature change. The ratio is (4/12) : (2/8) = 4 : 3."
+              "explanation": "The larger sample has twice the mass and the same specific heat capacity, so its temperature rises by half as much, or 9 °C. Its final temperature is 34 °C."
             },
             {
               "id": "esat-p-phys-15-03",
@@ -12010,43 +12010,43 @@
               "number": 10,
               "topic": "P4.4",
               "difficulty": 5,
-              "stem": "A heater takes 90 s to warm a block by 12 °C. It delivers 80 W and exactly a quarter of the supplied energy is lost. The block has mass 0.75 kg. Find its specific heat capacity.",
+              "stem": "A solar thermal collector delivers 90 W when uncovered and 60 W when partly shaded. A 0.50 kg sample with specific heat capacity 1200 J/(kg °C) absorbs half the delivered energy in either condition. It needs to warm by 9 °C. Which pair gives its warming times uncovered and partly shaded, respectively?",
               "options": [
                 {
                   "label": "A",
-                  "text": "150 J/(kg °C)"
+                  "text": "60 s; 90 s"
                 },
                 {
                   "label": "B",
-                  "text": "200 J/(kg °C)"
+                  "text": "90 s; 60 s"
                 },
                 {
                   "label": "C",
-                  "text": "450 J/(kg °C)"
+                  "text": "180 s; 120 s"
                 },
                 {
                   "label": "D",
-                  "text": "750 J/(kg °C)"
+                  "text": "40 s; 60 s"
                 },
                 {
                   "label": "E",
-                  "text": "800 J/(kg °C)"
+                  "text": "120 s; 90 s"
                 },
                 {
                   "label": "F",
-                  "text": "900 J/(kg °C)"
+                  "text": "90 s; 120 s"
                 },
                 {
                   "label": "G",
-                  "text": "2400 J/(kg °C)"
+                  "text": "240 s; 360 s"
                 },
                 {
                   "label": "H",
-                  "text": "600 J/(kg °C)"
+                  "text": "120 s; 180 s"
                 }
               ],
               "answer": "H",
-              "explanation": "The block receives 80 × 90 × 3/4 = 5400 J. The mass–temperature product is 9 kg °C, so its heat capacity per kg is 600."
+              "explanation": "The sample needs 0.50 × 1200 × 9 = 5400 J. Its absorbed powers are 45 W and 30 W, so the times are 120 s and 180 s."
             }
           ]
         },
@@ -12822,35 +12822,35 @@
               "number": 1,
               "topic": "C4.1",
               "difficulty": 2,
-              "stem": "What is the relative formula mass of magnesium phosphate, Mg₃(PO₄)₂?\n\nRelative atomic masses: Mg = 24, P = 31, O = 16.",
+              "stem": "Two mineral grains contain X₂O₃ and X₂S₃ respectively. The relative atomic masses of O and S are 16 and 32. Without knowing X, what can be proved about the relative masses of the two formula units?",
               "options": [
                 {
                   "label": "A",
-                  "text": "119"
+                  "text": "The sulfide formula unit is 16 units heavier."
                 },
                 {
                   "label": "B",
-                  "text": "262"
+                  "text": "The sulfide formula unit is 48 units heavier."
                 },
                 {
                   "label": "C",
-                  "text": "150"
+                  "text": "The sulfide formula unit is 32 units heavier."
                 },
                 {
                   "label": "D",
-                  "text": "167"
+                  "text": "The oxide formula unit is 48 units heavier."
                 },
                 {
                   "label": "E",
-                  "text": "190"
+                  "text": "The sulfide formula unit is twice as heavy."
                 },
                 {
                   "label": "F",
-                  "text": "230"
+                  "text": "Nothing can be concluded without identifying X."
                 }
               ],
               "answer": "B",
-              "explanation": "There are three Mg, two P and eight O atoms per formula unit, so the relative formula mass is 72 + 62 + 128 = 262. The outer 2 multiplies everything inside the parentheses."
+              "explanation": "The two X contributions cancel in the difference. Replacing three O atoms with three S atoms adds 3(32 − 16) = 48."
             },
             {
               "id": "esat-p-chem-2-02",
@@ -12892,35 +12892,35 @@
               "number": 3,
               "topic": "C4.8",
               "difficulty": 3,
-              "stem": "At the temperature and pressure used, one mole of gas occupies 24 dm³.\n\nHow many moles are in 360 cm³ of gas?",
+              "stem": "A sealed 120 cm³ sample bag is filled at a pressure and temperature at which one mole of any of the gases used occupies 24 dm³. Which sample would just fill the bag under those conditions?",
               "options": [
                 {
                   "label": "A",
-                  "text": "0.0015 mol"
+                  "text": "0.0005 mol"
                 },
                 {
                   "label": "B",
-                  "text": "0.15 mol"
+                  "text": "0.002 mol"
                 },
                 {
                   "label": "C",
-                  "text": "0.24 mol"
+                  "text": "0.012 mol"
                 },
                 {
                   "label": "D",
-                  "text": "1.5 mol"
+                  "text": "0.05 mol"
                 },
                 {
                   "label": "E",
-                  "text": "0.015 mol"
+                  "text": "0.005 mol"
                 },
                 {
                   "label": "F",
-                  "text": "15 mol"
+                  "text": "0.5 mol"
                 }
               ],
               "answer": "E",
-              "explanation": "Convert 360 cm³ to 0.360 dm³ and divide by 24 dm³/mol. Dividing 360 directly by 24 mixes cubic centimetres and cubic decimetres."
+              "explanation": "The bag holds 0.120 dm³, and 24 × 0.005 = 0.120. Gas identity does not matter when the molar volume under the conditions is given."
             },
             {
               "id": "esat-p-chem-2-04",
@@ -13963,35 +13963,35 @@
               "number": 2,
               "topic": "C2.4",
               "difficulty": 1,
-              "stem": "A main-group atom has electron arrangement 2,8,7. What is its period?",
+              "stem": "An atom has electrons in exactly three shells. A classmate argues it must have exactly three outer electrons. Which arrangement disproves that argument while keeping all inner shells filled?",
               "options": [
                 {
                   "label": "A",
-                  "text": "2"
+                  "text": "2,8,3"
                 },
                 {
                   "label": "B",
-                  "text": "7"
+                  "text": "2,3"
                 },
                 {
                   "label": "C",
-                  "text": "8"
+                  "text": "2,8,8,1"
                 },
                 {
                   "label": "D",
-                  "text": "17"
+                  "text": "2,4,3"
                 },
                 {
                   "label": "E",
-                  "text": "18"
+                  "text": "2,8,8,2"
                 },
                 {
                   "label": "F",
-                  "text": "3"
+                  "text": "2,8,5"
                 }
               ],
               "answer": "F",
-              "explanation": "Three shells are occupied. The seven outer electrons relate to the group rather than the period."
+              "explanation": "The arrangement 2,8,5 occupies three shells but has five outer electrons. The number of occupied shells fixes the row in the periodic table, not the outer electron count."
             },
             {
               "id": "esat-p-chem-5-03",
@@ -14347,35 +14347,35 @@
               "number": 2,
               "topic": "C4.3",
               "difficulty": 1,
-              "stem": "How many moles are in 9 g of water? Use Aᵣ(H) = 1 and Aᵣ(O) = 16.",
+              "stem": "A technician needs samples with equal numbers of molecules. One vial has 44 g of CO₂. The second vial will hold pure CH₄. Use Aᵣ(C) = 12, Aᵣ(O) = 16 and Aᵣ(H) = 1. Which vial label meets the requirement?",
               "options": [
                 {
                   "label": "A",
-                  "text": "0.15"
+                  "text": "CH₄, 4 g"
                 },
                 {
                   "label": "B",
-                  "text": "0.25"
+                  "text": "CH₄, 12 g"
                 },
                 {
                   "label": "C",
-                  "text": "0.5"
+                  "text": "CH₄, 16 g"
                 },
                 {
                   "label": "D",
-                  "text": "1"
+                  "text": "CH₄, 22 g"
                 },
                 {
                   "label": "E",
-                  "text": "2"
+                  "text": "CH₄, 32 g"
                 },
                 {
                   "label": "F",
-                  "text": "18"
+                  "text": "CH₄, 44 g"
                 }
               ],
               "answer": "C",
-              "explanation": "Water has molar mass 18 g/mol. Divide the given mass by 18; do not use 16 for the whole molecule."
+              "explanation": "44 g of CO₂ is one mole. Equal numbers of molecules require one mole of CH₄ as well, which has mass 12 + 4 = 16 g."
             },
             {
               "id": "esat-p-chem-6-03",
@@ -14573,35 +14573,35 @@
               "number": 8,
               "topic": "C4.10",
               "difficulty": 3,
-              "stem": "25.0 cm³ of a solution of H₂SO₄ requires 30.0 cm³ of 0.20 mol/dm³ NaOH for complete neutralisation. Find the acid concentration in mol/dm³.",
+              "stem": "A 20.0 cm³ analyte sample is just neutralised by 24.0 cm³ of a standard solution. The balanced equation shows one mole of analyte reacts with two moles of the standard solute. A second group accidentally adds 20.0 cm³ of water to an identical analyte sample before the titration. How should the groups’ titres and the analyte concentrations before titration compare?",
               "options": [
                 {
                   "label": "A",
-                  "text": "0.06"
+                  "text": "The titres are equal; the prepared concentrations are equal."
                 },
                 {
                   "label": "B",
-                  "text": "0.10"
+                  "text": "The second titre is half as large; the prepared concentrations are equal."
                 },
                 {
                   "label": "C",
-                  "text": "0.12"
+                  "text": "The titres are equal; the second group’s prepared analyte concentration is half as large."
                 },
                 {
                   "label": "D",
-                  "text": "0.15"
+                  "text": "Both the second titre and the second concentration are half as large."
                 },
                 {
                   "label": "E",
-                  "text": "0.20"
+                  "text": "The second titre is twice as large; the prepared concentrations are equal."
                 },
                 {
                   "label": "F",
-                  "text": "0.24"
+                  "text": "Both the second titre and the second concentration are twice as large."
                 }
               ],
               "answer": "C",
-              "explanation": "The alkali provides 0.006 mol NaOH. Two moles of NaOH neutralise one mole of H₂SO₄, so 0.003 mol acid in 0.025 dm³ gives 0.12 mol/dm³."
+              "explanation": "Adding water doubles the prepared volume without changing the amount of analyte. Its concentration is therefore halved, but the amount of standard solution needed to react with it is unchanged."
             },
             {
               "id": "esat-p-chem-6-09",
@@ -14803,43 +14803,43 @@
               "number": 4,
               "topic": "C10.3",
               "difficulty": 3,
-              "stem": "A gas syringe reads 0, 18, 30 and 36 cm³ at 0, 6, 12 and 18 s. Which statements are correct?\n\n1. Mean rate over the whole record is 2 cm³/s.\n\n2. Mean rate over the first 6 s is 3 cm³/s.\n\n3. Mean rate over the last 6 s is 2 cm³/s.",
+              "stem": "A spectrometer tracks a coloured reactant as it is consumed. Its reading is proportional to the amount remaining.\n\nTime / s: 0, 10, 20, 30\nReading: 60, 40, 30, 25\n\nI. The mean rate of consumption is greatest in the first 10 s.\nII. During the last 10 s the mean rate of consumption is half that during the preceding 10 s.\nIII. By 20 s the reaction has used a quarter of the initial amount.\n\nWhich statements are true?",
               "options": [
                 {
                   "label": "A",
-                  "text": "None"
+                  "text": "I and III only"
                 },
                 {
                   "label": "B",
-                  "text": "1 only"
+                  "text": "II and III only"
                 },
                 {
                   "label": "C",
-                  "text": "2 only"
+                  "text": "I only"
                 },
                 {
                   "label": "D",
-                  "text": "3 only"
+                  "text": "II only"
                 },
                 {
                   "label": "E",
-                  "text": "1 and 3 only"
+                  "text": "III only"
                 },
                 {
                   "label": "F",
-                  "text": "2 and 3 only"
+                  "text": "I, II and III"
                 },
                 {
                   "label": "G",
-                  "text": "1 and 2 only"
+                  "text": "I and II only"
                 },
                 {
                   "label": "H",
-                  "text": "1, 2 and 3"
+                  "text": "None"
                 }
               ],
               "answer": "G",
-              "explanation": "The first and last intervals give 18/6 and 6/6. Across all 18 s the increase is 36 cm³, so the average is 2 cm³/s."
+              "explanation": "The successive drops are 20, 10 and 5 units in equal times, so I and II are true. By 20 s the reading has fallen from 60 to 30, which is half, not one quarter."
             },
             {
               "id": "esat-p-chem-7-05",
@@ -15503,35 +15503,35 @@
               "number": 2,
               "topic": "C1.4",
               "difficulty": 3,
-              "stem": "An ion with charge 2+ has 18 electrons. How many electrons are in the outer shell of its neutral atom?",
+              "stem": "Two positive ions, X⁺ and Y²⁺, both have 10 electrons. The atoms X and Y are main-group metals in their ground states. Which claim about the neutral atoms follows?",
               "options": [
                 {
                   "label": "A",
-                  "text": "0"
+                  "text": "X has one more outer electron than Y."
                 },
                 {
                   "label": "B",
-                  "text": "1"
+                  "text": "They have the same number of outer electrons."
                 },
                 {
                   "label": "C",
-                  "text": "6"
+                  "text": "Y has two more occupied electron shells than X."
                 },
                 {
                   "label": "D",
-                  "text": "8"
+                  "text": "X has one more occupied electron shell than Y."
                 },
                 {
                   "label": "E",
-                  "text": "18"
+                  "text": "Both atoms have 10 electrons."
                 },
                 {
                   "label": "F",
-                  "text": "2"
+                  "text": "Y has one more outer electron than X."
                 }
               ],
               "answer": "F",
-              "explanation": "The neutral atom has 20 electrons, arranged 2,8,8,2. Do not use the outer shell of the ion."
+              "explanation": "Returning the lost electrons gives X 11 and Y 12. Their arrangements are 2,8,1 and 2,8,2, so Y has one more outer electron and both occupy three shells."
             },
             {
               "id": "esat-p-chem-9-03",
@@ -16387,43 +16387,43 @@
               "number": 5,
               "topic": "C10.3",
               "difficulty": 4,
-              "stem": "A gas syringe reads 0, 8, 20 and 24 cm³ at 0, 4, 8 and 12 s. Which row gives the fastest four-second mean rate; whole-run mean rate (cm³/s)?",
+              "stem": "A balance tracks a reaction in an open flask. The only material leaving the flask is the gas produced. The balance shows 90.0 g at 0 s, 89.4 g at 3 s, 88.2 g at 9 s and 88.0 g at 13 s. Which row gives all intervals with the largest mean rate of gas production and that rate?",
               "options": [
                 {
                   "label": "A",
-                  "text": "2; 3"
+                  "text": "0–3 s only; 0.20 g/s"
                 },
                 {
                   "label": "B",
-                  "text": "3; 3"
+                  "text": "3–9 s only; 0.20 g/s"
                 },
                 {
                   "label": "C",
-                  "text": "2; 2"
+                  "text": "9–13 s only; 0.50 g/s"
                 },
                 {
                   "label": "D",
-                  "text": "1; 2"
+                  "text": "3–9 s only; 0.40 g/s"
                 },
                 {
                   "label": "E",
-                  "text": "3; 1"
+                  "text": "0–3 s only; 0.60 g/s"
                 },
                 {
                   "label": "F",
-                  "text": "4; 2"
+                  "text": "0–3 s and 9–13 s; 0.20 g/s"
                 },
                 {
                   "label": "G",
-                  "text": "3; 2"
+                  "text": "0–3 s and 3–9 s; 0.20 g/s"
                 },
                 {
                   "label": "H",
-                  "text": "6; 2"
+                  "text": "All intervals; 0.20 g/s"
                 }
               ],
               "answer": "G",
-              "explanation": "The increments are 8, 12 and 4 cm³, making the largest interval rate 12/4. The overall rate is 24/12."
+              "explanation": "The gas masses in the three intervals are 0.6, 1.2 and 0.2 g. Divide by 3, 6 and 4 s respectively to get 0.20, 0.20 and 0.05 g/s."
             },
             {
               "id": "esat-p-chem-11-06",
@@ -17168,35 +17168,35 @@
               "number": 5,
               "topic": "C4.6",
               "difficulty": 4,
-              "stem": "For H₂SO₄ + 2KOH → K₂SO₄ + 2H₂O, 0.06 mol acid reacts with 0.10 mol base. How many moles of acid remain?",
+              "stem": "In a metal extraction model, WO₃ + 3H₂ → W + 3H₂O. A mixture starts with 0.40 mol WO₃ and 0.90 mol H₂. It reacts as far as possible. Which change to the initial mixture would use up both reactants without changing the amount of hydrogen?",
               "options": [
                 {
                   "label": "A",
-                  "text": "0 mol"
+                  "text": "Add 0.10 mol of WO₃."
                 },
                 {
                   "label": "B",
-                  "text": "0.01 mol"
+                  "text": "Remove 0.10 mol of WO₃."
                 },
                 {
                   "label": "C",
-                  "text": "0.02 mol"
+                  "text": "Remove 0.30 mol of WO₃."
                 },
                 {
                   "label": "D",
-                  "text": "0.04 mol"
+                  "text": "Add 0.30 mol of WO₃."
                 },
                 {
                   "label": "E",
-                  "text": "0.05 mol"
+                  "text": "Remove 0.20 mol of WO₃."
                 },
                 {
                   "label": "F",
-                  "text": "0.10 mol"
+                  "text": "Add 0.20 mol of WO₃."
                 }
               ],
               "answer": "B",
-              "explanation": "The 0.10 mol base consumes half as many moles of acid. Subtract 0.05 from 0.06."
+              "explanation": "The ratio is one WO₃ for every three H₂, so 0.90 mol H₂ consumes 0.30 mol WO₃. Start with 0.30 rather than 0.40 mol WO₃."
             },
             {
               "id": "esat-p-chem-13-06",
@@ -17234,43 +17234,43 @@
               "number": 7,
               "topic": "C12.5",
               "difficulty": 4,
-              "stem": "A molten salt contains Al³⁺ and Cl⁻. For every 2 mol Al formed, how many moles of electrons pass through the circuit and how many moles of Cl₂ form?",
+              "stem": "A molten ionic compound contains only M²⁺ and X⁻ ions. In a run, the circuit transfers 0.60 mol of electrons. All current produces M at the cathode and X₂ at the anode. Which pair lists the amounts of M and X₂ respectively?",
               "options": [
                 {
                   "label": "A",
-                  "text": "3; 6"
+                  "text": "0.30 mol; 0.60 mol"
                 },
                 {
                   "label": "B",
-                  "text": "2; 3"
+                  "text": "0.60 mol; 0.30 mol"
                 },
                 {
                   "label": "C",
-                  "text": "6; 6"
+                  "text": "0.60 mol; 0.60 mol"
                 },
                 {
                   "label": "D",
-                  "text": "4; 2"
+                  "text": "0.20 mol; 0.30 mol"
                 },
                 {
                   "label": "E",
-                  "text": "6; 2"
+                  "text": "0.30 mol; 0.20 mol"
                 },
                 {
                   "label": "F",
-                  "text": "3; 2"
+                  "text": "1.20 mol; 0.30 mol"
                 },
                 {
                   "label": "G",
-                  "text": "6; 3"
+                  "text": "0.30 mol; 0.30 mol"
                 },
                 {
                   "label": "H",
-                  "text": "2; 1"
+                  "text": "0.30 mol; 1.20 mol"
                 }
               ],
               "answer": "G",
-              "explanation": "Each Al³⁺ requires three electrons. Oxidising two Cl⁻ produces one Cl₂ and supplies two electrons, so 6 mol electrons correspond to 3 mol chlorine."
+              "explanation": "Each M²⁺ gains two electrons. Two X⁻ ions lose two electrons altogether to form one X₂ molecule. The amount at either electrode is therefore 0.60/2 = 0.30 mol."
             },
             {
               "id": "esat-p-chem-13-08",
@@ -17541,35 +17541,35 @@
               "number": 5,
               "topic": "C4.6",
               "difficulty": 4,
-              "stem": "For 2Al + 3Cl₂ → 2AlCl₃, 0.4 mol Al and 0.9 mol Cl₂ react. Find moles of chlorine left.",
+              "stem": "Two batches use the reaction 2CuO + C → 2Cu + CO₂. Batch P starts with 0.80 mol CuO and 0.30 mol C; batch Q starts with 0.60 mol CuO and 0.40 mol C. Both go to completion. Which conclusion is true?",
               "options": [
                 {
                   "label": "A",
-                  "text": "0 mol"
+                  "text": "They produce the same amount of copper, and carbon is left over in both."
                 },
                 {
                   "label": "B",
-                  "text": "0.1 mol"
+                  "text": "P produces more copper because it starts with more CuO."
                 },
                 {
                   "label": "C",
-                  "text": "0.2 mol"
+                  "text": "Q produces more copper because it starts with more carbon."
                 },
                 {
                   "label": "D",
-                  "text": "0.3 mol"
+                  "text": "They produce the same amount of copper, but different reactants are left over."
                 },
                 {
                   "label": "E",
-                  "text": "0.5 mol"
+                  "text": "P uses up CuO and Q uses up carbon."
                 },
                 {
                   "label": "F",
-                  "text": "0.6 mol"
+                  "text": "Both use up all their reactants."
                 }
               ],
               "answer": "D",
-              "explanation": "The aluminium uses 0.4 × 3/2 = 0.6 mol chlorine. Subtract from 0.9 mol."
+              "explanation": "P’s 0.30 mol C consumes 0.60 mol CuO, leaving CuO. Q uses all 0.60 mol CuO and leaves carbon. Each produces 0.60 mol Cu."
             },
             {
               "id": "esat-p-chem-14-06",
@@ -17944,43 +17944,43 @@
               "number": 6,
               "topic": "C10.4",
               "difficulty": 4,
-              "stem": "Each trial puts the same volume of excess acid in a gas syringe setup. Trial A uses 2 g of powdered chalk; B uses a 1 g chalk chip. Trial B reacts more slowly at first and gives 24 cm³ of gas at completion. Which row gives the likely reason for B’s slower start; A’s final gas volume?",
+              "stem": "Two batches turn dissolved A colourless when it reacts with B. Batch P starts with twice the concentration of A as Q; the batches have equal volume and B is in excess in both. At 10 s P has used a quarter of its A and Q has used half of its A. Which comparison of P with Q is true?",
               "options": [
                 {
                   "label": "A",
-                  "text": "Less exposed surface; 24 cm³"
+                  "text": "Twice as much A reacts in the first 10 s; twice as much reacts by completion."
                 },
                 {
                   "label": "B",
-                  "text": "Lower acid concentration; 48 cm³"
+                  "text": "Half as much A reacts in the first 10 s; twice as much reacts by completion."
                 },
                 {
                   "label": "C",
-                  "text": "Lower acid concentration; 24 cm³"
+                  "text": "The same amount of A reacts in the first 10 s; the same amount reacts by completion."
                 },
                 {
                   "label": "D",
-                  "text": "Less exposed surface; 48 cm³"
+                  "text": "The same amount of A reacts in the first 10 s; twice the total amount of A reacts by completion."
                 },
                 {
                   "label": "E",
-                  "text": "Greater exposed surface; 48 cm³"
+                  "text": "The same amount of A reacts in the first 10 s; half as much reacts by completion."
                 },
                 {
                   "label": "F",
-                  "text": "Less exposed surface; 12 cm³"
+                  "text": "Twice as much A reacts in the first 10 s; the same amount reacts by completion."
                 },
                 {
                   "label": "G",
-                  "text": "Higher activation energy; 24 cm³"
+                  "text": "Half as much A reacts in the first 10 s; the same amount reacts by completion."
                 },
                 {
                   "label": "H",
-                  "text": "Lower temperature necessarily; 12 cm³"
+                  "text": "Four times as much A reacts in the first 10 s; twice as much reacts by completion."
                 }
               ],
               "answer": "D",
-              "explanation": "The chip exposes less surface than the larger mass of powder. Acid is in excess, so doubling the chalk doubles final gas volume rather than halving it."
+              "explanation": "If Q starts with amount n, P starts with 2n. The amounts reacted at 10 s are (2n)/4 and n/2; they are equal. Excess B allows all the starting A to react, so P eventually uses twice as much."
             },
             {
               "id": "esat-p-chem-15-07",
@@ -18542,70 +18542,70 @@
               "number": 1,
               "topic": "B1.1",
               "difficulty": 1,
-              "stem": "Which structure in a muscle cell is the main site of aerobic respiration?",
+              "stem": "In a diagram of a muscle cell, an arrow meant to show where most ATP is produced during aerobic respiration points to the cell membrane. Where should the arrow point instead?",
               "options": [
                 {
                   "label": "A",
-                  "text": "Nucleus"
+                  "text": "The nucleus"
                 },
                 {
                   "label": "B",
-                  "text": "Mitochondrion"
+                  "text": "A mitochondrion"
                 },
                 {
                   "label": "C",
-                  "text": "Ribosome"
+                  "text": "A ribosome"
                 },
                 {
                   "label": "D",
-                  "text": "Cell membrane"
+                  "text": "The cytoplasm outside all organelles"
                 },
                 {
                   "label": "E",
-                  "text": "Chloroplast"
+                  "text": "A vacuole"
                 },
                 {
                   "label": "F",
-                  "text": "Vacuole"
+                  "text": "A chromosome"
                 }
               ],
               "answer": "B",
-              "explanation": "Most aerobic respiration in a muscle cell takes place in mitochondria. Ribosomes make proteins rather than releasing energy by aerobic respiration."
+              "explanation": "Mitochondria are the principal site of aerobic ATP production. Glycolysis occurs in the cytoplasm but generates much less ATP per glucose molecule."
             },
             {
               "id": "esat-p-bio-1-02",
               "number": 2,
               "topic": "B1.1",
               "difficulty": 2,
-              "stem": "A leaf palisade cell and a root storage cell come from the same plant. Which structure would usually be much more abundant in the palisade cell?",
+              "stem": "A microscope shows that cells on one side of a green aquatic plant contain many more chloroplasts than cells on the other side. Which prediction follows most directly if a light is shone equally on both sides and other factors are the same?",
               "options": [
                 {
                   "label": "A",
-                  "text": "Nuclei"
+                  "text": "The cells with fewer chloroplasts have more DNA in every nucleus."
                 },
                 {
                   "label": "B",
-                  "text": "Cell walls"
+                  "text": "The cells with more chloroplasts can no longer respire."
                 },
                 {
                   "label": "C",
-                  "text": "Cell membranes"
+                  "text": "The cells with fewer chloroplasts have no cell membranes."
                 },
                 {
                   "label": "D",
-                  "text": "Chloroplasts"
+                  "text": "The cells with more chloroplasts are better equipped to capture light for photosynthesis."
                 },
                 {
                   "label": "E",
-                  "text": "Large permanent vacuoles"
+                  "text": "The cells with more chloroplasts must absorb less light."
                 },
                 {
                   "label": "F",
-                  "text": "Chromosomes"
+                  "text": "The cells on both sides must capture exactly the same amount of light."
                 }
               ],
               "answer": "D",
-              "explanation": "Palisade cells are adapted to absorb light for photosynthesis, so they contain many chloroplasts. A root cell can still have a cell wall and a permanent vacuole."
+              "explanation": "Chloroplasts contain chlorophyll, which captures light for photosynthesis. The observation does not establish differences in nuclear DNA or the absence of respiration or membranes."
             },
             {
               "id": "esat-p-bio-1-03",
@@ -18857,35 +18857,35 @@
               "number": 10,
               "topic": "B3.1",
               "difficulty": 3,
-              "stem": "Of 120 cells in a growing root tip sample, 18 are in mitosis. Assume the fraction observed in mitosis estimates the fraction of the cell cycle spent in mitosis. The average cycle lasts 10 hours. What is the estimated time spent in mitosis?",
+              "stem": "In a microscope image of tissue from a developing fern leaf, 30 out of 150 cells are in mitosis. In a second image of equivalent tissue, 54 out of 180 are in mitosis. Which conclusion compares the proportions correctly?",
               "options": [
                 {
                   "label": "A",
-                  "text": "15 minutes"
+                  "text": "The second proportion is 1.2 times the first."
                 },
                 {
                   "label": "B",
-                  "text": "60 minutes"
+                  "text": "The second proportion is 1.8 times the first."
                 },
                 {
                   "label": "C",
-                  "text": "90 minutes"
+                  "text": "The second proportion is 1.5 times the first."
                 },
                 {
                   "label": "D",
-                  "text": "120 minutes"
+                  "text": "The second proportion is twice the first."
                 },
                 {
                   "label": "E",
-                  "text": "150 minutes"
+                  "text": "Both proportions are one fifth."
                 },
                 {
                   "label": "F",
-                  "text": "510 minutes"
+                  "text": "The fraction cannot be compared because the totals differ."
                 }
               ],
               "answer": "C",
-              "explanation": "Mitosis accounts for 18/120 = 15% of the cells. The estimate is 15% of 600 minutes = 90 minutes; 510 minutes estimates time outside mitosis."
+              "explanation": "The two fractions are 30/150 = 0.20 and 54/180 = 0.30. The ratio of the second to the first is 0.30/0.20 = 1.5."
             }
           ]
         },
@@ -19277,35 +19277,35 @@
               "number": 1,
               "topic": "B9.2",
               "difficulty": 1,
-              "stem": "Which blood component helps form a clot at a cut?",
+              "stem": "A model separates red cells, white cells, platelets and plasma. Which omission most directly explains why it cannot form the initial plug at a small cut?",
               "options": [
                 {
                   "label": "A",
-                  "text": "Platelets"
+                  "text": "The fraction containing platelets was omitted."
                 },
                 {
                   "label": "B",
-                  "text": "Red blood cells"
+                  "text": "The fraction carrying oxygen was omitted."
                 },
                 {
                   "label": "C",
-                  "text": "Antibodies"
+                  "text": "The fraction containing white cells was omitted."
                 },
                 {
                   "label": "D",
-                  "text": "Plasma water"
+                  "text": "All cells except the platelets were omitted."
                 },
                 {
                   "label": "E",
-                  "text": "Haemoglobin"
+                  "text": "Only white cells and red cells were omitted."
                 },
                 {
                   "label": "F",
-                  "text": "Sensory neurones"
+                  "text": "Only the dissolved glucose was omitted."
                 }
               ],
               "answer": "A",
-              "explanation": "Platelets help initiate blood clotting at an injury. Red blood cells carry oxygen and do not perform the role asked for here."
+              "explanation": "Platelets gather at a damaged vessel wall and help form the initial plug. Oxygen-carrying red cells and immune white cells do not perform that role."
             },
             {
               "id": "esat-p-bio-3-02",
@@ -19887,35 +19887,35 @@
               "number": 8,
               "topic": "B10.3",
               "difficulty": 3,
-              "stem": "A 100 m² plot contains 30 m² of shade and 70 m² of sun. Quadrat estimates give 8 plants/m² in shade and 2 plants/m² in sun for one species. What is the estimated total number of those plants?",
+              "stem": "Along a 50 m shore transect, a learner records periwinkles in ten equal sampling areas. Six of the ten fall in habitat A, but A actually covers only one quarter of the shore. The mean density is greater in A than in B. What happens if the learner uses the ten observations in a simple unweighted mean to estimate density across the shore?",
               "options": [
                 {
                   "label": "A",
-                  "text": "200"
+                  "text": "The estimate is likely too low because the denser habitat is overrepresented."
                 },
                 {
                   "label": "B",
-                  "text": "380"
+                  "text": "The estimate is likely too high because the denser habitat is overrepresented."
                 },
                 {
                   "label": "C",
-                  "text": "240"
+                  "text": "The estimate is likely too high because the less dense habitat is overrepresented."
                 },
                 {
                   "label": "D",
-                  "text": "300"
+                  "text": "The estimate is likely too low because the less dense habitat is overrepresented."
                 },
                 {
                   "label": "E",
-                  "text": "500"
+                  "text": "The estimate is unbiased because the sampling areas are all the same size."
                 },
                 {
                   "label": "F",
-                  "text": "800"
+                  "text": "The estimate is unbiased because there are more than five observations."
                 }
               ],
               "answer": "B",
-              "explanation": "Estimate the two areas separately: 30 × 8 = 240 and 70 × 2 = 140, giving 380. Using the simple mean of the two densities would incorrectly weight the areas equally."
+              "explanation": "Habitat A accounts for 60% of the samples but just 25% of the area. The unweighted mean therefore gives too much weight to the habitat with higher density."
             },
             {
               "id": "esat-p-bio-4-09",
@@ -20214,43 +20214,43 @@
               "number": 7,
               "topic": "B3.1",
               "difficulty": 3,
-              "stem": "A root-tip sample has 30 cells in mitosis and 170 outside it. Which row gives the percentage in mitosis; expected mitotic cells in a representative sample of 600?",
+              "stem": "A learner views a time-lapse of animal cells dividing. There are initially 16 cells. Exactly one quarter of those initial cells divide once before the video ends; no daughter cells divide and no cells die. Which row gives the number of division events and the final number of cells?",
               "options": [
                 {
                   "label": "A",
-                  "text": "15%; 30"
+                  "text": "4; 16"
                 },
                 {
                   "label": "B",
-                  "text": "15%; 170"
+                  "text": "4; 24"
                 },
                 {
                   "label": "C",
-                  "text": "18%; 90"
+                  "text": "8; 20"
                 },
                 {
                   "label": "D",
-                  "text": "30%; 180"
+                  "text": "8; 24"
                 },
                 {
                   "label": "E",
-                  "text": "85%; 90"
+                  "text": "8; 32"
                 },
                 {
                   "label": "F",
-                  "text": "85%; 510"
+                  "text": "12; 20"
                 },
                 {
                   "label": "G",
-                  "text": "15%; 90"
+                  "text": "4; 20"
                 },
                 {
                   "label": "H",
-                  "text": "5%; 30"
+                  "text": "12; 28"
                 }
               ],
               "answer": "G",
-              "explanation": "There are 200 cells in the first sample, so 30/200 = 15%. Apply this proportion to 600, not only to the non-mitotic cells."
+              "explanation": "One quarter of 16 is 4. Each division replaces one cell with two, a net increase of one, so the count rises to 20."
             },
             {
               "id": "esat-p-bio-5-08",
@@ -20778,35 +20778,35 @@
               "number": 1,
               "topic": "B9.2",
               "difficulty": 1,
-              "stem": "Which vessel carries blood directly from the heart to the lungs?",
+              "stem": "In a flow model of the circulation, tube P takes fluid from the right ventricle to the gas-exchange surface. Tube Q brings it back to the left side. Which labels should be attached to P and Q, respectively?",
               "options": [
                 {
                   "label": "A",
-                  "text": "Pulmonary vein"
+                  "text": "Pulmonary vein; pulmonary artery"
                 },
                 {
                   "label": "B",
-                  "text": "Aorta"
+                  "text": "Aorta; vena cava"
                 },
                 {
                   "label": "C",
-                  "text": "Pulmonary artery"
+                  "text": "Pulmonary artery; pulmonary vein"
                 },
                 {
                   "label": "D",
-                  "text": "Vena cava"
+                  "text": "Vena cava; aorta"
                 },
                 {
                   "label": "E",
-                  "text": "Renal artery"
+                  "text": "Aorta; pulmonary vein"
                 },
                 {
                   "label": "F",
-                  "text": "Hepatic vein"
+                  "text": "Pulmonary artery; vena cava"
                 }
               ],
               "answer": "C",
-              "explanation": "The pulmonary artery carries blood away from the right ventricle to the lungs. The pulmonary vein carries blood in the return direction."
+              "explanation": "Arteries carry blood away from the heart, so P is the pulmonary artery. The pulmonary vein brings blood from the lungs back to the left side."
             },
             {
               "id": "esat-p-bio-7-02",
@@ -20879,43 +20879,43 @@
               "number": 4,
               "topic": "B9.2",
               "difficulty": 3,
-              "stem": "A resting heart beats 72 times/min and ejects 75 cm³ per beat. After a change it beats 90 times/min and ejects 80 cm³ per beat. Which row gives the initial; final output (L/min)?",
+              "stem": "A circulation model uses a pump with a one-way valve. The pump displaces 80 mL on every squeeze. During 75 squeezes in a minute, a leaky valve lets 20 mL flow backwards on every squeeze. Which row gives total forward displacement before leakage and net forward transfer for that minute?",
               "options": [
                 {
                   "label": "A",
-                  "text": "5.4; 6.48"
+                  "text": "6.0 L; 6.0 L"
                 },
                 {
                   "label": "B",
-                  "text": "5.4; 72"
+                  "text": "6.0 L; 1.5 L"
                 },
                 {
                   "label": "C",
-                  "text": "5.76; 7.2"
+                  "text": "4.5 L; 1.5 L"
                 },
                 {
                   "label": "D",
-                  "text": "7.2; 5.4"
+                  "text": "4.5 L; 3.0 L"
                 },
                 {
                   "label": "E",
-                  "text": "54; 72"
+                  "text": "7.5 L; 6.0 L"
                 },
                 {
                   "label": "F",
-                  "text": "0.54; 0.72"
+                  "text": "0.8 L; 0.6 L"
                 },
                 {
                   "label": "G",
-                  "text": "5.4; 7.2"
+                  "text": "6.0 L; 4.5 L"
                 },
                 {
                   "label": "H",
-                  "text": "5.76; 6.75"
+                  "text": "60 L; 45 L"
                 }
               ],
               "answer": "G",
-              "explanation": "Multiply rate by volume per beat. Convert each result from cm³ to litres by dividing by 1000."
+              "explanation": "Total forward displacement is 80 × 75 = 6000 mL. The net volume per squeeze is 60 mL, so the net volume is 4500 mL, or 4.5 L."
             },
             {
               "id": "esat-p-bio-7-05",
@@ -21850,43 +21850,43 @@
               "number": 10,
               "topic": "B3.1",
               "difficulty": 5,
-              "stem": "A root-tip sample contains 48 dividing cells out of 240. The cell cycle lasts 15 h and half of dividing cells are in its first mitotic stage. Assuming proportions estimate time fractions, how many minutes does that stage last?",
+              "stem": "In a model of cell division, each of three cells completes a round of mitosis. In the next round just half the resulting cells divide; the others stop dividing. In the final round only daughters of cells that divided in the second round divide, and each divides once. No cells die. How many cells are there at the end?",
               "options": [
                 {
                   "label": "A",
-                  "text": "30"
+                  "text": "9"
                 },
                 {
                   "label": "B",
-                  "text": "45"
+                  "text": "12"
                 },
                 {
                   "label": "C",
-                  "text": "60"
+                  "text": "16"
                 },
                 {
                   "label": "D",
-                  "text": "120"
+                  "text": "18"
                 },
                 {
                   "label": "E",
-                  "text": "150"
+                  "text": "21"
                 },
                 {
                   "label": "F",
-                  "text": "180"
+                  "text": "24"
                 },
                 {
                   "label": "G",
-                  "text": "90"
+                  "text": "15"
                 },
                 {
                   "label": "H",
-                  "text": "225"
+                  "text": "27"
                 }
               ],
               "answer": "G",
-              "explanation": "The stage occupies half of the 48/240 mitotic fraction, so times are one tenth of the 15-hour cycle. Convert 1.5 h to minutes."
+              "explanation": "After the first round there are 6 cells. The second round leaves 3 undivided cells and makes 6 daughter cells. The final round doubles only those 6 daughters, leaving 3 + 12 = 15."
             }
           ]
         },
@@ -22665,31 +22665,31 @@
               "number": 1,
               "topic": "B11.2",
               "difficulty": 2,
-              "stem": "A cut leafy stalk is stood in coloured water. Later, the colour appears in narrow tubes in the stalk and in some veins of the leaf. Which tissue has the dye most directly traced?",
+              "stem": "Water and a dissolved sugar each contain a different detectable label. The water label is put into the soil and the sugar label into a mature part of a shoot. Which pattern would support the predicted routes to a growing bud?",
               "options": [
                 {
                   "label": "A",
-                  "text": "Phloem, which carries water and mineral ions up from roots."
+                  "text": "Both labels only in xylem."
                 },
                 {
                   "label": "B",
-                  "text": "Xylem, which carries water up to leaves."
+                  "text": "Water label in xylem; sugar label in phloem."
                 },
                 {
                   "label": "C",
-                  "text": "Phloem, which carries sugars away from leaves."
+                  "text": "Both labels only in phloem."
                 },
                 {
                   "label": "D",
-                  "text": "Epidermis, which transports water between organs."
+                  "text": "Water label in phloem; sugar label in xylem."
                 },
                 {
                   "label": "E",
-                  "text": "Guard cells, which transport sugars from roots to leaves."
+                  "text": "Water label in guard cells only; sugar label in xylem."
                 }
               ],
               "answer": "B",
-              "explanation": "The dye travels with the water through the continuous xylem vessels from the cut stalk into the leaf veins."
+              "explanation": "Xylem carries water absorbed from the soil. Phloem transports dissolved sugars from mature source tissue to growing sinks such as a bud."
             },
             {
               "id": "esat-p-bio-12-02",
@@ -22910,43 +22910,43 @@
               "number": 8,
               "topic": "B10.3",
               "difficulty": 5,
-              "stem": "Four 0.5 m² quadrats in region A contain 4, 8, 6 and 10 plants. Four in B contain 1, 3, 2 and 2. Region A covers 30 m² and B covers 70 m². Estimate the total number of plants.",
+              "stem": "A marine survey photographs 12 randomly located 0.25 m² patches on a rocky shore. Eight patches have no barnacles and the other four have 9, 12, 15 and 24 barnacles. A student estimates abundance for 30 m² but leaves out the empty patches. By what factor is their estimate too large?",
               "options": [
                 {
                   "label": "A",
-                  "text": "360"
+                  "text": "2"
                 },
                 {
                   "label": "B",
-                  "text": "420"
+                  "text": "4"
                 },
                 {
                   "label": "C",
-                  "text": "560"
+                  "text": "5"
                 },
                 {
                   "label": "D",
-                  "text": "840"
+                  "text": "8"
                 },
                 {
                   "label": "E",
-                  "text": "900"
+                  "text": "12"
                 },
                 {
                   "label": "F",
-                  "text": "980"
+                  "text": "1.5"
                 },
                 {
                   "label": "G",
-                  "text": "1120"
+                  "text": "1.25"
                 },
                 {
                   "label": "H",
-                  "text": "700"
+                  "text": "3"
                 }
               ],
               "answer": "H",
-              "explanation": "The two sampled areas are 2 m² each. Densities are 14 and 4 per m², so the estimated regional totals are 420 and 280."
+              "explanation": "All 12 equal patches cover 3 m², while the four occupied patches cover 1 m². The counted totals are identical, so excluding empty patches triples the estimated density and therefore the estimated abundance."
             },
             {
               "id": "esat-p-bio-12-09",
@@ -23046,23 +23046,23 @@
               "number": 1,
               "topic": "B1.1",
               "difficulty": 2,
-              "stem": "Which structure houses most of a typical animal cell’s DNA?",
+              "stem": "A cell diagram labels three compartments. Compartment P is surrounded by a double membrane and contains chromosomes. Q is outside P and contains many ribosomes. R lies at the edge of the cell and regulates exchange with the surroundings. Which label describes compartment P?",
               "options": [
                 {
                   "label": "A",
-                  "text": "Ribosome"
+                  "text": "Cytoplasm"
                 },
                 {
                   "label": "B",
-                  "text": "Cell membrane"
+                  "text": "Cell-surface membrane"
                 },
                 {
                   "label": "C",
-                  "text": "Lysosome"
+                  "text": "Mitochondrion"
                 },
                 {
                   "label": "D",
-                  "text": "Cytoplasm outside organelles"
+                  "text": "Cell wall"
                 },
                 {
                   "label": "E",
@@ -23070,7 +23070,7 @@
                 }
               ],
               "answer": "E",
-              "explanation": "Most genetic material is in chromosomes in the nucleus; mitochondria contain only a small fraction."
+              "explanation": "Chromosomes carrying most of the cell’s DNA lie within the membrane-bound nucleus. In this description Q is cytoplasm and R is the cell-surface membrane."
             },
             {
               "id": "esat-p-bio-13-02",
@@ -23426,31 +23426,31 @@
               "number": 1,
               "topic": "B4.2",
               "difficulty": 2,
-              "stem": "What term describes two different versions of the same gene?",
+              "stem": "Two copies of a gene occupy the same position on corresponding chromosomes. They differ at one base, but a diagram labels them as completely different genes. How should the label be corrected?",
               "options": [
                 {
                   "label": "A",
-                  "text": "Alleles"
+                  "text": "They are different alleles of the same gene."
                 },
                 {
                   "label": "B",
-                  "text": "Organelles"
+                  "text": "They are the same allele because their positions match."
                 },
                 {
                   "label": "C",
-                  "text": "Chromatids of unrelated chromosomes"
+                  "text": "They are different chromosomes rather than gene copies."
                 },
                 {
                   "label": "D",
-                  "text": "Proteases"
+                  "text": "They are different genes because any base change creates a new gene."
                 },
                 {
                   "label": "E",
-                  "text": "Phenotypes"
+                  "text": "They are identical because chromosomes in a pair carry identical DNA."
                 }
               ],
               "answer": "A",
-              "explanation": "Alleles are versions of the same gene. A phenotype is an observable characteristic."
+              "explanation": "Different DNA versions at the same gene locus are alleles. The common position does not make their base sequences identical."
             },
             {
               "id": "esat-p-bio-14-02",
@@ -23881,43 +23881,43 @@
               "number": 4,
               "topic": "B9.2",
               "difficulty": 4,
-              "stem": "Heart rate is 60 beats/min with 80 mL ejected per beat, then 100 beats/min with 60 mL per beat. Which row gives the two cardiac outputs in L/min?",
+              "stem": "Equal volumes of fluid enter and leave a model capillary per minute. The entering fluid carries 12 units of oxygen per litre and the leaving fluid carries 8. Flow is 3 L/min. A second condition doubles flow but halves the oxygen lost per litre. Which row gives the oxygen delivery before and after the change?",
               "options": [
                 {
                   "label": "A",
-                  "text": "0.48; 0.60"
+                  "text": "12 units/min; 24 units/min"
                 },
                 {
                   "label": "B",
-                  "text": "4.8; 8.0"
+                  "text": "12 units/min; 6 units/min"
                 },
                 {
                   "label": "C",
-                  "text": "6.0; 4.8"
+                  "text": "24 units/min; 24 units/min"
                 },
                 {
                   "label": "D",
-                  "text": "1.4; 1.6"
+                  "text": "36 units/min; 36 units/min"
                 },
                 {
                   "label": "E",
-                  "text": "48; 60"
+                  "text": "36 units/min; 72 units/min"
                 },
                 {
                   "label": "F",
-                  "text": "60; 100"
+                  "text": "4 units/min; 2 units/min"
                 },
                 {
                   "label": "G",
-                  "text": "4.8; 6.0"
+                  "text": "12 units/min; 12 units/min"
                 },
                 {
                   "label": "H",
-                  "text": "8.0; 4.8"
+                  "text": "8 units/min; 16 units/min"
                 }
               ],
               "answer": "G",
-              "explanation": "Multiply each rate by its matching stroke volume, then divide mL/min by 1000."
+              "explanation": "Initially each litre loses 4 units, so 3 L transfers 12 units per minute. In the second condition 6 L transfers 2 units per litre, also 12 units per minute."
             },
             {
               "id": "esat-p-bio-15-05",
@@ -25150,35 +25150,35 @@
               "number": 8,
               "topic": "MM3.3",
               "difficulty": 4,
-              "stem": "Tangents to (x − 1)² + (y + 2)² = 25 at (4, 2) and (5, 1) meet at P. Find the x-coordinate of P.",
+              "stem": "Two circular range boundaries meet at P(4, 4). Their centres are A(0, 1) and B(4, 0). At P, two straight paths follow the directions perpendicular to the radii AP and BP, respectively. What is the tangent of the acute angle between the two paths?",
               "options": [
                 {
                   "label": "A",
-                  "text": "−32/7"
+                  "text": "3/4"
                 },
                 {
                   "label": "B",
-                  "text": "4"
+                  "text": "4/5"
                 },
                 {
                   "label": "C",
-                  "text": "32/7"
+                  "text": "4/3"
                 },
                 {
                   "label": "D",
-                  "text": "9/2"
+                  "text": "3/5"
                 },
                 {
                   "label": "E",
-                  "text": "5"
+                  "text": "5/4"
                 },
                 {
                   "label": "F",
-                  "text": "23/3"
+                  "text": "5/3"
                 }
               ],
               "answer": "C",
-              "explanation": "The radii have gradients 4/3 and 3/4, so the tangent gradients are −3/4 and −4/3. The tangent equations are y = 5 − 3x/4 and y = 23/3 − 4x/3; equating gives x = 32/7. The midpoint of the contact points does not lie on both tangents."
+              "explanation": "The angle between the paths equals the acute angle between the radii. BP is vertical, and AP has horizontal displacement 4 and vertical displacement 3, giving tangent 4/3."
             },
             {
               "id": "esat-p-m2-2-09",
@@ -25641,35 +25641,35 @@
               "number": 1,
               "topic": "MM6.3",
               "difficulty": 3,
-              "stem": "At two points on y = x³ + 2x² the tangents both have gradient 4. How far apart are their x-coordinates?",
+              "stem": "An adjustable screen follows y = x³ − 3kx, where k is a real setting. Which setting gives exactly one horizontal point rather than two or none?",
               "options": [
                 {
                   "label": "A",
-                  "text": "2/3"
+                  "text": "k = 1"
                 },
                 {
                   "label": "B",
-                  "text": "4/3"
+                  "text": "k = −1"
                 },
                 {
                   "label": "C",
-                  "text": "2"
+                  "text": "k = 3"
                 },
                 {
                   "label": "D",
-                  "text": "8/3"
+                  "text": "k = 0"
                 },
                 {
                   "label": "E",
-                  "text": "3"
+                  "text": "Any positive k"
                 },
                 {
                   "label": "F",
-                  "text": "10/3"
+                  "text": "Any negative k"
                 }
               ],
               "answer": "D",
-              "explanation": "Set the derivative 3x² + 4x equal to 4. The resulting quadratic has roots −2 and 2/3, whose separation is 8/3."
+              "explanation": "The derivative is 3x² − 3k. A horizontal point requires x² = k. There is exactly one real solution only if k is zero."
             },
             {
               "id": "esat-p-m2-4-02",
@@ -28515,39 +28515,39 @@
               "number": 5,
               "topic": "MM4.6",
               "difficulty": 4,
-              "stem": "How many solutions does 2sin²x − 3sin x + 1 = 0 have for 0 < x < 3π?",
+              "stem": "Two alerts are defined for angles 0 ≤ x ≤ 2π. Alert A triggers when 2 sin x = 1. Alert B triggers when 4 sin²x = 1. What changes if B is used in place of A?",
               "options": [
                 {
                   "label": "A",
-                  "text": "3"
+                  "text": "It also triggers at π and 2π, and retains both original angles."
                 },
                 {
                   "label": "B",
-                  "text": "4"
+                  "text": "It replaces the original angles with 7π/6 and 11π/6."
                 },
                 {
                   "label": "C",
-                  "text": "5"
+                  "text": "It adds only 7π/6."
                 },
                 {
                   "label": "D",
-                  "text": "7"
+                  "text": "It adds only 11π/6."
                 },
                 {
                   "label": "E",
-                  "text": "8"
+                  "text": "It makes no change to the triggering angles."
                 },
                 {
                   "label": "F",
-                  "text": "9"
+                  "text": "It removes one original angle without adding any others."
                 },
                 {
                   "label": "G",
-                  "text": "6"
+                  "text": "It also triggers at 7π/6 and 11π/6, and retains both original angles."
                 }
               ],
               "answer": "G",
-              "explanation": "The sine values are 1 and 1/2. Each occurs on two positive arches in the interval, once per arch for 1 and twice for 1/2."
+              "explanation": "Squaring allows 2 sin x to be −1 as well as +1. The new cases lie in quadrants III and IV with reference angle π/6, giving 7π/6 and 11π/6."
             },
             {
               "id": "esat-p-m2-11-06",
@@ -28810,35 +28810,35 @@
               "number": 2,
               "topic": "MM6.2",
               "difficulty": 2,
-              "stem": "Find the derivative of 4√x for x > 0.",
+              "stem": "A rail has height h(x) = 3√x above a reference line for x > 0. The rail is shifted vertically so its new height is h(x) + 7. Which comparison holds at x = 9?",
               "options": [
                 {
                   "label": "A",
-                  "text": "2√x"
+                  "text": "The two gradients are equal and both are 3."
                 },
                 {
                   "label": "B",
-                  "text": "4/√x"
+                  "text": "The new gradient is 7 greater than the old one."
                 },
                 {
                   "label": "C",
-                  "text": "1/√x"
+                  "text": "The new gradient is 7 times the old one."
                 },
                 {
                   "label": "D",
-                  "text": "2/√x"
+                  "text": "The two gradients are equal and both are 1/2."
                 },
                 {
                   "label": "E",
-                  "text": "2/x"
+                  "text": "The new gradient is zero because the shift is constant."
                 },
                 {
                   "label": "F",
-                  "text": "4/x"
+                  "text": "The old gradient is 1/2 but the new one is 1/9."
                 }
               ],
               "answer": "D",
-              "explanation": "Write 4x^(1/2). Differentiating halves the coefficient and gives exponent −1/2."
+              "explanation": "The derivative of 3x^(1/2) is 3/(2√x), which equals 1/2 at x = 9. A constant vertical shift has derivative zero, so it leaves the gradient unchanged."
             },
             {
               "id": "esat-p-m2-12-03",
@@ -28915,35 +28915,35 @@
               "number": 5,
               "topic": "MM6.3",
               "difficulty": 4,
-              "stem": "The tangent to y = x² at x = a passes through (0, −9). What is the sum of the squares of the possible a-values?",
+              "stem": "A machine part follows y = x². The lines that just touch it at x = a and x = b have the same y-intercept and touch at different points. Their gradients differ by 12. What must the common y-intercept be?",
               "options": [
                 {
                   "label": "A",
-                  "text": "0"
+                  "text": "−36"
                 },
                 {
                   "label": "B",
-                  "text": "6"
+                  "text": "−6"
                 },
                 {
                   "label": "C",
-                  "text": "9"
+                  "text": "−3"
                 },
                 {
                   "label": "D",
-                  "text": "27"
+                  "text": "0"
                 },
                 {
                   "label": "E",
-                  "text": "81"
+                  "text": "9"
                 },
                 {
                   "label": "F",
-                  "text": "18"
+                  "text": "−9"
                 }
               ],
               "answer": "F",
-              "explanation": "The tangent is y = 2ax − a², so a² = 9. Both a = 3 and a = −3 contribute 9."
+              "explanation": "The line at x = a has gradient 2a and y-intercept −a². Equal intercepts at distinct points give b = −a. The gradient difference is 4·abs(a) = 12, so the common intercept is −a² = −9."
             },
             {
               "id": "esat-p-m2-12-06",
@@ -30460,35 +30460,35 @@
               "number": 5,
               "topic": "MM3.3",
               "difficulty": 4,
-              "stem": "The tangent to x² + y² = 25 at (3, 4) meets the y-axis at Q. Find the y-coordinate of Q.",
+              "stem": "A cable connects P(6, 3) to the centre O(2, 0) of a round mechanism. A straight guide through P is perpendicular to the cable. Points A(3, 7), B(9, −1), and C(0, 5) are possible locations for a support on the guide. Which ones lie on it?",
               "options": [
                 {
                   "label": "A",
-                  "text": "3/4"
+                  "text": "A only"
                 },
                 {
                   "label": "B",
-                  "text": "4"
+                  "text": "B only"
                 },
                 {
                   "label": "C",
-                  "text": "25/4"
+                  "text": "A and B only"
                 },
                 {
                   "label": "D",
-                  "text": "16/3"
+                  "text": "C only"
                 },
                 {
                   "label": "E",
-                  "text": "25/3"
+                  "text": "A and C only"
                 },
                 {
                   "label": "F",
-                  "text": "7"
+                  "text": "B and C only"
                 }
               ],
               "answer": "C",
-              "explanation": "The radius has slope 4/3, so the tangent slope is −3/4. Setting x = 0 in y − 4 = −3(x − 3)/4 gives 25/4."
+              "explanation": "The cable rises 3 for a horizontal change of 4, so the guide gradient is −4/3. Moving −3 from P raises y by 4 at A; moving 3 lowers y by 4 at B. Moving −6 would raise y by 8, not by 2, so C is not on the guide."
             },
             {
               "id": "esat-p-m2-16-06",
@@ -30581,35 +30581,35 @@
               "number": 8,
               "topic": "MM7.2",
               "difficulty": 4,
-              "stem": "Evaluate ∫₀¹ x(x + 2)² dx.",
+              "stem": "A sensor accumulates a signal from t = 0 to t = 1 at instantaneous rate 3t + 6t². A recalibration adds t³ to its rate. What fraction of the new accumulation is due to the added term?",
               "options": [
                 {
                   "label": "A",
-                  "text": "19/12"
+                  "text": "1/14"
                 },
                 {
                   "label": "B",
-                  "text": "29/12"
+                  "text": "1/12"
                 },
                 {
                   "label": "C",
-                  "text": "13/4"
+                  "text": "1/4"
                 },
                 {
                   "label": "D",
-                  "text": "11/3"
+                  "text": "1/8"
                 },
                 {
                   "label": "E",
-                  "text": "43/12"
+                  "text": "1/15"
                 },
                 {
                   "label": "F",
-                  "text": "4"
+                  "text": "1/6"
                 }
               ],
               "answer": "E",
-              "explanation": "Expand to x³ + 4x² + 4x. The integral is 1/4 + 4/3 + 2 = 43/12; the square includes the middle term."
+              "explanation": "The old accumulation is ∫₀¹ (3t + 6t²) dt = 3/2 + 2 = 7/2. The added contribution is ∫₀¹ t³ dt = 1/4, making the new total 15/4. The required fraction is (1/4)/(15/4) = 1/15."
             },
             {
               "id": "esat-p-m2-16-09",

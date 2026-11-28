@@ -486,35 +486,35 @@
       {
        "topic": "M7.7",
        "difficulty": 3,
-       "stem": "A bag contains 5 red and 3 blue counters. Two counters are taken at random without replacement.\n\nGiven that at least one of the counters is red, what is the probability that both are red?",
+       "stem": "A survey is equally likely to select any of four weekdays or either of two weekend days, without repeating a day. Two survey days are selected. Which event is more likely: two weekdays, or one day of each type?",
        "options": [
         {
          "label": "A",
-         "text": "2/5"
+         "text": "One of each is more likely, by 2/15."
         },
         {
          "label": "B",
-         "text": "5/8"
+         "text": "Two weekdays are more likely, by 2/15."
         },
         {
          "label": "C",
-         "text": "1/2"
+         "text": "One of each is more likely, by 1/15."
         },
         {
          "label": "D",
-         "text": "5/14"
+         "text": "Two weekdays are more likely, by 1/15."
         },
         {
          "label": "E",
-         "text": "4/7"
+         "text": "They are equally likely."
         },
         {
          "label": "F",
-         "text": "25/28"
+         "text": "One of each is more likely, by 1/3."
         }
        ],
        "answer": "A",
-       "explanation": "P(both red) = 5/8 × 4/7 = 20/56. P(at least one red) = 1 − P(both blue) = 1 − (3/8 × 2/7) = 50/56. Conditional probability = 20/50 = 2/5.",
+       "explanation": "All 15 unordered pairs are equally likely. There are 4 × 2 = 8 mixed pairs and 4 × 3/2 = 6 weekday pairs. Their probabilities differ by 2/15.",
        "id": "esat-a-m1-14",
        "number": 14
       },
@@ -2147,35 +2147,35 @@
       {
        "topic": "C4.10",
        "difficulty": 2,
-       "stem": "25.0 cm³ of sodium hydroxide solution is exactly neutralised by 20.0 cm³ of 0.100 mol/dm³ sulfuric acid.\n\nWhat is the concentration of the sodium hydroxide solution?",
+       "stem": "Two 20.0 cm³ samples of a monoprotic acid are titrated separately with the same alkali, which reacts with the acid in a 1 : 1 molar ratio. Sample P needs 12.0 cm³ of alkali and sample Q needs 18.0 cm³. A third 20.0 cm³ sample uses 10.0 cm³ from each of P and Q’s stock solutions. What titre should this mixed sample give?",
        "options": [
         {
          "label": "A",
-         "text": "0.040 mol/dm³"
+         "text": "6.0 cm³"
         },
         {
          "label": "B",
-         "text": "0.080 mol/dm³"
+         "text": "9.0 cm³"
         },
         {
          "label": "C",
-         "text": "0.125 mol/dm³"
+         "text": "12.0 cm³"
         },
         {
          "label": "D",
-         "text": "0.160 mol/dm³"
+         "text": "15.0 cm³"
         },
         {
          "label": "E",
-         "text": "0.200 mol/dm³"
+         "text": "18.0 cm³"
         },
         {
          "label": "F",
-         "text": "0.320 mol/dm³"
+         "text": "30.0 cm³"
         }
        ],
        "answer": "D",
-       "explanation": "H₂SO₄ + 2NaOH → Na₂SO₄ + 2H₂O. Moles acid = 0.0200 × 0.100 = 0.00200, so NaOH = 0.00400 mol in 0.0250 dm³: 0.160 mol/dm³. (0.080 forgets the 1 : 2 ratio.)",
+       "explanation": "Each portion contains half as much acid as its original 20.0 cm³ sample. It therefore requires half of its original titre, giving 6.0 + 9.0 = 15.0 cm³.",
        "id": "esat-a-chem-07",
        "number": 7
       },
@@ -2812,35 +2812,35 @@
       {
        "topic": "C13.6d",
        "difficulty": 2,
-       "stem": "Ethanol reacts with propanoic acid in the presence of an acid catalyst to form an ester and water.\n\nWhat is the relative formula mass of the ester?\n\n(Ar: H = 1, C = 12, O = 16)",
+       "stem": "A process makes two esters using methanol. One acid is ethanoic acid and the other is propanoic acid. In each reaction one acid molecule and one methanol molecule form one ester and one water molecule. Use Aᵣ(C) = 12 and Aᵣ(H) = 1. How do the two ester formula masses compare?",
        "options": [
         {
          "label": "A",
-         "text": "74"
+         "text": "The ester from propanoic acid is 12 units heavier."
         },
         {
          "label": "B",
-         "text": "88"
+         "text": "The ester from propanoic acid is 18 units heavier."
         },
         {
          "label": "C",
-         "text": "102"
+         "text": "The ester from propanoic acid is 14 units heavier."
         },
         {
          "label": "D",
-         "text": "116"
+         "text": "The ester from ethanoic acid is 14 units heavier."
         },
         {
          "label": "E",
-         "text": "120"
+         "text": "The ester from ethanoic acid is 18 units heavier."
         },
         {
          "label": "F",
-         "text": "130"
+         "text": "They have the same mass because they use the same alcohol."
         }
        ],
        "answer": "C",
-       "explanation": "C₂H₅OH (46) + C₂H₅COOH (74) → C₂H₅COOC₂H₅ + H₂O (18). Ester Mr = 46 + 74 − 18 = 102 (C₅H₁₀O₂, ethyl propanoate).",
+       "explanation": "Propanoic acid differs from ethanoic acid by CH₂. Both reactions add methanol and remove water, so the esters also differ by CH₂, with mass 12 + 2 = 14.",
        "id": "esat-a-chem-26",
        "number": 26
       },
@@ -2960,35 +2960,35 @@
       {
        "topic": "P1.2",
        "difficulty": 2,
-       "stem": "Two 6.0 Ω resistors are connected in parallel. This combination is connected in series with a 3.0 Ω resistor across a 12 V battery of negligible internal resistance.\n\nWhat is the power dissipated in ONE of the 6.0 Ω resistors?",
+       "stem": "A costume has two identical decorative panels. Each requires the full 6 V supply to work at its intended brightness. One panel may be switched off without affecting the other. Which circuit meets both requirements?",
        "options": [
         {
          "label": "A",
-         "text": "1.5 W"
+         "text": "Put the panels in series with a single switch before them."
         },
         {
          "label": "B",
-         "text": "3.0 W"
+         "text": "Put the panels in series with one switch beside each panel."
         },
         {
          "label": "C",
-         "text": "4.0 W"
+         "text": "Put the panels on separate branches with a single switch before the split."
         },
         {
          "label": "D",
-         "text": "6.0 W"
+         "text": "Put the panels on separate branches across the supply, each with its own switch."
         },
         {
          "label": "E",
-         "text": "12 W"
+         "text": "Use two switches in series with both panels on just one branch."
         },
         {
          "label": "F",
-         "text": "24 W"
+         "text": "Put the panels side by side on a single branch with one switch after both."
         }
        ],
        "answer": "D",
-       "explanation": "Parallel pair = 3.0 Ω, total = 6.0 Ω, so the battery current is 2.0 A. It splits equally: 1.0 A through each 6.0 Ω resistor. P = I²R = 1² × 6 = 6.0 W.",
+       "explanation": "Parallel branches each receive the full supply voltage. Each panel needs its own switch in its branch so switching it off does not interrupt the other branch.",
        "id": "esat-a-phys-03",
        "number": 3
       },
@@ -3555,11 +3555,11 @@
       {
        "topic": "P3.6c",
        "difficulty": 2,
-       "stem": "A ball of mass 0.20 kg hits a wall at 15 m/s and rebounds along the same line at 10 m/s. It is in contact with the wall for 0.050 s.\n\nWhat is the average force exerted on the ball by the wall?",
+       "stem": "A 2 kg practice hammer is travelling downwards at 3 m/s. A cushion stops it in 0.20 s without rebound. Take g = 10 N/kg. What is the mean upward force exerted by the cushion while it stops the hammer?",
        "options": [
         {
          "label": "A",
-         "text": "1.0 N"
+         "text": "10 N"
         },
         {
          "label": "B",
@@ -3567,58 +3567,58 @@
         },
         {
          "label": "C",
-         "text": "40 N"
+         "text": "30 N"
         },
         {
          "label": "D",
-         "text": "60 N"
+         "text": "40 N"
         },
         {
          "label": "E",
-         "text": "100 N"
+         "text": "50 N"
         },
         {
          "label": "F",
-         "text": "250 N"
+         "text": "60 N"
         }
        ],
        "answer": "E",
-       "explanation": "Velocity changes from +15 to −10 m/s: a change of 25 m/s. Δp = 0.20 × 25 = 5.0 kg m/s. F = Δp/Δt = 5.0 ÷ 0.050 = 100 N. (20 N wrongly uses 15 − 10 = 5 m/s.)",
+       "explanation": "The upward change in momentum is 6 kg m/s, making the mean resultant 30 N upward. The downward weight is 20 N, so the cushion supplies 50 N upward.",
        "id": "esat-a-phys-20",
        "number": 20
       },
       {
        "topic": "P3.7h",
        "difficulty": 2,
-       "stem": "An electric crane lifts a load of mass 500 kg through a height of 12 m in 20 s at constant speed. The crane is 60% efficient.\n\nWhat is the electrical input power of the crane?\n\n(g = 10 N/kg)",
+       "stem": "A cable railway lifts two identical loaded cabins to the same elevation. Cabin P takes twice as long as Q. P’s drive transfers half its input energy usefully; Q’s transfers three quarters. How does P’s mean input power compare with Q’s?",
        "options": [
         {
          "label": "A",
-         "text": "300 W"
+         "text": "P’s is one half of Q’s."
         },
         {
          "label": "B",
-         "text": "1800 W"
+         "text": "P’s is two thirds of Q’s."
         },
         {
          "label": "C",
-         "text": "3000 W"
+         "text": "P’s is the same as Q’s."
         },
         {
          "label": "D",
-         "text": "3600 W"
+         "text": "P’s is four thirds of Q’s."
         },
         {
          "label": "E",
-         "text": "5000 W"
+         "text": "P’s is three quarters of Q’s."
         },
         {
          "label": "F",
-         "text": "6000 W"
+         "text": "P’s is three halves of Q’s."
         }
        ],
        "answer": "E",
-       "explanation": "Useful power = mgh/t = 500 × 10 × 12 ÷ 20 = 3000 W. Input = 3000 ÷ 0.60 = 5000 W.",
+       "explanation": "For the same useful work W, P uses 2W and Q uses 4W/3. With twice Q’s time, P’s input power is (2/(4/3))/2 = 3/4 of Q’s.",
        "id": "esat-a-phys-21",
        "number": 21
       },
@@ -3765,35 +3765,35 @@
       {
        "topic": "P5.4a",
        "difficulty": 3,
-       "stem": "1.5 kg of metal X (density 7.5 g/cm³) is mixed with 0.90 kg of metal Y (density 3.0 g/cm³) to make an alloy. Assume the volume of the alloy equals the total volume of the two metals.\n\nWhat is the density of the alloy?",
+       "stem": "A craft worker stacks a 12 cm³ piece of material X of density 2 g/cm³ and a 4 cm³ piece of Y of density 6 g/cm³. The joint adds negligible mass and volume. Which conclusion about the combined piece is correct?",
        "options": [
         {
          "label": "A",
-         "text": "3.6 g/cm³"
+         "text": "Its density is 4 g/cm³ because the two densities have equal weight."
         },
         {
          "label": "B",
-         "text": "4.5 g/cm³"
+         "text": "Its density is 2 g/cm³ because X takes up most of the volume."
         },
         {
          "label": "C",
-         "text": "4.8 g/cm³"
+         "text": "Its density is 3 g/cm³ because the volumes weight the two densities unequally."
         },
         {
          "label": "D",
-         "text": "5.0 g/cm³"
+         "text": "Its density is 5 g/cm³ because Y is the denser part."
         },
         {
          "label": "E",
-         "text": "5.25 g/cm³"
+         "text": "Its density is 6 g/cm³ because both pieces have equal mass."
         },
         {
          "label": "F",
-         "text": "6.0 g/cm³"
+         "text": "Its density is 8 g/cm³ because the densities must be added."
         }
        ],
        "answer": "C",
-       "explanation": "Volumes: 1500 ÷ 7.5 = 200 cm³ and 900 ÷ 3.0 = 300 cm³. Density = 2400 g ÷ 500 cm³ = 4.8 g/cm³. (5.25 is the trap of averaging the densities.)",
+       "explanation": "Both masses are 24 g. The combined density is total mass divided by total volume, 48/16 = 3 g/cm³, not the unweighted mean of the two densities.",
        "id": "esat-a-phys-26",
        "number": 26
       },
@@ -4018,35 +4018,35 @@
       {
        "topic": "MM4.5",
        "difficulty": 2,
-       "stem": "How many solutions does 2sin²x = sin x have in the interval 0 ≤ x < 2π?",
+       "stem": "A student claims that every angle x with sin x = 1/2 also has sin(2x) = √3/2. Which angle gives a counterexample?",
        "options": [
         {
          "label": "A",
-         "text": "4"
+         "text": "5π/6"
         },
         {
          "label": "B",
-         "text": "3"
+         "text": "π/6"
         },
         {
          "label": "C",
-         "text": "2"
+         "text": "π/3"
         },
         {
          "label": "D",
-         "text": "5"
+         "text": "2π/3"
         },
         {
          "label": "E",
-         "text": "6"
+         "text": "7π/6"
         },
         {
          "label": "F",
-         "text": "8"
+         "text": "11π/6"
         }
        ],
        "answer": "A",
-       "explanation": "sin x(2sin x − 1) = 0. sin x = 0 gives x = 0, π (2π is excluded). sin x = 1/2 gives π/6, 5π/6. Total 4. Do not divide by sin x: that loses solutions.",
+       "explanation": "The proposed examples with sin x = 1/2 are π/6 and 5π/6. Doubling the latter gives 5π/3, with sine −√3/2, so 5π/6 disproves the claim.",
        "id": "esat-a-m2-06",
        "number": 6
       },
@@ -4193,35 +4193,35 @@
       {
        "topic": "MM6.3",
        "difficulty": 2,
-       "stem": "The tangent to y = x² + 3x at the point where x = 1 meets the y-axis at P.\n\nWhat is the y-coordinate of P?",
+       "stem": "A rolling guide follows y = x² + 2x. At x = 2, a straight support passes through the guide and is perpendicular to its instantaneous direction. Which equation describes the support?",
        "options": [
         {
          "label": "A",
-         "text": "−4"
+         "text": "y − 8 = 6(x − 2)"
         },
         {
          "label": "B",
-         "text": "−1"
+         "text": "y − 8 = −(x − 2)/6"
         },
         {
          "label": "C",
-         "text": "0"
+         "text": "y − 8 = (x − 2)/6"
         },
         {
          "label": "D",
-         "text": "1"
+         "text": "y − 8 = −6(x − 2)"
         },
         {
          "label": "E",
-         "text": "4"
+         "text": "y − 4 = −(x − 2)/6"
         },
         {
          "label": "F",
-         "text": "5"
+         "text": "y − 8 = −(x − 2)/4"
         }
        ],
        "answer": "B",
-       "explanation": "At x = 1, y = 4 and dy/dx = 2x + 3 = 5. Tangent: y − 4 = 5(x − 1), so y = 5x − 1. P = (0, −1).",
+       "explanation": "The point at x = 2 is (2, 8), where the gradient is 2x + 2 = 6. The perpendicular line has gradient −1/6.",
        "id": "esat-a-m2-11",
        "number": 11
       },
@@ -4263,35 +4263,35 @@
       {
        "topic": "MM7.3",
        "difficulty": 3,
-       "stem": "Evaluate ∫₁⁴ (3√x − 2/x²) dx.",
+       "stem": "A model defines F(x) = x^(3/2) + 2/x for x > 0. A student compares ∫₁⁴ F′(x) dx with F(4). Which comparison is correct?",
        "options": [
         {
          "label": "A",
-         "text": "11"
+         "text": "The integral is 2 less than F(4)."
         },
         {
          "label": "B",
-         "text": "12"
+         "text": "The integral is 1 less than F(4)."
         },
         {
          "label": "C",
-         "text": "12.5"
+         "text": "The integral is 3 less than F(4)."
         },
         {
          "label": "D",
-         "text": "13.5"
+         "text": "The integral equals F(4)."
         },
         {
          "label": "E",
-         "text": "14"
+         "text": "The integral is 3 greater than F(4)."
         },
         {
          "label": "F",
-         "text": "15.5"
+         "text": "The integral is 6 less than F(4)."
         }
        ],
        "answer": "C",
-       "explanation": "∫3x^(1/2) dx = 2x^(3/2): 2(8 − 1) = 14. ∫−2x⁻² dx = 2/x: (1/2 − 2) = −3/2. Total 14 − 1.5 = 12.5.",
+       "explanation": "The integral of the derivative is F(4) − F(1). Here F(1) = 1 + 2 = 3.",
        "id": "esat-a-m2-13",
        "number": 13
       },
@@ -5755,35 +5755,35 @@
       {
        "topic": "B1.1",
        "difficulty": 1,
-       "stem": "Which structure is found in both plant and animal cells but NOT in bacterial cells?",
+       "stem": "Two diagrams show typical cells, one from an animal and one from a bacterium. Both diagrams label DNA, ribosomes and cytoplasm. A student deletes all three labels from the bacterial diagram, arguing that such a small cell cannot have them. Which labels should the student restore?",
        "options": [
         {
          "label": "A",
-         "text": "plasmid"
+         "text": "DNA and cytoplasm only"
         },
         {
          "label": "B",
-         "text": "cell membrane"
+         "text": "Ribosomes and cytoplasm only"
         },
         {
          "label": "C",
-         "text": "mitochondrion"
+         "text": "DNA, ribosomes and cytoplasm"
         },
         {
          "label": "D",
-         "text": "cell wall"
+         "text": "Cytoplasm only"
         },
         {
          "label": "E",
-         "text": "chloroplast"
+         "text": "DNA only"
         },
         {
          "label": "F",
-         "text": "cytoplasm"
+         "text": "None of the three labels"
         }
        ],
        "answer": "C",
-       "explanation": "Mitochondria occur in eukaryotic cells (plant and animal) but not prokaryotes. Bacteria have membranes, cytoplasm, cell walls and plasmids; chloroplasts are plant-only.",
+       "explanation": "A typical bacterium has DNA, ribosomes and cytoplasm even though it lacks a membrane-bound nucleus and mitochondria.",
        "id": "esat-b-bio-01",
        "number": 1
       },
@@ -6743,35 +6743,35 @@
       {
        "topic": "C2.4",
        "difficulty": 1,
-       "stem": "An atom has the electron configuration 2,8,6.\n\nIn which Period and Group of the Periodic Table is it found?",
+       "stem": "An atom forms part of a missing-entry exercise. It has the same number of occupied electron shells as sodium (2,8,1) and the same number of outer electrons as oxygen (2,6). Which entry fits?",
        "options": [
         {
          "label": "A",
-         "text": "Period 3, Group 6"
+         "text": "2,6"
         },
         {
          "label": "B",
-         "text": "Period 2, Group 16"
+         "text": "2,8,2"
         },
         {
          "label": "C",
-         "text": "Period 16, Group 3"
+         "text": "2,8,1"
         },
         {
          "label": "D",
-         "text": "Period 3, Group 14"
+         "text": "2,8,8,6"
         },
         {
          "label": "E",
-         "text": "Period 3, Group 16"
+         "text": "2,8,6"
         },
         {
          "label": "F",
-         "text": "Period 6, Group 3"
+         "text": "2,8,8"
         }
        ],
        "answer": "E",
-       "explanation": "Three occupied shells → Period 3. Six outer electrons → Group 16 (IUPAC numbering). It is sulfur.",
+       "explanation": "The atom must have three occupied shells and six electrons in the outer one. The arrangement 2,8,6 satisfies both clues.",
        "id": "esat-b-chem-02",
        "number": 2
       },
@@ -6953,35 +6953,35 @@
       {
        "topic": "C4.9a",
        "difficulty": 1,
-       "stem": "4.0 g of sodium hydroxide is dissolved in water and made up to 250 cm³ of solution.\n\nWhat is the concentration of the solution?\n\n(Ar: H = 1, O = 16, Na = 23)",
+       "stem": "A display uses a coloured salt dissolved in water. A 250 cm³ stock solution contains 0.05 mol of the salt. Which preparation has the same concentration as the stock?",
        "options": [
         {
          "label": "A",
-         "text": "0.016 mol/dm³"
+         "text": "Dissolve 0.05 mol and make the final volume 500 cm³."
         },
         {
          "label": "B",
-         "text": "0.10 mol/dm³"
+         "text": "Dissolve 0.10 mol and make the final volume 250 cm³."
         },
         {
          "label": "C",
-         "text": "0.40 mol/dm³"
+         "text": "Dissolve 0.10 mol and make the final volume 500 cm³."
         },
         {
          "label": "D",
-         "text": "1.0 mol/dm³"
+         "text": "Dissolve 0.025 mol and make the final volume 500 cm³."
         },
         {
          "label": "E",
-         "text": "1.6 mol/dm³"
+         "text": "Dissolve 0.025 mol and make the final volume 250 cm³."
         },
         {
          "label": "F",
-         "text": "16 mol/dm³"
+         "text": "Dissolve 0.20 mol and make the final volume 500 cm³."
         }
        ],
        "answer": "C",
-       "explanation": "Mr NaOH = 40, so 0.10 mol. Concentration = 0.10 ÷ 0.250 dm³ = 0.40 mol/dm³.",
+       "explanation": "Concentration is amount divided by solution volume. Doubling both the amount and volume preserves the concentration.",
        "id": "esat-b-chem-08",
        "number": 8
       },
@@ -8431,35 +8431,35 @@
       {
        "topic": "P1.2i",
        "difficulty": 2,
-       "stem": "Resistors R₁ = 3.0 kΩ and R₂ are connected in series across a 12 V supply. The voltage across R₂ is 4.0 V.\n\nWhat is the resistance of R₂?",
+       "stem": "A voltage indicator consists of an upper fixed component and a lower sensor connected end-to-end across a fixed supply. The reading is taken across the sensor. The sensor’s opposition to current decreases when lit. What happens as the light level rises?",
        "options": [
         {
          "label": "A",
-         "text": "1.0 kΩ"
+         "text": "The reading rises while the supply current rises."
         },
         {
          "label": "B",
-         "text": "1.5 kΩ"
+         "text": "The reading falls while the supply current rises."
         },
         {
          "label": "C",
-         "text": "2.0 kΩ"
+         "text": "The reading rises while the supply current falls."
         },
         {
          "label": "D",
-         "text": "4.5 kΩ"
+         "text": "The reading falls while the supply current falls."
         },
         {
          "label": "E",
-         "text": "6.0 kΩ"
+         "text": "The reading stays constant while the supply current rises."
         },
         {
          "label": "F",
-         "text": "9.0 kΩ"
+         "text": "The reading falls and the supply current stays constant."
         }
        ],
        "answer": "B",
-       "explanation": "R₁ has 12 − 4 = 8 V across it. In series the current is the same, so voltages are in the ratio of resistances: R₂ = 3.0 × 4/8 = 1.5 kΩ.",
+       "explanation": "Reducing the sensor’s opposition reduces the total, increasing the current. Its share of the supply voltage is R_sensor/(R_fixed + R_sensor), which falls when R_sensor falls.",
        "id": "esat-b-phys-23",
        "number": 23
       },
@@ -9139,35 +9139,35 @@
       {
        "topic": "MM7.3",
        "difficulty": 2,
-       "stem": "Evaluate ∫₀³ (x + 1)(x − 3) dx.",
+       "stem": "A robot's signed velocity is v(t) = (t − 1)(t − 3) for 1 ≤ t ≤ 3. A student integrates v over that time and reports the result as a positive distance. Which correction is needed?",
        "options": [
         {
          "label": "A",
-         "text": "−12"
+         "text": "Use the integral without changing its sign."
         },
         {
          "label": "B",
-         "text": "−9"
+         "text": "Negate the integral to obtain the distance."
         },
         {
          "label": "C",
-         "text": "−6"
+         "text": "Double the integral to obtain the distance."
         },
         {
          "label": "D",
-         "text": "0"
+         "text": "The distance is zero because both endpoint velocities are zero."
         },
         {
          "label": "E",
-         "text": "6"
+         "text": "Only the part before t = 2 contributes to distance."
         },
         {
          "label": "F",
-         "text": "9"
+         "text": "Only the part after t = 2 contributes to distance."
         }
        ],
        "answer": "B",
-       "explanation": "Expand: x² − 2x − 3. [x³/3 − x² − 3x]₀³ = 9 − 9 − 9 = −9. Negative because the curve is below the x-axis for 0 < x < 3.",
+       "explanation": "For 1 < t < 3 the first factor is positive and the second negative. The velocity is nonpositive throughout, so distance is the integral of −v.",
        "id": "esat-b-m2-16",
        "number": 16
       },
@@ -9314,35 +9314,35 @@
       {
        "topic": "MM4.5",
        "difficulty": 3,
-       "stem": "How many solutions does tan x = √3 sin x have in the interval 0 ≤ x ≤ 2π?",
+       "stem": "Two indicators switch on together when cos(2x) = cos x for 0 ≤ x < 2π. Which set gives all the switch-on angles?",
        "options": [
         {
          "label": "A",
-         "text": "2"
+         "text": "{0, π/3, 5π/3}"
         },
         {
          "label": "B",
-         "text": "3"
+         "text": "{0, 2π/3}"
         },
         {
          "label": "C",
-         "text": "4"
+         "text": "{0, π}"
         },
         {
          "label": "D",
-         "text": "5"
+         "text": "{0, 2π/3, 4π/3}"
         },
         {
          "label": "E",
-         "text": "6"
+         "text": "{2π/3, 4π/3}"
         },
         {
          "label": "F",
-         "text": "7"
+         "text": "{0, 2π/3, 4π/3, 2π}"
         }
        ],
        "answer": "D",
-       "explanation": "sin x (1/cos x − √3) = 0. sin x = 0 gives 0, π, 2π. cos x = 1/√3 gives two solutions (one in each of the first and fourth quadrants). Total 5. Do not divide by sin x.",
+       "explanation": "With c = cos x, the equation becomes 2c² − 1 = c, or (2c + 1)(c − 1) = 0. On the stated interval c = 1 occurs at 0, and c = −1/2 at 2π/3 and 4π/3. The endpoint 2π is excluded.",
        "id": "esat-b-m2-21",
        "number": 21
       },
@@ -9524,35 +9524,35 @@
       {
        "topic": "MM7.3",
        "difficulty": 2,
-       "stem": "Evaluate ∫₀⁸ x^(1/3) dx.",
+       "stem": "Two channel profiles have cumulative volumes given by the integrals of x^(1/2) and x on 0 ≤ x ≤ 1. Which channel has the larger volume, and by what factor?",
        "options": [
         {
          "label": "A",
-         "text": "6"
+         "text": "The x^(1/2) channel, by a factor of 3/2."
         },
         {
          "label": "B",
-         "text": "8"
+         "text": "The x channel, by a factor of 4/3."
         },
         {
          "label": "C",
-         "text": "12"
+         "text": "The x^(1/2) channel, by a factor of 4/3."
         },
         {
          "label": "D",
-         "text": "16"
+         "text": "The x channel, by a factor of 3/2."
         },
         {
          "label": "E",
-         "text": "24"
+         "text": "The x^(1/2) channel, by a factor of 2."
         },
         {
          "label": "F",
-         "text": "48"
+         "text": "The volumes are equal."
         }
        ],
        "answer": "C",
-       "explanation": "∫x^(1/3) dx = (3/4)x^(4/3). 8^(4/3) = 2⁴ = 16, so the answer is (3/4) × 16 = 12.",
+       "explanation": "Integrating each profile gives 2/3 and 1/2, respectively. Their ratio is (2/3)/(1/2) = 4/3.",
        "id": "esat-b-m2-27",
        "number": 27
       }
