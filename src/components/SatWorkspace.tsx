@@ -496,9 +496,9 @@ export const SatWorkspace: React.FC<SatWorkspaceProps> = ({
               </h2>
               <p className="text-xs text-[var(--text-muted)] mt-1.5 max-w-2xl leading-relaxed">
                 Operational raw scores exclude 2 unscored pretest items per module (8 total across
-                the 98-question form). Routing used Ratio practice thresholds (R&amp;W ≥16/25 →{' '}
-                <strong>{adaptiveForm.rwRoute}</strong> M2; Math ≥13/20 →{' '}
-                <strong>{adaptiveForm.mathRoute}</strong> M2) — not College Board equating or
+                the 98-question form). Routing used Ratio practice thresholds (≥16/25 R&amp;W or ≥13/20 Math in M1 → harder M2,
+                otherwise easier); you got the <strong>{adaptiveForm.rwRoute}</strong> R&amp;W M2 and the{' '}
+                <strong>{adaptiveForm.mathRoute}</strong> Math M2 — not College Board equating or
                 200–800 scaled scores.
               </p>
             </div>
