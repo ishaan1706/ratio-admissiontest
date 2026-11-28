@@ -84,7 +84,7 @@ export const TmuaWorkspace: React.FC<TmuaWorkspaceProps> = ({
   );
 
   const [history, setHistory] = useState<TmuaDrillHistory>(() =>
-    loadTmuaHistory(allKnownQuestions)
+    loadTmuaHistory()
   );
   const [mode, setMode] = useState<
     'skills' | 'techniques' | 'bank' | 'review' | 'mocks' | 'flashcards' | 'logic'

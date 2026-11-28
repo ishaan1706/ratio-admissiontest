@@ -17,19 +17,16 @@ const dateTime = (v) => typeof v === 'string' && Number.isFinite(Date.parse(v));
 const outcome = (v) => records(v) && ['correct', 'wrong', 'unanswered'].includes(v.status)
   && typeof v.guessed === 'boolean' && typeof v.assisted === 'boolean' && dateTime(v.at);
 
-export function readHistory(raw, questions) {
+export function readHistory(raw) {
   let data;
   try { data = JSON.parse(raw); } catch { return emptyHistory(); }
   if (!records(data) || data.version !== 1) return emptyHistory();
-  const byId = new Set(questions.map((q) => q.id));
   const safe = emptyHistory();
   for (const key of ['first', 'latest', 'queue']) {
     if (!records(data[key])) continue;
-    for (const [id, value] of Object.entries(data[key])) {
-      if (!byId.has(id) || !outcome(value)) continue;
-      if (key === 'queue' && value.status === 'correct' && !value.guessed && !value.assisted) continue;
-      safe[key][id] = value;
-    }
+    safe[key] = Object.fromEntries(Object.entries(data[key]).filter(([, value]) =>
+      outcome(value) && (key !== 'queue' || value.status !== 'correct' || value.guessed || value.assisted)
+    ));
   }
   return safe;
 }

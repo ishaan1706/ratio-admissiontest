@@ -705,7 +705,7 @@
                 "Exactly one of a and b is irrational."
               ],
               "answer": 1,
-              "explanation": "If a and b were both rational, chaining the three implications would give that at least one is irrational, a contradiction. Both may be irrational with c rational and d irrational, which also rules out the first, third and fifth choices. For the second, a and c may be rational with b and d irrational."
+              "explanation": "If a and b were both rational, chaining the three implications would give that at least one is irrational, a contradiction. Taking both to be irrational, with c rational and d irrational, is allowed: it disproves the claims that rational c forces rational a and b, that an irrational a or b forces rational d, and that exactly one of a and b is irrational. Taking a and c rational and b and d irrational shows that irrational d need not make both a and b irrational."
             },
             {
               "id": "tmua-pack-m1-p2-q12-v2",
@@ -727,7 +727,7 @@
                 "f(x) = x² + 1"
               ],
               "answer": 0,
-              "explanation": "The third function is 1 at both ends but −1 at x = 1. In the first two choices the premise is false; the fourth and fifth satisfy both the premise and conclusion."
+              "explanation": "The function 2(x − 1)² − 1 equals 1 at both ends but −1 at x = 1. The functions x − 1 and 1 − (x − 1)² fail the premise, while 2 − (x − 1)² and x² + 1 are positive throughout [0, 2]."
             },
             {
               "id": "tmua-pack-m1-p2-q13-v2",
@@ -771,7 +771,7 @@
                 "4 divides a and 3 divides b."
               ],
               "answer": 4,
-              "explanation": "The third condition gives all prime factors needed for 12, but (a, b) = (3, 4) shows it is not necessary. The other conditions do not suffice: use (2, 3), (1, 11), (2, 3) and (3, 3) respectively."
+              "explanation": "If 4 divides a and 3 divides b then 12 divides ab, but (a, b) = (3, 4) shows this is not necessary. The pair (2, 3) rules out both '6 divides ab' and '2 divides a and 3 divides b' as sufficient conditions. The pair (1, 11) rules out the condition on a + b, and (3, 3) rules out requiring both factors to be divisible by 3."
             },
             {
               "id": "tmua-pack-m1-p2-q15-v2",
@@ -793,7 +793,7 @@
                 "If a and b are both perfect squares, they have no common prime factor."
               ],
               "answer": 2,
-              "explanation": "In the product every prime exponent is even. When the factors have no common prime, each exponent comes from just one factor and so must be even there. The other claims fail at (3,4), (2,2), (4,3), and (4,4), respectively."
+              "explanation": "In a perfect square every prime exponent is even. If the factors are coprime, each exponent comes entirely from one factor and is even there too. A factor of 12 in ab can come from (3, 4) even though neither factor is divisible by 12; (2, 2) gives a product divisible by 4; coprime (4, 3) has a product divisible by a square; and the two squares (4, 4) are not coprime."
             },
             {
               "id": "tmua-pack-m1-p2-q16-v2",
@@ -1456,7 +1456,7 @@
                 "x² − 2x + 1"
               ],
               "answer": 0,
-              "explanation": "The cubic has the positive roots 1 and 2. Its derivative 3x² − 6x + 2 has positive discriminant and therefore two real roots. The first choice satisfies the premise but has just one derivative root. The other choices fail the premise."
+              "explanation": "The cubic x(x − 1)(x − 2) has the positive roots 1 and 2. Its derivative 3x² − 6x + 2 has positive discriminant and therefore two real roots. The quadratic x² − 3x + 2 also satisfies the premise, but its derivative has just one root. None of the other polynomials has two distinct positive roots."
             },
             {
               "id": "tmua-pack-m2-p2-q05-v2",
@@ -1566,7 +1566,7 @@
                 "(−2, 2)"
               ],
               "answer": 4,
-              "explanation": "The point (−2, 2) gives sum of squares 8, satisfies a < b and gives product −4. The first point lies on the excluded boundary; the second gives equality in the conclusion; the third reverses the order; the last has product zero."
+              "explanation": "The point (−2, 2) gives sum of squares 8, satisfies a < b and gives product −4. The point (−3, 1) lies on the excluded boundary, (−1, 2) gives equality in the conclusion, (2, −2) fails a < b, and (0, 2) satisfies the conclusion with product zero."
             },
             {
               "id": "tmua-pack-m2-p2-q10-v2",

@@ -107,9 +107,9 @@ function formatClock(sec: number): string {
   return `${String(m).padStart(2, '0')}:${String(r).padStart(2, '0')}`;
 }
 
-export function loadTmuaHistory(allQuestions: TmuaDrillQuestion[]): TmuaDrillHistory {
+export function loadTmuaHistory(): TmuaDrillHistory {
   const raw = safeReadStorage(TMUA_HISTORY_KEY);
-  return readHistory(raw ?? '', allQuestions);
+  return readHistory(raw ?? '');
 }
 
 export function saveTmuaHistory(history: TmuaDrillHistory): void {
@@ -182,7 +182,8 @@ export const TmuaPracticeSuite: React.FC<TmuaPracticeSuiteProps> = ({
       const raw = safeReadStorage(TMUA_ACTIVE_SESSION_KEY);
       if (!raw) return null;
       const parsed = JSON.parse(raw) as ActiveDrillSession;
-      if (!parsed || !Array.isArray(parsed.questionIds) || parsed.questionIds.length === 0) {
+      if (!parsed || !Array.isArray(parsed.questionIds) || parsed.questionIds.length === 0
+        || parsed.questionIds.some((id) => !questionById.has(id))) {
         return null;
       }
       return parsed;
