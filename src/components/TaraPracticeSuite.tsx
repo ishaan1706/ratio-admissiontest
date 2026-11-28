@@ -74,6 +74,49 @@ export const TARA_ALL_DRILL_QUESTIONS: TaraDrillQuestion[] = TARA_DRILLS_DATA.mo
 const SKILL_MAP = new Map(TARA_ALL_SKILLS.map((s) => [s.id, s]));
 const QUESTION_MAP = new Map(TARA_ALL_DRILL_QUESTIONS.map((q) => [q.id, q]));
 
+function splitDrillStem(stem: string) {
+  const lines = stem.split('\n');
+  const layout = (line: string) =>
+    line.includes('|') ? 'table' : /^(?:[A-Z·] +){2,}[A-Z·]$/.test(line.trim()) ? 'grid' : null;
+  const blocks: { text: string; tabular: boolean }[] = [];
+  let proseStart = 0;
+  for (let i = 0; i < lines.length;) {
+    const kind = layout(lines[i]);
+    let end = i + 1;
+    while (kind && end < lines.length && layout(lines[end]) === kind) end++;
+    if (end > i + 1) {
+      if (i > proseStart) blocks.push({ text: lines.slice(proseStart, i).join('\n'), tabular: false });
+      blocks.push({ text: lines.slice(i, end).join('\n'), tabular: true });
+      proseStart = end;
+    }
+    i = end;
+  }
+  if (proseStart < lines.length) blocks.push({ text: lines.slice(proseStart).join('\n'), tabular: false });
+  return blocks;
+}
+
+function TaraDrillStem({ stem, className }: { stem: string; className: string }) {
+  return (
+    <div className={className}>
+      {splitDrillStem(stem).map(({ text, tabular }, i) =>
+        tabular ? (
+          <pre
+            key={i}
+            tabIndex={0}
+            role="region"
+            aria-label="Question data, scrollable"
+            className="m-0 max-w-full overflow-x-auto whitespace-pre font-mono focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[var(--accent)]"
+          >
+            {text}
+          </pre>
+        ) : (
+          <React.Fragment key={i}>{text}</React.Fragment>
+        ),
+      )}
+    </div>
+  );
+}
+
 const STORAGE_KEY = 'ratio_tara_drill_history_v1';
 
 type ItemOutcome = 'correct' | 'incorrect' | 'unanswered' | 'guessed';
@@ -199,15 +242,16 @@ function selectDiverse(pool: TaraDrillQuestion[], count: number, seed: string): 
 }
 
 function buildDailySet(store: TaraDrillStore, dateStr: string): DailySetRecord {
-  const existing = store.dailySets[dateStr];
-  if (existing && Array.isArray(existing.ids) && existing.ids.length > 0) {
-    const valid = existing.ids.filter((id) => QUESTION_MAP.has(id));
-    if (valid.length > 0) return { ...existing, ids: valid };
-  }
-
   const target = TARA_DRILLS_DATA.dailyQuestionCount || 5;
-  const ctAll = TARA_ALL_DRILL_QUESTIONS.filter((q) => q.moduleType === 'critical-thinking');
-  const psAll = TARA_ALL_DRILL_QUESTIONS.filter((q) => q.moduleType === 'problem-solving');
+  const existing = store.dailySets[dateStr];
+  const validIds = Array.isArray(existing?.ids)
+    ? [...new Set(existing.ids.filter((id) => QUESTION_MAP.has(id)))].slice(0, target)
+    : [];
+  if (existing && validIds.length === target && existing.ids.length === target) return existing;
+  const kept = new Set(validIds);
+  const available = TARA_ALL_DRILL_QUESTIONS.filter((q) => !kept.has(q.id));
+  const ctAll = available.filter((q) => q.moduleType === 'critical-thinking');
+  const psAll = available.filter((q) => q.moduleType === 'problem-solving');
   const isSeen = (q: TaraDrillQuestion) => Boolean(store.items[q.id]?.attempts);
 
   const pickFromModule = (list: TaraDrillQuestion[], need: number, tag: string) => {
@@ -225,13 +269,14 @@ function buildDailySet(store: TaraDrillStore, dateStr: string): DailySetRecord {
   // Both modules represented (2 CT + 3 PS or 3 CT + 2 PS alternating by date)
   const ctNeed = hashStr(dateStr) % 2 === 0 ? 3 : 2;
   const psNeed = target - ctNeed;
-  const ctPick = pickFromModule(ctAll, ctNeed, 'ct');
-  const psPick = pickFromModule(psAll, psNeed, 'ps');
-
-  const combined = [...ctPick.items, ...psPick.items].slice(0, target);
-  const reuseIds = [...ctPick.reuseIds, ...psPick.reuseIds];
+  const keptCt = validIds.filter((id) => QUESTION_MAP.get(id)?.moduleType === 'critical-thinking').length;
+  const ctPick = pickFromModule(ctAll, Math.max(0, ctNeed - keptCt), 'ct');
+  const psPick = pickFromModule(psAll, Math.max(0, psNeed - (validIds.length - keptCt)), 'ps');
+  const ids = [...validIds, ...ctPick.items.map((q) => q.id), ...psPick.items.map((q) => q.id)].slice(0, target);
+  const oldReuseIds = Array.isArray(existing?.reuseIds) ? existing.reuseIds.filter((id) => kept.has(id)) : [];
+  const reuseIds = [...oldReuseIds, ...ctPick.reuseIds, ...psPick.reuseIds].filter((id) => ids.includes(id));
   return {
-    ids: combined.map((q) => q.id),
+    ids,
     reuseIds,
     completed: false,
   };
@@ -280,7 +325,7 @@ export const TaraPracticeSuite: React.FC<TaraPracticeSuiteProps> = ({ onOpenLess
   }, [store, today]);
 
   useEffect(() => {
-    if (!store.dailySets[today]) {
+    if (store.dailySets[today] !== dailyRecord) {
       const next: TaraDrillStore = {
         ...store,
         dailySets: { ...store.dailySets, [today]: dailyRecord },
@@ -358,7 +403,7 @@ export const TaraPracticeSuite: React.FC<TaraPracticeSuiteProps> = ({ onOpenLess
         ? {
             ...prev.dailySets,
             [today]: {
-              ...(prev.dailySets[today] || dailyRecord),
+              ...dailyRecord,
               completed: true,
             },
           }
@@ -593,9 +638,7 @@ export const TaraPracticeSuite: React.FC<TaraPracticeSuiteProps> = ({ onOpenLess
                     </span>
                   </div>
 
-                  <p className="text-sm text-[var(--ink)] whitespace-pre-line leading-relaxed">
-                    {q.stem}
-                  </p>
+                  <TaraDrillStem stem={q.stem} className="text-sm text-[var(--ink)] whitespace-pre-line leading-relaxed" />
 
                   <p className="text-xs text-[var(--text-muted)] leading-relaxed pt-2 border-t border-[var(--rule)] whitespace-pre-line">
                     <strong className="text-[var(--ink)]">Explanation:</strong> {q.explanation}
@@ -727,9 +770,7 @@ export const TaraPracticeSuite: React.FC<TaraPracticeSuiteProps> = ({ onOpenLess
         </div>
 
         <div className="border border-[var(--rule)] bg-[var(--surface)] p-6 space-y-5">
-          <div className="text-[15px] text-[var(--ink)] whitespace-pre-line leading-relaxed">
-            {q.stem}
-          </div>
+          <TaraDrillStem stem={q.stem} className="text-[15px] text-[var(--ink)] whitespace-pre-line leading-relaxed" />
 
           <div className="space-y-2">
             {Object.keys(q.options).map((key) => {
