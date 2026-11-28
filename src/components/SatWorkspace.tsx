@@ -130,7 +130,7 @@ function renderPassageWithUnderline(passage: string, underlined?: string) {
   return (
     <>
       {passage.slice(0, idx)}
-      <span className="underline decoration-[var(--accent)] decoration-2 underline-offset-4 text-[var(--ink)]">
+      <span className="underline decoration-[var(--accent)] decoration-2 underline-offset-4">
         {underlined}
       </span>
       {passage.slice(idx + underlined.length)}
