@@ -92,58 +92,58 @@
               "id": "ucat-mock-1-VR-g01"
             },
             {
-              "title": "The boatyard bell",
-              "stimulus": "A brass bell hangs in North Quay's museum. Its label once said it had summoned boatyard workers since 1860. The date came from an entry in the yard ledger: 'bell and fittings, twelve shillings'. A conservator noticed that the surviving bell's bracket would have required bolts of a size that the yard did not order until decades later. That did not settle the date of the bell itself: a reused bell might have been given a new bracket. No maker's mark was visible. A volunteer then found two photographs. The earlier one showed a bell of roughly the right proportions on a wooden frame, but its rim was hidden. The later one clearly showed the present bell on the warehouse wall. In the years between the two pictures, the yard lost its records in a flood. The museum removed the ledger date from the object label and put it on an adjacent panel explaining the evidence. A former employee complained that visitors wanted a date, not a list of doubts. The conservator replied that the later photograph provided just such a date, but it was a date by which the bell was present, not necessarily the year it arrived. The museum kept a recording of the former employee's account alongside the panel.",
+              "title": "What an empty net records",
+              "stimulus": "In field surveys, a blank space and a recorded zero cannot be treated alike. A zero says someone looked in a specified way and found nothing. A blank might mean a notebook was lost, a trap was never set, or a recorder was unable to tell two species apart. Neither entry establishes that a species was missing. To establish absence, a worker would first need to show that the method had a reasonable chance of detecting the species if it was present.\n\nThis distinction became important when a coastal laboratory digitised old eel surveys. Before conversion, the team had intended to compare the number of nights with a catch in each decade. Many older sheets, however, carried nothing but a date and the number landed; only those for later years routinely gave the hours for which nets had soaked. To complicate matters, some sheets filed as surveys were summaries sent to markets. These listed eel only on days it was offered for sale. A date omitted from such a sheet was not a survey result at all.\n\nThe team retained the market sheets but did not count their omitted dates as catch-free nights. Where the notebook documented both the use and the timing of the nets, the researchers kept zeroes alongside positive catches. This reduced the number of surveys they could compare without discarding the other documents. The excluded records could still help a historian studying when eel started to appear in markets.\n\nGreater caution did not reveal what was happening in the estuary on every undocumented night. It did stop an artefact of archiving from looking like an ecological observation.",
               "questions": [
                 {
-                  "stem": "What is the main significance of the later photograph?",
+                  "stem": "Which heading best captures the author’s argument?",
                   "options": [
-                    "It dates the flood that destroyed the earlier records.",
-                    "It proves the surviving bracket was fitted in 1860.",
-                    "It identifies the maker of the bell.",
-                    "It gives a latest possible bound for the bell's arrival at the yard."
+                    "The market that changed eel fishing",
+                    "Why recorded absence needs context",
+                    "The case for digitising every survey",
+                    "Eel populations before modern monitoring"
                   ],
-                  "answer": 3,
-                  "explanation": "The bell was demonstrably already present in that photograph.",
+                  "answer": 1,
+                  "explanation": "The issue is how to distinguish non-detection from missing or inapplicable observations, not whether the eel population changed.",
                   "id": "ucat-mock-1-VR-q05",
                   "format": "single-choice"
                 },
                 {
-                  "stem": "Why did the conservator not use the bolt sizes to date the bell itself?",
+                  "stem": "Which statement about the market sheets is supported?",
                   "options": [
-                    "The relevant order entries were all lost in the flood.",
-                    "The bell could have been attached to a bracket fitted later.",
-                    "The early photograph clearly showed the current bracket.",
-                    "The yard always ordered bolts after completing a job."
+                    "They usually specified the hours nets soaked.",
+                    "They were discarded when the surveys were digitised.",
+                    "Every listed date marked a night on which a net was set.",
+                    "A day without a listing cannot be counted as a catch-free survey."
                   ],
-                  "answer": 1,
-                  "explanation": "The surviving mount need not be original to the bell.",
+                  "answer": 3,
+                  "explanation": "Market sheets reported sales listings; omitted dates are not evidence that a survey took place with no catch.",
                   "id": "ucat-mock-1-VR-q06",
                   "format": "single-choice"
                 },
                 {
-                  "stem": "What prevents the earlier photograph from conclusively identifying the bell?",
+                  "stem": "What is meant by “an artefact of archiving” in the final sentence?",
                   "options": [
-                    "It depicts a different-sized bell from the one in the museum.",
-                    "The wooden frame does not appear anywhere else.",
-                    "A distinguishing part of the bell is not visible.",
-                    "The photograph was made after the flood."
+                    "An apparent catch pattern created by the way records were kept",
+                    "An eel catch that could not be independently verified",
+                    "A specimen mistakenly filed with market accounts",
+                    "A survey measure that proved unreliable after nets wore out"
                   ],
-                  "answer": 2,
-                  "explanation": "The shape appears similar but its rim is hidden.",
+                  "answer": 0,
+                  "explanation": "The warning is that record-keeping gaps can produce a misleading appearance of zero catches.",
                   "id": "ucat-mock-1-VR-q07",
                   "format": "single-choice"
                 },
                 {
-                  "stem": "Why did the museum move the ledger date to a separate panel?",
+                  "stem": "Which observation would most strengthen a claim of local absence?",
                   "options": [
-                    "To show that the ledger dated from after the photographs",
-                    "To replace documentary evidence with testimony",
-                    "To keep the date hidden from most visitors",
-                    "To present it as evidence without treating it as the object's established date"
+                    "Another market sheet also omits all sales for the same period.",
+                    "The earliest positive catch was entered on a dated sheet.",
+                    "Repeated suitable surveys found no eels despite high detection rates at comparable sites.",
+                    "Digitisation revealed that several market sheets had previously been misfiled."
                   ],
-                  "answer": 3,
-                  "explanation": "The entry remains relevant but cannot securely identify the surviving bell.",
+                  "answer": 2,
+                  "explanation": "Negative results are stronger evidence when repeated with a method that normally detects the species when present.",
                   "id": "ucat-mock-1-VR-q08",
                   "format": "single-choice"
                 }
@@ -151,55 +151,55 @@
               "id": "ucat-mock-1-VR-g02"
             },
             {
-              "title": "Seed library",
-              "stimulus": "Riverside Library's seed shelves opened with a simple invitation: take a labelled envelope and, if your plants produce seeds, return some in autumn. Volunteers initially counted envelopes taken as a sign of success. The figure doubled in the second year, but the number of varieties returned fell. Some popular beans had been distributed in larger envelopes, so fewer households could grow the same variety before supplies ran out. As an experiment, volunteers divided those stocks into smaller envelopes the following spring. Gardeners with tiny plots found the change helpful; two allotment groups said that using several envelopes for a shared bed made record keeping awkward. The seed team offered those groups a single bulk envelope on request. It also stopped treating a return of any seed as evidence that a variety was preserved. For one squash, seeds from neighbouring plants had mixed, so the new plants did not consistently resemble those described on the envelopes. A volunteer proposed replacing all squash with beans, whose labels had caused fewer problems. The team instead kept squash but explained the difficulty on its signs. It introduced a second sign asking growers to record whether seeds came from plants they had isolated. The next annual report listed participation and the number of reliably identified varieties as separate outcomes.",
+              "title": "Dispatch from the tidal gauge",
+              "stimulus": "09:10 — Gauge recorder unavailable. The manual reading from the north pier at 09:00 is 4.1 metres. This is not the reading from the harbour entrance, where the barrier team normally takes its measurements.\n\n09:25 — Two reports from boats inside the harbour placed the water close to the top of the lower landing steps. Those reports were passed to the harbourmaster but did not trigger a closure. For a public closure, the harbourmaster requires a reading from the entrance gauge with a second reading ten minutes later at or above the same level. Both must be at least 4.3 metres.\n\n09:48 — The entrance recorder is working again. It logged 4.3 metres at 09:37 and 4.4 metres at 09:47. A closure was announced at 09:48; it applies to the lower landing steps only. The notice says the next message will be sent at 10:20 whether or not the landing steps have reopened. The upper walkway remains open.",
               "questions": [
                 {
                   "format": "true-false-cant-tell",
-                  "stem": "The seed team required everyone who took an envelope to return seeds.",
+                  "stem": "The first manual measurement was taken at the harbour entrance.",
                   "options": [
                     "True",
                     "False",
                     "Can't Tell"
                   ],
                   "answer": 1,
-                  "explanation": "The invitation to return seed was conditional, not a requirement.",
+                  "explanation": "The 09:10 update identifies the north pier as the location.",
                   "id": "ucat-mock-1-VR-q09"
                 },
                 {
                   "format": "true-false-cant-tell",
-                  "stem": "Before the smaller packets were trialled, the size of some envelopes limited how many households could receive those beans.",
+                  "stem": "The restored entrance recorder provided two measurements that met the closure rule.",
                   "options": [
                     "True",
                     "False",
                     "Can't Tell"
                   ],
                   "answer": 0,
-                  "explanation": "Larger packets ran down those stocks after fewer households had received them.",
+                  "explanation": "The two values are at least 4.3 m, the second is not lower, and they were taken ten minutes apart.",
                   "id": "ucat-mock-1-VR-q10"
                 },
                 {
                   "format": "true-false-cant-tell",
-                  "stem": "The bulk-envelope option was taken up by both allotment groups.",
+                  "stem": "The harbourmaster received both boat reports from fishing boats.",
                   "options": [
                     "True",
                     "False",
                     "Can't Tell"
                   ],
                   "answer": 2,
-                  "explanation": "The option was offered, but the text does not report uptake.",
+                  "explanation": "The reports are attributed to boats, but their type is not given.",
                   "id": "ucat-mock-1-VR-q11"
                 },
                 {
                   "format": "true-false-cant-tell",
-                  "stem": "The smaller envelopes solved the record-keeping problem reported by the allotment groups.",
+                  "stem": "The next message was planned even if the closure was still in force.",
                   "options": [
                     "True",
                     "False",
                     "Can't Tell"
                   ],
-                  "answer": 1,
-                  "explanation": "Those groups said using multiple envelopes made records harder; the alternative was a bulk envelope.",
+                  "answer": 0,
+                  "explanation": "The notice promises a message at 10:20 regardless of reopening.",
                   "id": "ucat-mock-1-VR-q12"
                 }
               ],
@@ -324,58 +324,58 @@
               "id": "ucat-mock-1-VR-g05"
             },
             {
-              "title": "The useful puddle",
-              "stimulus": "A housing association proposed levelling a courtyard because residents complained about a large puddle near the bins. Before work began, an engineer discovered that the depression directed water away from the basement of the neighbouring building. Filling it alone would risk moving the problem rather than solving it. A second proposal added a drain to the street. The water company warned that the street pipe already ran close to capacity after heavy rain, even though it could accept more water in ordinary weather. A gardener suggested a planted basin on the same spot, with a raised route to the bins. Most rain would soak into the soil there, but a shallow channel would direct excess flow to the original safe area of the courtyard. The association tested the design with a model and then built a pilot. It measured how long standing water remained after a storm, not just how often water collected. One year later, residents reported dry access to the bins more often, although the planted basin itself still filled in wet weather. Some visitors assumed the basin had failed when they saw the water. A notice explained that temporary storage was intentional. The association said that a later review would assess maintenance costs separately from the improvement in access.",
+              "title": "Who owns the silence?",
+              "stimulus": "A concert audience is asked to switch off mobile phones. The instruction is normally justified on the grounds that a ringing phone distracts other listeners. By that argument, a phone which cannot be heard should pose no problem. But in a hall where people are seated close together, the bright rectangle of a screen can make a demand on attention much as a sound does. The relevant question is not whether an interruption travels through air or light, but whether the people around it can choose to ignore it.\n\nSome concert promoters have suggested that this reasoning justifies a ban on every illuminated device throughout a performance. That would be a curious rule to announce beside the green exit signs. The signs impose a small, continuous visual presence to allow the audience to leave safely. Some people also use screens for captions or amplified sound controls; a restriction which assumes all devices are for amusement will not be neutral between listeners. Conversely, the fact that some screens are essential does not make every screen unobtrusive. A screen held at eye level in a dark stall will attract attention regardless of what is displayed.\n\nThere is an objection to accommodating exceptional cases: if rules have exceptions that are not visible to others, their enforcement may appear inconsistent. It is tempting to solve that problem by making people request permission in public. That solution, however, shifts the burden of a well-designed hall onto the person least able to change it. The promoter could instead explain in advance that some devices are used for access, arrange seats and captions with sightlines in mind, and ask everyone else to put their screens away. None of this makes the concert perfectly silent. It does make it easier to distinguish a shared restriction from a demand that everyone attend in the same way.",
               "questions": [
                 {
-                  "stem": "Why might a visitor misjudge the basin's performance after a storm?",
+                  "stem": "Which proposal is closest to the author’s position?",
                   "options": [
-                    "A normal storage function looked like continuing waterlogging.",
-                    "The basin was meant to replace the route to the bins.",
-                    "The raised path was intended to overflow into the street drain.",
-                    "Water disappeared before the plants had time to soak it up."
+                    "Allow unrestricted device use if phones are muted.",
+                    "Require public disclosure before a patron uses a device.",
+                    "Keep access devices usable while reducing avoidable screen distraction.",
+                    "Replace phone restrictions with a ban on moving images."
                   ],
-                  "answer": 0,
-                  "explanation": "Some visitors interpreted water in the basin as failure, although it was meant to fill temporarily.",
+                  "answer": 2,
+                  "explanation": "The final paragraph proposes allowing devices for access and asking others to put their screens away, supported by seating and captions.",
                   "id": "ucat-mock-1-VR-q21",
                   "format": "single-choice"
                 },
                 {
-                  "stem": "What risk did the engineer identify in filling the original depression alone?",
+                  "stem": "Why does the author mention the exit signs?",
                   "options": [
-                    "Water might be diverted towards the nearby basement.",
-                    "The bins would require more regular collection.",
-                    "The raised route would become too steep.",
-                    "The planted basin would need replacing."
+                    "They are a familiar case of light tolerated for a necessary purpose.",
+                    "They are usually the dominant source of distraction.",
+                    "Their colour makes them less visible than captions.",
+                    "They show the audience will ignore every constant source of light."
                   ],
                   "answer": 0,
-                  "explanation": "The depression was protecting the basement by directing water away.",
+                  "explanation": "Exit signs illustrate the problem with banning all light, even when it serves an essential function.",
                   "id": "ucat-mock-1-VR-q22",
                   "format": "single-choice"
                 },
                 {
-                  "stem": "What question did the association leave for a later review?",
+                  "stem": "What concession does the author make about exceptions?",
                   "options": [
-                    "Whether the street could receive ordinary-weather drainage.",
-                    "Whether the surveyed depression was protecting the basement.",
-                    "What the design would cost to maintain.",
-                    "Whether dry access had ever improved."
+                    "Accommodating them necessarily makes the hall less accessible.",
+                    "Most exceptional uses are for amusement.",
+                    "Necessary uses are always easy to identify.",
+                    "An observer may see inconsistent enforcement when the reason is not obvious."
                   ],
-                  "answer": 2,
-                  "explanation": "The improvement in access was already reported, but maintenance costs were still to be assessed.",
+                  "answer": 3,
+                  "explanation": "The last paragraph grants that an invisible reason for an exception may make enforcement seem inconsistent.",
                   "id": "ucat-mock-1-VR-q23",
                   "format": "single-choice"
                 },
                 {
-                  "stem": "Which measure best captures the residents' practical benefit in the account?",
+                  "stem": "Which principle is used to explain how an inaudible device can still be disruptive?",
                   "options": [
-                    "The material chosen for the raised route",
-                    "The presence of a notice",
-                    "Lower pressure in the street pipe in ordinary weather",
-                    "More frequent dry access to the bins"
+                    "People should never be distracted by static light.",
+                    "An interruption can demand attention through more than one sense.",
+                    "A sound is disruptive only if its meaning is recognised.",
+                    "Most listeners are seated too far from other phones to hear them."
                   ],
-                  "answer": 3,
-                  "explanation": "Residents explicitly reported this improvement even when the basin held water.",
+                  "answer": 1,
+                  "explanation": "The first paragraph compares the demand of a bright screen on attention to that of a sound.",
                   "id": "ucat-mock-1-VR-q24",
                   "format": "single-choice"
                 }
@@ -715,15 +715,15 @@
             {
               "questions": [
                 {
-                  "stem": "Five workshops A–E run in five consecutive slots. B immediately follows D; C is third; A is before E; E is not fifth. Which statement must be true?",
+                  "stem": "Each inspection team takes exactly two of five pieces of equipment: a camera, a drone, a lamp, a meter and a scanner. A drone requires a camera. A scanner cannot be taken with the meter or lamp. Exactly one of the camera and lamp must be taken. If the team does not take a drone, which pair must it rule out as well?",
                   "options": [
-                    "B is in position 2.",
-                    "E is in position 1.",
-                    "A is in position 4.",
-                    "D is in position 4."
+                    "Camera and meter",
+                    "Camera and scanner",
+                    "Lamp and meter",
+                    "Lamp and scanner"
                   ],
                   "answer": 3,
-                  "explanation": "The valid orders are A–E–C–D–B. D is in position 4. This is the only option that holds in all of them.",
+                  "explanation": "A scanner cannot be paired with a lamp. Each of the other listed pairs meets all the rules without a drone.",
                   "id": "ucat-mock-1-DM-q02",
                   "format": "single-choice"
                 }
@@ -733,15 +733,15 @@
             {
               "questions": [
                 {
-                  "stem": "A box contains 11 working sensors and 5 faulty ones. Two are drawn uniformly without replacement. What is the chance both are faulty?",
+                  "stem": "A repairs desk has 48 cases; 30 have photographs and 15 have already been assigned. Exactly 9 have both. A supervisor randomly selects one unassigned case. What is the probability it has photographs?",
                   "options": [
-                    "1/12",
-                    "4/15",
+                    "7/11",
+                    "7/16",
                     "5/16",
-                    "25/256"
+                    "5/11"
                   ],
                   "answer": 0,
-                  "explanation": "5/16 × 4/15 = 1/12. After a success, both the remaining successes and total fall by one.",
+                  "explanation": "There are 48 − 15 = 33 unassigned cases. Of those, 30 − 9 = 21 have photographs, so the probability is 21/33 = 7/11.",
                   "id": "ucat-mock-1-DM-q03",
                   "format": "single-choice"
                 }
@@ -759,7 +759,7 @@
                     "No; some people would rather buy a drink other than water."
                   ],
                   "answer": 1,
-                  "explanation": "The first argument connects the requirement to a foreseeable health risk under the stated conditions.",
+                  "explanation": "The argument about drinking water connects the requirement to a foreseeable health risk at the events specified.",
                   "id": "ucat-mock-1-DM-q04",
                   "format": "single-choice"
                 }
@@ -767,34 +767,17 @@
               "id": "ucat-mock-1-DM-g04"
             },
             {
-              "venn": {
-                "sets": [
-                  "A",
-                  "B",
-                  "C"
-                ],
-                "regions": {
-                  "A": 17,
-                  "B": 19,
-                  "C": 12,
-                  "AB": 7,
-                  "AC": 9,
-                  "BC": 6,
-                  "ABC": 4,
-                  "none": 13
-                }
-              },
               "questions": [
                 {
-                  "stem": "Only A: 17; only B: 19; only C: 12; A and B only: 7; A and C only: 9; B and C only: 6; all three: 4; none: 13. How many participants belong to exactly two of clubs A, B and C?",
+                  "stem": "At a radio station, 42 volunteers can edit recordings or host programmes, or both. Of these, 29 can edit and 25 can host. A workshop is only for editors who do not host. How many can attend?",
                   "options": [
-                    "35",
-                    "18",
-                    "22",
-                    "29"
+                    "12",
+                    "13",
+                    "17",
+                    "25"
                   ],
                   "answer": 2,
-                  "explanation": "The relevant non-overlapping regions are AB, AC, BC: 7 + 9 + 6 = 22.",
+                  "explanation": "There are 42 − 25 = 17 volunteers who do not host. Everyone counted has at least one skill, so all 17 can edit.",
                   "id": "ucat-mock-1-DM-q05",
                   "format": "single-choice"
                 }
@@ -852,33 +835,35 @@
             {
               "questions": [
                 {
-                  "stem": "Five runners J–N finish without ties. K finishes immediately after M; J finishes before M; N finishes second. Which statement could be true?",
+                  "stem": "A courier can use any of the one-way lanes listed. Which stop must occur on a route from the yard to the quay if the gate-to-mill lane is closed?",
                   "options": [
-                    "J is in position 4.",
-                    "L is in position 3.",
-                    "M is in position 1.",
-                    "K is in position 3."
+                    "Gate",
+                    "Depot",
+                    "Mill",
+                    "Bridge"
                   ],
                   "answer": 1,
-                  "explanation": "The valid orders are J–N–L–M–K, J–N–M–K–L, L–N–J–M–K. L is in position 3. This is the only option that holds in at least one of them.",
+                  "explanation": "Without Gate → Mill, a route may proceed through either Gate or Mill, but both feed into Depot. Depot → Quay avoids Bridge.",
                   "id": "ucat-mock-1-DM-q08",
                   "format": "single-choice"
                 }
               ],
-              "id": "ucat-mock-1-DM-g08"
+              "id": "ucat-mock-1-DM-g08",
+              "title": "One-way lanes",
+              "stimulus": "Yard → Gate\nYard → Mill\nGate → Mill\nGate → Depot\nMill → Depot\nDepot → Bridge\nDepot → Quay\nBridge → Quay"
             },
             {
               "questions": [
                 {
-                  "stem": "Nine of 14 numbered cards carry a star. Two different cards are selected uniformly. What is the probability that at least one has a star?",
+                  "stem": "A box has 14 tickets, each with a colour and a shape. Nine are green; six show a circle. A ticket is picked uniformly. Which value cannot be the probability that it is both green and circular?",
                   "options": [
-                    "81/196",
-                    "8/13",
-                    "9/14",
-                    "81/91"
+                    "1/14",
+                    "2/7",
+                    "5/14",
+                    "1/2"
                   ],
                   "answer": 3,
-                  "explanation": "Subtract the chance of two failures: 1 − 5/14 × 4/13 = 81/91.",
+                  "explanation": "At least one ticket must overlap because 9 + 6 > 14, and at most six can overlap because there are six circles. Counts of 1, 4 and 5 can occur, but 1/2 would require seven circles.",
                   "id": "ucat-mock-1-DM-q09",
                   "format": "single-choice"
                 }
@@ -904,34 +889,17 @@
               "id": "ucat-mock-1-DM-g10"
             },
             {
-              "venn": {
-                "sets": [
-                  "A",
-                  "B",
-                  "C"
-                ],
-                "regions": {
-                  "A": 18,
-                  "B": 13,
-                  "C": 11,
-                  "AB": 6,
-                  "AC": 8,
-                  "BC": 7,
-                  "ABC": 3,
-                  "none": 9
-                }
-              },
               "questions": [
                 {
-                  "stem": "Only A: 18; only B: 13; only C: 11; A and B only: 6; A and C only: 8; B and C only: 7; all three: 3; none: 9. How many members of group A belong to neither B nor C?",
+                  "stem": "In a set of catalogued objects, 32 are tagged wood, 23 are tagged metal, and 10 are tagged both. A new rule adds the metal tag to every wood object that does not already have it. The wood tags are unchanged. How many objects now have exactly one tag?",
                   "options": [
-                    "18",
-                    "24",
-                    "15",
-                    "27"
+                    "10",
+                    "13",
+                    "22",
+                    "35"
                   ],
-                  "answer": 0,
-                  "explanation": "The relevant non-overlapping regions are A: 18 = 18.",
+                  "answer": 1,
+                  "explanation": "Every wood-tagged object now also has metal. The objects with exactly one tag are the 23 − 10 = 13 originally tagged only metal.",
                   "id": "ucat-mock-1-DM-q11",
                   "format": "single-choice"
                 }
@@ -960,31 +928,33 @@
               "questions": [
                 {
                   "format": "yes-no-5",
-                  "stem": "Whenever storage room R is open, a supervisor is on site. No supervisor is on site while the alarm is under test. Some deliveries occurred while the alarm was under test. Does each conclusion follow?",
+                  "stem": "Does each statement follow from the figures? Treat the records as complete.",
                   "options": [
                     "Yes",
                     "No"
                   ],
                   "statements": [
-                    "Some deliveries occurred while R was not open.",
-                    "Some deliveries occurred without a supervisor on site.",
-                    "R was open whenever a supervisor was on site.",
-                    "No delivery occurred when R was open.",
-                    "If R is open, the alarm is not under test."
+                    "Every striped badge is orange.",
+                    "The two groups with just one feature are equally large.",
+                    "A majority of the badges have both features.",
+                    "Any badge that is not orange must be striped.",
+                    "Some orange badges are not striped."
                   ],
                   "answer": [
-                    0,
+                    1,
                     0,
                     1,
-                    1,
+                    0,
                     0
                   ],
-                  "explanation": "1. Alarm tests rule out a supervisor and hence an open room. 2. The alarm-test deliveries had none. 3. The first rule works in the other direction. 4. Nothing rules out other deliveries. 5. An open room requires a supervisor, which rules out alarm testing.",
+                  "explanation": "There are 24 badges in all and 18 have exactly one feature. The other six have both, so 15 − 6 = 9 are orange only and 15 − 6 = 9 are striped only. Consequently: 1 No (nine are striped only); 2 Yes (both only groups have nine); 3 No (half do not have both); 4 Yes (none have neither); 5 Yes (nine orange badges are not striped).",
                   "maxMarks": 2,
                   "id": "ucat-mock-1-DM-q13"
                 }
               ],
-              "id": "ucat-mock-1-DM-g13"
+              "id": "ucat-mock-1-DM-g13",
+              "title": "A complete badge inventory",
+              "stimulus": "Each of 24 badges is orange, striped, or both. There are 15 orange badges and 15 striped badges."
             },
             {
               "questions": [
@@ -1091,20 +1061,22 @@
             {
               "questions": [
                 {
-                  "stem": "Five trips A–E use slots 1–5. C is immediately after A. D is later than B. E is fourth. B is not adjacent to E. Which statement must be true?",
+                  "stem": "A festival assigns each act a different space. Which proposed swap, starting from the listed plan, produces a valid plan?",
                   "options": [
-                    "D is in position 3.",
-                    "B is in position 2.",
-                    "A is in position 3.",
-                    "C is in position 3."
+                    "Swap Duo and Choir.",
+                    "Swap Choir and Mime.",
+                    "Swap Mime and Drums.",
+                    "Swap Drums and Duo."
                   ],
-                  "answer": 3,
-                  "explanation": "The valid orders are B–A–C–E–D. C is in position 3. This is the only option that holds in all of them.",
+                  "answer": 2,
+                  "explanation": "Mime can use the Yard and Drums can use the Room. The first swap puts Duo in the Hall, the second puts Mime in the Hall, and the last puts Drums in the Tent; none of those assignments are allowed.",
                   "id": "ucat-mock-1-DM-q19",
                   "format": "single-choice"
                 }
               ],
-              "id": "ucat-mock-1-DM-g19"
+              "id": "ucat-mock-1-DM-g19",
+              "title": "Stage allocations",
+              "stimulus": "Plan: Duo → Tent; Choir → Hall; Mime → Room; Drums → Yard.\nAllowed spaces: Duo (Tent or Yard); Choir (Hall or Tent); Mime (Room or Yard); Drums (Yard or Room)."
             },
             {
               "questions": [
@@ -1127,15 +1099,15 @@
             {
               "questions": [
                 {
-                  "stem": "Should a laboratory publish a plain-language summary with major study results? Select the strongest argument.",
+                  "stem": "A laboratory is deciding whether to send a short plain-language note when it releases a major result. Its aim is to help non-specialist journalists report findings accurately without delaying the technical release. Which is the strongest argument?",
                   "options": [
-                    "No; summaries look less technical.",
-                    "No; some specialists will still read the full paper.",
-                    "Yes; a summary can improve access for readers who lack specialist training without removing the full report.",
-                    "Yes; all readers prefer shorter documents."
+                    "Yes; publish it alongside the release because a trial found that journalists using comparable notes were less likely to mistake an association for a demonstrated cause.",
+                    "No; volunteers who already subscribe to laboratory news generally prefer the graphics in the technical report.",
+                    "Yes; the notes could attract more traffic to the laboratory’s careers page.",
+                    "No; a plain-language note cannot include every detail that appears in the technical methods."
                   ],
-                  "answer": 2,
-                  "explanation": "Accessibility is directly relevant and the answer does not assume the full report is being replaced.",
+                  "answer": 0,
+                  "explanation": "The first argument supplies directly relevant evidence about reporting accuracy and keeps the technical release on time. The others address preferences, traffic or completeness without showing that the stated goal would suffer.",
                   "id": "ucat-mock-1-DM-q21",
                   "format": "single-choice"
                 }
@@ -1143,34 +1115,17 @@
               "id": "ucat-mock-1-DM-g21"
             },
             {
-              "venn": {
-                "sets": [
-                  "A",
-                  "B",
-                  "C"
-                ],
-                "regions": {
-                  "A": 17,
-                  "B": 21,
-                  "C": 12,
-                  "AB": 5,
-                  "AC": 6,
-                  "BC": 7,
-                  "ABC": 3,
-                  "none": 14
-                }
-              },
               "questions": [
                 {
-                  "stem": "Only A: 17; only B: 21; only C: 12; A and B only: 5; A and C only: 6; B and C only: 7; all three: 3; none: 14. How many people belong to A or C, inclusive of people who belong to both?",
+                  "stem": "Of the 80 places at a conference dinner, 49 need a vegetarian meal and 26 need a nut-free meal. The kitchen makes 12 meals that meet both requirements, one for each guest who requested both. The kitchen has mistakenly prepared 49 meals that are vegetarian only. How many of the vegetarian-only meals are surplus to that category?",
                   "options": [
-                    "47",
-                    "55",
-                    "64",
-                    "50"
+                    "1",
+                    "5",
+                    "14",
+                    "12"
                   ],
                   "answer": 3,
-                  "explanation": "The relevant non-overlapping regions are A, C, AB, AC, BC, ABC: 17 + 12 + 5 + 6 + 7 + 3 = 50.",
+                  "explanation": "Only 49 − 12 = 37 guests need vegetarian but not nut-free. The kitchen has prepared 49 vegetarian-only meals, so 12 are surplus to that category.",
                   "id": "ucat-mock-1-DM-q22",
                   "format": "single-choice"
                 }
@@ -1312,15 +1267,15 @@
             {
               "questions": [
                 {
-                  "stem": "Five talks P–T occupy consecutive slots. Q is second. S immediately follows R. T is earlier than P. R is not first. Which statement could be true?",
+                  "stem": "A bidder may submit a bid either with a named sponsor or by providing ID and getting a deposit cleared. Sponsored bidders may also submit ID or a deposit but are not required to. An entry was submitted correctly with a cleared deposit but no ID. Which rule could be added so that this kind of entry would never be valid?",
                   "options": [
-                    "S is in position 2.",
-                    "R is in position 5.",
-                    "P is in position 3.",
-                    "T is in position 4."
+                    "All bidders must either have a sponsor or supply ID.",
+                    "All bidders must supply ID or get a deposit cleared.",
+                    "Sponsored bidders with a cleared deposit must supply ID.",
+                    "Bidders who supply ID must get a deposit cleared."
                   ],
                   "answer": 2,
-                  "explanation": "The valid orders are T–Q–P–R–S, T–Q–R–S–P. P is in position 3. This is the only option that holds in at least one of them.",
+                  "explanation": "The example is possible only on the sponsored route. Only the third rule rules out that route for a bidder who has a cleared deposit but no ID.",
                   "id": "ucat-mock-1-DM-q29",
                   "format": "single-choice"
                 }
@@ -1366,15 +1321,15 @@
             {
               "questions": [
                 {
-                  "stem": "Ten of 22 lockers are occupied. Two different locker numbers are chosen uniformly. What is the probability exactly one belongs to an occupied locker?",
+                  "stem": "A tester has three independent opportunities to detect a fault. The first and second each detect it with probability 1/2; the third detects it with probability 1/4. The tester stops at the first detection. Given that the first opportunity missed, what is the probability the tester detects the fault later?",
                   "options": [
-                    "3/7",
-                    "5/11",
-                    "25/121",
-                    "40/77"
+                    "1/4",
+                    "3/8",
+                    "5/8",
+                    "3/4"
                   ],
-                  "answer": 3,
-                  "explanation": "Either order works: 2 × 10/22 × 12/21 = 40/77.",
+                  "answer": 2,
+                  "explanation": "On the later opportunities, the chance of missing twice is (1/2) × (3/4) = 3/8. The chance of detecting it later is 1 − 3/8 = 5/8.",
                   "id": "ucat-mock-1-DM-q32",
                   "format": "single-choice"
                 }
@@ -1661,119 +1616,95 @@
               "id": "ucat-mock-1-QR-g02"
             },
             {
-              "title": "Travelling exhibition",
-              "stimulus": "Crates go by van. A trip can carry both types, subject to separate limits: at most 12 large and 18 small. Each trip costs the base fee plus a charge for the distance listed, with no return charge.",
+              "title": "Stop-by-stop passenger count",
+              "stimulus": "The shuttle is empty when it reaches Alder. At each stop the recorded exits occur before any boarding. All people who are still on board after Elms get off at the depot. Nobody boards at the depot.",
               "chart": {
                 "type": "table",
-                "title": "Travelling exhibition",
+                "title": "Passenger movements",
                 "labels": [
-                  "Bramley",
-                  "Dunford",
-                  "Elmstead",
-                  "Fenton"
+                  "Alder",
+                  "Brook",
+                  "Court",
+                  "Dale",
+                  "Elms"
                 ],
                 "series": [
                   {
-                    "name": "Large crates",
+                    "name": "Board",
                     "values": [
-                      14,
-                      23,
-                      8,
-                      25
+                      18,
+                      12,
+                      7,
+                      9,
+                      4
                     ]
                   },
                   {
-                    "name": "Small crates",
+                    "name": "Exit",
                     "values": [
-                      34,
+                      0,
+                      3,
                       10,
-                      35,
-                      18
-                    ]
-                  },
-                  {
-                    "name": "Distance per trip (km)",
-                    "values": [
-                      62,
-                      49,
-                      71,
-                      40
-                    ]
-                  },
-                  {
-                    "name": "Base fee (£)",
-                    "values": [
-                      37,
-                      32,
-                      41,
-                      35
-                    ]
-                  },
-                  {
-                    "name": "Charge per km (£)",
-                    "values": [
-                      0.8,
-                      1.1,
-                      0.6,
-                      0.9
+                      15,
+                      9
                     ]
                   }
                 ]
               },
               "questions": [
                 {
-                  "stem": "What is the minimum transport cost to Bramley?",
+                  "stem": "How many passengers travel between Brook and Court?",
                   "options": [
-                    "£173.20",
-                    "£99.20",
-                    "£136.20",
-                    "£182.40",
-                    "£210.20"
+                    "24",
+                    "27",
+                    "28",
+                    "30",
+                    "37"
                   ],
-                  "answer": 0,
-                  "explanation": "(37 + (62 × 0.8)) × (the greater of (round up to a whole number of (14 ÷ 12)) and (round up to a whole number of (34 ÷ 18))) gives £173.20 to the stated precision.",
+                  "answer": 1,
+                  "explanation": "Starting from 18 after Alder, subtract three and add 12 to get 27.",
                   "id": "ucat-mock-1-QR-q09",
                   "format": "single-choice"
                 },
                 {
-                  "stem": "What is the minimum cost difference between Fenton and Dunford, taking the smaller cost from the larger?",
+                  "stem": "For which pair of consecutive stops were there exactly six fewer people on board after serving the second stop than after serving the first?",
                   "options": [
-                    "£81.20",
-                    "£9.20",
-                    "£61.20",
-                    "£41.20",
-                    "£121.20"
+                    "Alder to Brook",
+                    "Brook to Court",
+                    "Court to Dale",
+                    "Dale to Elms",
+                    "Elms to depot"
                   ],
-                  "answer": 3,
-                  "explanation": "((35 + (40 × 0.9)) × (the greater of (round up to a whole number of (25 ÷ 12)) and (round up to a whole number of (18 ÷ 18)))) − ((32 + (49 × 1.1)) × (the greater of (round up to a whole number of (23 ÷ 12)) and (round up to a whole number of (10 ÷ 18)))) gives £41.20 to the stated precision.",
+                  "answer": 2,
+                  "explanation": "Dale takes 15 off and adds nine, a net change of −6. The other changes are +9, −3, −5 and −13.",
                   "id": "ucat-mock-1-QR-q10",
                   "format": "single-choice"
                 },
                 {
-                  "stem": "If Elmstead's small-crate count drops by 50%, rounding up to a whole crate, how much does this save?",
+                  "stem": "What percentage of all passengers who board are still on board after Elms?",
                   "options": [
-                    "£250.80",
-                    "£83.60",
-                    "£42.60",
-                    "£124.60",
-                    "£167.20"
+                    "8%",
+                    "13%",
+                    "18%",
+                    "26%",
+                    "34%"
                   ],
-                  "answer": 1,
-                  "explanation": "(41 + (71 × 0.6)) × ((the greater of (round up to a whole number of (8 ÷ 12)) and (round up to a whole number of (35 ÷ 18))) − (the greater of (round up to a whole number of (8 ÷ 12)) and (round up to a whole number of ((round up to a whole number of (35 ÷ 2)) ÷ 18)))) gives £83.60 to the stated precision.",
+                  "answer": 3,
+                  "explanation": "A total of 50 board and 37 exit through Elms, so 13/50 = 26% are left.",
                   "id": "ucat-mock-1-QR-q11",
                   "format": "single-choice"
                 },
                 {
-                  "stem": "Bramley combines its delivery with another 8 small crates. What is the least total distance needed for the combined delivery?",
+                  "stem": "The shuttle has a capacity of 32. At Brook, how many additional people could have boarded (after the recorded exits and boarding) without exceeding capacity?",
                   "options": [
-                    "138 km",
-                    "248 km",
-                    "186 km",
-                    "124 km",
-                    "210 km"
+                    "1",
+                    "5",
+                    "8",
+                    "12",
+                    "17"
                   ],
-                  "answer": 2,
-                  "explanation": "62 × (the greater of (round up to a whole number of (14 ÷ 12)) and (round up to a whole number of ((34 + 8) ÷ 18))) gives 186 km.",
+                  "answer": 1,
+                  "explanation": "The recorded count after Brook is 18 − 3 + 12 = 27, leaving five places.",
                   "id": "ucat-mock-1-QR-q12",
                   "format": "single-choice"
                 }
@@ -1877,106 +1808,107 @@
               "id": "ucat-mock-1-QR-g04"
             },
             {
-              "title": "Courier tariffs",
-              "stimulus": "For each parcel, the charge is the base price plus the stated rate for every kg above the included weight. Weights are charged exactly (not rounded up). Economy costs are shown before any surcharges.",
+              "title": "Sound booths at a festival",
+              "stimulus": "Two film crews each need a booth. A booking can start and end only at the whole- or half-hour. A booth is closed to other crews during a booking and for the 30 minutes after it. No reset is needed before the first booking of the day.",
               "chart": {
                 "type": "table",
-                "title": "Courier tariffs",
+                "title": "Booth availability on the morning of the festival",
                 "labels": [
-                  "Swift",
-                  "Relay",
-                  "Parcelgo",
-                  "Local"
+                  "Ash",
+                  "Beech",
+                  "Cedar"
                 ],
                 "series": [
                   {
-                    "name": "Base price (£)",
+                    "name": "Opens (hour)",
                     "values": [
-                      6.2,
-                      4.2,
-                      7.8,
-                      4.9
+                      9,
+                      9.5,
+                      10
                     ]
                   },
                   {
-                    "name": "Included weight (kg)",
+                    "name": "Closes (hour)",
                     "values": [
-                      2,
-                      1,
-                      4,
-                      0.5
+                      12,
+                      12.5,
+                      13
                     ]
                   },
                   {
-                    "name": "Additional £/kg",
+                    "name": "Hire rate (£ per half-hour of filming)",
                     "values": [
-                      1.5,
-                      1.6,
-                      0.9,
-                      2.4
+                      18,
+                      15,
+                      12
                     ]
                   }
                 ]
               },
               "questions": [
                 {
-                  "stem": "For a 7.5 kg parcel on Parcelgo, what is the charge?",
+                  "stem": "A crew must film continuously from 09:30 to 11:30. What is the lowest hire fee?",
                   "options": [
-                    "£14.55",
-                    "£9.15",
-                    "£12.75",
-                    "£10.95",
-                    "£3.75"
+                    "£48",
+                    "£54",
+                    "£60",
+                    "£66",
+                    "£72"
                   ],
-                  "answer": 3,
-                  "explanation": "7.8 + ((7.5 − 4) × 0.9) gives £10.95 to the stated precision.",
+                  "answer": 2,
+                  "explanation": "Both Ash and Beech are open over the required period. Beech costs 4 × £15 = £60; Cedar opens too late.",
                   "id": "ucat-mock-1-QR-q17",
                   "format": "single-choice"
                 },
                 {
-                  "stem": "At what weight above 2 kg do Swift and Relay cost the same?",
+                  "stem": "A booking in Ash finishes at 10:30. What is the longest booking a second crew could make in Ash that morning?",
                   "options": [
-                    "8.0 kg",
-                    "10.0 kg",
-                    "6.0 kg",
-                    "14.0 kg",
-                    "4.0 kg"
+                    "30 minutes",
+                    "60 minutes",
+                    "90 minutes",
+                    "120 minutes",
+                    "150 minutes"
                   ],
-                  "answer": 2,
-                  "explanation": "((6.2 − (2 × 1.5)) − (4.2 − (1 × 1.6))) ÷ (1.6 − 1.5) gives 6.0 kg to the stated precision.",
+                  "answer": 1,
+                  "explanation": "Ash cannot be used again until 11:00, leaving only 60 minutes before it closes at 12:00.",
                   "id": "ucat-mock-1-QR-q18",
                   "format": "single-choice"
                 },
                 {
-                  "stem": "Three separate 3.5 kg parcels go by Swift. How much more is charged than if the same parcels went as one combined parcel?",
+                  "stem": "What is the total hire cost of booking Beech for 90 minutes and Cedar for 60 minutes?",
                   "options": [
-                    "£12.40",
-                    "£9.40",
-                    "£3.40",
-                    "£6.40",
-                    "£18.40"
+                    "£54",
+                    "£60",
+                    "£66",
+                    "£69",
+                    "£75"
                   ],
                   "answer": 3,
-                  "explanation": "((6.2 + ((3.5 − 2) × 1.5)) × 3) − (6.2 + ((10.5 − 2) × 1.5)) gives £6.40 to the stated precision.",
+                  "explanation": "The total is 3 × £15 + 2 × £12 = £69.",
                   "id": "ucat-mock-1-QR-q19",
-                  "format": "single-choice"
-                },
-                {
-                  "stem": "Local adds a 12% surcharge to the full bill. What is the charge for a 2.25 kg parcel, to the nearest penny?",
-                  "options": [
-                    "£8.01",
-                    "£10.19",
-                    "£10.78",
-                    "£11.28",
-                    "£9.10"
-                  ],
-                  "answer": 1,
-                  "explanation": "(4.9 + ((2.25 − 0.5) × 2.4)) × 1.12 gives £10.19 to the stated precision.",
-                  "id": "ucat-mock-1-QR-q20",
                   "format": "single-choice"
                 }
               ],
               "id": "ucat-mock-1-QR-g05"
+            },
+            {
+              "id": "ucat-mock-1-QR-g10",
+              "questions": [
+                {
+                  "stem": "An exhibition wall is 6.8 m long. Display boards are 72 cm wide with a gap of 18 cm between neighbours. There must be at least 25 cm clear at each end. What is the largest number of boards that can fit?",
+                  "options": [
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9"
+                  ],
+                  "answer": 2,
+                  "explanation": "The ends leave 630 cm. Seven boards with six gaps use 7 × 72 + 6 × 18 = 612 cm. Eight would need 702 cm.",
+                  "id": "ucat-mock-1-QR-q20",
+                  "format": "single-choice"
+                }
+              ]
             },
             {
               "title": "Skills survey",
@@ -2192,110 +2124,110 @@
               "id": "ucat-mock-1-QR-g07"
             },
             {
-              "title": "Festival staffing",
-              "stimulus": "Workers are paid for shift length minus the unpaid break. Pay is per worker; there is no overtime premium.",
+              "title": "Returns at a repair hub",
+              "stimulus": "The hub offered a second repair only when an item was returned. Every returned item completed its second repair by the end of the trial. First-repair minutes are means for all items in that category. The second-repair mean applies to returned items only.",
               "chart": {
                 "type": "table",
-                "title": "Festival staffing",
+                "title": "Repairs by item category",
                 "labels": [
-                  "Gate",
-                  "Stage",
-                  "Food",
-                  "Help desk"
+                  "Fans",
+                  "Lamps",
+                  "Toasters",
+                  "Radios"
                 ],
                 "series": [
                   {
-                    "name": "Workers",
+                    "name": "Items first repaired",
+                    "values": [
+                      48,
+                      64,
+                      30,
+                      18
+                    ]
+                  },
+                  {
+                    "name": "Items returned",
                     "values": [
                       6,
-                      4,
                       8,
+                      6,
                       3
                     ]
                   },
                   {
-                    "name": "Shift length (min)",
+                    "name": "Mean first repair (min)",
                     "values": [
-                      330,
-                      450,
-                      300,
-                      390
-                    ]
-                  },
-                  {
-                    "name": "Break per worker (min)",
-                    "values": [
-                      30,
-                      45,
                       25,
-                      30
+                      20,
+                      34,
+                      40
                     ]
                   },
                   {
-                    "name": "Hourly pay (£)",
+                    "name": "Mean second repair (min)",
                     "values": [
-                      12.4,
-                      13.6,
-                      11.8,
-                      14.2
+                      15,
+                      12,
+                      18,
+                      30
                     ]
                   }
                 ]
               },
               "questions": [
                 {
-                  "stem": "What is Stage's total wage bill?",
+                  "stem": "Which categories have the same return rate?",
                   "options": [
-                    "£258.40",
-                    "£408.00",
-                    "£367.20",
-                    "£421.60",
-                    "£326.40"
+                    "Fans and radios",
+                    "Lamps and toasters",
+                    "Fans and lamps",
+                    "Toasters and radios",
+                    "Fans and toasters"
                   ],
                   "answer": 2,
-                  "explanation": "(((450 − 45) ÷ 60) × 4) × 13.6 gives £367.20 to the stated precision.",
+                  "explanation": "Fans return at 6/48 = 12.5%, and lamps return at 8/64 = 12.5%. Toasters have 20%, and radios about 16.7%.",
                   "id": "ucat-mock-1-QR-q29",
                   "format": "single-choice"
                 },
                 {
-                  "stem": "What are the total paid worker-hours for Gate and Help desk?",
+                  "stem": "What is the mean total repair time per toaster first repaired, counting time on both repairs when there was a return?",
                   "options": [
-                    "48 hours",
-                    "54 hours",
-                    "24 hours",
-                    "60 hours",
-                    "42 hours"
+                    "34.0 min",
+                    "37.6 min",
+                    "40.8 min",
+                    "43.0 min",
+                    "52.0 min"
                   ],
-                  "answer": 0,
-                  "explanation": "(((330 − 30) × 6) + ((390 − 30) × 3)) ÷ 60 gives 48 hours.",
+                  "answer": 1,
+                  "explanation": "The first repairs used 30 × 34 minutes and the second repairs 6 × 18. Divide by 30 to get 37.6 minutes.",
                   "id": "ucat-mock-1-QR-q30",
                   "format": "single-choice"
                 },
                 {
-                  "stem": "The Food break is increased by 5 minutes and all paid hours now earn 5% more. What is the new Food wage bill?",
+                  "stem": "Which category used the most total labour time across both repairs?",
                   "options": [
-                    "£465.51",
-                    "£446.04",
-                    "£407.10",
-                    "£453.91",
-                    "£420.55"
+                    "Fans",
+                    "Lamps",
+                    "Toasters",
+                    "Radios",
+                    "Fans and lamps tied"
                   ],
                   "answer": 1,
-                  "explanation": "(((((300 − 25) − 5) ÷ 60) × 8) × 11.8) × 1.05 gives £446.04 to the stated precision.",
+                  "explanation": "The totals are 1,290, 1,376, 1,128 and 810 minutes respectively.",
                   "id": "ucat-mock-1-QR-q31",
                   "format": "single-choice"
                 },
                 {
-                  "stem": "How much greater is the total original wage bill for Gate than for Help desk?",
+                  "stem": "Across all four categories, what share of first-repaired items returned for a second repair?",
                   "options": [
-                    "£159.00",
-                    "£96.00",
-                    "£31.20",
-                    "£116.40",
-                    "£136.80"
+                    "12.5%",
+                    "13.75%",
+                    "14%",
+                    "14.375%",
+                    "20%"
                   ],
                   "answer": 3,
-                  "explanation": "((((330 − 30) ÷ 60) × 6) × 12.4) − ((((390 − 30) ÷ 60) × 3) × 14.2) gives £116.40 to the stated precision.",
+                  "explanation": "There were 160 first-repaired items and 23 returns, giving 23/160 = 14.375%.",
                   "id": "ucat-mock-1-QR-q32",
                   "format": "single-choice"
                 }
@@ -2423,12 +2355,25 @@
           "extraTime25Seconds": 1950,
           "groups": [
             {
-              "title": "Observation at the bedside",
-              "stimulus": "During a ward round, medical student Ada is invited to observe a wound examination. The doctor introduces Ada as part of the team without saying that she is a student. The patient draws the blanket up and asks who will be present.",
+              "title": "Before the dental assessment",
+              "stimulus": "Nessa, a dental student, is helping in a clinic. A patient agreed to one student observing their assessment. Just before the appointment, another student asks to join and says their tutor needs to sign off an observation today. The supervising dentist is not yet in the room. The patient has asked Nessa twice how many people will be present because they find crowded rooms difficult.",
               "questions": [
                 {
                   "format": "appropriateness",
-                  "stem": "How appropriate is the following response? Step outside promptly without explaining her role or checking the patient's preference.",
+                  "stem": "How appropriate is the following response?\n\nAsk the second student to wait outside and tell the supervising dentist about what the patient agreed to before anybody else enters.",
+                  "options": [
+                    "A very appropriate thing to do",
+                    "Appropriate, but not ideal",
+                    "Inappropriate, but not awful",
+                    "A very inappropriate thing to do"
+                  ],
+                  "answer": 0,
+                  "explanation": "This preserves the agreed limit and lets the supervising dentist manage staffing before the assessment starts.",
+                  "id": "ucat-mock-1-SJT-q01"
+                },
+                {
+                  "format": "appropriateness",
+                  "stem": "How appropriate is the following response?\n\nAsk the patient in private whether they would consider a second observer, without first checking whether it is necessary for the patient to revisit the decision.",
                   "options": [
                     "A very appropriate thing to do",
                     "Appropriate, but not ideal",
@@ -2436,25 +2381,12 @@
                     "A very inappropriate thing to do"
                   ],
                   "answer": 1,
-                  "explanation": "It protects privacy immediately, but clarification could support a meaningful choice if the patient wants it.",
-                  "id": "ucat-mock-1-SJT-q01"
-                },
-                {
-                  "format": "appropriateness",
-                  "stem": "How appropriate is the following response? Assume that agreeing to the examination also means agreeing to be observed by a student.",
-                  "options": [
-                    "A very appropriate thing to do",
-                    "Appropriate, but not ideal",
-                    "Inappropriate, but not awful",
-                    "A very inappropriate thing to do"
-                  ],
-                  "answer": 3,
-                  "explanation": "Consent to clinical care does not imply consent to student observation.",
+                  "explanation": "Asking privately keeps a refusal possible. Given the expressed concern and the agreement already in place, it would be better not to reopen consent just to meet a student’s target.",
                   "id": "ucat-mock-1-SJT-q02"
                 },
                 {
                   "format": "importance",
-                  "stem": "How important is the following consideration? Whether an alternative teaching encounter can be arranged later.",
+                  "stem": "How important is the following consideration?\n\nWhether the second student can obtain their observation sign-off from a different appointment.",
                   "options": [
                     "Very important",
                     "Important",
@@ -2462,12 +2394,12 @@
                     "Not important at all"
                   ],
                   "answer": 2,
-                  "explanation": "This affects Ada's learning plan, but scarcely affects the present consent decision.",
+                  "explanation": "This may help the tutor arrange an alternative, but the alternative does not determine what the current patient has agreed to.",
                   "id": "ucat-mock-1-SJT-q03"
                 },
                 {
                   "format": "importance",
-                  "stem": "How important is the following consideration? Whether the patient can decline Ada's presence without affecting their care.",
+                  "stem": "How important is the following consideration?\n\nWhether the patient’s original agreement named the observer or specified the number of observers.",
                   "options": [
                     "Very important",
                     "Important",
@@ -2475,20 +2407,20 @@
                     "Not important at all"
                   ],
                   "answer": 0,
-                  "explanation": "A free choice is central to valid consent.",
+                  "explanation": "The limits of the existing agreement determine whether another observer may enter without obtaining new, voluntary agreement.",
                   "id": "ucat-mock-1-SJT-q04"
                 },
                 {
                   "format": "appropriateness",
-                  "stem": "How appropriate is the following response? Clarify her student role and ask whether the patient is comfortable with her staying before the examination begins.",
+                  "stem": "How appropriate is the following response?\n\nInvite the second student in to be introduced so the patient can decide once they have met.",
                   "options": [
                     "A very appropriate thing to do",
                     "Appropriate, but not ideal",
                     "Inappropriate, but not awful",
                     "A very inappropriate thing to do"
                   ],
-                  "answer": 0,
-                  "explanation": "The patient needs a genuine informed choice about student presence.",
+                  "answer": 2,
+                  "explanation": "It leaves a nominal choice, but bringing the person in before asking puts social pressure on the patient to accept a change.",
                   "id": "ucat-mock-1-SJT-q05"
                 }
               ],
@@ -2641,66 +2573,40 @@
               "id": "ucat-mock-1-SJT-g03"
             },
             {
-              "title": "A costly shortcut",
-              "stimulus": "On a placement, a clinician asks student Dan to enter a routine examination as completed before they have seen the patient, saying the result will be updated later. Dan knows the next team can already see the record.",
+              "title": "A shortcut in the practice lab",
+              "stimulus": "Omar and two other students have reserved a simulation room to practise a skills assessment. This is not a clinical session and no patients are involved. The booking notice says a tutor must be present to use the powered simulator. The tutor has been called away and is expected in twenty minutes. A classmate proposes setting up the exercise using the unpowered models first, then deciding whether to start the simulator alone if the tutor is still absent.",
               "questions": [
                 {
                   "format": "appropriateness",
-                  "stem": "How appropriate is the following response? Enter the record exactly as requested and plan to correct it next shift.",
+                  "stem": "How appropriate is the following response?\n\nAgree to practise on the unpowered models, and say they should leave the simulator off until a tutor arrives.",
                   "options": [
                     "A very appropriate thing to do",
                     "Appropriate, but not ideal",
                     "Inappropriate, but not awful",
                     "A very inappropriate thing to do"
                   ],
-                  "answer": 3,
-                  "explanation": "False documentation can affect care before anyone corrects it.",
+                  "answer": 0,
+                  "explanation": "They can make useful progress without exceeding the supervision requirement.",
                   "id": "ucat-mock-1-SJT-q16"
                 },
                 {
                   "format": "most-least",
-                  "stem": "Select the most and least appropriate response to the request.",
+                  "stem": "In this situation, select the most and least appropriate actions as a first response.",
                   "options": [
-                    "Decline for now without clarifying the reason.",
-                    "Enter it as done now.",
-                    "State that it is not done yet and offer to record it after it happens."
+                    "Keep the simulator off and ask the tutor whether someone else can supervise.",
+                    "Spend the first part of the session reviewing the assessment checklist while waiting.",
+                    "Start the simulator briefly, then ask the returning tutor to confirm the setup."
                   ],
                   "answer": [
-                    2,
-                    1
+                    0,
+                    2
                   ],
-                  "explanation": "Accurate status plus direct explanation is best; misleading paperwork is worst.",
+                  "explanation": "Finding approved cover could recover the practical time without breaking the rule. Reviewing the checklist is safe but does not resolve supervision. Starting briefly still bypasses the express requirement.",
                   "id": "ucat-mock-1-SJT-q17"
                 },
                 {
                   "format": "appropriateness",
-                  "stem": "How appropriate is the following response? Decline to record an examination that has not happened and explain the risk to the next team.",
-                  "options": [
-                    "A very appropriate thing to do",
-                    "Appropriate, but not ideal",
-                    "Inappropriate, but not awful",
-                    "A very inappropriate thing to do"
-                  ],
-                  "answer": 0,
-                  "explanation": "Notes must accurately reflect what happened when others will rely on them.",
-                  "id": "ucat-mock-1-SJT-q18"
-                },
-                {
-                  "format": "importance",
-                  "stem": "How important is the following consideration? Whether another team could rely on the premature entry.",
-                  "options": [
-                    "Very important",
-                    "Important",
-                    "Of minor importance",
-                    "Not important at all"
-                  ],
-                  "answer": 0,
-                  "explanation": "The entry could cause downstream decisions to be made on false information.",
-                  "id": "ucat-mock-1-SJT-q19"
-                },
-                {
-                  "format": "appropriateness",
-                  "stem": "How appropriate is the following response? Tell the clinician he will leave the examination field blank but not say why.",
+                  "stem": "How appropriate is the following response?\n\nWait for the tutor and use the time to review together instead of asking whether approved cover is available.",
                   "options": [
                     "A very appropriate thing to do",
                     "Appropriate, but not ideal",
@@ -2708,7 +2614,33 @@
                     "A very inappropriate thing to do"
                   ],
                   "answer": 1,
-                  "explanation": "This avoids a false entry; explaining the issue would better prevent recurrence or misunderstanding.",
+                  "explanation": "It is safe and constructive. It is not ideal if the reserved time could have been recovered by asking about cover.",
+                  "id": "ucat-mock-1-SJT-q18"
+                },
+                {
+                  "format": "importance",
+                  "stem": "How important is the following consideration?\n\nWhether the booking notice is an explicit condition for using the simulator rather than a recommendation.",
+                  "options": [
+                    "Very important",
+                    "Important",
+                    "Of minor importance",
+                    "Not important at all"
+                  ],
+                  "answer": 0,
+                  "explanation": "This determines what the students are allowed to do independently. The notice in the scenario makes it a requirement.",
+                  "id": "ucat-mock-1-SJT-q19"
+                },
+                {
+                  "format": "appropriateness",
+                  "stem": "How appropriate is the following response?\n\nKeep the simulator off but tell the absent tutor that the classmate has already used it without supervision.",
+                  "options": [
+                    "A very appropriate thing to do",
+                    "Appropriate, but not ideal",
+                    "Inappropriate, but not awful",
+                    "A very inappropriate thing to do"
+                  ],
+                  "answer": 3,
+                  "explanation": "The report falsely states that a rule was broken. Raising uncertainty honestly is different from making an unsupported allegation.",
                   "id": "ucat-mock-1-SJT-q20"
                 }
               ],
@@ -2861,12 +2793,12 @@
               "id": "ucat-mock-1-SJT-g06"
             },
             {
-              "title": "Recording attendance",
-              "stimulus": "Student Gwen is leaving a placement early for a family matter. A classmate offers to mark her present for an afternoon tutorial, saying nobody would check. The course team has an absence-reporting process.",
+              "title": "Permission for a conference poster",
+              "stimulus": "Suki is preparing a poster about a student-run project. One patient adviser, Jules, volunteered a short quotation and gave written permission for it to appear without a name on a poster at a local conference. The organiser now plans to post photographs of all the posters publicly. The team had not mentioned online publication when it asked Jules for permission. Printing closes this evening, and a version without the quotation is ready.",
               "questions": [
                 {
                   "format": "importance",
-                  "stem": "How important is the following consideration? Whether there is a route to request authorised absence without sharing personal details widely.",
+                  "stem": "How important is the following consideration?\n\nWhether the planned public photographs would make the quotation readable.",
                   "options": [
                     "Very important",
                     "Important",
@@ -2874,51 +2806,12 @@
                     "Not important at all"
                   ],
                   "answer": 1,
-                  "explanation": "It affects how to notify appropriately, but not whether she can falsely claim attendance.",
+                  "explanation": "Readability affects the likelihood of wider disclosure. The team still needs to clarify the change of audience rather than treating a poor photograph as a guarantee.",
                   "id": "ucat-mock-1-SJT-q31"
                 },
                 {
                   "format": "appropriateness",
-                  "stem": "How appropriate is the following response? Let the classmate mark her present in exchange for doing the same later.",
-                  "options": [
-                    "A very appropriate thing to do",
-                    "Appropriate, but not ideal",
-                    "Inappropriate, but not awful",
-                    "A very inappropriate thing to do"
-                  ],
-                  "answer": 3,
-                  "explanation": "This recruits someone into falsifying records.",
-                  "id": "ucat-mock-1-SJT-q32"
-                },
-                {
-                  "format": "appropriateness",
-                  "stem": "How appropriate is the following response? Decline the offer but wait until the next day to tell the course team despite being able to do so now.",
-                  "options": [
-                    "A very appropriate thing to do",
-                    "Appropriate, but not ideal",
-                    "Inappropriate, but not awful",
-                    "A very inappropriate thing to do"
-                  ],
-                  "answer": 1,
-                  "explanation": "She avoids dishonesty; prompt communication would let the team plan appropriately.",
-                  "id": "ucat-mock-1-SJT-q33"
-                },
-                {
-                  "format": "importance",
-                  "stem": "How important is the following consideration? Whether the register is commonly audited.",
-                  "options": [
-                    "Very important",
-                    "Important",
-                    "Of minor importance",
-                    "Not important at all"
-                  ],
-                  "answer": 3,
-                  "explanation": "The chance of detection is irrelevant to honest reporting.",
-                  "id": "ucat-mock-1-SJT-q34"
-                },
-                {
-                  "format": "appropriateness",
-                  "stem": "How appropriate is the following response? Explain that she cannot be marked present and use the absence-reporting process.",
+                  "stem": "How appropriate is the following response?\n\nGive Jules a clear explanation of the new audience and, unless they freely agree in time, use the version without the quotation.",
                   "options": [
                     "A very appropriate thing to do",
                     "Appropriate, but not ideal",
@@ -2926,7 +2819,46 @@
                     "A very inappropriate thing to do"
                   ],
                   "answer": 0,
-                  "explanation": "Honest reporting and a legitimate route address the situation without deception.",
+                  "explanation": "This respects the scope of the original permission, keeps the deadline manageable and avoids pressuring Jules.",
+                  "id": "ucat-mock-1-SJT-q32"
+                },
+                {
+                  "format": "appropriateness",
+                  "stem": "How appropriate is the following response?\n\nAsk the organiser to exclude the poster from photography, but send it to print with the quotation before the organiser confirms.",
+                  "options": [
+                    "A very appropriate thing to do",
+                    "Appropriate, but not ideal",
+                    "Inappropriate, but not awful",
+                    "A very inappropriate thing to do"
+                  ],
+                  "answer": 2,
+                  "explanation": "The request tries to preserve the agreed audience, but printing first leaves no confirmed protection against online publication.",
+                  "id": "ucat-mock-1-SJT-q33"
+                },
+                {
+                  "format": "importance",
+                  "stem": "How important is the following consideration?\n\nWhether the quotation makes the poster more likely to be placed near the entrance.",
+                  "options": [
+                    "Very important",
+                    "Important",
+                    "Of minor importance",
+                    "Not important at all"
+                  ],
+                  "answer": 3,
+                  "explanation": "This speculative display advantage is not relevant to whether public online publication was agreed.",
+                  "id": "ucat-mock-1-SJT-q34"
+                },
+                {
+                  "format": "appropriateness",
+                  "stem": "How appropriate is the following response?\n\nUse the prepared version without the quotation and explain the change to Jules afterwards.",
+                  "options": [
+                    "A very appropriate thing to do",
+                    "Appropriate, but not ideal",
+                    "Inappropriate, but not awful",
+                    "A very inappropriate thing to do"
+                  ],
+                  "answer": 1,
+                  "explanation": "Removing the quotation protects Jules and meets the deadline. Where practical, consulting them first would give them a chance to choose whether to support the wider use.",
                   "id": "ucat-mock-1-SJT-q35"
                 }
               ],
@@ -3007,25 +2939,25 @@
               "id": "ucat-mock-1-SJT-g08"
             },
             {
-              "title": "An offer of coaching",
-              "stimulus": "A tutor offers student Imani extra coaching to help after a difficult placement. Near the end of the session he asks for a private social-media connection and repeatedly invites her to meet at his home rather than on campus. The tutor will assess her next week.",
+              "title": "Sharing the practice time",
+              "stimulus": "Four students share a room for short practice interviews. A classmate who uses additional time by agreement with the course needs a longer slot to finish their practice. Two students have already swapped commitments to attend; another room may be free later. The classmate asks Dani, who is coordinating the bookings, not to explain their personal reason to the group.",
               "questions": [
                 {
                   "format": "importance",
-                  "stem": "How important is the following consideration? Whether coaching could continue with another tutor in an approved teaching setting.",
+                  "stem": "How important is the following consideration?\n\nWhether there is enough room time to give everyone a usable practice slot without displacing an existing booking.",
                   "options": [
                     "Very important",
                     "Important",
                     "Of minor importance",
                     "Not important at all"
                   ],
-                  "answer": 1,
-                  "explanation": "It offers a way to preserve learning support, but the immediate boundary concern still needs addressing.",
+                  "answer": 0,
+                  "explanation": "The schedule determines the viable adjustments and whether another room or time is needed.",
                   "id": "ucat-mock-1-SJT-q41"
                 },
                 {
                   "format": "appropriateness",
-                  "stem": "How appropriate is the following response? Decline the invitation and contact a trusted course lead or reporting route for support.",
+                  "stem": "How appropriate is the following response?\n\nPrivately check what time the classmate needs, look for space and propose a workable schedule without disclosing their reason.",
                   "options": [
                     "A very appropriate thing to do",
                     "Appropriate, but not ideal",
@@ -3033,38 +2965,38 @@
                     "A very inappropriate thing to do"
                   ],
                   "answer": 0,
-                  "explanation": "The power imbalance and repeated private invitations make support and boundary-setting appropriate.",
+                  "explanation": "This respects privacy while taking the adjustment and the others’ arrangements seriously.",
                   "id": "ucat-mock-1-SJT-q42"
                 },
                 {
                   "format": "appropriateness",
-                  "stem": "How appropriate is the following response? Ask another student for support but make no plan to contact an appropriate staff member.",
+                  "stem": "How appropriate is the following response?\n\nMove the two students’ bookings and explain the classmate’s agreement to them so they understand the reason.",
                   "options": [
                     "A very appropriate thing to do",
                     "Appropriate, but not ideal",
                     "Inappropriate, but not awful",
                     "A very inappropriate thing to do"
                   ],
-                  "answer": 1,
-                  "explanation": "Peer support is useful but cannot manage assessment conflict or a pattern of behaviour by itself.",
+                  "answer": 3,
+                  "explanation": "It reveals private information against an explicit request and changes commitments without consultation.",
                   "id": "ucat-mock-1-SJT-q43"
                 },
                 {
                   "format": "importance",
-                  "stem": "How important is the following consideration? Whether the tutor has authority over Imani's upcoming assessment.",
+                  "stem": "How important is the following consideration?\n\nWhether the classmate can make use of a later time if the alternative room is available.",
                   "options": [
                     "Very important",
                     "Important",
                     "Of minor importance",
                     "Not important at all"
                   ],
-                  "answer": 0,
-                  "explanation": "The power imbalance is central to understanding the pressure.",
+                  "answer": 1,
+                  "explanation": "A later room helps only if they can attend. It matters to that option, but an adjustment in the original room may still be possible.",
                   "id": "ucat-mock-1-SJT-q44"
                 },
                 {
                   "format": "appropriateness",
-                  "stem": "How appropriate is the following response? Ask the tutor whether declining the private invitation will affect her assessment, and accept his verbal assurance without arranging independent support.",
+                  "stem": "How appropriate is the following response?\n\nOffer the longer slot first, but leave the other students to renegotiate their shortened slots without helping.",
                   "options": [
                     "A very appropriate thing to do",
                     "Appropriate, but not ideal",
@@ -3072,7 +3004,7 @@
                     "A very inappropriate thing to do"
                   ],
                   "answer": 2,
-                  "explanation": "It identifies the conflict, but leaves the concern within an unequal relationship rather than seeking a safe independent route.",
+                  "explanation": "Offering enough time is constructive, but making a unilateral change without working out usable alternatives moves the problem onto the others.",
                   "id": "ucat-mock-1-SJT-q45"
                 }
               ],
@@ -3559,58 +3491,58 @@
               "id": "ucat-mock-2-VR-g02"
             },
             {
-              "title": "The lost footnote",
-              "stimulus": "A local history group scanned a booklet about the first public swimming baths in the district. Its online transcription described the baths as opening in May. In the printed original, a footnote distinguished the formal dedication in May from public admission in June. The scanner had captured the footnote, but the software arranged the text in reading order and placed the note after the index. The volunteer who proofread the main pages did not see it. A teacher spotted the problem when a pupil compared two sources for a project. The group fixed the date reference and added links from each note marker to its note. It also created a plain-text download for people whose reading software did not handle page links well. Some members asked whether the group should correct original spelling errors in that download. The editors chose to leave those spellings intact while appending explanations when they could seriously confuse a reader. The same policy did not apply to errors introduced by scanning, which the editors corrected wherever they found them. The group kept copies of page images available so that readers could distinguish the editors' intervention from the original printing. It did not claim that the original booklet was always accurate.",
+              "title": "A letter under the varnish",
+              "stimulus": "Excerpt from the conservator’s report\n\nThe board usually called The Letter Writer arrived with a narrow strip of green paint along the bottom edge. Its former owner believed the strip covered the painter’s signature. Under angled light we found shallow ridges beneath it, but they did not read like letters: they ran diagonally through the last two strokes of a fold in the painted tablecloth. The difference matters. Ridges which follow the movement of the composition are more likely to be part of the image than an inscription added at the end.\n\nA point sample at the edge showed that the green layer sat above a yellowed varnish. It was therefore not part of the visible surface when that varnish was applied. That does not prove that the artist did not apply the green, since painters sometimes return to a varnished work. Nor does it establish what had been painted below the varnish. To avoid disturbing a finished passage on the basis of a conjecture, we left the strip in place.\n\nEditor’s note for the exhibition\n\nWe have not renamed the painting. The customary title is not contemporary, but it now lets readers recognise the same object across several loan records. The catalogue points out that the envelope in the sitter’s hand is open with its seal broken. On present evidence the sitter could be reading a letter rather than writing one; the indistinct object beside the left hand might be a pen or the handle of a knife. The display label identifies the interpretative problem without settling it. There is, to be sure, a difference between giving an object a stable name and treating its name as evidence about what it depicts.",
               "questions": [
                 {
-                  "stem": "Who first identified the footnote issue, according to the account?",
+                  "stem": "What reason is given for keeping the customary title?",
                   "options": [
-                    "The volunteer proofreading the main pages",
-                    "A teacher responding to a pupil's source comparison",
-                    "A member arguing about original spelling",
-                    "The software supplier"
+                    "It was recovered from beneath the green paint.",
+                    "It is demonstrably the painter’s title.",
+                    "It resolves the dispute over the object in the sitter’s hand.",
+                    "It allows the painting to be followed through existing records."
                   ],
-                  "answer": 1,
-                  "explanation": "The teacher noticed when the pupil compared two accounts.",
+                  "answer": 3,
+                  "explanation": "The editor retains it as a practical identifier across loan records.",
                   "id": "ucat-mock-2-VR-q09",
                   "format": "single-choice"
                 },
                 {
-                  "stem": "What initially caused the footnote distinction to go unnoticed during proofreading?",
+                  "stem": "What can be concluded from the point sample alone?",
                   "options": [
-                    "The index listed a different public admission date from the note.",
-                    "The volunteer relied on the plain-text download rather than the booklet.",
-                    "The printed footnote was too faint for the scanner to capture.",
-                    "The software placed the captured note outside the sequence the volunteer checked."
+                    "The original painter could not have added the strip.",
+                    "The sampled green layer was applied after the varnish beneath it.",
+                    "The space below the varnish contains a signature.",
+                    "The ridges were produced after the green paint was applied."
                   ],
-                  "answer": 3,
-                  "explanation": "It put the note after the index, beyond the main pages the volunteer proofread.",
+                  "answer": 1,
+                  "explanation": "Only the order of the green layer and underlying varnish is established by the described sample.",
                   "id": "ucat-mock-2-VR-q10",
                   "format": "single-choice"
                 },
                 {
-                  "stem": "Why did the editors provide a plain-text download in addition to links within the transcription?",
+                  "stem": "Which statement best compares the approaches of the two writers?",
                   "options": [
-                    "The note markers had no corresponding note after the correction.",
-                    "Some readers' software might not handle the links well.",
-                    "The plain-text file could reproduce the original page layout exactly.",
-                    "The original booklet could not be captured as page images."
+                    "Both retain something inherited without taking it as proof of the associated claim.",
+                    "The conservator accepts the owner’s story; the editor questions the conservator’s tests.",
+                    "Both reject leaving incomplete evidence visible to visitors.",
+                    "The conservator proposes a new title; the editor treats the old title as authoritative."
                   ],
-                  "answer": 1,
-                  "explanation": "The alternative made the content usable without depending on internal links.",
+                  "answer": 0,
+                  "explanation": "The conservator keeps the strip without accepting the signature claim; the editor keeps the title without using it as evidence of the scene.",
                   "id": "ucat-mock-2-VR-q11",
                   "format": "single-choice"
                 },
                 {
-                  "stem": "Which distinction guided the editors' treatment of errors?",
+                  "stem": "Which detail supports the alternative interpretation of the sitter’s activity?",
                   "options": [
-                    "Date errors were always corrected in the page images.",
-                    "Errors found by children were treated differently from those found by adults.",
-                    "Original wording was preserved, whereas errors introduced by scanning were corrected.",
-                    "Errors in the index were kept and all others corrected."
+                    "The first varnish had yellowed.",
+                    "The ridges match the painted cloth.",
+                    "The envelope has already been unsealed.",
+                    "The painting had been lent more than once."
                   ],
                   "answer": 2,
-                  "explanation": "The editors retained old spellings but fixed mistakes made by the process.",
+                  "explanation": "An already-opened envelope supports reading a received letter as a possibility.",
                   "id": "ucat-mock-2-VR-q12",
                   "format": "single-choice"
                 }
@@ -3795,55 +3727,55 @@
               "id": "ucat-mock-2-VR-g06"
             },
             {
-              "title": "Free shelves",
-              "stimulus": "A community centre put a set of shelves near its entrance for visitors to exchange household items. When volunteers counted everything removed in a month, the exchange appeared busy. They were surprised that box lids and electrical cables accumulated while matching boxes and devices disappeared. A notice asked people to label items if more than one part was needed. In a second month volunteers counted fewer items, but recorded more complete sets finding new owners. A grant application used the latter measure to illustrate how the shelves could support reuse. It still listed separate small items, including cables, as useful to some visitors. A caretaker suggested taking away anything untouched for three days to prevent clutter. Volunteers preferred clearing the shelves on a published weekly schedule, because people using the centre on the same day each week might otherwise miss every item left just after their visit. They labelled separately a basket of things that were nearly due for removal. A charity agreed to take some leftovers but did not promise to accept every type of item. The centre kept a register of what it passed on and discarded. It did not claim to have measured exactly how much waste it prevented, because it did not know what donors and recipients would otherwise have done.",
+              "title": "Rules for the rehearsal booths",
+              "stimulus": "Every school of music student may book one of the four rehearsal booths. A booking reserves a booth for forty minutes; a booking ends early only if the user tells the desk that they have finished. A student arriving more than ten minutes after the start of a booking loses their claim unless they notified the desk before their start time. The desk may extend a confirmed booking only if the next slot has no reservation.\n\nThe booths on the ground floor each have a piano. The other two have music stands but no keyboard. Unbooked booths may be used by staff preparing teaching materials, but a staff member must vacate the booth when an on-time student arrives with a confirmed booking. A student cannot make a further advance booking until their current reservation has ended. On the day of a performance, the desk may hold back one ground-floor booth for warm-ups; no advance bookings are taken for a held booth that day.",
               "questions": [
                 {
                   "format": "true-false-cant-tell",
-                  "stem": "The grant application referred to complete sets finding new owners as evidence about reuse.",
-                  "options": [
-                    "True",
-                    "False",
-                    "Can't Tell"
-                  ],
-                  "answer": 0,
-                  "explanation": "It used the number of complete sets, a different outcome from the raw number of items taken.",
-                  "id": "ucat-mock-2-VR-q25"
-                },
-                {
-                  "format": "true-false-cant-tell",
-                  "stem": "The centre considered cables useless if left without an accompanying device.",
+                  "stem": "A student may hold two ordinary advance bookings at the same time if they are for different booths.",
                   "options": [
                     "True",
                     "False",
                     "Can't Tell"
                   ],
                   "answer": 1,
-                  "explanation": "It regarded separate small items, including cables, as useful to some people.",
-                  "id": "ucat-mock-2-VR-q26"
+                  "explanation": "No further advance booking can be made until the current reservation has ended, with no exemption for another booth.",
+                  "id": "ucat-mock-2-VR-q25"
                 },
                 {
                   "format": "true-false-cant-tell",
-                  "stem": "The charity rejected at least one set of shelves.",
-                  "options": [
-                    "True",
-                    "False",
-                    "Can't Tell"
-                  ],
-                  "answer": 2,
-                  "explanation": "No rejection of shelving is described.",
-                  "id": "ucat-mock-2-VR-q27"
-                },
-                {
-                  "format": "true-false-cant-tell",
-                  "stem": "The weekly schedule was intended to improve the chance that weekly visitors would see items before clearance.",
+                  "stem": "A student who notified the desk before the start does not automatically lose the booking after ten minutes.",
                   "options": [
                     "True",
                     "False",
                     "Can't Tell"
                   ],
                   "answer": 0,
-                  "explanation": "That was the reason given for preferring weekly over three-day clearance.",
+                  "explanation": "Advance notification is an express exception to the late-arrival rule.",
+                  "id": "ucat-mock-2-VR-q26"
+                },
+                {
+                  "format": "true-false-cant-tell",
+                  "stem": "Each ground-floor piano is tuned before performance days.",
+                  "options": [
+                    "True",
+                    "False",
+                    "Can't Tell"
+                  ],
+                  "answer": 2,
+                  "explanation": "Piano availability is stated, but the tuning schedule is not.",
+                  "id": "ucat-mock-2-VR-q27"
+                },
+                {
+                  "format": "true-false-cant-tell",
+                  "stem": "A staff member using an unbooked booth takes precedence over an on-time student with a confirmed booking.",
+                  "options": [
+                    "True",
+                    "False",
+                    "Can't Tell"
+                  ],
+                  "answer": 1,
+                  "explanation": "The rules specifically require the staff member to vacate in that situation.",
                   "id": "ucat-mock-2-VR-q28"
                 }
               ],
@@ -4023,58 +3955,58 @@
               "id": "ucat-mock-2-VR-g10"
             },
             {
-              "title": "A public clock",
-              "stimulus": "A town planned to repair its market hall clock, which had stopped during an unusually cold winter. The first appeal said the cold had broken the mechanism. When the repairer examined it, she found that dried oil increased friction even in warmer conditions. The cold might have made that problem worse, but she could not tell whether the clock would otherwise have stopped at a different time. An archive photograph showed a dial with Roman numerals; the present dial used Arabic numbers. The group considered switching back but found minutes from an earlier accessibility discussion recording complaints about reading the old dial from street level. Rather than choose between a readable clock and a historical display, it kept the current face and used the photograph in a sign under the tower. It corrected the appeal language to describe the cold as a possible contributor rather than a confirmed cause. Some supporters requested a demonstration of the repaired movement. Because the mechanism was above a narrow stair, the group arranged a live camera instead of opening the chamber. A survey of people who watched found interest in maintenance costs, so the group posted its annual service invoices. The invoice list did not show how long the clock had remained stopped in previous years.",
+              "title": "A battery in the hill",
+              "stimulus": "A pumped-storage station does not make electricity from water in quite the way a conventional hydroelectric station does. It buys electricity to move water uphill and recovers some of that energy by letting it run back down. Before the water reaches the lower reservoir, it turns a turbine connected to a generator. Friction and losses in the machines mean that the total energy recovered is smaller than the total energy used. An operator who paid the same price per unit as it received would therefore lose money on electricity trading alone.\n\nThe economic question is when electricity is scarce, not whether the amount used and the amount returned are equal. At times when demand is low or wind turbines are producing more electricity than the grid can take, the station can act as a buyer. If supply is tight at a later hour, it can act as a seller. This distinction partly explains why a station is often called a battery despite containing no electrochemical cells. It also explains why improvements to efficiency are useful without being the whole story. A station may retain plenty of stored energy and still be unable to supply it rapidly enough to meet a sudden shortfall.\n\nAn engineer reviewing a proposal compared two sites. At the first, a greater height difference would make each cubic metre of water more useful. At the second, the water route would be shorter and wider, allowing a greater volume of water to reach the machines in a given time. The report did not choose between them. It recommended first establishing whether the grid mainly needed a short burst of high power or a moderate output maintained for several hours. Those needs are not interchangeable, even if the total energy delivered happens to match.",
               "questions": [
                 {
-                  "stem": "How did the repairer's findings change the appeal's wording?",
+                  "stem": "What is the main function of the second paragraph?",
                   "options": [
-                    "It treated cold as a possible contributing factor rather than a confirmed cause.",
-                    "It said the failure would have occurred at exactly the same time in warm weather.",
-                    "It credited dried oil as the sole cause in every past stoppage.",
-                    "It made the change of numerals the explanation for the clock stopping."
+                    "To argue that losses do not exist when renewable power is available",
+                    "To show how availability at different times can justify accepting energy losses",
+                    "To calculate how much water a station should retain",
+                    "To establish that pumped storage should replace other kinds of batteries"
                   ],
-                  "answer": 0,
-                  "explanation": "The dried oil was another factor and the role of cold was not established.",
+                  "answer": 1,
+                  "explanation": "It explains why shifting output from a time of plentiful electricity to a time of shortage can be valuable despite losses.",
                   "id": "ucat-mock-2-VR-q41",
                   "format": "single-choice"
                 },
                 {
-                  "stem": "Why did the group retain the current dial?",
+                  "stem": "Which conclusion follows about the first site?",
                   "options": [
-                    "It had evidence that the earlier dial could be hard to read from the street.",
-                    "The current dial was identical to the historic one.",
-                    "Supporters opposed showing historic images.",
-                    "The older dial was known to be beyond repair."
+                    "It can use a smaller volume of water for a given amount of stored energy, other factors being equal.",
+                    "It will necessarily deliver more power than the second site.",
+                    "Its wider water route allows more water to pass each minute.",
+                    "It can only provide a short burst of output."
                   ],
                   "answer": 0,
-                  "explanation": "The minutes recorded visibility concerns, so the group showed the historic dial in a photo instead.",
+                  "explanation": "The greater height difference makes each cubic metre more useful; neither the delivery rate nor the duration is stated.",
                   "id": "ucat-mock-2-VR-q42",
                   "format": "single-choice"
                 },
                 {
-                  "stem": "Why did the group offer a camera demonstration rather than open the chamber?",
+                  "stem": "Which case most directly illustrates the distinction made at the end?",
                   "options": [
-                    "Supporters wanted invoices displayed next to the mechanism.",
-                    "The camera was needed to obtain proof of the old numerals.",
-                    "The mechanism could be seen without sending visitors up the narrow stair.",
-                    "The clock had stopped again before people could enter."
+                    "A reservoir serves two regions whose average daily demands are equal.",
+                    "Two machines lose the same fraction of the energy supplied to them.",
+                    "Two stations buy power at the same price but have different construction costs.",
+                    "One station delivers a given amount in an hour and another delivers the same amount in four hours."
                   ],
-                  "answer": 2,
-                  "explanation": "The physical access constraint prompted the use of a live feed.",
+                  "answer": 3,
+                  "explanation": "Equal total energy can be delivered at very different rates; equal totals alone do not meet the same grid need.",
                   "id": "ucat-mock-2-VR-q43",
                   "format": "single-choice"
                 },
                 {
-                  "stem": "What does the published invoice list directly help a reader check?",
+                  "stem": "Which fact is not established by the passage?",
                   "options": [
-                    "Whether dried oil caused each earlier failure",
-                    "How long the clock was stopped each year",
-                    "The date the old dial was replaced",
-                    "How much the repair group paid for annual service"
+                    "Water passing downhill drives a turbine.",
+                    "Energy is lost during a full storage cycle.",
+                    "The operator makes more money trading electricity than from any other activity.",
+                    "A storage station may buy power when supply exceeds what the grid can take."
                   ],
-                  "answer": 3,
-                  "explanation": "The invoices relate to maintenance costs, not operational stoppage history.",
+                  "answer": 2,
+                  "explanation": "The economics of energy trading are explained, but compared revenue sources are not supplied.",
                   "id": "ucat-mock-2-VR-q44",
                   "format": "single-choice"
                 }
@@ -4123,33 +4055,82 @@
             {
               "questions": [
                 {
-                  "stem": "Five stalls A–E are numbered consecutively. E is in stall 3. D is immediately after B. C is after E. A is not adjacent to E. Which statement must be true?",
+                  "stem": "A delivery team must visit four lockers. It must visit Cedar before Elm and Birch before Dock. It pays for each move between consecutively visited lockers, with no travel charge for the starting or ending point. Which of the listed sequences is eligible and cheapest among the eligible options?",
                   "options": [
-                    "A is in position 1.",
-                    "C is in position 2.",
-                    "B is in position 4.",
-                    "D is in position 2."
+                    "Birch → Cedar → Elm → Dock",
+                    "Cedar → Birch → Elm → Dock",
+                    "Cedar → Elm → Dock → Birch",
+                    "Birch → Dock → Cedar → Elm"
                   ],
-                  "answer": 3,
-                  "explanation": "The valid orders are B–D–E–C–A. D is in position 2. This is the only option that holds in all of them.",
+                  "answer": 0,
+                  "explanation": "The eligible sequences cost £8, £12 and £10. Cedar → Elm → Dock → Birch is not eligible because Dock precedes Birch.",
                   "id": "ucat-mock-2-DM-q02",
                   "format": "single-choice"
                 }
               ],
-              "id": "ucat-mock-2-DM-g02"
+              "id": "ucat-mock-2-DM-g02",
+              "title": "Locker transfers",
+              "chart": {
+                "type": "table",
+                "title": "Charge (£) for a move, in either direction",
+                "labels": [
+                  "Birch",
+                  "Cedar",
+                  "Dock",
+                  "Elm"
+                ],
+                "series": [
+                  {
+                    "name": "Birch",
+                    "values": [
+                      0,
+                      2,
+                      6,
+                      5
+                    ]
+                  },
+                  {
+                    "name": "Cedar",
+                    "values": [
+                      2,
+                      0,
+                      3,
+                      1
+                    ]
+                  },
+                  {
+                    "name": "Dock",
+                    "values": [
+                      6,
+                      3,
+                      0,
+                      5
+                    ]
+                  },
+                  {
+                    "name": "Elm",
+                    "values": [
+                      5,
+                      1,
+                      5,
+                      0
+                    ]
+                  }
+                ]
+              }
             },
             {
               "questions": [
                 {
-                  "stem": "A sleeve contains 17 samples of which 6 are labelled blue. Two are selected uniformly without replacement. What is the chance both are blue?",
+                  "stem": "A workshop sends parcels either by van or by train, chosen with equal probability. One in five van deliveries and one in ten train deliveries arrives early. A delivery has arrived early. What is the probability it was sent by van?",
                   "options": [
-                    "6/17",
-                    "5/16",
-                    "15/136",
-                    "36/289"
+                    "1/2",
+                    "2/3",
+                    "1/5",
+                    "9/17"
                   ],
-                  "answer": 2,
-                  "explanation": "6/17 × 5/16 = 15/136. After a success, both the remaining successes and total fall by one.",
+                  "answer": 1,
+                  "explanation": "Early van deliveries account for 1/10 of all deliveries and early rail deliveries for 1/20. Van deliveries account for (1/10)/(3/20) = 2/3 of early deliveries.",
                   "id": "ucat-mock-2-DM-q03",
                   "format": "single-choice"
                 }
@@ -4157,34 +4138,17 @@
               "id": "ucat-mock-2-DM-g03"
             },
             {
-              "venn": {
-                "sets": [
-                  "A",
-                  "B",
-                  "C"
-                ],
-                "regions": {
-                  "A": 13,
-                  "B": 16,
-                  "C": 22,
-                  "AB": 8,
-                  "AC": 5,
-                  "BC": 6,
-                  "ABC": 4,
-                  "none": 18
-                }
-              },
               "questions": [
                 {
-                  "stem": "Only A: 13; only B: 16; only C: 22; A and B only: 8; A and C only: 5; B and C only: 6; all three: 4; none: 18. How many attendees belong to exactly one of A and C, regardless of whether they belong to B?",
+                  "stem": "Forty workshop participants each chose at least one of metalwork and sewing. Initially, 23 chose metalwork, 26 chose sewing and nine chose both. Then four sewing-only participants added metalwork. How many participants had selected exactly one workshop after the changes?",
                   "options": [
-                    "49",
-                    "45",
-                    "57",
-                    "67"
+                    "27",
+                    "31",
+                    "35",
+                    "36"
                   ],
                   "answer": 0,
-                  "explanation": "The relevant non-overlapping regions are A, C, AB, BC: 13 + 22 + 8 + 6 = 49.",
+                  "explanation": "After the change, 9 + 4 = 13 selected both. The other 40 − 13 = 27 selected exactly one.",
                   "id": "ucat-mock-2-DM-q04",
                   "format": "single-choice"
                 }
@@ -4296,15 +4260,15 @@
             {
               "questions": [
                 {
-                  "stem": "Five files J–N are checked one at a time. N is checked third. M is immediately after J. L is before K. K is not next to N. Which statement must be true?",
+                  "stem": "Three volunteers independently wrote a label for the same key. Elin wrote “office or store”. Mo wrote “office”. Nia wrote “not the office”. The key fits exactly one of the office, the store and the shed. Exactly one label is true. Which conclusion follows?",
                   "options": [
-                    "L is in position 2.",
-                    "J is in position 4.",
-                    "M is in position 2.",
-                    "K is in position 1."
+                    "The key fits the office and only Mo is right.",
+                    "The key fits the shed and only Elin is right.",
+                    "The key fits the shed and only Nia is right.",
+                    "The key fits the store and only Nia is right."
                   ],
                   "answer": 2,
-                  "explanation": "The valid orders are J–M–N–L–K. M is in position 2. This is the only option that holds in all of them.",
+                  "explanation": "Office makes Elin and Mo right; store makes Elin and Nia right. Shed makes only Nia right, so it is the only possibility.",
                   "id": "ucat-mock-2-DM-q10",
                   "format": "single-choice"
                 }
@@ -4333,31 +4297,33 @@
               "questions": [
                 {
                   "format": "yes-no-5",
-                  "stem": "Every object kept outdoors has a waterproof case. No object with a paper label has a waterproof case. Some old objects have paper labels. Does each conclusion follow?",
+                  "stem": "Does each statement follow logically from the rules?",
                   "options": [
                     "Yes",
                     "No"
                   ],
                   "statements": [
-                    "No paper-labelled object is kept outdoors.",
-                    "Some old objects are not kept outdoors.",
-                    "Every object with a waterproof case is stored outdoors.",
-                    "No old object has a waterproof case.",
-                    "Some old objects lack a waterproof case."
+                    "Every map that was checked was returned.",
+                    "Every sealed map entered the drawer.",
+                    "No map that entered the drawer arrived unsealed.",
+                    "Every map that entered the drawer went through the timed hatch.",
+                    "At least one returned map was both checked and sealed."
                   ],
                   "answer": [
-                    0,
-                    0,
                     1,
+                    1,
+                    0,
                     1,
                     0
                   ],
-                  "explanation": "1. Outdoor storage requires a waterproof case. 2. The old paper-labelled objects cannot be outdoors. 3. It could be stored indoors too. 4. Other old objects may have cases. 5. Those with paper labels lack one.",
+                  "explanation": "A returned map was checked, but the converse is not given (1 No). An unsealed map cannot have entered the drawer, but a sealed one need not have entered it (2 No, 3 Yes). Entering the drawer does not imply it entered through the timed hatch (4 No). The late return through that hatch has both the return and entry conditions (5 Yes).",
                   "maxMarks": 2,
                   "id": "ucat-mock-2-DM-q12"
                 }
               ],
-              "id": "ucat-mock-2-DM-g12"
+              "id": "ucat-mock-2-DM-g12",
+              "title": "An archive’s return rules",
+              "stimulus": "Every returned map is checked. A map can enter the return drawer only if it is sealed. A map that passes through the timed hatch automatically enters the drawer. At least one map was returned through the timed hatch after closing."
             },
             {
               "questions": [
@@ -4380,15 +4346,15 @@
             {
               "questions": [
                 {
-                  "stem": "Six of 20 seats are beside a window. Two different seats are allocated uniformly. What is the chance at least one is beside a window?",
+                  "stem": "A playlist has four different tracks. Ada loads exactly two, choosing one uniformly from the three tracks she has not yet heard and another from the remaining three tracks after the first choice. Only one of the tracks she has not heard is instrumental. The one track she has heard is also instrumental. What is the probability both tracks chosen are instrumental?",
                   "options": [
-                    "3/10",
-                    "99/190",
-                    "5/19",
-                    "9/100"
+                    "1/6",
+                    "2/9",
+                    "1/9",
+                    "1/3"
                   ],
-                  "answer": 1,
-                  "explanation": "Subtract the chance of two failures: 1 − 14/20 × 13/19 = 99/190.",
+                  "answer": 2,
+                  "explanation": "To get both, the first choice must be the one unheard instrumental track (1/3). The second must then be the other instrumental track out of the three remaining (1/3), giving 1/9.",
                   "id": "ucat-mock-2-DM-q14",
                   "format": "single-choice"
                 }
@@ -4398,20 +4364,22 @@
             {
               "questions": [
                 {
-                  "stem": "Five gates F, G, H, I and Q open in order. G immediately follows Q. I opens first. H opens after F. H is not fifth. Which statement must be true?",
+                  "stem": "Four volunteers each take a different duty. Which assignment could work?",
                   "options": [
-                    "H is in position 3.",
-                    "Q is in position 2.",
-                    "G is in position 3.",
-                    "H is in position 4."
+                    "Bran: welcome; Deni: raffle.",
+                    "Anya: raffle; Bran: welcome.",
+                    "Anya: welcome; Cora: tickets.",
+                    "Cora: tickets; Deni: raffle."
                   ],
-                  "answer": 0,
-                  "explanation": "The valid orders are I–F–H–Q–G. H is in position 3. This is the only option that holds in all of them.",
+                  "answer": 2,
+                  "explanation": "Assign Anya to welcome and Cora to tickets, then Bran to raffle and Deni to packs. The first option leaves Anya no duty. The second leaves Deni on packs and Cora on tickets, which requires Anya on welcome. The last violates the rule that tickets for Cora require packs for Deni.",
                   "id": "ucat-mock-2-DM-q15",
                   "format": "single-choice"
                 }
               ],
-              "id": "ucat-mock-2-DM-g15"
+              "id": "ucat-mock-2-DM-g15",
+              "title": "Volunteer duties",
+              "stimulus": "Anya: welcome or raffle.\nBran: raffle, welcome or tickets.\nCora: tickets or packs.\nDeni: packs or raffle.\nIf Cora takes tickets, Anya must take welcome and Deni must take packs."
             },
             {
               "questions": [
@@ -4464,15 +4432,15 @@
             {
               "questions": [
                 {
-                  "stem": "Total surveyed: 116. A: 43; B: 35; C: 36; A and B: 13; A and C: 14; B and C: 11; all three: 6. Pair counts include people in all three. How many do not belong to any of the groups?",
+                  "stem": "A studio issues permits for audio and video. Nine people hold audio only, five hold video only and six hold both. At renewal, three people with both drop video and two with video only add audio. Nobody leaves. What fraction of people holding a video permit after renewal also hold an audio permit?",
                   "options": [
-                    "34",
-                    "40",
-                    "46",
-                    "28"
+                    "3/8",
+                    "5/11",
+                    "5/8",
+                    "1/4"
                   ],
-                  "answer": 0,
-                  "explanation": "The union is 43 + 35 + 36 − 13 − 14 − 11 + 6 = 82; subtract from 116 to get 34.",
+                  "answer": 2,
+                  "explanation": "There are 6 − 3 + 2 = 5 who now hold both, and 5 − 2 = 3 who hold only video. The required fraction is 5/(5 + 3) = 5/8.",
                   "id": "ucat-mock-2-DM-q18",
                   "format": "single-choice"
                 }
@@ -4500,33 +4468,35 @@
             {
               "questions": [
                 {
-                  "stem": "Five tasks A–E run in slots 1–5. A directly follows D. B is third. E is earlier than C. C is not next to B. Which statement must be true?",
+                  "stem": "A committee picks exactly two of the six screenings listed. It needs two different venues and two different languages; at least one screening must be before 18:00. Which screening could not be one of its choices?",
                   "options": [
-                    "D is in position 2.",
-                    "C is in position 2.",
-                    "A is in position 5.",
-                    "E is in position 4."
+                    "Kite",
+                    "Glass",
+                    "Tide",
+                    "Map"
                   ],
-                  "answer": 3,
-                  "explanation": "The valid orders are D–A–B–E–C. E is in position 4. This is the only option that holds in all of them.",
+                  "answer": 1,
+                  "explanation": "Glass is at 19:00, so its partner must be before 18:00. The only early screenings are Kite (same venue as Glass) and Ink (same language as Glass). Kite can go with Tide or Map, while Tide and Map can each go with Kite.",
                   "id": "ucat-mock-2-DM-q20",
                   "format": "single-choice"
                 }
               ],
-              "id": "ucat-mock-2-DM-g20"
+              "id": "ucat-mock-2-DM-g20",
+              "title": "Screening shortlist",
+              "stimulus": "Kite — Hall, Polish, 17:00\nInk — Loft, Arabic, 17:30\nGlass — Hall, Arabic, 19:00\nTide — Loft, Hindi, 18:15\nMap — Yard, Arabic, 20:00\nThread — Yard, Polish, 19:30"
             },
             {
               "questions": [
                 {
-                  "stem": "Nine of 25 files have colour illustrations. Two different files are selected uniformly. What is the probability exactly one has colour illustrations?",
+                  "stem": "A florist prepares two surprise bouquets for an order. Each bouquet is independently as likely to be pink as yellow. The customer asks, “Is at least one of my bouquets yellow?” The florist answers yes and gives no further information. What is the probability that both are yellow?",
                   "options": [
-                    "1/3",
-                    "9/25",
-                    "12/25",
-                    "81/625"
+                    "1/4",
+                    "1/2",
+                    "2/3",
+                    "1/3"
                   ],
-                  "answer": 2,
-                  "explanation": "Either order works: 2 × 9/25 × 16/24 = 12/25.",
+                  "answer": 3,
+                  "explanation": "The equally likely ordered possibilities are pink/pink, pink/yellow, yellow/pink and yellow/yellow. Exclude pink/pink given the confirmation; one of the remaining three is yellow/yellow.",
                   "id": "ucat-mock-2-DM-q21",
                   "format": "single-choice"
                 }
@@ -4582,34 +4552,17 @@
               "id": "ucat-mock-2-DM-g23"
             },
             {
-              "venn": {
-                "sets": [
-                  "A",
-                  "B",
-                  "C"
-                ],
-                "regions": {
-                  "A": 12,
-                  "B": 14,
-                  "C": 16,
-                  "AB": 11,
-                  "AC": 7,
-                  "BC": 9,
-                  "ABC": 4,
-                  "none": 17
-                }
-              },
               "questions": [
                 {
-                  "stem": "Only A: 12; only B: 14; only C: 16; A and B only: 11; A and C only: 7; B and C only: 9; all three: 4; none: 17. How many respondents belong to B and at least one other group?",
+                  "stem": "A survey counted people who use the bus, tram or both. In the published figures, two “bus only” responses were mislabelled as “both”, and three “tram only” responses were mislabelled as “bus only”. No other records were wrong. Which change from the published figures gives the true number of people who use the bus?",
                   "options": [
-                    "35",
-                    "20",
-                    "41",
-                    "24"
+                    "Add 2.",
+                    "Subtract 2.",
+                    "Subtract 3.",
+                    "Add 1."
                   ],
-                  "answer": 3,
-                  "explanation": "The relevant non-overlapping regions are AB, BC, ABC: 11 + 9 + 4 = 24.",
+                  "answer": 2,
+                  "explanation": "Moving two records between bus only and both does not change the total number reported as bus users. Removing the three tram-only users mistakenly put in bus only decreases it by three.",
                   "id": "ucat-mock-2-DM-q24",
                   "format": "single-choice"
                 }
@@ -4637,33 +4590,35 @@
             {
               "questions": [
                 {
-                  "stem": "Five pitches P–T start in order. S is immediately after Q. R is second. P is before T. T is not in fifth position. Which statement must be true?",
+                  "stem": "Four assistants start at the same time. A task can start only after its prerequisites have finished. Each assistant may work on one task at a time. A fifth task, Mail, must wait for both Trim and Fold and takes 5 minutes. What is the earliest Mail can finish?",
                   "options": [
-                    "S is in position 5.",
-                    "T is in position 4.",
-                    "Q is in position 3.",
-                    "P is in position 3."
+                    "14 minutes",
+                    "15 minutes",
+                    "16 minutes",
+                    "18 minutes"
                   ],
-                  "answer": 0,
-                  "explanation": "The valid orders are P–R–T–Q–S. S is in position 5. This is the only option that holds in all of them.",
+                  "answer": 1,
+                  "explanation": "Print finishes at minute 6; Fold then finishes at minute 10 and Trim at minute 9. Pack can start immediately and does not delay Mail. Mail starts at minute 10, so it finishes at minute 15.",
                   "id": "ucat-mock-2-DM-q26",
                   "format": "single-choice"
                 }
               ],
-              "id": "ucat-mock-2-DM-g26"
+              "id": "ucat-mock-2-DM-g26",
+              "title": "Production tasks",
+              "stimulus": "Print: 6 minutes; no prerequisite.\nFold: 4 minutes; requires Print.\nTrim: 3 minutes; requires Print.\nPack: 8 minutes; no prerequisite."
             },
             {
               "questions": [
                 {
-                  "stem": "Five of 21 identical tickets conceal a prize. Two are drawn at random without replacement. What is the probability both conceal a prize?",
+                  "stem": "A desk receives 20 unread messages: 5 from internal senders, 8 from first-time customers, and 7 from returning customers. The categories do not overlap. It randomly selects one unread message in the morning and one in the afternoon; the morning message is no longer unread. If the afternoon message is from a returning customer, which event is impossible?",
                   "options": [
-                    "25/441",
-                    "1/5",
-                    "5/21",
-                    "1/21"
+                    "The morning message was also from a returning customer.",
+                    "Both messages were from customers.",
+                    "The morning message was from an internal sender.",
+                    "Both messages were from first-time customers."
                   ],
                   "answer": 3,
-                  "explanation": "5/21 × 4/20 = 1/21. After a success, both the remaining successes and total fall by one.",
+                  "explanation": "The afternoon message is known to be from a returning customer; the categories do not overlap, so the two cannot both be from first-time customers. Each other outcome has available messages.",
                   "id": "ucat-mock-2-DM-q27",
                   "format": "single-choice"
                 }
@@ -4721,15 +4676,15 @@
             {
               "questions": [
                 {
-                  "stem": "Should large parks retain some unmown areas through the summer? Select the strongest argument.",
+                  "stem": "A park has to decide whether to leave strips of grass unmown. Its objective is to support insects while keeping the existing paths usable. Which is the strongest argument for an unmown trial?",
                   "options": [
-                    "Yes; uncut grass is always more attractive.",
-                    "No; a park can never serve two purposes.",
-                    "No; some visitors arrive by bus.",
-                    "Yes; selected unmown areas can provide habitat while other areas remain available for recreation."
+                    "Other towns have advertised their unmown spaces as landmarks.",
+                    "Previous surveys show more insect species around unmown strips; a trial can leave the paths and their margins unchanged.",
+                    "Some park users prefer a more informal appearance in photographs.",
+                    "Cutting less grass would leave more of the maintenance budget unspent."
                   ],
-                  "answer": 3,
-                  "explanation": "The argument explains a relevant ecological benefit and recognises the continuing recreational use.",
+                  "answer": 1,
+                  "explanation": "The survey evidence speaks directly to insect diversity, and the design keeps paths and margins intact. The other benefits may matter but do not address the stated objective as fully.",
                   "id": "ucat-mock-2-DM-q30",
                   "format": "single-choice"
                 }
@@ -4785,34 +4740,17 @@
               "id": "ucat-mock-2-DM-g32"
             },
             {
-              "venn": {
-                "sets": [
-                  "A",
-                  "B",
-                  "C"
-                ],
-                "regions": {
-                  "A": 16,
-                  "B": 14,
-                  "C": 11,
-                  "AB": 7,
-                  "AC": 5,
-                  "BC": 6,
-                  "ABC": 3,
-                  "none": 12
-                }
-              },
               "questions": [
                 {
-                  "stem": "Only A: 16; only B: 14; only C: 11; A and B only: 7; A and C only: 5; B and C only: 6; all three: 3; none: 12. How many people belong to A or B but not to both, including people also in C?",
+                  "stem": "Eighty people registered for a tour. Of these, 61 registered for the roof, 42 for the cellar and 35 for both. The organiser will move anyone who chose neither to a separate tour. How many will move?",
                   "options": [
-                    "48",
-                    "53",
-                    "41",
-                    "38"
+                    "12",
+                    "19",
+                    "23",
+                    "26"
                   ],
-                  "answer": 2,
-                  "explanation": "The relevant non-overlapping regions are A, B, AC, BC: 16 + 14 + 5 + 6 = 41.",
+                  "answer": 0,
+                  "explanation": "The number who chose at least one is 61 + 42 − 35 = 68. This leaves 80 − 68 = 12 who chose neither.",
                   "id": "ucat-mock-2-DM-q33",
                   "format": "single-choice"
                 }
@@ -5069,110 +5007,92 @@
               "id": "ucat-mock-2-QR-g02"
             },
             {
-              "title": "Print room",
-              "stimulus": "The fixed charge is applied once per print job. The ink price is charged per sheet even if the sheet is printed on both sides; use the stated sheets per copy.",
+              "title": "Rooftop power through the day",
+              "stimulus": "For each block, work with the net energy balance: rooftop generation minus building use. The battery holds at most 10 kWh and starts empty at 08:00. Store surpluses up to capacity and export the rest. For a shortfall, use stored energy first and buy the rest from the grid. Ignore storage losses.",
               "chart": {
                 "type": "table",
-                "title": "Print room",
+                "title": "Energy for each four-hour block (kWh)",
                 "labels": [
-                  "Flyer",
-                  "Programme",
-                  "Poster",
-                  "Guide"
+                  "08–12",
+                  "12–16",
+                  "16–20",
+                  "20–24"
                 ],
                 "series": [
                   {
-                    "name": "Fixed charge (£)",
+                    "name": "Rooftop generation",
                     "values": [
-                      14,
-                      20,
-                      30,
-                      18
-                    ]
-                  },
-                  {
-                    "name": "Sheets per copy",
-                    "values": [
-                      1,
                       8,
-                      2,
-                      12
+                      22,
+                      6,
+                      0
                     ]
                   },
                   {
-                    "name": "Ink £/sheet",
+                    "name": "Building use",
                     "values": [
-                      0.08,
-                      0.05,
-                      0.25,
-                      0.06
-                    ]
-                  },
-                  {
-                    "name": "Paper £/sheet",
-                    "values": [
-                      0.04,
-                      0.025,
-                      0.12,
-                      0.03
+                      12,
+                      9,
+                      13,
+                      9
                     ]
                   }
                 ]
               },
               "questions": [
                 {
-                  "stem": "How much are 450 programmes as one job?",
+                  "stem": "What fraction of the day’s rooftop generation occurs between 12:00 and 16:00?",
                   "options": [
-                    "£290.00",
-                    "£270.00",
-                    "£310.00",
-                    "£380.00",
-                    "£110.00"
+                    "1/2",
+                    "11/18",
+                    "2/3",
+                    "11/16",
+                    "11/15"
                   ],
-                  "answer": 0,
-                  "explanation": "20 + ((8 × (0.05 + 0.025)) × 450) gives £290.00 to the stated precision.",
+                  "answer": 1,
+                  "explanation": "The rooftop generates 8 + 22 + 6 = 36 kWh, with 22/36 = 11/18 in the midday block.",
                   "id": "ucat-mock-2-QR-q09",
                   "format": "single-choice"
                 },
                 {
-                  "stem": "How much less do 175 posters cost than 175 guides, each as a separate job?",
+                  "stem": "How much energy is exported between 12:00 and 16:00?",
                   "options": [
-                    "£67.50",
-                    "£7.50",
-                    "£59.50",
-                    "£35.50",
-                    "£47.50"
+                    "0 kWh",
+                    "1 kWh",
+                    "2 kWh",
+                    "3 kWh",
+                    "13 kWh"
                   ],
-                  "answer": 4,
-                  "explanation": "(18 + ((12 × (0.06 + 0.03)) × 175)) − (30 + ((2 × (0.25 + 0.12)) × 175)) gives £47.50 to the stated precision.",
+                  "answer": 3,
+                  "explanation": "Generation exceeds use by 13 kWh. The empty battery takes 10 kWh and the other 3 kWh are exported.",
                   "id": "ucat-mock-2-QR-q10",
                   "format": "single-choice"
                 },
                 {
-                  "stem": "Ink for flyers goes up by 25%. What is the revised cost per copy if 400 copies are ordered, including the fixed charge, to three decimal places?",
+                  "stem": "How much grid electricity is used after 16:00?",
                   "options": [
-                    "£0.195",
-                    "£0.105",
-                    "£0.210",
-                    "£0.175",
-                    "£0.140"
+                    "0 kWh",
+                    "3 kWh",
+                    "4 kWh",
+                    "6 kWh",
+                    "9 kWh"
                   ],
                   "answer": 3,
-                  "explanation": "(14 ÷ 400) + (1 × ((0.08 × 1.25) + 0.04)) gives £0.175 to the stated precision.",
+                  "explanation": "Seven of the 10 stored kWh cover the first deficit. The last block has nine kWh of demand with three kWh still stored, leaving six kWh to buy.",
                   "id": "ucat-mock-2-QR-q11",
                   "format": "single-choice"
                 },
                 {
-                  "stem": "How much is saved by combining 5 identical orders of 120 programmes into one job, if the printer also offers 10% off the ink for the combined volume?",
+                  "stem": "If capacity were increased to 12 kWh, by what percentage would grid purchases over the four blocks fall?",
                   "options": [
-                    "£140.00",
-                    "£32.00",
-                    "£104.00",
-                    "£80.00",
-                    "£128.00"
+                    "20%",
+                    "25%",
+                    "30%",
+                    "33⅓%",
+                    "50%"
                   ],
-                  "answer": 2,
-                  "explanation": "(20 × 4) + ((((5 × 120) × 8) × 0.05) × 0.1) gives £104.00 to the stated precision.",
+                  "answer": 0,
+                  "explanation": "With 10 kWh capacity the building buys 4 + 6 = 10 kWh. Two more stored kWh displace two of those purchases, a 20% reduction.",
                   "id": "ucat-mock-2-QR-q12",
                   "format": "single-choice"
                 }
@@ -5282,101 +5202,128 @@
               "id": "ucat-mock-2-QR-g04"
             },
             {
-              "title": "Community savings",
-              "stimulus": "Interest is paid annually and compounded. There are no withdrawals, charges or deposits after the opening deposit.",
+              "title": "Community hall seating",
+              "stimulus": "Seats are either full-price, discounted or complimentary. In each performance the count of seats sold includes both kinds of paid seat but excludes complimentary seats. All complimentary seats were occupied.",
               "chart": {
                 "type": "table",
-                "title": "Community savings",
+                "title": "Saturday performances",
                 "labels": [
-                  "Craft",
-                  "Youth",
-                  "Sport",
-                  "Garden"
+                  "10:00",
+                  "13:00",
+                  "16:00",
+                  "19:00"
                 ],
                 "series": [
                   {
-                    "name": "Opening deposit (£)",
+                    "name": "Seats available",
                     "values": [
-                      1400,
-                      2100,
-                      1600,
-                      3200
+                      150,
+                      180,
+                      150,
+                      200
                     ]
                   },
                   {
-                    "name": "Annual interest (%)",
+                    "name": "Seats sold",
                     "values": [
-                      4,
-                      3,
-                      5,
-                      2.5
+                      90,
+                      144,
+                      120,
+                      160
                     ]
                   },
                   {
-                    "name": "Years held",
+                    "name": "Discounted seats sold",
                     "values": [
-                      2,
-                      3,
-                      2,
-                      3
+                      20,
+                      54,
+                      48,
+                      30
+                    ]
+                  },
+                  {
+                    "name": "Complimentary seats",
+                    "values": [
+                      12,
+                      6,
+                      0,
+                      8
+                    ]
+                  },
+                  {
+                    "name": "Full price (£)",
+                    "values": [
+                      10,
+                      12,
+                      15,
+                      18
+                    ]
+                  },
+                  {
+                    "name": "Discounted price (£)",
+                    "values": [
+                      6,
+                      8,
+                      8,
+                      12
                     ]
                   }
                 ]
               },
               "questions": [
                 {
-                  "stem": "How much interest does Craft earn by maturity?",
+                  "stem": "Which performance had the greatest proportion of available seats sold or given away?",
                   "options": [
-                    "£114.24",
-                    "£116.48",
-                    "£2.24",
-                    "£112.00",
-                    "£170.24"
+                    "10:00",
+                    "13:00",
+                    "16:00",
+                    "19:00",
+                    "13:00 and 19:00 tied"
                   ],
-                  "answer": 0,
-                  "explanation": "((1400 × 1.04) × 1.04) − 1400 gives £114.24 to the stated precision.",
+                  "answer": 3,
+                  "explanation": "The proportions are 102/150 = 68%, 150/180 ≈ 83.3%, 120/150 = 80% and 168/200 = 84%.",
                   "id": "ucat-mock-2-QR-q17",
                   "format": "single-choice"
                 },
                 {
-                  "stem": "What is Youth's maturity balance to the nearest pound?",
+                  "stem": "How much would 13:00 takings increase if exactly half its discounted tickets had instead been sold at full price?",
                   "options": [
-                    "£2232",
-                    "£2421",
-                    "£2295",
-                    "£2358",
-                    "£2043"
+                    "£54",
+                    "£72",
+                    "£108",
+                    "£162",
+                    "£216"
                   ],
                   "answer": 2,
-                  "explanation": "((2100 × 1.03) × 1.03) × 1.03 gives £2295.",
+                  "explanation": "Half of 54 is 27 tickets. Each would pay £12 − £8 = £4 more, a total increase of £108.",
                   "id": "ucat-mock-2-QR-q18",
                   "format": "single-choice"
                 },
                 {
-                  "stem": "How much more interest does Sport earn than Garden in their first two years?",
+                  "stem": "Which performance had the same number of full-price sales as the total number of paid sales at 10:00?",
                   "options": [
-                    "£1.00",
-                    "£4.00",
-                    "£6.00",
-                    "£10.00",
-                    "£2.00"
+                    "10:00",
+                    "13:00",
+                    "16:00",
+                    "19:00",
+                    "None of them"
                   ],
-                  "answer": 4,
-                  "explanation": "(((1600 × 1.05) × 1.05) − 1600) − (((3200 × 1.025) × 1.025) − 3200) gives £2.00 to the stated precision.",
+                  "answer": 1,
+                  "explanation": "The 10:00 performance sold 90 paid seats in total. At 13:00 there were 144 − 54 = 90 full-price sales.",
                   "id": "ucat-mock-2-QR-q19",
                   "format": "single-choice"
                 },
                 {
-                  "stem": "What extra deposit would Sport need at opening to mature at £2,205 at its original rate?",
+                  "stem": "What was the mean price per paid seat at 16:00, rounded to the nearest penny?",
                   "options": [
-                    "£605.00",
-                    "£300.00",
-                    "£810.00",
-                    "£400.00",
-                    "£500.00"
+                    "£10.50",
+                    "£11.20",
+                    "£11.67",
+                    "£12.00",
+                    "£12.20"
                   ],
-                  "answer": 3,
-                  "explanation": "((2205 ÷ 1.05) ÷ 1.05) − 1600 gives £400.00 to the stated precision.",
+                  "answer": 4,
+                  "explanation": "There were 72 full-price and 48 discounted sales, so takings were £1,464. Dividing by 120 gives £12.20.",
                   "id": "ucat-mock-2-QR-q20",
                   "format": "single-choice"
                 }
@@ -5699,115 +5646,111 @@
               "id": "ucat-mock-2-QR-g08"
             },
             {
-              "title": "Gallery footfall",
-              "stimulus": "Tuesday to Friday figures are independent daily counts. Each paying adult pays the listed price; children's tickets are half price. Free admissions are counted separately.",
+              "title": "Mapping cycle routes",
+              "stimulus": "Each route segment is measured on a map. Travel speed is constant within each segment. A rider pauses for six minutes at the end of the first segment on a route, unless the question says otherwise. There are no other pauses.",
               "chart": {
                 "type": "table",
-                "title": "Gallery footfall",
+                "title": "Map distances and travel speeds",
                 "labels": [
-                  "Tue",
-                  "Wed",
-                  "Thu",
-                  "Fri"
+                  "Quay 1",
+                  "Quay 2",
+                  "Park 1",
+                  "Park 2"
                 ],
                 "series": [
                   {
-                    "name": "Paying adults",
+                    "name": "Map length (cm)",
                     "values": [
-                      58,
-                      63,
-                      52,
-                      79
+                      3.6,
+                      5.4,
+                      6,
+                      4.8
                     ]
                   },
                   {
-                    "name": "Paying children",
+                    "name": "Real metres per map cm",
                     "values": [
-                      24,
-                      30,
-                      33,
-                      42
+                      500,
+                      500,
+                      250,
+                      250
                     ]
                   },
                   {
-                    "name": "Free admissions",
+                    "name": "Speed (km/h)",
                     "values": [
-                      15,
-                      19,
-                      25,
-                      18
-                    ]
-                  },
-                  {
-                    "name": "Adult price (£)",
-                    "values": [
-                      7,
-                      7,
-                      8,
-                      8.5
+                      12,
+                      18,
+                      10,
+                      12
                     ]
                   }
                 ]
               },
               "questions": [
                 {
-                  "stem": "What is Friday's total ticket revenue?",
+                  "stem": "How much shorter is the full Park route than the full Quay route?",
                   "options": [
-                    "£765.00",
-                    "£1028.50",
-                    "£850.00",
-                    "£493.00",
-                    "£935.00"
+                    "0.9 km",
+                    "1.2 km",
+                    "1.5 km",
+                    "1.8 km",
+                    "2.1 km"
                   ],
-                  "answer": 2,
-                  "explanation": "(79 + (42 ÷ 2)) × 8.5 gives £850.00 to the stated precision.",
+                  "answer": 3,
+                  "explanation": "Quay is (3.6 + 5.4) × 0.5 = 4.5 km. Park is (6 + 4.8) × 0.25 = 2.7 km, so the difference is 1.8 km.",
                   "id": "ucat-mock-2-QR-q33",
                   "format": "single-choice"
                 },
                 {
-                  "stem": "What percentage of the total admissions on Tuesday and Wednesday combined were free? Give one decimal place.",
+                  "stem": "What are the full travel times for Quay and Park, including the pause?",
                   "options": [
-                    "20.1%",
-                    "16.3%",
-                    "18.6%",
-                    "8.7%",
-                    "14.0%"
+                    "Quay 18 min; Park 15 min",
+                    "Quay 21 min; Park 24 min",
+                    "Quay 24 min; Park 21 min",
+                    "Quay 24 min; Park 24 min",
+                    "Quay 27 min; Park 21 min"
                   ],
-                  "answer": 1,
-                  "explanation": "((15 + 19) ÷ (((((58 + 63) + 24) + 30) + 15) + 19)) × 100 gives 16.3% to the stated precision.",
+                  "answer": 2,
+                  "explanation": "Quay’s segments each take nine minutes. Park takes nine minutes then six. Add six minutes to each total: 24 minutes and 21 minutes.",
                   "id": "ucat-mock-2-QR-q34",
                   "format": "single-choice"
                 },
                 {
-                  "stem": "Thursday's adult price is reduced by £1, and 10 extra paying adults visit. At the new price structure, what is Thursday's new revenue? The child fee remains half the adult price.",
+                  "stem": "What speed would the rider need on Quay 2 to complete the full Quay route in 21 minutes, including the pause and keeping the Quay 1 speed unchanged?",
                   "options": [
-                    "£566.00",
-                    "£619.50",
-                    "£409.50",
-                    "£549.50",
-                    "£479.50"
+                    "18 km/h",
+                    "21 km/h",
+                    "24 km/h",
+                    "27 km/h",
+                    "30 km/h"
                   ],
                   "answer": 3,
-                  "explanation": "((52 + 10) + (33 ÷ 2)) × (8 − 1) gives £549.50 to the stated precision.",
+                  "explanation": "Quay 1 and the pause take 9 + 6 = 15 minutes. To cover 2.7 km in the remaining six minutes (0.1 h) requires 27 km/h.",
                   "id": "ucat-mock-2-QR-q35",
-                  "format": "single-choice"
-                },
-                {
-                  "stem": "What is the overall mean ticket revenue per admission on Tuesday, including free admissions? Give the nearest penny.",
-                  "options": [
-                    "£5.05",
-                    "£5.53",
-                    "£4.57",
-                    "£5.97",
-                    "£3.21"
-                  ],
-                  "answer": 0,
-                  "explanation": "((58 + (24 ÷ 2)) × 7) ÷ ((58 + 24) + 15) gives £5.05 to the stated precision.",
-                  "id": "ucat-mock-2-QR-q36",
                   "format": "single-choice"
                 }
               ],
               "id": "ucat-mock-2-QR-g09"
+            },
+            {
+              "id": "ucat-mock-2-QR-g10",
+              "questions": [
+                {
+                  "stem": "An audio file has seven minutes of narration at 1.5 MB per minute and four minutes of music at 3 MB per minute. The narration is compressed to 60% of its size; the music stays unchanged. By what percentage does the whole file shrink, to the nearest whole percent?",
+                  "options": [
+                    "14%",
+                    "19%",
+                    "28%",
+                    "40%",
+                    "47%"
+                  ],
+                  "answer": 1,
+                  "explanation": "The file starts at 22.5 MB. Compression saves 40% of 10.5 MB, or 4.2 MB. The saving is 4.2/22.5 ≈ 18.7%, which rounds to 19%.",
+                  "id": "ucat-mock-2-QR-q36",
+                  "format": "single-choice"
+                }
+              ]
             }
           ]
         },
@@ -5893,12 +5836,38 @@
               "id": "ucat-mock-2-SJT-g01"
             },
             {
-              "title": "Too many tasks",
-              "stimulus": "An exhausted student, Priya, is asked to prepare notes for a round and escort a patient to an appointment at the same time. She finds it hard to concentrate and has just confused two room numbers. Another team member is available.",
+              "title": "A call in a shared space",
+              "stimulus": "Lee, a medical student on placement, was asked to call a patient about rearranging a routine follow-up. The patient answers in a shared office and can talk briefly, but is concerned a colleague might overhear. The new appointment can be agreed later the same day and the supervising receptionist is nearby. Lee has not yet said which team they are calling from.",
               "questions": [
                 {
                   "format": "appropriateness",
-                  "stem": "How appropriate is the following response? Complete the notes first and explain the escort delay afterward.",
+                  "stem": "How appropriate is the following response?\n\nAsk the patient if they can suggest a private time to call back, and ask the supervising receptionist how best to record and arrange it.",
+                  "options": [
+                    "A very appropriate thing to do",
+                    "Appropriate, but not ideal",
+                    "Inappropriate, but not awful",
+                    "A very inappropriate thing to do"
+                  ],
+                  "answer": 0,
+                  "explanation": "This respects privacy and keeps a clear plan for completing the assigned work.",
+                  "id": "ucat-mock-2-SJT-q06"
+                },
+                {
+                  "format": "importance",
+                  "stem": "How important is the following consideration?\n\nWhether delaying discussion until later today would introduce a risk to the patient.",
+                  "options": [
+                    "Very important",
+                    "Important",
+                    "Of minor importance",
+                    "Not important at all"
+                  ],
+                  "answer": 0,
+                  "explanation": "The safety of waiting determines whether a routine callback is reasonable or a supervisor needs to arrange another private route promptly.",
+                  "id": "ucat-mock-2-SJT-q07"
+                },
+                {
+                  "format": "appropriateness",
+                  "stem": "How appropriate is the following response?\n\nRead out the appointment time and clinical team name now, but avoid discussing medical details.",
                   "options": [
                     "A very appropriate thing to do",
                     "Appropriate, but not ideal",
@@ -5906,12 +5875,12 @@
                     "A very inappropriate thing to do"
                   ],
                   "answer": 2,
-                  "explanation": "Choosing unilaterally could delay needed care; flag the conflict first.",
-                  "id": "ucat-mock-2-SJT-q06"
+                  "explanation": "Limiting the disclosure helps, but the team name may itself reveal information in a shared office after the patient has raised a privacy concern.",
+                  "id": "ucat-mock-2-SJT-q08"
                 },
                 {
                   "format": "importance",
-                  "stem": "How important is the following consideration? Whether Priya can describe her recent mix-up without revealing unnecessary patient details.",
+                  "stem": "How important is the following consideration?\n\nWhether the patient expects to be somewhere private before the end of the working day.",
                   "options": [
                     "Very important",
                     "Important",
@@ -5919,46 +5888,20 @@
                     "Not important at all"
                   ],
                   "answer": 1,
-                  "explanation": "Clear, discreet disclosure helps the team understand the issue while protecting privacy.",
-                  "id": "ucat-mock-2-SJT-q07"
-                },
-                {
-                  "format": "appropriateness",
-                  "stem": "How appropriate is the following response? Accept both tasks and rely on memory despite the recent confusion.",
-                  "options": [
-                    "A very appropriate thing to do",
-                    "Appropriate, but not ideal",
-                    "Inappropriate, but not awful",
-                    "A very inappropriate thing to do"
-                  ],
-                  "answer": 3,
-                  "explanation": "Concealing fatigue and overload risks another error.",
-                  "id": "ucat-mock-2-SJT-q08"
-                },
-                {
-                  "format": "importance",
-                  "stem": "How important is the following consideration? Whether either task is time-critical for the patient.",
-                  "options": [
-                    "Very important",
-                    "Important",
-                    "Of minor importance",
-                    "Not important at all"
-                  ],
-                  "answer": 0,
-                  "explanation": "Clinical urgency should inform safe prioritisation.",
+                  "explanation": "This helps decide whether a later call is practical or the receptionist should help arrange a different private way to follow up. It does not make disclosure on the current call appropriate.",
                   "id": "ucat-mock-2-SJT-q09"
                 },
                 {
                   "format": "appropriateness",
-                  "stem": "How appropriate is the following response? Tell the supervising team she cannot safely do both and agree what to hand over.",
+                  "stem": "How appropriate is the following response?\n\nEnd the discussion and leave the receptionist a clear callback note, without agreeing a private time with the patient first.",
                   "options": [
                     "A very appropriate thing to do",
                     "Appropriate, but not ideal",
                     "Inappropriate, but not awful",
                     "A very inappropriate thing to do"
                   ],
-                  "answer": 0,
-                  "explanation": "The team can reprioritise with knowledge of a real safety concern.",
+                  "answer": 1,
+                  "explanation": "This protects privacy and avoids dropping the task, but a private time agreed with the patient would make a successful follow-up more likely.",
                   "id": "ucat-mock-2-SJT-q10"
                 }
               ],
@@ -6039,25 +5982,25 @@
               "id": "ucat-mock-2-SJT-g03"
             },
             {
-              "title": "The quiet colleague",
-              "stimulus": "Student Saira sees a colleague being interrupted repeatedly when trying to raise a concern about a patient in a team meeting. The chair says there is no more time. Saira knows the issue may affect a decision being taken that afternoon.",
+              "title": "The appointment letter",
+              "stimulus": "Amal is helping with the information desk during a placement. A patient returns with a letter that lists two different rooms for their follow-up and says the discrepancy made them miss an earlier visit. The permanent receptionist offers to point them to the room they think is correct. The current clinical team can confirm the location, and there is enough time to do so before the appointment.",
               "questions": [
                 {
                   "format": "appropriateness",
-                  "stem": "How appropriate is the following response? Assume silence means the colleague's concern was resolved.",
+                  "stem": "How appropriate is the following response?\n\nConfirm the correct room with the clinical team, explain it to the patient, then ask the receptionist how the recurring confusion can be reported.",
                   "options": [
                     "A very appropriate thing to do",
                     "Appropriate, but not ideal",
                     "Inappropriate, but not awful",
                     "A very inappropriate thing to do"
                   ],
-                  "answer": 3,
-                  "explanation": "Being interrupted is not evidence that the risk was assessed.",
+                  "answer": 0,
+                  "explanation": "This checks the immediate facts and raises the underlying issue through an appropriate route.",
                   "id": "ucat-mock-2-SJT-q16"
                 },
                 {
                   "format": "appropriateness",
-                  "stem": "How appropriate is the following response? Tell the colleague she agrees it should have been heard, but wait until tomorrow to raise it.",
+                  "stem": "How appropriate is the following response?\n\nOffer to accompany the patient to the receptionist’s preferred room without checking with the clinical team.",
                   "options": [
                     "A very appropriate thing to do",
                     "Appropriate, but not ideal",
@@ -6065,12 +6008,12 @@
                     "A very inappropriate thing to do"
                   ],
                   "answer": 2,
-                  "explanation": "Support helps, but a time-sensitive issue may already affect patient care.",
+                  "explanation": "Accompanying them is supportive, but guessing risks repeating an avoidable error when a reliable check is available.",
                   "id": "ucat-mock-2-SJT-q17"
                 },
                 {
                   "format": "appropriateness",
-                  "stem": "How appropriate is the following response? Support the colleague to get the concern heard promptly by the responsible clinician.",
+                  "stem": "How appropriate is the following response?\n\nAsk a supervisor to review the conflicting letter after the team has confirmed the patient’s destination.",
                   "options": [
                     "A very appropriate thing to do",
                     "Appropriate, but not ideal",
@@ -6078,12 +6021,25 @@
                     "A very inappropriate thing to do"
                   ],
                   "answer": 0,
-                  "explanation": "Ensure the decision maker hears a potentially important safety concern in time.",
+                  "explanation": "A confirmed destination protects today’s appointment; reviewing the letter then helps prevent similar problems.",
                   "id": "ucat-mock-2-SJT-q18"
                 },
                 {
                   "format": "importance",
-                  "stem": "How important is the following consideration? Whether the meeting minutes will include a note about the interruption.",
+                  "stem": "How important is the following consideration?\n\nWhether other recently issued copies of the letter have the same discrepancy.",
+                  "options": [
+                    "Very important",
+                    "Important",
+                    "Of minor importance",
+                    "Not important at all"
+                  ],
+                  "answer": 1,
+                  "explanation": "This helps establish the scale and urgency of the follow-up. It does not replace checking where this patient needs to go now.",
+                  "id": "ucat-mock-2-SJT-q19"
+                },
+                {
+                  "format": "importance",
+                  "stem": "How important is the following consideration?\n\nWhether the two rooms listed in the letter are on the same floor.",
                   "options": [
                     "Very important",
                     "Important",
@@ -6091,20 +6047,7 @@
                     "Not important at all"
                   ],
                   "answer": 2,
-                  "explanation": "It could help later review, but does little to get the concern heard before the decision.",
-                  "id": "ucat-mock-2-SJT-q19"
-                },
-                {
-                  "format": "importance",
-                  "stem": "How important is the following consideration? Whether the clinical decision is imminent.",
-                  "options": [
-                    "Very important",
-                    "Important",
-                    "Of minor importance",
-                    "Not important at all"
-                  ],
-                  "answer": 0,
-                  "explanation": "It determines the need for escalation before the meeting's decision is acted on.",
+                  "explanation": "A greater distance could add inconvenience if the patient is sent to the wrong room, but proximity is not a substitute for checking the location.",
                   "id": "ucat-mock-2-SJT-q20"
                 }
               ],
@@ -6257,12 +6200,12 @@
               "id": "ucat-mock-2-SJT-g06"
             },
             {
-              "title": "A public fundraising post",
-              "stimulus": "A friend asks student Vik to share a fundraising post for someone on his ward. The fundraiser is public, but the person has not told Vik he may disclose anything he knows from placement. The friend asks whether a detail in the post is accurate.",
+              "title": "A recording for training",
+              "stimulus": "Ivo helps run a peer telephone-support service. At the start of a supervised role-play, one student agrees to let a recording be used for individual feedback with the tutor. Later, a course lead asks for examples to include in a password-protected training library for new students. The recording is one of several possible examples. The student has not been asked about the library.",
               "questions": [
                 {
                   "format": "appropriateness",
-                  "stem": "How appropriate is the following response? Avoid confirming placement information and keep any reply to general, public facts.",
+                  "stem": "How appropriate is the following response?\n\nOffer to help make a new role-play recording whose participants can decide in advance whether to allow training-library use.",
                   "options": [
                     "A very appropriate thing to do",
                     "Appropriate, but not ideal",
@@ -6270,12 +6213,12 @@
                     "A very inappropriate thing to do"
                   ],
                   "answer": 0,
-                  "explanation": "Public claims do not permit disclosure of what was learned in a clinical role.",
+                  "explanation": "A purpose-made example avoids silently widening the permission and provides a practical alternative.",
                   "id": "ucat-mock-2-SJT-q31"
                 },
                 {
                   "format": "importance",
-                  "stem": "How important is the following consideration? Whether the information Vik would independently confirm came from his placement.",
+                  "stem": "How important is the following consideration?\n\nWhether the intended training audience is wider than the people who were originally given permission to use it.",
                   "options": [
                     "Very important",
                     "Important",
@@ -6283,12 +6226,12 @@
                     "Not important at all"
                   ],
                   "answer": 0,
-                  "explanation": "The source and nature of the information determine confidentiality obligations.",
+                  "explanation": "A different audience and purpose require fresh consideration; password protection does not extend the old agreement.",
                   "id": "ucat-mock-2-SJT-q32"
                 },
                 {
                   "format": "appropriateness",
-                  "stem": "How appropriate is the following response? Decline without discussing details, but tell the friend that an unnamed hospital employee could verify it.",
+                  "stem": "How appropriate is the following response?\n\nSend the recording to the course lead as a private preview so they can decide if it is worth seeking permission.",
                   "options": [
                     "A very appropriate thing to do",
                     "Appropriate, but not ideal",
@@ -6296,27 +6239,27 @@
                     "A very inappropriate thing to do"
                   ],
                   "answer": 2,
-                  "explanation": "He avoids direct disclosure but invites unauthorised confirmation elsewhere.",
+                  "explanation": "A private preview limits the number of listeners but still shares the recording with someone outside the original arrangement.",
                   "id": "ucat-mock-2-SJT-q33"
                 },
                 {
                   "format": "most-least",
-                  "stem": "Select the most and least appropriate reply.",
+                  "stem": "In this situation, select the most and least appropriate actions if the team particularly wants to use this recording.",
                   "options": [
-                    "Send a screenshot of the medical record to confirm it.",
-                    "Say he cannot confirm private information learned on placement.",
-                    "Avoid answering the diagnosis question and point to the public post only."
+                    "Ask the original participant privately and without pressure about the proposed library use before sharing anything.",
+                    "Decline to put this recording forward and suggest the course lead use one already cleared for the library.",
+                    "Upload it with initials removed, on the basis that the library requires a password."
                   ],
                   "answer": [
-                    1,
-                    0
+                    0,
+                    2
                   ],
-                  "explanation": "A clear boundary protects confidentiality; copying the private record creates a direct breach.",
+                  "explanation": "A private, informed choice addresses the new purpose and audience before any sharing. Using an already cleared alternative is defensible but does not establish whether this example could be used. Uploading despite the limited permission is least appropriate; a voice can remain recognisable.",
                   "id": "ucat-mock-2-SJT-q34"
                 },
                 {
                   "format": "appropriateness",
-                  "stem": "How appropriate is the following response? Confirm the diagnosis from the record because the fundraiser mentions it already.",
+                  "stem": "How appropriate is the following response?\n\nTell the participant the tutor has already approved the upload so that they do not feel obliged to make a decision.",
                   "options": [
                     "A very appropriate thing to do",
                     "Appropriate, but not ideal",
@@ -6324,7 +6267,7 @@
                     "A very inappropriate thing to do"
                   ],
                   "answer": 3,
-                  "explanation": "Verifying a private fact using clinical access is a further disclosure.",
+                  "explanation": "This is misleading and removes the participant’s opportunity to make a voluntary choice.",
                   "id": "ucat-mock-2-SJT-q35"
                 }
               ],
@@ -6623,25 +6566,25 @@
               "id": "ucat-mock-2-SJT-g11"
             },
             {
-              "title": "A sporting gift",
-              "stimulus": "At the end of a placement, a patient offers student Abe expensive match tickets. The patient has another appointment the following week and jokes that the gift might get them seen faster. The placement has a gifts policy.",
+              "title": "Thanks at a group session",
+              "stimulus": "A patient attending a group session offers Rowan, a student who helped organise it, a small box of chocolates. They say it is a thank-you for the whole team and put it next to the handouts. Rowan does not know whether the placement permits low-value shared gifts. The supervisor is nearby, and nothing suggests the patient expects special treatment.",
               "questions": [
                 {
                   "format": "appropriateness",
-                  "stem": "How appropriate is the following response? Accept privately and assure the patient he will move the appointment forward.",
+                  "stem": "How appropriate is the following response?\n\nThank the patient, explain that shared gifts are subject to placement rules and ask the supervisor before treating it as accepted.",
                   "options": [
                     "A very appropriate thing to do",
                     "Appropriate, but not ideal",
                     "Inappropriate, but not awful",
                     "A very inappropriate thing to do"
                   ],
-                  "answer": 3,
-                  "explanation": "This links a valuable gift to improper preference.",
+                  "answer": 0,
+                  "explanation": "This acknowledges the gesture without making an uninformed decision about accepting it.",
                   "id": "ucat-mock-2-SJT-q56"
                 },
                 {
                   "format": "importance",
-                  "stem": "How important is the following consideration? Whether accepting could be seen as influencing access to care.",
+                  "stem": "How important is the following consideration?\n\nWhether the patient expects any change to their care in return for giving the gift.",
                   "options": [
                     "Very important",
                     "Important",
@@ -6649,38 +6592,12 @@
                     "Not important at all"
                   ],
                   "answer": 0,
-                  "explanation": "The comment about priority makes the conflict of interest direct.",
+                  "explanation": "An expectation of preferential treatment would materially change the boundary issue even when a gift is low in value.",
                   "id": "ucat-mock-2-SJT-q57"
                 },
                 {
                   "format": "appropriateness",
-                  "stem": "How appropriate is the following response? Thank the patient, decline the tickets and seek advice under the gifts policy.",
-                  "options": [
-                    "A very appropriate thing to do",
-                    "Appropriate, but not ideal",
-                    "Inappropriate, but not awful",
-                    "A very inappropriate thing to do"
-                  ],
-                  "answer": 0,
-                  "explanation": "This maintains boundaries and avoids the appearance of preferential treatment.",
-                  "id": "ucat-mock-2-SJT-q58"
-                },
-                {
-                  "format": "importance",
-                  "stem": "How important is the following consideration? Whether the team Abe supports is playing in the match.",
-                  "options": [
-                    "Very important",
-                    "Important",
-                    "Of minor importance",
-                    "Not important at all"
-                  ],
-                  "answer": 3,
-                  "explanation": "His personal interest does not determine professional boundaries.",
-                  "id": "ucat-mock-2-SJT-q59"
-                },
-                {
-                  "format": "appropriateness",
-                  "stem": "How appropriate is the following response? Refuse without explanation and immediately leave the conversation.",
+                  "stem": "How appropriate is the following response?\n\nPolitely decline because the rules are unknown, without checking whether a low-value gift for the team is permitted.",
                   "options": [
                     "A very appropriate thing to do",
                     "Appropriate, but not ideal",
@@ -6688,7 +6605,33 @@
                     "A very inappropriate thing to do"
                   ],
                   "answer": 1,
-                  "explanation": "It avoids accepting the gift, but a courteous explanation would protect trust.",
+                  "explanation": "Declining preserves professional boundaries, but a quick check could handle the gesture more accurately and sensitively.",
+                  "id": "ucat-mock-2-SJT-q58"
+                },
+                {
+                  "format": "importance",
+                  "stem": "How important is the following consideration?\n\nWhether the patient brought the same brand of chocolates to a different group last year.",
+                  "options": [
+                    "Very important",
+                    "Important",
+                    "Of minor importance",
+                    "Not important at all"
+                  ],
+                  "answer": 3,
+                  "explanation": "The brand and an unrelated occasion do not establish current policy or expectations.",
+                  "id": "ucat-mock-2-SJT-q59"
+                },
+                {
+                  "format": "appropriateness",
+                  "stem": "How appropriate is the following response?\n\nPut the chocolates out for the team to share and check the rules afterwards if anyone asks.",
+                  "options": [
+                    "A very appropriate thing to do",
+                    "Appropriate, but not ideal",
+                    "Inappropriate, but not awful",
+                    "A very inappropriate thing to do"
+                  ],
+                  "answer": 2,
+                  "explanation": "Sharing rather than keeping them privately fits the stated intention, but acting first prevents the supervisor from handling the gift according to policy.",
                   "id": "ucat-mock-2-SJT-q60"
                 }
               ],
