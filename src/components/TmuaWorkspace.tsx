@@ -21,9 +21,8 @@ import {
 } from '../data/packs/tmua-practice';
 import {
   computeConfidenceSummary,
-  KEVINVARIANT_FREE_MOCK_SETS,
-  KEVINVARIANT_TMUA_RESOURCES,
   loadTmuaConfidenceLog,
+  TMUA_SPEC_TOPIC_NOTES,
 } from '../data/packs/tmua-practice/tmuaExtras';
 import {
   bankQuestions,
@@ -207,137 +206,6 @@ export const TmuaWorkspace: React.FC<TmuaWorkspaceProps> = ({
     return (
       <div className="space-y-8">
         <OfficialResourcesPanel test={test} />
-        {/* Kevinvariant Free TMUA Topic Notes & Mock Sets (Outbound Links) */}
-        <div className="border border-[var(--rule)] bg-[var(--surface)] p-5 sm:p-6 space-y-5">
-          <div className="flex flex-wrap items-start justify-between gap-3">
-            <div>
-              <div className="text-xs font-mono-tabular uppercase tracking-wider text-[var(--accent)]">
-                Kevinvariant Free TMUA Library · Spec-Ordered Topic Notes &amp; Mock Sets
-              </div>
-              <p className="text-xs text-[var(--text-muted)] mt-1">
-                Direct links to Kevinvariant’s free specification-ordered PDF notes (MM1–MM8, Arg1–4, Prf1–5 &amp; Err1–2) and free original mock sets A–H. Opens externally on kevinvariant08.github.io.
-              </p>
-            </div>
-            <span className="text-[10px] font-mono-tabular uppercase tracking-wider px-2 py-0.5 border border-amber-500/40 text-amber-300 bg-amber-500/10 shrink-0">
-              Third-Party · Free
-            </span>
-          </div>
-
-          <div className="grid sm:grid-cols-2 gap-3">
-            {KEVINVARIANT_TMUA_RESOURCES.filter((r) => r.group === 'hub').map((item) => (
-              <a
-                key={item.id}
-                href={item.url}
-                target="_blank"
-                rel="noreferrer"
-                className="border border-[var(--accent)]/40 bg-[var(--bg)] hover:border-[var(--accent)] p-4 flex flex-col justify-between gap-2 transition-colors"
-              >
-                <div className="flex items-center justify-between gap-2">
-                  <span className="text-[11px] font-mono-tabular text-[var(--accent)]">
-                    {item.spec}
-                  </span>
-                  <ExternalLink className="w-3.5 h-3.5 text-[var(--text-muted)]" />
-                </div>
-                <div className="text-sm font-semibold text-[var(--ink)]">{item.title}</div>
-                <p className="text-xs text-[var(--text-muted)] leading-relaxed">
-                  {item.description}
-                </p>
-              </a>
-            ))}
-          </div>
-
-          <div className="space-y-2.5">
-            <div className="text-[11px] font-mono-tabular uppercase tracking-wider text-[var(--text-muted)]">
-              Direct Free Mock Paper &amp; Solution PDFs (Sets A–D) &amp; Interactive Tools
-            </div>
-            <div className="grid md:grid-cols-2 gap-3">
-              {KEVINVARIANT_FREE_MOCK_SETS.map((set) => (
-                <div
-                  key={set.set}
-                  className="border border-[var(--rule)] bg-[var(--bg)] p-3.5 space-y-2"
-                >
-                  <div className="flex items-center justify-between gap-2">
-                    <span className="text-xs font-semibold text-[var(--ink)]">{set.set}</span>
-                    <span className="text-[11px] font-mono-tabular text-[var(--accent)]">
-                      {set.difficulty}
-                    </span>
-                  </div>
-                  <p className="text-[11px] text-[var(--text-muted)] leading-relaxed">{set.note}</p>
-                  <div className="flex flex-wrap gap-1.5 pt-0.5">
-                    {set.links.map((lk) => (
-                      <a
-                        key={lk.url}
-                        href={lk.url}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="px-2 py-1 border border-[var(--rule)] hover:border-[var(--accent)] hover:text-[var(--accent)] text-[11px] font-mono-tabular text-[var(--ink)] inline-flex items-center gap-1 transition-colors"
-                      >
-                        {lk.label} <ExternalLink className="w-2.5 h-2.5" />
-                      </a>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="space-y-2.5">
-            <div className="text-[11px] font-mono-tabular uppercase tracking-wider text-[var(--text-muted)]">
-              Mathematical Knowledge Notes (Paper 1 &amp; Paper 2 · MM1–MM8)
-            </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
-              {KEVINVARIANT_TMUA_RESOURCES.filter((r) => r.group === 'knowledge').map((item) => (
-                <a
-                  key={item.id}
-                  href={item.url}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="border border-[var(--rule)] bg-[var(--bg)] hover:border-[var(--accent)] p-3.5 flex flex-col justify-between gap-1.5 transition-colors"
-                >
-                  <div className="flex items-center justify-between gap-2">
-                    <span className="text-[11px] font-mono-tabular text-[var(--accent)]">
-                      {item.spec}
-                    </span>
-                    <ExternalLink className="w-3 h-3 text-[var(--text-muted)]" />
-                  </div>
-                  <div className="text-xs font-semibold text-[var(--ink)]">{item.title}</div>
-                  <p className="text-[11px] text-[var(--text-muted)] leading-relaxed">
-                    {item.description}
-                  </p>
-                </a>
-              ))}
-            </div>
-          </div>
-
-          <div className="space-y-2.5">
-            <div className="text-[11px] font-mono-tabular uppercase tracking-wider text-[var(--text-muted)]">
-              Mathematical Reasoning Notes (Paper 2 · Arg1–Arg4, Prf1–Prf5 &amp; Err1–Err2)
-            </div>
-            <div className="grid sm:grid-cols-2 gap-3">
-              {KEVINVARIANT_TMUA_RESOURCES.filter((r) => r.group === 'reasoning').map((item) => (
-                <a
-                  key={item.id}
-                  href={item.url}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="border border-[var(--rule)] bg-[var(--bg)] hover:border-[var(--accent)] p-3.5 flex flex-col justify-between gap-1.5 transition-colors"
-                >
-                  <div className="flex items-center justify-between gap-2">
-                    <span className="text-[11px] font-mono-tabular text-[var(--accent)]">
-                      {item.spec}
-                    </span>
-                    <ExternalLink className="w-3 h-3 text-[var(--text-muted)]" />
-                  </div>
-                  <div className="text-xs font-semibold text-[var(--ink)]">{item.title}</div>
-                  <p className="text-[11px] text-[var(--text-muted)] leading-relaxed">
-                    {item.description}
-                  </p>
-                </a>
-              ))}
-            </div>
-          </div>
-        </div>
-
         {deduplicatedPackResources.length > 0 && (
           <div className="border border-[var(--rule)] bg-[var(--surface)] p-5 sm:p-6 space-y-4">
             <div>
@@ -743,7 +611,7 @@ export const TmuaWorkspace: React.FC<TmuaWorkspaceProps> = ({
               ['review', `Mistake Review${reviewQueueCount > 0 ? ` (${reviewQueueCount})` : ''}`],
               ['mocks', `Full Mocks (${TMUA_MOCKS.length})`],
               ['flashcards', 'Logic & Formula Cards'],
-              ['logic', 'Paper 2 Logic Primer'],
+              ['logic', 'Topic Notes & Primer'],
             ] as const
           ).map(([id, label]) => (
             <button
@@ -905,6 +773,56 @@ export const TmuaWorkspace: React.FC<TmuaWorkspaceProps> = ({
 
       {mode === 'logic' && (
         <div className="space-y-6">
+          {/* Ratio Original Spec-Ordered Topic Notes (MM1–MM8 & Paper 2 Reasoning) */}
+          <div className="border border-[var(--rule)] bg-[var(--surface)] p-5 sm:p-6 space-y-4">
+            <div>
+              <div className="text-xs font-mono-tabular uppercase tracking-wider text-[var(--accent)]">
+                Ratio TMUA Topic Notes · Official Specification Order (MM1–MM8 &amp; Paper 2)
+              </div>
+              <h3 className="font-display text-2xl text-[var(--ink)] mt-0.5">
+                Core formulas, no-calculator methods &amp; exam traps
+              </h3>
+            </div>
+            <div className="grid md:grid-cols-2 gap-4">
+              {TMUA_SPEC_TOPIC_NOTES.map((note) => (
+                <div
+                  key={note.id}
+                  className="border border-[var(--rule)] bg-[var(--bg)] p-4 space-y-2.5"
+                >
+                  <div className="flex items-center justify-between gap-2 text-[11px] font-mono-tabular">
+                    <span className="text-[var(--accent)] font-semibold">{note.spec}</span>
+                    <span className="text-[var(--text-muted)]">{note.paper}</span>
+                  </div>
+                  <div className="text-sm font-semibold text-[var(--ink)]">{note.title}</div>
+                  <div className="space-y-1">
+                    <div className="text-[10px] font-mono-tabular uppercase tracking-wider text-[var(--text-muted)]">
+                      Must-know formulas
+                    </div>
+                    <ul className="space-y-1 text-xs text-[var(--ink)]/90 leading-relaxed">
+                      {note.coreFormulas.map((f, i) => (
+                        <li key={i}>• {f}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="space-y-1">
+                    <div className="text-[10px] font-mono-tabular uppercase tracking-wider text-[var(--text-muted)]">
+                      Fast methods
+                    </div>
+                    <ul className="space-y-1 text-xs text-[var(--text-muted)] leading-relaxed">
+                      {note.keyMethods.map((m, i) => (
+                        <li key={i}>• {m}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="text-[11px] text-amber-300/90 border-t border-[var(--rule)]/70 pt-2">
+                    <span className="font-mono-tabular uppercase tracking-wider mr-1">Watch out:</span>
+                    {note.watchOut}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
           {/* Quick-jump Paper 2 skill anchors */}
           <div className="flex flex-wrap items-center gap-1.5 text-xs">
             <span className="text-[var(--text-muted)] font-mono-tabular uppercase tracking-wider mr-1">

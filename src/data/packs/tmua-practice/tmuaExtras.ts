@@ -287,114 +287,160 @@ export const TMUA_TECHNIQUE_META: Record<string, TmuaTechniqueMeta> = {
   },
 };
 
-export interface KevinvariantResource {
+export interface TmuaSpecTopicNote {
   id: string;
   spec: string;
+  paper: 'Paper 1 & 2' | 'Paper 2';
   title: string;
-  description: string;
-  url: string;
-  group: 'hub' | 'knowledge' | 'reasoning';
+  coreFormulas: string[];
+  keyMethods: string[];
+  watchOut: string;
 }
 
-export const KEVINVARIANT_TMUA_RESOURCES: KevinvariantResource[] = [
+export const TMUA_SPEC_TOPIC_NOTES: TmuaSpecTopicNote[] = [
   {
-    id: 'kv-hub',
-    spec: 'Sets A–L',
-    title: 'Kevinvariant TMUA Hub & Free Mock Sets A–H',
-    description:
-      'Original TMUA mock papers (Sets A–H free with full PDF solutions and difficulty ratings) plus timed practice tools.',
-    url: 'https://kevinvariant08.github.io/tmua.html',
-    group: 'hub',
-  },
-  {
-    id: 'kv-plan',
-    spec: '8–10 Weeks',
-    title: 'Kevinvariant Maths Admissions Roadmap',
-    description:
-      'Structured 5-stage preparation order for TMUA, ESAT, STEP, and Oxbridge maths interviews.',
-    url: 'https://kevinvariant08.github.io/admissions.html#tmua',
-    group: 'hub',
-  },
-  {
-    id: 'kv-mm1',
+    id: 'spec-mm1',
     spec: 'MM1',
-    title: 'Quadratics, Polynomials & Inequalities (PDF)',
-    description:
-      'Indices, surds, discriminant, unknown-sign inequalities, factor/remainder theorems, and root locations.',
-    url: 'https://kevinvariant08.github.io/notes/TMUA_Notes_Algebra.pdf',
-    group: 'knowledge',
+    paper: 'Paper 1 & 2',
+    title: 'Algebra, Quadratics, Polynomials & Inequalities',
+    coreFormulas: [
+      'Quadratic discriminant Δ = b² − 4ac; Vieta: α + β = −b/a, αβ = c/a',
+      'Factor Theorem: (x − a) divides P(x) ⇔ P(a) = 0; Remainder Theorem: P(a) is remainder on ÷ (x − a)',
+      'Difference of squares & cubes: a³ ± b³ = (a ± b)(a² ∓ ab + b²)',
+    ],
+    keyMethods: [
+      'Use sign charts after factoring rather than multiplying by expressions of unknown sign.',
+      'Rewrite symmetric root expressions (α² + β², α³ + β³) directly via α + β and αβ.',
+    ],
+    watchOut: 'Never cancel a variable factor without recording the case where that factor equals zero.',
   },
   {
-    id: 'kv-mm2',
+    id: 'spec-mm2',
     spec: 'MM2',
-    title: 'Sequences, Series & Binomial Expansion (PDF)',
-    description:
-      'Recurrences, periodic sequences, AP/GP sums with parameters, sigma notation, telescoping sums, and binomial coefficients.',
-    url: 'https://kevinvariant08.github.io/notes/TMUA_Notes_Sequences.pdf',
-    group: 'knowledge',
+    paper: 'Paper 1 & 2',
+    title: 'Sequences, Series & Binomial Expansion',
+    coreFormulas: [
+      'AP: uₙ = a + (n − 1)d, Sₙ = (n/2)(2a + (n − 1)d)',
+      'GP: uₙ = arⁿ⁻¹, Sₙ = a(1 − rⁿ)/(1 − r), S∞ = a/(1 − r) for |r| < 1',
+      '(a + b)ⁿ = Σ C(n, k) aⁿ⁻ᵏ bᵏ; adjacent ratio C(n, k+1)/C(n, k) = (n − k)/(k + 1)',
+    ],
+    keyMethods: [
+      'Compute the first 4–6 terms of any recurrence immediately to spot periodicity or invariants.',
+      'Split interleaved odd/even subsequences into separate AP/GP blocks before summing.',
+    ],
+    watchOut: 'Always verify |r| < 1 (strictly, including r ≠ −1) before applying S∞, and check term count b − a + 1.',
   },
   {
-    id: 'kv-mm3',
+    id: 'spec-mm3',
     spec: 'MM3',
-    title: 'Coordinate Geometry & Circles (PDF)',
-    description:
-      'Point-to-line distance, circle equations, tangents, chords, pairs of circles, reflections, and shortest paths.',
-    url: 'https://kevinvariant08.github.io/notes/TMUA_Notes_Coordinates.pdf',
-    group: 'knowledge',
+    paper: 'Paper 1 & 2',
+    title: 'Coordinate Geometry & Circles',
+    coreFormulas: [
+      'Circle (x − a)² + (y − b)² = r²; perpendicular gradients m₁m₂ = −1',
+      'Distance from (x₀, y₀) to Ax + By + C = 0 is |Ax₀ + By₀ + C| / √(A² + B²)',
+      'Chord half-length = √(r² − d²) where d is centre-to-line distance',
+    ],
+    keyMethods: [
+      'Complete the square immediately to read off centre and radius before drawing a quick sketch.',
+      'Use Vieta root gap |α − β| = √((α + β)² − 4αβ) for secant intersection distances.',
+    ],
+    watchOut: 'Check whether a line actually intersects the circle (d ≤ r) before counting chords or tangents.',
   },
   {
-    id: 'kv-mm4',
+    id: 'spec-mm4',
     spec: 'MM4',
-    title: 'Trigonometry (PDF)',
-    description:
-      'Unit circle exact values, identities, interval solution counting, trig ranges, sectors, and 3D problems.',
-    url: 'https://kevinvariant08.github.io/notes/TMUA_Notes_Trigonometry.pdf',
-    group: 'knowledge',
+    paper: 'Paper 1 & 2',
+    title: 'Trigonometry & Exact Values',
+    coreFormulas: [
+      'sin²θ + cos²θ = 1; tan θ = sin θ / cos θ; 1 + tan²θ = sec²θ',
+      'Exact values at 0, π/6, π/4, π/3, π/2; Cosine rule c² = a² + b² − 2ab cos C',
+      'Sector arc length = rθ, sector area = ½r²θ (θ in radians)',
+    ],
+    keyMethods: [
+      'Convert mixed sin/cos equations into a single quadratic via sin²θ = 1 − cos²θ.',
+      'Sketch the unit circle or wave on the exact scaled interval to count every solution.',
+    ],
+    watchOut: 'Include or exclude interval endpoints (0, 2π) strictly as stated, and check extraneous roots if you squared.',
   },
   {
-    id: 'kv-mm5',
+    id: 'spec-mm5',
     spec: 'MM5',
-    title: 'Exponentials & Logarithms (PDF)',
-    description:
-      'Log laws, change of base, domain checks, no-calculator comparisons, counting digits, and parameterised solutions.',
-    url: 'https://kevinvariant08.github.io/notes/TMUA_Notes_Logarithms.pdf',
-    group: 'knowledge',
+    paper: 'Paper 1 & 2',
+    title: 'Exponentials & Logarithms',
+    coreFormulas: [
+      'logₐ(xy) = logₐx + logₐy; logₐ(xᵏ) = k logₐx; change of base logₐb = log_c(b) / log_c(a)',
+      'a^(logₐx) = x for x > 0; logₐ(b) · log_b(a) = 1',
+      'Domain: argument > 0, base > 0, base ≠ 1',
+    ],
+    keyMethods: [
+      'Substitute u = aˣ (u > 0) to turn exponential equations into quadratics in u.',
+      'Compare large powers without a calculator by taking logs or matching common prime bases.',
+    ],
+    watchOut: 'Filter out negative or zero roots that violate log domain, and flip inequalities when base 0 < a < 1.',
   },
   {
-    id: 'kv-mm67',
+    id: 'spec-mm67',
     spec: 'MM6–MM7',
-    title: 'Tangents, Integration & Area (PDF)',
-    description:
-      'Differentiation, tangents/normals, signed integrals vs area, FTC, transformed integrals, and the inverse-function rectangle.',
-    url: 'https://kevinvariant08.github.io/notes/TMUA_Notes_Calculus.pdf',
-    group: 'knowledge',
+    paper: 'Paper 1 & 2',
+    title: 'Differentiation, Integration & Area',
+    coreFormulas: [
+      'd/dx(xⁿ) = nxⁿ⁻¹; ∫xⁿ dx = xⁿ⁺¹/(n + 1) + C (n ≠ −1)',
+      'Stationary points at f′(x) = 0; local max f″ < 0, local min f″ > 0',
+      '∫_a^b f(x) dx = F(b) − F(a); ∫_a^b f(x + c) dx = ∫_{a+c}^{b+c} f(u) du',
+    ],
+    keyMethods: [
+      'Use symmetry (odd integrals vanish on [−a, a], even integrals double [0, a]) before expanding.',
+      'For area between curves or under an axis, find all intersection roots inside [a, b] first.',
+    ],
+    watchOut: 'Never equate a signed definite integral to geometric area when f(x) changes sign on the interval.',
   },
   {
-    id: 'kv-mm8',
+    id: 'spec-mm8',
     spec: 'MM8',
-    title: 'Graphs & Sketching (PDF)',
-    description:
-      'Stationary points, asymptotes, transformations, trig/modulus sketches, cubic tests, and counting intersections.',
-    url: 'https://kevinvariant08.github.io/notes/TMUA_Notes_Graphs.pdf',
-    group: 'knowledge',
+    paper: 'Paper 1 & 2',
+    title: 'Graphs, Transformations & Data',
+    coreFormulas: [
+      'y = f(x + a): left by a; y = f(ax): horizontal scale 1/a; y = af(x): vertical scale a',
+      'Cubic root count: compare product f(x_max)·f(x_min) against 0',
+      'Linear data transform Y = aX + b: mean → aμ + b, SD → |a|σ',
+    ],
+    keyMethods: [
+      'Count real roots of f(x) = g(x) by sketching both curves and tracking turning points & asymptotes.',
+      'Check a single test point (x₀, y₀) to confirm the direction of combined transformations.',
+    ],
+    watchOut: 'Order matters when combining horizontal shifts and stretches: f(2x + 4) = f(2(x + 2)).',
   },
   {
-    id: 'kv-arg',
+    id: 'spec-arg',
     spec: 'Arg1–Arg4',
-    title: 'Logic for Paper 2 (PDF)',
-    description:
-      'Implication & "only if", converse/contrapositive, necessary & sufficient conditions, quantifier order, and negation.',
-    url: 'https://kevinvariant08.github.io/notes/TMUA_Notes_Logic.pdf',
-    group: 'reasoning',
+    paper: 'Paper 2',
+    title: 'Mathematical Logic, Conditions & Quantifiers',
+    coreFormulas: [
+      'P ⇒ Q ≡ ¬Q ⇒ ¬P (contrapositive); NOT equivalent to Q ⇒ P (converse)',
+      '¬(P ⇒ Q) ≡ P ∧ ¬Q; De Morgan: ¬(P ∧ Q) ≡ ¬P ∨ ¬Q',
+      '¬(∀x, P(x)) ≡ ∃x, ¬P(x); ¬(∃x, P(x)) ≡ ∀x, ¬P(x)',
+    ],
+    keyMethods: [
+      'Test P ⇒ Q ("P is sufficient for Q") and Q ⇒ P ("P is necessary for Q") as two separate checks.',
+      'Read "P only if Q" strictly as P ⇒ Q, and "P if Q" as Q ⇒ P.',
+    ],
+    watchOut: 'Quantifier order is not symmetric: ∀x ∃y lets y depend on x; ∃y ∀x requires one fixed y for all x.',
   },
   {
-    id: 'kv-prf',
+    id: 'spec-prf',
     spec: 'Prf1–5 · Err1–2',
-    title: 'Proof & Errors in Proofs (PDF)',
-    description:
-      'Direct proof, cases, contradiction, contrapositive, counterexamples, and classic Paper 2 proof-error traps.',
-    url: 'https://kevinvariant08.github.io/notes/TMUA_Notes_Proof.pdf',
-    group: 'reasoning',
+    paper: 'Paper 2',
+    title: 'Proof Strategies, Counterexamples & Error Spotting',
+    coreFormulas: [
+      'Disproving ∀x (P(x) ⇒ Q(x)) requires ONE witness with P(x) TRUE and Q(x) FALSE',
+      'Exhaustive cases: partition by parity (2k, 2k+1) or small moduli (mod 3, mod 4)',
+      'Valid backward derivation requires every line to be bidirectional (⇔)',
+    ],
+    keyMethods: [
+      'When hunting counterexamples, test 0, 1, −1, fractions in (0, 1), negatives, and boundary integers first.',
+      'In proof-error questions, check every line for hidden division by zero, squaring, or sign assumptions.',
+    ],
+    watchOut: 'An example where the premise P is false is vacuous and never refutes P ⇒ Q.',
   },
 ];
 
@@ -630,66 +676,4 @@ export const TMUA_TRAP_TAXONOMY: TmuaTrapItem[] = [
   { id: 'generalise-small', paper: 2, name: 'Generalising from two or three small cases', check: 'Look for boundary integers, 0, negatives, fractions in (0, 1), or non-coprime factors.' },
 ];
 
-/* ── Kevinvariant Direct Free TMUA Mock Sets A–D & Tools (Outbound Only) ── */
-export interface KevinvariantMockSetLink {
-  set: string;
-  difficulty: string;
-  note: string;
-  links: Array<{ label: string; url: string }>;
-}
 
-export const KEVINVARIANT_FREE_MOCK_SETS: KevinvariantMockSetLink[] = [
-  {
-    set: 'Set A (Free · Entry)',
-    difficulty: 'Unrated · Gentlest entry',
-    note: 'Questions and full worked solutions combined in one PDF per paper.',
-    links: [
-      { label: 'Paper 1 + Solutions', url: 'https://kevinvariant08.github.io/hu_mock_a_p1_with_solutions.pdf' },
-      { label: 'Paper 2 + Solutions', url: 'https://kevinvariant08.github.io/hu_mock_a_p2_with_solutions.pdf' },
-    ],
-  },
-  {
-    set: 'Set D (Free · Core)',
-    difficulty: 'Paper 1: 6.3 · Paper 2: 6.2',
-    note: 'Gentlest rated free set — recommended straight after Set A.',
-    links: [
-      { label: 'P1 Paper', url: 'https://kevinvariant08.github.io/HU_Collection_TMUA_SetD_Paper1.pdf' },
-      { label: 'P1 Solutions', url: 'https://kevinvariant08.github.io/HU_Collection_TMUA_SetD_Paper1_Solutions.pdf' },
-      { label: 'P2 Paper', url: 'https://kevinvariant08.github.io/HU_Collection_TMUA_SetD_Paper2.pdf' },
-      { label: 'P2 Solutions', url: 'https://kevinvariant08.github.io/HU_Collection_TMUA_SetD_Paper2_Solutions.pdf' },
-    ],
-  },
-  {
-    set: 'Set C (Free · Stretch)',
-    difficulty: 'Paper 1: 7.1 · Paper 2: 6.9',
-    note: 'Pitched above the 2025 TMUA.',
-    links: [
-      { label: 'P1 Paper', url: 'https://kevinvariant08.github.io/HU_Collection_TMUA_SetC_Paper1.pdf' },
-      { label: 'P1 Solutions', url: 'https://kevinvariant08.github.io/HU_Collection_TMUA_SetC_Paper1_Solutions.pdf' },
-      { label: 'P2 Paper', url: 'https://kevinvariant08.github.io/HU_Collection_TMUA_SetC_Paper2.pdf' },
-      { label: 'P2 Solutions', url: 'https://kevinvariant08.github.io/HU_Collection_TMUA_SetC_Paper2_Solutions.pdf' },
-    ],
-  },
-  {
-    set: 'Set B (Free · Challenge)',
-    difficulty: 'Paper 1: 7.3 · Paper 2: 7.5',
-    note: 'No routine questions in either paper.',
-    links: [
-      { label: 'P1 Paper', url: 'https://kevinvariant08.github.io/HU_Collection_TMUA_SetB_Paper1.pdf' },
-      { label: 'P1 Solutions', url: 'https://kevinvariant08.github.io/HU_Collection_TMUA_SetB_Paper1_Solutions.pdf' },
-      { label: 'P2 Paper', url: 'https://kevinvariant08.github.io/HU_Collection_TMUA_SetB_Paper2.pdf' },
-      { label: 'P2 Solutions', url: 'https://kevinvariant08.github.io/HU_Collection_TMUA_SetB_Paper2_Solutions.pdf' },
-    ],
-  },
-  {
-    set: 'Sets E–H & Interactive Tools (Free on Site)',
-    difficulty: '6.1 to 8.0 · IRT Smart Practice',
-    note: 'Free Sets E–H, IRT adaptive Smart Practice, Timed Drill, and Binomial Coefficients handout.',
-    links: [
-      { label: 'Sets E–H Hub', url: 'https://kevinvariant08.github.io/tmua.html#sets' },
-      { label: 'Smart Practice (IRT)', url: 'https://kevinvariant08.github.io/smart.html' },
-      { label: 'Timed Drill', url: 'https://kevinvariant08.github.io/drill.html' },
-      { label: 'Binomial Coeffs PDF', url: 'https://kevinvariant08.github.io/HU_Collection_Binomial_Coefficients.pdf' },
-    ],
-  },
-];
