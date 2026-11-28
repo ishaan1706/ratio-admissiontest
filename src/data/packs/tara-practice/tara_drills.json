@@ -1869,7 +1869,7 @@
         {
           "id": "tara-drill-ps2-volunteer-journey",
           "type": "relevant-selection",
-          "stem": "A driver taking volunteers to a coastal clean-up must collect either Imani or Jo, then either Kit or Luz. Driving times in minutes are given below; there is no waiting.\nGarage to Imani | 7 | Garage to Jo | 9\nImani to Kit    | 5 | Imani to Luz | 8\nJo to Kit       | 2 | Jo to Luz    | 4\nKit to beach    | 9 | Luz to beach | 6\nHow much longer is the slowest trip than the fastest?",
+          "stem": "A driver taking volunteers to a coastal clean-up must collect either Imani or Jo, then either Kit or Luz. Driving times in minutes are given below; there is no waiting.\nLeg             | Minutes | Leg          | Minutes\nGarage to Imani | 7       | Garage to Jo | 9\nImani to Kit    | 5       | Imani to Luz | 8\nJo to Kit       | 2       | Jo to Luz    | 4\nKit to beach    | 9       | Luz to beach | 6\nHow much longer is the slowest trip than the fastest?",
           "options": {
             "A": "1",
             "B": "3",

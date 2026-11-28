@@ -15,6 +15,7 @@ import {
   X,
 } from 'lucide-react';
 import taraDrillsRaw from '../data/packs/tara-practice/tara_drills.json';
+import { TaraStem } from './TaraStem';
 
 export interface TaraDrillSkill {
   id: string;
@@ -73,49 +74,6 @@ export const TARA_ALL_DRILL_QUESTIONS: TaraDrillQuestion[] = TARA_DRILLS_DATA.mo
 
 const SKILL_MAP = new Map(TARA_ALL_SKILLS.map((s) => [s.id, s]));
 const QUESTION_MAP = new Map(TARA_ALL_DRILL_QUESTIONS.map((q) => [q.id, q]));
-
-function splitDrillStem(stem: string) {
-  const lines = stem.split('\n');
-  const layout = (line: string) =>
-    line.includes('|') ? 'table' : /^(?:[A-Z·] +){2,}[A-Z·]$/.test(line.trim()) ? 'grid' : null;
-  const blocks: { text: string; tabular: boolean }[] = [];
-  let proseStart = 0;
-  for (let i = 0; i < lines.length;) {
-    const kind = layout(lines[i]);
-    let end = i + 1;
-    while (kind && end < lines.length && layout(lines[end]) === kind) end++;
-    if (end > i + 1) {
-      if (i > proseStart) blocks.push({ text: lines.slice(proseStart, i).join('\n'), tabular: false });
-      blocks.push({ text: lines.slice(i, end).join('\n'), tabular: true });
-      proseStart = end;
-    }
-    i = end;
-  }
-  if (proseStart < lines.length) blocks.push({ text: lines.slice(proseStart).join('\n'), tabular: false });
-  return blocks;
-}
-
-function TaraDrillStem({ stem, className }: { stem: string; className: string }) {
-  return (
-    <div className={className}>
-      {splitDrillStem(stem).map(({ text, tabular }, i) =>
-        tabular ? (
-          <pre
-            key={i}
-            tabIndex={0}
-            role="region"
-            aria-label="Question data, scrollable"
-            className="m-0 max-w-full overflow-x-auto whitespace-pre font-mono focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[var(--accent)]"
-          >
-            {text}
-          </pre>
-        ) : (
-          <React.Fragment key={i}>{text}</React.Fragment>
-        ),
-      )}
-    </div>
-  );
-}
 
 const STORAGE_KEY = 'ratio_tara_drill_history_v1';
 
@@ -638,7 +596,7 @@ export const TaraPracticeSuite: React.FC<TaraPracticeSuiteProps> = ({ onOpenLess
                     </span>
                   </div>
 
-                  <TaraDrillStem stem={q.stem} className="text-sm text-[var(--ink)] whitespace-pre-line leading-relaxed" />
+                  <TaraStem stem={q.stem} className="text-sm text-[var(--ink)] whitespace-pre-line leading-relaxed" />
 
                   <p className="text-xs text-[var(--text-muted)] leading-relaxed pt-2 border-t border-[var(--rule)] whitespace-pre-line">
                     <strong className="text-[var(--ink)]">Explanation:</strong> {q.explanation}
@@ -770,7 +728,7 @@ export const TaraPracticeSuite: React.FC<TaraPracticeSuiteProps> = ({ onOpenLess
         </div>
 
         <div className="border border-[var(--rule)] bg-[var(--surface)] p-6 space-y-5">
-          <TaraDrillStem stem={q.stem} className="text-[15px] text-[var(--ink)] whitespace-pre-line leading-relaxed" />
+          <TaraStem stem={q.stem} className="text-[15px] text-[var(--ink)] whitespace-pre-line leading-relaxed" />
 
           <div className="space-y-2">
             {Object.keys(q.options).map((key) => {
