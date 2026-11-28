@@ -1083,7 +1083,7 @@ export const FULL_MOCK_PASSAGES: LnatPassage[] = [
         stem: 'Which example most closely parallels the error of looking for a pipe directly inland from the foam’s thickest point?',
         skill: 'Assumption & Flaw',
         difficulty: 'Challenging',
-        paragraphRef: 1,
+        paragraphRef: 3,
         correctLetter: 'B',
         rationale: 'The error treats the place where transported material accumulated as evidence for the nearest origin.',
         options: [
@@ -1235,7 +1235,7 @@ export const FULL_MOCK_PASSAGES: LnatPassage[] = [
         stem: 'Which proposed “improvement” most closely extends the satire’s target?',
         skill: 'Main Argument',
         difficulty: 'Challenging',
-        paragraphRef: 4,
+        paragraphRef: 1,
         correctLetter: 'C',
         rationale: 'The column ridicules practices that make performance look better by suppressing the evidence that would measure it.',
         options: [
@@ -1386,7 +1386,7 @@ export const FULL_MOCK_PASSAGES: LnatPassage[] = [
         stem: 'Which statement about the unnamed customer is best supported?',
         skill: 'Inference',
         difficulty: 'Standard',
-        paragraphRef: 4,
+        paragraphRef: 1,
         correctLetter: 'D',
         rationale: 'The customer was poised to engage with the stall, but Adair explicitly says she had taken no money.',
         options: [
@@ -1758,7 +1758,7 @@ export const FULL_MOCK_PASSAGES: LnatPassage[] = [
         stem: 'Which view is most strongly implied by the details the narrator chooses to include?',
         skill: 'Main Argument',
         difficulty: 'Challenging',
-        paragraphRef: 4,
+        paragraphRef: 3,
         correctLetter: 'B',
         rationale: 'The vignette juxtaposes technical measures and quiet equipment with the clerk’s decisions about how to handle particular people fairly.',
         options: [
