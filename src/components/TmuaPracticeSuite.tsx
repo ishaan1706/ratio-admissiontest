@@ -182,11 +182,31 @@ export const TmuaPracticeSuite: React.FC<TmuaPracticeSuiteProps> = ({
       const raw = safeReadStorage(TMUA_ACTIVE_SESSION_KEY);
       if (!raw) return null;
       const parsed = JSON.parse(raw) as ActiveDrillSession;
-      if (!parsed || !Array.isArray(parsed.questionIds) || parsed.questionIds.length === 0
-        || parsed.questionIds.some((id) => !questionById.has(id))) {
-        return null;
-      }
-      return parsed;
+      if (!parsed || !Array.isArray(parsed.questionIds)) return null;
+      const questionIds = parsed.questionIds.filter((id) => questionById.has(id));
+      if (questionIds.length === 0) return null;
+      if (questionIds.length === parsed.questionIds.length) return parsed;
+
+      const oldIndex = Number.isInteger(parsed.currentIndex) ? Math.max(0, parsed.currentIndex) : 0;
+      const skipped = parsed.questionIds.slice(0, oldIndex).filter((id) => !questionById.has(id)).length;
+      const keptIds = new Set(questionIds);
+      const keepCurrent = <T,>(values: Record<string, T> = {}) =>
+        Object.fromEntries(Object.entries(values).filter(([id]) => keptIds.has(id)));
+
+      return {
+        ...parsed,
+        questionIds,
+        currentIndex: Math.min(oldIndex - skipped, questionIds.length - 1),
+        answers: keepCurrent(parsed.answers),
+        firstAttemptSnapshot: keepCurrent(parsed.firstAttemptSnapshot),
+        navFlagged: keepCurrent(parsed.navFlagged),
+        guessed: keepCurrent(parsed.guessed),
+        assisted: keepCurrent(parsed.assisted),
+        reasons: keepCurrent(parsed.reasons),
+        notes: keepCurrent(parsed.notes),
+        confidence: parsed.confidence && keepCurrent(parsed.confidence),
+        committed: keepCurrent(parsed.committed),
+      };
     } catch {
       return null;
     }
@@ -271,6 +291,15 @@ export const TmuaPracticeSuite: React.FC<TmuaPracticeSuiteProps> = ({
     [skillStats]
   );
 
+  const completeDaily = (targetSession: ActiveDrillSession) => {
+    if (targetSession.kind !== 'daily' || targetSession.dailyDay !== daily.day
+      || targetSession.questionIds.length !== daily.ids.length
+      || targetSession.questionIds.some((id, index) => id !== daily.ids[index])) return;
+    const updatedDaily = { ...daily, complete: true };
+    setDaily(updatedDaily);
+    safeWriteStorage(TMUA_DAILY_KEY, JSON.stringify(updatedDaily));
+  };
+
   const commitSessionBatch = (targetSession: ActiveDrillSession, atIso: string) => {
     let nextHist = history;
     let nextSrs = srs;
@@ -316,15 +345,7 @@ export const TmuaPracticeSuite: React.FC<TmuaPracticeSuiteProps> = ({
     setSrs(nextSrs);
     saveTmuaSrs(nextSrs);
 
-    if (targetSession.kind === 'daily' && targetSession.dailyDay) {
-      const updatedDaily: TmuaDailyState = {
-        day: targetSession.dailyDay,
-        ids: targetSession.questionIds.slice(),
-        complete: true,
-      };
-      setDaily((prev) => (prev.day === updatedDaily.day ? updatedDaily : prev));
-      safeWriteStorage(TMUA_DAILY_KEY, JSON.stringify(updatedDaily));
-    }
+    completeDaily(targetSession);
 
     const allCommitted: Record<string, boolean> = { ...targetSession.committed };
     for (const qid of targetSession.questionIds) allCommitted[qid] = true;
@@ -441,15 +462,7 @@ export const TmuaPracticeSuite: React.FC<TmuaPracticeSuiteProps> = ({
 
     const nextCommitted = { ...session.committed, [q.id]: true };
     const allDone = session.questionIds.every((id) => nextCommitted[id]);
-    if (allDone && session.kind === 'daily' && session.dailyDay) {
-      const updatedDaily: TmuaDailyState = {
-        day: session.dailyDay,
-        ids: session.questionIds.slice(),
-        complete: true,
-      };
-      setDaily((prev) => (prev.day === updatedDaily.day ? updatedDaily : prev));
-      safeWriteStorage(TMUA_DAILY_KEY, JSON.stringify(updatedDaily));
-    }
+    if (allDone) completeDaily(session);
     setSession({
       ...session,
       committed: nextCommitted,
