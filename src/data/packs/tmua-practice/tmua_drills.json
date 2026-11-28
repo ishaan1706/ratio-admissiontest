@@ -4587,7 +4587,7 @@
           "explanation": "Area gives frequency: 13, 7, 12. The midpoints are 3, 17/2, 27/2. Form their frequency-weighted sum and divide by 32.\n\nAnswer: 521/64."
         },
         {
-          "id": "tmua-drill-p1-ratio-of-areas-01-v2",
+          "id": "tmua-drill-p1-ratio-of-areas-01-v3",
           "topic": "Differentiation & integration",
           "type": "calculus",
           "difficulty": 5,
@@ -4597,38 +4597,38 @@
             "calculus",
             "ratio-of-areas"
           ],
-          "stem": "The diagonals of a parallelogram meet at O. A point P bisects OA, where A is a vertex. What fraction of the parallelogram is triangle POB when B is the next vertex after A?",
+          "stem": "The arch y = 4 − x² above the x-axis has area A. A second arch is formed by y = 9 − 4x² above the same axis. What is the second area divided by A?",
           "options": [
-            "1/16",
-            "1/8",
-            "1/6",
-            "1/4",
-            "1/2"
-          ],
-          "answer": 1,
-          "explanation": "The diagonals give four equal areas. With base on the same diagonal, POB has half the base of AOB and the same height."
-        },
-        {
-          "id": "tmua-drill-p1-ratio-of-areas-02-v2",
-          "topic": "Differentiation & integration",
-          "type": "calculus",
-          "difficulty": 5,
-          "family": "ratio-of-areas",
-          "tags": [
-            "paper-1",
-            "calculus",
-            "ratio-of-areas"
-          ],
-          "stem": "A triangle is cut by a line parallel to its base so that the smaller triangle has one third of the original height. What is the ratio of the trapezium's area to the smaller triangle's?",
-          "options": [
-            "2",
-            "3",
-            "4",
-            "8",
-            "9"
+            "3/4",
+            "9/8",
+            "3/2",
+            "27/16",
+            "9/4"
           ],
           "answer": 3,
-          "explanation": "Similar lengths scale by 1/3 and areas by 1/9. The area ratio is therefore (1−1/9)/(1/9)."
+          "explanation": "The second graph is the first scaled horizontally by 3/4 and vertically by 9/4: 9 − 4x² = (9/4)[4 − (4x/3)²]. In the area integral, the substitution u = 4x/3 contributes a factor 3/4. The total area factor is (3/4)(9/4) = 27/16."
+        },
+        {
+          "id": "tmua-drill-p1-ratio-of-areas-02-v3",
+          "topic": "Differentiation & integration",
+          "type": "calculus",
+          "difficulty": 5,
+          "family": "ratio-of-areas",
+          "tags": [
+            "paper-1",
+            "calculus",
+            "ratio-of-areas"
+          ],
+          "stem": "The region under y = 3x² between x = 0 and x = 2 is split by x = a. What is a if the area to its left is half the area to its right?",
+          "options": [
+            "2/3",
+            "1",
+            "∛2",
+            "∛(8/3)",
+            "∛4"
+          ],
+          "answer": 3,
+          "explanation": "The integral from 0 to a is a³ and the full area is 8. The left area is one third of the whole, so a³ = 8/3."
         },
         {
           "id": "tmua-drill-p1-ratio-of-areas-03-v2",
@@ -4653,7 +4653,7 @@
           "explanation": "The first region runs from x = 0 to x = 1 and has area ∫₀¹(x − x²) dx = 1/6. The other area is ∫₀¹(1 − x²) dx = 2/3, giving ratio 4."
         },
         {
-          "id": "tmua-drill-p1-ratio-of-areas-04-v2",
+          "id": "tmua-drill-p1-ratio-of-areas-04-v3",
           "topic": "Differentiation & integration",
           "type": "calculus",
           "difficulty": 5,
@@ -4663,41 +4663,19 @@
             "calculus",
             "ratio-of-areas"
           ],
-          "stem": "A line from A to D on BC cuts triangle ABC into two triangles with areas in the ratio 2:5. If BC=21, what is the shorter of BD and DC?",
+          "stem": "In the unit square 0 ≤ x ≤ 1, 0 ≤ y ≤ 1, the line y = x splits the area below y = √x into two regions. What fraction of the area below the curve lies above the line?",
           "options": [
-            "3",
-            "5",
-            "6",
-            "7",
-            "10"
-          ],
-          "answer": 2,
-          "explanation": "Their altitudes from A agree, so dividing BC in the ratio 2:5 gives shorter length 21·2/7."
-        },
-        {
-          "id": "tmua-drill-p1-ratio-of-areas-05-v2",
-          "topic": "Differentiation & integration",
-          "type": "calculus",
-          "difficulty": 5,
-          "family": "ratio-of-areas",
-          "tags": [
-            "paper-1",
-            "calculus",
-            "ratio-of-areas"
-          ],
-          "stem": "A circle is inscribed in a square, and a second square is inscribed in that circle. What fraction of the outer square's area is inside the inner square?",
-          "options": [
+            "1/6",
+            "1/5",
             "1/4",
             "1/3",
-            "1/2",
-            "2/3",
-            "3/4"
+            "1/2"
           ],
           "answer": 2,
-          "explanation": "The inner diagonal equals the outer side. A square with diagonal d has area d²/2."
+          "explanation": "Integrate √x from 0 to 1 to get 2/3. The line lies below the curve and cuts off a triangle of area 1/2, leaving an area of 1/6 above the line. The fraction is (1/6)/(2/3) = 1/4."
         },
         {
-          "id": "tmua-drill-p1-ratio-of-areas-06-v2",
+          "id": "tmua-drill-p1-ratio-of-areas-05-v3",
           "topic": "Differentiation & integration",
           "type": "calculus",
           "difficulty": 5,
@@ -4707,16 +4685,38 @@
             "calculus",
             "ratio-of-areas"
           ],
-          "stem": "A triangle has vertices (0,0), (8,0), (2,5). The point (2,2) is joined to each vertex. What fraction of the original area is in the triangle containing the base on the x-axis?",
+          "stem": "The arch y = x(2 − x) and the x-axis enclose a region. What fraction of that region lies above y = x?",
           "options": [
-            "1/5",
-            "1/3",
-            "2/5",
-            "1/2",
-            "3/5"
+            "1/16",
+            "1/12",
+            "1/8",
+            "1/6",
+            "1/4"
           ],
           "answer": 2,
-          "explanation": "The base remains 8, but the height is 2 instead of 5."
+          "explanation": "The full area is the integral of 2x − x² from 0 to 2, which is 4/3. The arch is above the line only for 0 < x < 1, where the gap is x − x². Integrating this gap gives 1/6, so the fraction is 1/8."
+        },
+        {
+          "id": "tmua-drill-p1-ratio-of-areas-06-v3",
+          "topic": "Differentiation & integration",
+          "type": "calculus",
+          "difficulty": 5,
+          "family": "ratio-of-areas",
+          "tags": [
+            "paper-1",
+            "calculus",
+            "ratio-of-areas"
+          ],
+          "stem": "A rectangle of height 2 spans 1 ≤ x ≤ 2. What is the ratio of the area under y = x² on that interval to the rectangle's area?",
+          "options": [
+            "5/6",
+            "1",
+            "7/6",
+            "4/3",
+            "7/3"
+          ],
+          "answer": 2,
+          "explanation": "The width-one rectangle has area 2. The integral of x² from 1 to 2 is (8 − 1)/3 = 7/3, giving ratio 7/6."
         },
         {
           "id": "tmua-drill-p1-ratio-of-areas-07-v2",
@@ -4741,7 +4741,7 @@
           "explanation": "The curves meet at x = 0 and x = m. The integral of mx − x² over [0, m] is m³/6. Taking the cube root of the ratio gives m/(m + 1) = 2/3, so m = 2."
         },
         {
-          "id": "tmua-drill-p1-ratio-of-areas-08-v2",
+          "id": "tmua-drill-p1-ratio-of-areas-08-v3",
           "topic": "Differentiation & integration",
           "type": "calculus",
           "difficulty": 5,
@@ -4751,16 +4751,16 @@
             "calculus",
             "ratio-of-areas"
           ],
-          "stem": "The segment from the midpoint of one leg of a right triangle to the midpoint of its hypotenuse has length 4. What fraction of the triangle's area is on the side of this segment containing the right-angle vertex?",
+          "stem": "On 3/2 ≤ x ≤ 2, compare the area between y = (x − 1)² and its tangent at x = 2 with the area between that tangent and the x-axis. What is the first area divided by the second?",
           "options": [
+            "1/12",
+            "1/8",
+            "1/6",
             "1/4",
-            "1/3",
-            "1/2",
-            "2/3",
-            "3/4"
+            "1/3"
           ],
-          "answer": 4,
-          "explanation": "The midpoint segment is parallel to the other leg. It cuts off a similar triangle with half the linear scale and a quarter of the area."
+          "answer": 2,
+          "explanation": "The tangent is y = 2x − 3, so the gap above it is (x − 2)². Integrating the gap from 3/2 to 2 gives 1/24. The triangle under the tangent has base 1/2 and height 1, hence area 1/4. The ratio is 1/6."
         },
         {
           "id": "tmua-drill-p1-ratio-of-areas-09",
@@ -5034,13 +5034,13 @@
         },
         {
           "id": "tmua-drill-p1-inscribed-rectangle-01-v2",
-          "topic": "Functions, transformations & logarithms",
-          "type": "functions",
+          "topic": "Differentiation & integration",
+          "type": "calculus",
           "difficulty": 3,
           "family": "inscribed-rectangle",
           "tags": [
             "paper-1",
-            "functions",
+            "calculus",
             "inscribed-rectangle"
           ],
           "stem": "A rectangle has its base on the x-axis and its upper vertices on y=9−x². Its area is largest for which positive x-coordinate of the upper right vertex?",
@@ -5056,13 +5056,13 @@
         },
         {
           "id": "tmua-drill-p1-inscribed-rectangle-02-v2",
-          "topic": "Functions, transformations & logarithms",
-          "type": "functions",
+          "topic": "Coordinate geometry",
+          "type": "geometry",
           "difficulty": 3,
           "family": "inscribed-rectangle",
           "tags": [
             "paper-1",
-            "functions",
+            "geometry",
             "inscribed-rectangle"
           ],
           "stem": "A right triangle has perpendicular sides 6 and 8. An inscribed rectangle has two sides lying along those sides and its opposite corner on the hypotenuse. What is its largest possible area?",
@@ -5100,13 +5100,13 @@
         },
         {
           "id": "tmua-drill-p1-inscribed-rectangle-04-v2",
-          "topic": "Functions, transformations & logarithms",
-          "type": "functions",
+          "topic": "Coordinate geometry",
+          "type": "geometry",
           "difficulty": 3,
           "family": "inscribed-rectangle",
           "tags": [
             "paper-1",
-            "functions",
+            "geometry",
             "inscribed-rectangle"
           ],
           "stem": "An axis-aligned rectangle is centred at the origin with all corners on x²/9+y²/4=1. What is its area if its length and height are in the ratio 3:2?",
@@ -5144,13 +5144,13 @@
         },
         {
           "id": "tmua-drill-p1-inscribed-rectangle-06-v2",
-          "topic": "Functions, transformations & logarithms",
-          "type": "functions",
+          "topic": "Coordinate geometry",
+          "type": "geometry",
           "difficulty": 3,
           "family": "inscribed-rectangle",
           "tags": [
             "paper-1",
-            "functions",
+            "geometry",
             "inscribed-rectangle"
           ],
           "stem": "A rectangle inscribed in a circle of radius 5 has one side of length 6. What is its perimeter?",
@@ -5188,13 +5188,13 @@
         },
         {
           "id": "tmua-drill-p1-inscribed-rectangle-08-v2",
-          "topic": "Functions, transformations & logarithms",
-          "type": "functions",
+          "topic": "Coordinate geometry",
+          "type": "geometry",
           "difficulty": 3,
           "family": "inscribed-rectangle",
           "tags": [
             "paper-1",
-            "functions",
+            "geometry",
             "inscribed-rectangle"
           ],
           "stem": "A rectangle is inscribed in a semicircle of radius 6, with its base along the diameter and both upper corners on the arc. What is the maximum area?",

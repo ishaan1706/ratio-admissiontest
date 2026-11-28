@@ -1077,7 +1077,7 @@ export const TmuaPracticeSuite: React.FC<TmuaPracticeSuiteProps> = ({
       const meta = TMUA_TECHNIQUE_META[g.family];
       return (
         g.family.toLowerCase().includes(qLower) ||
-        g.topic.toLowerCase().includes(qLower) ||
+        g.questions.some((q) => q.topic.toLowerCase().includes(qLower)) ||
         (meta?.title.toLowerCase().includes(qLower) ?? false) ||
         (meta?.spec.toLowerCase().includes(qLower) ?? false) ||
         (meta?.idea.toLowerCase().includes(qLower) ?? false)
