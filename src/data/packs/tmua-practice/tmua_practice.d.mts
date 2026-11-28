@@ -88,7 +88,7 @@ export interface TmuaSkillStat {
 
 export function localDay(now?: Date): string;
 export function practiceSeconds(count: number): number;
-export function readHistory(raw: string, questions: Array<{ id: string }>): TmuaDrillHistory;
+export function readHistory(raw: string): TmuaDrillHistory;
 export function recordResult(
   history: TmuaDrillHistory,
   question: { id: string; options: string[]; answer: number },
