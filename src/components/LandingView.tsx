@@ -71,7 +71,7 @@ const EXAM_STATS: Record<
   },
   sat: {
     index: '06',
-    mocks: '1,000-Q Bank + 4 Full Mocks',
+    mocks: '550+ Q Bank + 4 Full Mocks',
     extras: 'Adaptive M2 · 30 Lessons · 400 Vocab',
     interfaceLabel: 'College Board Bluebook',
     universities: 'US Ivy League · MIT · Stanford',
