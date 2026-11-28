@@ -186,6 +186,7 @@ export const TmuaPracticeSuite: React.FC<TmuaPracticeSuiteProps> = ({
       const questionIds = parsed.questionIds.filter((id) => questionById.has(id));
       if (questionIds.length === 0) return null;
       if (questionIds.length === parsed.questionIds.length) return parsed;
+      if (parsed.submitted) return null;
 
       const oldIndex = Number.isInteger(parsed.currentIndex) ? Math.max(0, parsed.currentIndex) : 0;
       const skipped = parsed.questionIds.slice(0, oldIndex).filter((id) => !questionById.has(id)).length;
