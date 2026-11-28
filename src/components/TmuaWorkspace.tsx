@@ -19,6 +19,7 @@ import {
   TMUA_PACK_MOCK_QUESTIONS,
   TMUA_PRIMER_SECTIONS,
 } from '../data/packs/tmua-practice';
+import { KEVINVARIANT_TMUA_RESOURCES } from '../data/packs/tmua-practice/tmuaExtras';
 import {
   bankQuestions,
   firstAttemptStats,
@@ -81,7 +82,9 @@ export const TmuaWorkspace: React.FC<TmuaWorkspaceProps> = ({
   const [history, setHistory] = useState<TmuaDrillHistory>(() =>
     loadTmuaHistory(allKnownQuestions)
   );
-  const [mode, setMode] = useState<'skills' | 'review' | 'mocks' | 'flashcards' | 'logic'>('skills');
+  const [mode, setMode] = useState<
+    'skills' | 'techniques' | 'bank' | 'review' | 'mocks' | 'flashcards' | 'logic'
+  >('skills');
   const [activePrimerAnchor, setActivePrimerAnchor] = useState<string | null>(null);
   const primerContainerRef = useRef<HTMLDivElement | null>(null);
 
@@ -199,6 +202,102 @@ export const TmuaWorkspace: React.FC<TmuaWorkspaceProps> = ({
     return (
       <div className="space-y-8">
         <OfficialResourcesPanel test={test} />
+        {/* Kevinvariant Free TMUA Topic Notes & Mock Sets (Outbound Links) */}
+        <div className="border border-[var(--rule)] bg-[var(--surface)] p-5 sm:p-6 space-y-5">
+          <div className="flex flex-wrap items-start justify-between gap-3">
+            <div>
+              <div className="text-xs font-mono-tabular uppercase tracking-wider text-[var(--accent)]">
+                Kevinvariant Free TMUA Library · Spec-Ordered Topic Notes &amp; Mock Sets
+              </div>
+              <p className="text-xs text-[var(--text-muted)] mt-1">
+                Direct links to Kevinvariant’s free specification-ordered PDF notes (MM1–MM8, Arg1–4, Prf1–5 &amp; Err1–2) and free original mock sets A–H. Opens externally on kevinvariant08.github.io.
+              </p>
+            </div>
+            <span className="text-[10px] font-mono-tabular uppercase tracking-wider px-2 py-0.5 border border-amber-500/40 text-amber-300 bg-amber-500/10 shrink-0">
+              Third-Party · Free
+            </span>
+          </div>
+
+          <div className="grid sm:grid-cols-2 gap-3">
+            {KEVINVARIANT_TMUA_RESOURCES.filter((r) => r.group === 'hub').map((item) => (
+              <a
+                key={item.id}
+                href={item.url}
+                target="_blank"
+                rel="noreferrer"
+                className="border border-[var(--accent)]/40 bg-[var(--bg)] hover:border-[var(--accent)] p-4 flex flex-col justify-between gap-2 transition-colors"
+              >
+                <div className="flex items-center justify-between gap-2">
+                  <span className="text-[11px] font-mono-tabular text-[var(--accent)]">
+                    {item.spec}
+                  </span>
+                  <ExternalLink className="w-3.5 h-3.5 text-[var(--text-muted)]" />
+                </div>
+                <div className="text-sm font-semibold text-[var(--ink)]">{item.title}</div>
+                <p className="text-xs text-[var(--text-muted)] leading-relaxed">
+                  {item.description}
+                </p>
+              </a>
+            ))}
+          </div>
+
+          <div className="space-y-2.5">
+            <div className="text-[11px] font-mono-tabular uppercase tracking-wider text-[var(--text-muted)]">
+              Mathematical Knowledge Notes (Paper 1 &amp; Paper 2 · MM1–MM8)
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              {KEVINVARIANT_TMUA_RESOURCES.filter((r) => r.group === 'knowledge').map((item) => (
+                <a
+                  key={item.id}
+                  href={item.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="border border-[var(--rule)] bg-[var(--bg)] hover:border-[var(--accent)] p-3.5 flex flex-col justify-between gap-1.5 transition-colors"
+                >
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="text-[11px] font-mono-tabular text-[var(--accent)]">
+                      {item.spec}
+                    </span>
+                    <ExternalLink className="w-3 h-3 text-[var(--text-muted)]" />
+                  </div>
+                  <div className="text-xs font-semibold text-[var(--ink)]">{item.title}</div>
+                  <p className="text-[11px] text-[var(--text-muted)] leading-relaxed">
+                    {item.description}
+                  </p>
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <div className="space-y-2.5">
+            <div className="text-[11px] font-mono-tabular uppercase tracking-wider text-[var(--text-muted)]">
+              Mathematical Reasoning Notes (Paper 2 · Arg1–Arg4, Prf1–Prf5 &amp; Err1–Err2)
+            </div>
+            <div className="grid sm:grid-cols-2 gap-3">
+              {KEVINVARIANT_TMUA_RESOURCES.filter((r) => r.group === 'reasoning').map((item) => (
+                <a
+                  key={item.id}
+                  href={item.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="border border-[var(--rule)] bg-[var(--bg)] hover:border-[var(--accent)] p-3.5 flex flex-col justify-between gap-1.5 transition-colors"
+                >
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="text-[11px] font-mono-tabular text-[var(--accent)]">
+                      {item.spec}
+                    </span>
+                    <ExternalLink className="w-3 h-3 text-[var(--text-muted)]" />
+                  </div>
+                  <div className="text-xs font-semibold text-[var(--ink)]">{item.title}</div>
+                  <p className="text-[11px] text-[var(--text-muted)] leading-relaxed">
+                    {item.description}
+                  </p>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+
         {deduplicatedPackResources.length > 0 && (
           <div className="border border-[var(--rule)] bg-[var(--surface)] p-5 sm:p-6 space-y-4">
             <div>
@@ -539,6 +638,8 @@ export const TmuaWorkspace: React.FC<TmuaWorkspaceProps> = ({
           {(
             [
               ['skills', 'Skills Practice'],
+              ['techniques', 'Technique Index (46)'],
+              ['bank', 'Question Bank (460)'],
               ['review', `Mistake Review${reviewQueueCount > 0 ? ` (${reviewQueueCount})` : ''}`],
               ['mocks', `Full Mocks (${TMUA_MOCKS.length})`],
               ['flashcards', 'Logic & Formula Cards'],
@@ -561,7 +662,7 @@ export const TmuaWorkspace: React.FC<TmuaWorkspaceProps> = ({
         </div>
       </div>
 
-      {(mode === 'skills' || mode === 'review') && (
+      {(mode === 'skills' || mode === 'techniques' || mode === 'bank' || mode === 'review') && (
         <TmuaPracticeSuite
           view={mode}
           history={history}

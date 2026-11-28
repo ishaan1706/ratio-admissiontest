@@ -10,6 +10,7 @@ import {
   HelpCircle,
   Play,
   RotateCcw,
+  Search,
   Sparkles,
   Target,
   XCircle,
@@ -18,6 +19,16 @@ import {
   TMUA_DRILL_PACK,
   TMUA_PACK_MOCK_QUESTIONS,
 } from '../data/packs/tmua-practice';
+import {
+  advanceSrsCleanRetry,
+  loadTmuaSrs,
+  saveTmuaSrs,
+  scheduleSrsMiss,
+  srsStageLabel,
+  TMUA_FIVE_STAGE_PLAN,
+  TMUA_TECHNIQUE_META,
+  TmuaSrsMap,
+} from '../data/packs/tmua-practice/tmuaExtras';
 import {
   bankQuestions,
   dailyFive,
@@ -100,7 +111,7 @@ export function saveTmuaHistory(history: TmuaDrillHistory): void {
 }
 
 interface TmuaPracticeSuiteProps {
-  view: 'skills' | 'review';
+  view: 'skills' | 'techniques' | 'bank' | 'review';
   history: TmuaDrillHistory;
   onUpdateHistory: (next: TmuaDrillHistory) => void;
   onOpenPrimer: (lessonId: string) => void;
@@ -146,6 +157,18 @@ export const TmuaPracticeSuite: React.FC<TmuaPracticeSuiteProps> = ({
   const [adaptiveChoice, setAdaptiveChoice] = useState<boolean>(true);
   const [seedNonce, setSeedNonce] = useState<number>(1);
   const [dailyTimed, setDailyTimed] = useState<boolean>(true);
+
+  // Spaced-repetition 1 / 3 / 7-day mistake mastery state
+  const [srs, setSrs] = useState<TmuaSrsMap>(() => loadTmuaSrs());
+
+  // Technique Index & Question Bank filter state
+  const [techPaper, setTechPaper] = useState<'all' | 1 | 2>('all');
+  const [techQuery, setTechQuery] = useState<string>('');
+  const [bankPaper, setBankPaper] = useState<'all' | 1 | 2>('all');
+  const [bankDiff, setBankDiff] = useState<'all' | 1 | 2 | 3 | 4 | 5>('all');
+  const [bankStatus, setBankStatus] = useState<'all' | 'unseen' | 'queued' | 'secure'>('all');
+  const [bankQuery, setBankQuery] = useState<string>('');
+  const [bankLimit, setBankLimit] = useState<number>(40);
 
   // Active session — restored from localStorage so tab switches / reloads don't lose a timed set
   const [session, setSession] = useState<ActiveDrillSession | null>(() => {
@@ -243,22 +266,33 @@ export const TmuaPracticeSuite: React.FC<TmuaPracticeSuiteProps> = ({
 
   const commitSessionBatch = (targetSession: ActiveDrillSession, atIso: string) => {
     let nextHist = history;
+    let nextSrs = srs;
     for (const qid of targetSession.questionIds) {
       if (targetSession.committed[qid]) continue;
       const q = questionById.get(qid);
       if (!q) continue;
       const sel = targetSession.answers[qid] ?? null;
+      const isGuessed = Boolean(targetSession.guessed[qid]);
+      const isAssisted = Boolean(targetSession.assisted[qid]);
       nextHist = recordResult(nextHist, q, {
         selected: sel,
-        guessed: Boolean(targetSession.guessed[qid]),
-        assisted: Boolean(targetSession.assisted[qid]),
+        guessed: isGuessed,
+        assisted: isAssisted,
         at: atIso,
         reason: targetSession.reasons[qid] ?? (sel == null && targetSession.timed ? 'time' : null),
         note: targetSession.notes[qid] ?? '',
       });
+      const isCleanCorrect = sel === q.answer && !isGuessed && !isAssisted;
+      if (!isCleanCorrect) {
+        nextSrs = scheduleSrsMiss(nextSrs, qid, atIso);
+      } else if (nextSrs[qid]) {
+        nextSrs = advanceSrsCleanRetry(nextSrs, qid, atIso);
+      }
     }
     onUpdateHistory(nextHist);
     saveTmuaHistory(nextHist);
+    setSrs(nextSrs);
+    saveTmuaSrs(nextSrs);
 
     if (targetSession.kind === 'daily' && targetSession.dailyDay) {
       const updatedDaily: TmuaDailyState = {
@@ -346,16 +380,28 @@ export const TmuaPracticeSuite: React.FC<TmuaPracticeSuiteProps> = ({
     const sel = session.answers[q.id];
     if (sel === undefined) return;
     const atIso = new Date().toISOString();
+    const isGuessed = Boolean(session.guessed[q.id]);
+    const isAssisted = Boolean(session.assisted[q.id]);
     const nextHist = recordResult(history, q, {
       selected: sel,
-      guessed: Boolean(session.guessed[q.id]),
-      assisted: Boolean(session.assisted[q.id]),
+      guessed: isGuessed,
+      assisted: isAssisted,
       at: atIso,
       reason: session.reasons[q.id] ?? null,
       note: session.notes[q.id] ?? '',
     });
     onUpdateHistory(nextHist);
     saveTmuaHistory(nextHist);
+    const isCleanCorrect = sel === q.answer && !isGuessed && !isAssisted;
+    const nextSrs = !isCleanCorrect
+      ? scheduleSrsMiss(srs, q.id, atIso)
+      : srs[q.id]
+      ? advanceSrsCleanRetry(srs, q.id, atIso)
+      : srs;
+    if (nextSrs !== srs) {
+      setSrs(nextSrs);
+      saveTmuaSrs(nextSrs);
+    }
 
     const nextCommitted = { ...session.committed, [q.id]: true };
     const allDone = session.questionIds.every((id) => nextCommitted[id]);
@@ -899,22 +945,381 @@ export const TmuaPracticeSuite: React.FC<TmuaPracticeSuiteProps> = ({
     );
   }
 
-  /* ── Mistake Review Tab ────────────────────────────────────────────────── */
+  /* ── Technique Index (46 Method Families) ─────────────────────────────── */
+  if (view === 'techniques') {
+    const qLower = techQuery.trim().toLowerCase();
+    const groups = new Map<
+      string,
+      {
+        family: string;
+        paper: 1 | 2;
+        topic: string;
+        type: string;
+        questions: TmuaDrillQuestion[];
+        tried: number;
+        secure: number;
+        queued: number;
+      }
+    >();
+    for (const q of drillQuestions) {
+      const paper: 1 | 2 = q.tags.includes('paper-2') ? 2 : 1;
+      if (techPaper !== 'all' && paper !== techPaper) continue;
+      let g = groups.get(q.family);
+      if (!g) {
+        g = {
+          family: q.family,
+          paper,
+          topic: q.topic,
+          type: q.type,
+          questions: [],
+          tried: 0,
+          secure: 0,
+          queued: 0,
+        };
+        groups.set(q.family, g);
+      }
+      g.questions.push(q);
+      const latest = history.latest[q.id];
+      if (latest) {
+        g.tried++;
+        if (latest.status === 'correct' && !latest.guessed && !latest.assisted) g.secure++;
+      }
+      if (history.queue[q.id]) g.queued++;
+    }
+    const list = Array.from(groups.values()).filter((g) => {
+      if (!qLower) return true;
+      const meta = TMUA_TECHNIQUE_META[g.family];
+      return (
+        g.family.toLowerCase().includes(qLower) ||
+        g.topic.toLowerCase().includes(qLower) ||
+        (meta?.title.toLowerCase().includes(qLower) ?? false) ||
+        (meta?.spec.toLowerCase().includes(qLower) ?? false) ||
+        (meta?.idea.toLowerCase().includes(qLower) ?? false)
+      );
+    });
+
+    return (
+      <div className="space-y-6">
+        <div className="border border-[var(--rule)] bg-[var(--surface)] p-5 flex flex-wrap items-end justify-between gap-4">
+          <div className="space-y-1">
+            <div className="text-xs font-mono-tabular uppercase tracking-wider text-[var(--accent)]">
+              Technique Index · 46 Method Families (24 Paper 1 · 22 Paper 2)
+            </div>
+            <h3 className="font-display text-2xl text-[var(--ink)]">
+              Browse by the exact method that cracks the question
+            </h3>
+            <p className="text-xs text-[var(--text-muted)] max-w-2xl">
+              Every family contains 10 original no-calculator variants. Pick a method below to drill 5 or all 10 variants until the pattern is automatic.
+            </p>
+          </div>
+          <div className="flex flex-wrap items-center gap-2">
+            {(['all', 1, 2] as const).map((p) => (
+              <button
+                key={String(p)}
+                type="button"
+                onClick={() => setTechPaper(p)}
+                className={`px-3 py-1.5 text-xs font-mono-tabular border cursor-pointer ${
+                  techPaper === p
+                    ? 'border-[var(--accent)] bg-[var(--accent)]/10 text-[var(--accent)] font-semibold'
+                    : 'border-[var(--rule)] text-[var(--text-muted)] hover:text-[var(--ink)]'
+                }`}
+              >
+                {p === 'all' ? 'All (46)' : p === 1 ? 'Paper 1 (24)' : 'Paper 2 (22)'}
+              </button>
+            ))}
+            <div className="relative">
+              <Search className="w-3.5 h-3.5 text-[var(--text-muted)] absolute left-2.5 top-1/2 -translate-y-1/2" />
+              <input
+                type="text"
+                value={techQuery}
+                onChange={(e) => setTechQuery(e.target.value)}
+                placeholder="Filter by method or spec (MM1, Arg2...)"
+                className="bg-[var(--bg)] border border-[var(--rule)] pl-8 pr-3 py-1.5 text-xs text-[var(--ink)] w-64"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-4">
+          {list.map((g) => {
+            const meta = TMUA_TECHNIQUE_META[g.family];
+            const pct = Math.round((g.secure / Math.max(1, g.questions.length)) * 100);
+            return (
+              <div
+                key={g.family}
+                className="border border-[var(--rule)] bg-[var(--surface)] p-4 flex flex-col justify-between gap-3"
+              >
+                <div className="space-y-1.5">
+                  <div className="flex items-center justify-between gap-2 text-[11px] font-mono-tabular">
+                    <span className="text-[var(--accent)]">
+                      Paper {g.paper} · {meta?.spec ?? g.type} · L{g.questions[0]?.difficulty ?? 3}
+                    </span>
+                    <span className="text-[var(--text-muted)]">
+                      {g.secure}/{g.questions.length} secure
+                      {g.queued > 0 ? ` · ${g.queued} queued` : ''}
+                    </span>
+                  </div>
+                  <div className="font-semibold text-sm text-[var(--ink)]">
+                    {meta?.title ?? g.family}
+                  </div>
+                  <p className="text-xs text-[var(--text-muted)] leading-relaxed">
+                    {meta?.idea ?? g.topic}
+                  </p>
+                  <div className="h-1 bg-[var(--bg)] overflow-hidden">
+                    <div
+                      className="h-full bg-[var(--accent)] transition-all"
+                      style={{ width: `${pct}%` }}
+                    />
+                  </div>
+                </div>
+                <div className="flex items-center justify-between gap-2 pt-1">
+                  <span className="text-[11px] text-[var(--text-muted)] truncate">{g.topic}</span>
+                  <div className="flex items-center gap-1.5 shrink-0">
+                    <button
+                      type="button"
+                      onClick={() =>
+                        startSession(g.questions.slice(0, 5), {
+                          label: `Technique · ${meta?.title ?? g.family} (5 Qs)`,
+                          kind: 'custom',
+                          timed: false,
+                        })
+                      }
+                      className="px-2.5 py-1 border border-[var(--accent)] text-[var(--accent)] hover:bg-[var(--accent)]/10 text-[11px] font-semibold cursor-pointer"
+                    >
+                      Drill 5
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() =>
+                        startSession(g.questions, {
+                          label: `Technique · ${meta?.title ?? g.family} (${g.questions.length} Qs)`,
+                          kind: 'custom',
+                          timed: true,
+                        })
+                      }
+                      className="px-2.5 py-1 border border-[var(--rule)] text-[var(--text-muted)] hover:text-[var(--ink)] text-[11px] cursor-pointer"
+                    >
+                      Timed 10
+                    </button>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    );
+  }
+
+  /* ── Searchable 460-Q Question Bank ───────────────────────────────────── */
+  if (view === 'bank') {
+    const qLower = bankQuery.trim().toLowerCase();
+    const filtered = drillQuestions.filter((q) => {
+      const paper: 1 | 2 = q.tags.includes('paper-2') ? 2 : 1;
+      if (bankPaper !== 'all' && paper !== bankPaper) return false;
+      if (bankDiff !== 'all' && q.difficulty !== bankDiff) return false;
+      const latest = history.latest[q.id];
+      const isQueued = Boolean(history.queue[q.id]);
+      const isSecure = Boolean(latest && latest.status === 'correct' && !latest.guessed && !latest.assisted);
+      if (bankStatus === 'unseen' && latest) return false;
+      if (bankStatus === 'queued' && !isQueued) return false;
+      if (bankStatus === 'secure' && !isSecure) return false;
+      if (qLower) {
+        const meta = TMUA_TECHNIQUE_META[q.family];
+        const hit =
+          q.stem.toLowerCase().includes(qLower) ||
+          q.topic.toLowerCase().includes(qLower) ||
+          q.family.toLowerCase().includes(qLower) ||
+          (meta?.title.toLowerCase().includes(qLower) ?? false) ||
+          (meta?.spec.toLowerCase().includes(qLower) ?? false);
+        if (!hit) return false;
+      }
+      return true;
+    });
+    const visible = filtered.slice(0, bankLimit);
+
+    return (
+      <div className="space-y-5">
+        <div className="border border-[var(--rule)] bg-[var(--surface)] p-5 space-y-4">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <div className="text-xs font-mono-tabular uppercase tracking-wider text-[var(--accent)]">
+                Original TMUA Question Bank · {filtered.length} / {drillQuestions.length} shown
+              </div>
+              <h3 className="font-display text-2xl text-[var(--ink)] mt-0.5">
+                Filter &amp; play any drill on the spot
+              </h3>
+            </div>
+            {filtered.length > 0 && (
+              <button
+                type="button"
+                onClick={() =>
+                  startSession(filtered.slice(0, 10), {
+                    label: `Bank Set (${Math.min(10, filtered.length)} Qs)`,
+                    kind: 'custom',
+                    timed: false,
+                  })
+                }
+                className="px-4 py-2 bg-[var(--accent)] text-[#04130d] text-xs font-semibold inline-flex items-center gap-1.5 cursor-pointer"
+              >
+                <Play className="w-3.5 h-3.5" /> Play Top {Math.min(10, filtered.length)} Filtered
+              </button>
+            )}
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs">
+            <div className="relative">
+              <Search className="w-3.5 h-3.5 text-[var(--text-muted)] absolute left-2.5 top-1/2 -translate-y-1/2" />
+              <input
+                type="text"
+                value={bankQuery}
+                onChange={(e) => {
+                  setBankQuery(e.target.value);
+                  setBankLimit(40);
+                }}
+                placeholder="Search stem, topic, technique..."
+                className="w-full bg-[var(--bg)] border border-[var(--rule)] pl-8 pr-2.5 py-2 text-xs text-[var(--ink)]"
+              />
+            </div>
+            <select
+              value={String(bankPaper)}
+              onChange={(e) => {
+                const v = e.target.value;
+                setBankPaper(v === 'all' ? 'all' : (Number(v) as 1 | 2));
+                setBankLimit(40);
+              }}
+              className="bg-[var(--bg)] border border-[var(--rule)] px-2.5 py-2 text-xs text-[var(--ink)]"
+            >
+              <option value="all">Both Papers (460)</option>
+              <option value="1">Paper 1 Only (240)</option>
+              <option value="2">Paper 2 Only (220)</option>
+            </select>
+            <select
+              value={String(bankDiff)}
+              onChange={(e) => {
+                const v = e.target.value;
+                setBankDiff(v === 'all' ? 'all' : (Number(v) as 1 | 2 | 3 | 4 | 5));
+                setBankLimit(40);
+              }}
+              className="bg-[var(--bg)] border border-[var(--rule)] px-2.5 py-2 text-xs text-[var(--ink)]"
+            >
+              <option value="all">All Difficulties (L1–L5)</option>
+              <option value="1">L1 · Foundation</option>
+              <option value="2">L2 · Standard</option>
+              <option value="3">L3 · Exam Core</option>
+              <option value="4">L4 · Stretch</option>
+              <option value="5">L5 · Challenge</option>
+            </select>
+            <select
+              value={bankStatus}
+              onChange={(e) => {
+                setBankStatus(e.target.value as 'all' | 'unseen' | 'queued' | 'secure');
+                setBankLimit(40);
+              }}
+              className="bg-[var(--bg)] border border-[var(--rule)] px-2.5 py-2 text-xs text-[var(--ink)]"
+            >
+              <option value="all">All Statuses</option>
+              <option value="unseen">Unseen</option>
+              <option value="queued">In Mistake Review</option>
+              <option value="secure">Solved Securely</option>
+            </select>
+          </div>
+        </div>
+
+        <div className="border border-[var(--rule)] divide-y divide-[var(--rule)] bg-[var(--surface)]">
+          {visible.length === 0 ? (
+            <div className="p-8 text-center text-xs text-[var(--text-muted)]">
+              No drills match those filters.
+            </div>
+          ) : (
+            visible.map((q) => {
+              const paper = q.tags.includes('paper-2') ? 'P2' : 'P1';
+              const meta = TMUA_TECHNIQUE_META[q.family];
+              const isQueued = Boolean(history.queue[q.id]);
+              const latest = history.latest[q.id];
+              const isSecure = Boolean(latest && latest.status === 'correct' && !latest.guessed && !latest.assisted);
+              return (
+                <div
+                  key={q.id}
+                  className="p-3.5 flex flex-wrap items-center justify-between gap-3 hover:bg-[var(--bg)]/50 transition-colors"
+                >
+                  <div className="space-y-1 min-w-0 flex-1">
+                    <div className="flex flex-wrap items-center gap-2 text-[11px] font-mono-tabular">
+                      <span className="px-1.5 py-0.5 border border-[var(--rule)] text-[var(--ink)]">
+                        {paper}
+                      </span>
+                      <span className="text-[var(--accent)]">{meta?.spec ?? q.type}</span>
+                      <span className="text-[var(--text-muted)]">
+                        L{q.difficulty} · {meta?.title ?? q.family}
+                      </span>
+                      {isQueued && (
+                        <span className="px-1.5 py-0.5 border border-[var(--crimson)]/40 text-[var(--crimson)]">
+                          Queued
+                        </span>
+                      )}
+                      {isSecure && !isQueued && (
+                        <span className="px-1.5 py-0.5 border border-[var(--accent)]/40 text-[var(--accent)]">
+                          Secure
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-xs text-[var(--ink)] line-clamp-1">{q.stem}</p>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() =>
+                      startSession([q], {
+                        label: `Bank · ${meta?.title ?? q.topic}`,
+                        kind: 'custom',
+                        timed: false,
+                      })
+                    }
+                    className="px-3 py-1.5 border border-[var(--rule)] hover:border-[var(--accent)] hover:text-[var(--accent)] text-xs font-medium cursor-pointer shrink-0"
+                  >
+                    Play →
+                  </button>
+                </div>
+              );
+            })
+          )}
+        </div>
+
+        {filtered.length > visible.length && (
+          <div className="text-center">
+            <button
+              type="button"
+              onClick={() => setBankLimit((n) => n + 40)}
+              className="px-4 py-2 border border-[var(--rule)] hover:border-[var(--ink)] text-xs font-mono-tabular text-[var(--ink)] cursor-pointer"
+            >
+              Load 40 more ({filtered.length - visible.length} remaining)
+            </button>
+          </div>
+        )}
+      </div>
+    );
+  }
+
+  /* ── Mistake Review Tab (with 1 / 3 / 7-Day Spaced Repetition) ─────────── */
   if (view === 'review') {
     const reasonMap = new Map(TMUA_DRILL_PACK.mistakeReasons.map((r) => [r.id, r.label]));
+    const nowTime = Date.now();
+    const masteredCount = Object.values(srs).filter((e) => e.stage === 3).length;
+    const dueNowCount = reviewQueue.filter((q) => {
+      const s = srs[q.id];
+      return !s || Date.parse(s.dueAt) <= nowTime;
+    }).length;
     return (
       <div className="space-y-6">
         <div className="border border-[var(--rule)] bg-[var(--surface)] p-5 flex flex-wrap items-center justify-between gap-4">
           <div>
             <div className="text-xs font-mono-tabular uppercase tracking-wider text-[var(--accent)]">
-              Mistake &amp; Guess Queue · {reviewQueue.length} item{reviewQueue.length === 1 ? '' : 's'}
+              1 / 3 / 7-Day Mistake Review · {reviewQueue.length} queued · {dueNowCount} due now · {masteredCount} mastered
             </div>
             <h3 className="font-display text-2xl text-[var(--ink)] mt-0.5">
-              Clear items with an unassisted, non-guessed retry
+              Clear items across the 1-day, 3-day, and 7-day mastery ladder
             </h3>
             <p className="text-xs text-[var(--text-muted)] mt-1">
-              Wrong answers, unanswered timeouts, marked guesses, and assisted attempts stay here
-              until solved cleanly without the key visible. Retries never rewrite your first-attempt stats.
+              Wrong answers, timeouts, marked guesses, and assisted attempts enter at 1-day review. Solve cleanly without the key to clear the queue and advance 1d → 3d → 7d → Mastered. Retries never rewrite your first-attempt stats.
             </p>
           </div>
           {reviewQueue.length > 0 && (
@@ -943,6 +1348,7 @@ export const TmuaPracticeSuite: React.FC<TmuaPracticeSuiteProps> = ({
           <div className="space-y-3">
             {reviewQueue.map((q) => {
               const entry = history.queue[q.id];
+              const srsItem = srs[q.id];
               const badge =
                 entry.status === 'unanswered'
                   ? 'Unanswered'
@@ -951,6 +1357,13 @@ export const TmuaPracticeSuite: React.FC<TmuaPracticeSuiteProps> = ({
                   : entry.guessed
                   ? 'Guessed'
                   : 'Assisted';
+              const srsText = srsItem
+                ? `${srsStageLabel(srsItem.stage)} · ${
+                    Date.parse(srsItem.dueAt) <= nowTime
+                      ? 'Due now'
+                      : `Due in ${Math.max(1, Math.ceil((Date.parse(srsItem.dueAt) - nowTime) / 86400_000))}d`
+                  }`
+                : '1-day review · Ready';
               return (
                 <div
                   key={q.id}
@@ -960,6 +1373,9 @@ export const TmuaPracticeSuite: React.FC<TmuaPracticeSuiteProps> = ({
                     <div className="flex flex-wrap items-center gap-2 text-xs font-mono-tabular">
                       <span className="px-2 py-0.5 border border-[var(--crimson)]/40 text-[var(--crimson)]">
                         {badge}
+                      </span>
+                      <span className="px-2 py-0.5 border border-[var(--accent)]/40 text-[var(--accent)]">
+                        {srsText}
                       </span>
                       <span className="text-[var(--text-muted)]">
                         {q.tags.includes('paper-2') ? 'Paper 2' : 'Paper 1'} · {q.topic} · L{q.difficulty}
@@ -1295,22 +1711,25 @@ export const TmuaPracticeSuite: React.FC<TmuaPracticeSuiteProps> = ({
         </div>
       </div>
 
-      {/* 4-Stage Study Path */}
+      {/* 5-Stage 8–10 Week TMUA Preparation Plan */}
       <div className="border border-[var(--rule)] bg-[var(--surface)] p-5 space-y-4">
-        <div className="flex items-center gap-2 text-xs font-mono-tabular uppercase tracking-wider text-[var(--accent)]">
-          <AlertCircle className="w-3.5 h-3.5" /> Recommended TMUA Study Sequence
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <div className="flex items-center gap-2 text-xs font-mono-tabular uppercase tracking-wider text-[var(--accent)]">
+            <AlertCircle className="w-3.5 h-3.5" /> 5-Stage TMUA Preparation Plan (8–10 Weeks)
+          </div>
+          <span className="text-[11px] text-[var(--text-muted)]">
+            No negative marking · 225s/Q target · 1/3/7-day mistake review
+          </span>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
-          {TMUA_DRILL_PACK.studyPath.map((stage, idx) => (
-            <div key={stage.id} className="border border-[var(--rule)] bg-[var(--bg)] p-3.5 space-y-2">
-              <div className="text-xs font-mono-tabular text-[var(--accent)]">
-                0{idx + 1} · {stage.title}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-3">
+          {TMUA_FIVE_STAGE_PLAN.map((stage) => (
+            <div key={stage.stage} className="border border-[var(--rule)] bg-[var(--bg)] p-3.5 space-y-1.5">
+              <div className="flex items-center justify-between text-[11px] font-mono-tabular">
+                <span className="text-[var(--accent)]">{stage.stage}</span>
+                <span className="text-[var(--text-muted)]">{stage.weeks}</span>
               </div>
-              <ul className="space-y-1.5 text-xs text-[var(--text-muted)] leading-relaxed">
-                {stage.steps.map((step, i) => (
-                  <li key={i}>• {step}</li>
-                ))}
-              </ul>
+              <div className="text-xs font-semibold text-[var(--ink)]">{stage.title}</div>
+              <p className="text-xs text-[var(--text-muted)] leading-relaxed">{stage.body}</p>
             </div>
           ))}
         </div>
