@@ -401,12 +401,12 @@
           "options": {
             "A": "All tenants would prefer the closest plot to the one they have now.",
             "B": "The waiting list is longer near the centre of town.",
-            "C": "There are at least two tenants for whom a mutually acceptable exchange would shorten their journeys overall.",
+            "C": "At least one pair of tenants would both agree to an exchange that shortens the journey of at least one of them.",
             "D": "Plots at different sites command identical annual rents.",
             "E": "New applicants value short journeys more than established gardeners do."
           },
           "answer": "C",
-          "explanation": "The service can shorten total travel only if there is a mutually acceptable match that does so. The reported cross-town journeys don't establish that on their own.",
+          "explanation": "For the service to shorten any journey, two tenants must be willing to make a swap that shortens at least one journey. The argument does not require both journeys to get shorter or total travel to fall.",
           "difficulty": 2,
           "family": "assumption-allotment-swaps"
         },
