@@ -40,7 +40,7 @@ export const PracticeHub: React.FC<PracticeHubProps> = ({
       <section>
         <div className="studio-kicker mb-3">Section A · Multiple-Choice Simulator</div>
         <h1 className="font-display text-5xl sm:text-6xl leading-[0.95] text-[var(--ink)]">
-          Argumentative passages, <span className="italic text-[var(--accent)]">Pearson VUE pace.</span>
+          Varied reading passages, <span className="italic text-[var(--accent)]">Pearson VUE pace.</span>
         </h1>
         <p className="font-serif-passage text-lg text-[var(--text-muted)] mt-4 max-w-2xl leading-relaxed">
           Every passage is written and edited to mirror real LNAT prose. Click sentences to highlight
@@ -67,7 +67,7 @@ export const PracticeHub: React.FC<PracticeHubProps> = ({
               Full 12-Passage LNAT Mock
             </h2>
             <p className="font-serif-passage text-sm text-[var(--text-muted)] mt-2 leading-relaxed">
-              Exact official Pearson VUE length: 12 argumentative passages and 42 five-option MCQs
+              Exact official Pearson VUE length: 12 passages and 42 five-option MCQs
               under 95-minute exam timing with Review Screen.
             </p>
           </div>
