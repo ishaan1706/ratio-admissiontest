@@ -179,7 +179,7 @@
         },
         {
          "label": "B",
-         "text": "3 × 10⁻¹"
+         "text": "5 × 10⁻¹"
         },
         {
          "label": "C",
@@ -191,14 +191,14 @@
         },
         {
          "label": "E",
-         "text": "5 × 10⁻¹"
+         "text": "3 × 10⁻¹"
         },
         {
          "label": "F",
          "text": "3 × 10⁻¹⁰"
         }
        ],
-       "answer": "B",
+       "answer": "E",
        "explanation": "(6 × 10⁻³)² = 36 × 10⁻⁶. Dividing by 1.2 × 10⁻⁴ gives 30 × 10⁻² = 0.3 = 3 × 10⁻¹.",
        "id": "esat-a-m1-05",
        "number": 5
@@ -218,7 +218,7 @@
         },
         {
          "label": "C",
-         "text": "a decrease of 36%"
+         "text": "a decrease of 25%"
         },
         {
          "label": "D",
@@ -230,10 +230,10 @@
         },
         {
          "label": "F",
-         "text": "a decrease of 25%"
+         "text": "a decrease of 36%"
         }
        ],
-       "answer": "C",
+       "answer": "F",
        "explanation": "y ∝ 1/x², so the new y is 1/1.25² = 1/1.5625 = 0.64 of the old y: a 36% decrease. (0.64 itself is the multiplier, not the change.)",
        "id": "esat-a-m1-06",
        "number": 6
@@ -276,35 +276,35 @@
       {
        "topic": "M4.15",
        "difficulty": 2,
-       "stem": "The line y = x + 1 meets the circle x² + y² = 13 at two points.\n\nWhat is the distance between these two points?",
+       "stem": "Two kiosks each charge a flat fee plus a cost per postcard. Kiosk P charges £2 plus 30p per card. Kiosk Q charges 50p plus 55p per card. At how many cards do the kiosks charge the same total?",
        "options": [
         {
          "label": "A",
-         "text": "√26"
+         "text": "3"
         },
         {
          "label": "B",
-         "text": "5√2"
+         "text": "6"
         },
         {
          "label": "C",
-         "text": "5"
+         "text": "4"
         },
         {
          "label": "D",
-         "text": "10"
+         "text": "5"
         },
         {
          "label": "E",
-         "text": "2√13"
+         "text": "8"
         },
         {
          "label": "F",
-         "text": "25"
+         "text": "10"
         }
        ],
        "answer": "B",
-       "explanation": "Substitute: x² + (x + 1)² = 13 → 2x² + 2x − 12 = 0 → x² + x − 6 = 0 → x = 2 or −3. Points (2, 3) and (−3, −2). Distance = √(5² + 5²) = 5√2.",
+       "explanation": "In pence, equality requires 200 + 30n = 50 + 55n. So 25n = 150 and n = 6.",
        "id": "esat-a-m1-08",
        "number": 8
       },
@@ -323,7 +323,7 @@
         },
         {
          "label": "C",
-         "text": "100°"
+         "text": "130°"
         },
         {
          "label": "D",
@@ -335,10 +335,10 @@
         },
         {
          "label": "F",
-         "text": "130°"
+         "text": "100°"
         }
        ],
-       "answer": "C",
+       "answer": "F",
        "explanation": "ABCD is a cyclic quadrilateral, so opposite angles sum to 180°: 3x + 2x + 30 = 180 → x = 30. Then BAD = 80°, so BCD = 180° − 80° = 100°.",
        "id": "esat-a-m1-09",
        "number": 9
@@ -607,18 +607,18 @@
         },
         {
          "label": "D",
-         "text": "63.125 cm²"
+         "text": "63.75 cm²"
         },
         {
          "label": "E",
-         "text": "63.75 cm²"
+         "text": "63.125 cm²"
         },
         {
          "label": "F",
          "text": "65 cm²"
         }
        ],
-       "answer": "D",
+       "answer": "E",
        "explanation": "Upper bounds: length 12.5 cm, width 5.05 cm. Upper bound of area = 12.5 × 5.05 = 63.125 cm².",
        "id": "esat-a-m1-17",
        "number": 17
@@ -782,18 +782,18 @@
         },
         {
          "label": "D",
-         "text": "27/110"
+         "text": "245/999"
         },
         {
          "label": "E",
-         "text": "245/999"
+         "text": "27/110"
         },
         {
          "label": "F",
          "text": "243/1000"
         }
        ],
-       "answer": "D",
+       "answer": "E",
        "explanation": "Let x = 0.24545… Then 1000x = 245.4545… and 10x = 2.4545…, so 990x = 243 and x = 243/990 = 27/110.",
        "id": "esat-a-m1-22",
        "number": 22
@@ -805,7 +805,7 @@
        "options": [
         {
          "label": "A",
-         "text": "588"
+         "text": "756"
         },
         {
          "label": "B",
@@ -813,7 +813,7 @@
         },
         {
          "label": "C",
-         "text": "756"
+         "text": "588"
         },
         {
          "label": "D",
@@ -828,7 +828,7 @@
          "text": "1134"
         }
        ],
-       "answer": "C",
+       "answer": "A",
        "explanation": "First digit is 5–9 and last digit is 2, 4, 6 or 8. If the first digit is even (6 or 8): 2 × 3 choices for the last digit × 7 × 6 = 252. If the first digit is odd (5, 7, 9): 3 × 4 × 7 × 6 = 504. Total 756.",
        "id": "esat-a-m1-23",
        "number": 23
@@ -883,7 +883,7 @@
         },
         {
          "label": "C",
-         "text": "180"
+         "text": "215"
         },
         {
          "label": "D",
@@ -891,14 +891,14 @@
         },
         {
          "label": "E",
-         "text": "215"
+         "text": "180"
         },
         {
          "label": "F",
          "text": "250"
         }
        ],
-       "answer": "C",
+       "answer": "E",
        "explanation": "Distance = area under the speed–time graph = ½ × 40 × 20 + 20T + ½ × 30 × 20 = 400 + 20T + 300 = 4300. So 20T = 3600 and T = 180.",
        "id": "esat-a-m1-25",
        "number": 25
@@ -1229,35 +1229,35 @@
       {
        "topic": "B4.2",
        "difficulty": 1,
-       "stem": "Which term describes an organism with two identical alleles of a gene?",
+       "stem": "A student sorts the genotypes I (AA), II (Aa) and III (aa) by whether they are homozygous. Which row correctly lists the two genotypes the student should group together and why?",
        "options": [
         {
          "label": "A",
-         "text": "homozygous"
+         "text": "I and III: both are homozygous."
         },
         {
          "label": "B",
-         "text": "autosomal"
+         "text": "I and II: both have one copy of A."
         },
         {
          "label": "C",
-         "text": "dominant"
+         "text": "II and III: both have zero copies of A."
         },
         {
          "label": "D",
-         "text": "recessive"
+         "text": "I and II: both are homozygous."
         },
         {
          "label": "E",
-         "text": "phenotype"
+         "text": "II and III: both are homozygous."
         },
         {
          "label": "F",
-         "text": "heterozygous"
+         "text": "I and III: both have two copies of A."
         }
        ],
        "answer": "A",
-       "explanation": "Homozygous means two identical alleles (AA or aa). Heterozygous means two different alleles (Aa).",
+       "explanation": "In AA and aa, the two alleles within each genotype are identical. Aa has two different alleles and is heterozygous.",
        "id": "esat-a-bio-08",
        "number": 8
       },
@@ -1280,18 +1280,18 @@
         },
         {
          "label": "D",
-         "text": "41%"
+         "text": "32%"
         },
         {
          "label": "E",
-         "text": "32%"
+         "text": "41%"
         },
         {
          "label": "F",
          "text": "18%"
         }
        ],
-       "answer": "E",
+       "answer": "D",
        "explanation": "A pairs with T, so T = 18% and A + T = 36%. G + C = 64%, and G = C, so G = 32%.",
        "id": "esat-a-bio-09",
        "number": 9
@@ -1525,18 +1525,18 @@
         },
         {
          "label": "D",
-         "text": "The enzyme molecules are moving too fast to bind."
+         "text": "The shape of the active site has changed permanently, so the substrate no longer fits."
         },
         {
          "label": "E",
-         "text": "The shape of the active site has changed permanently, so the substrate no longer fits."
+         "text": "The enzyme molecules are moving too fast to bind."
         },
         {
          "label": "F",
          "text": "The substrate has been denatured."
         }
        ],
-       "answer": "E",
+       "answer": "D",
        "explanation": "High temperature breaks bonds holding the protein's 3D shape. The enzyme is denatured and the change is not reversed on cooling.",
        "id": "esat-a-bio-16",
        "number": 16
@@ -1552,7 +1552,7 @@
         },
         {
          "label": "B",
-         "text": "glucose → lactic acid + carbon dioxide"
+         "text": "glucose → lactic acid"
         },
         {
          "label": "C",
@@ -1564,14 +1564,14 @@
         },
         {
          "label": "E",
-         "text": "glucose → lactic acid"
+         "text": "glucose → lactic acid + carbon dioxide"
         },
         {
          "label": "F",
          "text": "glucose + oxygen → lactic acid"
         }
        ],
-       "answer": "E",
+       "answer": "B",
        "explanation": "Animal cells convert glucose to lactic acid without oxygen. Yeast and plants produce ethanol and carbon dioxide.",
        "id": "esat-a-bio-17",
        "number": 17
@@ -1797,7 +1797,7 @@
         },
         {
          "label": "B",
-         "text": "It contains antibiotics that kill the pathogen."
+         "text": "It contains dead or inactive pathogens that stimulate lymphocytes to make antibodies and memory cells."
         },
         {
          "label": "C",
@@ -1809,14 +1809,14 @@
         },
         {
          "label": "E",
-         "text": "It contains dead or inactive pathogens that stimulate lymphocytes to make antibodies and memory cells."
+         "text": "It contains antibiotics that kill the pathogen."
         },
         {
          "label": "F",
          "text": "It kills viruses directly inside body cells."
         }
        ],
-       "answer": "E",
+       "answer": "B",
        "explanation": "Antigens on the dead or inactive pathogen trigger an immune response. Memory cells give a faster, larger secondary response on later infection.",
        "id": "esat-a-bio-24",
        "number": 24
@@ -1828,7 +1828,7 @@
        "options": [
         {
          "label": "A",
-         "text": "2000"
+         "text": "250"
         },
         {
          "label": "B",
@@ -1848,10 +1848,10 @@
         },
         {
          "label": "F",
-         "text": "250"
+         "text": "2000"
         }
        ],
-       "answer": "F",
+       "answer": "A",
        "explanation": "Proportion marked in the second sample = 8/50, so the population N ≈ 40 × 50 / 8 = 250.",
        "id": "esat-a-bio-25",
        "number": 25
@@ -1945,7 +1945,7 @@
         },
         {
          "label": "B",
-         "text": "26 protons, 30 neutrons, 23 electrons"
+         "text": "26 protons, 56 neutrons, 23 electrons"
         },
         {
          "label": "C",
@@ -1961,10 +1961,10 @@
         },
         {
          "label": "F",
-         "text": "26 protons, 56 neutrons, 23 electrons"
+         "text": "26 protons, 30 neutrons, 23 electrons"
         }
        ],
-       "answer": "B",
+       "answer": "F",
        "explanation": "Protons = atomic number = 26. Neutrons = 56 − 26 = 30. A 3+ ion has lost 3 electrons: 26 − 3 = 23.",
        "id": "esat-a-chem-01",
        "number": 1
@@ -2011,11 +2011,11 @@
        "options": [
         {
          "label": "A",
-         "text": "2,6"
+         "text": "2,8,8"
         },
         {
          "label": "B",
-         "text": "2,8,8"
+         "text": "2,6"
         },
         {
          "label": "C",
@@ -2034,7 +2034,7 @@
          "text": "2,8,8,2"
         }
        ],
-       "answer": "B",
+       "answer": "A",
        "explanation": "A sulfur atom is 2,8,6. Gaining two electrons gives 2,8,8, the configuration of argon.",
        "id": "esat-a-chem-03",
        "number": 3
@@ -2198,7 +2198,7 @@
         },
         {
          "label": "D",
-         "text": "80%"
+         "text": "125%"
         },
         {
          "label": "E",
@@ -2206,10 +2206,10 @@
         },
         {
          "label": "F",
-         "text": "125%"
+         "text": "80%"
         }
        ],
-       "answer": "D",
+       "answer": "F",
        "explanation": "Mr CuO = 79.5 ≈ 80, so about 0.10 mol CuO, which can give 0.10 mol Cu = 6.35 g. Yield = 5.08/6.35 × 100 = 80%.",
        "id": "esat-a-chem-08",
        "number": 8
@@ -2268,18 +2268,18 @@
         },
         {
          "label": "D",
-         "text": "Cl₂ + 2NaOH → NaCl + NaClO + H₂O"
+         "text": "2Na + Cl₂ → 2NaCl"
         },
         {
          "label": "E",
-         "text": "2Na + Cl₂ → 2NaCl"
+         "text": "Cl₂ + 2NaOH → NaCl + NaClO + H₂O"
         },
         {
          "label": "F",
          "text": "CaCO₃ → CaO + CO₂"
         }
        ],
-       "answer": "D",
+       "answer": "E",
        "explanation": "In disproportionation one element is both oxidised and reduced. Chlorine goes from 0 in Cl₂ to −1 in NaCl and +1 in NaClO.",
        "id": "esat-a-chem-10",
        "number": 10
@@ -2291,11 +2291,11 @@
        "options": [
         {
          "label": "A",
-         "text": "Zn"
+         "text": "Cu²⁺"
         },
         {
          "label": "B",
-         "text": "Cu²⁺"
+         "text": "Zn"
         },
         {
          "label": "C",
@@ -2314,7 +2314,7 @@
          "text": "SO₄²⁻"
         }
        ],
-       "answer": "B",
+       "answer": "A",
        "explanation": "Cu²⁺ gains electrons (is reduced), so it is the oxidising agent: it oxidises Zn to Zn²⁺.",
        "id": "esat-a-chem-11",
        "number": 11
@@ -2544,7 +2544,7 @@
         },
         {
          "label": "C",
-         "text": "using the same mass of magnesium as a single thicker piece"
+         "text": "adding a suitable catalyst"
         },
         {
          "label": "D",
@@ -2556,10 +2556,10 @@
         },
         {
          "label": "F",
-         "text": "adding a suitable catalyst"
+         "text": "using the same mass of magnesium as a single thicker piece"
         }
        ],
-       "answer": "C",
+       "answer": "F",
        "explanation": "Rate rises with surface area, temperature, concentration and catalysts. One thicker piece has a smaller surface area, so the rate falls.",
        "id": "esat-a-chem-18",
        "number": 18
@@ -2567,35 +2567,35 @@
       {
        "topic": "C10.6",
        "difficulty": 2,
-       "stem": "A catalyst is added to a reversible reaction at equilibrium.\n\nWhich statement is correct?",
+       "stem": "Two sealed vessels contain identical initial mixtures for a reversible reaction at the same constant temperature. Only vessel X has a catalyst. A graph of product concentration against time levels off sooner for X. Which other feature should the graphs show?",
        "options": [
         {
          "label": "A",
-         "text": "It lowers the activation energy of both forward and reverse reactions and does not change the position of equilibrium."
+         "text": "They should level off at the same product concentration."
         },
         {
          "label": "B",
-         "text": "It is used up in the reaction and must be replaced."
+         "text": "X should level off at twice the product concentration of the uncatalysed vessel."
         },
         {
          "label": "C",
-         "text": "It shifts the position of equilibrium towards the products."
+         "text": "X should level off at a lower product concentration."
         },
         {
          "label": "D",
-         "text": "It makes the enthalpy change of the reaction more negative."
+         "text": "The uncatalysed vessel should never form any product."
         },
         {
          "label": "E",
-         "text": "It increases the energy of the reactant particles."
+         "text": "The uncatalysed vessel should reach equilibrium first."
         },
         {
          "label": "F",
-         "text": "It lowers the activation energy of the forward reaction only, so more product forms."
+         "text": "The catalyst should change the initial product concentration."
         }
        ],
        "answer": "A",
-       "explanation": "A catalyst provides an alternative route with lower activation energy for both directions. Equilibrium is reached faster but its position and ΔH are unchanged.",
+       "explanation": "A catalyst increases both the forward and reverse rates, so the mixture reaches equilibrium sooner without changing the equilibrium composition.",
        "id": "esat-a-chem-19",
        "number": 19
       },
@@ -2618,18 +2618,18 @@
         },
         {
          "label": "D",
-         "text": "−184 kJ/mol"
+         "text": "+184 kJ/mol"
         },
         {
          "label": "E",
-         "text": "+184 kJ/mol"
+         "text": "−184 kJ/mol"
         },
         {
          "label": "F",
          "text": "+247 kJ/mol"
         }
        ],
-       "answer": "D",
+       "answer": "E",
        "explanation": "Bonds broken: 436 + 242 = 678 (endothermic). Bonds made: 2 × 431 = 862 (exothermic). ΔH = 678 − 862 = −184 kJ/mol. (−247 forgets that two H–Cl bonds form.)",
        "id": "esat-a-chem-20",
        "number": 20
@@ -2676,7 +2676,7 @@
        "options": [
         {
          "label": "A",
-         "text": "cathode: chlorine; anode: hydrogen"
+         "text": "cathode: hydrogen; anode: chlorine"
         },
         {
          "label": "B",
@@ -2684,7 +2684,7 @@
         },
         {
          "label": "C",
-         "text": "cathode: hydrogen; anode: chlorine"
+         "text": "cathode: chlorine; anode: hydrogen"
         },
         {
          "label": "D",
@@ -2699,7 +2699,7 @@
          "text": "cathode: hydrogen; anode: oxygen"
         }
        ],
-       "answer": "C",
+       "answer": "A",
        "explanation": "At the cathode, H⁺ from water is discharged rather than the more reactive Na⁺, giving H₂. At the anode, concentrated Cl⁻ is discharged to give Cl₂. Sodium hydroxide is left in solution.",
        "id": "esat-a-chem-22",
        "number": 22
@@ -2781,11 +2781,11 @@
        "options": [
         {
          "label": "A",
-         "text": "2-methylpropan-2-ol"
+         "text": "butan-2-ol"
         },
         {
          "label": "B",
-         "text": "butan-2-ol"
+         "text": "2-methylpropan-2-ol"
         },
         {
          "label": "C",
@@ -2804,7 +2804,7 @@
          "text": "butan-1-ol"
         }
        ],
-       "answer": "B",
+       "answer": "A",
        "explanation": "Steam adds H and OH across the C=C double bond. In CH₃CH=CHCH₃ both double-bond carbons are C2/C3, so the product is CH₃CH(OH)CH₂CH₃, butan-2-ol.",
        "id": "esat-a-chem-25",
        "number": 25
@@ -2937,7 +2937,7 @@
         },
         {
          "label": "C",
-         "text": "3.0 J"
+         "text": "6.0 J"
         },
         {
          "label": "D",
@@ -2945,14 +2945,14 @@
         },
         {
          "label": "E",
-         "text": "6.0 J"
+         "text": "3.0 J"
         },
         {
          "label": "F",
          "text": "9.0 J"
         }
        ],
-       "answer": "C",
+       "answer": "E",
        "explanation": "Momentum: 2 × 3 = 3v, so v = 2.0 m/s. KE before = ½ × 2 × 9 = 9 J; after = ½ × 3 × 4 = 6 J. Loss = 3.0 J.",
        "id": "esat-a-phys-02",
        "number": 2
@@ -3069,7 +3069,7 @@
        "options": [
         {
          "label": "A",
-         "text": "4.5 h"
+         "text": "9.0 h"
         },
         {
          "label": "B",
@@ -3077,7 +3077,7 @@
         },
         {
          "label": "C",
-         "text": "9.0 h"
+         "text": "4.5 h"
         },
         {
          "label": "D",
@@ -3092,7 +3092,7 @@
          "text": "36 h"
         }
        ],
-       "answer": "C",
+       "answer": "A",
        "explanation": "3200 → 1600 → 800 → 400 → 200 is four half-lives. 36 ÷ 4 = 9.0 h.",
        "id": "esat-a-phys-06",
        "number": 6
@@ -3112,7 +3112,7 @@
         },
         {
          "label": "C",
-         "text": "mass number 230, atomic number 90"
+         "text": "mass number 234, atomic number 90"
         },
         {
          "label": "D",
@@ -3120,14 +3120,14 @@
         },
         {
          "label": "E",
-         "text": "mass number 234, atomic number 90"
+         "text": "mass number 230, atomic number 90"
         },
         {
          "label": "F",
          "text": "mass number 230, atomic number 92"
         }
        ],
-       "answer": "C",
+       "answer": "E",
        "explanation": "Each alpha: mass −4, atomic number −2. Each beta-minus: mass unchanged, atomic number +1. Mass: 238 − 8 = 230. Atomic number: 92 − 4 + 2 = 90.",
        "id": "esat-a-phys-07",
        "number": 7
@@ -3174,7 +3174,7 @@
        "options": [
         {
          "label": "A",
-         "text": "1200 N"
+         "text": "9200 N"
         },
         {
          "label": "B",
@@ -3186,7 +3186,7 @@
         },
         {
          "label": "D",
-         "text": "9200 N"
+         "text": "1200 N"
         },
         {
          "label": "E",
@@ -3197,7 +3197,7 @@
          "text": "12 000 N"
         }
        ],
-       "answer": "D",
+       "answer": "A",
        "explanation": "Resultant force = T − mg = ma, so T = m(g + a) = 800 × 11.5 = 9200 N.",
        "id": "esat-a-phys-09",
        "number": 9
@@ -3485,35 +3485,35 @@
       {
        "topic": "P1.2l",
        "difficulty": 1,
-       "stem": "A current of 0.40 A flows through a lamp connected to a 9.0 V supply for 2.0 minutes.\n\nHow much energy is transferred to the lamp?",
+       "stem": "A supply transfers 24 J as 4 C flows through lamp X. A different supply transfers the same energy to lamp Y while 8 C flows. What is the potential difference across Y compared with X?",
        "options": [
         {
          "label": "A",
-         "text": "3.6 J"
+         "text": "Twice as great"
         },
         {
          "label": "B",
-         "text": "7.2 J"
+         "text": "The same"
         },
         {
          "label": "C",
-         "text": "48 J"
+         "text": "Four times as great"
         },
         {
          "label": "D",
-         "text": "216 J"
+         "text": "One quarter as great"
         },
         {
          "label": "E",
-         "text": "432 J"
+         "text": "Half as great"
         },
         {
          "label": "F",
-         "text": "25 920 J"
+         "text": "Eight times as great"
         }
        ],
        "answer": "E",
-       "explanation": "Charge Q = It = 0.40 × 120 = 48 C. Energy = QV = 48 × 9.0 = 432 J. (7.2 J forgets to convert minutes to seconds.)",
+       "explanation": "Potential difference is energy per unit charge. The same energy divided by twice the charge gives half the potential difference.",
        "id": "esat-a-phys-18",
        "number": 18
       },
@@ -3524,7 +3524,7 @@
        "options": [
         {
          "label": "A",
-         "text": "The thermistor's resistance falls and the voltmeter reading is unchanged."
+         "text": "The thermistor's resistance falls and the voltmeter reading rises."
         },
         {
          "label": "B",
@@ -3532,7 +3532,7 @@
         },
         {
          "label": "C",
-         "text": "The thermistor's resistance falls and the voltmeter reading rises."
+         "text": "The thermistor's resistance falls and the voltmeter reading is unchanged."
         },
         {
          "label": "D",
@@ -3547,7 +3547,7 @@
          "text": "The thermistor's resistance is unchanged and the voltmeter reading rises."
         }
        ],
-       "answer": "C",
+       "answer": "A",
        "explanation": "NTC: resistance falls as temperature rises. The thermistor takes a smaller share of the battery voltage, so the fixed resistor's share (the voltmeter reading) rises.",
        "id": "esat-a-phys-19",
        "number": 19
@@ -3808,7 +3808,7 @@
         },
         {
          "label": "B",
-         "text": "0.5%"
+         "text": "50%"
         },
         {
          "label": "C",
@@ -3824,10 +3824,10 @@
         },
         {
          "label": "F",
-         "text": "50%"
+         "text": "0.5%"
         }
        ],
-       "answer": "B",
+       "answer": "F",
        "explanation": "Current = P/V = 100 000 ÷ 10 000 = 10 A. Loss = I²R = 100 × 5 = 500 W, which is 0.5% of 100 kW. (Do not use V²/R with the transmission voltage: most of that voltage is not across the cables.)",
        "id": "esat-a-phys-27",
        "number": 27
@@ -4022,7 +4022,7 @@
        "options": [
         {
          "label": "A",
-         "text": "2"
+         "text": "4"
         },
         {
          "label": "B",
@@ -4030,7 +4030,7 @@
         },
         {
          "label": "C",
-         "text": "4"
+         "text": "2"
         },
         {
          "label": "D",
@@ -4045,7 +4045,7 @@
          "text": "8"
         }
        ],
-       "answer": "C",
+       "answer": "A",
        "explanation": "sin x(2sin x − 1) = 0. sin x = 0 gives x = 0, π (2π is excluded). sin x = 1/2 gives π/6, 5π/6. Total 4. Do not divide by sin x: that loses solutions.",
        "id": "esat-a-m2-06",
        "number": 6
@@ -4135,11 +4135,11 @@
         },
         {
          "label": "C",
-         "text": "3"
+         "text": "4"
         },
         {
          "label": "D",
-         "text": "4"
+         "text": "3"
         },
         {
          "label": "E",
@@ -4150,7 +4150,7 @@
          "text": "8"
         }
        ],
-       "answer": "C",
+       "answer": "D",
        "explanation": "Let y = 2ˣ: 4ˣ = y² and 3 × 2ˣ⁺¹ = 6y. y² − 6y + 8 = 0 gives y = 2 or 4, so x = 1 or 2. Sum = 3.",
        "id": "esat-a-m2-09",
        "number": 9
@@ -4232,7 +4232,7 @@
        "options": [
         {
          "label": "A",
-         "text": "2/3"
+         "text": "4/3"
         },
         {
          "label": "B",
@@ -4240,7 +4240,7 @@
         },
         {
          "label": "C",
-         "text": "4/3"
+         "text": "2/3"
         },
         {
          "label": "D",
@@ -4255,7 +4255,7 @@
          "text": "4"
         }
        ],
-       "answer": "C",
+       "answer": "A",
        "explanation": "They meet at x = 0 and x = 2. Area = ∫₀² (2x − x²) dx = [x² − x³/3]₀² = 4 − 8/3 = 4/3.",
        "id": "esat-a-m2-12",
        "number": 12
@@ -4403,35 +4403,35 @@
       {
        "topic": "MM4.5",
        "difficulty": 3,
-       "stem": "How many solutions does 2cos²x + 3sin x = 3 have in the interval 0 ≤ x < 2π?",
+       "stem": "A student uses cos²x = 1 − sin²x to turn an equation into (2sin x − 1)(2sin x + 3) = 0. They say both factors give solutions in 0 ≤ x < 2π. Which statement corrects their argument?",
        "options": [
         {
          "label": "A",
-         "text": "1"
+         "text": "Only 2sin x − 1 = 0 gives solutions, and it gives one."
         },
         {
          "label": "B",
-         "text": "2"
+         "text": "Only 2sin x + 3 = 0 gives solutions, and it gives two."
         },
         {
          "label": "C",
-         "text": "3"
+         "text": "Neither factor can equal zero."
         },
         {
          "label": "D",
-         "text": "4"
+         "text": "Both factors give two solutions each."
         },
         {
          "label": "E",
-         "text": "5"
+         "text": "Both factors give one solution each."
         },
         {
          "label": "F",
-         "text": "6"
+         "text": "Only 2sin x − 1 = 0 gives solutions, and it gives two."
         }
        ],
-       "answer": "C",
-       "explanation": "Use cos²x = 1 − sin²x: 2sin²x − 3sin x + 1 = 0, so sin x = 1 or 1/2. sin x = 1 gives π/2; sin x = 1/2 gives π/6 and 5π/6. Total 3.",
+       "answer": "F",
+       "explanation": "The second factor requires sin x = −3/2, outside the range [−1, 1]. The first gives sin x = 1/2, true at π/6 and 5π/6.",
        "id": "esat-a-m2-17",
        "number": 17
       },
@@ -4450,11 +4450,11 @@
         },
         {
          "label": "C",
-         "text": "33"
+         "text": "63"
         },
         {
          "label": "D",
-         "text": "63"
+         "text": "33"
         },
         {
          "label": "E",
@@ -4465,7 +4465,7 @@
          "text": "129"
         }
        ],
-       "answer": "C",
+       "answer": "D",
        "explanation": "3, 5, 9, 17, 33.",
        "id": "esat-a-m2-18",
        "number": 18
@@ -4722,7 +4722,7 @@
        "options": [
         {
          "label": "A",
-         "text": "2"
+         "text": "4"
         },
         {
          "label": "B",
@@ -4730,7 +4730,7 @@
         },
         {
          "label": "C",
-         "text": "4"
+         "text": "2"
         },
         {
          "label": "D",
@@ -4745,7 +4745,7 @@
          "text": "16"
         }
        ],
-       "answer": "C",
+       "answer": "A",
        "explanation": "Substitute: 2x² + 2cx + c² − 8 = 0. Tangent means discriminant zero: 4c² − 8(c² − 8) = 0, so c² = 16 and c = 4.",
        "id": "esat-a-m2-26",
        "number": 26
@@ -4806,7 +4806,7 @@
        "options": [
         {
          "label": "A",
-         "text": "7 : 6 : 7"
+         "text": "13 : 12 : 15"
         },
         {
          "label": "B",
@@ -4814,7 +4814,7 @@
         },
         {
          "label": "C",
-         "text": "13 : 12 : 15"
+         "text": "7 : 6 : 7"
         },
         {
          "label": "D",
@@ -4829,7 +4829,7 @@
          "text": "11 : 12 : 15"
         }
        ],
-       "answer": "C",
+       "answer": "A",
        "explanation": "Use 10 parts: Asha 2, Ben 3, Cara 5. Cara gives 5/4 = 1.25 parts, so Asha 3.25, Ben 3, Cara 3.75. Multiply by 4: 13 : 12 : 15.",
        "id": "esat-b-m1-01",
        "number": 1
@@ -4911,7 +4911,7 @@
        "options": [
         {
          "label": "A",
-         "text": "50 ml"
+         "text": "100 ml"
         },
         {
          "label": "B",
@@ -4919,7 +4919,7 @@
         },
         {
          "label": "C",
-         "text": "100 ml"
+         "text": "50 ml"
         },
         {
          "label": "D",
@@ -4934,7 +4934,7 @@
          "text": "200 ml"
         }
        ],
-       "answer": "C",
+       "answer": "A",
        "explanation": "Juice = 0.2 × 300 + 0.45 × 200 = 60 + 90 = 150 ml. For 25% juice the total must be 150 ÷ 0.25 = 600 ml. Currently 500 ml, so add 100 ml.",
        "id": "esat-b-m1-04",
        "number": 4
@@ -5028,7 +5028,7 @@
         },
         {
          "label": "D",
-         "text": "5/12"
+         "text": "7/18"
         },
         {
          "label": "E",
@@ -5036,10 +5036,10 @@
         },
         {
          "label": "F",
-         "text": "7/18"
+         "text": "5/12"
         }
        ],
-       "answer": "D",
+       "answer": "F",
        "explanation": "Prime totals: 2 (1 way), 3 (2), 5 (4), 7 (6), 11 (2). That is 15 of the 36 outcomes: 15/36 = 5/12.",
        "id": "esat-b-m1-07",
        "number": 7
@@ -5129,7 +5129,7 @@
         },
         {
          "label": "C",
-         "text": "72 cm²"
+         "text": "72√3 cm²"
         },
         {
          "label": "D",
@@ -5137,14 +5137,14 @@
         },
         {
          "label": "E",
-         "text": "72√3 cm²"
+         "text": "72 cm²"
         },
         {
          "label": "F",
          "text": "48 cm²"
         }
        ],
-       "answer": "C",
+       "answer": "E",
        "explanation": "For side a, the space diagonal is √(3a²) = a√3 = 6, so a² = 12. Surface area = 6a² = 72 cm².",
        "id": "esat-b-m1-10",
        "number": 10
@@ -5187,35 +5187,35 @@
       {
        "topic": "M6.3",
        "difficulty": 1,
-       "stem": "The table shows the scores of 25 students in a quiz.\n\nScore: 1, 2, 3, 4, 5\nFrequency: 3, 5, 8, 6, 3\n\nWhat is the mean score?",
+       "stem": "Five sensor readings have mean 8. A sixth reading is added. The mean of all six readings is also 8. What is the sixth reading?",
        "options": [
         {
          "label": "A",
-         "text": "2.96"
+         "text": "1"
         },
         {
          "label": "B",
-         "text": "3"
+         "text": "8"
         },
         {
          "label": "C",
-         "text": "3.04"
+         "text": "5"
         },
         {
          "label": "D",
-         "text": "3.2"
+         "text": "6"
         },
         {
          "label": "E",
-         "text": "3.8"
+         "text": "40"
         },
         {
          "label": "F",
-         "text": "5"
+         "text": "48"
         }
        ],
-       "answer": "C",
-       "explanation": "Total = 1×3 + 2×5 + 3×8 + 4×6 + 5×3 = 3 + 10 + 24 + 24 + 15 = 76. Mean = 76/25 = 3.04.",
+       "answer": "B",
+       "explanation": "The total rises from 5 × 8 to 6 × 8, so the added reading is 8.",
        "id": "esat-b-m1-12",
        "number": 12
       },
@@ -5343,7 +5343,7 @@
         },
         {
          "label": "D",
-         "text": "4/9"
+         "text": "1/3"
         },
         {
          "label": "E",
@@ -5351,10 +5351,10 @@
         },
         {
          "label": "F",
-         "text": "1/3"
+         "text": "4/9"
         }
        ],
-       "answer": "D",
+       "answer": "F",
        "explanation": "33 students study at least one language, so the number studying both is 23 + 18 − 33 = 8. Given Spanish, the probability is 8/18 = 4/9.",
        "id": "esat-b-m1-16",
        "number": 16
@@ -5374,7 +5374,7 @@
         },
         {
          "label": "C",
-         "text": "−1"
+         "text": "5/6"
         },
         {
          "label": "D",
@@ -5382,14 +5382,14 @@
         },
         {
          "label": "E",
-         "text": "5/6"
+         "text": "−1"
         },
         {
          "label": "F",
          "text": "1"
         }
        ],
-       "answer": "C",
+       "answer": "E",
        "explanation": "Powers first: (−2)² = 4 and (−1)³ = −1. Then 3 × 4 ÷ 6 = 2. So 2 − 2 − 1 = −1.",
        "id": "esat-b-m1-17",
        "number": 17
@@ -5724,7 +5724,7 @@
         },
         {
          "label": "C",
-         "text": "£32"
+         "text": "£38"
         },
         {
          "label": "D",
@@ -5736,10 +5736,10 @@
         },
         {
          "label": "F",
-         "text": "£38"
+         "text": "£32"
         }
        ],
-       "answer": "C",
+       "answer": "F",
        "explanation": "Adding: 5a + 5c = 85, so a + c = 17. Subtracting: a − c = 7. So a = 12 and c = 5, and a + 4c = £32.",
        "id": "esat-b-m1-27",
        "number": 27
@@ -5829,11 +5829,11 @@
        "options": [
         {
          "label": "A",
-         "text": "active transport, requiring energy from respiration"
+         "text": "osmosis, requiring energy from respiration"
         },
         {
          "label": "B",
-         "text": "osmosis, requiring energy from respiration"
+         "text": "active transport, requiring energy from respiration"
         },
         {
          "label": "C",
@@ -5852,7 +5852,7 @@
          "text": "diffusion, requiring energy from respiration"
         }
        ],
-       "answer": "A",
+       "answer": "B",
        "explanation": "Moving ions against a concentration gradient is active transport, which uses carrier proteins and energy from respiration (so root cells have many mitochondria).",
        "id": "esat-b-bio-03",
        "number": 3
@@ -5899,7 +5899,7 @@
        "options": [
         {
          "label": "A",
-         "text": "It involves one parent, and the offspring are genetically identical if no mutations occur."
+         "text": "It requires fertilisation."
         },
         {
          "label": "B",
@@ -5915,14 +5915,14 @@
         },
         {
          "label": "E",
-         "text": "It requires fertilisation."
+         "text": "It involves one parent, and the offspring are genetically identical if no mutations occur."
         },
         {
          "label": "F",
          "text": "It involves two parents and produces genetically varied offspring."
         }
        ],
-       "answer": "A",
+       "answer": "E",
        "explanation": "Asexual reproduction uses mitosis from a single parent, giving clones unless mutations occur.",
        "id": "esat-b-bio-05",
        "number": 5
@@ -6047,11 +6047,11 @@
         },
         {
          "label": "C",
-         "text": "a sugar, a phosphate group and one of four bases"
+         "text": "an amino acid, a sugar and a base"
         },
         {
          "label": "D",
-         "text": "an amino acid, a sugar and a base"
+         "text": "a sugar, a phosphate group and one of four bases"
         },
         {
          "label": "E",
@@ -6062,7 +6062,7 @@
          "text": "a sugar and two bases"
         }
        ],
-       "answer": "C",
+       "answer": "D",
        "explanation": "A nucleotide is a sugar (deoxyribose) joined to a phosphate group and one nitrogenous base: A, T, G or C.",
        "id": "esat-b-bio-09",
        "number": 9
@@ -6315,35 +6315,35 @@
       {
        "topic": "B9.2c",
        "difficulty": 2,
-       "stem": "A resting person's heart pumps 70 cm³ of blood per beat at a heart rate of 72 beats per minute.\n\nWhat volume of blood does the heart pump per minute?",
+       "stem": "A person’s heart pumps 60 cm³ per beat at 70 beats per minute at rest. During an activity it pumps 75 cm³ per beat at 84 beats per minute. By what factor does the volume pumped per minute increase?",
        "options": [
         {
          "label": "A",
-         "text": "1.03 dm³"
+         "text": "5/4"
         },
         {
          "label": "B",
-         "text": "142 cm³"
+         "text": "6/5"
         },
         {
          "label": "C",
-         "text": "50.4 dm³"
+         "text": "7/5"
         },
         {
          "label": "D",
-         "text": "5.04 dm³"
+         "text": "3/2"
         },
         {
          "label": "E",
-         "text": "0.504 dm³"
+         "text": "5/3"
         },
         {
          "label": "F",
-         "text": "504 dm³"
+         "text": "2"
         }
        ],
        "answer": "D",
-       "explanation": "70 × 72 = 5040 cm³ = 5.04 dm³ per minute.",
+       "explanation": "The volume per minute is the volume per beat multiplied by beats per minute. The ratio is (75/60) × (84/70) = (5/4) × (6/5) = 3/2.",
        "id": "esat-b-bio-17",
        "number": 17
       },
@@ -6755,7 +6755,7 @@
         },
         {
          "label": "C",
-         "text": "Period 3, Group 16"
+         "text": "Period 16, Group 3"
         },
         {
          "label": "D",
@@ -6763,14 +6763,14 @@
         },
         {
          "label": "E",
-         "text": "Period 16, Group 3"
+         "text": "Period 3, Group 16"
         },
         {
          "label": "F",
          "text": "Period 6, Group 3"
         }
        ],
-       "answer": "C",
+       "answer": "E",
        "explanation": "Three occupied shells → Period 3. Six outer electrons → Group 16 (IUPAC numbering). It is sulfur.",
        "id": "esat-b-chem-02",
        "number": 2
@@ -6926,11 +6926,11 @@
         },
         {
          "label": "B",
-         "text": "28%"
+         "text": "35%"
         },
         {
          "label": "C",
-         "text": "35%"
+         "text": "28%"
         },
         {
          "label": "D",
@@ -6945,7 +6945,7 @@
          "text": "70%"
         }
        ],
-       "answer": "C",
+       "answer": "B",
        "explanation": "Mr = 14 + 4 + 14 + 48 = 80. There are two N atoms: 28/80 = 35%.",
        "id": "esat-b-chem-07",
        "number": 7
@@ -7000,7 +7000,7 @@
         },
         {
          "label": "C",
-         "text": "C₄H₁₀"
+         "text": "CH₄"
         },
         {
          "label": "D",
@@ -7012,10 +7012,10 @@
         },
         {
          "label": "F",
-         "text": "CH₄"
+         "text": "C₄H₁₀"
         }
        ],
-       "answer": "C",
+       "answer": "F",
        "explanation": "Equal gas volumes contain equal numbers of moles. 1 molecule gives 80/20 = 4 CO₂ (4 C) and 100/20 = 5 H₂O (10 H): C₄H₁₀.",
        "id": "esat-b-chem-09",
        "number": 9
@@ -7062,7 +7062,7 @@
        "options": [
         {
          "label": "A",
-         "text": "2H₂O₂ → 2H₂O + O₂"
+         "text": "CaCO₃ → CaO + CO₂"
         },
         {
          "label": "B",
@@ -7070,7 +7070,7 @@
         },
         {
          "label": "C",
-         "text": "CaCO₃ → CaO + CO₂"
+         "text": "2H₂O₂ → 2H₂O + O₂"
         },
         {
          "label": "D",
@@ -7085,7 +7085,7 @@
          "text": "Zn + CuSO₄ → ZnSO₄ + Cu"
         }
        ],
-       "answer": "C",
+       "answer": "A",
        "explanation": "In CaCO₃ → CaO + CO₂ every oxidation state stays the same (Ca +2, C +4, O −2). All the others involve electron transfer (H₂O₂ disproportionates).",
        "id": "esat-b-chem-11",
        "number": 11
@@ -7101,11 +7101,11 @@
         },
         {
          "label": "B",
-         "text": "It conducts electricity because it contains free ions."
+         "text": "It conducts electricity because each carbon atom has one delocalised electron."
         },
         {
          "label": "C",
-         "text": "It conducts electricity because each carbon atom has one delocalised electron."
+         "text": "It conducts electricity because it contains free ions."
         },
         {
          "label": "D",
@@ -7120,7 +7120,7 @@
          "text": "It is hard because its layers cannot slide."
         }
        ],
-       "answer": "C",
+       "answer": "B",
        "explanation": "In graphite each C bonds to three others in layers, leaving one delocalised electron per atom to carry charge. Melting requires breaking strong covalent bonds, so its melting point is very high; weak forces between layers only make it soft.",
        "id": "esat-b-chem-12",
        "number": 12
@@ -7237,7 +7237,7 @@
        "options": [
         {
          "label": "A",
-         "text": "phosphorus(V) oxide, P₄O₁₀"
+         "text": "sodium oxide, Na₂O"
         },
         {
          "label": "B",
@@ -7245,7 +7245,7 @@
         },
         {
          "label": "C",
-         "text": "sodium oxide, Na₂O"
+         "text": "phosphorus(V) oxide, P₄O₁₀"
         },
         {
          "label": "D",
@@ -7260,7 +7260,7 @@
          "text": "sulfur dioxide, SO₂"
         }
        ],
-       "answer": "C",
+       "answer": "A",
        "explanation": "Metal oxides such as Na₂O form hydroxides (Na₂O + H₂O → 2NaOH). Non-metal oxides form acids, except SiO₂, which is insoluble.",
        "id": "esat-b-chem-16",
        "number": 16
@@ -7303,35 +7303,35 @@
       {
        "topic": "C10.5",
        "difficulty": 2,
-       "stem": "On an energy level diagram, the reactants are at 50 kJ/mol, the peak of the energy barrier is at 180 kJ/mol and the products are at 20 kJ/mol.\n\nWhat is the activation energy of the REVERSE reaction?",
+       "stem": "The reactants of an exothermic reaction are drawn at 90 kJ mol⁻¹ on an energy profile. The forward activation energy is 55 kJ mol⁻¹ and the enthalpy change of the forward reaction is −20 kJ mol⁻¹. What is the reverse activation energy?",
        "options": [
         {
          "label": "A",
-         "text": "30 kJ/mol"
+         "text": "20 kJ mol⁻¹"
         },
         {
          "label": "B",
-         "text": "130 kJ/mol"
+         "text": "35 kJ mol⁻¹"
         },
         {
          "label": "C",
-         "text": "150 kJ/mol"
+         "text": "55 kJ mol⁻¹"
         },
         {
          "label": "D",
-         "text": "160 kJ/mol"
+         "text": "75 kJ mol⁻¹"
         },
         {
          "label": "E",
-         "text": "180 kJ/mol"
+         "text": "125 kJ mol⁻¹"
         },
         {
          "label": "F",
-         "text": "210 kJ/mol"
+         "text": "145 kJ mol⁻¹"
         }
        ],
        "answer": "D",
-       "explanation": "The reverse reaction starts from the products (20) and must climb to the peak (180): 160 kJ/mol. The forward Ea is 130 and ΔH(forward) = −30.",
+       "explanation": "The peak is at 90 + 55 = 145 and the products at 90 − 20 = 70 kJ mol⁻¹. The reverse activation energy is 145 − 70 = 75 kJ mol⁻¹.",
        "id": "esat-b-chem-18",
        "number": 18
       },
@@ -7389,7 +7389,7 @@
         },
         {
          "label": "D",
-         "text": "cathode: copper; anode: oxygen"
+         "text": "cathode: oxygen; anode: copper"
         },
         {
          "label": "E",
@@ -7397,10 +7397,10 @@
         },
         {
          "label": "F",
-         "text": "cathode: oxygen; anode: copper"
+         "text": "cathode: copper; anode: oxygen"
         }
        ],
-       "answer": "D",
+       "answer": "F",
        "explanation": "Cu²⁺ is less reactive than hydrogen, so copper is deposited at the cathode. Sulfate is not discharged; water is oxidised at the anode to give oxygen.",
        "id": "esat-b-chem-20",
        "number": 20
@@ -7416,7 +7416,7 @@
         },
         {
          "label": "B",
-         "text": "spoon as the anode; silver as the cathode; silver nitrate solution as the electrolyte"
+         "text": "spoon as the cathode; silver as the anode; silver nitrate solution as the electrolyte"
         },
         {
          "label": "C",
@@ -7424,7 +7424,7 @@
         },
         {
          "label": "D",
-         "text": "spoon as the cathode; silver as the anode; silver nitrate solution as the electrolyte"
+         "text": "spoon as the anode; silver as the cathode; silver nitrate solution as the electrolyte"
         },
         {
          "label": "E",
@@ -7435,7 +7435,7 @@
          "text": "spoon as the cathode; graphite as the anode; sodium chloride solution as the electrolyte"
         }
        ],
-       "answer": "D",
+       "answer": "B",
        "explanation": "Ag⁺ ions are reduced onto the object at the cathode; the silver anode dissolves to replace them. Direct current is needed, and the electrolyte must contain the plating metal's ions.",
        "id": "esat-b-chem-21",
        "number": 21
@@ -7529,18 +7529,18 @@
         },
         {
          "label": "D",
-         "text": "They are condensation polymers formed from a diol and a dicarboxylic acid, with water released."
+         "text": "They are formed from a diol and a dicarboxylic acid, with no other product."
         },
         {
          "label": "E",
-         "text": "They are formed from a diol and a dicarboxylic acid, with no other product."
+         "text": "They are condensation polymers formed from a diol and a dicarboxylic acid, with water released."
         },
         {
          "label": "F",
          "text": "They are always biodegradable because they contain ester links."
         }
        ],
-       "answer": "D",
+       "answer": "E",
        "explanation": "Each ester link forms from –OH and –COOH with loss of H₂O, which is condensation. A diamine and dicarboxylic acid give a polyamide; amino acids give proteins.",
        "id": "esat-b-chem-24",
        "number": 24
@@ -7673,7 +7673,7 @@
         },
         {
          "label": "C",
-         "text": "12.4 m/s"
+         "text": "16 m/s"
         },
         {
          "label": "D",
@@ -7685,10 +7685,10 @@
         },
         {
          "label": "F",
-         "text": "16 m/s"
+         "text": "12.4 m/s"
         }
        ],
-       "answer": "C",
+       "answer": "F",
        "explanation": "Distance = area under the graph = ½(4 + 16) × 6 + 16 × 4 = 60 + 64 = 124 m. Average speed = 124 ÷ 10 = 12.4 m/s.",
        "id": "esat-b-phys-01",
        "number": 1
@@ -7918,7 +7918,7 @@
         },
         {
          "label": "C",
-         "text": "£1.80"
+         "text": "18p"
         },
         {
          "label": "D",
@@ -7926,14 +7926,14 @@
         },
         {
          "label": "E",
-         "text": "18p"
+         "text": "£1.80"
         },
         {
          "label": "F",
          "text": "£18.00"
         }
        ],
-       "answer": "C",
+       "answer": "E",
        "explanation": "Energy = 2.4 kW × (5/60) h × 30 = 6.0 kWh. Cost = 6.0 × 30p = 180p = £1.80.",
        "id": "esat-b-phys-08",
        "number": 8
@@ -8268,7 +8268,7 @@
         },
         {
          "label": "C",
-         "text": "Air near the heater warms, becomes less dense and rises, setting up a convection current around the room."
+         "text": "Air near the heater warms, becomes more dense and sinks, spreading across the floor."
         },
         {
          "label": "D",
@@ -8280,10 +8280,10 @@
         },
         {
          "label": "F",
-         "text": "Air near the heater warms, becomes more dense and sinks, spreading across the floor."
+         "text": "Air near the heater warms, becomes less dense and rises, setting up a convection current around the room."
         }
        ],
-       "answer": "C",
+       "answer": "F",
        "explanation": "Warm air expands and becomes less dense, so it rises; cooler, denser air sinks to replace it, circulating heat. The particles themselves do not get lighter.",
        "id": "esat-b-phys-18",
        "number": 18
@@ -8326,35 +8326,35 @@
       {
        "topic": "P3.6b",
        "difficulty": 1,
-       "stem": "A rifle of mass 4.0 kg, initially at rest, fires a bullet of mass 20 g at 400 m/s.\n\nWhat is the recoil speed of the rifle?",
+       "stem": "Two skaters initially at rest push away from each other on level ice. One skater has twice the mass of the other. Horizontal external forces are negligible during the push. Which comparison is correct immediately after the push?",
        "options": [
         {
          "label": "A",
-         "text": "0.2 m/s"
+         "text": "Their momenta are equal in magnitude and their speeds are equal."
         },
         {
          "label": "B",
-         "text": "0.5 m/s"
+         "text": "Their momenta are equal in magnitude, but the heavier skater has half the speed."
         },
         {
          "label": "C",
-         "text": "2.0 m/s"
+         "text": "The heavier skater has twice the momentum and the same speed."
         },
         {
          "label": "D",
-         "text": "8.0 m/s"
+         "text": "The heavier skater has twice the momentum and half the speed."
         },
         {
          "label": "E",
-         "text": "20 m/s"
+         "text": "The lighter skater has twice the momentum and twice the speed."
         },
         {
          "label": "F",
-         "text": "80 m/s"
+         "text": "The lighter skater has half the momentum and half the speed."
         }
        ],
-       "answer": "C",
-       "explanation": "Total momentum stays zero: 0.020 × 400 = 4.0 × v, so v = 8.0 ÷ 4.0 = 2.0 m/s.",
+       "answer": "B",
+       "explanation": "Their total momentum remains zero, so the individual momenta are opposite and equal in magnitude. For equal magnitude mv, doubling the mass halves the speed.",
        "id": "esat-b-phys-20",
        "number": 20
       },
@@ -8505,7 +8505,7 @@
        "options": [
         {
          "label": "A",
-         "text": "ultraviolet – detecting forged banknotes"
+         "text": "microwaves – sterilising surgical instruments"
         },
         {
          "label": "B",
@@ -8517,7 +8517,7 @@
         },
         {
          "label": "D",
-         "text": "microwaves – sterilising surgical instruments"
+         "text": "ultraviolet – detecting forged banknotes"
         },
         {
          "label": "E",
@@ -8528,7 +8528,7 @@
          "text": "X-rays – imaging broken bones"
         }
        ],
-       "answer": "D",
+       "answer": "A",
        "explanation": "Surgical instruments are sterilised with gamma rays. Microwaves are used for cooking and satellite and mobile communication.",
        "id": "esat-b-phys-25",
        "number": 25
@@ -8583,7 +8583,7 @@
         },
         {
          "label": "C",
-         "text": "100 m"
+         "text": "400 m"
         },
         {
          "label": "D",
@@ -8595,10 +8595,10 @@
         },
         {
          "label": "F",
-         "text": "400 m"
+         "text": "100 m"
         }
        ],
-       "answer": "C",
+       "answer": "F",
        "explanation": "Resultant = 2400 N, so a = 2400 ÷ 1200 = 2.0 m/s². v² = 2as: 400 = 4s, s = 100 m.",
        "id": "esat-b-phys-27",
        "number": 27
@@ -8630,7 +8630,7 @@
         },
         {
          "label": "D",
-         "text": "2"
+         "text": "8"
         },
         {
          "label": "E",
@@ -8638,10 +8638,10 @@
         },
         {
          "label": "F",
-         "text": "8"
+         "text": "2"
         }
        ],
-       "answer": "D",
+       "answer": "F",
        "explanation": "8^(2/3) = (∛8)² = 4 and 4^(−1/2) = 1/√4 = 1/2. Product = 2.",
        "id": "esat-b-m2-01",
        "number": 1
@@ -8684,35 +8684,35 @@
       {
        "topic": "MM1.2",
        "difficulty": 2,
-       "stem": "The line y = x + 1 meets the circle x² + y² = 13 at two points.\n\nWhat is the sum of the y-coordinates of these points?",
+       "stem": "Two squares have side lengths √5 + √2 and √5 − √2 respectively. What is the product of their areas?",
        "options": [
         {
          "label": "A",
-         "text": "−5"
+         "text": "9"
         },
         {
          "label": "B",
-         "text": "−1"
+         "text": "7"
         },
         {
          "label": "C",
-         "text": "0"
+         "text": "14"
         },
         {
          "label": "D",
-         "text": "1"
+         "text": "3"
         },
         {
          "label": "E",
-         "text": "5"
+         "text": "21"
         },
         {
          "label": "F",
-         "text": "6"
+         "text": "49"
         }
        ],
-       "answer": "D",
-       "explanation": "x² + (x + 1)² = 13 gives x² + x − 6 = 0, so x = 2 or −3, and y = 3 or −2. Sum = 1.",
+       "answer": "A",
+       "explanation": "The product of the side lengths is (√5 + √2)(√5 − √2) = 5 − 2 = 3. The product of the areas is the square of that product, 9.",
        "id": "esat-b-m2-03",
        "number": 3
       },
@@ -8840,7 +8840,7 @@
         },
         {
          "label": "D",
-         "text": "(x − 4)² + (y − 6)² = 25"
+         "text": "(x − 4)² + (y − 6)² = 5"
         },
         {
          "label": "E",
@@ -8848,10 +8848,10 @@
         },
         {
          "label": "F",
-         "text": "(x − 4)² + (y − 6)² = 5"
+         "text": "(x − 4)² + (y − 6)² = 25"
         }
        ],
-       "answer": "D",
+       "answer": "F",
        "explanation": "Centre = midpoint (4, 6). AB = √(36 + 64) = 10, so the radius is 5 and r² = 25.",
        "id": "esat-b-m2-07",
        "number": 7
@@ -8863,7 +8863,7 @@
        "options": [
         {
          "label": "A",
-         "text": "4π cm²"
+         "text": "12π cm²"
         },
         {
          "label": "B",
@@ -8875,7 +8875,7 @@
         },
         {
          "label": "D",
-         "text": "12π cm²"
+         "text": "4π cm²"
         },
         {
          "label": "E",
@@ -8886,7 +8886,7 @@
          "text": "24π cm²"
         }
        ],
-       "answer": "D",
+       "answer": "A",
        "explanation": "s = rθ gives θ = 4π/6 = 2π/3. Area = ½r²θ = ½ × 36 × 2π/3 = 12π. (Or area = ½rs = ½ × 6 × 4π.)",
        "id": "esat-b-m2-08",
        "number": 8
@@ -9050,7 +9050,7 @@
         },
         {
          "label": "D",
-         "text": "4"
+         "text": "8"
         },
         {
          "label": "E",
@@ -9058,10 +9058,10 @@
         },
         {
          "label": "F",
-         "text": "8"
+         "text": "4"
         }
        ],
-       "answer": "D",
+       "answer": "F",
        "explanation": "Expand: y = x³ + 2x + x⁻¹. dy/dx = 3x² + 2 − x⁻². At x = 1: 3 + 2 − 1 = 4.",
        "id": "esat-b-m2-13",
        "number": 13
@@ -9244,35 +9244,35 @@
       {
        "topic": "MM1.1",
        "difficulty": 2,
-       "stem": "Express (3 + √5)/(3 − √5) in the form (a + b√5)/c.",
+       "stem": "For n > 1, let a = n^(1/2) and b = n^(−1/3). Which expression equals n^(1/6) for every such n?",
        "options": [
         {
          "label": "A",
-         "text": "(7 + 3√5)/14"
+         "text": "a/b"
         },
         {
          "label": "B",
-         "text": "(9 + 5√5)/4"
+         "text": "a²b"
         },
         {
          "label": "C",
-         "text": "(4 + 6√5)/4"
+         "text": "ab²"
         },
         {
          "label": "D",
-         "text": "(7 + 3√5)/2"
+         "text": "b/a"
         },
         {
          "label": "E",
-         "text": "(7 + 3√5)/4"
+         "text": "a²/b"
         },
         {
          "label": "F",
-         "text": "(2 + 3√5)/2"
+         "text": "ab"
         }
        ],
-       "answer": "D",
-       "explanation": "Multiply top and bottom by (3 + √5): numerator 9 + 6√5 + 5 = 14 + 6√5; denominator 9 − 5 = 4. Simplify: (7 + 3√5)/2.",
+       "answer": "F",
+       "explanation": "Multiplying powers of n adds the exponents. In ab the exponent is 1/2 − 1/3 = 1/6.",
        "id": "esat-b-m2-19",
        "number": 19
       },
@@ -9388,7 +9388,7 @@
        "options": [
         {
          "label": "A",
-         "text": "(0, 4)"
+         "text": "(2, 4)"
         },
         {
          "label": "B",
@@ -9404,14 +9404,14 @@
         },
         {
          "label": "E",
-         "text": "(2, 4)"
+         "text": "(0, 4)"
         },
         {
          "label": "F",
          "text": "(4, 2)"
         }
        ],
-       "answer": "E",
+       "answer": "A",
        "explanation": "2ˣ = 8 − 2ˣ gives 2 × 2ˣ = 8, so 2ˣ = 4, x = 2 and y = 4.",
        "id": "esat-b-m2-23",
        "number": 23

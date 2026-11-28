@@ -31,35 +31,35 @@
               "number": 1,
               "topic": "M1.2",
               "difficulty": 2,
-              "stem": "A metal has density 2.7 g/cm³.\n\nWhat is its density in kg/m³?",
+              "stem": "A coating covers 600 cm². Each square centimetre takes 2 mg of coating. What mass of coating is used, in grams?",
               "options": [
                 {
                   "label": "A",
-                  "text": "0.0027"
+                  "text": "0.12"
                 },
                 {
                   "label": "B",
-                  "text": "0.27"
+                  "text": "0.3"
                 },
                 {
                   "label": "C",
-                  "text": "2700"
+                  "text": "1.2"
                 },
                 {
                   "label": "D",
-                  "text": "27"
+                  "text": "3"
                 },
                 {
                   "label": "E",
-                  "text": "270"
+                  "text": "12"
                 },
                 {
                   "label": "F",
-                  "text": "27000"
+                  "text": "120"
                 }
               ],
               "answer": "C",
-              "explanation": "A cubic metre contains 10⁶ cm³ and a kilogram contains 10³ g, so 2.7 × 10⁶ ÷ 10³ = 2700 kg/m³. Converting only the mass misses the change in volume unit."
+              "explanation": "The coating has mass 600 × 2 = 1200 mg. Divide by 1000 to convert milligrams to grams."
             },
             {
               "id": "esat-p-m1-1-02",
@@ -1140,35 +1140,35 @@
               "number": 1,
               "topic": "M6.1",
               "difficulty": 1,
-              "stem": "A pie chart represents 72 responses. The sector for ‘train’ is 145°.\n\nHow many responses were ‘train’?",
+              "stem": "A pie chart shows how 120 visitors arrived. The angles for walking and cycling are 96° and 54°. All other visitors came by bus. How many came by bus?",
               "options": [
                 {
                   "label": "A",
-                  "text": "20"
+                  "text": "50"
                 },
                 {
                   "label": "B",
-                  "text": "29"
+                  "text": "70"
                 },
                 {
                   "label": "C",
-                  "text": "25"
+                  "text": "32"
                 },
                 {
                   "label": "D",
-                  "text": "30"
+                  "text": "18"
                 },
                 {
                   "label": "E",
-                  "text": "36"
+                  "text": "90"
                 },
                 {
                   "label": "F",
-                  "text": "43"
+                  "text": "105"
                 }
               ],
               "answer": "B",
-              "explanation": "Each response accounts for 360° ÷ 72 = 5°, so 145° represents 29 responses. Dividing by 360 gives only the fraction of responses, not the count."
+              "explanation": "The bus sector is 360° − 96° − 54° = 210°. Each 3° represents one visitor, so 70 visitors came by bus."
             },
             {
               "id": "esat-p-m1-4-02",
@@ -1509,35 +1509,35 @@
               "number": 1,
               "topic": "M2.3",
               "difficulty": 1,
-              "stem": "What is the least positive integer divisible by both 14 and 30?",
+              "stem": "One pack holds exactly 6 glass tiles and another holds exactly 8. A supplier can use only the small packs or only the large packs to fill the same order with no empty spaces. There are more than 25 tiles in the order. What is the smallest possible order?",
               "options": [
                 {
                   "label": "A",
-                  "text": "42"
+                  "text": "30"
                 },
                 {
                   "label": "B",
-                  "text": "70"
+                  "text": "32"
                 },
                 {
                   "label": "C",
-                  "text": "90"
+                  "text": "36"
                 },
                 {
                   "label": "D",
-                  "text": "105"
+                  "text": "40"
                 },
                 {
                   "label": "E",
-                  "text": "420"
+                  "text": "56"
                 },
                 {
                   "label": "F",
-                  "text": "210"
+                  "text": "48"
                 }
               ],
               "answer": "F",
-              "explanation": "The prime factors needed are 2, 3, 5 and 7, so their product is 210. Multiplying 14 by 30 counts the factor 2 twice."
+              "explanation": "The least common multiple of 6 and 8 is 24. The first multiple of 24 greater than 25 is 48."
             },
             {
               "id": "esat-p-m1-5-02",
@@ -1929,35 +1929,35 @@
               "number": 2,
               "topic": "M4.4",
               "difficulty": 2,
-              "stem": "What is the constant term in (3x + 4)(2x − 5) + (x + 1)²?",
+              "stem": "A square display has side length x + 3, with x > 0. A square of side x is cut out. Which expression gives the remaining area?",
               "options": [
                 {
                   "label": "A",
-                  "text": "−19"
+                  "text": "6x + 9"
                 },
                 {
                   "label": "B",
-                  "text": "−21"
+                  "text": "3x + 9"
                 },
                 {
                   "label": "C",
-                  "text": "−20"
+                  "text": "6x + 3"
                 },
                 {
                   "label": "D",
-                  "text": "−9"
+                  "text": "9"
                 },
                 {
                   "label": "E",
-                  "text": "1"
+                  "text": "x² + 9"
                 },
                 {
                   "label": "F",
-                  "text": "21"
+                  "text": "6x"
                 }
               ],
               "answer": "A",
-              "explanation": "Set x = 0 to isolate the constant: 4(−5) + 1 = −19. Terms containing x contribute nothing."
+              "explanation": "Subtract x² from (x + 3)². The x² terms cancel, leaving 6x + 9."
             },
             {
               "id": "esat-p-m1-6-03",
@@ -2687,35 +2687,35 @@
               "number": 1,
               "topic": "M6.3",
               "difficulty": 1,
-              "stem": "Six observations in ascending order are 4, 6, 6, 10, 14, 20. What is their median?",
+              "stem": "A tally gives the number of calls answered by each of seven volunteers.\n\nCalls: 0, 1, 2, 3\nNumber of volunteers: 1, 2, 3, 1\n\nWhat is the median number of calls answered?",
               "options": [
                 {
                   "label": "A",
-                  "text": "6"
+                  "text": "0"
                 },
                 {
                   "label": "B",
-                  "text": "8"
+                  "text": "2"
                 },
                 {
                   "label": "C",
-                  "text": "7"
+                  "text": "1"
                 },
                 {
                   "label": "D",
-                  "text": "9"
+                  "text": "1.5"
                 },
                 {
                   "label": "E",
-                  "text": "10"
+                  "text": "12/7"
                 },
                 {
                   "label": "F",
-                  "text": "14"
+                  "text": "3"
                 }
               ],
               "answer": "B",
-              "explanation": "The two central observations are 6 and 10. Their mean is 8; neither observation alone is the median."
+              "explanation": "Three volunteers answered fewer than 2 calls. The fourth value in the ordered list, and therefore the median of seven values, is 2."
             },
             {
               "id": "esat-p-m1-8-02",
@@ -3082,35 +3082,35 @@
               "number": 1,
               "topic": "M1.2",
               "difficulty": 2,
-              "stem": "A tank holds 0.045 m³. How many millilitres is that?",
+              "stem": "A shallow metal tray holds 3 litres of water. The flat base has area 500 cm². The tray has vertical sides. How deep is the water?",
               "options": [
                 {
                   "label": "A",
-                  "text": "45"
+                  "text": "0.6 cm"
                 },
                 {
                   "label": "B",
-                  "text": "450"
+                  "text": "1.5 cm"
                 },
                 {
                   "label": "C",
-                  "text": "4500"
+                  "text": "15 cm"
                 },
                 {
                   "label": "D",
-                  "text": "450000"
+                  "text": "60 cm"
                 },
                 {
                   "label": "E",
-                  "text": "4500000"
+                  "text": "150 cm"
                 },
                 {
                   "label": "F",
-                  "text": "45000"
+                  "text": "6 cm"
                 }
               ],
               "answer": "F",
-              "explanation": "A cubic metre is 1000 litres, and each litre is 1000 mL. The two factors of 1000 convert volume, not length."
+              "explanation": "Three litres is 3000 cm³. Dividing the volume by the base area gives 3000 ÷ 500 = 6 cm."
             },
             {
               "id": "esat-p-m1-9-02",
@@ -3498,35 +3498,35 @@
               "number": 1,
               "topic": "M4.4",
               "difficulty": 2,
-              "stem": "Expand and simplify (2a − 3)² − 4a².",
+              "stem": "A print designer changes a rectangular panel from dimensions (x + 2) by (x + 2) to dimensions (x + 1) by (x + 3), where x > 0. What happens to its area?",
               "options": [
                 {
                   "label": "A",
-                  "text": "9 − 6a"
+                  "text": "It increases by 1 square unit."
                 },
                 {
                   "label": "B",
-                  "text": "9 + 12a"
+                  "text": "It stays the same."
                 },
                 {
                   "label": "C",
-                  "text": "−9 − 12a"
+                  "text": "It decreases by x square units."
                 },
                 {
                   "label": "D",
-                  "text": "9 − 12a"
+                  "text": "It decreases by 1 square unit."
                 },
                 {
                   "label": "E",
-                  "text": "12a − 9"
+                  "text": "It increases by 2x square units."
                 },
                 {
                   "label": "F",
-                  "text": "12a"
+                  "text": "It decreases by 4 square units."
                 }
               ],
               "answer": "D",
-              "explanation": "The expansion is 4a² − 12a + 9. Subtracting the first term leaves the cross term and constant."
+              "explanation": "The starting area is x² + 4x + 4 and the new area is x² + 4x + 3. The dimensions have the same sum, but the area decreases by 1."
             },
             {
               "id": "esat-p-m1-10-02",
@@ -4313,35 +4313,35 @@
               "number": 1,
               "topic": "M6.3",
               "difficulty": 2,
-              "stem": "Five observations have range 13 and minimum 8. What is their maximum?",
+              "stem": "Five temperature readings have a mean of 8 °C and a median of 7 °C. Each reading is corrected by subtracting 2 °C. Which statements are true?\n\nI. The corrected mean is 6 °C.\nII. The corrected range is 2 °C smaller.\nIII. The corrected median is 5 °C.",
               "options": [
                 {
                   "label": "A",
-                  "text": "5"
+                  "text": "I only"
                 },
                 {
                   "label": "B",
-                  "text": "21"
+                  "text": "I and III only"
                 },
                 {
                   "label": "C",
-                  "text": "13"
+                  "text": "II only"
                 },
                 {
                   "label": "D",
-                  "text": "16"
+                  "text": "III only"
                 },
                 {
                   "label": "E",
-                  "text": "18"
+                  "text": "I and II only"
                 },
                 {
                   "label": "F",
-                  "text": "24"
+                  "text": "I, II and III"
                 }
               ],
               "answer": "B",
-              "explanation": "Range is maximum minus minimum. Add 13 to 8; it is not the maximum itself."
+              "explanation": "Subtracting the same value from every reading lowers the mean and the median by 2 °C. The maximum and minimum both decrease by 2 °C, so their difference is unchanged."
             },
             {
               "id": "esat-p-m1-12-02",
@@ -5109,31 +5109,31 @@
               "number": 1,
               "topic": "M4.10",
               "difficulty": 1,
-              "stem": "The graph y = 3x − 7 meets the vertical axis at which point?",
+              "stem": "A straight-line graph gives the amount of liquid in a container over time. Time in minutes is on the horizontal axis, and volume in litres is on the vertical axis. The line passes through (0, 6) and (4, 18). What does 6 represent?",
               "options": [
                 {
                   "label": "A",
-                  "text": " (−7, 0)"
+                  "text": "The volume added per minute."
                 },
                 {
                   "label": "B",
-                  "text": " (0, 3)"
+                  "text": "The number of minutes needed to reach 18 litres."
                 },
                 {
                   "label": "C",
-                  "text": " (0, −7)"
+                  "text": "The volume before any time has elapsed."
                 },
                 {
                   "label": "D",
-                  "text": " (3, 0)"
+                  "text": "The volume added in the first four minutes."
                 },
                 {
                   "label": "E",
-                  "text": " (7/3, 0)"
+                  "text": "The volume at minute 6."
                 }
               ],
               "answer": "C",
-              "explanation": "The vertical axis has x = 0. Substituting gives y = −7."
+              "explanation": "The coordinates (0, 6) indicate that at time zero the volume is 6 litres. The rate is the gradient, not the intercept."
             },
             {
               "id": "esat-p-m1-14-02",
@@ -5497,27 +5497,27 @@
               "number": 1,
               "topic": "M5.2",
               "difficulty": 1,
-              "stem": "The three angles of a triangle include 47° and 68°. What is the remaining angle?",
+              "stem": "A triangular sign is cut into two triangles by a segment drawn from one vertex to the opposite side. The cut divides the angle at that vertex into 28° and 32°. One uncut corner is 65°. What is the angle at the other uncut corner?",
               "options": [
                 {
                   "label": "A",
-                  "text": "55°"
+                  "text": "50°"
                 },
                 {
                   "label": "B",
-                  "text": "62°"
+                  "text": "60°"
                 },
                 {
                   "label": "C",
-                  "text": "65°"
+                  "text": "55°"
                 },
                 {
                   "label": "D",
-                  "text": "67°"
+                  "text": "83°"
                 },
                 {
                   "label": "E",
-                  "text": "75°"
+                  "text": "87°"
                 },
                 {
                   "label": "F",
@@ -5525,7 +5525,7 @@
                 }
               ],
               "answer": "C",
-              "explanation": "Triangle angles sum to 180°. Subtract both known angles."
+              "explanation": "The angle at the cut vertex of the original triangle was 28° + 32° = 60°. Subtract 60° and 65° from 180° to get 55°."
             },
             {
               "id": "esat-p-m1-15-02",
@@ -5567,35 +5567,35 @@
               "number": 3,
               "topic": "M5.18",
               "difficulty": 3,
-              "stem": "One acute angle in a right triangle has cosine 5/13. Find its sine.",
+              "stem": "An observer’s eye is 2 m above level ground and 15 m horizontally from a vertical sculpture. The tangent of the angle of elevation from the observer’s eye to the sculpture’s top is 3/5. How tall is the sculpture?",
               "options": [
                 {
                   "label": "A",
-                  "text": "5/12"
+                  "text": "7 m"
                 },
                 {
                   "label": "B",
-                  "text": "5/13"
+                  "text": "9 m"
                 },
                 {
                   "label": "C",
-                  "text": "8/13"
+                  "text": "15 m"
                 },
                 {
                   "label": "D",
-                  "text": "12/5"
+                  "text": "25 m"
                 },
                 {
                   "label": "E",
-                  "text": "12/13"
+                  "text": "11 m"
                 },
                 {
                   "label": "F",
-                  "text": "13/12"
+                  "text": "27 m"
                 }
               ],
               "answer": "E",
-              "explanation": "Using a hypotenuse of 13 and adjacent side 5, Pythagoras gives the opposite side 12."
+              "explanation": "The top is 15 × (3/5) = 9 m above eye level. Adding the observer’s eye height gives 11 m above ground."
             },
             {
               "id": "esat-p-m1-15-04",
@@ -5888,35 +5888,35 @@
               "number": 1,
               "topic": "M6.3",
               "difficulty": 1,
-              "stem": "The ordered observations are 2, 4, 4, 7, 9, 11. Find their median.",
+              "stem": "A game scoreboard lists four scores, 3, 8, 12 and 17. A fifth score is added. If the median of the five scores is now 10, what score was added?",
               "options": [
                 {
                   "label": "A",
-                  "text": "4"
+                  "text": "5"
                 },
                 {
                   "label": "B",
-                  "text": "4.5"
+                  "text": "8"
                 },
                 {
                   "label": "C",
-                  "text": "6"
+                  "text": "11"
                 },
                 {
                   "label": "D",
-                  "text": "7"
+                  "text": "12"
                 },
                 {
                   "label": "E",
-                  "text": "7.5"
+                  "text": "15"
                 },
                 {
                   "label": "F",
-                  "text": "5.5"
+                  "text": "10"
                 }
               ],
               "answer": "F",
-              "explanation": "With six values use the mean of positions three and four. That gives (4 + 7)/2."
+              "explanation": "Of the four original scores, two are below 10 and two are above it. The third of the five scores must be the new score, 10."
             },
             {
               "id": "esat-p-m1-16-02",
@@ -6276,35 +6276,35 @@
               "number": 1,
               "topic": "P1.2",
               "difficulty": 1,
-              "stem": "A current transfers 36 C through a wire in 45 s.\n\nWhat is the current?",
+              "stem": "A charge sensor records 3 C, 7 C and 11 C at times 0 s, 2 s and 4 s respectively. The charge readings are cumulative. If the current is steady, what is it?",
               "options": [
                 {
                   "label": "A",
-                  "text": "0.08 A"
+                  "text": "1 A"
                 },
                 {
                   "label": "B",
-                  "text": "1.25 A"
+                  "text": "2.75 A"
                 },
                 {
                   "label": "C",
-                  "text": "8.0 A"
+                  "text": "4 A"
                 },
                 {
                   "label": "D",
-                  "text": "4.0 A"
+                  "text": "5.5 A"
                 },
                 {
                   "label": "E",
-                  "text": "0.80 A"
+                  "text": "2 A"
                 },
                 {
                   "label": "F",
-                  "text": "81 A"
+                  "text": "8 A"
                 }
               ],
               "answer": "E",
-              "explanation": "Current is charge per unit time, so I = 36/45 = 0.80 A. Dividing time by charge gives the reciprocal."
+              "explanation": "Another 4 C passes in every 2 s, so the current is 4 ÷ 2 = 2 A. The reading at time zero is not charge transferred during the measurement."
             },
             {
               "id": "esat-p-phys-1-02",
@@ -7377,35 +7377,35 @@
               "number": 1,
               "topic": "P6.1",
               "difficulty": 1,
-              "stem": "The period of a wave produced by a vibrating rod is 0.025 s.\n\nWhat is its frequency?",
+              "stem": "Six successive equally spaced crests pass a marker. The first crest passes at 0 s and the sixth passes at 0.20 s. What is the period?",
               "options": [
                 {
                   "label": "A",
-                  "text": "0.25 Hz"
+                  "text": "0.20 s"
                 },
                 {
                   "label": "B",
-                  "text": "40 Hz"
+                  "text": "0.04 s"
                 },
                 {
                   "label": "C",
-                  "text": "2.5 Hz"
+                  "text": "0.05 s"
                 },
                 {
                   "label": "D",
-                  "text": "4 Hz"
+                  "text": "0.24 s"
                 },
                 {
                   "label": "E",
-                  "text": "25 Hz"
+                  "text": "5 s"
                 },
                 {
                   "label": "F",
-                  "text": "400 Hz"
+                  "text": "25 s"
                 }
               ],
               "answer": "B",
-              "explanation": "Frequency is the reciprocal of period, so 1/0.025 = 40 Hz. The period itself specifies seconds per cycle, not cycles per second."
+              "explanation": "The six crests bound five intervals. Each interval is 0.20 ÷ 5 = 0.04 s."
             },
             {
               "id": "esat-p-phys-4-02",
@@ -7739,35 +7739,35 @@
               "number": 1,
               "topic": "P3.1",
               "difficulty": 1,
-              "stem": "A trolley slows uniformly from 14 m/s to 6 m/s in 4 s. Give its acceleration in m/s².",
+              "stem": "A conveyor changes a parcel’s velocity by −3 m/s every second for three seconds. The positive direction is to the right. Which statement is true during these three seconds?",
               "options": [
                 {
                   "label": "A",
-                  "text": "−5"
+                  "text": "Its acceleration is constant and directed right."
                 },
                 {
                   "label": "B",
-                  "text": "−3.5"
+                  "text": "Its acceleration increases in magnitude each second."
                 },
                 {
                   "label": "C",
-                  "text": "−1.5"
+                  "text": "Its acceleration is zero because the changes are equal."
                 },
                 {
                   "label": "D",
-                  "text": "2"
+                  "text": "Its velocity must point left throughout."
                 },
                 {
                   "label": "E",
-                  "text": "5"
+                  "text": "Its velocity must stay positive throughout."
                 },
                 {
                   "label": "F",
-                  "text": "−2"
+                  "text": "Its acceleration is constant and directed left."
                 }
               ],
               "answer": "F",
-              "explanation": "Acceleration is (6 − 14)/4. A positive value would indicate an increase in velocity along the chosen axis."
+              "explanation": "Equal changes of velocity in equal times give constant acceleration. The negative change fixes the acceleration’s direction but does not, by itself, tell us the initial velocity."
             },
             {
               "id": "esat-p-phys-5-02",
@@ -8134,35 +8134,35 @@
               "number": 1,
               "topic": "P3.6",
               "difficulty": 1,
-              "stem": "An object of mass 0.8 kg moves north at 5 m/s. Give its momentum.",
+              "stem": "Two battery-powered cars run in opposite directions. Car X has mass 0.5 kg and travels east at 4 m/s. Car Y has mass 1 kg and travels west at 1 m/s. What is their total momentum?",
               "options": [
                 {
                   "label": "A",
-                  "text": "0.16 kg m/s north"
+                  "text": "1 kg m/s west"
                 },
                 {
                   "label": "B",
-                  "text": "4 kg m/s south"
+                  "text": "2 kg m/s east"
                 },
                 {
                   "label": "C",
-                  "text": "5.8 kg m/s north"
+                  "text": "2 kg m/s west"
                 },
                 {
                   "label": "D",
-                  "text": "6.25 kg m/s north"
+                  "text": "3 kg m/s east"
                 },
                 {
                   "label": "E",
-                  "text": "4 kg m/s north"
+                  "text": "1 kg m/s east"
                 },
                 {
                   "label": "F",
-                  "text": "10 kg m/s north"
+                  "text": "Zero"
                 }
               ],
               "answer": "E",
-              "explanation": "Momentum is mass times velocity, with the same direction as velocity. Kinetic energy instead depends on speed squared."
+              "explanation": "Taking east as positive, the two momenta are +2 and −1 kg m/s. Their sum is +1 kg m/s."
             },
             {
               "id": "esat-p-phys-6-02",
@@ -8543,35 +8543,35 @@
               "number": 1,
               "topic": "P1.2",
               "difficulty": 1,
-              "stem": "A 9 V cell drives 0.3 A through a resistor. Find its resistance.",
+              "stem": "Potential difference V is plotted vertically against current I horizontally for two fixed resistors. The straight line for X is steeper than the straight line for Y. At the same nonzero potential difference, what can be inferred?",
               "options": [
                 {
                   "label": "A",
-                  "text": "0.03 Ω"
+                  "text": "X has greater resistance and carries more current."
                 },
                 {
                   "label": "B",
-                  "text": "30 Ω"
+                  "text": "X has greater resistance and carries less current."
                 },
                 {
                   "label": "C",
-                  "text": "2.7 Ω"
+                  "text": "X has lower resistance and carries less current."
                 },
                 {
                   "label": "D",
-                  "text": "3 Ω"
+                  "text": "X has lower resistance and carries more current."
                 },
                 {
                   "label": "E",
-                  "text": "27 Ω"
+                  "text": "The resistances are equal but X carries less current."
                 },
                 {
                   "label": "F",
-                  "text": "90 Ω"
+                  "text": "The resistances differ but the currents are equal."
                 }
               ],
               "answer": "B",
-              "explanation": "Use R = V/I, not VI, which is the power."
+              "explanation": "The slope of a V-against-I graph is V/I, the resistance. With V fixed, the greater resistance gives the smaller current."
             },
             {
               "id": "esat-p-phys-7-02",
@@ -9336,35 +9336,35 @@
               "number": 1,
               "topic": "P3.1",
               "difficulty": 2,
-              "stem": "A rover’s position along a line rises from 2 m to 14 m in 3 s at constant velocity. Find the slope of its position–time graph.",
+              "stem": "A trolley’s position is recorded as 1 m at 0 s, 5 m at 2 s, 5 m at 4 s and 1 m at 6 s. Between readings its position–time graph is straight. At which pair of times does it have the same speed but opposite velocities?",
               "options": [
                 {
                   "label": "A",
-                  "text": "2 m/s"
+                  "text": "1 s and 3 s"
                 },
                 {
                   "label": "B",
-                  "text": "6 m/s"
+                  "text": "2.5 s and 3.5 s"
                 },
                 {
                   "label": "C",
-                  "text": "14/3 m/s"
+                  "text": "3 s and 5 s"
                 },
                 {
                   "label": "D",
-                  "text": "12 m/s"
+                  "text": "0.5 s and 1.5 s"
                 },
                 {
                   "label": "E",
-                  "text": "36 m/s"
+                  "text": "4.5 s and 5.5 s"
                 },
                 {
                   "label": "F",
-                  "text": "4 m/s"
+                  "text": "1 s and 5 s"
                 }
               ],
               "answer": "F",
-              "explanation": "Slope is the 12 m change divided by 3 s, not the final position divided by time."
+              "explanation": "The first segment has gradient +2 m/s, the middle is horizontal and the final segment has gradient −2 m/s. Only 1 s and 5 s lie on opposite sloping segments."
             },
             {
               "id": "esat-p-phys-9-02",
@@ -9730,35 +9730,35 @@
               "number": 1,
               "topic": "P3.7",
               "difficulty": 2,
-              "stem": "A motor applies a force of 36 N in the direction of motion for 5 m. How much work does the motor do?",
+              "stem": "A stage lift raises a prop at a steady speed and then lowers it at the same speed through the same distance. The platform pushes upward on the prop throughout. Compare the work done by this upward force on the prop in the two journeys.",
               "options": [
                 {
                   "label": "A",
-                  "text": "7.2 J"
+                  "text": "The work is positive in both journeys."
                 },
                 {
                   "label": "B",
-                  "text": "31 J"
+                  "text": "The work is negative in both journeys."
                 },
                 {
                   "label": "C",
-                  "text": "41 J"
+                  "text": "The work is zero in both journeys."
                 },
                 {
                   "label": "D",
-                  "text": "72 J"
+                  "text": "Only the upward journey involves nonzero work by this force."
                 },
                 {
                   "label": "E",
-                  "text": "180 J"
+                  "text": "The work has equal magnitude and opposite sign."
                 },
                 {
                   "label": "F",
-                  "text": "360 J"
+                  "text": "Only the downward journey involves nonzero work by this force."
                 }
               ],
               "answer": "E",
-              "explanation": "Work is force times distance in the direction of the force. Both quantities enter linearly."
+              "explanation": "At constant speed the upward force equals the prop’s weight on each journey. It acts with the displacement when rising and against it when descending, so the work changes sign but not magnitude."
             },
             {
               "id": "esat-p-phys-10-02",
@@ -10131,7 +10131,7 @@
               "number": 1,
               "topic": "P1.2",
               "difficulty": 2,
-              "stem": "An ammeter reads 0.12 A. How much charge flows in 50 s?",
+              "stem": "An ammeter on a charging circuit reads 0.30 A for the first 10 s and 0.10 A for the next 30 s. Current flows in the same direction throughout. How much charge passes in total?",
               "options": [
                 {
                   "label": "A",
@@ -10139,27 +10139,27 @@
                 },
                 {
                   "label": "B",
-                  "text": "0.6 C"
+                  "text": "3 C"
                 },
                 {
                   "label": "C",
-                  "text": "2.4 C"
+                  "text": "4 C"
                 },
                 {
                   "label": "D",
-                  "text": "12 C"
+                  "text": "8 C"
                 },
                 {
                   "label": "E",
-                  "text": "60 C"
+                  "text": "9 C"
                 },
                 {
                   "label": "F",
-                  "text": "600 C"
+                  "text": "12 C"
                 }
               ],
               "answer": "A",
-              "explanation": "Use Q = It, so 0.12 × 50 = 6 C. Current is charge per second, not charge per minute."
+              "explanation": "The charge is the area under the current–time graph: (0.30 × 10) + (0.10 × 30) = 6 C."
             },
             {
               "id": "esat-p-phys-11-02",
@@ -10926,35 +10926,35 @@
               "number": 1,
               "topic": "P1.2",
               "difficulty": 1,
-              "stem": "A lamp transfers 84 J in 7 seconds. What is its mean power?",
+              "stem": "At 6 V a cabinet light transfers 24 J in 4 s. A student doubles the time the light is on without changing its potential difference or current. What happens to its mean power?",
               "options": [
                 {
                   "label": "A",
-                  "text": "0.083 W"
+                  "text": "It falls to 3 W."
                 },
                 {
                   "label": "B",
-                  "text": "7 W"
+                  "text": "It rises to 12 W."
                 },
                 {
                   "label": "C",
-                  "text": "77 W"
+                  "text": "It stays at 24 W."
                 },
                 {
                   "label": "D",
-                  "text": "91 W"
+                  "text": "It falls to 12 W."
                 },
                 {
                   "label": "E",
-                  "text": "12 W"
+                  "text": "It stays at 6 W."
                 },
                 {
                   "label": "F",
-                  "text": "588 W"
+                  "text": "It rises to 48 W."
                 }
               ],
               "answer": "E",
-              "explanation": "Power is energy divided by elapsed time."
+              "explanation": "The original power is 24 ÷ 4 = 6 W. At unchanged current and voltage, twice as much energy transfers over twice the time, so the power is still 6 W."
             },
             {
               "id": "esat-p-phys-13-02",
@@ -11308,35 +11308,35 @@
               "number": 1,
               "topic": "P3.5",
               "difficulty": 2,
-              "stem": "A sample’s weight is 75 N where g = 10 m/s². What is its mass?",
+              "stem": "A sealed package weighs less on a planet where gravitational field strength is weaker. The same balance compares the package with standard masses by checking which side needs more mass to balance. What happens to the package’s measured mass and its weight?",
               "options": [
                 {
                   "label": "A",
-                  "text": "0.75 kg"
+                  "text": "Both decrease."
                 },
                 {
                   "label": "B",
-                  "text": "6.5 kg"
+                  "text": "Both stay the same."
                 },
                 {
                   "label": "C",
-                  "text": "7.5 kg"
+                  "text": "Mass stays the same; weight decreases."
                 },
                 {
                   "label": "D",
-                  "text": "65 kg"
+                  "text": "Mass decreases; weight stays the same."
                 },
                 {
                   "label": "E",
-                  "text": "85 kg"
+                  "text": "Mass stays the same; weight increases."
                 },
                 {
                   "label": "F",
-                  "text": "750 kg"
+                  "text": "Mass increases; weight decreases."
                 }
               ],
               "answer": "C",
-              "explanation": "Divide weight by gravitational field strength. Weight is a force, whereas mass is a measure of inertia."
+              "explanation": "A weaker field reduces the weights of both the package and the comparison masses by the same factor, so the same masses balance. The weight itself, mg, decreases."
             },
             {
               "id": "esat-p-phys-14-02",
@@ -11691,70 +11691,70 @@
               "number": 1,
               "topic": "P5.4",
               "difficulty": 2,
-              "stem": "A uniform solid takes up 15 cm³ and has mass 90 g. Find its density.",
+              "stem": "A uniform material is supplied as solid sheets of thickness 0.2 cm. A piece with area 30 cm² has mass 18 g. What mass would a solid piece with area 50 cm² and thickness 0.3 cm have?",
               "options": [
                 {
                   "label": "A",
-                  "text": "1/6 g/cm³"
+                  "text": "24 g"
                 },
                 {
                   "label": "B",
-                  "text": "4 g/cm³"
+                  "text": "27 g"
                 },
                 {
                   "label": "C",
-                  "text": "15 g/cm³"
+                  "text": "30 g"
                 },
                 {
                   "label": "D",
-                  "text": "6 g/cm³"
+                  "text": "45 g"
                 },
                 {
                   "label": "E",
-                  "text": "75 g/cm³"
+                  "text": "36 g"
                 },
                 {
                   "label": "F",
-                  "text": "1350 g/cm³"
+                  "text": "75 g"
                 }
               ],
               "answer": "D",
-              "explanation": "Density is mass divided by volume."
+              "explanation": "The first piece occupies 6 cm³ and so the density is 3 g/cm³. The second occupies 15 cm³, giving 45 g."
             },
             {
               "id": "esat-p-phys-15-02",
               "number": 2,
               "topic": "P4.4",
               "difficulty": 3,
-              "stem": "A 200 g sample takes 1800 J to rise by 15 °C. What is its specific heat capacity?",
+              "stem": "Two insulated containers hold the same mass of different liquids. Identical heaters deliver equal power. Liquid X warms by 12 °C in 4 minutes and liquid Y warms by 8 °C in 2 minutes. What is the ratio of the specific heat capacity of X to that of Y?",
               "options": [
                 {
                   "label": "A",
-                  "text": "600 J/(kg °C)"
+                  "text": "4 : 3"
                 },
                 {
                   "label": "B",
-                  "text": "6 J/(kg °C)"
+                  "text": "3 : 4"
                 },
                 {
                   "label": "C",
-                  "text": "60 J/(kg °C)"
+                  "text": "3 : 2"
                 },
                 {
                   "label": "D",
-                  "text": "120 J/(kg °C)"
+                  "text": "2 : 3"
                 },
                 {
                   "label": "E",
-                  "text": "450 J/(kg °C)"
+                  "text": "2 : 1"
                 },
                 {
                   "label": "F",
-                  "text": "1200 J/(kg °C)"
+                  "text": "1 : 2"
                 }
               ],
               "answer": "A",
-              "explanation": "Convert 200 g to 0.2 kg, then divide energy by mass times change in temperature."
+              "explanation": "With equal masses and powers, specific heat capacity is proportional to heating time divided by temperature change. The ratio is (4/12) : (2/8) = 4 : 3."
             },
             {
               "id": "esat-p-phys-15-03",
@@ -13227,35 +13227,35 @@
               "number": 2,
               "topic": "C11.1",
               "difficulty": 1,
-              "stem": "A reaction in an insulated cup makes the surrounding solution warmer. There is no external heating.\n\nWhat is the sign of the enthalpy change of the reaction, and how is it classified?",
+              "stem": "A reusable heat pack warms the water surrounding it in an insulated beaker. An identical unactivated pack in a second beaker produces no temperature change. Which energy transfer explains the difference?",
               "options": [
                 {
                   "label": "A",
-                  "text": "Negative; exothermic"
+                  "text": "From the activated pack to the water."
                 },
                 {
                   "label": "B",
-                  "text": "Negative; endothermic"
+                  "text": "From the water to the activated pack."
                 },
                 {
                   "label": "C",
-                  "text": "Positive; exothermic"
+                  "text": "From the activated pack to the water and an equal amount back to the pack."
                 },
                 {
                   "label": "D",
-                  "text": "Positive; endothermic"
+                  "text": "From the unactivated pack to its water."
                 },
                 {
                   "label": "E",
-                  "text": "Zero; exothermic"
+                  "text": "From both samples of water into their packs."
                 },
                 {
                   "label": "F",
-                  "text": "Zero; endothermic"
+                  "text": "There is no net transfer of energy between either pack and its water."
                 }
               ],
               "answer": "A",
-              "explanation": "The reaction transfers energy to the surroundings, so it is exothermic with negative ΔH. The solution warming does not mean that the reacting system gained enthalpy."
+              "explanation": "Only the water surrounding the activated pack warms. Energy passes from the activated pack to its surroundings."
             },
             {
               "id": "esat-p-chem-3-03",
@@ -13928,15 +13928,15 @@
               "number": 1,
               "topic": "C1.4",
               "difficulty": 1,
-              "stem": "A neutral aluminium atom has atomic number 13. How many electrons are in its outer shell in the ground state?",
+              "stem": "The ground-state electron arrangement of a neutral silicon atom is 2,8,4. A student labels a diagram as showing the outer shell. How many electrons should be shown in that shell?",
               "options": [
                 {
                   "label": "A",
-                  "text": "1"
+                  "text": "2"
                 },
                 {
                   "label": "B",
-                  "text": "2"
+                  "text": "6"
                 },
                 {
                   "label": "C",
@@ -13948,15 +13948,15 @@
                 },
                 {
                   "label": "E",
-                  "text": "13"
+                  "text": "14"
                 },
                 {
                   "label": "F",
-                  "text": "3"
+                  "text": "4"
                 }
               ],
               "answer": "F",
-              "explanation": "Its arrangement is 2,8,3. Atomic number gives total electrons in the neutral atom, not just outer-shell electrons."
+              "explanation": "The last number in 2,8,4 is the number of electrons in the outer shell."
             },
             {
               "id": "esat-p-chem-5-02",
@@ -14312,35 +14312,35 @@
               "number": 1,
               "topic": "C4.1",
               "difficulty": 1,
-              "stem": "Find the relative formula mass of Al₂O₃. Use Aᵣ(Al) = 27 and Aᵣ(O) = 16.",
+              "stem": "A label shows the formula X₂O₃ and a relative formula mass of 160. Given Aᵣ(O) = 16, what is Aᵣ(X)?",
               "options": [
                 {
                   "label": "A",
-                  "text": "43"
+                  "text": "48"
                 },
                 {
                   "label": "B",
-                  "text": "59"
+                  "text": "64"
                 },
                 {
                   "label": "C",
-                  "text": "70"
+                  "text": "72"
                 },
                 {
                   "label": "D",
-                  "text": "81"
+                  "text": "80"
                 },
                 {
                   "label": "E",
-                  "text": "102"
+                  "text": "56"
                 },
                 {
                   "label": "F",
-                  "text": "129"
+                  "text": "112"
                 }
               ],
               "answer": "E",
-              "explanation": "Two aluminium atoms contribute 54 and three oxygen atoms contribute 48. Do not multiply by the oxidation numbers separately."
+              "explanation": "The three oxygen atoms contribute 48. The two X atoms contribute 160 − 48 = 112, so each contributes 56."
             },
             {
               "id": "esat-p-chem-6-02",
@@ -14706,31 +14706,31 @@
               "number": 1,
               "topic": "C10.4",
               "difficulty": 1,
-              "stem": "Equal masses of marble powder and marble pieces react with excess dilute acid in separate flasks. Why does the powder initially react faster?",
+              "stem": "A class compares how quickly whole and crushed chalk react with excess acid. They intend to vary the surface area of the chalk only. Which pair of trials gives a fair comparison?",
               "options": [
                 {
                   "label": "A",
-                  "text": "It presents greater surface area to the acid."
+                  "text": "5 g whole and 5 g crushed, with the same acid volume, concentration and temperature."
                 },
                 {
                   "label": "B",
-                  "text": "Its particles have higher temperature."
+                  "text": "5 g whole and 10 g crushed, with the same acid conditions."
                 },
                 {
                   "label": "C",
-                  "text": "Its reaction has a different products list."
+                  "text": "5 g whole and 5 g crushed, with twice the acid concentration in the crushed trial."
                 },
                 {
                   "label": "D",
-                  "text": "Its carbonate ions have different formulas."
+                  "text": "5 g whole and 5 g crushed, with warmer acid in the whole trial."
                 },
                 {
                   "label": "E",
-                  "text": "It contains more moles because it is powdered."
+                  "text": "5 g whole and 5 g crushed, with twice the acid volume in the whole trial."
                 }
               ],
               "answer": "A",
-              "explanation": "More solid surface is exposed, raising the frequency of collisions at that surface. Powdering does not change the amount of carbonate."
+              "explanation": "Equal masses of the same material and identical acid conditions isolate the effect of changing the particle size, and hence the exposed surface area."
             },
             {
               "id": "esat-p-chem-7-02",
@@ -15086,35 +15086,35 @@
               "number": 1,
               "topic": "C13.3",
               "difficulty": 1,
-              "stem": "Which formula could represent an alkene with a single C=C and no rings?",
+              "stem": "A hydrocarbon molecule has four carbon atoms in an open chain. All its bonds are single except for one carbon–carbon double bond. How many hydrogen atoms does it contain?",
               "options": [
                 {
                   "label": "A",
-                  "text": "C₅H₁₂"
+                  "text": "4"
                 },
                 {
                   "label": "B",
-                  "text": "C₅H₁₃"
+                  "text": "6"
                 },
                 {
                   "label": "C",
-                  "text": "C₅H₁₀"
+                  "text": "8"
                 },
                 {
                   "label": "D",
-                  "text": "C₅H₁₄"
+                  "text": "9"
                 },
                 {
                   "label": "E",
-                  "text": "C₅H₁₆"
+                  "text": "10"
                 },
                 {
                   "label": "F",
-                  "text": "C₅H₂"
+                  "text": "12"
                 }
               ],
               "answer": "C",
-              "explanation": "An acyclic alkene with one double bond follows CₙH₂ₙ. C₅H₁₂ instead fits the saturated acyclic alkane."
+              "explanation": "An open-chain alkane with four carbon atoms has ten hydrogens. One carbon–carbon double bond reduces the number by two, to eight."
             },
             {
               "id": "esat-p-chem-8-02",
@@ -15472,31 +15472,31 @@
               "number": 1,
               "topic": "C2.4",
               "difficulty": 2,
-              "stem": "An atom has configuration 2,8,8,2. Which period and group is it in?",
+              "stem": "In order of increasing atomic number, element X comes immediately after the last element in period 3. Use group numbers 1–18. Where is X in the periodic table?",
               "options": [
                 {
                   "label": "A",
-                  "text": "Period 2, Group 4"
+                  "text": "Period 1, group 4"
                 },
                 {
                   "label": "B",
-                  "text": "Period 4, Group 2"
+                  "text": "Period 4, group 1"
                 },
                 {
                   "label": "C",
-                  "text": "Period 4, Group 18"
+                  "text": "Period 3, group 1"
                 },
                 {
                   "label": "D",
-                  "text": "Period 3, Group 2"
+                  "text": "Period 4, group 2"
                 },
                 {
                   "label": "E",
-                  "text": "Period 2, Group 18"
+                  "text": "Period 4, group 18"
                 }
               ],
               "answer": "B",
-              "explanation": "Four shells are occupied and two electrons are in the outer shell. Those give the period and group respectively."
+              "explanation": "After the last element of period 3, the next electron goes into a new outer shell. That puts X at the start of period 4, in group 1."
             },
             {
               "id": "esat-p-chem-9-02",
@@ -15852,35 +15852,35 @@
               "number": 1,
               "topic": "C4.3",
               "difficulty": 2,
-              "stem": "A sample contains 0.25 mol of calcium carbonate. Find its mass. Use Aᵣ(Ca)=40, Aᵣ(C)=12 and Aᵣ(O)=16.",
+              "stem": "A technician needs the same number of formula units in samples of sodium chloride and magnesium oxide. The sodium chloride sample has mass 117 g. The relative formula masses are 58.5 and 40 respectively. What mass of magnesium oxide is needed?",
               "options": [
                 {
                   "label": "A",
-                  "text": "10 g"
-                },
-                {
-                  "label": "B",
-                  "text": "15 g"
-                },
-                {
-                  "label": "C",
                   "text": "20 g"
                 },
                 {
-                  "label": "D",
+                  "label": "B",
                   "text": "40 g"
                 },
                 {
+                  "label": "C",
+                  "text": "58.5 g"
+                },
+                {
+                  "label": "D",
+                  "text": "97 g"
+                },
+                {
                   "label": "E",
-                  "text": "100 g"
+                  "text": "117 g"
                 },
                 {
                   "label": "F",
-                  "text": "25 g"
+                  "text": "80 g"
                 }
               ],
               "answer": "F",
-              "explanation": "Its molar mass is 100 g/mol; take one quarter of that. The three oxygen atoms all contribute."
+              "explanation": "There are 117 ÷ 58.5 = 2 mol of sodium chloride. Equal numbers of formula units require equal amounts in moles, so use 2 × 40 = 80 g of magnesium oxide."
             },
             {
               "id": "esat-p-chem-10-02",
@@ -16259,31 +16259,31 @@
               "number": 1,
               "topic": "C3.5",
               "difficulty": 2,
-              "stem": "At equilibrium in a sealed flask, what can be said about forward and reverse reaction rates?",
+              "stem": "In a sealed container a coloured reactant forms a colourless product in a reversible reaction. After a time, the colour intensity stops changing. The measured concentrations of reactant and product are both nonzero and unequal, and both reactions are still occurring. Which statement describes this state?",
               "options": [
                 {
                   "label": "A",
-                  "text": "Both rates are zero."
+                  "text": "The forward rate must be larger if there is more reactant."
                 },
                 {
                   "label": "B",
-                  "text": "They are equal."
+                  "text": "The rates are equal although the concentrations are unequal."
                 },
                 {
                   "label": "C",
-                  "text": "Only the forward reaction continues."
+                  "text": "The reverse rate must be larger if there is more product."
                 },
                 {
                   "label": "D",
-                  "text": "Only the reverse reaction continues."
+                  "text": "The concentrations must become equal before the rates can match."
                 },
                 {
                   "label": "E",
-                  "text": "The forward rate is always double."
+                  "text": "The rates alternate between zero and a positive value."
                 }
               ],
               "answer": "B",
-              "explanation": "Equilibrium is dynamic: both reactions continue, but equally fast. Amounts are constant, not necessarily equal."
+              "explanation": "A constant colour intensity here reflects constant composition. Continued interconversion at constant composition means the forward and reverse rates are equal, not that the concentrations are equal."
             },
             {
               "id": "esat-p-chem-11-02",
@@ -16644,31 +16644,31 @@
               "number": 1,
               "topic": "C16.1",
               "difficulty": 2,
-              "stem": "Which qualitative test uses limewater turning cloudy as its positive result?",
+              "stem": "A student expects a gas to contain carbon dioxide and tests it with fresh limewater. To rule out other causes of cloudiness, the student wants a negative control. Which procedure provides one?",
               "options": [
                 {
                   "label": "A",
-                  "text": "Hydrogen"
+                  "text": "Bubble the unknown gas through fresh limewater twice."
                 },
                 {
                   "label": "B",
-                  "text": "Carbon dioxide"
+                  "text": "Bubble a sample known to be free of carbon dioxide through fresh limewater under the same conditions."
                 },
                 {
                   "label": "C",
-                  "text": "Oxygen"
+                  "text": "Bubble a known sample of carbon dioxide through fresh limewater."
                 },
                 {
                   "label": "D",
-                  "text": "Water vapour"
+                  "text": "Bubble the unknown gas through pure water instead of limewater."
                 },
                 {
                   "label": "E",
-                  "text": "Nitrogen"
+                  "text": "Add a second portion of limewater to the cloudy result."
                 }
               ],
               "answer": "B",
-              "explanation": "Carbon dioxide forms solid calcium carbonate in limewater. Hydrogen is identified by a different test."
+              "explanation": "A matched gas known to lack carbon dioxide should not give the positive test. Testing known carbon dioxide instead is a positive control."
             },
             {
               "id": "esat-p-chem-12-02",
@@ -17432,35 +17432,35 @@
               "number": 2,
               "topic": "C3.2",
               "difficulty": 3,
-              "stem": "Find the formula of the neutral ionic compound formed by Al³⁺ and S²⁻.",
+              "stem": "An ionic compound contains only Mg²⁺ and N³⁻ ions. A student is drawing one formula unit, using the smallest possible electrically neutral group of these ions. Which group should be drawn?",
               "options": [
                 {
                   "label": "A",
-                  "text": "Al₃S₂"
+                  "text": "Two Mg²⁺ ions and three N³⁻ ions."
                 },
                 {
                   "label": "B",
-                  "text": "AlS"
+                  "text": "One Mg²⁺ ion and one N³⁻ ion."
                 },
                 {
                   "label": "C",
-                  "text": "Al₂S"
+                  "text": "Three Mg²⁺ ions and one N³⁻ ion."
                 },
                 {
                   "label": "D",
-                  "text": "AlS₂"
+                  "text": "One Mg²⁺ ion and two N³⁻ ions."
                 },
                 {
                   "label": "E",
-                  "text": "Al₂S₃"
+                  "text": "Three Mg²⁺ ions and two N³⁻ ions."
                 },
                 {
                   "label": "F",
-                  "text": "Al₃S₃"
+                  "text": "Six Mg²⁺ ions and four N³⁻ ions."
                 }
               ],
               "answer": "E",
-              "explanation": "Two aluminium ions supply +6 and three sulfide ions supply −6. The simplest neutral ratio is 2:3."
+              "explanation": "Three magnesium ions contribute +6 and two nitride ions contribute −6. The larger neutral group duplicates this smallest ratio."
             },
             {
               "id": "esat-p-chem-14-03",
@@ -17773,62 +17773,62 @@
               "number": 1,
               "topic": "C11.1",
               "difficulty": 2,
-              "stem": "A sealed reaction vessel becomes colder than the room as the reaction begins. Which energy description best fits the reaction?",
+              "stem": "An insulated cup contains water at 20 °C. After a solid dissolves, the solution stabilises at 16 °C. A separate thermometer confirms that the room stayed at 20 °C. Which statement describes the dissolving process?",
               "options": [
                 {
                   "label": "A",
-                  "text": "Exothermic"
+                  "text": "It is exothermic: energy is transferred from the dissolving process to the solution’s thermal store."
                 },
                 {
                   "label": "B",
-                  "text": "Neither: all reactions have zero energy change"
+                  "text": "It is endothermic: energy is transferred from the dissolving process to the solution’s thermal store."
                 },
                 {
                   "label": "C",
-                  "text": "Endothermic"
+                  "text": "It is endothermic: energy is transferred from the solution’s thermal store to the dissolving process."
                 },
                 {
                   "label": "D",
-                  "text": "Exothermic because the vessel turns cold"
+                  "text": "It is exothermic because the room is warmer than the final solution."
                 },
                 {
                   "label": "E",
-                  "text": "It cannot absorb or transfer heat"
+                  "text": "The constant room temperature means the dissolving has no energy change."
                 }
               ],
               "answer": "C",
-              "explanation": "Cooling indicates the process takes thermal energy from its surroundings. That is an endothermic change."
+              "explanation": "The temperature of the solution falls in the insulated cup, so its thermal store decreases. The dissolving takes in energy and is endothermic."
             },
             {
               "id": "esat-p-chem-15-02",
               "number": 2,
               "topic": "C10.5",
               "difficulty": 3,
-              "stem": "Why does increasing temperature usually increase the proportion of successful collisions?",
+              "stem": "A student says a reaction goes faster at higher temperature only because particles collide more often. Which observation best shows why that explanation is incomplete?",
               "options": [
                 {
                   "label": "A",
-                  "text": "Each particle becomes a catalyst."
+                  "text": "The concentration of the reactants is unchanged when heated."
                 },
                 {
                   "label": "B",
-                  "text": "More particles have at least the activation energy."
+                  "text": "The fraction of collisions with energy at least equal to the activation energy increases."
                 },
                 {
                   "label": "C",
-                  "text": "The reactants all gain electrons."
+                  "text": "The same products form at both temperatures."
                 },
                 {
                   "label": "D",
-                  "text": "The activation energy necessarily rises."
+                  "text": "The particles collide more often at the higher temperature."
                 },
                 {
                   "label": "E",
-                  "text": "The reaction stops requiring collisions."
+                  "text": "The activation energy is identical at both temperatures."
                 }
               ],
               "answer": "B",
-              "explanation": "A hotter system has a higher fraction of particles with enough energy to overcome the barrier. Temperature does not by itself lower the barrier."
+              "explanation": "More frequent collisions are only part of the explanation. At higher temperature a greater fraction of collisions have enough energy to react, even though the activation energy itself does not change."
             },
             {
               "id": "esat-p-chem-15-03",
@@ -19347,35 +19347,35 @@
               "number": 3,
               "topic": "B9.2",
               "difficulty": 1,
-              "stem": "In a healthy lung, what is the net movement of carbon dioxide across the surface of an alveolus?",
+              "stem": "In a model alveolus the carbon dioxide concentration is higher in the passing blood than in the air space. The separating surface is thin and permeable. Which observation is consistent with diffusion?",
               "options": [
                 {
                   "label": "A",
-                  "text": "From the alveolar air into the capillary blood"
+                  "text": "The blood gains carbon dioxide as it passes the air space."
                 },
                 {
                   "label": "B",
-                  "text": "From an alveolus into the heart without entering blood"
+                  "text": "Carbon dioxide moves across in only one direction at the molecular level."
                 },
                 {
                   "label": "C",
-                  "text": "From the capillary blood into the alveolar air"
+                  "text": "The blood loses carbon dioxide as it passes the air space."
                 },
                 {
                   "label": "D",
-                  "text": "From the alveolar air into the stomach"
+                  "text": "Carbon dioxide moves only if the surface uses ATP."
                 },
                 {
                   "label": "E",
-                  "text": "From the capillary blood to the alveolar air only by active transport"
+                  "text": "The two concentrations move further apart because of diffusion."
                 },
                 {
                   "label": "F",
-                  "text": "No net movement"
+                  "text": "There is no net movement because the surface is thin."
                 }
               ],
               "answer": "C",
-              "explanation": "The net diffusion of carbon dioxide is from the blood into the alveolus, so it can be exhaled. Oxygen normally diffuses in the opposite direction."
+              "explanation": "The net movement is from higher to lower concentration. Carbon dioxide therefore leaves the blood and enters the air space."
             },
             {
               "id": "esat-p-bio-3-04",
@@ -20008,31 +20008,31 @@
               "number": 1,
               "topic": "B1.2",
               "difficulty": 1,
-              "stem": "In a typical bacterial cell, where is the main chromosome found?",
+              "stem": "A diagram shows a bacterium with a single main chromosome, a membrane, a cell wall and ribosomes. A student wants to add a nucleus and put the chromosome inside it. Why should the student leave the nucleus out?",
               "options": [
                 {
                   "label": "A",
-                  "text": "Inside a membrane-bound nucleus"
+                  "text": "A bacterium’s DNA is all stored inside its ribosomes."
                 },
                 {
                   "label": "B",
-                  "text": "Inside a mitochondrion"
+                  "text": "Only the cell wall contains the bacterium’s DNA."
                 },
                 {
                   "label": "C",
-                  "text": "Within the cell wall"
+                  "text": "The chromosome is part of the cell membrane."
                 },
                 {
                   "label": "D",
-                  "text": "Inside a chloroplast"
+                  "text": "A bacterium contains no DNA."
                 },
                 {
                   "label": "E",
-                  "text": "In the cytoplasm, not inside a nucleus"
+                  "text": "A bacterium’s main chromosome lies in its cytoplasm without a surrounding nuclear membrane."
                 }
               ],
               "answer": "E",
-              "explanation": "A bacterial cell has chromosomal DNA, but lacks a membrane-bound nucleus. The cell wall is outside the membrane and does not contain the chromosome."
+              "explanation": "Bacterial cells lack a membrane-bound nucleus. Their main chromosome lies in a region of the cytoplasm."
             },
             {
               "id": "esat-p-bio-5-02",
@@ -20396,35 +20396,35 @@
               "number": 1,
               "topic": "B4.2",
               "difficulty": 1,
-              "stem": "An organism has two different alleles at one locus. What term describes its genotype at that locus?",
+              "stem": "A diagram labels the two copies of a gene at the same locus as A and a. The organism looks identical to one with genotype AA. What can be concluded about the A and a individual at this locus?",
               "options": [
                 {
                   "label": "A",
-                  "text": "Homozygous"
+                  "text": "It is homozygous because it looks like the AA individual."
                 },
                 {
                   "label": "B",
-                  "text": "Haploid"
+                  "text": "It has only one copy of the gene."
                 },
                 {
                   "label": "C",
-                  "text": "Recessive"
+                  "text": "It has two copies of allele A."
                 },
                 {
                   "label": "D",
-                  "text": "Heterozygous"
+                  "text": "It is heterozygous regardless of its appearance."
                 },
                 {
                   "label": "E",
-                  "text": "Asexual"
+                  "text": "It has two different genes at the locus."
                 },
                 {
                   "label": "F",
-                  "text": "Polyploid"
+                  "text": "Its genotype cannot be described unless its offspring are examined."
                 }
               ],
               "answer": "D",
-              "explanation": "Two different alleles make the genotype heterozygous. Recessive describes an allele’s relationship to another, not the presence of two different alleles."
+              "explanation": "A and a are different alleles of the same gene. Having one of each is heterozygosity; identical appearance does not imply identical genotype."
             },
             {
               "id": "esat-p-bio-6-02",
@@ -20813,35 +20813,35 @@
               "number": 2,
               "topic": "B9.2",
               "difficulty": 1,
-              "stem": "What is a principal role of haemoglobin in red blood cells?",
+              "stem": "Two equal volumes of blood have the same percentage oxygen saturation. Sample X contains half as much haemoglobin as sample Y. Ignore dissolved oxygen. How does the amount of oxygen carried by X compare with Y?",
               "options": [
                 {
                   "label": "A",
-                  "text": "Digesting fats"
+                  "text": "X carries the same amount of oxygen."
                 },
                 {
                   "label": "B",
-                  "text": "Producing platelets"
+                  "text": "X carries twice as much oxygen."
                 },
                 {
                   "label": "C",
-                  "text": "Making blood clot directly"
+                  "text": "X carries one quarter as much oxygen."
                 },
                 {
                   "label": "D",
-                  "text": "Filtering glucose"
+                  "text": "X cannot carry any oxygen."
                 },
                 {
                   "label": "E",
-                  "text": "Binding oxygen for transport"
+                  "text": "X carries half as much oxygen."
                 },
                 {
                   "label": "F",
-                  "text": "Carrying nerve impulses"
+                  "text": "X carries more than Y, but less than twice as much."
                 }
               ],
               "answer": "E",
-              "explanation": "Haemoglobin binds oxygen reversibly, releasing it where needed. Clotting is a different function involving platelets and clotting factors."
+              "explanation": "Equal percentage saturation means the same fraction of the oxygen-binding sites is occupied. Half as much haemoglobin therefore carries half as much oxygen."
             },
             {
               "id": "esat-p-bio-7-03",
@@ -21158,35 +21158,35 @@
               "number": 1,
               "topic": "B11.2",
               "difficulty": 1,
-              "stem": "Which tissue translocates sucrose from a mature leaf to a growing root?",
+              "stem": "A mature leaf makes sugars in daylight. A nearby developing seed accumulates some of those sugars. Which route explains the transfer from the leaf to the seed?",
               "options": [
                 {
                   "label": "A",
-                  "text": "Xylem"
+                  "text": "Transport in the xylem from leaf to seed."
                 },
                 {
                   "label": "B",
-                  "text": "Root hair"
+                  "text": "Diffusion through air from leaf to seed."
                 },
                 {
                   "label": "C",
-                  "text": "Stomata"
+                  "text": "Transport in the phloem from seed to leaf."
                 },
                 {
                   "label": "D",
-                  "text": "Phloem"
+                  "text": "Transport in the phloem from leaf to seed."
                 },
                 {
                   "label": "E",
-                  "text": "Epidermis"
+                  "text": "Transport in the xylem from seed to leaf."
                 },
                 {
                   "label": "F",
-                  "text": "Guard cell"
+                  "text": "Evaporation of sugars at the leaf and condensation at the seed."
                 }
               ],
               "answer": "D",
-              "explanation": "Phloem translocates sugars from sources such as leaves to sinks such as growing roots. Xylem primarily transports water and mineral ions."
+              "explanation": "The mature leaf is a sugar source and the growing seed is a sink. Sugars are translocated from source to sink in the phloem."
             },
             {
               "id": "esat-p-bio-8-02",
@@ -21259,43 +21259,43 @@
               "number": 4,
               "topic": "B10.3",
               "difficulty": 3,
-              "stem": "Six quadrats of area 0.5 m² contain 3, 5, 2, 4, 1 and 3 seedlings. Which row gives estimated density (seedlings/m²); estimated count in 40 m² at that density?",
+              "stem": "A student takes five equal-area quadrats in each of two habitats. The mean is 6 seedlings per quadrat in habitat A and 2 in habitat B. The quadrat area is 0.5 m²; habitats A and B are 5 m² and 15 m² respectively. Which row gives the estimated numbers of seedlings in A and B?",
               "options": [
                 {
                   "label": "A",
-                  "text": "3; 120"
+                  "text": "30; 30"
                 },
                 {
                   "label": "B",
-                  "text": "3; 240"
+                  "text": "30; 60"
                 },
                 {
                   "label": "C",
-                  "text": "6; 120"
+                  "text": "60; 30"
                 },
                 {
                   "label": "D",
-                  "text": "6; 480"
+                  "text": "12; 4"
                 },
                 {
                   "label": "E",
-                  "text": "18; 720"
+                  "text": "60; 20"
                 },
                 {
                   "label": "F",
-                  "text": "36; 1440"
+                  "text": "120; 120"
                 },
                 {
                   "label": "G",
-                  "text": "9; 360"
+                  "text": "20; 60"
                 },
                 {
                   "label": "H",
-                  "text": "6; 240"
+                  "text": "60; 60"
                 }
               ],
               "answer": "H",
-              "explanation": "The count is 18 over 3 m², giving 6 per m². Multiply density, not the average count per quadrat, by 40 m²."
+              "explanation": "The densities are 6 ÷ 0.5 = 12 and 2 ÷ 0.5 = 4 seedlings per m². Multiply by 5 and 15 respectively to estimate 60 seedlings in each habitat."
             },
             {
               "id": "esat-p-bio-8-05",
@@ -21539,31 +21539,31 @@
               "number": 1,
               "topic": "B1.1",
               "difficulty": 2,
-              "stem": "Which cell component separates cytoplasm from the fluid surrounding an animal cell?",
+              "stem": "Two cells are observed after a dissolved dye is added outside them. The dye cannot cross an intact cell surface membrane. Cell X stays clear; cell Y gradually becomes coloured throughout its cytoplasm. Which conclusion is directly supported?",
               "options": [
                 {
                   "label": "A",
-                  "text": "Cell wall"
+                  "text": "Cell X has no cell surface membrane."
                 },
                 {
                   "label": "B",
-                  "text": "Cell membrane"
+                  "text": "Cell Y no longer has an effective membrane barrier to the dye."
                 },
                 {
                   "label": "C",
-                  "text": "Nucleus"
+                  "text": "Cell Y must lack a nucleus."
                 },
                 {
                   "label": "D",
-                  "text": "Mitochondrion"
+                  "text": "Both cells have concentrated the dye by osmosis."
                 },
                 {
                   "label": "E",
-                  "text": "Large central vacuole"
+                  "text": "The difference proves that cell X has a cell wall."
                 }
               ],
               "answer": "B",
-              "explanation": "The cell membrane encloses the cytoplasm and controls exchange. Animal cells do not normally have a cell wall."
+              "explanation": "The dye entered Y’s cytoplasm despite normally being unable to cross an intact membrane. This shows that the barrier to the dye is no longer effective in Y."
             },
             {
               "id": "esat-p-bio-9-02",
@@ -22011,43 +22011,43 @@
               "number": 4,
               "topic": "B4.3",
               "difficulty": 4,
-              "stem": "Black coat B is completely dominant to b. Two black parents have a white offspring. Which row gives the parents’ genotypes; the next offspring’s probability of being white?",
+              "stem": "In a plant, round seeds (R) are completely dominant to wrinkled seeds (r). A round-seeded plant is crossed with a wrinkled-seeded plant. Exactly one of their first two offspring has wrinkled seeds. Assume independent inheritance. What is the round parent’s genotype, and what is the probability that the next two offspring are both round-seeded?",
               "options": [
                 {
                   "label": "A",
-                  "text": "BB and Bb; 1/4"
+                  "text": "Rr; 1/2"
                 },
                 {
                   "label": "B",
-                  "text": "Bb and Bb; 1/2"
+                  "text": "Rr; 3/4"
                 },
                 {
                   "label": "C",
-                  "text": "BB and BB; 1/4"
+                  "text": "Rr; 1/8"
                 },
                 {
                   "label": "D",
-                  "text": "Bb and bb; 1/2"
+                  "text": "RR; 1"
                 },
                 {
                   "label": "E",
-                  "text": "Bb and Bb; 3/4"
+                  "text": "RR; 1/16"
                 },
                 {
                   "label": "F",
-                  "text": "BB and Bb; 0"
+                  "text": "RR; 1/3"
                 },
                 {
                   "label": "G",
-                  "text": "bb and bb; 1"
+                  "text": "rr; 0"
                 },
                 {
                   "label": "H",
-                  "text": "Bb and Bb; 1/4"
+                  "text": "Rr; 1/4"
                 }
               ],
               "answer": "H",
-              "explanation": "White offspring must be bb, requiring one b from each black parent. Both are Bb, and the previous outcome does not change the next cross."
+              "explanation": "A wrinkled offspring got an r allele from each parent, so the round parent is Rr. Each offspring independently has probability 1/2 of being round, so the probability that both are round is 1/4."
             },
             {
               "id": "esat-p-bio-10-05",
@@ -22665,31 +22665,31 @@
               "number": 1,
               "topic": "B11.2",
               "difficulty": 2,
-              "stem": "Which tissue carries water from root to leaf in a flowering plant?",
+              "stem": "A cut leafy stalk is stood in coloured water. Later, the colour appears in narrow tubes in the stalk and in some veins of the leaf. Which tissue has the dye most directly traced?",
               "options": [
                 {
                   "label": "A",
-                  "text": "Phloem"
+                  "text": "Phloem, which carries water and mineral ions up from roots."
                 },
                 {
                   "label": "B",
-                  "text": "Xylem"
+                  "text": "Xylem, which carries water up to leaves."
                 },
                 {
                   "label": "C",
-                  "text": "Palisade mesophyll"
+                  "text": "Phloem, which carries sugars away from leaves."
                 },
                 {
                   "label": "D",
-                  "text": "Cuticle"
+                  "text": "Epidermis, which transports water between organs."
                 },
                 {
                   "label": "E",
-                  "text": "Guard cell"
+                  "text": "Guard cells, which transport sugars from roots to leaves."
                 }
               ],
               "answer": "B",
-              "explanation": "Water and mineral ions are transported in xylem. Phloem chiefly translocates assimilates such as sucrose."
+              "explanation": "The dye travels with the water through the continuous xylem vessels from the cut stalk into the leaf veins."
             },
             {
               "id": "esat-p-bio-12-02",
@@ -22727,31 +22727,31 @@
               "number": 3,
               "topic": "B10.3",
               "difficulty": 3,
-              "stem": "What is the main reason for placing quadrats at randomly selected positions when estimating plant abundance?",
+              "stem": "A field is half shaded and half sunny. A class wants to estimate the mean number of daisies per square metre, making sure both parts are represented. It will combine twelve equal-sized quadrats by taking their simple mean. Which sampling plan best meets these requirements?",
               "options": [
                 {
                   "label": "A",
-                  "text": "It guarantees the same count in every quadrat."
+                  "text": "Randomly choose eight positions in shade and four in sun."
                 },
                 {
                   "label": "B",
-                  "text": "It makes the plants move into each quadrat."
+                  "text": "Choose six places with visible daisies within each half."
                 },
                 {
                   "label": "C",
-                  "text": "It means no area measurement is needed."
+                  "text": "Choose twelve positions at random within the sunny half."
                 },
                 {
                   "label": "D",
-                  "text": "It reduces bias towards particular positions."
+                  "text": "Choose six quadrat positions at random within each half."
                 },
                 {
                   "label": "E",
-                  "text": "It automatically makes every estimate exact."
+                  "text": "Place all twelve quadrats along the shade boundary."
                 }
               ],
               "answer": "D",
-              "explanation": "Random positions avoid deliberate or unconscious selection of dense or sparse patches. Sampling variation can still remain."
+              "explanation": "Splitting the sample equally matches the two equal areas, so neither half receives disproportionate weight in the simple mean. Random selection within each half avoids favouring conspicuous patches."
             },
             {
               "id": "esat-p-bio-12-04",
@@ -23457,31 +23457,31 @@
               "number": 2,
               "topic": "B4.3",
               "difficulty": 3,
-              "stem": "A dominant allele D masks d. Which mating tests whether a dominant-looking parent is DD or Dd by allowing recessive offspring in only one case?",
+              "stem": "Purple pods (P) are completely dominant to green pods (p). Plant X has purple pods, and a grower crosses it with a green-podded plant. All 12 offspring have purple pods. Which conclusion is justified?",
               "options": [
                 {
                   "label": "A",
-                  "text": "Mate it with DD."
+                  "text": "X must be PP because no green offspring were observed."
                 },
                 {
                   "label": "B",
-                  "text": "Mate it with itself only if it is DD."
+                  "text": "X must be Pp because its partner was pp."
                 },
                 {
                   "label": "C",
-                  "text": "Mate it with any parent known to carry no d."
+                  "text": "X must be pp because the partner contributed p."
                 },
                 {
                   "label": "D",
-                  "text": "Cross two unrelated DD individuals."
+                  "text": "The offspring could be PP or pp but cannot be Pp."
                 },
                 {
                   "label": "E",
-                  "text": "Mate it with dd."
+                  "text": "X could be PP or Pp; the result does not rule out Pp."
                 }
               ],
               "answer": "E",
-              "explanation": "A dd tester always supplies d. Any dd offspring must receive the second d from the parent being tested."
+              "explanation": "With a pp partner, all offspring of PP are purple. If X is Pp, purple occurs with probability 1/2 each time, so 12 purple offspring can still occur by chance."
             },
             {
               "id": "esat-p-bio-14-03",
@@ -23788,31 +23788,31 @@
               "number": 1,
               "topic": "B9.2",
               "difficulty": 2,
-              "stem": "Which blood component is chiefly responsible for carrying oxygen?",
+              "stem": "A diagram shows a red blood cell moving through first a lung capillary and then a capillary beside an actively respiring muscle. Where does the cell tend to load and unload oxygen?",
               "options": [
                 {
                   "label": "A",
-                  "text": "Platelets"
+                  "text": "It binds to haemoglobin at the muscle and is released at the lung."
                 },
                 {
                   "label": "B",
-                  "text": "Lymphocytes"
+                  "text": "It stays bound to haemoglobin in both locations."
                 },
                 {
                   "label": "C",
-                  "text": "Red blood cells"
+                  "text": "It binds to haemoglobin at the lung and is released near the muscle."
                 },
                 {
                   "label": "D",
-                  "text": "Fibrin fibres"
+                  "text": "It is carried mainly by the cell’s nucleus and released near the muscle."
                 },
                 {
                   "label": "E",
-                  "text": "Digestive enzymes"
+                  "text": "It is made by the cell at the lung and destroyed at the muscle."
                 }
               ],
               "answer": "C",
-              "explanation": "Haemoglobin in red blood cells binds oxygen. Platelets help blood clot instead."
+              "explanation": "Haemoglobin loads oxygen where oxygen concentration is high in the lungs and releases it where the concentration is lower near respiring tissues."
             },
             {
               "id": "esat-p-bio-15-02",
@@ -24149,31 +24149,31 @@
               "number": 1,
               "topic": "B11.1",
               "difficulty": 2,
-              "stem": "Which gas is taken up as a raw material for photosynthesis?",
+              "stem": "Part of a leaf is exposed to light, but the air contacting that part has had its carbon dioxide removed. The rest receives air containing carbon dioxide in otherwise identical conditions. Why is the first part expected to make less sugar?",
               "options": [
                 {
                   "label": "A",
-                  "text": "Oxygen"
+                  "text": "It lacks oxygen for photosynthesis because no carbon dioxide is present."
                 },
                 {
                   "label": "B",
-                  "text": "Carbon dioxide"
+                  "text": "It lacks the carbon dioxide that supplies carbon to photosynthesis."
                 },
                 {
                   "label": "C",
-                  "text": "Nitrogen"
+                  "text": "It lacks the light energy required for photosynthesis."
                 },
                 {
                   "label": "D",
-                  "text": "Hydrogen"
+                  "text": "Its water is converted into carbon dioxide instead of sugar."
                 },
                 {
                   "label": "E",
-                  "text": "Methane"
+                  "text": "Its chlorophyll cannot absorb light unless sugars arrive from the roots."
                 }
               ],
               "answer": "B",
-              "explanation": "Carbon dioxide supplies carbon for the sugars made in photosynthesis. Oxygen is released overall when photosynthesis dominates."
+              "explanation": "Photosynthesis uses carbon dioxide as the carbon source for sugars. Both parts receive light, so reduced carbon dioxide availability explains the difference."
             },
             {
               "id": "esat-p-bio-16-02",
@@ -24905,35 +24905,35 @@
               "number": 1,
               "topic": "MM3.1",
               "difficulty": 3,
-              "stem": "The perpendicular bisector of A(−2, 3) and B(4, 7) crosses the x-axis at P. Find the x-coordinate of P.",
+              "stem": "A line segment has endpoints (1, 2) and (7, 6). Possible sites for a transmitter are P(6, 1), Q(2, 7) and R(3, 6). Which sites are equidistant from the two endpoints?",
               "options": [
                 {
                   "label": "A",
-                  "text": "−13/3"
+                  "text": "P only"
                 },
                 {
                   "label": "B",
-                  "text": "13/3"
+                  "text": "P and Q only"
                 },
                 {
                   "label": "C",
-                  "text": "−7/3"
+                  "text": "Q only"
                 },
                 {
                   "label": "D",
-                  "text": "1"
+                  "text": "R only"
                 },
                 {
                   "label": "E",
-                  "text": "3"
+                  "text": "P and R only"
                 },
                 {
                   "label": "F",
-                  "text": "17/2"
+                  "text": "Q and R only"
                 }
               ],
               "answer": "B",
-              "explanation": "The midpoint is (1, 5) and AB has slope 2/3, so the bisector has slope −3/2. Set y = 0 in y − 5 = −3(x − 1)/2."
+              "explanation": "The perpendicular bisector passes through (4, 4) and has gradient −3/2. P and Q satisfy y − 4 = −3(x − 4)/2. At x = 3, the bisector has y = 5.5, not 6."
             },
             {
               "id": "esat-p-m2-2-02",
@@ -26347,35 +26347,35 @@
               "number": 10,
               "topic": "MM1.5",
               "difficulty": 4,
-              "stem": "How many integers x satisfy x² − 3x < 18 and x² ≥ 4?",
+              "stem": "A sign diagram is used to solve (x + 2)/(x² − 9) ≤ 0. Which intervals, together, describe the solution?",
               "options": [
                 {
                   "label": "A",
-                  "text": "2"
+                  "text": "x ≤ −3 or −2 ≤ x ≤ 3"
                 },
                 {
                   "label": "B",
-                  "text": "3"
+                  "text": "−3 < x ≤ −2 or x > 3"
                 },
                 {
                   "label": "C",
-                  "text": "4"
+                  "text": "x < −3 or −2 < x < 3"
                 },
                 {
                   "label": "D",
-                  "text": "6"
+                  "text": "−3 < x < 3"
                 },
                 {
                   "label": "E",
-                  "text": "7"
+                  "text": "x ≤ −2 or x > 3"
                 },
                 {
                   "label": "F",
-                  "text": "5"
+                  "text": "x < −3 or −2 ≤ x < 3"
                 }
               ],
               "answer": "F",
-              "explanation": "The first inequality gives −3 < x < 6. Keep x ≤ −2 or x ≥ 2 for the second, giving −2, 2, 3, 4 and 5."
+              "explanation": "The denominator is positive outside (−3, 3) and negative inside it, and x = ±3 is excluded. The numerator switches from negative to positive at −2, where the fraction is zero. The fraction is therefore nonpositive exactly for x < −3 or −2 ≤ x < 3."
             }
           ]
         },
@@ -26794,27 +26794,27 @@
               "number": 1,
               "topic": "MM4.3",
               "difficulty": 1,
-              "stem": "Evaluate sin(7π/6).",
+              "stem": "An indicator travels anticlockwise around a unit circle from the point (1, 0). It turns through 5π/6 radians. What is its vertical coordinate?",
               "options": [
                 {
                   "label": "A",
-                  "text": "−√3/2"
+                  "text": "−1/2"
                 },
                 {
                   "label": "B",
-                  "text": "0"
-                },
-                {
-                  "label": "C",
-                  "text": "1/2"
-                },
-                {
-                  "label": "D",
                   "text": "√3/2"
                 },
                 {
+                  "label": "C",
+                  "text": "−√3/2"
+                },
+                {
+                  "label": "D",
+                  "text": "0"
+                },
+                {
                   "label": "E",
-                  "text": "−1/2"
+                  "text": "1/2"
                 },
                 {
                   "label": "F",
@@ -26822,7 +26822,7 @@
                 }
               ],
               "answer": "E",
-              "explanation": "The reference angle is π/6 in the third quadrant. Sine is negative there, unlike sine at π/6."
+              "explanation": "The vertical coordinate is sin(5π/6). Its reference angle is π/6, and sine is positive there, so the coordinate is 1/2."
             },
             {
               "id": "esat-p-m2-7-02",
@@ -27098,35 +27098,35 @@
               "number": 9,
               "topic": "MM4.6",
               "difficulty": 3,
-              "stem": "How many distinct x in 0 ≤ x < 2π satisfy (2 cos x + 1)(sin x − 1) = 0?",
+              "stem": "A student solving 2 sin x cos x = cos x on 0 ≤ x < 2π divides both sides by cos x. Which solution set is lost by this step?",
               "options": [
                 {
                   "label": "A",
-                  "text": "0"
+                  "text": "{π/6, 5π/6}"
                 },
                 {
                   "label": "B",
-                  "text": "3"
+                  "text": "{π/2, 3π/2}"
                 },
                 {
                   "label": "C",
-                  "text": "1"
+                  "text": "{0, π}"
                 },
                 {
                   "label": "D",
-                  "text": "2"
+                  "text": "{π/2}"
                 },
                 {
                   "label": "E",
-                  "text": "4"
+                  "text": "{3π/2}"
                 },
                 {
                   "label": "F",
-                  "text": "5"
+                  "text": "No solutions are lost."
                 }
               ],
               "answer": "B",
-              "explanation": "The first factor vanishes twice, at 2π/3 and 4π/3. The second vanishes only at π/2, which does not overlap either solution."
+              "explanation": "Dividing by cos x discards cases where cos x = 0. These are π/2 and 3π/2 in the interval, and at both points the original equation reads 0 = 0."
             },
             {
               "id": "esat-p-m2-7-10",
@@ -27185,35 +27185,35 @@
               "number": 1,
               "topic": "MM7.2",
               "difficulty": 2,
-              "stem": "Which is an antiderivative of 6x² − 4x?",
+              "stem": "Two functions R and S have derivatives R′(x) = 6x and S′(x) = 6x + 4. They have the same value at x = 1. Which expression gives S(x) − R(x)?",
               "options": [
                 {
                   "label": "A",
-                  "text": "6x³ − 4x²"
+                  "text": "4x"
                 },
                 {
                   "label": "B",
-                  "text": "2x³ − 2x²"
+                  "text": "4(x − 1)"
                 },
                 {
                   "label": "C",
-                  "text": "2x³ − 4x²"
+                  "text": "4(x + 1)"
                 },
                 {
                   "label": "D",
-                  "text": "3x² − 2x"
+                  "text": "4"
                 },
                 {
                   "label": "E",
-                  "text": "12x − 4"
+                  "text": "0"
                 },
                 {
                   "label": "F",
-                  "text": "2x³ − 2x"
+                  "text": "4(1 − x)"
                 }
               ],
               "answer": "B",
-              "explanation": "Increase each exponent and divide its coefficient by the new exponent. In particular, −4x integrates to −2x²."
+              "explanation": "The derivative of S − R is 4, so S − R = 4x + C. At x = 1 the difference vanishes, so C = −4."
             },
             {
               "id": "esat-p-m2-8-02",
@@ -27584,31 +27584,31 @@
               "number": 1,
               "topic": "MM1.1",
               "difficulty": 1,
-              "stem": "What is 81^(−3/4)?",
+              "stem": "A square has area 2¹² cm². A cube has volume 2¹² cm³. The side length of the square is how many times the side length of the cube?",
               "options": [
                 {
                   "label": "A",
-                  "text": "1/27"
+                  "text": "4"
                 },
                 {
                   "label": "B",
-                  "text": "1/3"
+                  "text": "2"
                 },
                 {
                   "label": "C",
-                  "text": "1/9"
+                  "text": "8"
                 },
                 {
                   "label": "D",
-                  "text": "1/81"
+                  "text": "16"
                 },
                 {
                   "label": "E",
-                  "text": "27"
+                  "text": "64"
                 }
               ],
               "answer": "A",
-              "explanation": "The fourth root of 81 is 3. A negative exponent gives the reciprocal of its cube."
+              "explanation": "The square root gives side 2⁶ cm and the cube root gives side 2⁴ cm. Their ratio is 2² = 4."
             },
             {
               "id": "esat-p-m2-9-02",
@@ -27972,35 +27972,35 @@
               "number": 1,
               "topic": "MM2.2",
               "difficulty": 2,
-              "stem": "Find 11 + 14 + 17 + 20 + 23 + 26.",
+              "stem": "An arithmetic sequence has six terms, all positive, with last term 23. The terms add to 108. What is the first term?",
               "options": [
                 {
                   "label": "A",
-                  "text": "100"
+                  "text": "5"
                 },
                 {
                   "label": "B",
-                  "text": "108"
+                  "text": "9"
                 },
                 {
                   "label": "C",
-                  "text": "114"
+                  "text": "11"
                 },
                 {
                   "label": "D",
-                  "text": "111"
+                  "text": "13"
                 },
                 {
                   "label": "E",
-                  "text": "120"
+                  "text": "15"
                 },
                 {
                   "label": "F",
-                  "text": "132"
+                  "text": "18"
                 }
               ],
               "answer": "D",
-              "explanation": "Pair first with last, then second with penultimate. There are three pairs of 37."
+              "explanation": "The mean of the six terms is 108 ÷ 6 = 18, also the mean of the two end terms. So the first term is 36 − 23 = 13."
             },
             {
               "id": "esat-p-m2-10-02",
@@ -28190,35 +28190,35 @@
               "number": 7,
               "topic": "MM2.1",
               "difficulty": 4,
-              "stem": "A sequence starts at u₁ = 19 and satisfies uₙ₊₁ = (uₙ + 5)/2. Find the first index with uₙ < 6.",
+              "stem": "For a real sequence, u₁ > 3 and uₙ₊₁ = (uₙ + 6)/3. What can be proved about the difference uₙ − 3?",
               "options": [
                 {
                   "label": "A",
-                  "text": "3"
+                  "text": "It stays positive and it decreases by 3 at every step."
                 },
                 {
                   "label": "B",
-                  "text": "4"
+                  "text": "It stays positive and it is multiplied by 3 at every step."
                 },
                 {
                   "label": "C",
-                  "text": "6"
+                  "text": "It changes sign and its magnitude is divided by 3 at every step."
                 },
                 {
                   "label": "D",
-                  "text": "5"
+                  "text": "It stays positive and it is divided by 3 at every step."
                 },
                 {
                   "label": "E",
-                  "text": "7"
+                  "text": "It reaches zero after exactly three steps."
                 },
                 {
                   "label": "F",
-                  "text": "8"
+                  "text": "It is constant."
                 }
               ],
               "answer": "D",
-              "explanation": "The excess above 5 halves each time, starting at 14. At n = 4 it is 7/4, and at n = 5 it is 7/8, the first below 1."
+              "explanation": "Subtract 3 from the recurrence to get uₙ₊₁ − 3 = (uₙ − 3)/3. Since the first difference is positive, every subsequent difference is positive and one third as large as the previous one."
             },
             {
               "id": "esat-p-m2-10-08",
@@ -28371,7 +28371,7 @@
               "number": 1,
               "topic": "MM4.3",
               "difficulty": 1,
-              "stem": "What is cos(π/6)?",
+              "stem": "A line from the origin has length 2 and makes an angle π/3 with the positive x-axis. What is the x-coordinate of its other endpoint?",
               "options": [
                 {
                   "label": "A",
@@ -28379,7 +28379,7 @@
                 },
                 {
                   "label": "B",
-                  "text": "√2/2"
+                  "text": "√3/2"
                 },
                 {
                   "label": "C",
@@ -28387,15 +28387,15 @@
                 },
                 {
                   "label": "D",
-                  "text": "0"
+                  "text": "2"
                 },
                 {
                   "label": "E",
-                  "text": "√3/2"
+                  "text": "1"
                 }
               ],
               "answer": "E",
-              "explanation": "Cosine of 30° is √3/2. The 1/2 value belongs to sine at that angle."
+              "explanation": "Its horizontal projection has length 2 cos(π/3) = 2 × 1/2 = 1."
             },
             {
               "id": "esat-p-m2-11-02",
@@ -28775,35 +28775,35 @@
               "number": 1,
               "topic": "MM7.2",
               "difficulty": 1,
-              "stem": "The function f(x) = kx⁴ has derivative 12x³. Find k.",
+              "stem": "For every x, a function F has derivative x³. The function G is defined by G(x) = F(x) + 5. Which is an expression for G(x) − G(0)?",
               "options": [
                 {
                   "label": "A",
-                  "text": "4"
+                  "text": "x⁴"
                 },
                 {
                   "label": "B",
-                  "text": "12"
+                  "text": "4x⁴"
                 },
                 {
                   "label": "C",
-                  "text": "3"
+                  "text": "x⁴/4"
                 },
                 {
                   "label": "D",
-                  "text": "36"
+                  "text": "x⁴/4 + 5"
                 },
                 {
                   "label": "E",
-                  "text": "1/3"
+                  "text": "x³/3"
                 },
                 {
                   "label": "F",
-                  "text": "48"
+                  "text": "x⁴/4 − 5"
                 }
               ],
               "answer": "C",
-              "explanation": "Differentiating gives 4kx³, so 4k = 12. Match coefficients, not powers."
+              "explanation": "The added 5 cancels in the difference. An antiderivative of x³ is x⁴/4 plus a constant, and subtracting its value at zero removes the constant."
             },
             {
               "id": "esat-p-m2-12-02",
@@ -29167,31 +29167,31 @@
               "number": 1,
               "topic": "MM1.1",
               "difficulty": 1,
-              "stem": "Evaluate 32^(2/5).",
+              "stem": "For positive x, let A = x^(1/2) and B = x^(1/3). Which equation holds for every positive x?",
               "options": [
                 {
                   "label": "A",
-                  "text": "2"
+                  "text": "A³ = B²"
                 },
                 {
                   "label": "B",
-                  "text": "8"
+                  "text": "A = B²"
                 },
                 {
                   "label": "C",
-                  "text": "16"
+                  "text": "A² = B"
                 },
                 {
                   "label": "D",
-                  "text": "20"
+                  "text": "A = B³"
                 },
                 {
                   "label": "E",
-                  "text": "4"
+                  "text": "A² = B³"
                 }
               ],
               "answer": "E",
-              "explanation": "The fifth root is 2; square the result. The exponent’s denominator gives the root, not the power."
+              "explanation": "Squaring the square root and cubing the cube root both give x."
             },
             {
               "id": "esat-p-m2-13-02",
@@ -29556,31 +29556,31 @@
               "number": 1,
               "topic": "MM2.1",
               "difficulty": 1,
-              "stem": "The nth term of a sequence is n(n + 2). What is its fourth term?",
+              "stem": "A sequence is given by uₙ = n(n + 2) for n = 1, 2, 3, …. Which expression gives uₙ₊₁ − uₙ?",
               "options": [
                 {
                   "label": "A",
-                  "text": "24"
+                  "text": "2n + 3"
                 },
                 {
                   "label": "B",
-                  "text": "12"
+                  "text": "2n + 2"
                 },
                 {
                   "label": "C",
-                  "text": "16"
+                  "text": "2n + 1"
                 },
                 {
                   "label": "D",
-                  "text": "20"
+                  "text": "n + 3"
                 },
                 {
                   "label": "E",
-                  "text": "36"
+                  "text": "3"
                 }
               ],
               "answer": "A",
-              "explanation": "Substitute n = 4 into both factors, giving 4 × 6. Do not square just the first factor."
+              "explanation": "The next term is (n + 1)(n + 3). Subtracting n(n + 2) gives 2n + 3."
             },
             {
               "id": "esat-p-m2-14-02",
@@ -29940,66 +29940,66 @@
               "number": 1,
               "topic": "MM6.2",
               "difficulty": 1,
-              "stem": "Differentiate 7x² − 5.",
+              "stem": "A student differentiates y = 7x² − 5 and gets the same gradient at x = −2 as at x = 2. Which correction should they make?",
               "options": [
                 {
                   "label": "A",
-                  "text": "7x"
+                  "text": "Both gradients must be zero."
                 },
                 {
                   "label": "B",
-                  "text": "14x − 5"
+                  "text": "The gradient at x = −2 should be 4 more than at x = 2."
                 },
                 {
                   "label": "C",
-                  "text": "14x"
+                  "text": "The gradient at x = −2 is the negative of the gradient at x = 2."
                 },
                 {
                   "label": "D",
-                  "text": "14x + 5"
+                  "text": "The gradients differ by 5."
                 },
                 {
                   "label": "E",
-                  "text": "7x²"
+                  "text": "The gradients should be equal because both x-values give the same y."
                 }
               ],
               "answer": "C",
-              "explanation": "The power rule gives 14x. The derivative of the constant −5 is zero."
+              "explanation": "The derivative is 14x, so replacing x by −x reverses the sign of the gradient. Equal heights do not imply equal gradients."
             },
             {
               "id": "esat-p-m2-15-02",
               "number": 2,
               "topic": "MM7.2",
               "difficulty": 2,
-              "stem": "Evaluate ∫₁² 6x² dx.",
+              "stem": "The areas under y = 3x² between x = 0 and x = 1, and between x = 1 and x = 2, are A and B respectively. What is B/A?",
               "options": [
                 {
                   "label": "A",
-                  "text": "14"
-                },
-                {
-                  "label": "B",
-                  "text": "6"
-                },
-                {
-                  "label": "C",
                   "text": "7"
                 },
                 {
+                  "label": "B",
+                  "text": "2"
+                },
+                {
+                  "label": "C",
+                  "text": "3"
+                },
+                {
                   "label": "D",
-                  "text": "12"
+                  "text": "4"
                 },
                 {
                   "label": "E",
-                  "text": "16"
+                  "text": "6"
                 },
                 {
                   "label": "F",
-                  "text": "18"
+                  "text": "8"
                 }
               ],
               "answer": "A",
-              "explanation": "Integrate to obtain 2x³, then subtract its value at 1 from its value at 2."
+              "explanation": "The antiderivative is x³. Thus A = 1 and the area up to x = 2 is 8. The second area is 8 − 1 = 7, giving B/A = 7."
             },
             {
               "id": "esat-p-m2-15-03",
@@ -30332,31 +30332,31 @@
               "number": 1,
               "topic": "MM3.2",
               "difficulty": 1,
-              "stem": "What is the radius of the circle (x − 2)² + (y + 3)² = 49?",
+              "stem": "A circle has centre (3, −2) and touches the x-axis. What is its equation?",
               "options": [
                 {
                   "label": "A",
-                  "text": "7"
+                  "text": "(x − 3)² + (y + 2)² = 4"
                 },
                 {
                   "label": "B",
-                  "text": "2"
+                  "text": "(x + 3)² + (y − 2)² = 4"
                 },
                 {
                   "label": "C",
-                  "text": "3"
+                  "text": "(x − 3)² + (y + 2)² = 2"
                 },
                 {
                   "label": "D",
-                  "text": "24.5"
+                  "text": "(x − 3)² + (y + 2)² = 9"
                 },
                 {
                   "label": "E",
-                  "text": "49"
+                  "text": "(x + 3)² + (y − 2)² = 9"
                 }
               ],
               "answer": "A",
-              "explanation": "The right side is the squared radius, so take its square root. The offsets identify the centre."
+              "explanation": "Its radius is 2, the vertical distance from the centre to the x-axis. The right side in the circle equation is the square of the radius."
             },
             {
               "id": "esat-p-m2-16-02",
