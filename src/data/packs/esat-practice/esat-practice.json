@@ -7739,7 +7739,7 @@
               "number": 1,
               "topic": "P3.1",
               "difficulty": 1,
-              "stem": "A conveyor changes a parcel’s velocity by −3 m/s every second for three seconds. The positive direction is to the right. Which statement is true during these three seconds?",
+              "stem": "A conveyor changes a parcel’s velocity by −3 m/s in each of three consecutive one-second intervals. The positive direction is to the right. Which statement must be true?",
               "options": [
                 {
                   "label": "A",
@@ -7763,11 +7763,11 @@
                 },
                 {
                   "label": "F",
-                  "text": "Its acceleration is constant and directed left."
+                  "text": "Its average acceleration over the three seconds is 3 m/s² to the left."
                 }
               ],
               "answer": "F",
-              "explanation": "Equal changes of velocity in equal times give constant acceleration. The negative change fixes the acceleration’s direction but does not, by itself, tell us the initial velocity."
+              "explanation": "The total change in velocity is −9 m/s in 3 s, so the average acceleration is −3 m/s², to the left. The data do not tell us how the acceleration varies within each second or which way the parcel is moving."
             },
             {
               "id": "esat-p-phys-5-02-v2",
