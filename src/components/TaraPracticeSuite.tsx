@@ -100,7 +100,13 @@ function TaraDrillStem({ stem, className }: { stem: string; className: string })
     <div className={className}>
       {splitDrillStem(stem).map(({ text, tabular }, i) =>
         tabular ? (
-          <pre key={i} className="m-0 max-w-full overflow-x-auto whitespace-pre font-mono">
+          <pre
+            key={i}
+            tabIndex={0}
+            role="region"
+            aria-label="Question data, scrollable"
+            className="m-0 max-w-full overflow-x-auto whitespace-pre font-mono focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[var(--accent)]"
+          >
             {text}
           </pre>
         ) : (
