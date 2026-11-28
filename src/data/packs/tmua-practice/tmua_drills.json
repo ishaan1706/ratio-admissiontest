@@ -172,7 +172,7 @@
           "explanation": "x = 9 and x = −5 are excluded. Cancel x − 9 only after recording that restriction. The simplified ratio has opposite signs on top and bottom for −5 < x < 6, and is zero at x = 6. The excluded value 9 lies outside the interval. The integers run from -4 to 6.\n\nAnswer: 11."
         },
         {
-          "id": "tmua-drill-p1-rational-sign-03",
+          "id": "tmua-drill-p1-rational-sign-03-v2",
           "topic": "Algebra, polynomials & coefficients",
           "type": "algebra",
           "difficulty": 3,
@@ -182,16 +182,16 @@
             "algebra",
             "rational-sign"
           ],
-          "stem": "For how many integers x is ((x − 9)(x − 4))/((x − 9)(x + 2)) ≤ 0?",
+          "stem": "Let R(x) = (x² − 9)/(x² − 5x + 6). How many integers from −5 to 5 satisfy 0 < R(x) < 2?",
           "options": [
-            "5",
-            "11",
-            "6",
-            "8",
-            "7"
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
           ],
-          "answer": 2,
-          "explanation": "x = 9 and x = −2 are excluded. Cancel x − 9 only after recording that restriction. The simplified ratio has opposite signs on top and bottom for −2 < x < 4, and is zero at x = 4. The excluded value 9 lies outside the interval. The integers run from -1 to 4.\n\nAnswer: 6."
+          "answer": 1,
+          "explanation": "After excluding x = 2 and x = 3, R(x) is 1 + 5/(x − 2). For x > 2, R(x) < 2 requires x > 7. For x < 2, R(x) > 0 requires x < −3. Only −5 and −4 work, so the count is 2."
         },
         {
           "id": "tmua-drill-p1-rational-sign-04",
@@ -265,7 +265,7 @@
           "explanation": "x = 9 and x = −7 are excluded. Cancel x − 9 only after recording that restriction. The simplified ratio has opposite signs on top and bottom for −7 < x < 7, and is zero at x = 7. The excluded value 9 lies outside the interval. The integers run from -6 to 7.\n\nAnswer: 14."
         },
         {
-          "id": "tmua-drill-p1-rational-sign-07",
+          "id": "tmua-drill-p1-rational-sign-07-v2",
           "topic": "Algebra, polynomials & coefficients",
           "type": "algebra",
           "difficulty": 3,
@@ -275,18 +275,16 @@
             "algebra",
             "rational-sign"
           ],
-          "stem": "For how many integers x is ((x − 4)(x − 9))/((x − 9)(x + 7)) ≤ 0?",
+          "stem": "The inequalities (x − 1)/(x − 3) < 0 and (x − 2)/(x − 4) < 0 each define an interval. What is the length of the interval on which both hold?",
           "options": [
-            "10",
-            "11",
-            "12",
-            "14",
-            "9",
-            "13",
-            "16"
+            "1/2",
+            "1",
+            "2",
+            "3",
+            "4"
           ],
           "answer": 1,
-          "explanation": "x = 9 and x = −7 are excluded. Cancel x − 9 only after recording that restriction. The simplified ratio has opposite signs on top and bottom for −7 < x < 4, and is zero at x = 4. The excluded value 9 lies outside the interval. The integers run from -6 to 4.\n\nAnswer: 11."
+          "explanation": "The first is negative precisely between its zero 1 and its pole 3. The second is negative between 2 and 4. Their common interval is (2, 3), of length 1."
         },
         {
           "id": "tmua-drill-p1-rational-sign-08",
@@ -409,7 +407,7 @@
           "explanation": "The discriminant is 4(144 − (k − 9)²), so |k − 9| < 12. Count integers from 1 to 20, inclusive.\n\nAnswer: 20."
         },
         {
-          "id": "tmua-drill-p1-parameter-roots-03",
+          "id": "tmua-drill-p1-parameter-roots-03-v2",
           "topic": "Algebra, polynomials & coefficients",
           "type": "algebra",
           "difficulty": 3,
@@ -419,17 +417,16 @@
             "algebra",
             "parameter-roots"
           ],
-          "stem": "How many positive integers k make x² + 2(k − 4)x + 2(k − 4)² − 81 = 0 have distinct real roots?",
+          "stem": "There are two different values of k for which y = x² − kx + k is tangent to the x-axis. How far apart are the points of tangency?",
           "options": [
-            "13",
-            "14",
-            "18",
-            "11",
-            "17",
-            "12"
+            "1",
+            "2",
+            "3",
+            "4",
+            "8"
           ],
-          "answer": 5,
-          "explanation": "The discriminant is 4(81 − (k − 4)²), so |k − 4| < 9. Count integers from 1 to 12, inclusive.\n\nAnswer: 12."
+          "answer": 1,
+          "explanation": "The discriminant k² − 4k vanishes when k = 0 or 4. At tangency the root is k/2, so the points are (0, 0) and (2, 0)."
         },
         {
           "id": "tmua-drill-p1-parameter-roots-04",
@@ -503,7 +500,7 @@
           "explanation": "The discriminant is 4(256 − (k − 9)²), so |k − 9| < 16. Count integers from 1 to 24, inclusive.\n\nAnswer: 24."
         },
         {
-          "id": "tmua-drill-p1-parameter-roots-07",
+          "id": "tmua-drill-p1-parameter-roots-07-v2",
           "topic": "Algebra, polynomials & coefficients",
           "type": "algebra",
           "difficulty": 3,
@@ -513,16 +510,16 @@
             "algebra",
             "parameter-roots"
           ],
-          "stem": "How many positive integers k make x² + 2(k − 8)x + 2(k − 8)² − 25 = 0 have distinct real roots?",
+          "stem": "For what value of k does the equation x² − (k + 2)x + 2k = 0 have just one distinct solution?",
           "options": [
-            "10",
-            "8",
-            "11",
-            "9",
-            "13"
+            "−2",
+            "−1",
+            "0",
+            "1",
+            "2"
           ],
-          "answer": 3,
-          "explanation": "The discriminant is 4(25 − (k − 8)²), so |k − 8| < 5. Count integers from 4 to 12, inclusive.\n\nAnswer: 9."
+          "answer": 4,
+          "explanation": "The left side factors as (x − 2)(x − k). The two roots coincide only for k = 2."
         },
         {
           "id": "tmua-drill-p1-parameter-roots-08",
@@ -641,7 +638,7 @@
           "explanation": "The two equations give |x| = 10 ± 5 or |x| = 5 ± 10. Keeping only nonnegative possibilities gives magnitudes 15 and 5; they are distinct and nonzero. Each magnitude at most 26 contributes two integers.\n\nAnswer: 4."
         },
         {
-          "id": "tmua-drill-p1-absolute-composition-03",
+          "id": "tmua-drill-p1-absolute-composition-03-v2",
           "topic": "Functions, transformations & logarithms",
           "type": "functions",
           "difficulty": 3,
@@ -651,17 +648,16 @@
             "functions",
             "absolute-composition"
           ],
-          "stem": "Let f(x) = |x| − 11 and g(x) = |x| − 5. How many integers x in [−28, 28] make at least one of f(g(x)) and g(f(x)) zero?",
+          "stem": "Let f(x) = |x| and g(x) = x² − 3. How many solutions does f(g(x)) = g(f(x)) + 2 have?",
           "options": [
+            "0",
             "1",
             "2",
-            "4",
-            "5",
-            "6",
-            "3"
+            "3",
+            "4"
           ],
           "answer": 2,
-          "explanation": "The two equations give |x| = 5 ± 11 or |x| = 11 ± 5. Keeping only nonnegative possibilities gives magnitudes 16 and 6; they are distinct and nonzero. Each magnitude at most 28 contributes two integers.\n\nAnswer: 4."
+          "explanation": "The equation becomes |x² − 3| = x² − 1. If x² ≥ 3, it is impossible. Otherwise 3 − x² = x² − 1, so x² = 2 and both square roots work."
         },
         {
           "id": "tmua-drill-p1-absolute-composition-04",
@@ -734,7 +730,7 @@
           "explanation": "The two equations give |x| = 7 ± 14 or |x| = 14 ± 7. Keeping only nonnegative possibilities gives magnitudes 21 and 7; they are distinct and nonzero. Each magnitude at most 20 contributes two integers.\n\nAnswer: 2."
         },
         {
-          "id": "tmua-drill-p1-absolute-composition-07",
+          "id": "tmua-drill-p1-absolute-composition-07-v2",
           "topic": "Functions, transformations & logarithms",
           "type": "functions",
           "difficulty": 3,
@@ -744,17 +740,16 @@
             "functions",
             "absolute-composition"
           ],
-          "stem": "Let f(x) = |x| − 5 and g(x) = |x| − 14. How many integers x in [−30, 30] make at least one of f(g(x)) and g(f(x)) zero?",
+          "stem": "For f(x) = |x| − 1, how many real solutions does f(f(x)) = f(x) have?",
           "options": [
-            "3",
-            "2",
-            "4",
             "1",
-            "6",
+            "2",
+            "3",
+            "4",
             "5"
           ],
-          "answer": 2,
-          "explanation": "The two equations give |x| = 14 ± 5 or |x| = 5 ± 14. Keeping only nonnegative possibilities gives magnitudes 19 and 9; they are distinct and nonzero. Each magnitude at most 30 contributes two integers.\n\nAnswer: 4."
+          "answer": 1,
+          "explanation": "Let t = f(x), so t ≥ −1. If t ≥ 0 then |t| − 1 = t is impossible. In the remaining case −t − 1 = t gives t = −1/2, hence x = ±1/2."
         },
         {
           "id": "tmua-drill-p1-absolute-composition-08",
@@ -874,7 +869,7 @@
           "explanation": "Exponentiate to obtain x(x + 20) = 729 − (388) = 341. Subtract and factor: (x − 11)(x + 31) = 0. Only x = 11 is positive and its logarithm input is 729.\n\nAnswer: 11."
         },
         {
-          "id": "tmua-drill-p1-log-domain-03",
+          "id": "tmua-drill-p1-log-domain-03-v2",
           "topic": "Functions, transformations & logarithms",
           "type": "functions",
           "difficulty": 2,
@@ -884,17 +879,16 @@
             "functions",
             "log-domain"
           ],
-          "stem": "Let x > 0. If the base-2 logarithm of [x(x + 8) + (-176)] equals 2, what is x?",
+          "stem": "How many integers x make log₂[(x − 1)(x + 1)] < 3 true and defined?",
           "options": [
-            "10",
-            "9",
-            "11",
-            "−18",
-            "18",
+            "0",
+            "1",
+            "2",
+            "3",
             "4"
           ],
-          "answer": 0,
-          "explanation": "Exponentiate to obtain x(x + 8) = 4 − (-176) = 180. Subtract and factor: (x − 10)(x + 18) = 0. Only x = 10 is positive and its logarithm input is 4.\n\nAnswer: 10."
+          "answer": 2,
+          "explanation": "The logged expression must lie strictly between 0 and 8. Thus 1 < x² < 9, giving x = −2 and x = 2 only."
         },
         {
           "id": "tmua-drill-p1-log-domain-04",
@@ -969,7 +963,7 @@
           "explanation": "Exponentiate to obtain x(x + 3) = 59049 − (58995) = 54. Subtract and factor: (x − 6)(x + 9) = 0. Only x = 6 is positive and its logarithm input is 59049.\n\nAnswer: 6."
         },
         {
-          "id": "tmua-drill-p1-log-domain-07",
+          "id": "tmua-drill-p1-log-domain-07-v2",
           "topic": "Functions, transformations & logarithms",
           "type": "functions",
           "difficulty": 2,
@@ -979,18 +973,16 @@
             "functions",
             "log-domain"
           ],
-          "stem": "Let x > 0. If the base-5 logarithm of [x(x + 6) + (-15)] equals 2, what is x?",
+          "stem": "For real x, the equation log₃(x² − 2) = 2log₃(x − 2) has what solution set?",
           "options": [
-            "4",
-            "5",
-            "3",
-            "2",
-            "10",
-            "−10",
-            "6"
+            "{−3/2}",
+            "{3/2}",
+            "{2}",
+            "{3}",
+            "No real solution"
           ],
-          "answer": 0,
-          "explanation": "Exponentiate to obtain x(x + 6) = 25 − (-15) = 40. Subtract and factor: (x − 4)(x + 10) = 0. Only x = 4 is positive and its logarithm input is 25.\n\nAnswer: 4."
+          "answer": 4,
+          "explanation": "The right side requires x > 2. Combining the logarithms gives x² − 2 = (x − 2)², or x = 3/2. This lies outside the common domain, so there is no solution."
         },
         {
           "id": "tmua-drill-p1-log-domain-08",
@@ -1113,7 +1105,7 @@
           "explanation": "Divide 42 by 6 to get the common difference 7. The mean is 30, hence the first term is 9. The first 6 terms sum to 6(18+5×7)/2 = 159. Subtract twice that from 210.\n\nAnswer: −108."
         },
         {
-          "id": "tmua-drill-p1-split-progression-03",
+          "id": "tmua-drill-p1-split-progression-03-v2",
           "topic": "Sequences & series",
           "type": "sequences",
           "difficulty": 3,
@@ -1123,17 +1115,16 @@
             "sequences",
             "split-progression"
           ],
-          "stem": "An arithmetic sequence of 14 terms has sum 266. The last term exceeds the first by 26. By how much does the sum of the final 3 terms exceed the sum of the first 11 terms? Give a signed answer.",
+          "stem": "In an arithmetic progression with twelve terms, the sums of the odd-position terms and even-position terms are 42 and 54 respectively. What is the fifth term?",
           "options": [
-            "133",
-            "−85",
-            "86",
-            "−43",
-            "−86",
-            "266"
+            "2",
+            "3",
+            "4",
+            "5",
+            "9"
           ],
-          "answer": 4,
-          "explanation": "Divide 26 by 13 to get the common difference 2. The mean is 19, hence the first term is 6. The first 11 terms sum to 11(12+10×2)/2 = 176. Subtract twice that from 266.\n\nAnswer: −86."
+          "answer": 3,
+          "explanation": "Each even-position term is its preceding odd-position term plus d, the common difference. The difference of sums is 6d = 12, so d = 2. The mean of the six odd-position terms is 7, halfway between the fifth and seventh terms, which are 4 apart. The fifth term is 5."
         },
         {
           "id": "tmua-drill-p1-split-progression-04",
@@ -1208,7 +1199,7 @@
           "explanation": "Divide 99 by 11 to get the common difference 9. The mean is 113/2, hence the first term is 7. The first 2 terms sum to 2(14+1×9)/2 = 23. Subtract twice that from 678.\n\nAnswer: 632."
         },
         {
-          "id": "tmua-drill-p1-split-progression-07",
+          "id": "tmua-drill-p1-split-progression-07-v2",
           "topic": "Sequences & series",
           "type": "sequences",
           "difficulty": 3,
@@ -1218,16 +1209,16 @@
             "sequences",
             "split-progression"
           ],
-          "stem": "An arithmetic sequence of 14 terms has sum 1071. The last term exceeds the first by 143. By how much does the sum of the final 10 terms exceed the sum of the first 4 terms? Give a signed answer.",
+          "stem": "An arithmetic progression with eight terms has the property that its odd-position terms sum to 22, and the sum of its first four terms is half that of its final four. What is the third term?",
           "options": [
-            "899",
-            "535",
-            "−899",
-            "449",
-            "1071"
+            "5/2",
+            "7/2",
+            "9/2",
+            "5",
+            "11/2"
           ],
-          "answer": 0,
-          "explanation": "Divide 143 by 13 to get the common difference 11. The mean is 153/2, hence the first term is 5. The first 4 terms sum to 4(10+3×11)/2 = 86. Subtract twice that from 1071.\n\nAnswer: 899."
+          "answer": 2,
+          "explanation": "Let the first term be a and common difference d. The equations are 4a + 12d = 22 and 2(4a + 6d) = 4a + 22d. The second gives 4a = 10d, so d = 1, a = 5/2 and the third term is 9/2."
         },
         {
           "id": "tmua-drill-p1-split-progression-08",
@@ -1345,7 +1336,7 @@
           "explanation": "The original sum is first term × (5^6 − 1)/(5 − 1), so the first term is 3. The retained terms have ratio 25 and there are 3 of them. Sum this shorter progression.\n\nAnswer: 1953."
         },
         {
-          "id": "tmua-drill-p1-alternate-series-03",
+          "id": "tmua-drill-p1-alternate-series-03-v2",
           "topic": "Sequences & series",
           "type": "sequences",
           "difficulty": 3,
@@ -1355,17 +1346,16 @@
             "sequences",
             "alternate-series"
           ],
-          "stem": "A geometric progression with 3 terms has positive integer ratio 6 and sum 258. A new sequence keeps the terms in odd positions and drops those in even positions (positions start at 1). What is the sum of the new sequence?",
+          "stem": "A convergent geometric series has positive first term, and its even-position terms sum to −2 while its odd-position terms sum to 5. What is the first term?",
           "options": [
-            "258",
-            "221",
-            "129",
-            "252",
-            "223",
-            "222"
+            "3",
+            "21/5",
+            "23/5",
+            "5",
+            "7"
           ],
-          "answer": 5,
-          "explanation": "The original sum is first term × (6^3 − 1)/(6 − 1), so the first term is 6. The retained terms have ratio 36 and there are 2 of them. Sum this shorter progression.\n\nAnswer: 222."
+          "answer": 1,
+          "explanation": "The even-position terms are their immediate predecessors multiplied by r, so r = −2/5. The odd-position sum is a/(1 − r²), giving a = 5(1 − 4/25) = 21/5."
         },
         {
           "id": "tmua-drill-p1-alternate-series-04",
@@ -1439,7 +1429,7 @@
           "explanation": "The original sum is first term × (4^3 − 1)/(4 − 1), so the first term is 2. The retained terms have ratio 16 and there are 2 of them. Sum this shorter progression.\n\nAnswer: 34."
         },
         {
-          "id": "tmua-drill-p1-alternate-series-07",
+          "id": "tmua-drill-p1-alternate-series-07-v2",
           "topic": "Sequences & series",
           "type": "sequences",
           "difficulty": 3,
@@ -1449,18 +1439,16 @@
             "sequences",
             "alternate-series"
           ],
-          "stem": "A geometric progression with 3 terms has positive integer ratio 5 and sum 62. A new sequence keeps the terms in odd positions and drops those in even positions (positions start at 1). What is the sum of the new sequence?",
+          "stem": "A convergent geometric series starts with 2 and has common ratio r < 0. The sum of the magnitudes of all its terms is three times its signed sum. What is r?",
           "options": [
-            "51",
-            "31",
-            "62",
-            "54",
-            "53",
-            "52",
-            "60"
+            "−3/4",
+            "−2/3",
+            "−1/2",
+            "−1/3",
+            "−1/4"
           ],
-          "answer": 5,
-          "explanation": "The original sum is first term × (5^3 − 1)/(5 − 1), so the first term is 2. The retained terms have ratio 25 and there are 2 of them. Sum this shorter progression.\n\nAnswer: 52."
+          "answer": 2,
+          "explanation": "The sum of magnitudes is 2/(1 + r), whereas the signed sum is 2/(1 − r). Their ratio is (1 − r)/(1 + r). Equating it to 3 gives r = −1/2."
         },
         {
           "id": "tmua-drill-p1-alternate-series-08",
@@ -1584,7 +1572,7 @@
           "explanation": "Take either x^4 from the first factor and 1 from the last, or x^3 from the first and 4x from the last. The two contributions are 126×3^4 and 84×3^3×4.\n\nAnswer: 19278."
         },
         {
-          "id": "tmua-drill-p1-adjacent-coefficients-03",
+          "id": "tmua-drill-p1-adjacent-coefficients-03-v2",
           "topic": "Algebra, polynomials & coefficients",
           "type": "algebra",
           "difficulty": 3,
@@ -1594,17 +1582,16 @@
             "algebra",
             "adjacent-coefficients"
           ],
-          "stem": "What is the coefficient of x^9 in (1 + 3x)^13(1 + 3x)?",
+          "stem": "The coefficient of x² in (1 + x)ⁿ equals the coefficient of x³, with n an integer greater than 3. What is the coefficient of x⁴?",
           "options": [
-            "39405366",
-            "25332021",
-            "39405367",
-            "14073345",
-            "39405365",
-            "39405368"
+            "1",
+            "4",
+            "5",
+            "10",
+            "15"
           ],
-          "answer": 0,
-          "explanation": "Take either x^9 from the first factor and 1 from the last, or x^8 from the first and 3x from the last. The two contributions are 715×3^9 and 1287×3^8×3.\n\nAnswer: 39405366."
+          "answer": 2,
+          "explanation": "The ratio of the coefficients of x³ and x² is (n − 2)/3. Thus n = 5 and the required coefficient is C(5, 4) = 5."
         },
         {
           "id": "tmua-drill-p1-adjacent-coefficients-04",
@@ -1675,7 +1662,7 @@
           "explanation": "Take either x^5 from the first factor and 1 from the last, or x^4 from the first and 8x from the last. The two contributions are 126×3^5 and 126×3^4×8.\n\nAnswer: 112266."
         },
         {
-          "id": "tmua-drill-p1-adjacent-coefficients-07",
+          "id": "tmua-drill-p1-adjacent-coefficients-07-v2",
           "topic": "Algebra, polynomials & coefficients",
           "type": "algebra",
           "difficulty": 3,
@@ -1685,17 +1672,16 @@
             "algebra",
             "adjacent-coefficients"
           ],
-          "stem": "What is the coefficient of x^11 in (1 + 4x)^13(1 + 3x)?",
+          "stem": "The coefficient of x² in (1 − x)⁴(1 + kx) is −2. What is the coefficient of x³?",
           "options": [
-            "899678208",
-            "1526726656",
-            "1226833920",
-            "1226833919",
-            "1226833921",
-            "327155712"
+            "−16",
+            "−10",
+            "8",
+            "10",
+            "12"
           ],
           "answer": 2,
-          "explanation": "Take either x^11 from the first factor and 1 from the last, or x^10 from the first and 3x from the last. The two contributions are 78×4^11 and 286×4^10×3.\n\nAnswer: 1226833920."
+          "explanation": "The x² coefficient is 6 − 4k, giving k = 2. The x³ coefficient is −4 + 6k = 8."
         },
         {
           "id": "tmua-drill-p1-adjacent-coefficients-08",
@@ -1818,7 +1804,7 @@
           "explanation": "The secant height halfway is the average of the two endpoint heights. Subtract the curve height 5((14 + 15)/2)². Simplifying this difference gives 5(14 − 15)²/4.\n\nAnswer: 5/4."
         },
         {
-          "id": "tmua-drill-p1-secant-gap-03",
+          "id": "tmua-drill-p1-secant-gap-03-v2",
           "topic": "Coordinate geometry",
           "type": "geometry",
           "difficulty": 3,
@@ -1828,18 +1814,16 @@
             "geometry",
             "secant-gap"
           ],
-          "stem": "The curve y = 2x² intersects its secant through x = 15 and x = 13. What is the vertical distance between the secant and the curve at the midpoint of those two x-values?",
+          "stem": "The line through (2, 4) and (6, 36) cuts the parabola y = x² at those two points. On 2 ≤ x ≤ 6 what is the greatest vertical distance from the line to the parabola?",
           "options": [
-            "0",
             "2",
             "4",
-            "5",
-            "1",
+            "6",
             "8",
-            "3"
+            "16"
           ],
           "answer": 1,
-          "explanation": "The secant height halfway is the average of the two endpoint heights. Subtract the curve height 2((15 + 13)/2)². Simplifying this difference gives 2(15 − 13)²/4.\n\nAnswer: 2."
+          "explanation": "The line minus the parabola is a quadratic with roots 2 and 6 and leading coefficient −1. It equals 4 − (x − 4)² and reaches its maximum 4 at the midpoint."
         },
         {
           "id": "tmua-drill-p1-secant-gap-04",
@@ -1909,7 +1893,7 @@
           "explanation": "The secant height halfway is the average of the two endpoint heights. Subtract the curve height 2((4 + 15)/2)². Simplifying this difference gives 2(4 − 15)²/4.\n\nAnswer: 121/2."
         },
         {
-          "id": "tmua-drill-p1-secant-gap-07",
+          "id": "tmua-drill-p1-secant-gap-07-v2",
           "topic": "Coordinate geometry",
           "type": "geometry",
           "difficulty": 3,
@@ -1919,16 +1903,16 @@
             "geometry",
             "secant-gap"
           ],
-          "stem": "The curve y = 4x² intersects its secant through x = 11 and x = 2. What is the vertical distance between the secant and the curve at the midpoint of those two x-values?",
+          "stem": "A line meets y = x² at x = p and x = q, where p < q. At x = (p + q)/2 the line is 9 units above the curve. What is q − p?",
           "options": [
-            "81",
-            "324",
-            "82",
-            "36",
+            "3",
+            "6",
+            "9",
+            "12",
             "18"
           ],
-          "answer": 0,
-          "explanation": "The secant height halfway is the average of the two endpoint heights. Subtract the curve height 4((11 + 2)/2)². Simplifying this difference gives 4(11 − 2)²/4.\n\nAnswer: 81."
+          "answer": 1,
+          "explanation": "Line minus curve is −(x − p)(x − q). At the midpoint this is (q − p)²/4. Since the separation is positive, q − p = 6."
         },
         {
           "id": "tmua-drill-p1-secant-gap-08",
@@ -2048,7 +2032,7 @@
           "explanation": "The line is 24 above the centre. Each endpoint lies horizontally √(40² − 24²) = 32 from the centre. Use both halves and divide the chord length 64 by 3.\n\nAnswer: 64/3."
         },
         {
-          "id": "tmua-drill-p1-chord-length-03",
+          "id": "tmua-drill-p1-chord-length-03-v2",
           "topic": "Coordinate geometry",
           "type": "geometry",
           "difficulty": 2,
@@ -2058,16 +2042,16 @@
             "geometry",
             "chord-length"
           ],
-          "stem": "A circle has centre (7, 2) and radius 10. Its intersections with y = 8 are A and B. What is |AB| divided by 2?",
+          "stem": "The line y = x cuts the circle x² + y² − 4x − 4y = 0 in two points. How far apart are they?",
           "options": [
-            "6",
-            "9",
+            "4",
+            "4√2",
             "8",
-            "10",
-            "4"
+            "8√2",
+            "16"
           ],
-          "answer": 2,
-          "explanation": "The line is 6 above the centre. Each endpoint lies horizontally √(10² − 6²) = 8 from the centre. Use both halves and divide the chord length 16 by 2.\n\nAnswer: 8."
+          "answer": 1,
+          "explanation": "Substituting y = x gives 2x(x − 4) = 0. The chord joins (0, 0) and (4, 4) and has length √(4² + 4²) = 4√2."
         },
         {
           "id": "tmua-drill-p1-chord-length-04",
@@ -2144,7 +2128,7 @@
           "explanation": "The line is 21 above the centre. Each endpoint lies horizontally √(35² − 21²) = 28 from the centre. Use both halves and divide the chord length 56 by 1.\n\nAnswer: 56."
         },
         {
-          "id": "tmua-drill-p1-chord-length-07",
+          "id": "tmua-drill-p1-chord-length-07-v2",
           "topic": "Coordinate geometry",
           "type": "geometry",
           "difficulty": 2,
@@ -2154,17 +2138,16 @@
             "geometry",
             "chord-length"
           ],
-          "stem": "A circle has centre (9, 5) and radius 15. Its intersections with y = 14 are A and B. What is |AB| divided by 1?",
+          "stem": "The line y = 3 intersects x² + y² = r² in a chord whose length equals r. What is r?",
           "options": [
-            "18",
-            "12",
-            "30",
-            "23",
-            "25",
-            "24"
+            "3",
+            "√10",
+            "2√3",
+            "4",
+            "6"
           ],
-          "answer": 5,
-          "explanation": "The line is 9 above the centre. Each endpoint lies horizontally √(15² − 9²) = 12 from the centre. Use both halves and divide the chord length 24 by 1.\n\nAnswer: 24."
+          "answer": 2,
+          "explanation": "Each half-chord is r/2 and the centre is 3 units away from the chord. Thus (r/2)² + 9 = r², giving the positive solution r = 2√3."
         },
         {
           "id": "tmua-drill-p1-chord-length-08",
@@ -2284,7 +2267,7 @@
           "explanation": "The tangent at x = t has slope 16t and intercept −8t². Equate the lines to get x = (8² − 4²)/(2(8 − 4)). Cancel the difference using the difference of squares.\n\nAnswer: 6."
         },
         {
-          "id": "tmua-drill-p1-crossing-tangents-03",
+          "id": "tmua-drill-p1-crossing-tangents-03-v2",
           "topic": "Differentiation & integration",
           "type": "calculus",
           "difficulty": 3,
@@ -2294,17 +2277,16 @@
             "calculus",
             "crossing-tangents"
           ],
-          "stem": "The tangents to y = 8x² at x = 1 and x = 6 intersect at T. What is the x-coordinate of T?",
+          "stem": "The tangents to y = 1/x at x = 1 and x = 2 intersect at T. The tangent at x = 1 meets the x-axis at A, and the tangent at x = 2 meets it at B. What is the area of triangle ATB?",
           "options": [
-            "6",
-            "9/2",
-            "7",
-            "1",
-            "7/2",
-            "5/2"
+            "1/3",
+            "1/2",
+            "2/3",
+            "3/4",
+            "1"
           ],
-          "answer": 4,
-          "explanation": "The tangent at x = t has slope 16t and intercept −8t². Equate the lines to get x = (6² − 1²)/(2(6 − 1)). Cancel the difference using the difference of squares.\n\nAnswer: 7/2."
+          "answer": 2,
+          "explanation": "The tangents are y = 2 − x and y = 1 − x/4. Their intersection has x = 4/3 and y = 2/3. Their x-axis intercepts are 2 and 4, so the area is half of 2 times 2/3."
         },
         {
           "id": "tmua-drill-p1-crossing-tangents-04",
@@ -2378,7 +2360,7 @@
           "explanation": "The tangent at x = t has slope 4t and intercept −2t². Equate the lines to get x = (8² − 4²)/(2(8 − 4)). Cancel the difference using the difference of squares.\n\nAnswer: 6."
         },
         {
-          "id": "tmua-drill-p1-crossing-tangents-07",
+          "id": "tmua-drill-p1-crossing-tangents-07-v2",
           "topic": "Differentiation & integration",
           "type": "calculus",
           "difficulty": 3,
@@ -2388,19 +2370,16 @@
             "calculus",
             "crossing-tangents"
           ],
-          "stem": "The tangents to y = 4x² at x = 1 and x = 10 intersect at T. What is the x-coordinate of T?",
+          "stem": "A tangent to y = x² at a positive x-coordinate meets the tangent at x = −1 on the y-axis. What is the gradient of the first tangent?",
           "options": [
-            "15/2",
-            "11/2",
-            "13/2",
-            "11",
+            "−2",
+            "−1",
             "1",
-            "7/2",
-            "10",
-            "9/2"
+            "2",
+            "4"
           ],
-          "answer": 1,
-          "explanation": "The tangent at x = t has slope 8t and intercept −4t². Equate the lines to get x = (10² − 1²)/(2(10 − 1)). Cancel the difference using the difference of squares.\n\nAnswer: 11/2."
+          "answer": 3,
+          "explanation": "The tangent at x = a has y-intercept −a². To coincide with the intercept −1 of the other tangent, a must be 1 (since a > 0). The gradient is 2a = 2."
         },
         {
           "id": "tmua-drill-p1-crossing-tangents-08",
@@ -2525,7 +2504,7 @@
           "explanation": "Differentiate: f′(x) = 6(x − 10)(x − 11). The sign changes + to − at 10 and − to + at 11. On putting x = 10 + t, the nonconstant part becomes 2t³ − 3(1)t². Going from t = 0 to 1 lowers the value by (1)³.\n\nAnswer: 1."
         },
         {
-          "id": "tmua-drill-p1-cubic-turning-values-03",
+          "id": "tmua-drill-p1-cubic-turning-values-03-v2",
           "topic": "Differentiation & integration",
           "type": "calculus",
           "difficulty": 5,
@@ -2535,18 +2514,16 @@
             "calculus",
             "cubic-turning-values"
           ],
-          "stem": "By how much does the local maximum value of f(x) = 2x³ − 45x² + 300x + 8 exceed its local minimum value?",
+          "stem": "The cubic f(x) = x³ − 3x + c has two stationary points. At the local maximum, the value of f is twice the value at the local minimum. What is c?",
           "options": [
-            "127",
-            "5",
-            "125",
-            "124",
-            "25",
-            "126",
-            "250"
+            "−6",
+            "−2",
+            "0",
+            "2",
+            "6"
           ],
-          "answer": 2,
-          "explanation": "Differentiate: f′(x) = 6(x − 5)(x − 10). The sign changes + to − at 5 and − to + at 10. On putting x = 5 + t, the nonconstant part becomes 2t³ − 3(5)t². Going from t = 0 to 5 lowers the value by (5)³.\n\nAnswer: 125."
+          "answer": 4,
+          "explanation": "The derivative vanishes at −1 and 1. Its sign changes from positive to negative at −1, giving a maximum c + 2, and from negative to positive at 1, giving a minimum c − 2. Thus c + 2 = 2(c − 2) and c = 6."
         },
         {
           "id": "tmua-drill-p1-cubic-turning-values-04",
@@ -2616,7 +2593,7 @@
           "explanation": "Differentiate: f′(x) = 6(x − 4)(x − 11). The sign changes + to − at 4 and − to + at 11. On putting x = 4 + t, the nonconstant part becomes 2t³ − 3(7)t². Going from t = 0 to 7 lowers the value by (7)³.\n\nAnswer: 343."
         },
         {
-          "id": "tmua-drill-p1-cubic-turning-values-07",
+          "id": "tmua-drill-p1-cubic-turning-values-07-v2",
           "topic": "Differentiation & integration",
           "type": "calculus",
           "difficulty": 5,
@@ -2626,18 +2603,16 @@
             "calculus",
             "cubic-turning-values"
           ],
-          "stem": "By how much does the local maximum value of f(x) = 2x³ − 42x² + 198x + 4 exceed its local minimum value?",
+          "stem": "The cubic y = x³ + ax² + bx has stationary points at x = 1 and x = 3. What is the mean of its two stationary values?",
           "options": [
-            "1024",
-            "514",
-            "511",
-            "64",
-            "513",
-            "8",
-            "512"
+            "0",
+            "2",
+            "4",
+            "6",
+            "8"
           ],
-          "answer": 6,
-          "explanation": "Differentiate: f′(x) = 6(x − 3)(x − 11). The sign changes + to − at 3 and − to + at 11. On putting x = 3 + t, the nonconstant part becomes 2t³ − 3(8)t². Going from t = 0 to 8 lowers the value by (8)³.\n\nAnswer: 512."
+          "answer": 1,
+          "explanation": "Its derivative is 3(x − 1)(x − 3), so a = −6 and b = 9. The values at 1 and 3 are 4 and 0, giving mean 2."
         },
         {
           "id": "tmua-drill-p1-cubic-turning-values-08",
@@ -2755,7 +2730,7 @@
           "explanation": "The curve is nonpositive here. Let t = x − 4, so y = 7(t² − 5t). Integrate its negative from 0 to 5: 7[5t²/2 − t³/3] at the upper limit gives the area.\n\nAnswer: 875/6."
         },
         {
-          "id": "tmua-drill-p1-negative-area-03",
+          "id": "tmua-drill-p1-negative-area-03-v2",
           "topic": "Differentiation & integration",
           "type": "calculus",
           "difficulty": 4,
@@ -2765,17 +2740,16 @@
             "calculus",
             "negative-area"
           ],
-          "stem": "What is the exact area between y = 6(x − 8)(x − 9) and the x-axis for 8 ≤ x ≤ 9?",
+          "stem": "The area below the x-axis and above y = x² − 4, between x = 0 and x = 2, equals the area above the x-axis and below the horizontal line y = h between the same vertical boundaries. What is h?",
           "options": [
+            "4/3",
+            "2",
+            "8/3",
             "3",
-            "0",
-            "6",
-            "−1",
-            "1",
-            "2"
+            "16/3"
           ],
-          "answer": 4,
-          "explanation": "The curve is nonpositive here. Let t = x − 8, so y = 6(t² − 1t). Integrate its negative from 0 to 1: 6[1t²/2 − t³/3] at the upper limit gives the area.\n\nAnswer: 1."
+          "answer": 2,
+          "explanation": "The first area is the integral of 4 − x² from 0 to 2, equal to 16/3. The second is the area 2h of a rectangle. Therefore h = 8/3."
         },
         {
           "id": "tmua-drill-p1-negative-area-04",
@@ -2849,7 +2823,7 @@
           "explanation": "The curve is nonpositive here. Let t = x − 5, so y = 3(t² − 6t). Integrate its negative from 0 to 6: 3[6t²/2 − t³/3] at the upper limit gives the area.\n\nAnswer: 108."
         },
         {
-          "id": "tmua-drill-p1-negative-area-07",
+          "id": "tmua-drill-p1-negative-area-07-v2",
           "topic": "Differentiation & integration",
           "type": "calculus",
           "difficulty": 4,
@@ -2859,17 +2833,16 @@
             "calculus",
             "negative-area"
           ],
-          "stem": "What is the exact area between y = 4(x − 2)(x − 7) and the x-axis for 2 ≤ x ≤ 7?",
+          "stem": "The signed integral of y = x(x − 2)(x − 4) from 0 to 4 is zero. What is the total area between the curve and the x-axis on that interval?",
           "options": [
-            "250/3",
-            "247/3",
-            "50",
-            "253/3",
-            "−250/3",
-            "500"
+            "0",
+            "2",
+            "4",
+            "8",
+            "16"
           ],
-          "answer": 0,
-          "explanation": "The curve is nonpositive here. Let t = x − 2, so y = 4(t² − 5t). Integrate its negative from 0 to 5: 4[5t²/2 − t³/3] at the upper limit gives the area.\n\nAnswer: 250/3."
+          "answer": 3,
+          "explanation": "The curve is above the axis on (0, 2) and below on (2, 4). The integral on (0, 2) is 4. Because the signed integral is zero, both regions have area 4, giving total area 8."
         },
         {
           "id": "tmua-drill-p1-negative-area-08",
@@ -2990,7 +2963,7 @@
           "explanation": "sin(x) = ±√(5/9). The magnitude is strictly between 0 and 1. Each nonzero value in (−1, 1) occurs twice per full turn of 360°, and there are 3 full turns.\n\nAnswer: 12."
         },
         {
-          "id": "tmua-drill-p1-squared-sine-03",
+          "id": "tmua-drill-p1-squared-sine-03-v2",
           "topic": "Trigonometry",
           "type": "trigonometry",
           "difficulty": 2,
@@ -3000,19 +2973,16 @@
             "trigonometry",
             "squared-sine"
           ],
-          "stem": "In 0 ≤ x < 720° how many solutions are there to 2sin²(x) = 1?",
+          "stem": "On 0 ≤ x < 2π, how many solutions of sin²x = 1/4 also satisfy cos x < 0?",
           "options": [
-            "4",
-            "8",
-            "6",
-            "10",
-            "5",
-            "7",
-            "9",
-            "11"
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
           ],
-          "answer": 1,
-          "explanation": "sin(x) = ±√(1/2). The magnitude is strictly between 0 and 1. Each nonzero value in (−1, 1) occurs twice per full turn of 360°, and there are 2 full turns.\n\nAnswer: 8."
+          "answer": 2,
+          "explanation": "The sine must be 1/2 or −1/2. The cosine is negative in the second and third quadrants; each of those quadrants contains one of the required sine values."
         },
         {
           "id": "tmua-drill-p1-squared-sine-04",
@@ -3082,7 +3052,7 @@
           "explanation": "sin(x) = ±√(1/2). The magnitude is strictly between 0 and 1. Each nonzero value in (−1, 1) occurs twice per full turn of 360°, and there are 6 full turns.\n\nAnswer: 24."
         },
         {
-          "id": "tmua-drill-p1-squared-sine-07",
+          "id": "tmua-drill-p1-squared-sine-07-v2",
           "topic": "Trigonometry",
           "type": "trigonometry",
           "difficulty": 2,
@@ -3092,19 +3062,16 @@
             "trigonometry",
             "squared-sine"
           ],
-          "stem": "In 0 ≤ x < 2520° how many solutions are there to 8sin²(x) = 3?",
+          "stem": "How many solutions does sin²x·cos x = cos²x have on 0 ≤ x < 2π?",
           "options": [
-            "14",
-            "15",
-            "28",
-            "30",
-            "27",
-            "26",
-            "31",
-            "29"
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
           ],
-          "answer": 2,
-          "explanation": "sin(x) = ±√(3/8). The magnitude is strictly between 0 and 1. Each nonzero value in (−1, 1) occurs twice per full turn of 360°, and there are 7 full turns.\n\nAnswer: 28."
+          "answer": 3,
+          "explanation": "Factor as cos x(sin²x − cos x) = 0. One branch gives cos x = 0, with two solutions. On the other branch c = cos x satisfies c² + c − 1 = 0. Only the positive root is in [−1, 1], and it gives two more solutions."
         },
         {
           "id": "tmua-drill-p1-squared-sine-08",
@@ -3225,7 +3192,7 @@
           "explanation": "Use cos(2x) = 2cos²(x) − 1. With u = cos(x), the equation becomes (u − 1)(16u + 9) = 0. The root 1 contributes once per turn. The root −9/16 contributes twice if strictly inside (−1, 1), once at −1, and not at all below −1. There are 2 full turns.\n\nAnswer: 6."
         },
         {
-          "id": "tmua-drill-p1-cosine-endpoint-03",
+          "id": "tmua-drill-p1-cosine-endpoint-03-v2",
           "topic": "Trigonometry",
           "type": "trigonometry",
           "difficulty": 4,
@@ -3235,17 +3202,16 @@
             "trigonometry",
             "cosine-endpoint"
           ],
-          "stem": "How many solutions does 8cos(2x) = 15cos(x) + (-7) have for 0° ≤ x < 1440°?",
+          "stem": "Let f(x) = 1 + 2cos x − 2cos²x on 0 ≤ x ≤ π/2. What is the difference between its maximum and minimum values?",
           "options": [
-            "20",
-            "16",
-            "4",
-            "8",
-            "12",
-            "13"
+            "0",
+            "1/4",
+            "1/2",
+            "1",
+            "3/2"
           ],
-          "answer": 4,
-          "explanation": "Use cos(2x) = 2cos²(x) − 1. With u = cos(x), the equation becomes (u − 1)(16u + 1) = 0. The root 1 contributes once per turn. The root −1/16 contributes twice if strictly inside (−1, 1), once at −1, and not at all below −1. There are 4 full turns.\n\nAnswer: 12."
+          "answer": 2,
+          "explanation": "Put c = cos x, which fills [0, 1]. The expression is 3/2 − 2(c − 1/2)², so the maximum is 3/2 at c = 1/2 and the minimum 1 at either endpoint."
         },
         {
           "id": "tmua-drill-p1-cosine-endpoint-04",
@@ -3318,7 +3284,7 @@
           "explanation": "Use cos(2x) = 2cos²(x) − 1. With u = cos(x), the equation becomes (u − 1)(16u + 3) = 0. The root 1 contributes once per turn. The root −3/16 contributes twice if strictly inside (−1, 1), once at −1, and not at all below −1. There are 3 full turns.\n\nAnswer: 9."
         },
         {
-          "id": "tmua-drill-p1-cosine-endpoint-07",
+          "id": "tmua-drill-p1-cosine-endpoint-07-v2",
           "topic": "Trigonometry",
           "type": "trigonometry",
           "difficulty": 4,
@@ -3328,16 +3294,16 @@
             "trigonometry",
             "cosine-endpoint"
           ],
-          "stem": "How many solutions does 7cos(2x) = 5cos(x) + (2) have for 0° ≤ x < 1440°?",
+          "stem": "What is the minimum of 2cos x + cos(2x) on π/3 ≤ x ≤ π/2?",
           "options": [
-            "4",
-            "20",
-            "8",
-            "16",
-            "12"
+            "−2",
+            "−3/2",
+            "−1",
+            "−1/2",
+            "0"
           ],
-          "answer": 4,
-          "explanation": "Use cos(2x) = 2cos²(x) − 1. With u = cos(x), the equation becomes (u − 1)(14u + 9) = 0. The root 1 contributes once per turn. The root −9/14 contributes twice if strictly inside (−1, 1), once at −1, and not at all below −1. There are 4 full turns.\n\nAnswer: 12."
+          "answer": 2,
+          "explanation": "With c = cos x, the expression is 2c² + 2c − 1. It increases with c throughout [0, 1/2], so the minimum is −1 at c = 0, attained at x = π/2."
         },
         {
           "id": "tmua-drill-p1-cosine-endpoint-08",
@@ -3459,7 +3425,7 @@
           "explanation": "Restrict to pairs containing blue. There are 10 blue-blue pairs and 35 mixed pairs. Divide the first count by their sum.\n\nAnswer: 2/9."
         },
         {
-          "id": "tmua-drill-p1-conditioned-pair-03",
+          "id": "tmua-drill-p1-conditioned-pair-03-v2",
           "topic": "Probability, counting & data",
           "type": "data",
           "difficulty": 3,
@@ -3469,16 +3435,16 @@
             "data",
             "conditioned-pair"
           ],
-          "stem": "A bag has 5 blue and 3 gold tokens. Two distinct tokens are drawn uniformly without replacement. Given at least one is blue, what is the probability both are blue?",
+          "stem": "A fair coin is flipped three times. Given that at most one pair of consecutive flips has the same result, what is the probability that the first and last results are equal?",
           "options": [
-            "2/5",
-            "3/5",
-            "4/7",
-            "5/8",
-            "5/14"
+            "1/4",
+            "1/3",
+            "1/2",
+            "2/3",
+            "3/4"
           ],
-          "answer": 0,
-          "explanation": "Restrict to pairs containing blue. There are 10 blue-blue pairs and 15 mixed pairs. Divide the first count by their sum.\n\nAnswer: 2/5."
+          "answer": 1,
+          "explanation": "Only HHH and TTT have two equal consecutive pairs. In the six eligible outcomes, only HTH and THT have equal end results. That gives 2/6."
         },
         {
           "id": "tmua-drill-p1-conditioned-pair-04",
@@ -3554,7 +3520,7 @@
           "explanation": "Restrict to pairs containing blue. There are 21 blue-blue pairs and 42 mixed pairs. Divide the first count by their sum.\n\nAnswer: 1/3."
         },
         {
-          "id": "tmua-drill-p1-conditioned-pair-07",
+          "id": "tmua-drill-p1-conditioned-pair-07-v2",
           "topic": "Probability, counting & data",
           "type": "data",
           "difficulty": 3,
@@ -3564,17 +3530,16 @@
             "data",
             "conditioned-pair"
           ],
-          "stem": "A bag has 8 blue and 6 gold tokens. Two distinct tokens are drawn uniformly without replacement. Given at least one is blue, what is the probability both are blue?",
+          "stem": "One of the unordered pairs of distinct numbers from 1 through 5 is picked uniformly. Given that exactly one of its numbers is even, what is the probability that the smaller number is even?",
           "options": [
-            "4/7",
-            "7/13",
-            "3/7",
-            "12/19",
-            "4/13",
-            "7/19"
+            "1/4",
+            "1/3",
+            "1/2",
+            "2/3",
+            "3/4"
           ],
-          "answer": 5,
-          "explanation": "Restrict to pairs containing blue. There are 28 blue-blue pairs and 48 mixed pairs. Divide the first count by their sum.\n\nAnswer: 7/19."
+          "answer": 2,
+          "explanation": "The even number can be 2 or 4 and the odd number 1, 3 or 5, giving six pairs. With even number 2, two odd numbers are greater; with even number 4, one is greater. Thus three pairs qualify."
         },
         {
           "id": "tmua-drill-p1-conditioned-pair-08",
@@ -3693,7 +3658,7 @@
           "explanation": "There are 1 even and 2 odd choices. The total count is 3^4. The even count minus the odd count is (1 − 2)^4: expand the product, giving each odd digit a minus sign. Add the two counts equations and halve.\n\nAnswer: 41."
         },
         {
-          "id": "tmua-drill-p1-digit-parity-03",
+          "id": "tmua-drill-p1-digit-parity-03-v2",
           "topic": "Probability, counting & data",
           "type": "data",
           "difficulty": 4,
@@ -3703,18 +3668,16 @@
             "data",
             "digit-parity"
           ],
-          "stem": "Codes have length 3 using digits 2 through 6, with repetitions allowed. How many codes have an even sum of their digits?",
+          "stem": "How many four-digit positive integers use digits 0, 1, 2 and 3 exactly once each and are even?",
           "options": [
-            "64",
-            "62",
-            "27",
-            "63",
-            "65",
-            "61",
-            "125"
+            "6",
+            "8",
+            "10",
+            "12",
+            "18"
           ],
-          "answer": 3,
-          "explanation": "There are 3 even and 2 odd choices. The total count is 5^3. The even count minus the odd count is (3 − 2)^3: expand the product, giving each odd digit a minus sign. Add the two counts equations and halve.\n\nAnswer: 63."
+          "answer": 2,
+          "explanation": "An even number ends in 0 or 2. Ending in 0 leaves 3! = 6 arrangements. Ending in 2 leaves two choices for the nonzero first digit and two orders for the middle digits, giving another 4."
         },
         {
           "id": "tmua-drill-p1-digit-parity-04",
@@ -3785,7 +3748,7 @@
           "explanation": "There are 1 even and 1 odd choices. The total count is 2^3. The even count minus the odd count is (1 − 1)^3: expand the product, giving each odd digit a minus sign. Add the two counts equations and halve.\n\nAnswer: 4."
         },
         {
-          "id": "tmua-drill-p1-digit-parity-07",
+          "id": "tmua-drill-p1-digit-parity-07-v2",
           "topic": "Probability, counting & data",
           "type": "data",
           "difficulty": 4,
@@ -3795,16 +3758,16 @@
             "data",
             "digit-parity"
           ],
-          "stem": "Codes have length 2 using digits 2 through 7, with repetitions allowed. How many codes have an even sum of their digits?",
+          "stem": "Four-digit strings use only 1 and 2. How many strings have exactly two odd digits with at least one digit between them?",
           "options": [
-            "17",
-            "19",
-            "18",
-            "36",
-            "9"
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
           ],
-          "answer": 2,
-          "explanation": "There are 3 even and 3 odd choices. The total count is 6^2. The even count minus the odd count is (3 − 3)^2: expand the product, giving each odd digit a minus sign. Add the two counts equations and halve.\n\nAnswer: 18."
+          "answer": 1,
+          "explanation": "The positions of the two 1s determine the string. There are six unordered pairs of positions, three of which are adjacent. The three nonadjacent choices are (1, 3), (1, 4), and (2, 4)."
         },
         {
           "id": "tmua-drill-p1-digit-parity-08",
@@ -3925,7 +3888,7 @@
           "explanation": "The counts of multiples are 21 and 15. The common multiples are multiples of 35, of which there are 3. These were counted twice and must contribute zero. Divide the remaining count by 105.\n\nAnswer: 2/7."
         },
         {
-          "id": "tmua-drill-p1-exclusive-multiples-03",
+          "id": "tmua-drill-p1-exclusive-multiples-03-v2",
           "topic": "Probability, counting & data",
           "type": "data",
           "difficulty": 3,
@@ -3935,16 +3898,16 @@
             "data",
             "exclusive-multiples"
           ],
-          "stem": "An integer is chosen uniformly from 1 to 143 inclusive. What is the probability that it is divisible by exactly one of 12 and 4?",
+          "stem": "An integer chosen uniformly from 1 to 36 is known to be divisible by 4 or 6, or both. What is the probability it is divisible by just one of them?",
           "options": [
-            "0",
-            "46/143",
-            "1/13",
-            "35/143",
-            "24/143"
+            "1/4",
+            "1/2",
+            "2/3",
+            "3/4",
+            "5/6"
           ],
-          "answer": 4,
-          "explanation": "The counts of multiples are 11 and 35. The common multiples are multiples of 12, of which there are 11. These were counted twice and must contribute zero. Divide the remaining count by 143.\n\nAnswer: 24/143."
+          "answer": 3,
+          "explanation": "Nine are divisible by 4 and six by 6. The three multiples of 12 lie in both counts, so 12 integers meet the given condition, of which 12 − 3 = 9 meet exactly one test."
         },
         {
           "id": "tmua-drill-p1-exclusive-multiples-04",
@@ -4019,7 +3982,7 @@
           "explanation": "The counts of multiples are 12 and 43. The common multiples are multiples of 30, of which there are 4. These were counted twice and must contribute zero. Divide the remaining count by 129.\n\nAnswer: 47/129."
         },
         {
-          "id": "tmua-drill-p1-exclusive-multiples-07",
+          "id": "tmua-drill-p1-exclusive-multiples-07-v2",
           "topic": "Probability, counting & data",
           "type": "data",
           "difficulty": 3,
@@ -4029,16 +3992,16 @@
             "data",
             "exclusive-multiples"
           ],
-          "stem": "An integer is chosen uniformly from 1 to 61 inclusive. What is the probability that it is divisible by exactly one of 9 and 5?",
+          "stem": "From 1 to N inclusive, exactly six integers are divisible by 3 but not by 6. Which is the greatest possible N?",
           "options": [
-            "17/61",
-            "1/61",
-            "18/61",
-            "6/61",
-            "16/61"
+            "33",
+            "34",
+            "35",
+            "38",
+            "41"
           ],
-          "answer": 4,
-          "explanation": "The counts of multiples are 6 and 12. The common multiples are multiples of 45, of which there are 1. These were counted twice and must contribute zero. Divide the remaining count by 61.\n\nAnswer: 16/61."
+          "answer": 3,
+          "explanation": "The eligible integers are 3, 9, 15, 21, 27, 33 and then 39. The largest N before including the seventh is 38."
         },
         {
           "id": "tmua-drill-p1-exclusive-multiples-08",
@@ -4158,7 +4121,7 @@
           "explanation": "The constraint is 3 ≤ 30 − x ≤ 4. Rearranging reverses both inequalities: 26 ≤ x ≤ 27. Count both endpoints.\n\nAnswer: 2."
         },
         {
-          "id": "tmua-drill-p1-preimage-interval-03",
+          "id": "tmua-drill-p1-preimage-interval-03-v2",
           "topic": "Functions, transformations & logarithms",
           "type": "functions",
           "difficulty": 1,
@@ -4168,17 +4131,16 @@
             "functions",
             "preimage-interval"
           ],
-          "stem": "A function f is positive precisely for 6 ≤ t ≤ 9 (its input is t). How many integer values of x make f(20 − x) positive?",
+          "stem": "A function f has value 1 exactly when 0 ≤ its input ≤ 2. What is the total length of the intervals on which f(x² − 1) = 1?",
           "options": [
-            "3",
-            "6",
-            "4",
-            "2",
-            "5",
-            "15"
+            "2√3",
+            "2√3 − 2",
+            "√3",
+            "√3 − 1",
+            "2"
           ],
-          "answer": 2,
-          "explanation": "The constraint is 6 ≤ 20 − x ≤ 9. Rearranging reverses both inequalities: 11 ≤ x ≤ 14. Count both endpoints.\n\nAnswer: 4."
+          "answer": 1,
+          "explanation": "The condition is 0 ≤ x² − 1 ≤ 2, or 1 ≤ x² ≤ 3. The intervals are [−√3, −1] and [1, √3], each of length √3 − 1."
         },
         {
           "id": "tmua-drill-p1-preimage-interval-04",
@@ -4255,7 +4217,7 @@
           "explanation": "The constraint is 7 ≤ 63 − x ≤ 9. Rearranging reverses both inequalities: 54 ≤ x ≤ 56. Count both endpoints.\n\nAnswer: 3."
         },
         {
-          "id": "tmua-drill-p1-preimage-interval-07",
+          "id": "tmua-drill-p1-preimage-interval-07-v2",
           "topic": "Functions, transformations & logarithms",
           "type": "functions",
           "difficulty": 1,
@@ -4265,17 +4227,16 @@
             "functions",
             "preimage-interval"
           ],
-          "stem": "A function f is positive precisely for 4 ≤ t ≤ 8 (its input is t). How many integer values of x make f(28 − x) positive?",
+          "stem": "A function f is negative precisely on (1, 5). On which of these intervals is f(3 − 2x) negative?",
           "options": [
-            "3",
-            "6",
-            "12",
-            "7",
-            "4",
-            "5"
+            "−2 < x < 2",
+            "−1 ≤ x ≤ 1",
+            "−1 < x < 1",
+            "1 < x < 3",
+            "2 < x < 4"
           ],
-          "answer": 5,
-          "explanation": "The constraint is 4 ≤ 28 − x ≤ 8. Rearranging reverses both inequalities: 20 ≤ x ≤ 24. Count both endpoints.\n\nAnswer: 5."
+          "answer": 2,
+          "explanation": "The input must satisfy 1 < 3 − 2x < 5. Subtract 3 and divide by −2, reversing both inequalities, to get −1 < x < 1."
         },
         {
           "id": "tmua-drill-p1-preimage-interval-08",
@@ -4392,7 +4353,7 @@
           "explanation": "The remainder is at most linear. At each root of the divisor the quotient term vanishes, so R passes through (8, 15) and (12, 2). Its slope is (2 − 15)/(12 − 8) = -13/4. Start at x = 8 and move 8 units.\n\nAnswer: −11."
         },
         {
-          "id": "tmua-drill-p1-linear-remainder-03",
+          "id": "tmua-drill-p1-linear-remainder-03-v2",
           "topic": "Algebra, polynomials & coefficients",
           "type": "algebra",
           "difficulty": 4,
@@ -4402,17 +4363,14 @@
             "algebra",
             "linear-remainder"
           ],
-          "stem": "A polynomial P satisfies P(3) = 11 and P(2) = 14. Its remainder on division by (x − 3)(x − 2) is R(x). Find R(15).",
+          "stem": "A polynomial P has remainder 1 on division by x − 1 and remainder 5 on division by x − 3. Which linear divisor x − k gives remainder 7 when dividing the linear remainder of P modulo (x − 1)(x − 3)?|x − 2|x − 3",
           "options": [
-            "−24",
-            "14",
-            "−22",
-            "−25",
-            "11",
-            "−3"
+            "x − 4",
+            "x − 5",
+            "x − 7"
           ],
-          "answer": 3,
-          "explanation": "The remainder is at most linear. At each root of the divisor the quotient term vanishes, so R passes through (3, 11) and (2, 14). Its slope is (14 − 11)/(2 − 3) = -3. Start at x = 3 and move 12 units.\n\nAnswer: −25."
+          "answer": 0,
+          "explanation": "The linear remainder passes through (1, 1) and (3, 5), so it is 2x − 1. Its value is 7 at x = 4. Thus the divisor is x − 4."
         },
         {
           "id": "tmua-drill-p1-linear-remainder-04",
@@ -4485,7 +4443,7 @@
           "explanation": "The remainder is at most linear. At each root of the divisor the quotient term vanishes, so R passes through (7, 14) and (6, 3). Its slope is (3 − 14)/(6 − 7) = 11. Start at x = 7 and move 12 units.\n\nAnswer: 146."
         },
         {
-          "id": "tmua-drill-p1-linear-remainder-07",
+          "id": "tmua-drill-p1-linear-remainder-07-v2",
           "topic": "Algebra, polynomials & coefficients",
           "type": "algebra",
           "difficulty": 4,
@@ -4495,16 +4453,16 @@
             "algebra",
             "linear-remainder"
           ],
-          "stem": "A polynomial P satisfies P(2) = 10 and P(4) = 2. Its remainder on division by (x − 2)(x − 4) is R(x). Find R(23).",
+          "stem": "A polynomial P leaves remainder 2x + 3 on division by (x − 1)². What must P′(1) equal?",
           "options": [
-            "−74",
-            "−4",
-            "−82",
-            "10",
-            "2"
+            "−3",
+            "0",
+            "1",
+            "2",
+            "5"
           ],
-          "answer": 0,
-          "explanation": "The remainder is at most linear. At each root of the divisor the quotient term vanishes, so R passes through (2, 10) and (4, 2). Its slope is (2 − 10)/(4 − 2) = -4. Start at x = 2 and move 21 units.\n\nAnswer: −74."
+          "answer": 3,
+          "explanation": "Write P(x) = (x − 1)²Q(x) + 2x + 3. Both terms obtained by differentiating the product still contain a factor of x − 1, so they vanish at x = 1 and leave P′(1) = 2."
         },
         {
           "id": "tmua-drill-p1-linear-remainder-08",
@@ -4623,7 +4581,7 @@
           "explanation": "Area gives frequency: 11, 6, 26. The midpoints are 1, 6, 14. Form their frequency-weighted sum and divide by 43.\n\nAnswer: 411/43."
         },
         {
-          "id": "tmua-drill-p1-histogram-mean-03",
+          "id": "tmua-drill-p1-histogram-mean-03-v2",
           "topic": "Probability, counting & data",
           "type": "data",
           "difficulty": 2,
@@ -4633,16 +4591,16 @@
             "data",
             "histogram-mean"
           ],
-          "stem": "A histogram uses intervals [0, 6), [6, 12), [12, 18) and respective frequency densities 7/6, 11/6, 2. Using class midpoints, what is the estimate of the mean?",
+          "stem": "A histogram has two bars of equal height over the classes 0 ≤ t < 2 and 2 ≤ t < 6. The upper class is split at t = 4, and the new bar over 4 ≤ t < 6 is given twice its original height, while all other heights stay unchanged. What is the resulting midpoint estimate of the mean?",
           "options": [
-            "11",
-            "10",
-            "9",
-            "12",
-            "3"
+            "3",
+            "7/2",
+            "4",
+            "9/2",
+            "5"
           ],
           "answer": 1,
-          "explanation": "Area gives frequency: 7, 11, 12. The midpoints are 3, 9, 15. Form their frequency-weighted sum and divide by 30.\n\nAnswer: 10."
+          "explanation": "Take the original common height as 1, since overall scaling cancels. The frequencies are 2, 2 and 4, and the midpoints are 1, 3 and 5. The weighted mean is (2 + 6 + 20)/8 = 7/2."
         },
         {
           "id": "tmua-drill-p1-histogram-mean-04",
@@ -4717,7 +4675,7 @@
           "explanation": "Area gives frequency: 10, 14, 16. The midpoints are 1, 4, 8. Form their frequency-weighted sum and divide by 40.\n\nAnswer: 97/20."
         },
         {
-          "id": "tmua-drill-p1-histogram-mean-07",
+          "id": "tmua-drill-p1-histogram-mean-07-v2",
           "topic": "Probability, counting & data",
           "type": "data",
           "difficulty": 2,
@@ -4727,19 +4685,16 @@
             "data",
             "histogram-mean"
           ],
-          "stem": "A histogram uses intervals [0, 3), [3, 8), [8, 13) and respective frequency densities 8/3, 9/5, 28/5. Using class midpoints, what is the estimate of the mean?",
+          "stem": "A histogram of 18 values has classes [0, 1) and [1, 3). The second bar is four times the height of the first. What is the midpoint estimate of the mean?",
           "options": [
-            "69/10",
-            "59/10",
             "3/2",
-            "99/10",
-            "15",
-            "89/10",
-            "79/10",
-            "13/2"
+            "11/6",
+            "17/9",
+            "2",
+            "13/6"
           ],
-          "answer": 6,
-          "explanation": "Area gives frequency: 8, 9, 28. The midpoints are 3/2, 11/2, 21/2. Form their frequency-weighted sum and divide by 45.\n\nAnswer: 79/10."
+          "answer": 1,
+          "explanation": "Because the second class is twice as wide and four times as tall, its frequency is eight times the first. The mean therefore is (1/2 + 8·2)/9 = 11/6."
         },
         {
           "id": "tmua-drill-p1-histogram-mean-08",
@@ -4854,7 +4809,7 @@
           "explanation": "Subtract the line height from the parabola height: 3(x − 5)(x − 13). With u = (x − 13)/8, the difference is 192u(u + 1). The first region corresponds to −1 ≤ u ≤ 0 and has negative signed integral −1/6 of u(u + 1); the second runs from 0 to 2 and has integral 2³/3 + 2²/2. The common scale factors cancel. Divide the latter integral by 1/6.\n\nAnswer: 28."
         },
         {
-          "id": "tmua-drill-p1-ratio-of-areas-03",
+          "id": "tmua-drill-p1-ratio-of-areas-03-v2",
           "topic": "Differentiation & integration",
           "type": "calculus",
           "difficulty": 5,
@@ -4864,16 +4819,16 @@
             "calculus",
             "ratio-of-areas"
           ],
-          "stem": "The curves y = 6x² + 240 and y = 84x enclose a region. A second region lies between the curves from their rightmost intersection to x = 28. What is the ratio of the second area to the first?",
+          "stem": "The curves y = x² and y = x enclose an area A. On the same x-interval, the line y = 1 is above both curves. What is the ratio of the area between y = 1 and y = x² to A?",
           "options": [
-            "9",
-            "81",
-            "27",
-            "18",
-            "54"
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
           ],
-          "answer": 1,
-          "explanation": "Subtract the line height from the parabola height: 6(x − 4)(x − 10). With u = (x − 10)/6, the difference is 216u(u + 1). The first region corresponds to −1 ≤ u ≤ 0 and has negative signed integral −1/6 of u(u + 1); the second runs from 0 to 3 and has integral 3³/3 + 3²/2. The common scale factors cancel. Divide the latter integral by 1/6.\n\nAnswer: 81."
+          "answer": 2,
+          "explanation": "The first region runs from x = 0 to x = 1 and has area ∫₀¹(x − x²) dx = 1/6. The other area is ∫₀¹(1 − x²) dx = 2/3, giving ratio 4."
         },
         {
           "id": "tmua-drill-p1-ratio-of-areas-04",
@@ -4944,7 +4899,7 @@
           "explanation": "Subtract the line height from the parabola height: 4(x − 4)(x − 6). With u = (x − 6)/2, the difference is 16u(u + 1). The first region corresponds to −1 ≤ u ≤ 0 and has negative signed integral −1/6 of u(u + 1); the second runs from 0 to 3 and has integral 3³/3 + 3²/2. The common scale factors cancel. Divide the latter integral by 1/6.\n\nAnswer: 81."
         },
         {
-          "id": "tmua-drill-p1-ratio-of-areas-07",
+          "id": "tmua-drill-p1-ratio-of-areas-07-v2",
           "topic": "Differentiation & integration",
           "type": "calculus",
           "difficulty": 5,
@@ -4954,17 +4909,16 @@
             "calculus",
             "ratio-of-areas"
           ],
-          "stem": "The curves y = 3x² + 162 and y = 45x enclose a region. A second region lies between the curves from their rightmost intersection to x = 12. What is the ratio of the second area to the first?",
+          "stem": "For m > 0, let A(m) be the area enclosed by y = mx and y = x². Given that A(m) : A(m + 1) = 8 : 27, what is m?",
           "options": [
+            "1/2",
             "1",
-            "5",
-            "4",
+            "3/2",
             "2",
-            "3",
-            "6"
+            "3"
           ],
-          "answer": 1,
-          "explanation": "Subtract the line height from the parabola height: 3(x − 6)(x − 9). With u = (x − 9)/3, the difference is 27u(u + 1). The first region corresponds to −1 ≤ u ≤ 0 and has negative signed integral −1/6 of u(u + 1); the second runs from 0 to 1 and has integral 1³/3 + 1²/2. The common scale factors cancel. Divide the latter integral by 1/6.\n\nAnswer: 5."
+          "answer": 3,
+          "explanation": "The curves meet at x = 0 and x = m. The integral of mx − x² over [0, m] is m³/6. Taking the cube root of the ratio gives m/(m + 1) = 2/3, so m = 2."
         },
         {
           "id": "tmua-drill-p1-ratio-of-areas-08",
@@ -5087,7 +5041,7 @@
           "explanation": "By the coefficients, α + β = 7 and αβ = 12. The common denominator is αβ + 4(α + β) + 16; the numerator is α + β + 8. Substitute without solving the quadratic.\n\nAnswer: 15/56."
         },
         {
-          "id": "tmua-drill-p1-transformed-root-sum-03",
+          "id": "tmua-drill-p1-transformed-root-sum-03-v2",
           "topic": "Functions, transformations & logarithms",
           "type": "functions",
           "difficulty": 4,
@@ -5097,16 +5051,16 @@
             "functions",
             "transformed-root-sum"
           ],
-          "stem": "The two distinct positive roots α, β of x² − 13x + 42 = 0 are transformed by f(x) = 1/(x + 4). What is f(α) + f(β)?",
+          "stem": "The roots of x² − 5x + 3 = 0 are a and b. What is (a − 1)(b − 1) + (a + 1)(b + 1)?",
           "options": [
-            "1/17",
-            "13/94",
-            "21/94",
-            "21/110",
-            "1/21"
+            "4",
+            "6",
+            "8",
+            "10",
+            "12"
           ],
-          "answer": 3,
-          "explanation": "By the coefficients, α + β = 13 and αβ = 42. The common denominator is αβ + 4(α + β) + 16; the numerator is α + β + 8. Substitute without solving the quadratic.\n\nAnswer: 21/110."
+          "answer": 2,
+          "explanation": "Expanding the two products cancels the terms involving a + b and leaves 2ab + 2. Since ab = 3, the result is 8."
         },
         {
           "id": "tmua-drill-p1-transformed-root-sum-04",
@@ -5181,7 +5135,7 @@
           "explanation": "By the coefficients, α + β = 15 and αβ = 56. The common denominator is αβ + 6(α + β) + 36; the numerator is α + β + 12. Substitute without solving the quadratic.\n\nAnswer: 27/182."
         },
         {
-          "id": "tmua-drill-p1-transformed-root-sum-07",
+          "id": "tmua-drill-p1-transformed-root-sum-07-v2",
           "topic": "Functions, transformations & logarithms",
           "type": "functions",
           "difficulty": 4,
@@ -5191,18 +5145,16 @@
             "functions",
             "transformed-root-sum"
           ],
-          "stem": "The two distinct positive roots α, β of x² − 11x + 24 = 0 are transformed by f(x) = 1/(x + 7). What is f(α) + f(β)?",
+          "stem": "Let a and b be the real roots of x² − sx + 4 = 0. If a + 1/a + b + 1/b = 15, what is s?",
           "options": [
-            "1/18",
-            "11/101",
-            "25/101",
-            "1/6",
-            "−5/6",
-            "1/25",
-            "7/6"
+            "3",
+            "6",
+            "9",
+            "12",
+            "15"
           ],
           "answer": 3,
-          "explanation": "By the coefficients, α + β = 11 and αβ = 24. The common denominator is αβ + 7(α + β) + 49; the numerator is α + β + 14. Substitute without solving the quadratic.\n\nAnswer: 1/6."
+          "explanation": "The reciprocal sum is (a + b)/(ab) = s/4, so the full sum is 5s/4. Equating that to 15 gives s = 12, which does give distinct real roots."
         },
         {
           "id": "tmua-drill-p1-transformed-root-sum-08",
@@ -5322,7 +5274,7 @@
           "explanation": "Here 0 ≤ t ≤ 22; the rectangle has width 2t and height 22 − t. Its area is 2t(22 − t) = 242 − 2(t − 11)², maximised when the square is zero.\n\nAnswer: 242."
         },
         {
-          "id": "tmua-drill-p1-inscribed-rectangle-03",
+          "id": "tmua-drill-p1-inscribed-rectangle-03-v2",
           "topic": "Functions, transformations & logarithms",
           "type": "functions",
           "difficulty": 3,
@@ -5332,16 +5284,16 @@
             "functions",
             "inscribed-rectangle"
           ],
-          "stem": "The graph y = 21 − |x − 3| is above the x-axis on a symmetric interval. A rectangle has base on the x-axis, vertical sides at x = 3 − t and x = 3 + t, and both upper corners on the graph. If its area is maximal, what is its area?",
+          "stem": "A rectangle with base on the x-axis has upper corners on y = 12 − 2|x|. What is its height when the area is maximised?",
           "options": [
-            "441/2",
-            "21/2",
-            "441/4",
-            "882",
-            "441"
+            "3",
+            "4",
+            "6",
+            "8",
+            "9"
           ],
-          "answer": 0,
-          "explanation": "Here 0 ≤ t ≤ 21; the rectangle has width 2t and height 21 − t. Its area is 2t(21 − t) = 441/2 − 2(t − 21/2)², maximised when the square is zero.\n\nAnswer: 441/2."
+          "answer": 2,
+          "explanation": "If its half-width is t, equal heights on the sloping sides put the corners at ±t. The area is 2t(12 − 2t) = 36 − 4(t − 3)², maximised at t = 3. The height is then 6."
         },
         {
           "id": "tmua-drill-p1-inscribed-rectangle-04",
@@ -5414,7 +5366,7 @@
           "explanation": "Here 0 ≤ t ≤ 18; the rectangle has width 2t and height 18 − t. Its area is 2t(18 − t) = 162 − 2(t − 9)², maximised when the square is zero.\n\nAnswer: 162."
         },
         {
-          "id": "tmua-drill-p1-inscribed-rectangle-07",
+          "id": "tmua-drill-p1-inscribed-rectangle-07-v2",
           "topic": "Functions, transformations & logarithms",
           "type": "functions",
           "difficulty": 3,
@@ -5424,19 +5376,16 @@
             "functions",
             "inscribed-rectangle"
           ],
-          "stem": "The graph y = 23 − |x − 6| is above the x-axis on a symmetric interval. A rectangle has base on the x-axis, vertical sides at x = 6 − t and x = 6 + t, and both upper corners on the graph. If its area is maximal, what is its area?",
+          "stem": "A rectangle has its lower corners at (−t, 0) and (t, 0) and its upper corners on y = 10 − x². For t > 0, what is its perimeter when the height is twice its width?",
           "options": [
-            "533/2",
-            "529/4",
-            "529",
-            "531/2",
-            "527/2",
-            "529/2",
-            "1058",
-            "23/2"
+            "12",
+            "3(√14 − 2)",
+            "6√14",
+            "6(√14 − 2)",
+            "12(√14 − 2)"
           ],
-          "answer": 5,
-          "explanation": "Here 0 ≤ t ≤ 23; the rectangle has width 2t and height 23 − t. Its area is 2t(23 − t) = 529/2 − 2(t − 23/2)², maximised when the square is zero.\n\nAnswer: 529/2."
+          "answer": 4,
+          "explanation": "The width is 2t, so 10 − t² = 4t, or (t + 2)² = 14. The positive half-width is √14 − 2. The perimeter is 2(2t + 4t) = 12(√14 − 2)."
         },
         {
           "id": "tmua-drill-p1-inscribed-rectangle-08",
@@ -5556,7 +5505,7 @@
           "explanation": "The least element a ranges from 1 to 5; then the greatest is fixed at a + 8. There are 7 choices strictly between them for the remaining number.\n\nAnswer: 35."
         },
         {
-          "id": "tmua-drill-p1-fixed-spread-03",
+          "id": "tmua-drill-p1-fixed-spread-03-v2",
           "topic": "Probability, counting & data",
           "type": "data",
           "difficulty": 3,
@@ -5566,19 +5515,16 @@
             "data",
             "fixed-spread"
           ],
-          "stem": "Three different integers are selected from 1 through 8. Each selection is unordered. In how many selections is the difference between the greatest and least integers exactly 4?",
+          "stem": "Three distinct positive integers have mean 8 and range 6. What is the largest possible median?",
           "options": [
-            "11",
-            "16",
-            "13",
-            "14",
-            "3",
-            "15",
-            "12",
-            "4"
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"
           ],
-          "answer": 6,
-          "explanation": "The least element a ranges from 1 to 4; then the greatest is fixed at a + 4. There are 3 choices strictly between them for the remaining number.\n\nAnswer: 12."
+          "answer": 2,
+          "explanation": "If the smallest number is a, the largest is a + 6 and the middle is 18 − 2a. Being strictly below a + 6 requires a > 4. The least possible a is 5, giving the valid list 5, 8, 11. Larger a decrease the median, so the answer is 8."
         },
         {
           "id": "tmua-drill-p1-fixed-spread-04",
@@ -5655,7 +5601,7 @@
           "explanation": "The least element a ranges from 1 to 9; then the greatest is fixed at a + 5. There are 4 choices strictly between them for the remaining number.\n\nAnswer: 36."
         },
         {
-          "id": "tmua-drill-p1-fixed-spread-07",
+          "id": "tmua-drill-p1-fixed-spread-07-v2",
           "topic": "Probability, counting & data",
           "type": "data",
           "difficulty": 3,
@@ -5665,19 +5611,16 @@
             "data",
             "fixed-spread"
           ],
-          "stem": "Three different integers are selected from 1 through 12. Each selection is unordered. In how many selections is the difference between the greatest and least integers exactly 7?",
+          "stem": "Four distinct integers have range 8. How much larger is the mean of the largest three than the mean of the smallest three?",
           "options": [
-            "31",
-            "36",
-            "30",
-            "6",
-            "29",
-            "35",
-            "5",
-            "32"
+            "2",
+            "7/3",
+            "8/3",
+            "3",
+            "4"
           ],
           "answer": 2,
-          "explanation": "The least element a ranges from 1 to 5; then the greatest is fixed at a + 7. There are 6 choices strictly between them for the remaining number.\n\nAnswer: 30."
+          "explanation": "The two middle entries appear in both sums and cancel when they are subtracted. The difference between the sums is just the greatest entry minus the least, which is 8, so the mean difference is 8/3."
         },
         {
           "id": "tmua-drill-p1-fixed-spread-08",
@@ -5839,7 +5782,7 @@
           "explanation": "P ⇒ Q exactly when 30 divides 6: test the least positive multiple 6 itself. Q ⇒ P exactly when 6 divides 30: test 30 itself. The product 180 shows that both can hold. The two implications are respectively false and true."
         },
         {
-          "id": "tmua-drill-p2-divisibility-direction-03",
+          "id": "tmua-drill-p2-divisibility-direction-03-v2",
           "topic": "Necessary & sufficient conditions",
           "type": "conditions",
           "difficulty": 3,
@@ -5849,16 +5792,16 @@
             "conditions",
             "divisibility-direction"
           ],
-          "stem": "Let x be a positive integer. P: 9 divides x. Q: 9 divides x.\n\nWhich describes P relative to Q?",
+          "stem": "For positive integers a and b, let P mean 4 divides a² and Q mean 4 divides ab. Which correctly describes P as a condition for Q?",
           "options": [
+            "Necessary only",
+            "Sufficient only",
             "Necessary and sufficient",
-            "Neither, but both can hold together",
-            "Necessary but not sufficient",
-            "Neither, and they cannot both hold",
-            "Sufficient but not necessary"
+            "Neither, but both can hold",
+            "Neither, and they cannot both hold"
           ],
-          "answer": 0,
-          "explanation": "P ⇒ Q exactly when 9 divides 9: test the least positive multiple 9 itself. Q ⇒ P exactly when 9 divides 9: test 9 itself. The product 81 shows that both can hold. The two implications are respectively true and true."
+          "answer": 3,
+          "explanation": "P holds for (a, b) = (2, 1) without Q; Q holds for (1, 4) without P. The pair (2, 2) satisfies both."
         },
         {
           "id": "tmua-drill-p2-divisibility-direction-04",
@@ -5927,7 +5870,7 @@
           "explanation": "P ⇒ Q exactly when 32 divides 20: test the least positive multiple 20 itself. Q ⇒ P exactly when 20 divides 32: test 32 itself. The product 640 shows that both can hold. The two implications are respectively false and false."
         },
         {
-          "id": "tmua-drill-p2-divisibility-direction-07",
+          "id": "tmua-drill-p2-divisibility-direction-07-v2",
           "topic": "Necessary & sufficient conditions",
           "type": "conditions",
           "difficulty": 3,
@@ -5937,16 +5880,16 @@
             "conditions",
             "divisibility-direction"
           ],
-          "stem": "Let x be a positive integer. P: 10 divides x. Q: 5 divides x.\n\nWhich describes P relative to Q?",
+          "stem": "Which statement is necessary, but not sufficient, for the product of two positive integers to be divisible by 8?",
           "options": [
-            "Sufficient but not necessary",
-            "Neither, but both can hold together",
-            "Neither, and they cannot both hold",
-            "Necessary and sufficient",
-            "Necessary but not sufficient"
+            "Both integers are even.",
+            "Exactly one integer is even.",
+            "At least one integer is even.",
+            "One integer is divisible by 8.",
+            "The sum of the integers is even."
           ],
-          "answer": 0,
-          "explanation": "P ⇒ Q exactly when 5 divides 10: test the least positive multiple 10 itself. Q ⇒ P exactly when 10 divides 5: test 5 itself. The product 50 shows that both can hold. The two implications are respectively true and false."
+          "answer": 2,
+          "explanation": "A product of two odd integers is odd, so at least one factor must be even. But the product 2·3 is not divisible by 8. The pair (1, 8) rules out both integers even or an even sum as necessary, and (2, 4) rules out exactly one even integer or an individual multiple of 8 as necessary."
         },
         {
           "id": "tmua-drill-p2-divisibility-direction-08",
@@ -6059,7 +6002,7 @@
           "explanation": "For integer x, P is the interval [7, 9] while Q is [7, 9]. P ⇒ Q if the first interval is contained in the second; Q ⇒ P if the containment is reversed. Both intervals contain 8."
         },
         {
-          "id": "tmua-drill-p2-integer-threshold-03",
+          "id": "tmua-drill-p2-integer-threshold-03-v2",
           "topic": "Necessary & sufficient conditions",
           "type": "conditions",
           "difficulty": 4,
@@ -6069,16 +6012,16 @@
             "conditions",
             "integer-threshold"
           ],
-          "stem": "Let x be an integer. P: |x − 5| < 4. Q: (x − 5)² ≤ 36.\n\nWhich describes P relative to Q?",
+          "stem": "Let n be a positive integer. Which bound is necessary and sufficient for n² + n ≤ 30?",
           "options": [
-            "Necessary and sufficient",
-            "Neither, but both can hold together",
-            "Neither, and they cannot both hold",
-            "Necessary but not sufficient",
-            "Sufficient but not necessary"
+            "n < 4",
+            "n ≤ 4",
+            "n ≤ 5",
+            "n < 7",
+            "n ≤ 7"
           ],
-          "answer": 4,
-          "explanation": "For integer x, P is the interval [2, 8] while Q is [-1, 11]. P ⇒ Q if the first interval is contained in the second; Q ⇒ P if the containment is reversed. Both intervals contain 5."
+          "answer": 2,
+          "explanation": "The expression n(n + 1) increases strictly over positive integers. Its value at 5 is 30 and at 6 is 42, so the largest allowed n is 5."
         },
         {
           "id": "tmua-drill-p2-integer-threshold-04",
@@ -6147,7 +6090,7 @@
           "explanation": "For integer x, P is the interval [7, 11] while Q is [6, 12]. P ⇒ Q if the first interval is contained in the second; Q ⇒ P if the containment is reversed. Both intervals contain 9."
         },
         {
-          "id": "tmua-drill-p2-integer-threshold-07",
+          "id": "tmua-drill-p2-integer-threshold-07-v2",
           "topic": "Necessary & sufficient conditions",
           "type": "conditions",
           "difficulty": 4,
@@ -6157,16 +6100,16 @@
             "conditions",
             "integer-threshold"
           ],
-          "stem": "Let x be an integer. P: |x − 5| < 7. Q: (x − 5)² ≤ 64.\n\nWhich describes P relative to Q?",
+          "stem": "Let n be a positive integer. The conditions n² > 20 and n > c are equivalent. Which of the following could be c?",
           "options": [
-            "Necessary but not sufficient",
-            "Neither, and they cannot both hold",
-            "Neither, but both can hold together",
-            "Sufficient but not necessary",
-            "Necessary and sufficient"
+            "7/2",
+            "9/2",
+            "5",
+            "11/2",
+            "6"
           ],
-          "answer": 3,
-          "explanation": "For integer x, P is the interval [-1, 11] while Q is [-3, 13]. P ⇒ Q if the first interval is contained in the second; Q ⇒ P if the containment is reversed. Both intervals contain 5."
+          "answer": 1,
+          "explanation": "The square inequality is true exactly for n ≥ 5. To include 5 and exclude 4, c must satisfy 4 ≤ c < 5. Only 9/2 is in that interval."
         },
         {
           "id": "tmua-drill-p2-integer-threshold-08",
@@ -6279,7 +6222,7 @@
           "explanation": "Subtract the two differences: their difference is 5. If it is divisible by 6, the conditions describe exactly the same residue class. If it is not divisible by 6, the classes are disjoint, and x = 15 and x = 20 witness the two failed implications."
         },
         {
-          "id": "tmua-drill-p2-residue-compatibility-03",
+          "id": "tmua-drill-p2-residue-compatibility-03-v2",
           "topic": "Necessary & sufficient conditions",
           "type": "conditions",
           "difficulty": 3,
@@ -6289,16 +6232,16 @@
             "conditions",
             "residue-compatibility"
           ],
-          "stem": "Let x be an integer. P: x − 15 is divisible by 6. Q: x − 21 is divisible by 6.\n\nWhich describes P relative to Q?",
+          "stem": "A number n leaves remainder 2 on division by 4 and remainder 1 on division by 3. What remainder does n leave on division by 12?",
           "options": [
-            "Neither, but both can hold together",
-            "Neither, and they cannot both hold",
-            "Sufficient but not necessary",
-            "Necessary but not sufficient",
-            "Necessary and sufficient"
+            "1",
+            "2",
+            "4",
+            "6",
+            "10"
           ],
           "answer": 4,
-          "explanation": "Subtract the two differences: their difference is 6. If it is divisible by 6, the conditions describe exactly the same residue class. If it is not divisible by 6, the classes are disjoint, and x = 15 and x = 21 witness the two failed implications."
+          "explanation": "The candidates modulo 12 from the first condition are 2, 6 and 10. Of these, only 10 has remainder 1 on division by 3."
         },
         {
           "id": "tmua-drill-p2-residue-compatibility-04",
@@ -6367,7 +6310,7 @@
           "explanation": "Subtract the two differences: their difference is 5. If it is divisible by 6, the conditions describe exactly the same residue class. If it is not divisible by 6, the classes are disjoint, and x = 9 and x = 14 witness the two failed implications."
         },
         {
-          "id": "tmua-drill-p2-residue-compatibility-07",
+          "id": "tmua-drill-p2-residue-compatibility-07-v2",
           "topic": "Necessary & sufficient conditions",
           "type": "conditions",
           "difficulty": 3,
@@ -6377,16 +6320,16 @@
             "conditions",
             "residue-compatibility"
           ],
-          "stem": "Let x be an integer. P: x − 9 is divisible by 4. Q: x − 6 is divisible by 4.\n\nWhich describes P relative to Q?",
+          "stem": "An integer leaves remainder 2 when divided by 6. Which can be its remainder when divided by 9?",
           "options": [
-            "Neither, but both can hold together",
-            "Necessary but not sufficient",
-            "Necessary and sufficient",
-            "Neither, and they cannot both hold",
-            "Sufficient but not necessary"
+            "0 only",
+            "2 only",
+            "2 or 5 only",
+            "2, 5 or 8 only",
+            "Any remainder from 0 to 8"
           ],
           "answer": 3,
-          "explanation": "Subtract the two differences: their difference is -3. If it is divisible by 4, the conditions describe exactly the same residue class. If it is not divisible by 4, the classes are disjoint, and x = 9 and x = 6 witness the two failed implications."
+          "explanation": "Modulo 18 the first condition allows 2, 8 and 14. These reduce to 2, 8 and 5 modulo 9, and each occurs."
         },
         {
           "id": "tmua-drill-p2-residue-compatibility-08",
@@ -6499,7 +6442,7 @@
           "explanation": "Negating ‘for every’ gives ‘there exists’. The implication fails only if n is divisible by 3 but the conclusion fails; the complement of ≥ is < and the complement of ≤ is >. Negate the form of the assertion; no particular witness is needed to write the negation."
         },
         {
-          "id": "tmua-drill-p2-negated-bound-03",
+          "id": "tmua-drill-p2-negated-bound-03-v2",
           "topic": "Implications, negation & quantifiers",
           "type": "logic",
           "difficulty": 2,
@@ -6509,16 +6452,16 @@
             "logic",
             "negated-bound"
           ],
-          "stem": "Which statement is the formal negation of: ‘For every integer n, if 6 divides n then n² ≤ 4’?",
+          "stem": "What is the negation of “There are two different real numbers a and b with f(a) = f(b)”?",
           "options": [
-            "Every integer n with n² ≥ 4 is divisible by 6.",
-            "Some integer n is not divisible by 6 and n² > 4.",
-            "Some integer n is divisible by 6 and n² > 4.",
-            "Some integer n is divisible by 6 and n² ≤ 4.",
-            "Every integer n divisible by 6 has n² > 4."
+            "There are no real numbers a and b with f(a) = f(b).",
+            "No real numbers have the same input.",
+            "For every a and b, f(a) ≠ f(b).",
+            "For any two different real numbers a and b, f(a) ≠ f(b).",
+            "For every real number a there exists a different b with f(a) ≠ f(b)."
           ],
-          "answer": 2,
-          "explanation": "Negating ‘for every’ gives ‘there exists’. The implication fails only if n is divisible by 6 but the conclusion fails; the complement of ≥ is < and the complement of ≤ is >. Negate the form of the assertion; no particular witness is needed to write the negation."
+          "answer": 3,
+          "explanation": "Negating an existence claim gives a universal one. For each pair of different inputs, the equality must fail. The restriction that the inputs differ matters: f(a) always equals itself."
         },
         {
           "id": "tmua-drill-p2-negated-bound-04",
@@ -6587,7 +6530,7 @@
           "explanation": "Negating ‘for every’ gives ‘there exists’. The implication fails only if n is divisible by 2 but the conclusion fails; the complement of ≥ is < and the complement of ≤ is >. Negate the form of the assertion; no particular witness is needed to write the negation."
         },
         {
-          "id": "tmua-drill-p2-negated-bound-07",
+          "id": "tmua-drill-p2-negated-bound-07-v2",
           "topic": "Implications, negation & quantifiers",
           "type": "logic",
           "difficulty": 2,
@@ -6597,16 +6540,16 @@
             "logic",
             "negated-bound"
           ],
-          "stem": "Which statement is the formal negation of: ‘For every integer n, if 11 divides n then n² ≤ 121’?",
+          "stem": "A claim states that at least one of the three numbers a, b and c is smaller than each of the other two. Which triple refutes this claim?",
           "options": [
-            "Every integer n divisible by 11 has n² > 121.",
-            "Some integer n is divisible by 11 and n² ≤ 121.",
-            "Every integer n with n² ≥ 121 is divisible by 11.",
-            "Some integer n is divisible by 11 and n² > 121.",
-            "Some integer n is not divisible by 11 and n² > 121."
+            "a = 1, b = 2, c = 3",
+            "a = 2, b = 2, c = 1",
+            "a = 3, b = 3, c = 2",
+            "a = 1, b = 1, c = 2",
+            "a = 1, b = 2, c = 2"
           ],
           "answer": 3,
-          "explanation": "Negating ‘for every’ gives ‘there exists’. The implication fails only if n is divisible by 11 but the conclusion fails; the complement of ≥ is < and the complement of ≤ is >. Negate the form of the assertion; no particular witness is needed to write the negation."
+          "explanation": "A unique strictly smallest number exists unless the minimum is shared. In the fourth triple, 1 is shared; in the others there is one strictly smallest entry."
         },
         {
           "id": "tmua-drill-p2-negated-bound-08",
@@ -6719,7 +6662,7 @@
           "explanation": "The contrapositive of P ⇒ Q is not-Q ⇒ not-P. Here that reads: if n² is less than 16, then n is not a multiple of 10. The two fail in exactly the same case (P true and Q false). Swapping without negating instead gives the converse."
         },
         {
-          "id": "tmua-drill-p2-contrapositive-form-03",
+          "id": "tmua-drill-p2-contrapositive-form-03-v2",
           "topic": "Implications, negation & quantifiers",
           "type": "logic",
           "difficulty": 2,
@@ -6729,16 +6672,16 @@
             "logic",
             "contrapositive-form"
           ],
-          "stem": "Which statement follows the contrapositive rule for ‘If n is a multiple of 4, then n² is at least 64’ (whether or not the original is true for all integers n)?",
+          "stem": "Consider the implication “If f has a repeated root, then f and its derivative have a common root.” Which statement is its contrapositive?",
           "options": [
-            "If n is a multiple of 4, then n² is less than 64.",
-            "If n is not a multiple of 4, then n² is at least 64.",
-            "If n² is less than 64, then n is not a multiple of 4.",
-            "If n is not a multiple of 4, then n² is less than 64.",
-            "If n² is at least 64, then n is a multiple of 4."
+            "If f and its derivative have a common root, then f has a repeated root.",
+            "If f has no repeated root, then f and its derivative have no common root.",
+            "If f and its derivative have no common root, then f has no repeated root.",
+            "If f has no repeated root, then f has no roots at all.",
+            "If f has a repeated root, then its derivative has a repeated root."
           ],
           "answer": 2,
-          "explanation": "The contrapositive of P ⇒ Q is not-Q ⇒ not-P. Here that reads: if n² is less than 64, then n is not a multiple of 4. The two fail in exactly the same case (P true and Q false). Swapping without negating instead gives the converse."
+          "explanation": "The contrapositive of P implies Q is not Q implies not P. In particular, neither reversing nor negating only the original implication gives its contrapositive."
         },
         {
           "id": "tmua-drill-p2-contrapositive-form-04",
@@ -6807,7 +6750,7 @@
           "explanation": "The contrapositive of P ⇒ Q is not-Q ⇒ not-P. Here that reads: if n² is less than 16, then n is not a multiple of 2. The two fail in exactly the same case (P true and Q false). Swapping without negating instead gives the converse."
         },
         {
-          "id": "tmua-drill-p2-contrapositive-form-07",
+          "id": "tmua-drill-p2-contrapositive-form-07-v2",
           "topic": "Implications, negation & quantifiers",
           "type": "logic",
           "difficulty": 2,
@@ -6817,16 +6760,16 @@
             "logic",
             "contrapositive-form"
           ],
-          "stem": "Which statement follows the contrapositive rule for ‘If n is a multiple of 6, then n² is at least 81’ (whether or not the original is true for all integers n)?",
+          "stem": "Every number in a set T that lies strictly between 0 and 1 is rational. What must be true of each irrational number in T?",
           "options": [
-            "If n² is at least 81, then n is a multiple of 6.",
-            "If n is a multiple of 6, then n² is less than 81.",
-            "If n is not a multiple of 6, then n² is less than 81.",
-            "If n is not a multiple of 6, then n² is at least 81.",
-            "If n² is less than 81, then n is not a multiple of 6."
+            "It is negative.",
+            "It is positive.",
+            "It is greater than 1.",
+            "It is outside the open interval (0, 1).",
+            "It lies in the closed interval [0, 1]."
           ],
-          "answer": 4,
-          "explanation": "The contrapositive of P ⇒ Q is not-Q ⇒ not-P. Here that reads: if n² is less than 81, then n is not a multiple of 6. The two fail in exactly the same case (P true and Q false). Swapping without negating instead gives the converse."
+          "answer": 3,
+          "explanation": "Within T, belonging to (0, 1) implies rationality. Taking the contrapositive, not being rational implies not belonging to (0, 1). An irrational member could be negative or greater than 1."
         },
         {
           "id": "tmua-drill-p2-contrapositive-form-08",
@@ -6941,7 +6884,7 @@
           "explanation": "I works: take the unique representative y of 5 − x modulo 11 in the required range. II fails because x = 0 and x = 1 require different y. III would imply II, so also fails."
         },
         {
-          "id": "tmua-drill-p2-quantifier-order-03",
+          "id": "tmua-drill-p2-quantifier-order-03-v2",
           "topic": "Implications, negation & quantifiers",
           "type": "logic",
           "difficulty": 4,
@@ -6951,17 +6894,16 @@
             "logic",
             "quantifier-order"
           ],
-          "stem": "All variables range over the integers from 0 to 7. Which statements hold?\nI. For every x there is a y such that x + y leaves remainder 7 on division by 8.\nII. Some fixed y works for every x.\nIII. Every pair (x, y) works.",
+          "stem": "For real numbers 0 < x < 2, which statement about y is true?",
           "options": [
-            "I, III",
-            "I, II",
-            "None",
-            "I, II, III",
-            "II, III",
-            "I"
+            "There is a real y satisfying x < y < 2 for all such x.",
+            "There is a real y satisfying 0 < y < x for all such x.",
+            "For every such x there is a real y satisfying 0 < y < x.",
+            "For every such x there is a real y satisfying 2 < y < x.",
+            "Every y in (0, 2) is smaller than every such x."
           ],
-          "answer": 5,
-          "explanation": "I works: take the unique representative y of 7 − x modulo 8 in the required range. II fails because x = 0 and x = 1 require different y. III would imply II, so also fails."
+          "answer": 2,
+          "explanation": "The choice y = x/2 works in the third statement. No fixed positive y is smaller than all positive x in (0, 2), and no fixed y below 2 is larger than all x below 2. The other inequalities are not possible as stated."
         },
         {
           "id": "tmua-drill-p2-quantifier-order-04",
@@ -7033,7 +6975,7 @@
           "explanation": "I works: take the unique representative y of 1 − x modulo 13 in the required range. II fails because x = 0 and x = 1 require different y. III would imply II, so also fails."
         },
         {
-          "id": "tmua-drill-p2-quantifier-order-07",
+          "id": "tmua-drill-p2-quantifier-order-07-v2",
           "topic": "Implications, negation & quantifiers",
           "type": "logic",
           "difficulty": 4,
@@ -7043,17 +6985,16 @@
             "logic",
             "quantifier-order"
           ],
-          "stem": "All variables range over the integers from 0 to 4. Which statements hold?\nI. For every x there is a y such that x + y leaves remainder 4 on division by 5.\nII. Some fixed y works for every x.\nIII. Every pair (x, y) works.",
+          "stem": "Let S = {−2, −1, 1, 2}. Which holds for the equation xy = 1 when x and y are restricted to S?",
           "options": [
-            "II, III",
-            "I, II",
-            "None",
-            "I, III",
-            "I, II, III",
-            "I"
+            "Every x has a suitable y.",
+            "There is a fixed y that works for all x.",
+            "Some x have a suitable y and some do not.",
+            "Every x has two suitable values of y.",
+            "No x has a suitable y."
           ],
-          "answer": 5,
-          "explanation": "I works: take the unique representative y of 4 − x modulo 5 in the required range. II fails because x = 0 and x = 1 require different y. III would imply II, so also fails."
+          "answer": 2,
+          "explanation": "For x = 1 or −1 the matching y is x itself. For x = ±2 the unique real candidate would be ±1/2, which is outside S."
         },
         {
           "id": "tmua-drill-p2-quantifier-order-08",
@@ -7171,7 +7112,7 @@
           "explanation": "The premise holds on [2, 8]; the conclusion fails below 6. A counterexample must satisfy both requirements. 2 lies in [2, 5], and none of the other offered integers does."
         },
         {
-          "id": "tmua-drill-p2-interval-witness-03",
+          "id": "tmua-drill-p2-interval-witness-03-v2",
           "topic": "Counterexamples & witnesses",
           "type": "counterexamples",
           "difficulty": 3,
@@ -7181,17 +7122,16 @@
             "counterexamples",
             "interval-witness"
           ],
-          "stem": "A student claims: for every integer x, if (x − 3)(x − 6) ≤ 0 then x ≥ 5. Which value refutes the claim?",
+          "stem": "A student claims that whenever a real number x satisfies −2 < x < 3, its square satisfies x² < 4. Which of these values disproves the claim?",
           "options": [
+            "−2",
+            "−3/2",
+            "1",
             "2",
-            "7",
-            "5",
-            "9",
-            "3",
-            "8"
+            "3"
           ],
-          "answer": 4,
-          "explanation": "The premise holds on [3, 6]; the conclusion fails below 5. A counterexample must satisfy both requirements. 3 lies in [3, 4], and none of the other offered integers does."
+          "answer": 3,
+          "explanation": "The counterexample must be inside the open interval and have square at least 4. The value 2 lies in the interval and gives exactly 4. Both −2 and 3 fail the premise."
         },
         {
           "id": "tmua-drill-p2-interval-witness-04",
@@ -7263,7 +7203,7 @@
           "explanation": "The premise holds on [11, 15]; the conclusion fails below 12. A counterexample must satisfy both requirements. 11 lies in [11, 11], and none of the other offered integers does."
         },
         {
-          "id": "tmua-drill-p2-interval-witness-07",
+          "id": "tmua-drill-p2-interval-witness-07-v2",
           "topic": "Counterexamples & witnesses",
           "type": "counterexamples",
           "difficulty": 3,
@@ -7273,17 +7213,16 @@
             "counterexamples",
             "interval-witness"
           ],
-          "stem": "A student claims: for every integer x, if (x − 6)(x − 14) ≤ 0 then x ≥ 10. Which value refutes the claim?",
+          "stem": "A student claims that every real root of x² + bx + c = 0 lies in (0, 1) whenever b < 0 and c > 0. Which pair (b, c) provides a counterexample?",
           "options": [
-            "17",
-            "10",
-            "5",
-            "16",
-            "9",
-            "15"
+            "(1, 1)",
+            "(−1, −1)",
+            "(−1, 1)",
+            "(−1, 1/4)",
+            "(−3, 2)"
           ],
           "answer": 4,
-          "explanation": "The premise holds on [6, 14]; the conclusion fails below 10. A counterexample must satisfy both requirements. 9 lies in [6, 9], and none of the other offered integers does."
+          "explanation": "For (−3, 2) the polynomial factors as (x − 1)(x − 2) and neither root lies in (0, 1). The first two pairs fail the premise. The third gives no real roots and the fourth gives only 1/2."
         },
         {
           "id": "tmua-drill-p2-interval-witness-08",
@@ -7401,7 +7340,7 @@
           "explanation": "To disprove the implication use |x| ≥ 3 and make the square strictly less than 100. At x = −3, the squared base has magnitude |1 − 9|, strictly less than 10 since both 1 and 9 are positive. At 3 the bound is met exactly, and larger positive x also fails the premise; the remaining choices satisfy the conclusion."
         },
         {
-          "id": "tmua-drill-p2-square-bound-witness-03",
+          "id": "tmua-drill-p2-square-bound-witness-03-v2",
           "topic": "Counterexamples & witnesses",
           "type": "counterexamples",
           "difficulty": 4,
@@ -7411,17 +7350,16 @@
             "counterexamples",
             "square-bound-witness"
           ],
-          "stem": "Which offered integer x disproves ‘if (4x + 1)² < 441, then |x| < 5’?",
+          "stem": "Which pair refutes “if a² + b² > 5, then at least one of a and b is greater than 2”?",
           "options": [
-            "6",
-            "5",
-            "-1",
-            "-5",
-            "1",
-            "0"
+            "(2, 1)",
+            "(−1, 2)",
+            "(2, −2)",
+            "(−1, −1)",
+            "(3, 0)"
           ],
-          "answer": 3,
-          "explanation": "To disprove the implication use |x| ≥ 5 and make the square strictly less than 441. At x = −5, the squared base has magnitude |1 − 20|, strictly less than 21 since both 1 and 20 are positive. At 5 the bound is met exactly, and larger positive x also fails the premise; the remaining choices satisfy the conclusion."
+          "answer": 2,
+          "explanation": "The pair (2, −2) gives 8 > 5, yet both coordinates are at most 2. The first, second and fourth pairs fail the strict premise, and the last satisfies the conclusion."
         },
         {
           "id": "tmua-drill-p2-square-bound-witness-04",
@@ -7493,7 +7431,7 @@
           "explanation": "To disprove the implication use |x| ≥ 8 and make the square strictly less than 1089. At x = −8, the squared base has magnitude |1 − 32|, strictly less than 33 since both 1 and 32 are positive. At 8 the bound is met exactly, and larger positive x also fails the premise; the remaining choices satisfy the conclusion."
         },
         {
-          "id": "tmua-drill-p2-square-bound-witness-07",
+          "id": "tmua-drill-p2-square-bound-witness-07-v2",
           "topic": "Counterexamples & witnesses",
           "type": "counterexamples",
           "difficulty": 4,
@@ -7503,17 +7441,16 @@
             "counterexamples",
             "square-bound-witness"
           ],
-          "stem": "Which offered integer x disproves ‘if (3x + 1)² < 49, then |x| < 2’?",
+          "stem": "Which value disproves the claim that x² > 2x whenever x is nonzero?",
           "options": [
-            "-1",
-            "3",
-            "-2",
+            "−2",
+            "−1",
             "0",
-            "2",
-            "1"
+            "1/2",
+            "3"
           ],
-          "answer": 2,
-          "explanation": "To disprove the implication use |x| ≥ 2 and make the square strictly less than 49. At x = −2, the squared base has magnitude |1 − 6|, strictly less than 7 since both 1 and 6 are positive. At 2 the bound is met exactly, and larger positive x also fails the premise; the remaining choices satisfy the conclusion."
+          "answer": 3,
+          "explanation": "The premise excludes zero, even though the inequality fails there. At x = 1/2, the square is 1/4 and 2x is 1, so the inequality fails for a permitted x."
         },
         {
           "id": "tmua-drill-p2-square-bound-witness-08",
@@ -7629,7 +7566,7 @@
           "explanation": "Step 1 restricts to x ≠ 3, without examining x = 3. At that discarded value the original product is zero. Alternatively, a product of two real numbers is zero exactly when at least one factor is zero, yielding 3 and 6."
         },
         {
-          "id": "tmua-drill-p2-lost-factor-03",
+          "id": "tmua-drill-p2-lost-factor-03-v2",
           "topic": "Spotting errors in proofs",
           "type": "proof-errors",
           "difficulty": 2,
@@ -7639,16 +7576,16 @@
             "proof-errors",
             "lost-factor"
           ],
-          "stem": "A student tries to solve (x − 5)(x − 4) = 0 over the reals.\n1. Divide both sides by x − 5, getting x − 4 = 0.\n2. Add 4 to both sides, getting x = 4.\n3. Substitute x = 4 into the starting equation to check it.\n4. Report that x = 4 is the only solution.\nWhere is the first invalid deduction?",
+          "stem": "A proof that the equation 2x³ = 8x has exactly two real solutions begins “divide by x to obtain 2x² = 8”. What additional case must be checked to know the exact number of solutions?",
           "options": [
-            "Step 1: it can discard a zero-factor case",
-            "Step 2: adding a number can change an equality",
-            "No step is invalid",
-            "Step 3: substitution is not allowed after factoring",
-            "Step 4: the preceding steps are all equivalences"
+            "x = −2 only",
+            "x = 0 only",
+            "x = 2 only",
+            "All negative x",
+            "All nonzero real x"
           ],
-          "answer": 0,
-          "explanation": "Step 1 restricts to x ≠ 5, without examining x = 5. At that discarded value the original product is zero. Alternatively, a product of two real numbers is zero exactly when at least one factor is zero, yielding 5 and 4."
+          "answer": 1,
+          "explanation": "The division is valid for every nonzero x and gives ±2. It omits precisely x = 0, which also solves the original equation. In total there are three distinct solutions."
         },
         {
           "id": "tmua-drill-p2-lost-factor-04",
@@ -7717,7 +7654,7 @@
           "explanation": "Step 1 restricts to x ≠ 6, without examining x = 6. At that discarded value the original product is zero. Alternatively, a product of two real numbers is zero exactly when at least one factor is zero, yielding 6 and 7."
         },
         {
-          "id": "tmua-drill-p2-lost-factor-07",
+          "id": "tmua-drill-p2-lost-factor-07-v2",
           "topic": "Spotting errors in proofs",
           "type": "proof-errors",
           "difficulty": 2,
@@ -7727,16 +7664,16 @@
             "proof-errors",
             "lost-factor"
           ],
-          "stem": "A student tries to solve (x − 7)(x − 2) = 0 over the reals.\n1. Divide both sides by x − 7, getting x − 2 = 0.\n2. Add 2 to both sides, getting x = 2.\n3. Substitute x = 2 into the starting equation to check it.\n4. Report that x = 2 is the only solution.\nWhere is the first invalid deduction?",
+          "stem": "For which real x does x/(x² + x) = 1/(x + 1) hold with both sides defined?",
           "options": [
-            "Step 3: substitution is not allowed after factoring",
-            "No step is invalid",
-            "Step 4: the preceding steps are all equivalences",
-            "Step 2: adding a number can change an equality",
-            "Step 1: it can discard a zero-factor case"
+            "All x",
+            "All x except −1",
+            "All x except 0",
+            "All x except −1 and 0",
+            "Only x = 1"
           ],
-          "answer": 4,
-          "explanation": "Step 1 restricts to x ≠ 7, without examining x = 7. At that discarded value the original product is zero. Alternatively, a product of two real numbers is zero exactly when at least one factor is zero, yielding 7 and 2."
+          "answer": 3,
+          "explanation": "Factor the left denominator as x(x + 1). Both 0 and −1 are excluded before cancellation. At every other value cancellation gives the right side."
         },
         {
           "id": "tmua-drill-p2-lost-factor-08",
@@ -7849,7 +7786,7 @@
           "explanation": "The expressions on both sides are nonnegative, so step 1 is allowed. But √(u²) = |u|, not necessarily u. Solving |x − 13| = 2 yields 15 and 11; the second value is lost in step 2."
         },
         {
-          "id": "tmua-drill-p2-lost-sign-03",
+          "id": "tmua-drill-p2-lost-sign-03-v2",
           "topic": "Spotting errors in proofs",
           "type": "proof-errors",
           "difficulty": 2,
@@ -7859,16 +7796,16 @@
             "proof-errors",
             "lost-sign"
           ],
-          "stem": "A proof claims that (x − 6)² = 100 implies x = 16.\n1. Take nonnegative square roots of both sides.\n2. Replace √((x − 6)²) with x − 6.\n3. Simplify the right side to 10.\n4. Solve x − 6 = 10.\nWhich is the first unjustified step?",
+          "stem": "For a real number a, a student concludes from a² ≥ 9 that a ≥ 3. Which statement correctly repairs the conclusion without any extra assumption?",
           "options": [
-            "Step 4: adding the same constant does not preserve equality",
-            "Step 1: square roots cannot be taken on both sides of this equality",
-            "Step 3: the nonnegative square root is negative",
-            "Step 2: the square root is an absolute value",
-            "All steps are valid"
+            "a > 3",
+            "a² ≥ 3",
+            "a ≥ −3",
+            "a ≤ 3",
+            "a ≤ −3 or a ≥ 3"
           ],
-          "answer": 3,
-          "explanation": "The expressions on both sides are nonnegative, so step 1 is allowed. But √(u²) = |u|, not necessarily u. Solving |x − 6| = 10 yields 16 and -4; the second value is lost in step 2."
+          "answer": 4,
+          "explanation": "Taking the nonnegative square root yields |a| ≥ 3, so a lies at least 3 units from zero in either direction. Both endpoints are included."
         },
         {
           "id": "tmua-drill-p2-lost-sign-04",
@@ -7937,7 +7874,7 @@
           "explanation": "The expressions on both sides are nonnegative, so step 1 is allowed. But √(u²) = |u|, not necessarily u. Solving |x − 10| = 8 yields 18 and 2; the second value is lost in step 2."
         },
         {
-          "id": "tmua-drill-p2-lost-sign-07",
+          "id": "tmua-drill-p2-lost-sign-07-v2",
           "topic": "Spotting errors in proofs",
           "type": "proof-errors",
           "difficulty": 2,
@@ -7947,16 +7884,16 @@
             "proof-errors",
             "lost-sign"
           ],
-          "stem": "A proof claims that (x − 4)² = 9 implies x = 7.\n1. Take nonnegative square roots of both sides.\n2. Replace √((x − 4)²) with x − 4.\n3. Simplify the right side to 3.\n4. Solve x − 4 = 3.\nWhich is the first unjustified step?",
+          "stem": "Let a and b be real with a² = b² and a + b > 0. Which conclusion follows?",
           "options": [
-            "All steps are valid",
-            "Step 2: the square root is an absolute value",
-            "Step 3: the nonnegative square root is negative",
-            "Step 4: adding the same constant does not preserve equality",
-            "Step 1: square roots cannot be taken on both sides of this equality"
+            "a = −b",
+            "a and b are both negative",
+            "Exactly one of a and b is zero",
+            "a = b and both are positive",
+            "a and b have opposite signs"
           ],
-          "answer": 1,
-          "explanation": "The expressions on both sides are nonnegative, so step 1 is allowed. But √(u²) = |u|, not necessarily u. Solving |x − 4| = 3 yields 7 and 1; the second value is lost in step 2."
+          "answer": 3,
+          "explanation": "The factorisation (a − b)(a + b) = 0 gives one of two cases. The strictly positive sum rules out a + b = 0, so a = b. Their positive sum then requires a = b > 0."
         },
         {
           "id": "tmua-drill-p2-lost-sign-08",
@@ -8069,7 +8006,7 @@
           "explanation": "Dividing by a negative reverses the inequality: x + 4 > 4. Subtract 4 without reversing to obtain x > 0. At equality the starting inequality is false; replacing > with ≥ adds a spurious solution."
         },
         {
-          "id": "tmua-drill-p2-order-reversal-03",
+          "id": "tmua-drill-p2-order-reversal-03-v2",
           "topic": "Spotting errors in proofs",
           "type": "proof-errors",
           "difficulty": 1,
@@ -8079,16 +8016,16 @@
             "proof-errors",
             "order-reversal"
           ],
-          "stem": "A proof starts from −8(x + 1) < −32. It divides both sides by −8 and writes x + 1 < 4, then gives x < 3. What must be changed to give an equivalent bound?",
+          "stem": "To study 1/(x − 1) > 1 for x ≠ 1, a student multiplies by x − 1 and concludes x < 2. Which is the correct solution set?",
           "options": [
-            "No change is required.",
-            "The final bound should be x ≥ 3.",
-            "The final bound should be x < 5.",
-            "The final bound should be x > 3.",
-            "Division must be replaced by subtraction of the coefficient."
+            "x < 2",
+            "x < 1 or x > 2",
+            "x > 2",
+            "1 < x < 2",
+            "1 ≤ x < 2"
           ],
           "answer": 3,
-          "explanation": "Dividing by a negative reverses the inequality: x + 1 > 4. Subtract 1 without reversing to obtain x > 3. At equality the starting inequality is false; replacing > with ≥ adds a spurious solution."
+          "explanation": "If x < 1, the reciprocal is negative and cannot exceed 1. If x > 1, multiplying by the positive denominator gives 1 > x − 1, so precisely 1 < x < 2 works."
         },
         {
           "id": "tmua-drill-p2-order-reversal-04",
@@ -8157,7 +8094,7 @@
           "explanation": "Dividing by a negative reverses the inequality: x + 7 > 7. Subtract 7 without reversing to obtain x > 0. At equality the starting inequality is false; replacing > with ≥ adds a spurious solution."
         },
         {
-          "id": "tmua-drill-p2-order-reversal-07",
+          "id": "tmua-drill-p2-order-reversal-07-v2",
           "topic": "Spotting errors in proofs",
           "type": "proof-errors",
           "difficulty": 1,
@@ -8167,16 +8104,16 @@
             "proof-errors",
             "order-reversal"
           ],
-          "stem": "A proof starts from −5(x + 3) < −20. It divides both sides by −5 and writes x + 3 < 4, then gives x < 1. What must be changed to give an equivalent bound?",
+          "stem": "A proof says that if x² + 1 = 5, then x² = 4, then x > 0, and finally x = 2. Which implication could replace the third step so that solving the equation produces all its real solutions?",
           "options": [
-            "The final bound should be x < 7.",
-            "The final bound should be x > 1.",
-            "Division must be replaced by subtraction of the coefficient.",
-            "No change is required.",
-            "The final bound should be x ≥ 1."
+            "x² = 4 implies x > 1.",
+            "x² = 4 implies x < 0.",
+            "x² = 4 implies x = 4 or x = −4.",
+            "x² = 4 implies x = 2 or x = −2.",
+            "x² = 4 implies x = 0 or x = 2."
           ],
-          "answer": 1,
-          "explanation": "Dividing by a negative reverses the inequality: x + 3 > 4. Subtract 3 without reversing to obtain x > 1. At equality the starting inequality is false; replacing > with ≥ adds a spurious solution."
+          "answer": 3,
+          "explanation": "The equation x² = 4 factors to (x − 2)(x + 2) = 0. Both roots solve the starting equation. Restricting to positive x is the unsupported step."
         },
         {
           "id": "tmua-drill-p2-order-reversal-08",
@@ -8289,7 +8226,7 @@
           "explanation": "Combine the first two implications: if S fails, then Q fails. Its contrapositive is: if Q holds, then S holds. The third fact points to the same conclusion as the second and does not reverse either implication."
         },
         {
-          "id": "tmua-drill-p2-composed-implications-03",
+          "id": "tmua-drill-p2-composed-implications-03-v2",
           "topic": "Implications, negation & quantifiers",
           "type": "logic",
           "difficulty": 3,
@@ -8299,16 +8236,16 @@
             "logic",
             "composed-implications"
           ],
-          "stem": "Four assertions P, Q, R and S have unknown truth values. Three facts are established: if P holds, then S fails; if S fails, then R holds; and if Q fails, then R holds. Which conclusion follows from these facts alone?",
+          "stem": "Statements A, B and C obey these two rules: if A is true then B is true, and if C is true then B is false. Which conclusion is forced?",
           "options": [
-            "If Q fails, then P holds.",
-            "If R holds, then S fails.",
-            "If R fails, then P fails.",
-            "If P holds, then Q fails.",
-            "If S holds, then R fails."
+            "A and C are both true.",
+            "A and C cannot both be false.",
+            "A and C cannot both be true.",
+            "C being false forces A to be true.",
+            "B being true forces A to be true."
           ],
           "answer": 2,
-          "explanation": "Combine the first two implications: if P holds, then R holds. Its contrapositive is: if R fails, then P fails. The third fact points to the same conclusion as the second and does not reverse either implication."
+          "explanation": "If A and C were both true, B would have to be both true and false. When A and C are false the two rules impose no further condition, so the remaining proposed deductions need not hold."
         },
         {
           "id": "tmua-drill-p2-composed-implications-04",
@@ -8377,7 +8314,7 @@
           "explanation": "Combine the first two implications: if R holds, then Q fails. Its contrapositive is: if Q holds, then R fails. The third fact points to the same conclusion as the second and does not reverse either implication."
         },
         {
-          "id": "tmua-drill-p2-composed-implications-07",
+          "id": "tmua-drill-p2-composed-implications-07-v2",
           "topic": "Implications, negation & quantifiers",
           "type": "logic",
           "difficulty": 3,
@@ -8387,16 +8324,16 @@
             "logic",
             "composed-implications"
           ],
-          "stem": "Four assertions P, Q, R and S have unknown truth values. Three facts are established: if Q fails, then S fails; if S fails, then R holds; and if P holds, then R holds. Which conclusion follows from these facts alone?",
+          "stem": "A positive integer n satisfies: if 5 divides n, then 3 divides n; if 3 does not divide n, then 2 divides n. Which condition can be deduced from these two implications?",
           "options": [
-            "If P holds, then Q fails.",
-            "If R holds, then S fails.",
-            "If R fails, then Q holds.",
-            "If Q fails, then P holds.",
-            "If S holds, then R fails."
+            "If n is even, it is not divisible by 5.",
+            "If n is odd, it is divisible by 5.",
+            "If n is odd, it is divisible by 3.",
+            "If 5 does not divide n, then 3 does not divide n.",
+            "If 3 divides n, then n is odd."
           ],
           "answer": 2,
-          "explanation": "Combine the first two implications: if Q fails, then R holds. Its contrapositive is: if R fails, then Q holds. The third fact points to the same conclusion as the second and does not reverse either implication."
+          "explanation": "The contrapositive of the second implication gives odd implies divisible by 3. The other conclusions fail for n = 30, 3, 3 and 6 respectively; these satisfy both given rules."
         },
         {
           "id": "tmua-drill-p2-composed-implications-08",
@@ -8511,7 +8448,7 @@
           "explanation": "Mark the residues 1, 3, 5 on a cycle of length 7. Successive marks have gaps 2, 2, 3 (include the wrap-around). A gap of g contains g − 1 unmarked integers. The longest block that can avoid a mark therefore has length 2; add one.\n\nAnswer: 3."
         },
         {
-          "id": "tmua-drill-p2-longest-gap-03",
+          "id": "tmua-drill-p2-longest-gap-03-v2",
           "topic": "Constructing arguments & exhaustive cases",
           "type": "proof-strategies",
           "difficulty": 5,
@@ -8521,18 +8458,16 @@
             "proof-strategies",
             "longest-gap"
           ],
-          "stem": "For an integer t, call t marked if one of t + 3, t + 4, t + 2 is divisible by 5. What is the least length of a block of consecutive integers guaranteed to contain a marked integer?",
+          "stem": "Mark the multiples of 5 and the integers that are one more than a multiple of 5. What is the shortest length of a block of consecutive integers that guarantees two marks in the block?",
           "options": [
-            "5",
-            "1",
-            "7",
-            "3",
             "2",
+            "3",
             "4",
+            "5",
             "6"
           ],
           "answer": 3,
-          "explanation": "Mark the residues 1, 2, 3 on a cycle of length 5. Successive marks have gaps 1, 1, 3 (include the wrap-around). A gap of g contains g − 1 unmarked integers. The longest block that can avoid a mark therefore has length 2; add one.\n\nAnswer: 3."
+          "explanation": "Any five consecutive integers contain each residue modulo 5 once, giving two marks. The block 1, 2, 3, 4 has only one mark, so four cannot guarantee two."
         },
         {
           "id": "tmua-drill-p2-longest-gap-04",
@@ -8605,7 +8540,7 @@
           "explanation": "Mark the residues 1, 2, 3 on a cycle of length 7. Successive marks have gaps 1, 1, 5 (include the wrap-around). A gap of g contains g − 1 unmarked integers. The longest block that can avoid a mark therefore has length 4; add one.\n\nAnswer: 5."
         },
         {
-          "id": "tmua-drill-p2-longest-gap-07",
+          "id": "tmua-drill-p2-longest-gap-07-v2",
           "topic": "Constructing arguments & exhaustive cases",
           "type": "proof-strategies",
           "difficulty": 5,
@@ -8615,17 +8550,16 @@
             "proof-strategies",
             "longest-gap"
           ],
-          "stem": "For an integer t, call t marked if one of t + 4, t + 2, t + 3 is divisible by 11. What is the least length of a block of consecutive integers guaranteed to contain a marked integer?",
+          "stem": "A row of 11 squares contains exactly three black squares. What is the minimum possible length of its longest run of consecutive nonblack squares?",
           "options": [
-            "9",
-            "13",
-            "10",
             "1",
-            "8",
-            "11"
+            "2",
+            "3",
+            "4",
+            "5"
           ],
-          "answer": 0,
-          "explanation": "Mark the residues 7, 8, 9 on a cycle of length 11. Successive marks have gaps 1, 1, 9 (include the wrap-around). A gap of g contains g − 1 unmarked integers. The longest block that can avoid a mark therefore has length 8; add one.\n\nAnswer: 9."
+          "answer": 1,
+          "explanation": "The black squares split the eight others into four runs, allowing empty runs. At least one run has length ≥ 2 because four runs of length at most 1 hold at most four squares. Place black squares at positions 3, 6 and 9 to make all four runs of length 2."
         },
         {
           "id": "tmua-drill-p2-longest-gap-08",
@@ -8742,7 +8676,7 @@
           "explanation": "If a prime occurs in both factors they share that divisor. Thus each of the blocks 5^5 and 3^4 must go wholly to one of u and v, with two independent choices. All assignments work (including those with a factor 1).\n\nAnswer: 4."
         },
         {
-          "id": "tmua-drill-p2-coprime-split-03",
+          "id": "tmua-drill-p2-coprime-split-03-v2",
           "topic": "Constructing arguments & exhaustive cases",
           "type": "proof-strategies",
           "difficulty": 4,
@@ -8752,16 +8686,16 @@
             "proof-strategies",
             "coprime-split"
           ],
-          "stem": "For N = 7^3 × 11^2, how many ordered pairs (u, v) of positive integers satisfy uv = N and have no common factor greater than 1?",
+          "stem": "Positive integers a and b have no common factor greater than 1. If a²b³ is a perfect sixth power, which must be true?",
           "options": [
-            "2",
-            "4",
-            "12",
-            "7",
-            "5"
+            "a is a perfect square and b is a perfect cube.",
+            "a is a perfect cube and b is a perfect square.",
+            "Both a and b are multiples of 6.",
+            "a is a sixth power, with no restriction on b.",
+            "a = b = 1."
           ],
           "answer": 1,
-          "explanation": "If a prime occurs in both factors they share that divisor. Thus each of the blocks 7^3 and 11^2 must go wholly to one of u and v, with two independent choices. All assignments work (including those with a factor 1).\n\nAnswer: 4."
+          "explanation": "No prime occurs in both factors. For a prime of exponent e in a, 2e is a multiple of 6, so e is a multiple of 3. For one of exponent e in b, 3e is a multiple of 6, so e is even. For example a = 8, b = 9 shows the conclusion is no stronger than cube and square respectively."
         },
         {
           "id": "tmua-drill-p2-coprime-split-04",
@@ -8835,7 +8769,7 @@
           "explanation": "If a prime occurs in both factors they share that divisor. Thus each of the blocks 7^3 and 3^2 must go wholly to one of u and v, with two independent choices. All assignments work (including those with a factor 1).\n\nAnswer: 4."
         },
         {
-          "id": "tmua-drill-p2-coprime-split-07",
+          "id": "tmua-drill-p2-coprime-split-07-v2",
           "topic": "Constructing arguments & exhaustive cases",
           "type": "proof-strategies",
           "difficulty": 4,
@@ -8845,17 +8779,16 @@
             "proof-strategies",
             "coprime-split"
           ],
-          "stem": "For N = 5^4 × 7^3, how many ordered pairs (u, v) of positive integers satisfy uv = N and have no common factor greater than 1?",
+          "stem": "Positive integers a and b are coprime and ab = 72. What is the smallest possible value of a + b?",
           "options": [
-            "4",
-            "6",
-            "20",
-            "2",
-            "9",
-            "7"
+            "17",
+            "18",
+            "19",
+            "21",
+            "25"
           ],
           "answer": 0,
-          "explanation": "If a prime occurs in both factors they share that divisor. Thus each of the blocks 5^4 and 7^3 must go wholly to one of u and v, with two independent choices. All assignments work (including those with a factor 1).\n\nAnswer: 4."
+          "explanation": "The prime powers 8 and 9 must each stay together in one factor. Up to swapping, the only pairs are (1, 72) and (8, 9), so the minimum sum is 17."
         },
         {
           "id": "tmua-drill-p2-coprime-split-08",
@@ -8972,7 +8905,7 @@
           "explanation": "Modulo 2, n² has the same remainder as n, so the expression has remainder (13)n + 2 modulo 2. For even n it is 0; for odd n it is 1. Remainder 0 means even; remainder 1 means odd."
         },
         {
-          "id": "tmua-drill-p2-parity-classification-03",
+          "id": "tmua-drill-p2-parity-classification-03-v2",
           "topic": "Constructing arguments & exhaustive cases",
           "type": "proof-strategies",
           "difficulty": 3,
@@ -8982,16 +8915,16 @@
             "proof-strategies",
             "parity-classification"
           ],
-          "stem": "What can be concluded about the parity of n² + 8n + 1 over all integers n?",
+          "stem": "If a and b are integers and a² − b² is odd, which statement must hold?",
           "options": [
-            "It is even exactly when n is even.",
-            "It is even for every integer n.",
-            "It is even exactly when n is odd.",
-            "Its parity changes between some integers of the same parity.",
-            "It is odd for every integer n."
+            "Both a and b are odd.",
+            "Both a and b are even.",
+            "a and b have the same parity.",
+            "Exactly one of a and b is even.",
+            "The parity of a + b can be either even or odd."
           ],
-          "answer": 2,
-          "explanation": "Modulo 2, n² has the same remainder as n, so the expression has remainder (9)n + 1 modulo 2. For even n it is 1; for odd n it is 0. Remainder 0 means even; remainder 1 means odd."
+          "answer": 3,
+          "explanation": "Squaring preserves parity. A difference of two squares is odd only when one square is even and one is odd, so the original integers have opposite parity."
         },
         {
           "id": "tmua-drill-p2-parity-classification-04",
@@ -9060,7 +8993,7 @@
           "explanation": "Modulo 2, n² has the same remainder as n, so the expression has remainder (12)n + 6 modulo 2. For even n it is 0; for odd n it is 0. Remainder 0 means even; remainder 1 means odd."
         },
         {
-          "id": "tmua-drill-p2-parity-classification-07",
+          "id": "tmua-drill-p2-parity-classification-07-v2",
           "topic": "Constructing arguments & exhaustive cases",
           "type": "proof-strategies",
           "difficulty": 3,
@@ -9070,16 +9003,16 @@
             "proof-strategies",
             "parity-classification"
           ],
-          "stem": "What can be concluded about the parity of n² + 6n + 6 over all integers n?",
+          "stem": "For which integers n is (n + 1)(n + 3) odd?",
           "options": [
-            "It is even exactly when n is even.",
-            "It is even exactly when n is odd.",
-            "Its parity changes between some integers of the same parity.",
-            "It is even for every integer n.",
-            "It is odd for every integer n."
+            "All integers n",
+            "Only odd integers n",
+            "Only even integers n",
+            "Only multiples of 4",
+            "No integers n"
           ],
-          "answer": 0,
-          "explanation": "Modulo 2, n² has the same remainder as n, so the expression has remainder (7)n + 6 modulo 2. For even n it is 0; for odd n it is 1. Remainder 0 means even; remainder 1 means odd."
+          "answer": 2,
+          "explanation": "The two factors have the same parity, both opposite to n. The product is odd exactly when both factors are odd, so precisely when n is even."
         },
         {
           "id": "tmua-drill-p2-parity-classification-08",
@@ -9195,7 +9128,7 @@
           "explanation": "The integers come in complementary pairs {x, 29 − x}. Exactly one pair has been removed, leaving 13 pairs. Taking one from each shows 13 are not enough; taking one more forces two from a pair.\n\nAnswer: 14."
         },
         {
-          "id": "tmua-drill-p2-pair-forcing-03",
+          "id": "tmua-drill-p2-pair-forcing-03-v2",
           "topic": "Constructing arguments & exhaustive cases",
           "type": "proof-strategies",
           "difficulty": 4,
@@ -9205,16 +9138,16 @@
             "proof-strategies",
             "pair-forcing"
           ],
-          "stem": "Take the integers 1 to 20, except 6 and 15. What is the minimum number of distinct remaining integers one must select to guarantee two sum to 21?",
+          "stem": "Six boxes are labelled 1 through 6. Two boxes form a matching pair when their labels sum to 7. How many boxes must be selected to guarantee a matching pair even after one of the selected boxes is removed?",
           "options": [
-            "19",
-            "18",
-            "10",
-            "9",
-            "11"
+            "3",
+            "4",
+            "5",
+            "6",
+            "No selection can guarantee this."
           ],
           "answer": 2,
-          "explanation": "The integers come in complementary pairs {x, 21 − x}. Exactly one pair has been removed, leaving 9 pairs. Taking one from each shows 9 are not enough; taking one more forces two from a pair.\n\nAnswer: 10."
+          "explanation": "With five boxes selected, two of the three matching pairs are complete. Removing one box can break only one pair. Four boxes need not suffice: take one pair and one box from each other pair, then remove a member of the only complete pair."
         },
         {
           "id": "tmua-drill-p2-pair-forcing-04",
@@ -9286,7 +9219,7 @@
           "explanation": "The integers come in complementary pairs {x, 27 − x}. Exactly one pair has been removed, leaving 12 pairs. Taking one from each shows 12 are not enough; taking one more forces two from a pair.\n\nAnswer: 13."
         },
         {
-          "id": "tmua-drill-p2-pair-forcing-07",
+          "id": "tmua-drill-p2-pair-forcing-07-v2",
           "topic": "Constructing arguments & exhaustive cases",
           "type": "proof-strategies",
           "difficulty": 4,
@@ -9296,16 +9229,16 @@
             "proof-strategies",
             "pair-forcing"
           ],
-          "stem": "Take the integers 1 to 24, except 8 and 17. What is the minimum number of distinct remaining integers one must select to guarantee two sum to 25?",
+          "stem": "How many integers must be selected from {1, 2, …, 11} to guarantee that two have a difference divisible by 5?",
           "options": [
-            "23",
-            "13",
-            "22",
-            "11",
-            "12"
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"
           ],
-          "answer": 4,
-          "explanation": "The integers come in complementary pairs {x, 25 − x}. Exactly one pair has been removed, leaving 11 pairs. Taking one from each shows 11 are not enough; taking one more forces two from a pair.\n\nAnswer: 12."
+          "answer": 3,
+          "explanation": "A difference is divisible by 5 exactly when its endpoints are in the same residue class. There are five classes, so six choices force a repeated class. Choosing 1 through 5 shows five may fail."
         },
         {
           "id": "tmua-drill-p2-pair-forcing-08",
@@ -9427,7 +9360,7 @@
           "explanation": "The intersection is at most min(9, 8) = 8, attained by nesting. It is at least max(0, 9 + 8 − 15) = 2, from the union bound; placing as many elements as possible outside the other set attains this. Subtract the endpoints.\n\nAnswer: 6."
         },
         {
-          "id": "tmua-drill-p2-intersection-bounds-03",
+          "id": "tmua-drill-p2-intersection-bounds-03-v2",
           "topic": "Constructing arguments & exhaustive cases",
           "type": "proof-strategies",
           "difficulty": 4,
@@ -9437,19 +9370,16 @@
             "proof-strategies",
             "intersection-bounds"
           ],
-          "stem": "S and T are subsets of a set of size 28, with sizes 23 and 22. What is the difference between the largest and smallest possible values of |S ∩ T|?",
+          "stem": "In a group of ten people, six play tennis and six play chess. Exactly one person plays neither. How many play both?",
           "options": [
-            "4",
-            "7",
-            "17",
-            "22",
-            "6",
             "1",
-            "45",
+            "2",
+            "3",
+            "4",
             "5"
           ],
-          "answer": 7,
-          "explanation": "The intersection is at most min(23, 22) = 22, attained by nesting. It is at least max(0, 23 + 22 − 28) = 17, from the union bound; placing as many elements as possible outside the other set attains this. Subtract the endpoints.\n\nAnswer: 5."
+          "answer": 2,
+          "explanation": "Nine people play at least one. Adding the two counts gives twelve, counting each person in both groups twice. The excess above nine is three."
         },
         {
           "id": "tmua-drill-p2-intersection-bounds-04",
@@ -9525,7 +9455,7 @@
           "explanation": "The intersection is at most min(17, 18) = 17, attained by nesting. It is at least max(0, 17 + 18 − 30) = 5, from the union bound; placing as many elements as possible outside the other set attains this. Subtract the endpoints.\n\nAnswer: 12."
         },
         {
-          "id": "tmua-drill-p2-intersection-bounds-07",
+          "id": "tmua-drill-p2-intersection-bounds-07-v2",
           "topic": "Constructing arguments & exhaustive cases",
           "type": "proof-strategies",
           "difficulty": 4,
@@ -9535,17 +9465,16 @@
             "proof-strategies",
             "intersection-bounds"
           ],
-          "stem": "S and T are subsets of a set of size 12, with sizes 8 and 11. What is the difference between the largest and smallest possible values of |S ∩ T|?",
+          "stem": "Two sets A and B each have six elements and are contained in a universe of ten elements. Which size of A ∪ B is impossible?",
           "options": [
-            "3",
+            "5",
+            "6",
             "7",
-            "19",
-            "2",
-            "1",
-            "8"
+            "8",
+            "9"
           ],
-          "answer": 4,
-          "explanation": "The intersection is at most min(8, 11) = 8, attained by nesting. It is at least max(0, 8 + 11 − 12) = 7, from the union bound; placing as many elements as possible outside the other set attains this. Subtract the endpoints.\n\nAnswer: 1."
+          "answer": 0,
+          "explanation": "The union must contain all six members of A, so it cannot have size five. The other sizes are possible by letting B share six, five, four or three elements respectively with A."
         },
         {
           "id": "tmua-drill-p2-intersection-bounds-08",
@@ -9660,7 +9589,7 @@
           "explanation": "Write n = 8k + s. Expanding shows n(n + 1) has the same remainder as s(s + 1). For s = 0 through 7, the respective remainders are 0, 2, 6, 4, 4, 6, 2, 0. Keep exactly the positions where the remainder is zero."
         },
         {
-          "id": "tmua-drill-p2-residue-exhaustion-03",
+          "id": "tmua-drill-p2-residue-exhaustion-03-v2",
           "topic": "Constructing arguments & exhaustive cases",
           "type": "proof-strategies",
           "difficulty": 4,
@@ -9670,16 +9599,16 @@
             "proof-strategies",
             "residue-exhaustion"
           ],
-          "stem": "Which list gives exactly the remainders of integers n for which 11 divides n(n + 9)?",
+          "stem": "For an integer n, which remainder cannot occur when n² + 1 is divided by 8?",
           "options": [
-            "No remainders",
-            "0",
-            "0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10",
-            "0, 2",
-            "1, 3, 4, 5, 6, 7, 8, 9, 10"
+            "1",
+            "2",
+            "4",
+            "5",
+            "All four remainders can occur."
           ],
-          "answer": 3,
-          "explanation": "Write n = 11k + s. Expanding shows n(n + 9) has the same remainder as s(s + 9). For s = 0 through 10, the respective remainders are 0, 10, 0, 3, 8, 4, 2, 2, 4, 8, 3. Keep exactly the positions where the remainder is zero."
+          "answer": 2,
+          "explanation": "Squares modulo 8 are 0, 1 and 4: odd squares give 1 and even squares give 0 or 4. Adding 1 gives 1, 2 and 5, so 4 cannot occur."
         },
         {
           "id": "tmua-drill-p2-residue-exhaustion-04",
@@ -9748,7 +9677,7 @@
           "explanation": "Write n = 12k + s. Expanding shows n(n + 4) has the same remainder as s(s + 4). For s = 0 through 11, the respective remainders are 0, 5, 0, 9, 8, 9, 0, 5, 0, 9, 8, 9. Keep exactly the positions where the remainder is zero."
         },
         {
-          "id": "tmua-drill-p2-residue-exhaustion-07",
+          "id": "tmua-drill-p2-residue-exhaustion-07-v2",
           "topic": "Constructing arguments & exhaustive cases",
           "type": "proof-strategies",
           "difficulty": 4,
@@ -9758,16 +9687,16 @@
             "proof-strategies",
             "residue-exhaustion"
           ],
-          "stem": "Which list gives exactly the remainders of integers n for which 8 divides n(n + 7)?",
+          "stem": "Which list gives all possible remainders when 2n² + 3n is divided by 6, for integer n?",
           "options": [
-            "0, 1, 2, 3, 4, 5, 6, 7",
-            "2, 3, 4, 5, 6, 7",
-            "0",
-            "No remainders",
-            "0, 1"
+            "0 and 1",
+            "0 and 2",
+            "1 and 5",
+            "2 and 5",
+            "0, 2, 3 and 5"
           ],
           "answer": 4,
-          "explanation": "Write n = 8k + s. Expanding shows n(n + 7) has the same remainder as s(s + 7). For s = 0 through 7, the respective remainders are 0, 0, 2, 6, 4, 4, 6, 2. Keep exactly the positions where the remainder is zero."
+          "explanation": "The expression depends only on the remainder of n modulo 6. Substituting 0, 1, 2, 3, 4 and 5 gives remainders 0, 5, 2, 3, 2 and 5 respectively. Taking the distinct results gives the final list."
         },
         {
           "id": "tmua-drill-p2-residue-exhaustion-08",
@@ -9883,7 +9812,7 @@
           "explanation": "Since 10 is congruent to 1 modulo 9, each step adds 13 to the residue. Starting from 1 and taking 5 steps gives the same residue as 66. Large terms need not be computed.\n\nAnswer: 3."
         },
         {
-          "id": "tmua-drill-p2-invariant-recurrence-03",
+          "id": "tmua-drill-p2-invariant-recurrence-03-v2",
           "topic": "Constructing arguments & exhaustive cases",
           "type": "proof-strategies",
           "difficulty": 4,
@@ -9893,18 +9822,16 @@
             "proof-strategies",
             "invariant-recurrence"
           ],
-          "stem": "Let u₀ = 3 and uₙ₊₁ = 11uₙ + 13 for every n ≥ 0. What is the remainder of u_6 on division by 10?",
+          "stem": "A move transfers two counters from one pile to the other. The two piles start with 5 and 9 counters. Which unordered pair of pile sizes is impossible to obtain?",
           "options": [
-            "3",
-            "0",
-            "4",
-            "2",
-            "8",
-            "6",
-            "1"
+            "1 and 13",
+            "3 and 11",
+            "4 and 10",
+            "5 and 9",
+            "7 and 7"
           ],
-          "answer": 6,
-          "explanation": "Since 11 is congruent to 1 modulo 10, each step adds 13 to the residue. Starting from 3 and taking 6 steps gives the same residue as 81. Large terms need not be computed.\n\nAnswer: 1."
+          "answer": 2,
+          "explanation": "Each pile keeps its original parity because its size changes by 2. The only listed pair with even sizes is 4 and 10. The other pairs occur by transferring counters from one pile to the other the required number of times."
         },
         {
           "id": "tmua-drill-p2-invariant-recurrence-04",
@@ -9981,7 +9908,7 @@
           "explanation": "Since 13 is congruent to 1 modulo 12, each step adds 8 to the residue. Starting from 7 and taking 2 steps gives the same residue as 23. Large terms need not be computed.\n\nAnswer: 11."
         },
         {
-          "id": "tmua-drill-p2-invariant-recurrence-07",
+          "id": "tmua-drill-p2-invariant-recurrence-07-v2",
           "topic": "Constructing arguments & exhaustive cases",
           "type": "proof-strategies",
           "difficulty": 4,
@@ -9991,19 +9918,16 @@
             "proof-strategies",
             "invariant-recurrence"
           ],
-          "stem": "Let u₀ = 8 and uₙ₊₁ = 10uₙ + 10 for every n ≥ 0. What is the remainder of u_3 on division by 9?",
+          "stem": "Start with the pair (1, 6). At every step, either increase the first entry by 2 and decrease the second by 1, or decrease the first by 2 and increase the second by 1. Which pair is impossible to reach?",
           "options": [
-            "2",
-            "5",
-            "6",
-            "8",
-            "3",
-            "0",
-            "4",
-            "1"
+            "(3, 5)",
+            "(5, 4)",
+            "(5, 5)",
+            "(7, 3)",
+            "(9, 2)"
           ],
-          "answer": 0,
-          "explanation": "Since 10 is congruent to 1 modulo 9, each step adds 10 to the residue. Starting from 8 and taking 3 steps gives the same residue as 38. Large terms need not be computed.\n\nAnswer: 2."
+          "answer": 2,
+          "explanation": "The first entry plus twice the second stays equal to 13. The pair (5, 5) would give 15. Repeating the first move from one to four times gives the other four options."
         },
         {
           "id": "tmua-drill-p2-invariant-recurrence-08",
@@ -10118,7 +10042,7 @@
           "explanation": "Starting at 10, repeatedly add 4, so P holds at 10 + 10×4 = 50. A property true exactly at 10, 14, 18, … satisfies the premise and is false at all other offered integers. In particular, forward closure does not allow a step backwards."
         },
         {
-          "id": "tmua-drill-p2-forward-closure-03",
+          "id": "tmua-drill-p2-forward-closure-03-v2",
           "topic": "Constructing arguments & exhaustive cases",
           "type": "proof-strategies",
           "difficulty": 3,
@@ -10128,16 +10052,16 @@
             "proof-strategies",
             "forward-closure"
           ],
-          "stem": "A property P of integers is known to hold at 8. Whenever P holds at n it also holds at n + 2. No other information is given. At which offered integer is P forced to hold?",
+          "stem": "A set contains 3 and is closed under the rule “if n belongs, then 2n − 1 belongs”. What is the least possible size of its intersection with {1, 2, …, 20}?",
           "options": [
-            "23",
-            "9",
-            "7",
-            "22",
-            "21"
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
           ],
           "answer": 3,
-          "explanation": "Starting at 8, repeatedly add 2, so P holds at 8 + 7×2 = 22. A property true exactly at 8, 10, 12, … satisfies the premise and is false at all other offered integers. In particular, forward closure does not allow a step backwards."
+          "explanation": "Starting from 3 the rule forces 5, 9, 17 and 33. These values grow, so after 33 none can return to the target interval. The set consisting of just this sequence satisfies the rule; exactly four of its elements are at most 20."
         },
         {
           "id": "tmua-drill-p2-forward-closure-04",
@@ -10206,7 +10130,7 @@
           "explanation": "Starting at 2, repeatedly add 5, so P holds at 2 + 9×5 = 47. A property true exactly at 2, 7, 12, … satisfies the premise and is false at all other offered integers. In particular, forward closure does not allow a step backwards."
         },
         {
-          "id": "tmua-drill-p2-forward-closure-07",
+          "id": "tmua-drill-p2-forward-closure-07-v2",
           "topic": "Constructing arguments & exhaustive cases",
           "type": "proof-strategies",
           "difficulty": 3,
@@ -10216,16 +10140,16 @@
             "proof-strategies",
             "forward-closure"
           ],
-          "stem": "A property P of integers is known to hold at 4. Whenever P holds at n it also holds at n + 3. No other information is given. At which offered integer is P forced to hold?",
+          "stem": "A set of real numbers contains 1 and 3 and also contains the average of any two of its elements. Which of these numbers must belong?",
           "options": [
-            "9",
-            "11",
-            "10",
-            "3",
-            "5"
+            "0",
+            "5/2",
+            "7/3",
+            "4",
+            "9/2"
           ],
-          "answer": 2,
-          "explanation": "Starting at 4, repeatedly add 3, so P holds at 4 + 2×3 = 10. A property true exactly at 4, 7, 10, … satisfies the premise and is false at all other offered integers. In particular, forward closure does not allow a step backwards."
+          "answer": 1,
+          "explanation": "Averaging 1 and 3 gives 2, and then averaging 2 and 3 gives 5/2. The set of all numbers in [1, 3] whose reduced denominator is a power of 2 is closed under averaging and excludes the other choices."
         },
         {
           "id": "tmua-drill-p2-forward-closure-08",
@@ -10340,7 +10264,7 @@
           "explanation": "Multiplying gives c√(65n) for y = c√n. In a perfect square each prime has even exponent. The two primes 13 and 5 occur once in 65; of the offered radicands only 65 contributes a second copy of both without introducing another odd exponent. The resulting product is 260."
         },
         {
-          "id": "tmua-drill-p2-irrational-product-03",
+          "id": "tmua-drill-p2-irrational-product-03-v2",
           "topic": "Constructing arguments & exhaustive cases",
           "type": "proof-strategies",
           "difficulty": 3,
@@ -10350,17 +10274,16 @@
             "proof-strategies",
             "irrational-product"
           ],
-          "stem": "Let x = √22. Which of the following irrational numbers y makes xy rational?",
+          "stem": "Which statement about the product of two irrational real numbers is true?",
           "options": [
-            "2√26",
-            "2√11",
-            "3√2",
-            "2√13",
-            "2√143",
-            "2√22"
+            "It is always rational.",
+            "It is always irrational.",
+            "It is rational only if the two numbers are equal.",
+            "It is irrational only if the two numbers have opposite signs.",
+            "It can be rational or irrational even when both numbers are positive."
           ],
-          "answer": 5,
-          "explanation": "Multiplying gives c√(22n) for y = c√n. In a perfect square each prime has even exponent. The two primes 11 and 2 occur once in 22; of the offered radicands only 22 contributes a second copy of both without introducing another odd exponent. The resulting product is 44."
+          "answer": 4,
+          "explanation": "The product √2·√2 = 2 is rational, whereas √2·√3 = √6 is irrational. Distinct positive irrational factors may also give a rational product, as √2·√8 = 4."
         },
         {
           "id": "tmua-drill-p2-irrational-product-04",
@@ -10432,7 +10355,7 @@
           "explanation": "Multiplying gives c√(14n) for y = c√n. In a perfect square each prime has even exponent. The two primes 7 and 2 occur once in 14; of the offered radicands only 14 contributes a second copy of both without introducing another odd exponent. The resulting product is 42."
         },
         {
-          "id": "tmua-drill-p2-irrational-product-07",
+          "id": "tmua-drill-p2-irrational-product-07-v2",
           "topic": "Constructing arguments & exhaustive cases",
           "type": "proof-strategies",
           "difficulty": 3,
@@ -10442,17 +10365,16 @@
             "proof-strategies",
             "irrational-product"
           ],
-          "stem": "Let x = √15. Which of the following irrational numbers y makes xy rational?",
+          "stem": "Let x be irrational. Suppose xy = 6 for a real number y. Which must be true?",
           "options": [
-            "5√65",
-            "5√5",
-            "5√39",
-            "5√13",
-            "5√15",
-            "6√3"
+            "y is rational.",
+            "x² is irrational.",
+            "y² is irrational.",
+            "y is irrational.",
+            "x + y is rational."
           ],
-          "answer": 4,
-          "explanation": "Multiplying gives c√(15n) for y = c√n. In a perfect square each prime has even exponent. The two primes 5 and 3 occur once in 15; of the offered radicands only 15 contributes a second copy of both without introducing another odd exponent. The resulting product is 75."
+          "answer": 3,
+          "explanation": "If y were rational, then x = 6/y would be rational because y ≠ 0. Taking x = √6 gives y = √6, disproving the other proposed requirements on the squares and the sum."
         },
         {
           "id": "tmua-drill-p2-irrational-product-08",
@@ -10570,7 +10492,7 @@
           "explanation": "The counterexample is x = 0: no allowed y is less than zero. At the different input x = 4, y = 0 works. A successful witness at one input cannot prove an assertion about every input."
         },
         {
-          "id": "tmua-drill-p2-witness-scope-03",
+          "id": "tmua-drill-p2-witness-scope-03-v2",
           "topic": "Counterexamples & witnesses",
           "type": "counterexamples",
           "difficulty": 4,
@@ -10580,17 +10502,16 @@
             "counterexamples",
             "witness-scope"
           ],
-          "stem": "A student claims: for every integer x between 0 and 12 inclusive there is an integer y in the same range with x + y giving remainder 8 modulo 12 and y < x. Which choice gives an x refuting that claim and also a y that works for the different input x = 8?",
+          "stem": "Which observation, on its own, disproves “Every positive integer n can be written as the sum of two different positive integers”?",
           "options": [
-            "x = 8, y = 0",
-            "x = 8, y = 1",
-            "x = 0, y = 0",
-            "x = 1, y = 8",
-            "x = 12, y = 12",
-            "x = 0, y = 8"
+            "0 + 4 gives 4 but 0 is not positive.",
+            "3 = 1 + 2.",
+            "No two different positive integers have sum 2.",
+            "4 = 2 + 2, but the summands are equal.",
+            "The particular pair 2 and 5 does not sum to 6."
           ],
           "answer": 2,
-          "explanation": "The counterexample is x = 0: no allowed y is less than zero. At the different input x = 8, y = 0 works. A successful witness at one input cannot prove an assertion about every input."
+          "explanation": "The two smallest distinct positive integers are 1 and 2, so their sum is at least 3. Thus 2 has no permissible representation. A proposed representation that fails does not rule out all others."
         },
         {
           "id": "tmua-drill-p2-witness-scope-04",
@@ -10662,7 +10583,7 @@
           "explanation": "The counterexample is x = 0: no allowed y is less than zero. At the different input x = 5, y = 0 works. A successful witness at one input cannot prove an assertion about every input."
         },
         {
-          "id": "tmua-drill-p2-witness-scope-07",
+          "id": "tmua-drill-p2-witness-scope-07-v2",
           "topic": "Counterexamples & witnesses",
           "type": "counterexamples",
           "difficulty": 4,
@@ -10672,17 +10593,16 @@
             "counterexamples",
             "witness-scope"
           ],
-          "stem": "A student claims: for every integer x between 0 and 4 inclusive there is an integer y in the same range with x + y giving remainder 2 modulo 4 and y < x. Which choice gives an x refuting that claim and also a y that works for the different input x = 2?",
+          "stem": "A claim states “for every positive integer n, at least one of n − 1 and n + 1 is a prime.” Which listed n disproves it?",
           "options": [
-            "x = 2, y = 0",
-            "x = 2, y = 1",
-            "x = 0, y = 2",
-            "x = 1, y = 2",
-            "x = 4, y = 4",
-            "x = 0, y = 0"
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
           ],
-          "answer": 5,
-          "explanation": "The counterexample is x = 0: no allowed y is less than zero. At the different input x = 2, y = 0 works. A successful witness at one input cannot prove an assertion about every input."
+          "answer": 3,
+          "explanation": "At n = 5 both neighbours, 4 and 6, are composite. Each other offered n has at least one prime neighbour: 3, 2, 3 and 5 respectively."
         },
         {
           "id": "tmua-drill-p2-witness-scope-08",

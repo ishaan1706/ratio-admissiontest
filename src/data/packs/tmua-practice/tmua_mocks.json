@@ -15,98 +15,95 @@
           "minutes": 75,
           "questions": [
             {
-              "id": "tmua-pack-m1-p1-q01",
+              "id": "tmua-pack-m1-p1-q01-v2",
               "topic": "Functions, transformations & logarithms",
               "type": "functions",
-              "difficulty": 2,
+              "difficulty": 3,
               "family": "log-domain",
               "tags": [
                 "paper-1",
                 "functions",
                 "log-domain"
               ],
-              "stem": "Let x > 0. If the base-4 logarithm of [x(x + 16) + (764)] equals 5, what is x?",
+              "stem": "The two solutions of log₂ x + log₂(5 − x) = 1 are a and b. What is (a − b)²?",
               "options": [
-                "11",
-                "−26",
-                "9",
-                "20",
-                "26",
-                "10"
+                "13",
+                "15",
+                "17",
+                "21",
+                "25"
               ],
-              "answer": 5,
-              "explanation": "Exponentiate to obtain x(x + 16) = 1024 − (764) = 260. Subtract and factor: (x − 10)(x + 26) = 0. Only x = 10 is positive and its logarithm input is 1024.\n\nAnswer: 10."
+              "answer": 2,
+              "explanation": "The logarithms require 0 < x < 5. Combining and exponentiating gives x(5 − x) = 2, so a + b = 5 and ab = 2. Both roots are in the domain because they are positive and sum to 5. Thus (a − b)² = 25 − 8 = 17."
             },
             {
-              "id": "tmua-pack-m1-p1-q02",
+              "id": "tmua-pack-m1-p1-q02-v2",
               "topic": "Probability, counting & data",
               "type": "data",
-              "difficulty": 2,
+              "difficulty": 3,
               "family": "histogram-mean",
               "tags": [
                 "paper-1",
                 "data",
                 "histogram-mean"
               ],
-              "stem": "A histogram uses intervals [0, 4), [4, 12), [12, 20) and respective frequency densities 5/4, 7/8, 4. Using class midpoints, what is the estimate of the mean?",
+              "stem": "A histogram has just two classes, 0 ≤ t < 4 and 4 ≤ t < 10. The estimate of the mean obtained from class midpoints is 5. What is the ratio of the height of the second bar to that of the first?",
               "options": [
-                "10",
-                "311/22",
-                "2",
-                "289/22",
-                "44/3"
+                "1",
+                "2/3",
+                "3/2",
+                "5/3",
+                "9/4"
               ],
-              "answer": 3,
-              "explanation": "Area gives frequency: 5, 7, 32. The midpoints are 2, 8, 16. Form their frequency-weighted sum and divide by 44.\n\nAnswer: 289/22."
+              "answer": 0,
+              "explanation": "The midpoints are 2 and 7. Balancing deviations from 5 gives 3 times the first frequency equal to 2 times the second. The frequency ratio is 3/2, which is also the width ratio, so the heights are equal."
             },
             {
-              "id": "tmua-pack-m1-p1-q03",
+              "id": "tmua-pack-m1-p1-q03-v2",
               "topic": "Trigonometry",
               "type": "trigonometry",
-              "difficulty": 2,
+              "difficulty": 3,
               "family": "squared-sine",
               "tags": [
                 "paper-1",
                 "trigonometry",
                 "squared-sine"
               ],
-              "stem": "In 0 ≤ x < 1440° how many solutions are there to 6sin²(x) = 2?",
+              "stem": "For 0 ≤ x ≤ π, how many solutions are there to sin²x = sin(2x)?",
               "options": [
-                "18",
-                "17",
-                "16",
-                "15",
-                "8",
-                "9"
+                "0",
+                "1",
+                "2",
+                "4",
+                "3"
               ],
-              "answer": 2,
-              "explanation": "sin(x) = ±√(2/6). The magnitude is strictly between 0 and 1. Each nonzero value in (−1, 1) occurs twice per full turn of 360°, and there are 4 full turns.\n\nAnswer: 16."
+              "answer": 4,
+              "explanation": "Factor to get sin x(sin x − 2cos x) = 0. The first factor contributes both endpoints. Away from the endpoints sin x is positive, so the second factor requires cos x > 0 and gives one solution tan x = 2 in the first quadrant."
             },
             {
-              "id": "tmua-pack-m1-p1-q04",
+              "id": "tmua-pack-m1-p1-q04-v2",
               "topic": "Probability, counting & data",
               "type": "data",
-              "difficulty": 3,
+              "difficulty": 4,
               "family": "fixed-spread",
               "tags": [
                 "paper-1",
                 "data",
                 "fixed-spread"
               ],
-              "stem": "Three different integers are selected from 1 through 10. Each selection is unordered. In how many selections is the difference between the greatest and least integers exactly 4?",
+              "stem": "Five distinct integers have median 9 and range 7. What is the greatest possible mean?",
               "options": [
-                "19",
-                "18",
-                "21",
-                "6",
-                "3",
-                "24"
+                "49/5",
+                "51/5",
+                "10",
+                "52/5",
+                "53/5"
               ],
               "answer": 1,
-              "explanation": "The least element a ranges from 1 to 6; then the greatest is fixed at a + 4. There are 3 choices strictly between them for the remaining number.\n\nAnswer: 18."
+              "explanation": "The smallest entry is at most 7 because two distinct entries are below 9. The largest is then at most 14 and the next largest at most 13. The sum is at most 7 + 8 + 9 + 13 + 14 = 51, attained by that list."
             },
             {
-              "id": "tmua-pack-m1-p1-q05",
+              "id": "tmua-pack-m1-p1-q05-v2",
               "topic": "Functions, transformations & logarithms",
               "type": "functions",
               "difficulty": 3,
@@ -116,92 +113,85 @@
                 "functions",
                 "absolute-composition"
               ],
-              "stem": "Let f(x) = |x| − 4 and g(x) = |x| − 14. How many integers x in [−33, 33] make at least one of f(g(x)) and g(f(x)) zero?",
+              "stem": "Let f(x) = |x − 2| and g(x) = |x| + 2. For which real x is f(g(x)) = g(f(x))?",
               "options": [
-                "5",
-                "3",
-                "1",
-                "8",
-                "6",
-                "2",
-                "4"
+                "No real x",
+                "x = 2 only",
+                "x ≥ 2",
+                "x ≤ 0",
+                "x > 2"
               ],
-              "answer": 6,
-              "explanation": "The two equations give |x| = 14 ± 4 or |x| = 4 ± 14. Keeping only nonnegative possibilities gives magnitudes 18 and 10; they are distinct and nonzero. Each magnitude at most 33 contributes two integers.\n\nAnswer: 4."
+              "answer": 2,
+              "explanation": "The two sides simplify to |x| and |x − 2| + 2. For x ≥ 2 these are equal. For 0 ≤ x < 2, equality would require x = 4 − x, giving x = 2 outside that case. For x < 0 the right side exceeds the left by 4."
             },
             {
-              "id": "tmua-pack-m1-p1-q06",
+              "id": "tmua-pack-m1-p1-q06-v2",
               "topic": "Algebra, polynomials & coefficients",
               "type": "algebra",
-              "difficulty": 3,
+              "difficulty": 4,
               "family": "parameter-roots",
               "tags": [
                 "paper-1",
                 "algebra",
                 "parameter-roots"
               ],
-              "stem": "How many positive integers k make x² + 2(k − 3)x + 2(k − 3)² − 36 = 0 have distinct real roots?",
+              "stem": "For how many integers k does x² − kx + 12 = 0 have two distinct real roots, both strictly between 1 and 6?",
               "options": [
-                "10",
-                "7",
-                "12",
-                "8",
-                "9",
-                "11"
+                "0",
+                "2",
+                "3",
+                "1",
+                "4"
               ],
               "answer": 3,
-              "explanation": "The discriminant is 4(36 − (k − 3)²), so |k − 3| < 6. Count integers from 1 to 8, inclusive.\n\nAnswer: 8."
+              "explanation": "Real roots require k² > 48, and positive roots require k > 0. If both roots are below 6, their sum k is below 12 and the polynomial is positive at 6, giving 48 − 6k > 0. Only k = 7 is left; its roots are 3 and 4, which both work."
             },
             {
-              "id": "tmua-pack-m1-p1-q07",
+              "id": "tmua-pack-m1-p1-q07-v2",
               "topic": "Differentiation & integration",
               "type": "calculus",
-              "difficulty": 3,
+              "difficulty": 4,
               "family": "crossing-tangents",
               "tags": [
                 "paper-1",
                 "calculus",
                 "crossing-tangents"
               ],
-              "stem": "The tangents to y = 6x² at x = 8 and x = 9 intersect at T. What is the x-coordinate of T?",
+              "stem": "The tangents to y = x² at x = a and x = b meet on the line y = 6, and a and b are integers with a < b. How many different x-coordinates can their intersection have?",
               "options": [
-                "1/2",
-                "15/2",
-                "8",
-                "19/2",
-                "9",
-                "17/2",
-                "21/2",
-                "17"
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
               ],
-              "answer": 5,
-              "explanation": "The tangent at x = t has slope 12t and intercept −6t². Equate the lines to get x = (9² − 8²)/(2(9 − 8)). Cancel the difference using the difference of squares.\n\nAnswer: 17/2."
+              "answer": 3,
+              "explanation": "Equating the two tangents y = 2ax − a² and y = 2bx − b² gives x = (a + b)/2 and y = ab. Thus ab = 6. The positive pairs (1, 6), (2, 3) and their negative counterparts give four distinct x-coordinates."
             },
             {
-              "id": "tmua-pack-m1-p1-q08",
+              "id": "tmua-pack-m1-p1-q08-v2",
               "topic": "Differentiation & integration",
               "type": "calculus",
-              "difficulty": 4,
+              "difficulty": 3,
               "family": "negative-area",
               "tags": [
                 "paper-1",
                 "calculus",
                 "negative-area"
               ],
-              "stem": "What is the exact area between y = 5(x − 3)(x − 8) and the x-axis for 3 ≤ x ≤ 8?",
+              "stem": "The total area between y = x² − 4x and the x-axis on [0, 6] is A. What is A?",
               "options": [
-                "625/6",
-                "125/2",
-                "619/6",
-                "631/6",
-                "−625/6",
-                "625"
+                "64/3",
+                "0",
+                "32/3",
+                "16",
+                "24"
               ],
               "answer": 0,
-              "explanation": "The curve is nonpositive here. Let t = x − 3, so y = 5(t² − 5t). Integrate its negative from 0 to 5: 5[5t²/2 − t³/3] at the upper limit gives the area.\n\nAnswer: 625/6."
+              "explanation": "The antiderivative x³/3 − 2x² takes values 0, −32/3 and 0 at 0, 4 and 6. The curve is negative on (0, 4) and positive on (4, 6), so both pieces contribute 32/3."
             },
             {
-              "id": "tmua-pack-m1-p1-q09",
+              "id": "tmua-pack-m1-p1-q09-v2",
               "topic": "Probability, counting & data",
               "type": "data",
               "difficulty": 4,
@@ -211,44 +201,41 @@
                 "data",
                 "digit-parity"
               ],
-              "stem": "Codes have length 4 using digits 2 through 3, with repetitions allowed. How many codes have an even sum of their digits?",
+              "stem": "A five-digit string uses only 0, 1 and 2. Its first and last digits are different, and its digit sum is odd. How many such strings are there? A string may start with 0.",
               "options": [
-                "1",
-                "10",
-                "9",
-                "16",
-                "11",
-                "6",
-                "8",
-                "7"
+                "72",
+                "80",
+                "81",
+                "82",
+                "90"
               ],
-              "answer": 6,
-              "explanation": "There are 1 even and 1 odd choices. The total count is 2^4. The even count minus the odd count is (1 − 1)^4: expand the product, giving each odd digit a minus sign. Add the two counts equations and halve.\n\nAnswer: 8."
+              "answer": 3,
+              "explanation": "There are two ordered end pairs of even sum and four of odd sum. Among the 27 middle triples, 3·4 + 1 = 13 have odd sum, and 14 have even sum. The count is 2·13 + 4·14 = 82."
             },
             {
-              "id": "tmua-pack-m1-p1-q10",
+              "id": "tmua-pack-m1-p1-q10-v2",
               "topic": "Sequences & series",
               "type": "sequences",
-              "difficulty": 3,
+              "difficulty": 4,
               "family": "alternate-series",
               "tags": [
                 "paper-1",
                 "sequences",
                 "alternate-series"
               ],
-              "stem": "A geometric progression with 4 terms has positive integer ratio 5 and sum 624. A new sequence keeps the terms in odd positions and drops those in even positions (positions start at 1). What is the sum of the new sequence?",
+              "stem": "An infinite geometric series with nonzero first term converges. The sum of its first two terms is 3/4 of the sum of the series. What are the possible values of the even-position sum divided by the full sum?",
               "options": [
-                "105",
-                "624",
-                "104",
-                "312",
-                "620"
+                "−1 and 1/3",
+                "1/3 only",
+                "1 only",
+                "−1/3 and 1/3",
+                "−1 and 1"
               ],
-              "answer": 2,
-              "explanation": "The original sum is first term × (5^4 − 1)/(5 − 1), so the first term is 4. The retained terms have ratio 25 and there are 2 of them. Sum this shorter progression.\n\nAnswer: 104."
+              "answer": 0,
+              "explanation": "If the ratio is r, the fraction supplied by the first two terms is 1 − r², so r = ±1/2. The even-position sum divided by the total is r/(1 + r), which gives 1/3 or −1."
             },
             {
-              "id": "tmua-pack-m1-p1-q11",
+              "id": "tmua-pack-m1-p1-q11-v2",
               "topic": "Algebra, polynomials & coefficients",
               "type": "algebra",
               "difficulty": 3,
@@ -258,45 +245,41 @@
                 "algebra",
                 "adjacent-coefficients"
               ],
-              "stem": "What is the coefficient of x^6 in (1 + 3x)^8(1 + 6x)?",
+              "stem": "The coefficient of x³ in (1 + x)⁵(a − x)² is zero. What is the sum of all possible real values of a?",
               "options": [
-                "102060",
-                "102061",
-                "20412",
-                "81648",
-                "102058",
-                "102062",
-                "61236",
-                "102059"
+                "1/2",
+                "1",
+                "3/2",
+                "5/2",
+                "2"
               ],
-              "answer": 0,
-              "explanation": "Take either x^6 from the first factor and 1 from the last, or x^5 from the first and 6x from the last. The two contributions are 28×3^6 and 56×3^5×6.\n\nAnswer: 102060."
+              "answer": 4,
+              "explanation": "The coefficient is 10a² − 20a + 5. Its discriminant is positive, and the sum of its two roots is 20/10 = 2."
             },
             {
-              "id": "tmua-pack-m1-p1-q12",
+              "id": "tmua-pack-m1-p1-q12-v2",
               "topic": "Algebra, polynomials & coefficients",
               "type": "algebra",
-              "difficulty": 4,
+              "difficulty": 3,
               "family": "linear-remainder",
               "tags": [
                 "paper-1",
                 "algebra",
                 "linear-remainder"
               ],
-              "stem": "A polynomial P satisfies P(8) = 7 and P(6) = 2. Its remainder on division by (x − 8)(x − 6) is R(x). Find R(15).",
+              "stem": "A polynomial P has remainder 2x + 1 on division by x² − 1, and 3x on division by x² − 4. What is the remainder when P is divided by (x + 1)(x − 2)?",
               "options": [
-                "49/2",
-                "7",
-                "5/2",
-                "51/2",
-                "2",
-                "39/2"
+                "2x + 1",
+                "3x",
+                "5x/3 + 2/3",
+                "7x/3 + 4/3",
+                "7x/3 − 4/3"
               ],
-              "answer": 0,
-              "explanation": "The remainder is at most linear. At each root of the divisor the quotient term vanishes, so R passes through (8, 7) and (6, 2). Its slope is (2 − 7)/(6 − 8) = 5/2. Start at x = 8 and move 7 units.\n\nAnswer: 49/2."
+              "answer": 3,
+              "explanation": "Use P(−1) = −1 from the first remainder and P(2) = 6 from the second. The required linear remainder has slope 7/3 and intercept 4/3."
             },
             {
-              "id": "tmua-pack-m1-p1-q13",
+              "id": "tmua-pack-m1-p1-q13-v2",
               "topic": "Probability, counting & data",
               "type": "data",
               "difficulty": 3,
@@ -306,112 +289,107 @@
                 "data",
                 "conditioned-pair"
               ],
-              "stem": "A bag has 4 blue and 5 gold tokens. Two distinct tokens are drawn uniformly without replacement. Given at least one is blue, what is the probability both are blue?",
+              "stem": "Two distinct integers are drawn uniformly from {1, 2, 3, 4, 5, 6}. Given that their product is even, what is the probability that their sum is divisible by 3?",
               "options": [
-                "1/6",
-                "4/9",
-                "3/13",
-                "3/8",
-                "10/13"
+                "1/5",
+                "1/3",
+                "1/4",
+                "2/5",
+                "5/12"
               ],
-              "answer": 2,
-              "explanation": "Restrict to pairs containing blue. There are 6 blue-blue pairs and 20 mixed pairs. Divide the first count by their sum.\n\nAnswer: 3/13."
+              "answer": 1,
+              "explanation": "There are 15 unordered pairs, of which three are both odd. The eligible pairs summing to a multiple of 3 are (1, 2), (1, 5), (2, 4), (3, 6), (4, 5); discard (1, 5). The probability is 4/12."
             },
             {
-              "id": "tmua-pack-m1-p1-q14",
+              "id": "tmua-pack-m1-p1-q14-v2",
               "topic": "Sequences & series",
               "type": "sequences",
-              "difficulty": 3,
+              "difficulty": 4,
               "family": "split-progression",
               "tags": [
                 "paper-1",
                 "sequences",
                 "split-progression"
               ],
-              "stem": "An arithmetic sequence of 14 terms has sum 980. The last term exceeds the first by 130. By how much does the sum of the final 12 terms exceed the sum of the first 2 terms? Give a signed answer.",
+              "stem": "An arithmetic progression has nine terms and total 72. The terms in positions 2, 5 and 8 in that order form a geometric progression. What is the ninth term?",
               "options": [
-                "940",
-                "490",
-                "−940",
-                "941",
-                "470",
-                "980"
+                "4",
+                "6",
+                "10",
+                "12",
+                "8"
               ],
-              "answer": 0,
-              "explanation": "Divide 130 by 13 to get the common difference 10. The mean is 70, hence the first term is 5. The first 2 terms sum to 2(10+1×10)/2 = 20. Subtract twice that from 980.\n\nAnswer: 940."
+              "answer": 4,
+              "explanation": "The middle term of the arithmetic progression is 8. If its difference is d, the three indicated terms are 8 − 3d, 8 and 8 + 3d. The geometric condition gives 64 = 64 − 9d², so all nine terms are 8."
             },
             {
-              "id": "tmua-pack-m1-p1-q15",
+              "id": "tmua-pack-m1-p1-q15-v2",
               "topic": "Functions, transformations & logarithms",
               "type": "functions",
-              "difficulty": 4,
+              "difficulty": 5,
               "family": "transformed-root-sum",
               "tags": [
                 "paper-1",
                 "functions",
                 "transformed-root-sum"
               ],
-              "stem": "The two distinct positive roots α, β of x² − 13x + 36 = 0 are transformed by f(x) = 1/(x + 7). What is f(α) + f(β)?",
+              "stem": "Let a and b be the roots of x² − 4x − 1 = 0. Which monic quadratic has roots a²/b and b²/a?",
               "options": [
-                "203/176",
-                "27/127",
-                "1/27",
-                "27/176",
-                "1/20",
-                "13/127"
+                "x² − 76x − 1",
+                "x² + 64x − 1",
+                "x² + 76x + 1",
+                "x² − 64x + 1",
+                "x² + 76x − 1"
               ],
-              "answer": 3,
-              "explanation": "By the coefficients, α + β = 13 and αβ = 36. The common denominator is αβ + 7(α + β) + 49; the numerator is α + β + 14. Substitute without solving the quadratic.\n\nAnswer: 27/176."
+              "answer": 4,
+              "explanation": "Their product is ab = −1. Their sum is (a³ + b³)/ab = [4³ − 3(−1)·4]/(−1) = −76, so use x² + 76x − 1."
             },
             {
-              "id": "tmua-pack-m1-p1-q16",
+              "id": "tmua-pack-m1-p1-q16-v2",
               "topic": "Coordinate geometry",
               "type": "geometry",
-              "difficulty": 3,
+              "difficulty": 4,
               "family": "secant-gap",
               "tags": [
                 "paper-1",
                 "geometry",
                 "secant-gap"
               ],
-              "stem": "The curve y = 3x² intersects its secant through x = 6 and x = 7. What is the vertical distance between the secant and the curve at the midpoint of those two x-values?",
+              "stem": "A line of gradient 4 crosses y = x² at two points whose straight-line distance apart is 2√17. What is the y-intercept of the line?",
               "options": [
-                "3/4",
-                "11/4",
-                "3",
-                "3/2",
-                "−1/4",
-                "7/4",
-                "−5/4"
+                "−5",
+                "−2",
+                "−3",
+                "1",
+                "3"
               ],
-              "answer": 0,
-              "explanation": "The secant height halfway is the average of the two endpoint heights. Subtract the curve height 3((6 + 7)/2)². Simplifying this difference gives 3(6 − 7)²/4.\n\nAnswer: 3/4."
+              "answer": 2,
+              "explanation": "The horizontal separation is 2 because the vertical separation is four times as large. Solving x² = 4x + c gives roots with sum 4, so their x-coordinates are 1 and 3. Using (1, 1) in the line gives c = −3."
             },
             {
-              "id": "tmua-pack-m1-p1-q17",
+              "id": "tmua-pack-m1-p1-q17-v2",
               "topic": "Algebra, polynomials & coefficients",
               "type": "algebra",
-              "difficulty": 3,
+              "difficulty": 5,
               "family": "rational-sign",
               "tags": [
                 "paper-1",
                 "algebra",
                 "rational-sign"
               ],
-              "stem": "For how many integers x is ((x − 4)(x − 10))/((x − 10)(x + 11)) ≤ 0?",
+              "stem": "Let k be real. The inequality (x − k)/(x + 2) ≥ 0 has exactly two integer solutions in −4 ≤ x ≤ 0. Which values of k are possible?",
               "options": [
-                "15",
-                "17",
-                "21",
-                "14",
-                "16",
-                "13"
+                "k ≤ −4 or k ≥ 0",
+                "k < −4 or k > 0",
+                "−4 < k < 0",
+                "k < −3 or k > −1",
+                "−3 ≤ k ≤ −1"
               ],
-              "answer": 0,
-              "explanation": "x = 10 and x = −11 are excluded. Cancel x − 10 only after recording that restriction. The simplified ratio has opposite signs on top and bottom for −11 < x < 4, and is zero at x = 4. The excluded value 10 lies outside the interval. The integers run from -10 to 4.\n\nAnswer: 15."
+              "answer": 1,
+              "explanation": "The admissible integers −4, −3, −1, 0 are solutions for k ≥ −4, k ≥ −3, k ≤ −1 and k ≤ 0 respectively. Outside [−4, 0] two solutions occur. Inside [−4, 0] at least three occur: if k ≤ −1 then −4, −1 and 0 work; if k > −1 then −4, −3 and 0 work."
             },
             {
-              "id": "tmua-pack-m1-p1-q18",
+              "id": "tmua-pack-m1-p1-q18-v2",
               "topic": "Differentiation & integration",
               "type": "calculus",
               "difficulty": 5,
@@ -421,44 +399,41 @@
                 "calculus",
                 "ratio-of-areas"
               ],
-              "stem": "The curves y = 2x² + 60 and y = 26x enclose a region. A second region lies between the curves from their rightmost intersection to x = 31. What is the ratio of the second area to the first?",
+              "stem": "The curve y = x(2 − x) has area A above the x-axis. The line y = h, where 0 < h < 1, cuts off a cap of area A/8 above the line and below the curve. What is h?",
               "options": [
-                "81",
-                "82",
-                "27",
-                "54",
-                "9",
-                "18",
-                "80"
+                "3/4",
+                "1/4",
+                "1/2",
+                "5/8",
+                "7/8"
               ],
               "answer": 0,
-              "explanation": "Subtract the line height from the parabola height: 2(x − 3)(x − 10). With u = (x − 10)/7, the difference is 98u(u + 1). The first region corresponds to −1 ≤ u ≤ 0 and has negative signed integral −1/6 of u(u + 1); the second runs from 0 to 3 and has integral 3³/3 + 3²/2. The common scale factors cancel. Divide the latter integral by 1/6.\n\nAnswer: 81."
+              "explanation": "Write the curve as 1 − (x − 1)². The cap has half-width r = √(1 − h). Integrating r² − u² from −r to r gives 4r³/3, while the full area has r = 1. Thus r = 1/2 and h = 3/4."
             },
             {
-              "id": "tmua-pack-m1-p1-q19",
+              "id": "tmua-pack-m1-p1-q19-v2",
               "topic": "Trigonometry",
               "type": "trigonometry",
-              "difficulty": 4,
+              "difficulty": 3,
               "family": "cosine-endpoint",
               "tags": [
                 "paper-1",
                 "trigonometry",
                 "cosine-endpoint"
               ],
-              "stem": "How many solutions does 5cos(2x) = 2cos(x) + (3) have for 0° ≤ x < 1800°?",
+              "stem": "How many real solutions does cos(2x) − cos x = 0 have on −π ≤ x < 2π?",
               "options": [
-                "25",
-                "10",
-                "20",
+                "2",
+                "3",
+                "4",
                 "5",
-                "16",
-                "15"
+                "6"
               ],
-              "answer": 5,
-              "explanation": "Use cos(2x) = 2cos²(x) − 1. With u = cos(x), the equation becomes (u − 1)(10u + 8) = 0. The root 1 contributes once per turn. The root −4/5 contributes twice if strictly inside (−1, 1), once at −1, and not at all below −1. There are 5 full turns.\n\nAnswer: 15."
+              "answer": 2,
+              "explanation": "Factoring 2cos²x − cos x − 1 gives cos x = 1 or −1/2. The first gives x = 0 only. The second gives x = −2π/3, 2π/3 and 4π/3, so there are four solutions."
             },
             {
-              "id": "tmua-pack-m1-p1-q20",
+              "id": "tmua-pack-m1-p1-q20-v2",
               "topic": "Differentiation & integration",
               "type": "calculus",
               "difficulty": 5,
@@ -468,19 +443,16 @@
                 "calculus",
                 "cubic-turning-values"
               ],
-              "stem": "By how much does the local maximum value of f(x) = 2x³ − 21x² + 36x + 13 exceed its local minimum value?",
+              "stem": "A monic cubic has stationary points at x = −1 and x = 3. The straight line through the two stationary points meets the cubic again at x = t. What is t?",
               "options": [
-                "127",
-                "126",
-                "5",
-                "250",
-                "125",
-                "124",
-                "123",
-                "25"
+                "−1/2",
+                "1",
+                "0",
+                "3/2",
+                "2"
               ],
-              "answer": 4,
-              "explanation": "Differentiate: f′(x) = 6(x − 1)(x − 6). The sign changes + to − at 1 and − to + at 6. On putting x = 1 + t, the nonconstant part becomes 2t³ − 3(5)t². Going from t = 0 to 5 lowers the value by (5)³.\n\nAnswer: 125."
+              "answer": 1,
+              "explanation": "After shifting to u = x − 1, the derivative is 3(u² − 4), so the cubic is u³ − 12u plus a constant. Its graph is point-symmetric about u = 0 at the height of that constant. The stationary points are paired by that symmetry, so their joining line passes through the point at x = 1."
             }
           ]
         },
@@ -491,7 +463,7 @@
           "minutes": 75,
           "questions": [
             {
-              "id": "tmua-pack-m1-p2-q01",
+              "id": "tmua-pack-m1-p2-q01-v2",
               "topic": "Spotting errors in proofs",
               "type": "proof-errors",
               "difficulty": 2,
@@ -501,19 +473,19 @@
                 "proof-errors",
                 "lost-factor"
               ],
-              "stem": "A student tries to solve (x − 4)(x − 6) = 0 over the reals.\n1. Divide both sides by x − 4, getting x − 6 = 0.\n2. Add 6 to both sides, getting x = 6.\n3. Substitute x = 6 into the starting equation to check it.\n4. Report that x = 6 is the only solution.\nWhere is the first invalid deduction?",
+              "stem": "After rearranging a quadratic, a student obtains x(x − 4) = 4 − x. They divide by x − 4 and find x = −1. Which is the sharpest conclusion justified by that division?",
               "options": [
-                "Step 1: it can discard a zero-factor case",
-                "Step 4: the preceding steps are all equivalences",
-                "Step 3: substitution is not allowed after factoring",
-                "No step is invalid",
-                "Step 2: adding a number can change an equality"
+                "There is no solution.",
+                "x = −1 is the only solution.",
+                "x = −1 is the only possible solution other than 4.",
+                "x = 4 cannot be a solution.",
+                "Every real x except 4 is a solution."
               ],
-              "answer": 0,
-              "explanation": "Step 1 restricts to x ≠ 4, without examining x = 4. At that discarded value the original product is zero. Alternatively, a product of two real numbers is zero exactly when at least one factor is zero, yielding 4 and 6."
+              "answer": 2,
+              "explanation": "Division is equivalent to the original equation only on the branch x ≠ 4. On that branch it gives x = −1. The excluded value 4 must be checked separately and also satisfies the original equation."
             },
             {
-              "id": "tmua-pack-m1-p2-q02",
+              "id": "tmua-pack-m1-p2-q02-v2",
               "topic": "Implications, negation & quantifiers",
               "type": "logic",
               "difficulty": 2,
@@ -523,41 +495,41 @@
                 "logic",
                 "contrapositive-form"
               ],
-              "stem": "Which statement follows the contrapositive rule for ‘If n is a multiple of 3, then n² is at least 64’ (whether or not the original is true for all integers n)?",
+              "stem": "A sequence has the following property: it is unbounded above only if infinitely many of its terms are positive. Which conclusion follows from the property alone?",
               "options": [
-                "If n² is less than 64, then n is not a multiple of 3.",
-                "If n² is at least 64, then n is a multiple of 3.",
-                "If n is not a multiple of 3, then n² is at least 64.",
-                "If n is not a multiple of 3, then n² is less than 64.",
-                "If n is a multiple of 3, then n² is less than 64."
+                "If only finitely many terms are positive, it is bounded above.",
+                "If infinitely many terms are positive, it is unbounded above.",
+                "If infinitely many terms are negative, it is bounded above.",
+                "If it is bounded above, only finitely many terms are positive.",
+                "If it is bounded above, infinitely many terms are negative."
               ],
               "answer": 0,
-              "explanation": "The contrapositive of P ⇒ Q is not-Q ⇒ not-P. Here that reads: if n² is less than 64, then n is not a multiple of 3. The two fail in exactly the same case (P true and Q false). Swapping without negating instead gives the converse."
+              "explanation": "“P only if Q” means P implies Q. Its contrapositive is that finitely many positive terms imply that the sequence is bounded above. The property places no restriction on the number of negative terms."
             },
             {
-              "id": "tmua-pack-m1-p2-q03",
+              "id": "tmua-pack-m1-p2-q03-v2",
               "topic": "Implications, negation & quantifiers",
               "type": "logic",
-              "difficulty": 2,
+              "difficulty": 3,
               "family": "negated-bound",
               "tags": [
                 "paper-2",
                 "logic",
                 "negated-bound"
               ],
-              "stem": "Which statement is the formal negation of: ‘For every integer n, if 8 divides n then n² ≥ 25’?",
+              "stem": "A student claims that for every positive real a there is a positive real b such that both a + b < 1 and ab ≥ 1/8. Which of the following would disprove the claim?",
               "options": [
-                "Some integer n is divisible by 8 and n² ≥ 25.",
-                "Some integer n is divisible by 8 and n² < 25.",
-                "Every integer n with n² ≤ 25 is divisible by 8.",
-                "Some integer n is not divisible by 8 and n² < 25.",
-                "Every integer n divisible by 8 has n² < 25."
+                "Finding a pair a, b for which both bounds fail.",
+                "Finding a b for which no a meets both bounds.",
+                "Finding an a such that every positive b gives a + b ≥ 1 or ab < 1/8.",
+                "Finding an a for which one choice of b violates exactly one bound.",
+                "Finding an a such that all b violate both bounds is necessary to disprove the claim."
               ],
-              "answer": 1,
-              "explanation": "Negating ‘for every’ gives ‘there exists’. The implication fails only if n is divisible by 8 but the conclusion fails; the complement of ≥ is < and the complement of ≤ is >. Negate the form of the assertion; no particular witness is needed to write the negation."
+              "answer": 2,
+              "explanation": "The negation keeps one a fixed and requires every b to fail at least one bound. The failing bound may vary with b. For example, a = 1 already makes the first bound fail for all positive b."
             },
             {
-              "id": "tmua-pack-m1-p2-q04",
+              "id": "tmua-pack-m1-p2-q04-v2",
               "topic": "Necessary & sufficient conditions",
               "type": "conditions",
               "difficulty": 3,
@@ -567,42 +539,41 @@
                 "conditions",
                 "residue-compatibility"
               ],
-              "stem": "Let x be an integer. P: x − 2 is divisible by 3. Q: x − 4 is divisible by 3.\n\nWhich describes P relative to Q?",
+              "stem": "For integer n define A by n² leaving remainder 1 on division by 8, and B by n leaving remainder 1 or 7 on division by 8. Which describes B as a condition for A?",
               "options": [
-                "Neither, but both can hold together",
-                "Necessary but not sufficient",
-                "Sufficient but not necessary",
+                "Necessary only",
                 "Necessary and sufficient",
-                "Neither, and they cannot both hold"
+                "Neither, although both can hold",
+                "Sufficient only",
+                "Neither; they cannot both hold"
               ],
-              "answer": 4,
-              "explanation": "Subtract the two differences: their difference is 2. If it is divisible by 3, the conditions describe exactly the same residue class. If it is not divisible by 3, the classes are disjoint, and x = 2 and x = 4 witness the two failed implications."
+              "answer": 3,
+              "explanation": "All odd n have n² ≡ 1 modulo 8, as the four odd residues show. B selects two of those residues, but n = 3 gives A without B."
             },
             {
-              "id": "tmua-pack-m1-p2-q05",
+              "id": "tmua-pack-m1-p2-q05-v2",
               "topic": "Constructing arguments & exhaustive cases",
               "type": "proof-strategies",
-              "difficulty": 4,
+              "difficulty": 3,
               "family": "intersection-bounds",
               "tags": [
                 "paper-2",
                 "proof-strategies",
                 "intersection-bounds"
               ],
-              "stem": "S and T are subsets of a set of size 14, with sizes 9 and 8. What is the difference between the largest and smallest possible values of |S ∩ T|?",
+              "stem": "Every member of a club of 18 belongs to at least two of its three teams. The team sizes are 13, 14 and 15. How many members belong to exactly two teams?",
               "options": [
-                "8",
-                "5",
-                "1",
                 "6",
-                "17",
-                "3"
+                "12",
+                "9",
+                "14",
+                "16"
               ],
               "answer": 1,
-              "explanation": "The intersection is at most min(9, 8) = 8, attained by nesting. It is at least max(0, 9 + 8 − 14) = 3, from the union bound; placing as many elements as possible outside the other set attains this. Subtract the endpoints.\n\nAnswer: 5."
+              "explanation": "Count team memberships. If t people are on all three, the total is 2·18 + t. Since the total is 42, t = 6 and 12 people are on exactly two teams."
             },
             {
-              "id": "tmua-pack-m1-p2-q06",
+              "id": "tmua-pack-m1-p2-q06-v2",
               "topic": "Constructing arguments & exhaustive cases",
               "type": "proof-strategies",
               "difficulty": 3,
@@ -612,42 +583,44 @@
                 "proof-strategies",
                 "forward-closure"
               ],
-              "stem": "A property P of integers is known to hold at 3. Whenever P holds at n it also holds at n + 10. No other information is given. At which offered integer is P forced to hold?",
+              "stem": "A set of nonnegative integers contains 1 and 2. Whenever it contains n, it also contains 2n + 2. Which listed number need not belong to the set?",
               "options": [
-                "2",
-                "4",
-                "42",
-                "43",
-                "44"
+                "6",
+                "10",
+                "14",
+                "22",
+                "18"
               ],
-              "answer": 3,
-              "explanation": "Starting at 3, repeatedly add 10, so P holds at 3 + 4×10 = 43. A property true exactly at 3, 13, 23, … satisfies the premise and is false at all other offered integers. In particular, forward closure does not allow a step backwards."
+              "answer": 4,
+              "explanation": "The chains from 1 and 2 start 1, 4, 10, 22 and 2, 6, 14, 30. Both increase, so neither can ever reach 18. The union of the two chains satisfies the rule and omits 18, whereas all other options are forced."
             },
             {
-              "id": "tmua-pack-m1-p2-q07",
+              "id": "tmua-pack-m1-p2-q07-v2",
               "topic": "Implications, negation & quantifiers",
               "type": "logic",
-              "difficulty": 4,
+              "difficulty": 3,
               "family": "quantifier-order",
               "tags": [
                 "paper-2",
                 "logic",
                 "quantifier-order"
               ],
-              "stem": "All variables range over the integers from 0 to 3. Which statements hold?\nI. For every x there is a y such that x + y leaves remainder 3 on division by 4.\nII. Some fixed y works for every x.\nIII. Every pair (x, y) works.",
+              "stem": "For 0 < x < 1 consider the statements below. I: There is a real c < 1 such that x² ≤ cx for every such x. II: For each such x there is a real c < 1 with x² ≤ cx. III: There is a real c > 0 such that cx ≤ x² for every such x. Which are true?",
               "options": [
-                "I, III",
                 "None",
-                "II, III",
-                "I",
-                "I, II",
-                "I, II, III"
+                "II only",
+                "I only",
+                "II and III only",
+                "I and II only",
+                "III only",
+                "I and III only",
+                "I, II and III"
               ],
-              "answer": 3,
-              "explanation": "I works: take the unique representative y of 3 − x modulo 4 in the required range. II fails because x = 0 and x = 1 require different y. III would imply II, so also fails."
+              "answer": 1,
+              "explanation": "Dividing by x is valid because x > 0. I asks for an upper bound c < 1 on (0, 1), and III asks for a positive lower bound, both impossible. For II choose c = x."
             },
             {
-              "id": "tmua-pack-m1-p2-q08",
+              "id": "tmua-pack-m1-p2-q08-v2",
               "topic": "Constructing arguments & exhaustive cases",
               "type": "proof-strategies",
               "difficulty": 3,
@@ -657,42 +630,41 @@
                 "proof-strategies",
                 "parity-classification"
               ],
-              "stem": "What can be concluded about the parity of n² + 8n + 8 over all integers n?",
+              "stem": "For integer n, put f(n) = n(n + 1)/2. Which statement correctly describes when f(n) is odd?",
               "options": [
-                "Its parity changes between some integers of the same parity.",
-                "It is even for every integer n.",
-                "It is even exactly when n is odd.",
-                "It is odd for every integer n.",
-                "It is even exactly when n is even."
+                "Exactly when n is odd",
+                "Exactly when n is prime",
+                "Exactly when n leaves remainder 0 or 3 on division by 4",
+                "Exactly when n leaves remainder 2 or 3 on division by 4",
+                "Exactly when n leaves remainder 1 or 2 on division by 4"
               ],
               "answer": 4,
-              "explanation": "Modulo 2, n² has the same remainder as n, so the expression has remainder (9)n + 8 modulo 2. For even n it is 0; for odd n it is 1. Remainder 0 means even; remainder 1 means odd."
+              "explanation": "The parity of f depends on n(n + 1) modulo 4. At residues 0, 1, 2, 3, the products have residues 0, 2, 2, 0 respectively. So precisely residues 1 and 2 give odd f."
             },
             {
-              "id": "tmua-pack-m1-p2-q09",
+              "id": "tmua-pack-m1-p2-q09-v2",
               "topic": "Counterexamples & witnesses",
               "type": "counterexamples",
-              "difficulty": 4,
+              "difficulty": 3,
               "family": "square-bound-witness",
               "tags": [
                 "paper-2",
                 "counterexamples",
                 "square-bound-witness"
               ],
-              "stem": "Which offered integer x disproves ‘if (6x + 6)² < 1764, then |x| < 6’?",
+              "stem": "A claim states: If two real numbers a, b satisfy a + b > 0 and a² > b², then both a and b are positive. Which pair refutes the claim?",
               "options": [
-                "1",
-                "6",
-                "-1",
-                "7",
-                "0",
-                "-6"
+                "a = −3, b = 2",
+                "a = 1, b = −2",
+                "a = 2, b = 1",
+                "a = 3, b = −2",
+                "a = −1, b = 1"
               ],
-              "answer": 5,
-              "explanation": "To disprove the implication use |x| ≥ 6 and make the square strictly less than 1764. At x = −6, the squared base has magnitude |6 − 36|, strictly less than 42 since both 6 and 36 are positive. At 6 the bound is met exactly, and larger positive x also fails the premise; the remaining choices satisfy the conclusion."
+              "answer": 3,
+              "explanation": "The pair (3, −2) has positive sum and 9 > 4, but b is negative. In (2, 1) both numbers are positive; each other proposed pair fails the positive-sum condition."
             },
             {
-              "id": "tmua-pack-m1-p2-q10",
+              "id": "tmua-pack-m1-p2-q10-v2",
               "topic": "Constructing arguments & exhaustive cases",
               "type": "proof-strategies",
               "difficulty": 4,
@@ -702,19 +674,19 @@
                 "proof-strategies",
                 "residue-exhaustion"
               ],
-              "stem": "Which list gives exactly the remainders of integers n for which 8 divides n(n + 3)?",
+              "stem": "Which remainder is impossible when n(n + 2) is divided by 9, with n an integer?",
               "options": [
-                "0, 1, 2, 3, 4, 5, 6, 7",
-                "0, 5",
-                "1, 2, 3, 4, 6, 7",
-                "No remainders",
-                "0"
+                "0",
+                "5",
+                "3",
+                "6",
+                "8"
               ],
               "answer": 1,
-              "explanation": "Write n = 8k + s. Expanding shows n(n + 3) has the same remainder as s(s + 3). For s = 0 through 7, the respective remainders are 0, 4, 2, 2, 4, 0, 6, 6. Keep exactly the positions where the remainder is zero."
+              "explanation": "Since n(n + 2) = (n + 1)² − 1, look at the squares modulo 9. The residues 0, ±1, ±2, ±3 and ±4 give squares 0, 1, 4, 0 and 7. Subtracting 1 gives 8, 0, 3 and 6; of the listed remainders only 5 is impossible."
             },
             {
-              "id": "tmua-pack-m1-p2-q11",
+              "id": "tmua-pack-m1-p2-q11-v2",
               "topic": "Implications, negation & quantifiers",
               "type": "logic",
               "difficulty": 3,
@@ -724,42 +696,41 @@
                 "logic",
                 "composed-implications"
               ],
-              "stem": "Four assertions P, Q, R and S have unknown truth values. Three facts are established: if P holds, then Q fails; if Q fails, then S fails; and if R holds, then S fails. Which conclusion follows from these facts alone?",
+              "stem": "Four real numbers a, b, c and d satisfy three rules: If a and b are both rational, c is irrational. If c is irrational, d is rational. If d is rational, at least one of a and b is irrational. Which conclusion follows?",
               "options": [
-                "If Q holds, then S holds.",
-                "If S holds, then P fails.",
-                "If P holds, then R holds.",
-                "If R holds, then P holds.",
-                "If S fails, then Q fails."
+                "If c is rational, a and b are both rational.",
+                "At least one of a and b is irrational.",
+                "If d is irrational, a and b are both irrational.",
+                "If a or b is irrational, d is rational.",
+                "Exactly one of a and b is irrational."
               ],
               "answer": 1,
-              "explanation": "Combine the first two implications: if P holds, then S fails. Its contrapositive is: if S holds, then P fails. The third fact points to the same conclusion as the second and does not reverse either implication."
+              "explanation": "If a and b were both rational, chaining the three implications would give that at least one is irrational, a contradiction. Both may be irrational with c rational and d irrational, which also rules out the first, third and fifth choices. For the second, a and c may be rational with b and d irrational."
             },
             {
-              "id": "tmua-pack-m1-p2-q12",
+              "id": "tmua-pack-m1-p2-q12-v2",
               "topic": "Counterexamples & witnesses",
               "type": "counterexamples",
-              "difficulty": 3,
+              "difficulty": 4,
               "family": "interval-witness",
               "tags": [
                 "paper-2",
                 "counterexamples",
                 "interval-witness"
               ],
-              "stem": "A student claims: for every integer x, if (x − 9)(x − 13) ≤ 0 then x ≥ 10. Which value refutes the claim?",
+              "stem": "For which one of the following functions is this statement false? “Whenever f(0) and f(2) are both positive, f(x) is positive for all x in [0, 2].”",
               "options": [
-                "16",
-                "10",
-                "15",
-                "14",
-                "8",
-                "9"
+                "f(x) = 2(x − 1)² − 1",
+                "f(x) = x − 1",
+                "f(x) = 1 − (x − 1)²",
+                "f(x) = 2 − (x − 1)²",
+                "f(x) = x² + 1"
               ],
-              "answer": 5,
-              "explanation": "The premise holds on [9, 13]; the conclusion fails below 10. A counterexample must satisfy both requirements. 9 lies in [9, 9], and none of the other offered integers does."
+              "answer": 0,
+              "explanation": "The third function is 1 at both ends but −1 at x = 1. In the first two choices the premise is false; the fourth and fifth satisfy both the premise and conclusion."
             },
             {
-              "id": "tmua-pack-m1-p2-q13",
+              "id": "tmua-pack-m1-p2-q13-v2",
               "topic": "Constructing arguments & exhaustive cases",
               "type": "proof-strategies",
               "difficulty": 4,
@@ -769,43 +740,41 @@
                 "proof-strategies",
                 "pair-forcing"
               ],
-              "stem": "Take the integers 1 to 18, except 4 and 15. What is the minimum number of distinct remaining integers one must select to guarantee two sum to 19?",
+              "stem": "What is the largest size of a subset of {1, 2, …, 12} containing no two numbers whose difference is 4?",
               "options": [
-                "7",
-                "17",
-                "11",
-                "16",
-                "10",
                 "8",
-                "9"
+                "4",
+                "5",
+                "6",
+                "7"
               ],
-              "answer": 6,
-              "explanation": "The integers come in complementary pairs {x, 19 − x}. Exactly one pair has been removed, leaving 8 pairs. Taking one from each shows 8 are not enough; taking one more forces two from a pair.\n\nAnswer: 9."
+              "answer": 0,
+              "explanation": "Partition the numbers into chains (1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12). At most two numbers can be taken from any chain, and choosing the first and last from each gives eight numbers with no forbidden difference."
             },
             {
-              "id": "tmua-pack-m1-p2-q14",
+              "id": "tmua-pack-m1-p2-q14-v2",
               "topic": "Necessary & sufficient conditions",
               "type": "conditions",
-              "difficulty": 3,
+              "difficulty": 4,
               "family": "divisibility-direction",
               "tags": [
                 "paper-2",
                 "conditions",
                 "divisibility-direction"
               ],
-              "stem": "Let x be a positive integer. P: 9 divides x. Q: 63 divides x.\n\nWhich describes P relative to Q?",
+              "stem": "Let a and b be positive integers. Which condition is sufficient, but not necessary, for 12 to divide ab?",
               "options": [
-                "Neither, but both can hold together",
-                "Neither, and they cannot both hold",
-                "Necessary and sufficient",
-                "Sufficient but not necessary",
-                "Necessary but not sufficient"
+                "6 divides ab.",
+                "12 divides a + b.",
+                "2 divides a and 3 divides b.",
+                "3 divides a and 3 divides b.",
+                "4 divides a and 3 divides b."
               ],
               "answer": 4,
-              "explanation": "P ⇒ Q exactly when 63 divides 9: test the least positive multiple 9 itself. Q ⇒ P exactly when 9 divides 63: test 63 itself. The product 567 shows that both can hold. The two implications are respectively false and true."
+              "explanation": "The third condition gives all prime factors needed for 12, but (a, b) = (3, 4) shows it is not necessary. The other conditions do not suffice: use (2, 3), (1, 11), (2, 3) and (3, 3) respectively."
             },
             {
-              "id": "tmua-pack-m1-p2-q15",
+              "id": "tmua-pack-m1-p2-q15-v2",
               "topic": "Constructing arguments & exhaustive cases",
               "type": "proof-strategies",
               "difficulty": 4,
@@ -815,22 +784,19 @@
                 "proof-strategies",
                 "coprime-split"
               ],
-              "stem": "For N = 2^3 × 3^4, how many ordered pairs (u, v) of positive integers satisfy uv = N and have no common factor greater than 1?",
+              "stem": "Let a and b be positive integers. Which statement is true for all choices of a and b?",
               "options": [
-                "7",
-                "2",
-                "4",
-                "6",
-                "8",
-                "9",
-                "5",
-                "20"
+                "If 12 divides ab, 12 divides a or b.",
+                "If neither a nor b is divisible by 4, their product is not divisible by 4.",
+                "If ab is a perfect square and a and b have no common prime factor, a and b are both perfect squares.",
+                "If a and b have no common prime factor, their product is not divisible by a square greater than 1.",
+                "If a and b are both perfect squares, they have no common prime factor."
               ],
               "answer": 2,
-              "explanation": "If a prime occurs in both factors they share that divisor. Thus each of the blocks 2^3 and 3^4 must go wholly to one of u and v, with two independent choices. All assignments work (including those with a factor 1).\n\nAnswer: 4."
+              "explanation": "In the product every prime exponent is even. When the factors have no common prime, each exponent comes from just one factor and so must be even there. The other claims fail at (3,4), (2,2), (4,3), and (4,4), respectively."
             },
             {
-              "id": "tmua-pack-m1-p2-q16",
+              "id": "tmua-pack-m1-p2-q16-v2",
               "topic": "Constructing arguments & exhaustive cases",
               "type": "proof-strategies",
               "difficulty": 4,
@@ -840,43 +806,44 @@
                 "proof-strategies",
                 "invariant-recurrence"
               ],
-              "stem": "Let u₀ = 9 and uₙ₊₁ = 13uₙ + 1 for every n ≥ 0. What is the remainder of u_7 on division by 12?",
+              "stem": "Start with the ordered pair (2, 7). A move replaces (a, b) by either (a + b, a) or (b, a + b). Which pair cannot be reached?",
               "options": [
-                "1",
-                "10",
-                "5",
-                "4",
-                "3",
-                "9"
+                "(12, 8)",
+                "(7, 9)",
+                "(9, 2)",
+                "(16, 7)",
+                "(2, 11)"
               ],
-              "answer": 3,
-              "explanation": "Since 13 is congruent to 1 modulo 12, each step adds 1 to the residue. Starting from 9 and taking 7 steps gives the same residue as 16. Large terms need not be computed.\n\nAnswer: 4."
+              "answer": 0,
+              "explanation": "Each move preserves the greatest common divisor, since the common divisors of a and b are exactly those of a and a + b, or of b and a + b as applicable. The starting gcd is 1 and gcd(12, 8) is 4. The other options are reached in one move, or by moving from (7, 9) to (16, 7) and from (9, 2) to (2, 11)."
             },
             {
-              "id": "tmua-pack-m1-p2-q17",
+              "id": "tmua-pack-m1-p2-q17-v2",
               "topic": "Constructing arguments & exhaustive cases",
               "type": "proof-strategies",
-              "difficulty": 3,
+              "difficulty": 4,
               "family": "irrational-product",
               "tags": [
                 "paper-2",
                 "proof-strategies",
                 "irrational-product"
               ],
-              "stem": "Let x = √39. Which of the following irrational numbers y makes xy rational?",
+              "stem": "Let a and b be positive real numbers, with a rational and b irrational. Consider I: a + b is irrational; II: ab is irrational; III: a + b² is irrational. Which are always true?",
               "options": [
-                "3√13",
-                "3√65",
-                "3√39",
-                "4√3",
-                "3√5",
-                "3√15"
+                "I only",
+                "II only",
+                "III only",
+                "I and II only",
+                "I, II and III",
+                "I and III only",
+                "II and III only",
+                "None"
               ],
-              "answer": 2,
-              "explanation": "Multiplying gives c√(39n) for y = c√n. In a perfect square each prime has even exponent. The two primes 13 and 3 occur once in 39; of the offered radicands only 39 contributes a second copy of both without introducing another odd exponent. The resulting product is 117."
+              "answer": 3,
+              "explanation": "If a + b or ab were rational, subtracting a or dividing by the nonzero a would show b rational. For III, b = √2 gives b² = 2, so a + b² is rational."
             },
             {
-              "id": "tmua-pack-m1-p2-q18",
+              "id": "tmua-pack-m1-p2-q18-v2",
               "topic": "Counterexamples & witnesses",
               "type": "counterexamples",
               "difficulty": 4,
@@ -886,20 +853,19 @@
                 "counterexamples",
                 "witness-scope"
               ],
-              "stem": "A student claims: for every integer x between 0 and 5 inclusive there is an integer y in the same range with x + y giving remainder 4 modulo 5 and y < x. Which choice gives an x refuting that claim and also a y that works for the different input x = 4?",
+              "stem": "Let a and b be real numbers. A student tries to refute “For every a there is exactly one b such that b² = a².” Which proposed argument succeeds?",
               "options": [
-                "x = 4, y = 1",
-                "x = 0, y = 4",
-                "x = 5, y = 5",
-                "x = 4, y = 0",
-                "x = 0, y = 0",
-                "x = 1, y = 4"
+                "For a = 0, b = 0 works.",
+                "For a = 1, b = 2 fails.",
+                "For a = 2, b = 2 works.",
+                "For a = 1, both b = 1 and b = −1 work.",
+                "For b = 1, a = 2 fails."
               ],
-              "answer": 4,
-              "explanation": "The counterexample is x = 0: no allowed y is less than zero. At the different input x = 4, y = 0 works. A successful witness at one input cannot prove an assertion about every input."
+              "answer": 3,
+              "explanation": "The claim concerns uniqueness as well as existence. Two different b values for the same a refute uniqueness. Showing that some b fails, or one b works, does not address uniqueness."
             },
             {
-              "id": "tmua-pack-m1-p2-q19",
+              "id": "tmua-pack-m1-p2-q19-v2",
               "topic": "Necessary & sufficient conditions",
               "type": "conditions",
               "difficulty": 4,
@@ -909,19 +875,19 @@
                 "conditions",
                 "integer-threshold"
               ],
-              "stem": "Let x be an integer. P: |x − 3| < 5. Q: (x − 3)² ≤ 16.\n\nWhich describes P relative to Q?",
+              "stem": "Let n be an integer. P is the statement n² < 15, and Q is the statement (n + 1)² ≤ 16. Which describes P as a condition for Q?",
               "options": [
-                "Necessary but not sufficient",
-                "Neither, but both can hold together",
-                "Sufficient but not necessary",
-                "Neither, and they cannot both hold",
-                "Necessary and sufficient"
+                "Necessary only",
+                "Both necessary and sufficient",
+                "Sufficient only",
+                "Neither, though some n satisfy both",
+                "Neither, and no n satisfies both"
               ],
-              "answer": 4,
-              "explanation": "For integer x, P is the interval [-1, 7] while Q is [-1, 7]. P ⇒ Q if the first interval is contained in the second; Q ⇒ P if the containment is reversed. Both intervals contain 3."
+              "answer": 2,
+              "explanation": "P gives −3 ≤ n ≤ 3. Q gives −5 ≤ n ≤ 3. Thus every n satisfying P satisfies Q, but n = −5 satisfies Q without P."
             },
             {
-              "id": "tmua-pack-m1-p2-q20",
+              "id": "tmua-pack-m1-p2-q20-v2",
               "topic": "Constructing arguments & exhaustive cases",
               "type": "proof-strategies",
               "difficulty": 5,
@@ -931,16 +897,16 @@
                 "proof-strategies",
                 "longest-gap"
               ],
-              "stem": "For an integer t, call t marked if one of t + 3, t + 2, t + 9 is divisible by 10. What is the least length of a block of consecutive integers guaranteed to contain a marked integer?",
+              "stem": "An integer is marked if its remainder modulo 6 is 0 or 1, or if its remainder modulo 4 is 0. What is the least block length that guarantees at least two marked integers in any block of that many consecutive integers?",
               "options": [
-                "16",
+                "4",
                 "6",
-                "10",
-                "9",
-                "1"
+                "7",
+                "5",
+                "8"
               ],
-              "answer": 1,
-              "explanation": "Mark the residues 1, 7, 8 on a cycle of length 10. Successive marks have gaps 6, 1, 3 (include the wrap-around). A gap of g contains g − 1 unmarked integers. The longest block that can avoid a mark therefore has length 5; add one.\n\nAnswer: 6."
+              "answer": 3,
+              "explanation": "Over a period of 12 the marked residues are 0, 1, 4, 6, 7, 8. The longest block with at most one mark is one shorter than the greatest distance between marked integers two marks apart: it fits strictly between them. Checking the cyclic list gives greatest distance 5 (for instance from 1 to 6), so length 5 guarantees two."
             }
           ]
         }
@@ -957,7 +923,7 @@
           "minutes": 75,
           "questions": [
             {
-              "id": "tmua-pack-m2-p1-q01",
+              "id": "tmua-pack-m2-p1-q01-v2",
               "topic": "Probability, counting & data",
               "type": "data",
               "difficulty": 3,
@@ -967,45 +933,41 @@
                 "data",
                 "exclusive-multiples"
               ],
-              "stem": "An integer is chosen uniformly from 1 to 95 inclusive. What is the probability that it is divisible by exactly one of 3 and 5?",
+              "stem": "How many integers from 1 to 90 are divisible by exactly two of 2, 3 and 5?",
               "options": [
-                "44/95",
-                "2/5",
-                "6/95",
-                "10/19",
-                "1/5",
-                "31/95"
+                "12",
+                "15",
+                "18",
+                "24",
+                "21"
               ],
-              "answer": 1,
-              "explanation": "The counts of multiples are 31 and 19. The common multiples are multiples of 15, of which there are 6. These were counted twice and must contribute zero. Divide the remaining count by 95.\n\nAnswer: 2/5."
+              "answer": 4,
+              "explanation": "Count multiples of 6, 10 and 15: 15 + 9 + 6 = 30. Each multiple of 30 was counted three times but should not count at all. Subtract 9 to get 21."
             },
             {
-              "id": "tmua-pack-m2-p1-q02",
+              "id": "tmua-pack-m2-p1-q02-v2",
               "topic": "Algebra, polynomials & coefficients",
               "type": "algebra",
-              "difficulty": 3,
+              "difficulty": 4,
               "family": "parameter-roots",
               "tags": [
                 "paper-1",
                 "algebra",
                 "parameter-roots"
               ],
-              "stem": "How many positive integers k make x² + 2(k − 7)x + 2(k − 7)² − 16 = 0 have distinct real roots?",
+              "stem": "Suppose x² + px + q = 0 has two distinct real roots and their difference in absolute value equals their sum. Which condition on p and q is equivalent to this?",
               "options": [
-                "4",
-                "8",
-                "5",
-                "10",
-                "9",
-                "7",
-                "11",
-                "6"
+                "p > 0 and q = 0",
+                "p ≠ 0 and q = 0",
+                "p < 0 and q > 0",
+                "p ≤ 0 and q < 0",
+                "p < 0 and q = 0"
               ],
-              "answer": 5,
-              "explanation": "The discriminant is 4(16 − (k − 7)²), so |k − 7| < 4. Count integers from 4 to 10, inclusive.\n\nAnswer: 7."
+              "answer": 4,
+              "explanation": "Squaring the equality gives −4q = 0. The sum must be strictly positive because the roots are distinct, so −p > 0. Conversely the roots 0 and −p satisfy the equality when p < 0 and q = 0."
             },
             {
-              "id": "tmua-pack-m2-p1-q03",
+              "id": "tmua-pack-m2-p1-q03-v2",
               "topic": "Probability, counting & data",
               "type": "data",
               "difficulty": 3,
@@ -1015,71 +977,63 @@
                 "data",
                 "conditioned-pair"
               ],
-              "stem": "A bag has 7 blue and 5 gold tokens. Two distinct tokens are drawn uniformly without replacement. Given at least one is blue, what is the probability both are blue?",
+              "stem": "Two fair six-sided dice are rolled. Given that the maximum of the two results is 5, what is the probability that the minimum is odd?",
               "options": [
-                "3/5",
-                "7/22",
-                "7/12",
-                "6/11",
-                "5/8",
-                "5/12",
-                "3/8"
+                "5/9",
+                "4/9",
+                "1/2",
+                "2/3",
+                "3/5"
               ],
-              "answer": 6,
-              "explanation": "Restrict to pairs containing blue. There are 21 blue-blue pairs and 35 mixed pairs. Divide the first count by their sum.\n\nAnswer: 3/8."
+              "answer": 0,
+              "explanation": "There are nine ordered outcomes whose maximum is 5: two each for minima 1 through 4 and one for minimum 5. The odd minima have weights 2 + 2 + 1 = 5."
             },
             {
-              "id": "tmua-pack-m2-p1-q04",
+              "id": "tmua-pack-m2-p1-q04-v2",
               "topic": "Functions, transformations & logarithms",
               "type": "functions",
-              "difficulty": 2,
+              "difficulty": 4,
               "family": "log-domain",
               "tags": [
                 "paper-1",
                 "functions",
                 "log-domain"
               ],
-              "stem": "Let x > 0. If the base-4 logarithm of [x(x + 3) + (1014)] equals 5, what is x?",
+              "stem": "Let f(x) = log₂(4 − x) and g(x) = 2ˣ − 1. What is the sum of the nonnegative integers x for which both compositions are defined and g(f(x)) ≥ f(g(x)) + 1?",
               "options": [
-                "2",
-                "20",
                 "0",
+                "1",
                 "3",
-                "5",
-                "4",
-                "−5",
-                "1"
+                "2",
+                "4"
               ],
-              "answer": 0,
-              "explanation": "Exponentiate to obtain x(x + 3) = 1024 − (1014) = 10. Subtract and factor: (x − 2)(x + 5) = 0. Only x = 2 is positive and its logarithm input is 1024.\n\nAnswer: 2."
+              "answer": 3,
+              "explanation": "The compositions are 3 − x and log₂(5 − 2ˣ), with common domain x < log₂ 5. Hence only 0, 1 and 2 need checking. At 0 and 2 the inequality holds with equality; at 1 it fails because log₂ 3 > 1. Their sum is 2."
             },
             {
-              "id": "tmua-pack-m2-p1-q05",
+              "id": "tmua-pack-m2-p1-q05-v2",
               "topic": "Algebra, polynomials & coefficients",
               "type": "algebra",
-              "difficulty": 3,
+              "difficulty": 4,
               "family": "rational-sign",
               "tags": [
                 "paper-1",
                 "algebra",
                 "rational-sign"
               ],
-              "stem": "For how many integers x is ((x − 5)(x − 2))/((x − 5)(x + 5)) ≤ 0?",
+              "stem": "For real k ≠ −1, consider f(x) = (x − k)/(x + 1). The preimage of [0, 1) is exactly [4, ∞). What is k?",
               "options": [
-                "11",
-                "5",
-                "10",
+                "−5",
                 "4",
-                "9",
-                "6",
-                "7",
-                "8"
+                "−4",
+                "−1/4",
+                "5"
               ],
-              "answer": 6,
-              "explanation": "x = 5 and x = −5 are excluded. Cancel x − 5 only after recording that restriction. The simplified ratio has opposite signs on top and bottom for −5 < x < 2, and is zero at x = 2. The excluded value 5 lies outside the interval. The integers run from -4 to 2.\n\nAnswer: 7."
+              "answer": 1,
+              "explanation": "The value 4 must give zero: the denominator is nonzero there and continuity would put points just below 4 into the preimage if f(4) were strictly between 0 and 1. Thus k = 4. Then f(x) = 1 − 5/(x + 1), which is above 1 for x < −1, negative for −1 < x < 4, and in [0, 1) for x ≥ 4."
             },
             {
-              "id": "tmua-pack-m2-p1-q06",
+              "id": "tmua-pack-m2-p1-q06-v2",
               "topic": "Functions, transformations & logarithms",
               "type": "functions",
               "difficulty": 3,
@@ -1089,20 +1043,19 @@
                 "functions",
                 "inscribed-rectangle"
               ],
-              "stem": "The graph y = 15 − |x − 5| is above the x-axis on a symmetric interval. A rectangle has base on the x-axis, vertical sides at x = 5 − t and x = 5 + t, and both upper corners on the graph. If its area is maximal, what is its area?",
+              "stem": "A rectangle has its lower corners on the x-axis and its upper corners on y = 16 − x². Among such rectangles of positive height and width, what is the largest possible perimeter?",
               "options": [
-                "450",
-                "225/2",
-                "15/2",
-                "227/2",
-                "225",
-                "225/4"
+                "24",
+                "30",
+                "32",
+                "36",
+                "34"
               ],
-              "answer": 1,
-              "explanation": "Here 0 ≤ t ≤ 15; the rectangle has width 2t and height 15 − t. Its area is 2t(15 − t) = 225/2 − 2(t − 15/2)², maximised when the square is zero.\n\nAnswer: 225/2."
+              "answer": 4,
+              "explanation": "With upper corners at x = ±t, the perimeter is 4t + 2(16 − t²) = 34 − 2(t − 1)². The maximum 34 occurs at t = 1, which is admissible."
             },
             {
-              "id": "tmua-pack-m2-p1-q07",
+              "id": "tmua-pack-m2-p1-q07-v2",
               "topic": "Functions, transformations & logarithms",
               "type": "functions",
               "difficulty": 3,
@@ -1112,94 +1065,85 @@
                 "functions",
                 "absolute-composition"
               ],
-              "stem": "Let f(x) = |x| − 2 and g(x) = |x| − 4. How many integers x in [−32, 32] make at least one of f(g(x)) and g(f(x)) zero?",
+              "stem": "How many real x satisfy |x² − 4| = |2x − 1|?",
               "options": [
-                "7",
                 "4",
-                "5",
-                "6",
+                "0",
                 "1",
-                "8",
                 "2",
                 "3"
               ],
-              "answer": 1,
-              "explanation": "The two equations give |x| = 4 ± 2 or |x| = 2 ± 4. Keeping only nonnegative possibilities gives magnitudes 6 and 2; they are distinct and nonzero. Each magnitude at most 32 contributes two integers.\n\nAnswer: 4."
+              "answer": 0,
+              "explanation": "Either x² − 4 = 2x − 1 or x² − 4 = 1 − 2x. Both quadratics have positive discriminant. A root could be common only if 2x − 1 = 0 and x² − 4 = 0 together, which is impossible."
             },
             {
-              "id": "tmua-pack-m2-p1-q08",
+              "id": "tmua-pack-m2-p1-q08-v2",
               "topic": "Probability, counting & data",
               "type": "data",
-              "difficulty": 3,
+              "difficulty": 4,
               "family": "fixed-spread",
               "tags": [
                 "paper-1",
                 "data",
                 "fixed-spread"
               ],
-              "stem": "Three different integers are selected from 1 through 9. Each selection is unordered. In how many selections is the difference between the greatest and least integers exactly 5?",
+              "stem": "Three distinct integers are chosen from 1 to 8 with range at most 3. How many choices have odd median?",
               "options": [
-                "20",
-                "4",
-                "15",
-                "16",
-                "17"
+                "5",
+                "7",
+                "8",
+                "9",
+                "10"
               ],
-              "answer": 3,
-              "explanation": "The least element a ranges from 1 to 4; then the greatest is fixed at a + 5. There are 4 choices strictly between them for the remaining number.\n\nAnswer: 16."
+              "answer": 2,
+              "explanation": "For median 3 or 5, the distances to the two other numbers can be (1, 1), (1, 2) or (2, 1). For median 7 there is only one number above it, so there are two choices. Median 1 is impossible. Total: 8."
             },
             {
-              "id": "tmua-pack-m2-p1-q09",
+              "id": "tmua-pack-m2-p1-q09-v2",
               "topic": "Coordinate geometry",
               "type": "geometry",
-              "difficulty": 2,
+              "difficulty": 4,
               "family": "chord-length",
               "tags": [
                 "paper-1",
                 "geometry",
                 "chord-length"
               ],
-              "stem": "A circle has centre (5, 9) and radius 35. Its intersections with y = 30 are A and B. What is |AB| divided by 3?",
+              "stem": "Two parallel chords of a circle are on opposite sides of its centre. Their lengths are 6 and 8, and their perpendicular separation is 7. What is the radius?",
               "options": [
-                "14",
-                "50/3",
-                "70/3",
-                "59/3",
-                "53/3",
-                "62/3",
-                "56/3",
-                "28/3"
+                "4",
+                "√29",
+                "6",
+                "5",
+                "7"
               ],
-              "answer": 6,
-              "explanation": "The line is 21 above the centre. Each endpoint lies horizontally √(35² − 21²) = 28 from the centre. Use both halves and divide the chord length 56 by 3.\n\nAnswer: 56/3."
+              "answer": 3,
+              "explanation": "Let the distances of the chords from the centre be a and b. They satisfy a + b = 7 and a² + 9 = b² + 16, so (a − b)·7 = 7. Thus a = 4, b = 3 and the radius is 5."
             },
             {
-              "id": "tmua-pack-m2-p1-q10",
+              "id": "tmua-pack-m2-p1-q10-v2",
               "topic": "Differentiation & integration",
               "type": "calculus",
-              "difficulty": 4,
+              "difficulty": 3,
               "family": "negative-area",
               "tags": [
                 "paper-1",
                 "calculus",
                 "negative-area"
               ],
-              "stem": "What is the exact area between y = 7(x − 6)(x − 8) and the x-axis for 6 ≤ x ≤ 8?",
+              "stem": "For which c does the total area between y = x − c and the x-axis on [0, 4] take its smallest possible value, and what is that value?",
               "options": [
-                "31/3",
-                "22/3",
-                "28/3",
-                "34/3",
-                "25/3",
-                "−28/3",
-                "56",
-                "14"
+                "c = 0; area 8",
+                "c = 1; area 5",
+                "c = 2; area 2",
+                "c = 2; area 4",
+                "c = 4; area 8"
               ],
-              "answer": 2,
-              "explanation": "The curve is nonpositive here. Let t = x − 6, so y = 7(t² − 2t). Integrate its negative from 0 to 2: 7[2t²/2 − t³/3] at the upper limit gives the area.\n\nAnswer: 28/3."
+              "answer": 3,
+              "explanation": "For 0 ≤ c ≤ 4 the sum of the triangular areas is [c² + (4 − c)²]/2 = (c − 2)² + 4. Outside this interval the area is at least 8 because the line has one sign throughout, and shifting it further out increases its distance from the axis."
             },
             {
-              "id": "tmua-pack-m2-p1-q11",
+              "id": "tmua-pack-m2-p1-q11-v2",
               "topic": "Functions, transformations & logarithms",
               "type": "functions",
               "difficulty": 4,
@@ -1209,45 +1153,41 @@
                 "functions",
                 "transformed-root-sum"
               ],
-              "stem": "The two distinct positive roots α, β of x² − 12x + 20 = 0 are transformed by f(x) = 1/(x + 6). What is f(α) + f(β)?",
+              "stem": "Let a and b be the roots of x² − 3x + 1 = 0. Which quantity is equal to a⁴ + b⁴?",
               "options": [
-                "−13/16",
-                "3/23",
-                "19/16",
-                "3/16",
-                "1/24",
-                "6/23",
-                "1/18"
+                "35",
+                "45",
+                "47",
+                "49",
+                "55"
               ],
-              "answer": 3,
-              "explanation": "By the coefficients, α + β = 12 and αβ = 20. The common denominator is αβ + 6(α + β) + 36; the numerator is α + β + 12. Substitute without solving the quadratic.\n\nAnswer: 3/16."
+              "answer": 2,
+              "explanation": "First a² + b² = (a + b)² − 2ab = 7. Squaring and subtracting 2a²b² then gives 49 − 2 = 47."
             },
             {
-              "id": "tmua-pack-m2-p1-q12",
+              "id": "tmua-pack-m2-p1-q12-v2",
               "topic": "Coordinate geometry",
               "type": "geometry",
-              "difficulty": 3,
+              "difficulty": 4,
               "family": "secant-gap",
               "tags": [
                 "paper-1",
                 "geometry",
                 "secant-gap"
               ],
-              "stem": "The curve y = 4x² intersects its secant through x = 4 and x = 10. What is the vertical distance between the secant and the curve at the midpoint of those two x-values?",
+              "stem": "A secant of y = x³ passes through A and B, where A has x-coordinate 2 and B has x-coordinate greater than 2. The secant has gradient 19. What is the y-coordinate of B?",
               "options": [
-                "144",
-                "12",
+                "27",
+                "19",
                 "24",
-                "36",
-                "35",
-                "38",
-                "37"
+                "30",
+                "35"
               ],
-              "answer": 3,
-              "explanation": "The secant height halfway is the average of the two endpoint heights. Subtract the curve height 4((4 + 10)/2)². Simplifying this difference gives 4(4 − 10)²/4.\n\nAnswer: 36."
+              "answer": 0,
+              "explanation": "If B has x-coordinate b, its secant gradient is (b³ − 8)/(b − 2) = b² + 2b + 4. Setting this equal to 19 gives b = 3 or −5. Only 3 exceeds 2, so the y-coordinate is 27."
             },
             {
-              "id": "tmua-pack-m2-p1-q13",
+              "id": "tmua-pack-m2-p1-q13-v2",
               "topic": "Differentiation & integration",
               "type": "calculus",
               "difficulty": 3,
@@ -1257,68 +1197,63 @@
                 "calculus",
                 "crossing-tangents"
               ],
-              "stem": "The tangents to y = 3x² at x = 1 and x = 8 intersect at T. What is the x-coordinate of T?",
+              "stem": "Two distinct tangents to y = x² pass through (2, −5). What is the product of their gradients?",
               "options": [
-                "11/2",
-                "7/2",
-                "8",
-                "9/2",
-                "9",
-                "1"
+                "−24",
+                "−20",
+                "−10",
+                "−5",
+                "20"
               ],
-              "answer": 3,
-              "explanation": "The tangent at x = t has slope 6t and intercept −3t². Equate the lines to get x = (8² − 1²)/(2(8 − 1)). Cancel the difference using the difference of squares.\n\nAnswer: 9/2."
+              "answer": 1,
+              "explanation": "A tangent at x = t has gradient 2t and equation y = 2tx − t². It passes through (2, −5) when t² − 4t − 5 = 0. The product of the two t values is −5, so the product of gradients is −20."
             },
             {
-              "id": "tmua-pack-m2-p1-q14",
+              "id": "tmua-pack-m2-p1-q14-v2",
               "topic": "Trigonometry",
               "type": "trigonometry",
-              "difficulty": 4,
+              "difficulty": 5,
               "family": "cosine-endpoint",
               "tags": [
                 "paper-1",
                 "trigonometry",
                 "cosine-endpoint"
               ],
-              "stem": "How many solutions does 6cos(2x) = 1cos(x) + (5) have for 0° ≤ x < 720°?",
+              "stem": "On how many values of x in 0 ≤ x ≤ π does cos x = cos(3x) + 1 hold?",
               "options": [
+                "0",
+                "1",
+                "3",
                 "4",
-                "7",
-                "6",
-                "8",
-                "2",
-                "10",
-                "5"
+                "2"
               ],
-              "answer": 2,
-              "explanation": "Use cos(2x) = 2cos²(x) − 1. With u = cos(x), the equation becomes (u − 1)(12u + 11) = 0. The root 1 contributes once per turn. The root −11/12 contributes twice if strictly inside (−1, 1), once at −1, and not at all below −1. There are 2 full turns.\n\nAnswer: 6."
+              "answer": 4,
+              "explanation": "Using the triple-angle identity gives 4c(1 − c²) = 1 for c = cos x. Negative c cannot work. The left side vanishes at 0 and 1, has just one interior maximum (its derivative vanishes at c = 1/√3), and exceeds 1 at c = 1/2. There are two roots, each yielding one x."
             },
             {
-              "id": "tmua-pack-m2-p1-q15",
+              "id": "tmua-pack-m2-p1-q15-v2",
               "topic": "Sequences & series",
               "type": "sequences",
-              "difficulty": 3,
+              "difficulty": 4,
               "family": "alternate-series",
               "tags": [
                 "paper-1",
                 "sequences",
                 "alternate-series"
               ],
-              "stem": "A geometric progression with 6 terms has positive integer ratio 6 and sum 65317. A new sequence keeps the terms in odd positions and drops those in even positions (positions start at 1). What is the sum of the new sequence?",
+              "stem": "A nonzero convergent geometric series has sum 6. Negating every even-position term changes the sum to 3. What is the original first term?",
               "options": [
-                "9331",
-                "32658",
-                "9333",
-                "9332",
-                "65310",
-                "65317",
-                "9330"
+                "2",
+                "4",
+                "3",
+                "9/2",
+                "5"
               ],
-              "answer": 0,
-              "explanation": "The original sum is first term × (6^6 − 1)/(6 − 1), so the first term is 7. The retained terms have ratio 36 and there are 3 of them. Sum this shorter progression.\n\nAnswer: 9331."
+              "answer": 1,
+              "explanation": "With first term a and common ratio r, the two sums are a/(1 − r) and a/(1 + r). Hence 6(1 − r) = 3(1 + r), giving r = 1/3 and a = 4."
             },
             {
-              "id": "tmua-pack-m2-p1-q16",
+              "id": "tmua-pack-m2-p1-q16-v2",
               "topic": "Algebra, polynomials & coefficients",
               "type": "algebra",
               "difficulty": 3,
@@ -1328,43 +1263,41 @@
                 "algebra",
                 "adjacent-coefficients"
               ],
-              "stem": "What is the coefficient of x^10 in (1 + 4x)^12(1 + 4x)?",
+              "stem": "Let c be the coefficient of x⁴ in (1 + x)⁸. What is the coefficient of x⁴ in (1 − x²)(1 + x)⁸ as a fraction of c?",
               "options": [
-                "230686720",
-                "299892738",
-                "299892736",
-                "69206016",
-                "299892735",
-                "299892737"
+                "2/5",
+                "4/5",
+                "3/5",
+                "5/4",
+                "7/5"
               ],
               "answer": 2,
-              "explanation": "Take either x^10 from the first factor and 1 from the last, or x^9 from the first and 4x from the last. The two contributions are 66×4^10 and 220×4^9×4.\n\nAnswer: 299892736."
+              "explanation": "The second coefficient is C(8, 4) − C(8, 2) = 70 − 28 = 42, so its ratio to 70 is 3/5."
             },
             {
-              "id": "tmua-pack-m2-p1-q17",
+              "id": "tmua-pack-m2-p1-q17-v2",
               "topic": "Sequences & series",
               "type": "sequences",
-              "difficulty": 3,
+              "difficulty": 4,
               "family": "split-progression",
               "tags": [
                 "paper-1",
                 "sequences",
                 "split-progression"
               ],
-              "stem": "An arithmetic sequence of 8 terms has sum 144. The last term exceeds the first by 28. By how much does the sum of the final 3 terms exceed the sum of the first 5 terms? Give a signed answer.",
+              "stem": "The first eight terms of a nonconstant arithmetic progression are split into the odd-position terms and the even-position terms. The odd-position terms sum to zero. By what factor must their sum of squares be multiplied to obtain the even-position sum of squares?",
               "options": [
-                "24",
-                "144",
-                "25",
-                "72",
-                "12",
-                "−24"
+                "1",
+                "6/5",
+                "5/4",
+                "4/3",
+                "3/2"
               ],
-              "answer": 0,
-              "explanation": "Divide 28 by 7 to get the common difference 4. The mean is 18, hence the first term is 4. The first 5 terms sum to 5(8+4×4)/2 = 60. Subtract twice that from 144.\n\nAnswer: 24."
+              "answer": 1,
+              "explanation": "Write the odd-position terms as −3d, −d, d and 3d. Increasing each by d gives the even-position terms. Because the odd-position sum is zero, the square sum goes up by 4d² from 20d² to 24d², giving factor 6/5."
             },
             {
-              "id": "tmua-pack-m2-p1-q18",
+              "id": "tmua-pack-m2-p1-q18-v2",
               "topic": "Probability, counting & data",
               "type": "data",
               "difficulty": 4,
@@ -1374,43 +1307,41 @@
                 "data",
                 "digit-parity"
               ],
-              "stem": "Codes have length 3 using digits 1 through 7, with repetitions allowed. How many codes have an even sum of their digits?",
+              "stem": "How many three-digit positive integers have three distinct digits from {0, 1, 2, 3, 4} and are divisible by 4?",
               "options": [
-                "343",
-                "171",
-                "172",
-                "173",
-                "27",
-                "170"
+                "15",
+                "9",
+                "10",
+                "12",
+                "13"
               ],
-              "answer": 1,
-              "explanation": "There are 3 even and 4 odd choices. The total count is 7^3. The even count minus the odd count is (3 − 4)^3: expand the product, giving each odd digit a minus sign. Add the two counts equations and halve.\n\nAnswer: 171."
+              "answer": 0,
+              "explanation": "The possible last two digits are 04, 12, 20, 24, 32 and 40. The three endings containing 0 each give three leading digits, while the other three each give two. Thus the total is 3·3 + 3·2 = 15."
             },
             {
-              "id": "tmua-pack-m2-p1-q19",
+              "id": "tmua-pack-m2-p1-q19-v2",
               "topic": "Differentiation & integration",
               "type": "calculus",
-              "difficulty": 5,
+              "difficulty": 4,
               "family": "cubic-turning-values",
               "tags": [
                 "paper-1",
                 "calculus",
                 "cubic-turning-values"
               ],
-              "stem": "By how much does the local maximum value of f(x) = 2x³ − 48x² + 360x + 4 exceed its local minimum value?",
+              "stem": "A monic cubic f has a local maximum at x = −2 and a local minimum at x = 1. If f(1) = 0, what is the third root, counting the root at 1 twice?",
               "options": [
-                "4",
-                "64",
-                "16",
-                "128",
-                "65",
-                "63"
+                "−5",
+                "−4",
+                "−7/2",
+                "−3",
+                "−5/2"
               ],
-              "answer": 1,
-              "explanation": "Differentiate: f′(x) = 6(x − 6)(x − 10). The sign changes + to − at 6 and − to + at 10. On putting x = 6 + t, the nonconstant part becomes 2t³ − 3(4)t². Going from t = 0 to 4 lowers the value by (4)³.\n\nAnswer: 64."
+              "answer": 2,
+              "explanation": "Since f(1) = f′(1) = 0, write f(x) = (x − 1)²(x − r). The derivative is (x − 1)(3x − 2r − 1), so its other zero is −2 = (2r + 1)/3. Thus r = −7/2."
             },
             {
-              "id": "tmua-pack-m2-p1-q20",
+              "id": "tmua-pack-m2-p1-q20-v2",
               "topic": "Differentiation & integration",
               "type": "calculus",
               "difficulty": 5,
@@ -1420,16 +1351,16 @@
                 "calculus",
                 "ratio-of-areas"
               ],
-              "stem": "The curves y = 5x² + 300 and y = 85x enclose a region. A second region lies between the curves from their rightmost intersection to x = 40. What is the ratio of the second area to the first?",
+              "stem": "The graphs y = x² and y = 2x enclose a region. The vertical line x = t divides the region into two areas in the ratio 1 : 7, with the smaller part on the left. Which interval contains t?",
               "options": [
-                "48",
-                "176",
-                "16",
-                "128",
-                "64"
+                "0 < t < 1/4",
+                "1/2 < t < 3/4",
+                "3/4 < t < 1",
+                "1/4 < t < 1/2",
+                "1 < t < 2"
               ],
-              "answer": 1,
-              "explanation": "Subtract the line height from the parabola height: 5(x − 5)(x − 12). With u = (x − 12)/7, the difference is 245u(u + 1). The first region corresponds to −1 ≤ u ≤ 0 and has negative signed integral −1/6 of u(u + 1); the second runs from 0 to 4 and has integral 4³/3 + 4²/2. The common scale factors cancel. Divide the latter integral by 1/6.\n\nAnswer: 176."
+              "answer": 3,
+              "explanation": "The total is 4/3 and the left area must be 1/6. The increasing area function t² − t³/3 is below 1/6 at 1/4 and above it at 1/2, placing t strictly between those points."
             }
           ]
         },
@@ -1440,29 +1371,29 @@
           "minutes": 75,
           "questions": [
             {
-              "id": "tmua-pack-m2-p2-q01",
+              "id": "tmua-pack-m2-p2-q01-v2",
               "topic": "Spotting errors in proofs",
               "type": "proof-errors",
-              "difficulty": 1,
+              "difficulty": 3,
               "family": "order-reversal",
               "tags": [
                 "paper-2",
                 "proof-errors",
                 "order-reversal"
               ],
-              "stem": "A proof starts from −5(x + 6) < −60. It divides both sides by −5 and writes x + 6 < 12, then gives x < 6. What must be changed to give an equivalent bound?",
+              "stem": "Assume x < 0 and y > 0. A proof attempts to show 1/(x − y) < 1/x by checking x − y < x and “taking reciprocals, without changing the inequality because both numbers are negative.” Which is the correct assessment?",
               "options": [
-                "The final bound should be x < 18.",
-                "The final bound should be x ≥ 6.",
-                "Division must be replaced by subtraction of the coefficient.",
-                "The final bound should be x > 6.",
-                "No change is required."
+                "The conclusion is false; the reciprocal reverses the order on the negative numbers.",
+                "Both the conclusion and the proof are correct.",
+                "The conclusion is true, but the proof fails if x − y is zero.",
+                "The conclusion is false only when x + y > 0.",
+                "Taking reciprocals is never valid in an inequality."
               ],
-              "answer": 3,
-              "explanation": "Dividing by a negative reverses the inequality: x + 6 > 12. Subtract 6 without reversing to obtain x > 6. At equality the starting inequality is false; replacing > with ≥ adds a spurious solution."
+              "answer": 0,
+              "explanation": "Here x − y < x < 0 and the product x(x − y) is positive. Dividing x − y < x by this product gives 1/x < 1/(x − y), the reverse of the claimed bound."
             },
             {
-              "id": "tmua-pack-m2-p2-q02",
+              "id": "tmua-pack-m2-p2-q02-v2",
               "topic": "Implications, negation & quantifiers",
               "type": "logic",
               "difficulty": 3,
@@ -1472,130 +1403,129 @@
                 "logic",
                 "composed-implications"
               ],
-              "stem": "Four assertions P, Q, R and S have unknown truth values. Three facts are established: if R holds, then Q fails; if Q fails, then P holds; and if S fails, then P holds. Which conclusion follows from these facts alone?",
+              "stem": "The following statements hold for real numbers in a set S: every element greater than 2 has its square in S, and no number greater than 16 is in S. Which additional conclusion must follow?",
               "options": [
-                "If R holds, then S fails.",
-                "If S fails, then R holds.",
-                "If Q holds, then P fails.",
-                "If P fails, then R fails.",
-                "If P holds, then Q fails."
+                "No element lies between 0 and 2.",
+                "No element of S is greater than 2.",
+                "Every element in [−2, 2] belongs to S.",
+                "If −4 belongs to S, so does 16.",
+                "If 2 belongs to S, so does 4."
               ],
-              "answer": 3,
-              "explanation": "Combine the first two implications: if R holds, then P holds. Its contrapositive is: if P fails, then R fails. The third fact points to the same conclusion as the second and does not reverse either implication."
+              "answer": 1,
+              "explanation": "An element x > 2 forces x² > 4 into S, which in turn forces x⁴ > 16 into S, a contradiction. The rule says nothing about numbers at most 2, so none of the other conclusions is forced."
             },
             {
-              "id": "tmua-pack-m2-p2-q03",
+              "id": "tmua-pack-m2-p2-q03-v2",
               "topic": "Implications, negation & quantifiers",
               "type": "logic",
-              "difficulty": 2,
+              "difficulty": 3,
               "family": "contrapositive-form",
               "tags": [
                 "paper-2",
                 "logic",
                 "contrapositive-form"
               ],
-              "stem": "Which statement follows the contrapositive rule for ‘If n is a multiple of 2, then n² is at least 64’ (whether or not the original is true for all integers n)?",
+              "stem": "Let f be a differentiable function. Consider the claim “If f(0) > 0 and f′(0) > 0, then f(1) > f(0).” What is the contrapositive, without assuming the claim is true?",
               "options": [
-                "If n is not a multiple of 2, then n² is at least 64.",
-                "If n² is less than 64, then n is not a multiple of 2.",
-                "If n is a multiple of 2, then n² is less than 64.",
-                "If n² is at least 64, then n is a multiple of 2.",
-                "If n is not a multiple of 2, then n² is less than 64."
+                "If f(1) > f(0), then f(0) > 0 and f′(0) > 0.",
+                "If f(1) ≤ f(0), then f(0) ≤ 0 and f′(0) ≤ 0.",
+                "If f(1) ≤ f(0), then f(0) ≤ 0 or f′(0) ≤ 0.",
+                "If f(0) ≤ 0 or f′(0) ≤ 0, then f(1) ≤ f(0).",
+                "If f(1) < f(0), then f(0) < 0 or f′(0) < 0."
               ],
-              "answer": 1,
-              "explanation": "The contrapositive of P ⇒ Q is not-Q ⇒ not-P. Here that reads: if n² is less than 64, then n is not a multiple of 2. The two fail in exactly the same case (P true and Q false). Swapping without negating instead gives the converse."
+              "answer": 2,
+              "explanation": "The contrapositive starts by negating the conclusion, including equality. It ends by negating the joint premise: at least one of the two positive inequalities must fail, not necessarily both."
             },
             {
-              "id": "tmua-pack-m2-p2-q04",
+              "id": "tmua-pack-m2-p2-q04-v2",
               "topic": "Counterexamples & witnesses",
               "type": "counterexamples",
-              "difficulty": 3,
+              "difficulty": 4,
               "family": "interval-witness",
               "tags": [
                 "paper-2",
                 "counterexamples",
                 "interval-witness"
               ],
-              "stem": "A student claims: for every integer x, if (x − 5)(x − 14) ≤ 0 then x ≥ 13. Which value refutes the claim?",
+              "stem": "Which of these is a counterexample to the claim “if a polynomial has two distinct positive real roots, its derivative has exactly one real root”?",
               "options": [
-                "4",
-                "16",
-                "9",
-                "17",
-                "15",
-                "13"
+                "x(x − 1)(x − 2)",
+                "x² − 3x + 2",
+                "x³",
+                "x² + x + 1",
+                "x² − 2x + 1"
               ],
-              "answer": 2,
-              "explanation": "The premise holds on [5, 14]; the conclusion fails below 13. A counterexample must satisfy both requirements. 9 lies in [5, 12], and none of the other offered integers does."
+              "answer": 0,
+              "explanation": "The cubic has the positive roots 1 and 2. Its derivative 3x² − 6x + 2 has positive discriminant and therefore two real roots. The first choice satisfies the premise but has just one derivative root. The other choices fail the premise."
             },
             {
-              "id": "tmua-pack-m2-p2-q05",
+              "id": "tmua-pack-m2-p2-q05-v2",
               "topic": "Implications, negation & quantifiers",
               "type": "logic",
-              "difficulty": 2,
+              "difficulty": 3,
               "family": "negated-bound",
               "tags": [
                 "paper-2",
                 "logic",
                 "negated-bound"
               ],
-              "stem": "Which statement is the formal negation of: ‘For every integer n, if 5 divides n then n² ≤ 9’?",
+              "stem": "On a nonempty set S a function f has the property that every input has a different input with the same output. Which statement is its negation?",
               "options": [
-                "Every integer n with n² ≥ 9 is divisible by 5.",
-                "Some integer n is not divisible by 5 and n² > 9.",
-                "Every integer n divisible by 5 has n² > 9.",
-                "Some integer n is divisible by 5 and n² ≤ 9.",
-                "Some integer n is divisible by 5 and n² > 9."
+                "Some input has a different input with a different output.",
+                "Every input has a unique output.",
+                "Different inputs always give different outputs.",
+                "The function has no outputs.",
+                "Some input is the only input giving its output."
               ],
               "answer": 4,
-              "explanation": "Negating ‘for every’ gives ‘there exists’. The implication fails only if n is divisible by 5 but the conclusion fails; the complement of ≥ is < and the complement of ≤ is >. Negate the form of the assertion; no particular witness is needed to write the negation."
+              "explanation": "The original has form “for every x, some y different from x has f(y) = f(x).” Its negation fixes at least one x for which all y different from x have f(y) ≠ f(x). It need not hold for all x."
             },
             {
-              "id": "tmua-pack-m2-p2-q06",
+              "id": "tmua-pack-m2-p2-q06-v2",
               "topic": "Constructing arguments & exhaustive cases",
               "type": "proof-strategies",
-              "difficulty": 4,
+              "difficulty": 3,
               "family": "residue-exhaustion",
               "tags": [
                 "paper-2",
                 "proof-strategies",
                 "residue-exhaustion"
               ],
-              "stem": "Which list gives exactly the remainders of integers n for which 7 divides n(n + 4)?",
+              "stem": "For which integers n is n² + n + 2 divisible by 6?",
               "options": [
-                "0",
-                "0, 1, 2, 3, 4, 5, 6",
-                "0, 3",
-                "No remainders",
-                "1, 2, 4, 5, 6"
+                "n leaves remainder 1 or 4 on division by 6.",
+                "n is even.",
+                "There are no such integers.",
+                "n leaves remainder 0 or 5 on division by 6.",
+                "All integers n."
               ],
               "answer": 2,
-              "explanation": "Write n = 7k + s. Expanding shows n(n + 4) has the same remainder as s(s + 4). For s = 0 through 6, the respective remainders are 0, 5, 5, 0, 4, 3, 4. Keep exactly the positions where the remainder is zero."
+              "explanation": "The expression is always even, but modulo 3 it has remainders 2, 1, 2 at n ≡ 0, 1, 2. It can never be divisible by 3."
             },
             {
-              "id": "tmua-pack-m2-p2-q07",
+              "id": "tmua-pack-m2-p2-q07-v2",
               "topic": "Spotting errors in proofs",
               "type": "proof-errors",
-              "difficulty": 2,
+              "difficulty": 4,
               "family": "lost-sign",
               "tags": [
                 "paper-2",
                 "proof-errors",
                 "lost-sign"
               ],
-              "stem": "A proof claims that (x − 11)² = 4 implies x = 13.\n1. Take nonnegative square roots of both sides.\n2. Replace √((x − 11)²) with x − 11.\n3. Simplify the right side to 2.\n4. Solve x − 11 = 2.\nWhich is the first unjustified step?",
+              "stem": "A student writes: “Since u² > v², taking square roots gives u > v. Therefore u − v > 0.” Which additional assumption is sufficient to make the conclusion u − v > 0 valid whenever u² > v²?",
               "options": [
-                "All steps are valid",
-                "Step 2: the square root is an absolute value",
-                "Step 4: adding the same constant does not preserve equality",
-                "Step 3: the nonnegative square root is negative",
-                "Step 1: square roots cannot be taken on both sides of this equality"
+                "v ≥ 0",
+                "u + v < 0",
+                "u ≤ 0",
+                "u ≥ 0",
+                "uv ≥ 0"
               ],
-              "answer": 1,
-              "explanation": "The expressions on both sides are nonnegative, so step 1 is allowed. But √(u²) = |u|, not necessarily u. Solving |x − 11| = 2 yields 13 and 9; the second value is lost in step 2."
+              "answer": 3,
+              "explanation": "If u ≥ 0, then u = √(u²) > √(v²) ≥ v. The assumption v ≥ 0 alone allows u to be negative with larger magnitude. Taking u = −3 and v = −2 rules out u + v < 0, u ≤ 0 and uv ≥ 0."
             },
             {
-              "id": "tmua-pack-m2-p2-q08",
+              "id": "tmua-pack-m2-p2-q08-v2",
               "topic": "Necessary & sufficient conditions",
               "type": "conditions",
               "difficulty": 3,
@@ -1605,42 +1535,41 @@
                 "conditions",
                 "residue-compatibility"
               ],
-              "stem": "Let x be an integer. P: x − 9 is divisible by 4. Q: x − 12 is divisible by 4.\n\nWhich describes P relative to Q?",
+              "stem": "Let n be an integer. P means n leaves remainder 1 on division by 6; Q means n leaves remainder 3 on division by 4. Which row gives precisely the remainders modulo 12 for which exactly one of P and Q holds?",
               "options": [
-                "Neither, but both can hold together",
-                "Necessary and sufficient",
-                "Necessary but not sufficient",
-                "Sufficient but not necessary",
-                "Neither, and they cannot both hold"
+                "1 and 7",
+                "1, 3 and 11",
+                "3 and 11",
+                "1, 3, 7 and 11",
+                "7 only"
               ],
-              "answer": 4,
-              "explanation": "Subtract the two differences: their difference is 3. If it is divisible by 4, the conditions describe exactly the same residue class. If it is not divisible by 4, the classes are disjoint, and x = 9 and x = 12 witness the two failed implications."
+              "answer": 1,
+              "explanation": "The P residues are 1 and 7. The Q residues are 3, 7 and 11. Remove the common residue 7 to obtain 1, 3 and 11."
             },
             {
-              "id": "tmua-pack-m2-p2-q09",
+              "id": "tmua-pack-m2-p2-q09-v2",
               "topic": "Counterexamples & witnesses",
               "type": "counterexamples",
-              "difficulty": 4,
+              "difficulty": 3,
               "family": "square-bound-witness",
               "tags": [
                 "paper-2",
                 "counterexamples",
                 "square-bound-witness"
               ],
-              "stem": "Which offered integer x disproves ‘if (4x + 2)² < 1156, then |x| < 8’?",
+              "stem": "Which of the following points (a, b) disproves “if a² + b² < 10 and a < b, then ab ≥ −2”?",
               "options": [
-                "-8",
-                "0",
-                "9",
-                "8",
-                "1",
-                "-1"
+                "(−3, 1)",
+                "(−1, 2)",
+                "(2, −2)",
+                "(0, 2)",
+                "(−2, 2)"
               ],
-              "answer": 0,
-              "explanation": "To disprove the implication use |x| ≥ 8 and make the square strictly less than 1156. At x = −8, the squared base has magnitude |2 − 32|, strictly less than 34 since both 2 and 32 are positive. At 8 the bound is met exactly, and larger positive x also fails the premise; the remaining choices satisfy the conclusion."
+              "answer": 4,
+              "explanation": "The point (−2, 2) gives sum of squares 8, satisfies a < b and gives product −4. The first point lies on the excluded boundary; the second gives equality in the conclusion; the third reverses the order; the last has product zero."
             },
             {
-              "id": "tmua-pack-m2-p2-q10",
+              "id": "tmua-pack-m2-p2-q10-v2",
               "topic": "Constructing arguments & exhaustive cases",
               "type": "proof-strategies",
               "difficulty": 4,
@@ -1650,156 +1579,151 @@
                 "proof-strategies",
                 "coprime-split"
               ],
-              "stem": "For N = 3^2 × 5^2, how many ordered pairs (u, v) of positive integers satisfy uv = N and have no common factor greater than 1?",
+              "stem": "Two positive integers a and b have greatest common divisor 6 and least common multiple 180. How many unordered pairs {a, b} are possible?",
               "options": [
-                "4",
-                "6",
                 "2",
-                "8",
-                "9"
+                "3",
+                "6",
+                "4",
+                "8"
               ],
-              "answer": 0,
-              "explanation": "If a prime occurs in both factors they share that divisor. Thus each of the blocks 3^2 and 5^2 must go wholly to one of u and v, with two independent choices. All assignments work (including those with a factor 1).\n\nAnswer: 4."
+              "answer": 3,
+              "explanation": "Write a = 6u, b = 6v, where u, v are coprime. Their least common multiple is uv = 30. Each of the three prime factors 2, 3 and 5 is allocated to exactly one factor. There are 8 ordered allocations, and swapping the two numbers identifies them in pairs, giving 4."
             },
             {
-              "id": "tmua-pack-m2-p2-q11",
+              "id": "tmua-pack-m2-p2-q11-v2",
               "topic": "Constructing arguments & exhaustive cases",
               "type": "proof-strategies",
-              "difficulty": 4,
+              "difficulty": 3,
               "family": "intersection-bounds",
               "tags": [
                 "paper-2",
                 "proof-strategies",
                 "intersection-bounds"
               ],
-              "stem": "S and T are subsets of a set of size 19, with sizes 16 and 13. What is the difference between the largest and smallest possible values of |S ∩ T|?",
+              "stem": "A library has eleven illustrated books and nine biographies, of which six are illustrated. A display must include ten distinct books, each illustrated or a biography (or both), and exactly four must be biographies. Is such a display possible?",
               "options": [
-                "10",
-                "2",
-                "13",
-                "4",
-                "3",
-                "5",
-                "29"
+                "No; at most eight books can meet the stated requirements.",
+                "No; at most nine books can meet the stated requirements.",
+                "Yes; use five illustrated books and five biographies.",
+                "Yes; any four biographies and six other illustrated books work.",
+                "Yes, but only if all four biographies are illustrated."
               ],
-              "answer": 4,
-              "explanation": "The intersection is at most min(16, 13) = 13, attained by nesting. It is at least max(0, 16 + 13 − 19) = 10, from the union bound; placing as many elements as possible outside the other set attains this. Subtract the endpoints.\n\nAnswer: 3."
+              "answer": 1,
+              "explanation": "The six positions not taken by biographies would have to be filled with illustrated non-biographies. Only eleven minus six, or five, are available. Four biographies and those five can make a display of nine, but not ten."
             },
             {
-              "id": "tmua-pack-m2-p2-q12",
+              "id": "tmua-pack-m2-p2-q12-v2",
               "topic": "Necessary & sufficient conditions",
               "type": "conditions",
-              "difficulty": 4,
+              "difficulty": 3,
               "family": "integer-threshold",
               "tags": [
                 "paper-2",
                 "conditions",
                 "integer-threshold"
               ],
-              "stem": "Let x be an integer. P: |x − 10| < 2. Q: (x − 10)² ≤ 16.\n\nWhich describes P relative to Q?",
+              "stem": "For integer n, let P mean 0 < n < 6 and Q mean n(8 − n) > 12. Which describes Q as a condition for P?",
               "options": [
-                "Neither, but both can hold together",
-                "Neither, and they cannot both hold",
-                "Necessary and sufficient",
-                "Necessary but not sufficient",
-                "Sufficient but not necessary"
+                "Necessary only",
+                "Both necessary and sufficient",
+                "Neither, though there are n satisfying both.",
+                "Sufficient only",
+                "Neither, and no n satisfies both."
               ],
-              "answer": 4,
-              "explanation": "For integer x, P is the interval [9, 11] while Q is [6, 14]. P ⇒ Q if the first interval is contained in the second; Q ⇒ P if the containment is reversed. Both intervals contain 10."
+              "answer": 3,
+              "explanation": "Q is equivalent to (n − 2)(n − 6) < 0, so its solutions are 3, 4 and 5. P also permits 1 and 2. Thus Q is sufficient but not necessary."
             },
             {
-              "id": "tmua-pack-m2-p2-q13",
+              "id": "tmua-pack-m2-p2-q13-v2",
               "topic": "Constructing arguments & exhaustive cases",
               "type": "proof-strategies",
-              "difficulty": 3,
+              "difficulty": 4,
               "family": "parity-classification",
               "tags": [
                 "paper-2",
                 "proof-strategies",
                 "parity-classification"
               ],
-              "stem": "What can be concluded about the parity of n² + 5n + 7 over all integers n?",
+              "stem": "For integers a, b and c, suppose a + b and b + c are both odd. Which quantity is always even?",
               "options": [
-                "It is even exactly when n is odd.",
-                "It is odd for every integer n.",
-                "It is even for every integer n.",
-                "It is even exactly when n is even.",
-                "Its parity changes between some integers of the same parity."
+                "a² + c²",
+                "a + b + c",
+                "abc + 1",
+                "a² + b² + c²",
+                "a + 2b + c + 1"
               ],
-              "answer": 1,
-              "explanation": "Modulo 2, n² has the same remainder as n, so the expression has remainder (6)n + 7 modulo 2. For even n it is 1; for odd n it is 1. Remainder 0 means even; remainder 1 means odd."
+              "answer": 0,
+              "explanation": "The hypotheses say a and c each have parity opposite to b, so a and c have the same parity. Squaring preserves parity, making a² + c² even. Taking (a, b, c) = (0, 1, 0) makes each other expression odd."
             },
             {
-              "id": "tmua-pack-m2-p2-q14",
+              "id": "tmua-pack-m2-p2-q14-v2",
               "topic": "Constructing arguments & exhaustive cases",
               "type": "proof-strategies",
-              "difficulty": 4,
+              "difficulty": 5,
               "family": "pair-forcing",
               "tags": [
                 "paper-2",
                 "proof-strategies",
                 "pair-forcing"
               ],
-              "stem": "Take the integers 1 to 22, except 2 and 21. What is the minimum number of distinct remaining integers one must select to guarantee two sum to 23?",
+              "stem": "What is the least number of distinct elements one must select from {1, 2, …, 10} to ensure that two selected elements have sum 9 or sum 12?",
               "options": [
-                "10",
-                "20",
-                "21",
-                "9",
-                "12",
-                "13",
-                "11"
+                "5",
+                "6",
+                "7",
+                "8",
+                "9"
               ],
-              "answer": 6,
-              "explanation": "The integers come in complementary pairs {x, 23 − x}. Exactly one pair has been removed, leaving 10 pairs. Taking one from each shows 10 are not enough; taking one more forces two from a pair.\n\nAnswer: 11."
+              "answer": 2,
+              "explanation": "The forbidden pairs split into paths 9, 3, 6 and 10, 2, 7, 5, 4, 8, 1, whose adjacent terms sum to 9 or 12. Pair up successive vertices along each path for an upper bound of two on the first path and four on the second. Alternating choices attain these bounds, so six may avoid both sums and seven forces a pair."
             },
             {
-              "id": "tmua-pack-m2-p2-q15",
+              "id": "tmua-pack-m2-p2-q15-v2",
               "topic": "Necessary & sufficient conditions",
               "type": "conditions",
-              "difficulty": 3,
+              "difficulty": 4,
               "family": "divisibility-direction",
               "tags": [
                 "paper-2",
                 "conditions",
                 "divisibility-direction"
               ],
-              "stem": "Let x be a positive integer. P: 9 divides x. Q: 45 divides x.\n\nWhich describes P relative to Q?",
+              "stem": "For positive integers a and b, which condition is necessary, but not sufficient, for 18 to divide ab?",
               "options": [
-                "Sufficient but not necessary",
-                "Necessary but not sufficient",
-                "Neither, but both can hold together",
-                "Necessary and sufficient",
-                "Neither, and they cannot both hold"
+                "18 divides a.",
+                "9 divides a and 2 divides b.",
+                "36 divides ab.",
+                "a and b are both even.",
+                "6 divides ab."
               ],
-              "answer": 1,
-              "explanation": "P ⇒ Q exactly when 45 divides 9: test the least positive multiple 9 itself. Q ⇒ P exactly when 9 divides 45: test 45 itself. The product 405 shows that both can hold. The two implications are respectively false and true."
+              "answer": 4,
+              "explanation": "Every multiple of 18 is a multiple of 6, but a = 2, b = 3 shows 6 dividing ab need not suffice. The first, second and fourth options are sufficient; the fifth is not even necessary, for example when a = 1 and b = 18."
             },
             {
-              "id": "tmua-pack-m2-p2-q16",
+              "id": "tmua-pack-m2-p2-q16-v2",
               "topic": "Constructing arguments & exhaustive cases",
               "type": "proof-strategies",
-              "difficulty": 3,
+              "difficulty": 4,
               "family": "irrational-product",
               "tags": [
                 "paper-2",
                 "proof-strategies",
                 "irrational-product"
               ],
-              "stem": "Let x = √33. Which of the following irrational numbers y makes xy rational?",
+              "stem": "Which assertion must be true about a real number x for which x + √2 is rational?",
               "options": [
-                "2√11",
-                "2√33",
-                "3√3",
-                "2√143",
-                "2√39",
-                "2√13"
+                "x is rational.",
+                "x − √2 is rational.",
+                "x² is irrational.",
+                "2x + √8 is rational.",
+                "√2x is irrational, where √2x means (√2)·x."
               ],
-              "answer": 1,
-              "explanation": "Multiplying gives c√(33n) for y = c√n. In a perfect square each prime has even exponent. The two primes 11 and 3 occur once in 33; of the offered radicands only 33 contributes a second copy of both without introducing another odd exponent. The resulting product is 66."
+              "answer": 3,
+              "explanation": "Since √8 = 2√2, the fourth expression is twice a rational number. The first two expressions cannot be rational, as subtracting would make √2 or 2√2 rational. The choice x = −√2 shows that x² and (√2)·x need not be irrational."
             },
             {
-              "id": "tmua-pack-m2-p2-q17",
+              "id": "tmua-pack-m2-p2-q17-v2",
               "topic": "Constructing arguments & exhaustive cases",
               "type": "proof-strategies",
               "difficulty": 4,
@@ -1809,68 +1733,63 @@
                 "proof-strategies",
                 "invariant-recurrence"
               ],
-              "stem": "Let u₀ = 7 and uₙ₊₁ = 12uₙ + 9 for every n ≥ 0. What is the remainder of u_8 on division by 11?",
+              "stem": "Start with a row of 13 coins, all showing heads. A move turns over exactly four different coins. Which number of coins showing tails is impossible after finitely many moves?",
               "options": [
                 "9",
-                "7",
-                "3",
-                "1",
-                "5",
+                "0",
+                "2",
                 "4",
-                "2"
+                "12"
               ],
-              "answer": 6,
-              "explanation": "Since 12 is congruent to 1 modulo 11, each step adds 9 to the residue. Starting from 7 and taking 8 steps gives the same residue as 79. Large terms need not be computed.\n\nAnswer: 2."
+              "answer": 0,
+              "explanation": "A move changes the tails count by 4 − 2k if k of the turned coins were tails. Hence the count stays even. Zero can be attained by repeating one move, two by turning over three previously turned coins and one new coin on the second move, four by one move and twelve by three disjoint moves."
             },
             {
-              "id": "tmua-pack-m2-p2-q18",
+              "id": "tmua-pack-m2-p2-q18-v2",
               "topic": "Counterexamples & witnesses",
               "type": "counterexamples",
-              "difficulty": 4,
+              "difficulty": 3,
               "family": "witness-scope",
               "tags": [
                 "paper-2",
                 "counterexamples",
                 "witness-scope"
               ],
-              "stem": "A student claims: for every integer x between 0 and 10 inclusive there is an integer y in the same range with x + y giving remainder 2 modulo 10 and y < x. Which choice gives an x refuting that claim and also a y that works for the different input x = 2?",
+              "stem": "For real p, let E(p) be “for every real x, there is a real y satisfying y² = x² + p.” Which statement correctly identifies a way to disprove E(−2)?",
               "options": [
-                "x = 2, y = 0",
-                "x = 2, y = 1",
-                "x = 0, y = 2",
-                "x = 1, y = 2",
-                "x = 10, y = 10",
-                "x = 0, y = 0"
+                "Find one x with some y satisfying the equation.",
+                "Find one x with no y satisfying the equation.",
+                "Find one y with no x satisfying the equation.",
+                "Check that x = 2, y = √2 satisfies the equation.",
+                "Check that x = 2, y = 0 fails the equation."
               ],
-              "answer": 5,
-              "explanation": "The counterexample is x = 0: no allowed y is less than zero. At the different input x = 2, y = 0 works. A successful witness at one input cannot prove an assertion about every input."
+              "answer": 1,
+              "explanation": "One x with no possible y is a counterexample to the universal statement. For example, choose x = 0: no real y has y² = −2. A failed pair is not enough, because some different y could work for that x."
             },
             {
-              "id": "tmua-pack-m2-p2-q19",
+              "id": "tmua-pack-m2-p2-q19-v2",
               "topic": "Constructing arguments & exhaustive cases",
               "type": "proof-strategies",
-              "difficulty": 5,
+              "difficulty": 3,
               "family": "longest-gap",
               "tags": [
                 "paper-2",
                 "proof-strategies",
                 "longest-gap"
               ],
-              "stem": "For an integer t, call t marked if one of t + 4, t + 7, t + 6 is divisible by 12. What is the least length of a block of consecutive integers guaranteed to contain a marked integer?",
+              "stem": "On an integer timeline, red flashes occur every 4 ticks and blue flashes every 6 ticks, with both flashing at tick 0. What is the greatest number of consecutive ticks on which no flash of either colour occurs?",
               "options": [
-                "9",
-                "1",
-                "12",
-                "11",
-                "8",
-                "18",
-                "10"
+                "2",
+                "4",
+                "5",
+                "6",
+                "3"
               ],
-              "answer": 0,
-              "explanation": "Mark the residues 5, 6, 8 on a cycle of length 12. Successive marks have gaps 1, 2, 9 (include the wrap-around). A gap of g contains g − 1 unmarked integers. The longest block that can avoid a mark therefore has length 8; add one.\n\nAnswer: 9."
+              "answer": 4,
+              "explanation": "Red flashes alone limit any gap without a flash to three ticks. Ticks 1, 2 and 3 contain neither a red nor a blue flash, so that upper bound is achieved."
             },
             {
-              "id": "tmua-pack-m2-p2-q20",
+              "id": "tmua-pack-m2-p2-q20-v2",
               "topic": "Implications, negation & quantifiers",
               "type": "logic",
               "difficulty": 4,
@@ -1880,17 +1799,19 @@
                 "logic",
                 "quantifier-order"
               ],
-              "stem": "All variables range over the integers from 0 to 8. Which statements hold?\nI. For every x there is a y such that x + y leaves remainder 4 on division by 9.\nII. Some fixed y works for every x.\nIII. Every pair (x, y) works.",
+              "stem": "Let X = {1, 2, 3} and Y = {2, 3, 4}. Call a pair (x, y) admissible when x < y ≤ 2x. I: Each x in X has an admissible partner in Y. II: Some y in Y is an admissible partner for every x in X. III: Each y in Y has an admissible partner in X. Which statements hold?",
               "options": [
-                "I",
-                "I, II",
-                "I, II, III",
-                "I, III",
-                "None",
-                "II, III"
+                "I only",
+                "II only",
+                "I and II only",
+                "II and III only",
+                "III only",
+                "I, II and III",
+                "I and III only",
+                "None"
               ],
-              "answer": 0,
-              "explanation": "I works: take the unique representative y of 4 − x modulo 9 in the required range. II fails because x = 0 and x = 1 require different y. III would imply II, so also fails."
+              "answer": 6,
+              "explanation": "The admissible pairs are (1, 2), (2, 3), (2, 4) and (3, 4). Every member of each set is represented, proving I and III. However, x = 1 requires y = 2 while x = 3 requires y = 4, so II fails."
             }
           ]
         }

@@ -69,7 +69,7 @@ export const TMUA_MOCKS: TmuaMock[] = [
             id: 'tmua-m1-p1-q03',
             topic: 'Sequences & Series',
             stem: 'The first term of a geometric progression is 12 and its sum to infinity is 18. What is the sum of the first three terms?',
-            options: ['52/3', '16', '48/3', '50/3', '56/3'],
+            options: ['52/3', '16', '46/3', '50/3', '56/3'],
             answer: 0,
             explanation:
               'S∞ = a/(1 − r) ⇒ 12/(1 − r) = 18 ⇒ 1 − r = 2/3 ⇒ r = 1/3. First three terms: 12 + 4 + 4/3 = 52/3.',
@@ -102,13 +102,13 @@ export const TMUA_MOCKS: TmuaMock[] = [
               'On the y-axis, x = 0 ⇒ y² + 8y = 0 ⇒ y = 0 or y = −8. The distance between (0, 0) and (0, −8) is 8.',
           },
           {
-            id: 'tmua-m1-p1-q07',
+            id: 'tmua-m1-p1-q07-v2',
             topic: 'Trigonometry',
-            stem: 'How many solutions does the equation 2cos²(2x) − cos(2x) − 1 = 0 have in the interval 0 ≤ x ≤ π?',
-            options: ['2', '3', '4', '5', '6'],
-            answer: 2,
+            stem: 'An acute angle θ satisfies sin θ + cos θ = 7/5. What is sin⁴θ + cos⁴θ?',
+            options: ['49/625', '288/625', '313/625', '337/625', '361/625'],
+            answer: 3,
             explanation:
-              'Factor: (2cos 2x + 1)(cos 2x − 1) = 0. For 0 ≤ 2x ≤ 2π: cos 2x = 1 gives 2x = 0, 2π (x = 0, π); cos 2x = −1/2 gives 2x = 2π/3, 4π/3 (x = π/3, 2π/3). Total = 4 solutions.',
+              'Squaring the given sum and using sin²θ + cos²θ = 1 gives sin θ cos θ = 12/25. Therefore sin⁴θ + cos⁴θ = 1 − 2(12/25)² = 337/625.',
           },
           {
             id: 'tmua-m1-p1-q08',
@@ -266,13 +266,13 @@ export const TMUA_MOCKS: TmuaMock[] = [
               'An implication A ⇒ B is always logically equivalent to its contrapositive (¬B ⇒ ¬A), and not to its converse or inverse.',
           },
           {
-            id: 'tmua-m1-p2-q03',
+            id: 'tmua-m1-p2-q03-v2',
             topic: 'Counterexamples',
-            stem: 'A student claims: "For every positive integer n, the number n² + n + 41 is prime." What is the smallest positive integer n that disproves this claim?',
-            options: ['40', '41', '11', '39', '42'],
-            answer: 0,
+            stem: 'A student claims that if 2n + 1 is prime, then 6n + 1 is prime, for every positive integer n. What is the smallest n that refutes the claim?',
+            options: ['3', '4', '5', '7', '8'],
+            answer: 4,
             explanation:
-              'At n = 40: 40² + 40 + 41 = 40(41) + 41 = 41², which is composite! (Many students guess n = 41 and miss n = 40.)',
+              'For n = 1, 2, 3, 5, 6 and 7, the outputs 6n + 1 are prime. At n = 4 the output is 25, but the premise fails because 2n + 1 = 9. At n = 8 the premise holds (17 is prime) and the conclusion fails (49 is composite).',
           },
           {
             id: 'tmua-m1-p2-q04',
@@ -290,19 +290,19 @@ export const TMUA_MOCKS: TmuaMock[] = [
               'Negating ∀x ∃y (x + y > 0) flips each quantifier in order and negates the predicate: ∃x ∀y (x + y ≤ 0).',
           },
           {
-            id: 'tmua-m1-p2-q05',
+            id: 'tmua-m1-p2-q05-v2',
             topic: 'Spotting Proof Errors',
-            stem: 'Consider the attempted proof that 1 = 2:\nLine 1: Let a = b (with a ≠ 0).\nLine 2: a² = ab.\nLine 3: a² − b² = ab − b².\nLine 4: (a − b)(a + b) = b(a − b).\nLine 5: a + b = b, so 2b = b, hence 2 = 1.\nWhere is the first logical error?',
+            stem: 'A student attempts to prove that 3 divides ab only if 3 divides both a and b, where a and b are integers.\n1. Assume 3 divides ab.\n2. If 3 does not divide a, then a has remainder 1 or 2 modulo 3.\n3. In either case, the only remainder of b giving ab remainder 0 is 0.\n4. This contradicts the assumption that 3 does not divide a.\n5. Therefore 3 must divide a, and by symmetry it must divide b.\nWhich is the first invalid step?',
             options: [
-              'Line 4 to Line 5 (dividing by a − b = 0)',
-              'Line 1 to Line 2',
-              'Line 2 to Line 3',
-              'Line 3 to Line 4',
-              'There is no error',
+              'Step 1',
+              'Step 2',
+              'Step 3',
+              'Step 4',
+              'Step 5',
             ],
-            answer: 0,
+            answer: 3,
             explanation:
-              'Since a = b, a − b = 0. Cancelling (a − b) from Line 4 to Line 5 divides by zero, which is invalid.',
+              'Step 3 correctly shows that 3 divides b under the assumption that 3 does not divide a. There is no contradiction: a = 1 and b = 3 satisfy both facts. The error is the claim of a contradiction at step 4.',
           },
           {
             id: 'tmua-m1-p2-q06',
@@ -350,13 +350,19 @@ export const TMUA_MOCKS: TmuaMock[] = [
               'A counterexample must satisfy the hypothesis (a < b) and violate the conclusion (a² ≥ b²). For a = −3, b = 2: −3 < 2 holds, yet (−3)² = 9 ≥ 4 = 2².',
           },
           {
-            id: 'tmua-m1-p2-q09',
+            id: 'tmua-m1-p2-q09-v2',
             topic: 'Truth & Deduction',
-            stem: 'Every card in a pack has a letter on one side and a number on the other. Rule: "If a card has a vowel on one side, it has an even number on the other." Four cards show A, K, 4, 7. Which cards MUST be turned over to test the rule?',
-            options: ['A and 7 only', 'A and 4 only', 'A only', 'A, 4, and 7', 'All four cards'],
-            answer: 0,
+            stem: 'Two rules are given for a real-valued function f. Rule A: If x > 0 then f(x) > x. Rule B: If x < 1 then f(x) < 2x. What can be concluded about these rules?',
+            options: [
+              'Both rules can hold; take f(x) = x.',
+              'Both rules can hold; take f(x) = 2x.',
+              'Both rules can hold; take f(x) = 3x/2.',
+              'The rules conflict at x = 0.',
+              'Both rules can hold, but no linear function of the form f(x) = kx works.',
+            ],
+            answer: 4,
             explanation:
-              'Classic Wason logic: A (vowel) must show an even number; 7 (odd) must NOT show a vowel (contrapositive). K and 4 cannot violate Vowel ⇒ Even.',
+              'Rule A requires k > 1. For Rule B, negative x requires k > 2 whereas x = 0 makes the rule demand f(0) < 0. Thus no f(x) = kx works. The rules are compatible: take f(x) = 2x − 1 for x ≤ 0 and f(x) = 3x/2 for x > 0.',
           },
           {
             id: 'tmua-m1-p2-q10',
@@ -486,7 +492,7 @@ export const TMUA_MOCKS: TmuaMock[] = [
           {
             id: 'tmua-m1-p2-q20',
             topic: 'Functions & Symmetry',
-            stem: 'Suppose f(x) is an odd function (f(−x) = −f(x) for all real x). What MUST be the value of ∫₋₅⁵ f(x) dx?',
+            stem: 'Suppose f is integrable on [−5, 5] and is odd, so f(−x) = −f(x). What MUST be the value of ∫₋₅⁵ f(x) dx?',
             options: ['0', '2f(5)', '10f(0)', 'Cannot be determined without knowing f', '5'],
             answer: 0,
             explanation:
